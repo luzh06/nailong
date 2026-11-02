@@ -33,5 +33,30 @@
     "path": "character/Syney man.zip",
     "bytes": 52550193,
     "sha256": "33abc490725949b6807a83868c8616db3028b30549ef4cf9f582d9dfb98a6b32"
+  },
+  {
+    "path": "此间_翻书资产_v0.2/使用说明.md",
+    "bytes": 2336,
+    "sha256": "1f186cdb8bbdc377f1e417a9abded8dd13c131306019dbb89ecd68f91ca3d8fa"
+  },
+  {
+    "path": "此间_翻书资产_v0.2/antique_sequence.gif",
+    "bytes": 7851020,
+    "sha256": "82fae694063bf21fc1f7f1833024b72cfed9a0e0dcbdc259516e3d03269157d8"
+  },
+  {
+    "path": "此间_翻书资产_v0.2/antique_sequence.mp4",
+    "bytes": 2634665,
+    "sha256": "4376d3b3560540e20b5669c88518b8f99dd46ceb99217d15f01a2a172b0b8c89"
+  },
+  {
+    "path": "此间_翻书资产_v0.2/cijian_antique_book.glb",
+    "bytes": 2308684,
+    "sha256": "ba65c270ff80fcbf879ceeada1a072889386512b8d5731d51660aae4eb5d4ce3"
+  },
+  {
+    "path": "此间_翻书资产_v0.2/cijian_antique_sequence.blend",
+    "bytes": 2649292,
+    "sha256": "6a521f15a6552260bf25a18ad560d8eea43c90b88c755ded078cca3582c43bea"
   }
 ]
