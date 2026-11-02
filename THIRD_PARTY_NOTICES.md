@@ -9,4 +9,6 @@ These notices apply only to the identified third-party components. They do not a
 | Zen Antique | `projects/tokyo-market/fonts/` | The original `ZenAntique-OFL.txt` remains next to the font |
 | Models, textures, HDRI and reference photos | Both projects' assets and reference directories | See the respective `asset-register.csv`, source JSON and reference notes; those records have not been replaced with a blanket project license |
 
+| PLATEAU, OpenStreetMap and Poly Haven data | `projects/tokyo-blocks/` | See that project's README: PLATEAU requires attribution, OpenStreetMap is ODbL, Poly Haven is CC0 |
+
 The market viewer additionally loads Three.js 0.160.0 from jsDelivr at runtime. It is not bundled here.
