@@ -1,0 +1,370 @@
+{
+ "block": "A",
+ "note": "预留位。店面和小道具由 5060 做；坐标已是 qs_h1 世界系，外法线 outward 指向路面",
+ "anchors": [
+  {
+   "type": "ac_outdoor",
+   "building": "A01_apartment",
+   "center_enu": [
+    -113.256,
+    -29.137,
+    -0.302
+   ],
+   "outward_enu": [
+    -0.0336,
+    -0.9994
+   ],
+   "center_qs_h1": [
+    30.937,
+    -80.756,
+    -0.302
+   ],
+   "outward_qs_h1": [
+    0.9994,
+    -0.0336
+   ]
+  },
+  {
+   "type": "ac_outdoor",
+   "building": "A01_apartment",
+   "center_enu": [
+    -108.358,
+    -29.302,
+    -0.302
+   ],
+   "outward_enu": [
+    -0.0336,
+    -0.9994
+   ],
+   "center_qs_h1": [
+    31.102,
+    -75.858,
+    -0.302
+   ],
+   "outward_qs_h1": [
+    0.9994,
+    -0.0336
+   ]
+  },
+  {
+   "type": "ac_outdoor",
+   "building": "A02_old_mortar",
+   "center_enu": [
+    -99.523,
+    -29.269,
+    -0.16
+   ],
+   "outward_enu": [
+    -0.2043,
+    -0.9789
+   ],
+   "center_qs_h1": [
+    31.069,
+    -67.023,
+    -0.16
+   ],
+   "outward_qs_h1": [
+    0.9789,
+    -0.2043
+   ]
+  },
+  {
+   "type": "planter",
+   "building": "A02_old_mortar",
+   "center_enu": [
+    -92.928,
+    -21.998,
+    -0.16
+   ],
+   "outward_enu": [
+    0.2043,
+    0.9789
+   ],
+   "center_qs_h1": [
+    23.798,
+    -60.428,
+    -0.16
+   ],
+   "outward_qs_h1": [
+    -0.9789,
+    0.2043
+   ]
+  },
+  {
+   "type": "ac_outdoor",
+   "building": "A03_tin_shed",
+   "center_enu": [
+    -89.202,
+    -31.281,
+    0.05
+   ],
+   "outward_enu": [
+    -0.1858,
+    -0.9826
+   ],
+   "center_qs_h1": [
+    33.081,
+    -56.702,
+    0.05
+   ],
+   "outward_qs_h1": [
+    0.9826,
+    -0.1858
+   ]
+  },
+  {
+   "type": "vending_or_bin",
+   "building": "A04_low_plank",
+   "center_enu": [
+    -85.84,
+    -21.769,
+    -0.025
+   ],
+   "outward_enu": [
+    0.1793,
+    0.9838
+   ],
+   "center_qs_h1": [
+    23.569,
+    -53.34,
+    -0.025
+   ],
+   "outward_qs_h1": [
+    -0.9838,
+    0.1793
+   ]
+  },
+  {
+   "type": "ac_outdoor",
+   "building": "A05_siding_house",
+   "center_enu": [
+    -75.762,
+    -30.853,
+    0.311
+   ],
+   "outward_enu": [
+    0.9844,
+    -0.1761
+   ],
+   "center_qs_h1": [
+    32.653,
+    -43.262,
+    0.311
+   ],
+   "outward_qs_h1": [
+    0.1761,
+    0.9844
+   ]
+  },
+  {
+   "type": "storefront",
+   "building": "A07_corner_tile",
+   "center_enu": [
+    -65.313,
+    -21.96,
+    0.434
+   ],
+   "outward_enu": [
+    0.4102,
+    0.912
+   ],
+   "width": 8.76,
+   "height": 2.73,
+   "depth": 0.55,
+   "center_qs_h1": [
+    23.76,
+    -32.813,
+    0.434
+   ],
+   "outward_qs_h1": [
+    -0.912,
+    0.4102
+   ]
+  },
+  {
+   "type": "storefront",
+   "building": "A07_corner_tile",
+   "center_enu": [
+    -71.004,
+    -22.475,
+    0.434
+   ],
+   "outward_enu": [
+    -0.912,
+    0.4102
+   ],
+   "width": 4.61,
+   "height": 2.73,
+   "depth": 0.55,
+   "center_qs_h1": [
+    24.275,
+    -38.504,
+    0.434
+   ],
+   "outward_qs_h1": [
+    -0.4102,
+    -0.912
+   ]
+  },
+  {
+   "type": "storefront",
+   "building": "A06_gable_shop",
+   "center_enu": [
+    -64.419,
+    -34.012,
+    0.417
+   ],
+   "outward_enu": [
+    0.915,
+    -0.4035
+   ],
+   "width": 4.8,
+   "height": 2.58,
+   "depth": 0.55,
+   "center_qs_h1": [
+    35.812,
+    -31.919,
+    0.417
+   ],
+   "outward_qs_h1": [
+    0.4035,
+    0.915
+   ]
+  },
+  {
+   "type": "storefront",
+   "building": "A08_kanban_front",
+   "center_enu": [
+    -67.831,
+    -40.299,
+    0.38
+   ],
+   "outward_enu": [
+    0.9192,
+    -0.3938
+   ],
+   "width": 6.02,
+   "height": 2.48,
+   "depth": 0.55,
+   "center_qs_h1": [
+    42.099,
+    -35.331,
+    0.38
+   ],
+   "outward_qs_h1": [
+    0.3938,
+    0.9192
+   ]
+  },
+  {
+   "type": "bicycle",
+   "building": "A09_small_kawara",
+   "center_enu": [
+    -83.413,
+    -44.733,
+    0.109
+   ],
+   "outward_enu": [
+    -0.2696,
+    -0.963
+   ],
+   "center_qs_h1": [
+    46.533,
+    -50.913,
+    0.109
+   ],
+   "outward_qs_h1": [
+    0.963,
+    -0.2696
+   ]
+  },
+  {
+   "type": "gas_meter",
+   "building": "A11_old_L_house",
+   "center_enu": [
+    -85.372,
+    -34.925,
+    0.982
+   ],
+   "outward_enu": [
+    0.203,
+    0.9792
+   ],
+   "center_qs_h1": [
+    36.725,
+    -52.872,
+    0.982
+   ],
+   "outward_qs_h1": [
+    -0.9792,
+    0.203
+   ]
+  },
+  {
+   "type": "planter",
+   "building": "A11_old_L_house",
+   "center_enu": [
+    -91.927,
+    -41.829,
+    -0.018
+   ],
+   "outward_enu": [
+    -0.203,
+    -0.9792
+   ],
+   "center_qs_h1": [
+    43.629,
+    -59.427,
+    -0.018
+   ],
+   "outward_qs_h1": [
+    0.9792,
+    -0.203
+   ]
+  },
+  {
+   "type": "ac_outdoor",
+   "building": "A12_townhouse_slit",
+   "center_enu": [
+    -97.936,
+    -33.247,
+    -0.22
+   ],
+   "outward_enu": [
+    0.0579,
+    0.9983
+   ],
+   "center_qs_h1": [
+    35.047,
+    -65.436,
+    -0.22
+   ],
+   "outward_qs_h1": [
+    -0.9983,
+    0.0579
+   ]
+  },
+  {
+   "type": "ac_outdoor",
+   "building": "A14_townhouse_tile",
+   "center_enu": [
+    -106.565,
+    -30.742,
+    -0.292
+   ],
+   "outward_enu": [
+    0.0741,
+    0.9973
+   ],
+   "center_qs_h1": [
+    32.542,
+    -74.065,
+    -0.292
+   ],
+   "outward_qs_h1": [
+    -0.9973,
+    0.0741
+   ]
+  }
+ ]
+}

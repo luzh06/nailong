@@ -1,0 +1,475 @@
+{
+ "file": "block_B.glb",
+ "glb_mb": 49.3,
+ "triangles": 448020,
+ "primitives": 177,
+ "prims_with_vertex_color": 177,
+ "meshes": 14,
+ "materials": 34,
+ "textures": 59,
+ "texture_mb": 23.2,
+ "max_texture": 2048,
+ "tris_by_material": {
+  "kawara": 186688,
+  "alu": 89936,
+  "lot": 34358,
+  "whitetile": 14496,
+  "soffit": 13800,
+  "concrete": 13256,
+  "plaster": 11954,
+  "mortar": 10354,
+  "galva": 7224,
+  "plank": 6712,
+  "siding2": 6380,
+  "blackplank": 5918,
+  "dark": 5240,
+  "decal": 5216,
+  "mossy": 5022,
+  "pvc": 4210,
+  "asphalt": 4136,
+  "rustytin": 4000,
+  "darkface": 3634,
+  "tin": 3126,
+  "gravel": 2240,
+  "cedar": 2192,
+  "plinth_top": 1980,
+  "fasciaw": 1980,
+  "steel": 1432,
+  "blockwall": 1044,
+  "paint": 512,
+  "slate": 384,
+  "frost": 224,
+  "glass": 172,
+  "curtain": 172,
+  "roofbase": 24,
+  "polyc": 2,
+  "shutter": 2
+ },
+ "mats_without_base_texture": [
+  "alu",
+  "plinth_top",
+  "glass",
+  "dark",
+  "paint",
+  "frost",
+  "pvc",
+  "polyc",
+  "roofbase",
+  "kawara"
+ ],
+ "images": [
+  [
+   "concrete_normal",
+   2048,
+   2048,
+   644666,
+   "image/jpeg"
+  ],
+  [
+   "concrete_base",
+   2048,
+   2048,
+   449754,
+   "image/jpeg"
+  ],
+  [
+   "concrete_orm",
+   1024,
+   1024,
+   122359,
+   "image/jpeg"
+  ],
+  [
+   "whitetile_normal",
+   2048,
+   2048,
+   377153,
+   "image/jpeg"
+  ],
+  [
+   "whitetile_base",
+   2048,
+   2048,
+   406656,
+   "image/jpeg"
+  ],
+  [
+   "whitetile_orm",
+   1024,
+   1024,
+   95262,
+   "image/jpeg"
+  ],
+  [
+   "curtain_base",
+   1024,
+   1024,
+   91745,
+   "image/jpeg"
+  ],
+  [
+   "decal_base",
+   2048,
+   2048,
+   2129491,
+   "image/png"
+  ],
+  [
+   "galva_normal",
+   2048,
+   2048,
+   291192,
+   "image/jpeg"
+  ],
+  [
+   "galva_base",
+   2048,
+   2048,
+   160791,
+   "image/jpeg"
+  ],
+  [
+   "galva_orm",
+   1024,
+   1024,
+   113220,
+   "image/jpeg"
+  ],
+  [
+   "fasciaw_normal",
+   2048,
+   2048,
+   349296,
+   "image/jpeg"
+  ],
+  [
+   "fasciaw_base",
+   2048,
+   2048,
+   382110,
+   "image/jpeg"
+  ],
+  [
+   "fasciaw_orm",
+   1024,
+   1024,
+   80516,
+   "image/jpeg"
+  ],
+  [
+   "soffit_normal",
+   2048,
+   2048,
+   540625,
+   "image/jpeg"
+  ],
+  [
+   "soffit_base",
+   2048,
+   2048,
+   265762,
+   "image/jpeg"
+  ],
+  [
+   "soffit_orm",
+   1024,
+   1024,
+   114233,
+   "image/jpeg"
+  ],
+  [
+   "steel_normal",
+   2048,
+   2048,
+   212847,
+   "image/jpeg"
+  ],
+  [
+   "steel_base",
+   2048,
+   2048,
+   163920,
+   "image/jpeg"
+  ],
+  [
+   "steel_orm",
+   1024,
+   1024,
+   49541,
+   "image/jpeg"
+  ],
+  [
+   "siding2_normal",
+   2048,
+   2048,
+   544022,
+   "image/jpeg"
+  ],
+  [
+   "siding2_base",
+   2048,
+   2048,
+   248621,
+   "image/jpeg"
+  ],
+  [
+   "siding2_orm",
+   1024,
+   1024,
+   52134,
+   "image/jpeg"
+  ],
+  [
+   "slate_normal",
+   2048,
+   2048,
+   523144,
+   "image/jpeg"
+  ],
+  [
+   "slate_base",
+   2048,
+   2048,
+   466861,
+   "image/jpeg"
+  ],
+  [
+   "slate_orm",
+   1024,
+   1024,
+   153160,
+   "image/jpeg"
+  ],
+  [
+   "tin_normal",
+   2048,
+   2048,
+   247999,
+   "image/jpeg"
+  ],
+  [
+   "tin_base",
+   2048,
+   2048,
+   358546,
+   "image/jpeg"
+  ],
+  [
+   "tin_orm",
+   1024,
+   1024,
+   190667,
+   "image/jpeg"
+  ],
+  [
+   "plaster_normal",
+   2048,
+   2048,
+   130230,
+   "image/jpeg"
+  ],
+  [
+   "plaster_base",
+   2048,
+   2048,
+   59519,
+   "image/jpeg"
+  ],
+  [
+   "plaster_orm",
+   1024,
+   1024,
+   11968,
+   "image/jpeg"
+  ],
+  [
+   "blackplank_normal",
+   2048,
+   2048,
+   418415,
+   "image/jpeg"
+  ],
+  [
+   "blackplank_base",
+   2048,
+   2048,
+   416811,
+   "image/jpeg"
+  ],
+  [
+   "blackplank_orm",
+   1024,
+   1024,
+   78311,
+   "image/jpeg"
+  ],
+  [
+   "rustytin_normal",
+   2048,
+   2048,
+   396904,
+   "image/jpeg"
+  ],
+  [
+   "rustytin_base",
+   2048,
+   2048,
+   384517,
+   "image/jpeg"
+  ],
+  [
+   "rustytin_orm",
+   1024,
+   1024,
+   81455,
+   "image/jpeg"
+  ],
+  [
+   "shutter_normal",
+   2048,
+   2048,
+   521469,
+   "image/jpeg"
+  ],
+  [
+   "shutter_base",
+   2048,
+   2048,
+   445203,
+   "image/jpeg"
+  ],
+  [
+   "shutter_orm",
+   1024,
+   1024,
+   107505,
+   "image/jpeg"
+  ],
+  [
+   "mortar_normal",
+   2048,
+   2048,
+   229499,
+   "image/jpeg"
+  ],
+  [
+   "mortar_base",
+   2048,
+   2048,
+   865611,
+   "image/jpeg"
+  ],
+  [
+   "mortar_orm",
+   1024,
+   1024,
+   316113,
+   "image/jpeg"
+  ],
+  [
+   "darkface_normal",
+   2048,
+   2048,
+   766091,
+   "image/jpeg"
+  ],
+  [
+   "darkface_base",
+   2048,
+   2048,
+   485722,
+   "image/jpeg"
+  ],
+  [
+   "darkface_orm",
+   1024,
+   1024,
+   132323,
+   "image/jpeg"
+  ],
+  [
+   "mossy_normal",
+   2048,
+   2048,
+   618975,
+   "image/jpeg"
+  ],
+  [
+   "mossy_base",
+   2048,
+   2048,
+   1018581,
+   "image/jpeg"
+  ],
+  [
+   "mossy_orm",
+   1024,
+   1024,
+   116887,
+   "image/jpeg"
+  ],
+  [
+   "asphalt_normal",
+   2048,
+   2048,
+   1038316,
+   "image/jpeg"
+  ],
+  [
+   "asphalt_base",
+   2048,
+   2048,
+   1275030,
+   "image/jpeg"
+  ],
+  [
+   "asphalt_orm",
+   1024,
+   1024,
+   260179,
+   "image/jpeg"
+  ],
+  [
+   "gravel_normal",
+   2048,
+   2048,
+   491589,
+   "image/jpeg"
+  ],
+  [
+   "gravel_base",
+   2048,
+   2048,
+   743179,
+   "image/jpeg"
+  ],
+  [
+   "gravel_orm",
+   1024,
+   1024,
+   20027,
+   "image/jpeg"
+  ],
+  [
+   "blockwall_normal",
+   2048,
+   2048,
+   857157,
+   "image/jpeg"
+  ],
+  [
+   "blockwall_base",
+   2048,
+   2048,
+   1026305,
+   "image/jpeg"
+  ],
+  [
+   "blockwall_orm",
+   1024,
+   1024,
+   93324,
+   "image/jpeg"
+  ]
+ ]
+}

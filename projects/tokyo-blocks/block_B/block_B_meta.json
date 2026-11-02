@@ -1,0 +1,471 @@
+{
+ "block": "B",
+ "tris": 448020,
+ "anchors": [
+  {
+   "type": "ac_outdoor",
+   "building": "B01_white_tile_rc",
+   "center_enu": [
+    -98.4,
+    29.6,
+    -0.153
+   ],
+   "outward_enu": [
+    -1.0,
+    -0.0
+   ]
+  },
+  {
+   "type": "ac_outdoor",
+   "building": "B01_white_tile_rc",
+   "center_enu": [
+    -98.4,
+    28.0,
+    -0.153
+   ],
+   "outward_enu": [
+    -1.0,
+    -0.0
+   ]
+  },
+  {
+   "type": "bicycle",
+   "building": "B02_east_wing",
+   "center_enu": [
+    -91.0,
+    32.2,
+    -0.115
+   ],
+   "outward_enu": [
+    -0.0,
+    1.0
+   ]
+  },
+  {
+   "type": "ac_outdoor",
+   "building": "B03_merchant_irimoya",
+   "center_enu": [
+    -110.6,
+    28.4,
+    -0.293
+   ],
+   "outward_enu": [
+    -1.0,
+    -0.0
+   ]
+  },
+  {
+   "type": "ac_outdoor",
+   "building": "B05_workshop",
+   "center_enu": [
+    -87.0,
+    25.6,
+    0.117
+   ],
+   "outward_enu": [
+    -1.0,
+    -0.0
+   ]
+  },
+  {
+   "type": "planter",
+   "building": "B06_cross_house_main",
+   "center_enu": [
+    -78.0,
+    27.2,
+    0.374
+   ],
+   "outward_enu": [
+    0.0,
+    -1.0
+   ]
+  },
+  {
+   "type": "storefront",
+   "building": "B07_three_storey_shop",
+   "center_enu": [
+    -59.6,
+    30.35,
+    0.444
+   ],
+   "outward_enu": [
+    1.0,
+    0.0
+   ],
+   "width": 7.3,
+   "height": 2.68,
+   "depth": 0.55
+  },
+  {
+   "type": "planter",
+   "building": "B08_long_wood_shop",
+   "center_enu": [
+    -61.0,
+    41.8,
+    0.411
+   ],
+   "outward_enu": [
+    1.0,
+    0.0
+   ]
+  },
+  {
+   "type": "storefront",
+   "building": "B08_long_wood_shop",
+   "center_enu": [
+    -61.0,
+    37.15,
+    0.431
+   ],
+   "outward_enu": [
+    1.0,
+    0.0
+   ],
+   "width": 3.1,
+   "height": 2.53,
+   "depth": 0.55
+  },
+  {
+   "type": "ac_outdoor",
+   "building": "B09_three_storey_wood",
+   "center_enu": [
+    -103.6,
+    41.4,
+    -0.251
+   ],
+   "outward_enu": [
+    -1.0,
+    -0.0
+   ]
+  },
+  {
+   "type": "gas_meter",
+   "building": "B10_rear_shed",
+   "center_enu": [
+    -79.9,
+    15.2,
+    1.346
+   ],
+   "outward_enu": [
+    0.0,
+    -1.0
+   ]
+  }
+ ],
+ "rear_alley_centerline_enu": [
+  [
+   -111.5,
+   14.15
+  ],
+  [
+   -90,
+   14.15
+  ],
+  [
+   -70,
+   14.15
+  ],
+  [
+   -57.6,
+   14.15
+  ]
+ ],
+ "side_alleys_enu": [
+  [
+   [
+    -99.25,
+    14.4
+   ],
+   [
+    -99.15,
+    25.2
+   ]
+  ],
+  [
+   [
+    -86.0,
+    14.4
+   ],
+   [
+    -85.7,
+    18.9
+   ]
+  ]
+ ],
+ "edges_enu": {
+  "east_road_west": [
+   [
+    -57.3,
+    13.0
+   ],
+   [
+    -57.3,
+    19.0
+   ],
+   [
+    -57.3,
+    28.7
+   ],
+   [
+    -57.4,
+    34.4
+   ],
+   [
+    -57.8,
+    39.7
+   ],
+   [
+    -58.9,
+    44.9
+   ],
+   [
+    -59.6,
+    47.1
+   ]
+  ]
+ },
+ "buildings": {
+  "B01_white_tile_rc": {
+   "center": [
+    -95.7,
+    23.4
+   ],
+   "size": [
+    5.4,
+    16.4
+   ],
+   "H": 9.7,
+   "storeys": 3,
+   "base_z": -0.253,
+   "roof": "flat"
+  },
+  "B01b_penthouse": {
+   "center": [
+    -95.7,
+    26.55
+   ],
+   "size": [
+    3.8,
+    8.1
+   ],
+   "H": 2.5,
+   "storeys": 1,
+   "base_z": 8.827,
+   "roof": "mono"
+  },
+  "B02_east_wing": {
+   "center": [
+    -90.0,
+    27.6
+   ],
+   "size": [
+    5.6,
+    9.2
+   ],
+   "H": 7.4,
+   "storeys": 2,
+   "base_z": -0.115,
+   "roof": "gable"
+  },
+  "B03_merchant_irimoya": {
+   "center": [
+    -107.8,
+    24.5
+   ],
+   "size": [
+    5.6,
+    13.8
+   ],
+   "H": 8.8,
+   "storeys": 2,
+   "base_z": -0.393,
+   "roof": "irimoya"
+  },
+  "B04_annex_tin": {
+   "center": [
+    -102.3,
+    28.6
+   ],
+   "size": [
+    5.0,
+    6.0
+   ],
+   "H": 6.2,
+   "storeys": 2,
+   "base_z": -0.363,
+   "roof": "mono"
+  },
+  "B05_workshop": {
+   "center": [
+    -85.2,
+    23.05
+   ],
+   "size": [
+    3.6,
+    7.1
+   ],
+   "H": 6.4,
+   "storeys": 1,
+   "base_z": 0.017,
+   "roof": "gable"
+  },
+  "B06_cross_house_main": {
+   "center": [
+    -77.6,
+    30.4
+   ],
+   "size": [
+    10.8,
+    6.4
+   ],
+   "H": 7.1,
+   "storeys": 2,
+   "base_z": 0.274,
+   "roof": "gable"
+  },
+  "B06b_cross_wing": {
+   "center": [
+    -77.5,
+    26.1
+   ],
+   "size": [
+    4.6,
+    2.2
+   ],
+   "H": 6.6,
+   "storeys": 2,
+   "base_z": 0.277,
+   "roof": "gable"
+  },
+  "B07_three_storey_shop": {
+   "center": [
+    -65.25,
+    30.35
+   ],
+   "size": [
+    11.3,
+    8.3
+   ],
+   "H": 9.4,
+   "storeys": 3,
+   "base_z": 0.424,
+   "roof": "flat"
+  },
+  "B08_long_wood_shop": {
+   "center": [
+    -66.85,
+    38.3
+   ],
+   "size": [
+    11.7,
+    6.6
+   ],
+   "H": 8.4,
+   "storeys": 2,
+   "base_z": 0.411,
+   "roof": "gable"
+  },
+  "B09_three_storey_wood": {
+   "center": [
+    -100.25,
+    39.75
+   ],
+   "size": [
+    6.7,
+    8.5
+   ],
+   "H": 9.7,
+   "storeys": 3,
+   "base_z": -0.351,
+   "roof": "gable"
+  },
+  "B10_rear_shed": {
+   "center": [
+    -78.4,
+    17.1
+   ],
+   "size": [
+    4.4,
+    3.8
+   ],
+   "H": 4.6,
+   "storeys": 1,
+   "base_z": 0.246,
+   "roof": "gable"
+  }
+ },
+ "interface_points": [
+  {
+   "name": "后巷西端",
+   "enu": [
+    -111.5,
+    14.15
+   ],
+   "qs_h1": [
+    -12.35,
+    -79.0,
+    -0.414
+   ]
+  },
+  {
+   "name": "后巷东端，接东路",
+   "enu": [
+    -57.6,
+    14.15
+   ],
+   "qs_h1": [
+    -12.35,
+    -25.1,
+    0.487
+   ]
+  },
+  {
+   "name": "侧巷北端（尽头）",
+   "enu": [
+    -99.15,
+    25.2
+   ],
+   "qs_h1": [
+    -23.4,
+    -66.65,
+    -0.331
+   ]
+  },
+  {
+   "name": "东路南端",
+   "enu": [
+    -55.3,
+    13.0
+   ],
+   "qs_h1": [
+    -11.2,
+    -22.8,
+    0.506
+   ]
+  },
+  {
+   "name": "东路北端",
+   "enu": [
+    -58.0,
+    48.0
+   ],
+   "qs_h1": [
+    -46.2,
+    -25.5,
+    0.484
+   ]
+  },
+  {
+   "name": "西路南端",
+   "enu": [
+    -105.4,
+    33.4
+   ],
+   "qs_h1": [
+    -31.6,
+    -72.9,
+    -0.38
+   ]
+  }
+ ]
+}

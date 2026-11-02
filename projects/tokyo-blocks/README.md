@@ -8,8 +8,6 @@
 
 总览图：`preview/block_A_overview.jpg`、`preview/block_B_overview.jpg`；地块平面：`preview/plateau_plan.jpg`。
 
-**GLB 待补：** 这次提交只有脚本、说明和总览图。`block_A`、`block_B` 文件夹还在 5070 Ti 上，那台机器联网后补交。
-
 ## 交付内容
 
 每个街块一个文件夹：`block_A`、`block_B`。贴图内嵌在 GLB 里，散装副本不入库，需要时用 `src/glb_stats.py` 拆出。

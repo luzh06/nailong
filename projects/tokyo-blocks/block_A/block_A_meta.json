@@ -1,0 +1,702 @@
+{
+ "block": "A",
+ "tris": 612962,
+ "tris_by_material": {
+  "concrete": 23012,
+  "facetile": 25582,
+  "alu": 130900,
+  "pvc": 4966,
+  "steel": 3744,
+  "plinth_top": 3096,
+  "paint": 2094,
+  "glass": 240,
+  "dark": 11864,
+  "curtain": 240,
+  "decal": 6064,
+  "frost": 328,
+  "roofbase": 34,
+  "kawara": 235992,
+  "fasciaw": 2376,
+  "soffit": 13962,
+  "mortar": 15850,
+  "galva": 12126,
+  "tin": 9516,
+  "blackplank": 1926,
+  "plank": 4188,
+  "polyc": 2,
+  "siding": 13810,
+  "slate": 728,
+  "shutter": 8,
+  "plaster": 17506,
+  "beige": 16642,
+  "cedar": 2694,
+  "siding2": 7400,
+  "asphalt": 11438,
+  "lot": 34094,
+  "blockwall": 540
+ },
+ "anchors": [
+  {
+   "type": "ac_outdoor",
+   "building": "A01_apartment",
+   "center_enu": [
+    -113.256,
+    -29.137,
+    -0.302
+   ],
+   "outward_enu": [
+    -0.0336,
+    -0.9994
+   ]
+  },
+  {
+   "type": "ac_outdoor",
+   "building": "A01_apartment",
+   "center_enu": [
+    -108.358,
+    -29.302,
+    -0.302
+   ],
+   "outward_enu": [
+    -0.0336,
+    -0.9994
+   ]
+  },
+  {
+   "type": "ac_outdoor",
+   "building": "A02_old_mortar",
+   "center_enu": [
+    -99.523,
+    -29.269,
+    -0.16
+   ],
+   "outward_enu": [
+    -0.2043,
+    -0.9789
+   ]
+  },
+  {
+   "type": "planter",
+   "building": "A02_old_mortar",
+   "center_enu": [
+    -92.928,
+    -21.998,
+    -0.16
+   ],
+   "outward_enu": [
+    0.2043,
+    0.9789
+   ]
+  },
+  {
+   "type": "ac_outdoor",
+   "building": "A03_tin_shed",
+   "center_enu": [
+    -89.202,
+    -31.281,
+    0.05
+   ],
+   "outward_enu": [
+    -0.1858,
+    -0.9826
+   ]
+  },
+  {
+   "type": "vending_or_bin",
+   "building": "A04_low_plank",
+   "center_enu": [
+    -85.84,
+    -21.769,
+    -0.025
+   ],
+   "outward_enu": [
+    0.1793,
+    0.9838
+   ]
+  },
+  {
+   "type": "ac_outdoor",
+   "building": "A05_siding_house",
+   "center_enu": [
+    -75.762,
+    -30.853,
+    0.311
+   ],
+   "outward_enu": [
+    0.9844,
+    -0.1761
+   ]
+  },
+  {
+   "type": "storefront",
+   "building": "A07_corner_tile",
+   "center_enu": [
+    -65.313,
+    -21.96,
+    0.434
+   ],
+   "outward_enu": [
+    0.4102,
+    0.912
+   ],
+   "width": 8.76,
+   "height": 2.73,
+   "depth": 0.55
+  },
+  {
+   "type": "storefront",
+   "building": "A07_corner_tile",
+   "center_enu": [
+    -71.004,
+    -22.475,
+    0.434
+   ],
+   "outward_enu": [
+    -0.912,
+    0.4102
+   ],
+   "width": 4.61,
+   "height": 2.73,
+   "depth": 0.55
+  },
+  {
+   "type": "storefront",
+   "building": "A06_gable_shop",
+   "center_enu": [
+    -64.419,
+    -34.012,
+    0.417
+   ],
+   "outward_enu": [
+    0.915,
+    -0.4035
+   ],
+   "width": 4.8,
+   "height": 2.58,
+   "depth": 0.55
+  },
+  {
+   "type": "storefront",
+   "building": "A08_kanban_front",
+   "center_enu": [
+    -67.831,
+    -40.299,
+    0.38
+   ],
+   "outward_enu": [
+    0.9192,
+    -0.3938
+   ],
+   "width": 6.02,
+   "height": 2.48,
+   "depth": 0.55
+  },
+  {
+   "type": "bicycle",
+   "building": "A09_small_kawara",
+   "center_enu": [
+    -83.413,
+    -44.733,
+    0.109
+   ],
+   "outward_enu": [
+    -0.2696,
+    -0.963
+   ]
+  },
+  {
+   "type": "gas_meter",
+   "building": "A11_old_L_house",
+   "center_enu": [
+    -85.372,
+    -34.925,
+    0.982
+   ],
+   "outward_enu": [
+    0.203,
+    0.9792
+   ]
+  },
+  {
+   "type": "planter",
+   "building": "A11_old_L_house",
+   "center_enu": [
+    -91.927,
+    -41.829,
+    -0.018
+   ],
+   "outward_enu": [
+    -0.203,
+    -0.9792
+   ]
+  },
+  {
+   "type": "ac_outdoor",
+   "building": "A12_townhouse_slit",
+   "center_enu": [
+    -97.936,
+    -33.247,
+    -0.22
+   ],
+   "outward_enu": [
+    0.0579,
+    0.9983
+   ]
+  },
+  {
+   "type": "ac_outdoor",
+   "building": "A14_townhouse_tile",
+   "center_enu": [
+    -106.565,
+    -30.742,
+    -0.292
+   ],
+   "outward_enu": [
+    0.0741,
+    0.9973
+   ]
+  }
+ ],
+ "alley_centerline_enu": [
+  [
+   -119.5,
+   -29.15
+  ],
+  [
+   -108,
+   -29.95
+  ],
+  [
+   -100.5,
+   -31.0
+  ],
+  [
+   -92,
+   -32.7
+  ],
+  [
+   -84,
+   -34.3
+  ],
+  [
+   -77.6,
+   -34.85
+  ],
+  [
+   -75.7,
+   -33.5
+  ],
+  [
+   -74.4,
+   -29
+  ],
+  [
+   -73.4,
+   -23.4
+  ]
+ ],
+ "edges_enu": {
+  "lane_south": [
+   [
+    -119.1,
+    -19.75
+   ],
+   [
+    -106.7,
+    -19.75
+   ],
+   [
+    -94.3,
+    -20.05
+   ],
+   [
+    -86.6,
+    -20.55
+   ],
+   [
+    -61.1,
+    -23.05
+   ]
+  ],
+  "diagonal_west": [
+   [
+    -60.2,
+    -24.5
+   ],
+   [
+    -63.9,
+    -34.0
+   ],
+   [
+    -66.5,
+    -39.7
+   ],
+   [
+    -67.5,
+    -41.6
+   ],
+   [
+    -71.4,
+    -49.1
+   ]
+  ],
+  "south_road_north": [
+   [
+    -71.4,
+    -49.1
+   ],
+   [
+    -80.0,
+    -45.7
+   ],
+   [
+    -84.0,
+    -44.5
+   ],
+   [
+    -90.8,
+    -43.4
+   ],
+   [
+    -102.7,
+    -41.4
+   ],
+   [
+    -108.4,
+    -40.9
+   ],
+   [
+    -112.3,
+    -40.8
+   ],
+   [
+    -119.0,
+    -40.3
+   ]
+  ]
+ },
+ "buildings": {
+  "A01_apartment": {
+   "center": [
+    -109.39,
+    -26.32
+   ],
+   "size": [
+    15.95,
+    5.9
+   ],
+   "H": 11.2,
+   "storeys": 3,
+   "base_z": -0.402,
+   "roof": "flat"
+  },
+  "A02_old_mortar": {
+   "center": [
+    -95.98,
+    -25.68
+   ],
+   "size": [
+    10.27,
+    8.47
+   ],
+   "H": 7.4,
+   "storeys": 2,
+   "base_z": -0.26,
+   "roof": "hip"
+  },
+  "A03_tin_shed": {
+   "center": [
+    -87.62,
+    -28.89
+   ],
+   "size": [
+    7.03,
+    5.29
+   ],
+   "H": 6.8,
+   "storeys": 2,
+   "base_z": -0.05,
+   "roof": "gable"
+  },
+  "A04_low_plank": {
+   "center": [
+    -86.72,
+    -23.88
+   ],
+   "size": [
+    6.98,
+    4.46
+   ],
+   "H": 6.0,
+   "storeys": 2,
+   "base_z": -0.025,
+   "roof": "mono"
+  },
+  "A05_siding_house": {
+   "center": [
+    -79.41,
+    -28.08
+   ],
+   "size": [
+    10.16,
+    8.16
+   ],
+   "H": 8.1,
+   "storeys": 2,
+   "base_z": 0.211,
+   "roof": "gable"
+  },
+  "A07_corner_tile": {
+   "center": [
+    -66.55,
+    -24.7
+   ],
+   "size": [
+    6.01,
+    9.96
+   ],
+   "H": 8.6,
+   "storeys": 2,
+   "base_z": 0.414,
+   "roof": "flat"
+  },
+  "A06_gable_shop": {
+   "center": [
+    -68.42,
+    -31.52
+   ],
+   "size": [
+    9.33,
+    7.53
+   ],
+   "H": 8.2,
+   "storeys": 2,
+   "base_z": 0.397,
+   "roof": "gable"
+  },
+  "A08_kanban_front": {
+   "center": [
+    -72.61,
+    -38.25
+   ],
+   "size": [
+    7.22,
+    10.4
+   ],
+   "H": 7.1,
+   "storeys": 2,
+   "base_z": 0.36,
+   "roof": "kanban"
+  },
+  "A09_small_kawara": {
+   "center": [
+    -82.31,
+    -40.83
+   ],
+   "size": [
+    8.11,
+    5.02
+   ],
+   "H": 6.5,
+   "storeys": 2,
+   "base_z": 0.109,
+   "roof": "gable"
+  },
+  "A10_green_tin": {
+   "center": [
+    -78.33,
+    -43.26
+   ],
+   "size": [
+    6.29,
+    3.3
+   ],
+   "H": 7.0,
+   "storeys": 2,
+   "base_z": 0.248,
+   "roof": "gable"
+  },
+  "A11_old_L_house": {
+   "center": [
+    -90.12,
+    -38.07
+   ],
+   "size": [
+    10.42,
+    8.09
+   ],
+   "H": 7.4,
+   "storeys": 2,
+   "base_z": -0.118,
+   "roof": "hip"
+  },
+  "A12_townhouse_slit": {
+   "center": [
+    -98.68,
+    -36.96
+   ],
+   "size": [
+    7.51,
+    4.66
+   ],
+   "H": 9.7,
+   "storeys": 3,
+   "base_z": -0.32,
+   "roof": "mono"
+  },
+  "A13_townhouse_white": {
+   "center": [
+    -103.37,
+    -35.48
+   ],
+   "size": [
+    8.76,
+    3.98
+   ],
+   "H": 9.7,
+   "storeys": 3,
+   "base_z": -0.369,
+   "roof": "flat"
+  },
+  "A14_townhouse_tile": {
+   "center": [
+    -107.63,
+    -35.01
+   ],
+   "size": [
+    8.67,
+    3.9
+   ],
+   "H": 9.6,
+   "storeys": 3,
+   "base_z": -0.392,
+   "roof": "gable"
+  },
+  "A15_townhouse_galva": {
+   "center": [
+    -112.12,
+    -34.81
+   ],
+   "size": [
+    9.18,
+    4.0
+   ],
+   "H": 9.6,
+   "storeys": 3,
+   "base_z": -0.417,
+   "roof": "mono"
+  },
+  "A16_townhouse_beige": {
+   "center": [
+    -116.71,
+    -34.51
+   ],
+   "size": [
+    8.75,
+    3.67
+   ],
+   "H": 9.5,
+   "storeys": 3,
+   "base_z": -0.443,
+   "roof": "gable"
+  }
+ },
+ "interface_points": [
+  {
+   "name": "小巷东端，接斜路",
+   "enu": [
+    -60.7,
+    -21.8
+   ],
+   "qs_h1": [
+    23.6,
+    -28.2,
+    0.462
+   ]
+  },
+  {
+   "name": "小巷西端，出街块",
+   "enu": [
+    -119.1,
+    -18.5
+   ],
+   "qs_h1": [
+    20.3,
+    -86.6,
+    -0.452
+   ]
+  },
+  {
+   "name": "后巷东出口，接小巷",
+   "enu": [
+    -73.4,
+    -23.4
+   ],
+   "qs_h1": [
+    25.2,
+    -40.9,
+    0.353
+   ]
+  },
+  {
+   "name": "后巷西端",
+   "enu": [
+    -119.5,
+    -29.15
+   ],
+   "qs_h1": [
+    30.95,
+    -87.0,
+    -0.453
+   ]
+  },
+  {
+   "name": "南路西端",
+   "enu": [
+    -119.1,
+    -42.2
+   ],
+   "qs_h1": [
+    44.0,
+    -86.6,
+    -0.452
+   ]
+  },
+  {
+   "name": "南路东端，接斜路",
+   "enu": [
+    -71.9,
+    -50.2
+   ],
+   "qs_h1": [
+    52.0,
+    -39.4,
+    0.366
+   ]
+  },
+  {
+   "name": "斜路北端",
+   "enu": [
+    -58.0,
+    -26.8
+   ],
+   "qs_h1": [
+    28.6,
+    -25.5,
+    0.484
+   ]
+  },
+  {
+   "name": "斜路南端",
+   "enu": [
+    -69.4,
+    -52.6
+   ],
+   "qs_h1": [
+    54.4,
+    -36.9,
+    0.389
+   ]
+  }
+ ]
+}
