@@ -1,0 +1,33 @@
+{
+ "name": "sf04_goods",
+ "tris": {
+  "LOD0": 86832,
+  "LOD1": 34731,
+  "LOD2": 10419,
+  "COL": 12
+ },
+ "size_m": [
+  3.614,
+  0.709,
+  1.198
+ ],
+ "texture": [
+  2048,
+  2048
+ ],
+ "sources": [
+  "polyhaven:plastic_broom",
+  "polyhaven:plastic_bottle_gallon",
+  "polyhaven:plastic_crate_01",
+  "polyhaven:cardboard_box_01",
+  "ref:Commons Tokyo Yanaka 2/4, Yanaka Ginza 2, Japan - Tokyo (Yanaka) 9982647795 (CC BY / BY-SA)",
+  "map:PLATEAU 13106 taito-ku 2025 bldg 53394671"
+ ],
+ "notes": "荒物 木村：门前货物与杂物",
+ "maps": {
+  "BaseColor": "sf04_goods_BaseColor.png",
+  "Normal": "sf04_goods_Normal.png",
+  "ORM": "sf04_goods_ORM.png"
+ },
+ "glb_mb": 8.94
+}

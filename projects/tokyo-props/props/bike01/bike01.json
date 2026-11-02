@@ -1,0 +1,32 @@
+{
+ "name": "bike01",
+ "tris": {
+  "LOD0": 51600,
+  "LOD1": 18060,
+  "LOD2": 5160,
+  "COL": 36
+ },
+ "size_m": [
+  1.814,
+  0.661,
+  1.077
+ ],
+ "texture": [
+  2048,
+  2048
+ ],
+ "sources": [
+  "polyhaven:painted_metal_shutter",
+  "polyhaven:metal_plate",
+  "polyhaven:rusty_metal_02",
+  "polyhaven:fabric_pattern_07",
+  "decals:original"
+ ],
+ "notes": "无品牌ママチャリ；前轮转 14°，靠后撑站立",
+ "maps": {
+  "BaseColor": "bike01_BaseColor.png",
+  "Normal": "bike01_Normal.png",
+  "ORM": "bike01_ORM.png"
+ },
+ "glb_mb": 4.66
+}

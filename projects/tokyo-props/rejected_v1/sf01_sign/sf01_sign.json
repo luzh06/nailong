@@ -1,0 +1,36 @@
+{
+ "name": "sf01_sign",
+ "tris": {
+  "LOD0": 16132,
+  "LOD1": 7258,
+  "LOD2": 2419,
+  "COL": 12
+ },
+ "size_m": [
+  3.08,
+  0.088,
+  0.696
+ ],
+ "texture": [
+  2048,
+  2048
+ ],
+ "sources": [
+  "polyhaven:japanese_cedar_planks",
+  "polyhaven:dark_wooden_planks",
+  "polyhaven:weathered_planks",
+  "polyhaven:metal_plate",
+  "polyhaven:rusty_metal_02",
+  "polyhaven:green_metal_rust",
+  "font:ShipporiMincho(OFL)",
+  "font:YujiSyuku(OFL)",
+  "decals:original"
+ ],
+ "notes": "木招牌，字是立体铸字（虚构店名）",
+ "maps": {
+  "BaseColor": "sf01_sign_BaseColor.png",
+  "Normal": "sf01_sign_Normal.png",
+  "ORM": "sf01_sign_ORM.png"
+ },
+ "glb_mb": 2.5
+}

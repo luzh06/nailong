@@ -1,0 +1,1 @@
+Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -like '*ph_fetch*' -or $_.CommandLine -like '*fetch.bat*' -or $_.CommandLine -like '*pipe_r1*' } | Select-Object ProcessId,CreationDate,Name | Format-Table -AutoSize

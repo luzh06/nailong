@@ -1,0 +1,31 @@
+{
+ "name": "pr_cone",
+ "tris": {
+  "LOD0": 1252,
+  "LOD1": 500,
+  "LOD2": 150,
+  "COL": 12
+ },
+ "size_m": [
+  0.88,
+  0.38,
+  0.7
+ ],
+ "texture": [
+  2048,
+  2048
+ ],
+ "sources": [
+  "polyhaven:metal_plate",
+  "polyhaven:painted_metal_shutter",
+  "font:ZenKakuGothicNew(OFL)",
+  "decals:original"
+ ],
+ "notes": "雪糕筒两只加横杆",
+ "maps": {
+  "BaseColor": "pr_cone_BaseColor.png",
+  "Normal": "pr_cone_Normal.png",
+  "ORM": "pr_cone_ORM.png"
+ },
+ "glb_mb": 0.8
+}

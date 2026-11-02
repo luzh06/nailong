@@ -1,0 +1,32 @@
+{
+ "name": "pr_gasmeter",
+ "tris": {
+  "LOD0": 22200,
+  "LOD1": 8879,
+  "LOD2": 2664,
+  "COL": 12
+ },
+ "size_m": [
+  0.519,
+  0.323,
+  2.4
+ ],
+ "texture": [
+  2048,
+  2048
+ ],
+ "sources": [
+  "polyhaven:power_box_01",
+  "polyhaven:metal_plate",
+  "polyhaven:painted_metal_shutter",
+  "font:ZenKakuGothicNew(OFL)",
+  "decals:original"
+ ],
+ "notes": "墙挂燃气表和管线（墙在 y=0）",
+ "maps": {
+  "BaseColor": "pr_gasmeter_BaseColor.png",
+  "Normal": "pr_gasmeter_Normal.png",
+  "ORM": "pr_gasmeter_ORM.png"
+ },
+ "glb_mb": 2.76
+}

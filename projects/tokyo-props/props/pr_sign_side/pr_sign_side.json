@@ -1,0 +1,32 @@
+{
+ "name": "pr_sign_side",
+ "tris": {
+  "LOD0": 284,
+  "LOD1": 112,
+  "LOD2": 34,
+  "COL": 12
+ },
+ "size_m": [
+  0.126,
+  0.55,
+  1.0
+ ],
+ "texture": [
+  2048,
+  2048
+ ],
+ "sources": [
+  "polyhaven:metal_plate",
+  "polyhaven:painted_metal_shutter",
+  "font:ZenKakuGothicNew(OFL)",
+  "decals:original"
+ ],
+ "notes": "双面灯箱袖看板（墙在 y=0）",
+ "maps": {
+  "BaseColor": "pr_sign_side_BaseColor.png",
+  "Normal": "pr_sign_side_Normal.png",
+  "ORM": "pr_sign_side_ORM.png",
+  "Emissive": "pr_sign_side_Emissive.png"
+ },
+ "glb_mb": 0.95
+}

@@ -1,0 +1,43 @@
+{
+ "name": "sf02_goods",
+ "tris": {
+  "LOD0": 301800,
+  "LOD1": 120720,
+  "LOD2": 36216,
+  "COL": 36
+ },
+ "size_m": [
+  5.515,
+  1.107,
+  0.945
+ ],
+ "texture": [
+  4096,
+  4096
+ ],
+ "sources": [
+  "polyhaven:cardboard_box_01",
+  "polyhaven:plastic_crate_01",
+  "polyhaven:potted_plant_01",
+  "polyhaven:potted_plant_02",
+  "polyhaven:planter_pot_clay",
+  "polyhaven:metal_trash_can",
+  "polyhaven:weathered_planks",
+  "polyhaven:rough_linen",
+  "ref:Commons Tokyo Yanaka 2 (CC BY-SA 4.0)",
+  "ref:Commons Tokyo Yanaka 4 (CC BY-SA 4.0)",
+  "ref:Commons Japan - Tokyo (Yanaka) 9982647795 (CC BY 2.0)",
+  "map:PLATEAU 13106 taito-ku 2025 bldg 53394671 (CC BY 4.0 compatible, see LICENSES)",
+  "font:ShipporiMincho(OFL)",
+  "font:YujiSyuku(OFL)",
+  "font:ZenKakuGothicNew(OFL)",
+  "decals:original"
+ ],
+ "notes": "门前货摊和杂物，含 Poly Haven 扫描模型",
+ "maps": {
+  "BaseColor": "sf02_goods_BaseColor.png",
+  "Normal": "sf02_goods_Normal.png",
+  "ORM": "sf02_goods_ORM.png"
+ },
+ "glb_mb": 28.24
+}

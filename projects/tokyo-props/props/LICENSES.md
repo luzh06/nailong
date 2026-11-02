@@ -1,0 +1,53 @@
+# 来源与许可
+
+招牌、标签、暖帘图案均为本项目原创绘制，店名和品牌均为虚构。
+
+- decals:original：本项目原创（原创）
+- font:ReggaeOne(OFL)：https://github.com/google/fonts/tree/main/ofl/reggaeone（SIL OFL 1.1）
+- font:ShipporiMincho(OFL)：https://github.com/google/fonts/tree/main/ofl/shipporimincho（SIL OFL 1.1）
+- font:YujiSyuku(OFL)：https://github.com/google/fonts/tree/main/ofl/yujisyuku（SIL OFL 1.1）
+- font:ZenKakuGothicNew(OFL)：https://github.com/google/fonts/tree/main/ofl/zenkakugothicnew（SIL OFL 1.1）
+- map:PLATEAU 13106 taito-ku 2025 bldg 53394671
+- map:PLATEAU 13106 taito-ku 2025 bldg 53394671 (CC BY 4.0 compatible, see LICENSES)
+- polyhaven:asphalt_02：https://polyhaven.com/a/asphalt_02（CC0）
+- polyhaven:brick_wall_001：https://polyhaven.com/a/brick_wall_001（CC0）
+- polyhaven:cardboard_box_01：https://polyhaven.com/a/cardboard_box_01（CC0）
+- polyhaven:concrete_floor_worn_001：https://polyhaven.com/a/concrete_floor_worn_001（CC0）
+- polyhaven:dark_wooden_planks：https://polyhaven.com/a/dark_wooden_planks（CC0）
+- polyhaven:exterior_aircon_unit：https://polyhaven.com/a/exterior_aircon_unit（CC0）
+- polyhaven:fabric_pattern_07：https://polyhaven.com/a/fabric_pattern_07（CC0）
+- polyhaven:grey_roof_tiles：https://polyhaven.com/a/grey_roof_tiles（CC0）
+- polyhaven:hinoki_planks：https://polyhaven.com/a/hinoki_planks（CC0）
+- polyhaven:japanese_cedar_planks：https://polyhaven.com/a/japanese_cedar_planks（CC0）
+- polyhaven:long_white_tiles：https://polyhaven.com/a/long_white_tiles（CC0）
+- polyhaven:metal_plate：https://polyhaven.com/a/metal_plate（CC0）
+- polyhaven:metal_trash_can：https://polyhaven.com/a/metal_trash_can（CC0）
+- polyhaven:painted_metal_shutter：https://polyhaven.com/a/painted_metal_shutter（CC0）
+- polyhaven:painted_metal_shutter (corrugated tin)：本项目原创（原创）
+- polyhaven:painted_plaster_wall：https://polyhaven.com/a/painted_plaster_wall（CC0）
+- polyhaven:peeling_painted_wall：https://polyhaven.com/a/peeling_painted_wall（CC0）
+- polyhaven:planter_pot_clay：https://polyhaven.com/a/planter_pot_clay（CC0）
+- polyhaven:plastic_bottle_gallon：https://polyhaven.com/a/plastic_bottle_gallon（CC0）
+- polyhaven:plastic_broom：https://polyhaven.com/a/plastic_broom（CC0）
+- polyhaven:plastic_crate_01：https://polyhaven.com/a/plastic_crate_01（CC0）
+- polyhaven:plastic_crate_02：https://polyhaven.com/a/plastic_crate_02（CC0）
+- polyhaven:potted_plant_01：https://polyhaven.com/a/potted_plant_01（CC0）
+- polyhaven:potted_plant_02：https://polyhaven.com/a/potted_plant_02（CC0）
+- polyhaven:potted_plant_04：https://polyhaven.com/a/potted_plant_04（CC0）
+- polyhaven:power_box_01：https://polyhaven.com/a/power_box_01（CC0）
+- polyhaven:rectangular_facade_tiles：https://polyhaven.com/a/rectangular_facade_tiles（CC0）
+- polyhaven:rough_linen：https://polyhaven.com/a/rough_linen（CC0）
+- polyhaven:rusty_metal_02：https://polyhaven.com/a/rusty_metal_02（CC0）
+- polyhaven:standing_chalkboard_01：https://polyhaven.com/a/standing_chalkboard_01（CC0）
+- polyhaven:trashbag：https://polyhaven.com/a/trashbag（CC0）
+- polyhaven:weathered_plank_siding：https://polyhaven.com/a/weathered_plank_siding（CC0）
+- polyhaven:weathered_planks：https://polyhaven.com/a/weathered_planks（CC0）
+- polyhaven:white_plaster_rough_01：https://polyhaven.com/a/white_plaster_rough_01（CC0）
+- polyhaven:worn_asphalt：https://polyhaven.com/a/worn_asphalt（CC0）
+- polyhaven:worn_cracked_plaster：https://polyhaven.com/a/worn_cracked_plaster（CC0）
+- ref:Commons Japan - Tokyo (Yanaka) 9982647795 (CC BY 2.0)
+- ref:Commons Random vending machine Hakone (CC BY-SA 2.0)
+- ref:Commons Tokyo Yanaka 2 (CC BY-SA 4.0)
+- ref:Commons Tokyo Yanaka 2/4, Yanaka Ginza 2, Japan - Tokyo (Yanaka) 9982647795 (CC BY / BY-SA)
+- ref:Commons Tokyo Yanaka 4 (CC BY-SA 4.0)
+- ref:Commons Vending Machines in Japan 43679427685 (CC BY 2.0)

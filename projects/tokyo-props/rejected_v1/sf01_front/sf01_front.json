@@ -1,0 +1,39 @@
+{
+ "name": "sf01_front",
+ "tris": {
+  "LOD0": 41460,
+  "LOD1": 16584,
+  "LOD2": 4975,
+  "COL": 12
+ },
+ "size_m": [
+  3.605,
+  0.898,
+  2.56
+ ],
+ "texture": [
+  4096,
+  4096
+ ],
+ "sources": [
+  "polyhaven:japanese_cedar_planks",
+  "polyhaven:dark_wooden_planks",
+  "polyhaven:weathered_planks",
+  "polyhaven:rectangular_facade_tiles",
+  "polyhaven:concrete_floor_worn_001",
+  "polyhaven:hinoki_planks",
+  "polyhaven:rough_linen",
+  "polyhaven:metal_plate",
+  "font:ShipporiMincho(OFL)",
+  "font:YujiSyuku(OFL)",
+  "decals:original"
+ ],
+ "notes": "虚构店名 三径茶舗；门窗+暖帘+橱窗；与 awning/sign 共用原点",
+ "maps": {
+  "BaseColor": "sf01_front_BaseColor.png",
+  "Normal": "sf01_front_Normal.png",
+  "ORM": "sf01_front_ORM.png",
+  "Emissive": "sf01_front_Emissive.png"
+ },
+ "glb_mb": 7.13
+}

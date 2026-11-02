@@ -1,0 +1,42 @@
+{
+ "name": "sf02_shell",
+ "tris": {
+  "LOD0": 62346,
+  "LOD1": 24938,
+  "LOD2": 7480,
+  "COL": 12
+ },
+ "size_m": [
+  5.74,
+  0.726,
+  7.435
+ ],
+ "texture": [
+  4096,
+  4096
+ ],
+ "sources": [
+  "polyhaven:worn_cracked_plaster",
+  "polyhaven:peeling_painted_wall",
+  "polyhaven:concrete_floor_worn_001",
+  "polyhaven:exterior_aircon_unit",
+  "polyhaven:painted_metal_shutter",
+  "polyhaven:metal_plate",
+  "polyhaven:rusty_metal_02",
+  "ref:Commons Tokyo Yanaka 2 (CC BY-SA 4.0)",
+  "ref:Commons Tokyo Yanaka 4 (CC BY-SA 4.0)",
+  "ref:Commons Japan - Tokyo (Yanaka) 9982647795 (CC BY 2.0)",
+  "map:PLATEAU 13106 taito-ku 2025 bldg 53394671 (CC BY 4.0 compatible, see LICENSES)",
+  "font:ShipporiMincho(OFL)",
+  "font:YujiSyuku(OFL)",
+  "font:ZenKakuGothicNew(OFL)",
+  "decals:original"
+ ],
+ "notes": "二层立面：浮雕字、铁窗栏、雨痕按真实流向放置",
+ "maps": {
+  "BaseColor": "sf02_shell_BaseColor.png",
+  "Normal": "sf02_shell_Normal.png",
+  "ORM": "sf02_shell_ORM.png"
+ },
+ "glb_mb": 9.66
+}

@@ -1,0 +1,32 @@
+{
+ "name": "gr01_road",
+ "tris": {
+  "LOD0": 50020,
+  "LOD1": 20007,
+  "LOD2": 6001,
+  "COL": 12
+ },
+ "size_m": [
+  8.0,
+  4.59,
+  0.087
+ ],
+ "texture": [
+  4096,
+  4096
+ ],
+ "sources": [
+  "polyhaven:worn_asphalt",
+  "polyhaven:asphalt_02",
+  "polyhaven:concrete_floor_worn_001",
+  "polyhaven:metal_plate",
+  "polyhaven:rusty_metal_02"
+ ],
+ "notes": "8×4.6 米路面段，沿 X 平铺，隔段镜像；顶面略低于 z=0",
+ "maps": {
+  "BaseColor": "gr01_road_BaseColor.png",
+  "Normal": "gr01_road_Normal.png",
+  "ORM": "gr01_road_ORM.png"
+ },
+ "glb_mb": 8.74
+}

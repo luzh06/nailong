@@ -1,0 +1,32 @@
+{
+ "name": "pr_aircon",
+ "tris": {
+  "LOD0": 20282,
+  "LOD1": 8111,
+  "LOD2": 2433,
+  "COL": 12
+ },
+ "size_m": [
+  1.8,
+  0.533,
+  1.65
+ ],
+ "texture": [
+  2048,
+  2048
+ ],
+ "sources": [
+  "polyhaven:exterior_aircon_unit",
+  "polyhaven:metal_plate",
+  "polyhaven:painted_metal_shutter",
+  "font:ZenKakuGothicNew(OFL)",
+  "decals:original"
+ ],
+ "notes": "落地空调外机，配架子、管罩和排水管（墙在 y=0）",
+ "maps": {
+  "BaseColor": "pr_aircon_BaseColor.png",
+  "Normal": "pr_aircon_Normal.png",
+  "ORM": "pr_aircon_ORM.png"
+ },
+ "glb_mb": 2.97
+}
