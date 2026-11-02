@@ -1,12 +1,18 @@
-// 拍照模块的独立测试页：一条程序生成的小街，代替还没烘焙好的东京场景。
-// 正式接入时只需要照着这里的 3 处调用（创建、每帧 render、移动时判断 active）。
+// 拍照模块的独立测试页：用占位几何摆出东京、悉尼的打卡点，代替还没接进来的正式场景。
+// 正式接入时照着这里的调用做：建管线 → new PhotoSystem({...城市配置}) → setupCity() → 每帧 render。
 //
-// 画面管线默认用烘焙小样的那一套（HDR → 泛光 → 曝光 → AgX 查找表），查找表文件从
-//   test-data/lut_morning.bin、test-data/lut_sunset.bin 读（就是 cijian-5070/web/data 里的同名文件，
-//   不入库，见 README）。读不到就退回 StandardPipeline（ACES）。
-// ?pipeline=standard 强制用 StandardPipeline；?pipeline=composer 用和悉尼一样的 EffectComposer（泛光 + ACES）。
+//   ?city=tokyo（默认）  东京：烘焙小样同款管线（HDR → 泛光 → 曝光 → AgX 查找表），查找表读 test-data/
+//   ?city=sydney         悉尼：EffectComposer（泛光 + ACES），和 sydney-harbour 一样
+//   ?pipeline=standard | composer | hdr  强制换管线
 import * as THREE from 'three';
 import { PhotoSystem, HdrPipeline, StandardPipeline, ComposerPipeline } from './photo/index.js';
+import { CITIES, setupCity, applyPhase, createTokyoPipeline, createSydneyPipeline, stampFor } from './photo/presets/index.js';
+import { buildTokyo } from './test-scenes/tokyo.js';
+import { buildSydney } from './test-scenes/sydney.js';
+
+const params = new URLSearchParams(location.search);
+const cityId = CITIES[params.get('city')] ? params.get('city') : 'tokyo';
+const CITY = CITIES[cityId];
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
@@ -17,64 +23,29 @@ document.body.prepend(renderer.domElement);
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(60, innerWidth / innerHeight, 0.1, 400);
-camera.position.set(0, 1.6, 14);
-
-// ---- 灯光和两个时段 ----
 const hemi = new THREE.HemisphereLight(0xbcd3ff, 0x6b5a48, 1.2);
 const sun = new THREE.DirectionalLight(0xffffff, 3);
 sun.castShadow = true;
 sun.shadow.mapSize.set(2048, 2048);
-Object.assign(sun.shadow.camera, { left: -30, right: 30, top: 30, bottom: -30, far: 120 });
+sun.shadow.bias = -0.0004;
+sun.shadow.normalBias = 0.02;
 scene.add(hemi, sun, sun.target);
-// exposure 是 game.js 里的 EV（实际倍数 2^exposure），bloom 同 game.js
-const PHASES = {
-  day: { sky: 0x9cc4ea, skyI: 1.6, fog: 0xbcd3ea, sun: 0xfff4e0, sunI: 4.0, hemiI: 1.1, pos: [20, 40, 10], exposure: 0.5, bloom: 0, lut: 0, std: 1.0 },
-  sunset: { sky: 0xe39a6c, skyI: 1.2, fog: 0xd99573, sun: 0xffa45c, sunI: 7.5, hemiI: 0.45, pos: [-40, 7, -10], exposure: 0.3, bloom: 0.2, lut: 1, std: 1.15 },
-};
-let phase = 'day';
-let pipeline;
-function setPhase(p) {
-  phase = p;
-  const c = PHASES[p];
-  scene.background = new THREE.Color(c.sky).multiplyScalar(c.skyI);
-  scene.fog = new THREE.Fog(c.fog, 25, 120);
-  sun.color.set(c.sun);
-  sun.intensity = c.sunI;
-  hemi.intensity = c.hemiI;
-  sun.position.set(...c.pos);
-  if (pipeline instanceof HdrPipeline) {
-    pipeline.exposure = Math.pow(2, c.exposure);
-    pipeline.bloom = c.bloom;
-    pipeline.lutMix = c.lut;
-  } else {
-    renderer.toneMappingExposure = c.std;
-  }
-  document.querySelectorAll('[data-phase]').forEach((b) => b.classList.toggle('on', b.dataset.phase === p));
-}
 
+const world = (cityId === 'sydney' ? buildSydney : buildTokyo)({ renderer, scene, sun, hemi });
+camera.far = world.far;
+camera.updateProjectionMatrix();
+
+// ---- 画面管线 ----
 async function makePipeline() {
-  const want = new URLSearchParams(location.search).get('pipeline');
+  const want = params.get('pipeline') ?? (cityId === 'sydney' ? 'composer' : 'hdr');
   if (want === 'composer') {
-    // 照搬 sydney-harbour/web/src/post.js
-    const { EffectComposer } = await import('three/addons/postprocessing/EffectComposer.js');
-    const { RenderPass } = await import('three/addons/postprocessing/RenderPass.js');
-    const { UnrealBloomPass } = await import('three/addons/postprocessing/UnrealBloomPass.js');
-    const { OutputPass } = await import('three/addons/postprocessing/OutputPass.js');
-    renderer.toneMapping = THREE.ACESFilmicToneMapping;
-    const size = renderer.getSize(new THREE.Vector2());
-    const composer = new EffectComposer(renderer, new THREE.WebGLRenderTarget(size.x, size.y, { type: THREE.HalfFloatType, samples: 4 }));
-    composer.addPass(new RenderPass(scene, camera));
-    composer.addPass(new UnrealBloomPass(size.clone().multiplyScalar(0.5), 0.6, 0.55, 1.0));
-    composer.addPass(new OutputPass());
-    addEventListener('resize', () => composer.setSize(innerWidth, innerHeight));
-    return new ComposerPipeline(renderer, composer);
+    const p = await createSydneyPipeline(renderer, scene, camera);
+    addEventListener('resize', () => p.composer.setSize(innerWidth, innerHeight));
+    return p;
   }
-  if (want !== 'standard') {
+  if (want === 'hdr') {
     try {
-      const hdr = new HdrPipeline(renderer);
-      const [a, b] = await Promise.all([hdr.loadLut('test-data/lut_morning.bin'), hdr.loadLut('test-data/lut_sunset.bin')]);
-      hdr.setLuts(a, b);
-      return hdr;
+      return await createTokyoPipeline(renderer, { lutBase: 'test-data/' });
     } catch (e) {
       console.warn('读不到查找表，改用 StandardPipeline', e);
     }
@@ -82,118 +53,94 @@ async function makePipeline() {
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
   return new StandardPipeline(renderer);
 }
-pipeline = await makePipeline();
+const pipeline = await makePipeline();
 document.getElementById('pipe-info').textContent =
   pipeline instanceof HdrPipeline
-    ? '画面管线：东京烘焙小样同款（泛光 + AgX）'
+    ? '东京烘焙小样同款（泛光 + AgX）'
     : pipeline instanceof ComposerPipeline
-      ? '画面管线：悉尼同款（EffectComposer 泛光 + ACES）'
-      : '画面管线：Three.js ACES';
+      ? '悉尼同款（EffectComposer 泛光 + ACES）'
+      : 'Three.js ACES';
 
-// ---- 一条小街：路、两排房子、暖帘、灯笼、电线杆、台阶 ----
-const rand = mulberry32(7);
-const ground = new THREE.Mesh(new THREE.PlaneGeometry(200, 200), new THREE.MeshStandardMaterial({ color: 0x5d5a55, roughness: 0.95 }));
-ground.rotation.x = -Math.PI / 2;
-ground.receiveShadow = true;
-scene.add(ground);
-const road = new THREE.Mesh(new THREE.PlaneGeometry(5, 70), new THREE.MeshStandardMaterial({ color: 0x8a8278, roughness: 0.85 }));
-road.rotation.x = -Math.PI / 2;
-road.position.y = 0.01;
-road.receiveShadow = true;
-scene.add(road);
+// ---- 拍照模块：城市配置直接展开，再一步接好打卡点和回忆卡 ----
+let phase = CITY.defaultPhase;
+let actionsDone = true;
+const photo = new PhotoSystem({ ...CITY, renderer, scene, camera, pipeline });
+const city = setupCity(photo, CITY, {
+  getPhase: () => phase,
+  actionDone: () => actionsDone,
+});
 
-const wallColors = [0xd9cbb3, 0xb9a68a, 0x8d7b67, 0xe8e0d0, 0x6f5f52, 0xc7b8a0];
-const norenColors = [0x23395b, 0x7a2a1f, 0x2f4a3a, 0x3a2f45];
-for (const side of [-1, 1]) {
-  let z = -30;
-  while (z < 30) {
-    const w = 4 + rand() * 3;
-    const h = 5 + rand() * 4;
-    const d = 6;
-    const house = new THREE.Mesh(
-      new THREE.BoxGeometry(d, h, w),
-      new THREE.MeshStandardMaterial({ color: wallColors[Math.floor(rand() * wallColors.length)], roughness: 0.9 }),
-    );
-    house.position.set(side * (2.5 + 1 + d / 2), h / 2, z + w / 2);
-    house.castShadow = house.receiveShadow = true;
-    scene.add(house);
-    const roof = new THREE.Mesh(new THREE.BoxGeometry(d + 0.6, 0.25, w + 0.3), new THREE.MeshStandardMaterial({ color: 0x3b3a3c, roughness: 0.7 }));
-    roof.position.set(house.position.x, h + 0.12, house.position.z);
-    roof.castShadow = true;
-    scene.add(roof);
-    // 店面：深色门洞 + 暖帘 + 雨棚
-    const front = side * (2.5 + 1);
-    const door = new THREE.Mesh(new THREE.PlaneGeometry(w * 0.7, 2.4), new THREE.MeshStandardMaterial({ color: 0x241c16, roughness: 0.4, emissive: 0x3a2410, emissiveIntensity: 0.6 }));
-    door.position.set(front - side * 0.01, 1.2, z + w / 2);
-    door.rotation.y = -side * Math.PI / 2;
-    scene.add(door);
-    const noren = new THREE.Mesh(new THREE.PlaneGeometry(w * 0.6, 0.9), new THREE.MeshStandardMaterial({ color: norenColors[Math.floor(rand() * norenColors.length)], side: THREE.DoubleSide, roughness: 1 }));
-    noren.position.set(front - side * 0.06, 2.05, z + w / 2);
-    noren.rotation.y = -side * Math.PI / 2;
-    noren.castShadow = true;
-    scene.add(noren);
-    const awning = new THREE.Mesh(new THREE.BoxGeometry(1.2, 0.06, w * 0.9), new THREE.MeshStandardMaterial({ color: 0x9a3b2c, roughness: 0.8 }));
-    awning.position.set(front - side * 0.6, 2.7, z + w / 2);
-    awning.rotation.z = side * 0.25;
-    awning.castShadow = true;
-    scene.add(awning);
-    if (rand() > 0.5) {
-      const lantern = new THREE.Mesh(new THREE.SphereGeometry(0.28, 16, 12), new THREE.MeshStandardMaterial({ color: 0xd8432c, emissive: 0xff6a3a, emissiveIntensity: 1.4 }));
-      lantern.scale.y = 1.35;
-      lantern.position.set(front - side * 0.9, 2.3, z + 0.6);
-      scene.add(lantern);
+function setPhase(key) {
+  phase = key;
+  world.setPhase(key);
+  applyPhase(CITY, key, { pipeline, renderer });
+  document.querySelectorAll('[data-phase]').forEach((b) => b.classList.toggle('on', b.dataset.phase === key));
+}
+
+// ---- 界面 ----
+document.getElementById('city-name').textContent = `${CITY.name} · ${CITY.story}`;
+document.querySelectorAll('[data-city]').forEach((a) => {
+  a.classList.toggle('on', a.dataset.city === cityId);
+  const q = new URLSearchParams(location.search);
+  q.set('city', a.dataset.city);
+  q.delete('pipeline');
+  a.href = `?${q}`;
+});
+const phaseBox = document.getElementById('phases');
+for (const [k, ph] of Object.entries(CITY.phases)) {
+  const b = document.createElement('button');
+  b.dataset.phase = k;
+  b.textContent = ph.label;
+  b.addEventListener('click', () => setPhase(k));
+  phaseBox.appendChild(b);
+}
+const spotBox = document.getElementById('spots');
+function renderSpots() {
+  spotBox.innerHTML = '';
+  for (const d of CITY.spotDefs) {
+    const found = city.spots.some((s) => s.id === d.id);
+    const row = document.createElement('div');
+    row.className = `spot-row${city.book.has(d.id) ? ' got' : ''}${found ? '' : ' missing'}`;
+    row.innerHTML = `<span class="code">${d.code}</span><span class="name">${d.label}</span><span class="kind">${d.required ? '必拍' : '可选'}</span>`;
+    if (found && world.viewpoints[d.id]) {
+      const go = document.createElement('button');
+      go.textContent = '去这里';
+      go.addEventListener('click', () => goto(d.id));
+      row.appendChild(go);
     }
-    z += w + 0.15;
+    row.title = `${d.story}\n建议：${d.suggest ?? ''}\n点位名：${d.anchor}`;
+    spotBox.appendChild(row);
   }
 }
-for (let z = -28; z <= 28; z += 14) {
-  const pole = new THREE.Mesh(new THREE.CylinderGeometry(0.12, 0.15, 8, 10), new THREE.MeshStandardMaterial({ color: 0x8f8a83 }));
-  pole.position.set(2.8, 4, z);
-  pole.castShadow = true;
-  scene.add(pole);
-}
-// 街尾的台阶（也是测试用的打卡点）
-const steps = new THREE.Group();
-steps.name = 'steps';
-scene.add(steps);
-for (let i = 0; i < 12; i++) {
-  const step = new THREE.Mesh(new THREE.BoxGeometry(5, 0.18 * (i + 1), 0.4), new THREE.MeshStandardMaterial({ color: 0x9d968b, roughness: 0.9 }));
-  step.position.set(0, (0.18 * (i + 1)) / 2, -31 - i * 0.4);
-  step.castShadow = step.receiveShadow = true;
-  steps.add(step);
-}
-// 交互点标记：只在游戏里看得到，照片里不出现
-const marker = new THREE.Mesh(new THREE.TorusGeometry(0.5, 0.04, 8, 40), new THREE.MeshBasicMaterial({ color: 0xfff1b8 }));
-marker.rotation.x = -Math.PI / 2;
-marker.position.set(0, 0.05, 6);
-marker.userData.hideInPhoto = true;
-scene.add(marker);
+renderSpots();
+document.getElementById('actions').addEventListener('change', (e) => (actionsDone = e.target.checked));
+document.getElementById('clear-stamps').addEventListener('click', () => {
+  city.book.clear();
+  renderSpots();
+});
 
-// ---- 拍照模块 ----
-const photo = new PhotoSystem({
-  renderer,
-  scene,
-  camera,
-  pipeline,
-  spots: [{ id: 'steps', label: '街尾的台阶', target: steps, minCoverage: 0.03 }],
-  getContext: () => ({ sceneId: 'photo-test', spotId: null, phase, weather: 'clear' }),
-});
-photo.album.cardInfo = (picked) => ({
-  title: '寄给明天的声音',
-  subtitle: '三日归途 · 第一天 · 东京',
-  caption: `${new Date(picked[0].meta.createdAt).toLocaleDateString('zh-CN')} · 晴 · 谷中 · 留下了风铃的声音`,
-});
 const toast = document.querySelector('.toast');
-function say(msg) {
-  toast.textContent = msg;
-  toast.style.display = 'block';
+function say(msg, canvas) {
+  toast.replaceChildren();
+  if (canvas) {
+    canvas.className = 'toast-stamp';
+    toast.appendChild(canvas);
+  }
+  toast.append(msg);
+  toast.style.display = 'flex';
   clearTimeout(say.t);
-  say.t = setTimeout(() => (toast.style.display = 'none'), 3500);
+  say.t = setTimeout(() => (toast.style.display = 'none'), 3800);
 }
+photo.addEventListener('stamp', (e) => {
+  const { spot, first, canvas } = e.detail;
+  say(first ? `「${spot.label}」盖上了一枚章。${spot.bookmark ?? ''}` : `「${spot.label}」这枚章已经有了。`, first ? canvas : null);
+  renderSpots();
+});
+photo.addEventListener('stampwait', (e) => say(`拍到了「${e.detail.spot.label}」，但还没完成那里的事（${e.detail.spot.story}）。`));
 photo.addEventListener('photo', (e) => {
   const { saved, persistent, overLimit, record } = e.detail;
-  if (record.meta.spotHits.includes('steps')) say('拍到了街尾的台阶，盖上一枚章。');
-  else if (!saved || !persistent) say('这个浏览器不能保存照片，记得在相册里下载。');
+  if (record.meta.spotHits.length) return;
+  if (!saved || !persistent) say('这个浏览器不能保存照片，记得在相册里下载。');
   else if (overLimit) say('相册已满 30 张，删掉几张吧。');
 });
 photo.addEventListener('error', (e) => say(e.detail.message));
@@ -201,17 +148,15 @@ photo.addEventListener('stylechange', (e) =>
   document.querySelectorAll('[data-style]').forEach((b) => b.classList.toggle('on', b.dataset.style === e.detail.styleId)),
 );
 document.querySelectorAll('[data-style]').forEach((b) => b.addEventListener('click', () => photo.setStyle(b.dataset.style)));
-document.querySelectorAll('[data-phase]').forEach((b) => b.addEventListener('click', () => setPhase(b.dataset.phase)));
 document.querySelectorAll('[data-style]').forEach((b) => b.classList.toggle('on', b.dataset.style === photo.styleId));
-setPhase('day');
-window.photo = photo; // 方便在控制台测试
 
 // ---- 简单的第一人称走动（正式版换成第三人称人物控制）----
 const keys = new Set();
 addEventListener('keydown', (e) => keys.add(e.code));
 addEventListener('keyup', (e) => keys.delete(e.code));
-let yaw = 0;
+let yaw = world.spawn.yaw;
 let pitch = 0;
+camera.position.set(world.spawn.pos[0], 0, world.spawn.pos[1]);
 let drag = null;
 renderer.domElement.addEventListener('pointerdown', (e) => (drag = [e.clientX, e.clientY]));
 addEventListener('pointerup', () => (drag = null));
@@ -227,9 +172,37 @@ addEventListener('resize', () => {
   if (!photo.active) {
     camera.aspect = innerWidth / innerHeight;
     camera.updateProjectionMatrix();
-  }
+  } else photo.relayout();
 });
 
+// 去某个打卡点的参考机位，并按建议设好焦段、横竖、低角度、时段（测试和审图用）
+function goto(id, { enter = true } = {}) {
+  const v = world.viewpoints[id];
+  if (!v) return;
+  if (v.phase && v.phase !== phase) setPhase(v.phase);
+  if (photo.active) photo.exit();
+  camera.position.set(v.pos[0], 0, v.pos[1]);
+  const eyeY = world.heightAt(v.pos[0], v.pos[1]) + world.eye;
+  const dx = v.at[0] - v.pos[0];
+  const dz = v.at[2] - v.pos[1];
+  yaw = Math.atan2(-dx, -dz);
+  pitch = Math.atan2(v.at[1] - eyeY, Math.hypot(dx, dz));
+  camera.position.y = eyeY;
+  camera.rotation.set(pitch, yaw, 0, 'YXZ');
+  camera.updateMatrixWorld();
+  if (enter) {
+    photo.enter();
+    photo.setFocal(Math.max(0, photo.focalLengths.indexOf(v.focal)));
+    photo.setPortrait(!!v.portrait);
+    photo.setLow(!!v.low);
+    if (v.ev) photo.setEv(v.ev);
+  }
+}
+window.photo = photo; // 方便在控制台测试
+window.goto = goto;
+window.cityKit = { city, CITY, setPhase, stampFor: (id) => stampFor(CITY, id) };
+
+setPhase(phase);
 const clock = new THREE.Clock();
 renderer.setAnimationLoop(() => {
   const dt = Math.min(clock.getDelta(), 0.05);
@@ -237,23 +210,14 @@ renderer.setAnimationLoop(() => {
     // 取景时人物停下，只能转视角
     const f = (keys.has('KeyW') ? 1 : 0) - (keys.has('KeyS') ? 1 : 0);
     const s = (keys.has('KeyD') ? 1 : 0) - (keys.has('KeyA') ? 1 : 0);
-    const speed = 3.2 * dt;
+    const speed = (keys.has('ShiftLeft') ? 12 : 3.2) * dt;
     camera.position.x += (-Math.sin(yaw) * f + Math.cos(yaw) * s) * speed;
     camera.position.z += (-Math.cos(yaw) * f - Math.sin(yaw) * s) * speed;
+    world.clamp?.(camera.position);
   }
+  camera.position.y = world.heightAt(camera.position.x, camera.position.z) + world.eye;
   camera.rotation.set(pitch, yaw, 0, 'YXZ');
-  marker.rotation.z += dt;
   photo.updateLevel();
   if (pipeline instanceof HdrPipeline) pipeline.time = performance.now() % 1000;
   if (!photo.render()) pipeline.render(scene, camera);
 });
-
-function mulberry32(a) {
-  return () => {
-    a |= 0;
-    a = (a + 0x6d2b79f5) | 0;
-    let t = Math.imul(a ^ (a >>> 15), 1 | a);
-    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
-    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
-  };
-}

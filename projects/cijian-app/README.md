@@ -1,7 +1,9 @@
 # cijian-app：《三日归途》游戏程序
 
 这里将来是唯一的游戏程序（Three.js r170），见 `此间_第一天执行整合文档.md` 第 2 节。
-**目前有：画面管线 `src/render/` 和拍照模块 `src/photo/`，以及拍照测试页。** 流程、人物、任务、场景加载还没写。
+**目前有：画面管线 `src/render/`、拍照模块 `src/photo/`（含东京、悉尼两套配置 `src/photo/presets/`）、拍照测试页。** 流程、人物、任务、场景加载还没写。
+
+> 只想知道东京、悉尼怎么接？直接看下面「[东京和悉尼：几行接好](#东京和悉尼几行接好)」。
 
 ## 画面管线 `src/render/pipeline.js`
 
@@ -93,6 +95,105 @@ photo.addEventListener('photo', (e) => {
 - 默认按键：C 或右键 取景，单击（不拖动）或空格 快门，滚轮 焦段，B 相册，Esc 退出；取景时 R 横拍/竖拍，V 低角度，↑↓ 或 Shift+滚轮 曝光补偿。全部可用 `keys` 改。在 pointer lock 下单击也是快门。
 - 换城市时：`photo.setFocalLengths([...])`、改 `photo.spots`、必要时换 `photo.pipeline`。
 
+### 东京和悉尼：几行接好
+
+每座城市的打卡点、焦段、默认相机、时段、回忆卡文字、纪念章样式，都写在一个文件里：
+- 东京：`src/photo/presets/tokyo.js`（凛线《寄给明天的声音》）
+- 悉尼：`src/photo/presets/sydney.js`（Noah 线《拍照的人也在照片里》）
+
+**东京**（烘焙小样那套画面）：
+```js
+import { PhotoSystem } from './photo/index.js';
+import { TOKYO, setupTokyo, createTokyoPipeline, applyTokyoPhase } from './photo/presets/index.js';
+
+const pipeline = await createTokyoPipeline(renderer, { lutBase: 'data/' });  // 读 lut_morning.bin、lut_sunset.bin
+const photo = new PhotoSystem({ ...TOKYO, renderer, scene, camera, pipeline, styleId: 玩家选的相机 });
+const tokyo = setupTokyo(photo, {
+  getPhase: () => 当前时段,                      // 'day' 或 'sunset'
+  actionDone: (action) => quest.isDone(action),  // 剧情行动做完没有，比如 'rec_bell'（先录风铃，再拍才盖章）
+});
+applyTokyoPhase('sunset', { pipeline });         // 切时段时调用（曝光、泛光、查找表照 game.js）
+```
+
+**悉尼**（用它原来的 EffectComposer，不用改 post.js）：
+```js
+import { SYDNEY, setupSydney, createSydneyPipeline } from './photo/presets/index.js';
+const pipeline = await createSydneyPipeline(renderer, scene, camera, { composer: post.composer });
+const photo = new PhotoSystem({ ...SYDNEY, renderer, scene, camera, pipeline, styleId: 玩家选的相机 });
+setupSydney(photo, { getPhase: () => 当前时段 /* 'day' | 'golden' | 'blue' */, actionDone: (a) => quest.isDone(a) });
+```
+
+然后每帧照旧：`if (!photo.render()) pipeline.render(scene, camera);`
+
+`setupTokyo` / `setupSydney` 一步做完这些事：
+- 换成这座城的焦段：东京 24/35/50/85，悉尼 28/50/85/135。
+- 在场景里按名字找打卡点。
+- 填好拍照情境（城市、时段、天气）。
+- 集纪念章。
+- 设好回忆卡文字，并把集到的章印在回忆卡上。
+
+拍到打卡点时，`photo` 上会多出两个事件：
+```js
+photo.addEventListener('stamp', (e) => { /* e.detail: { spot, first, canvas } —— canvas 就是那枚章的图，可以直接贴到书签地图页 */ });
+photo.addEventListener('stampwait', (e) => { /* 拍到了，但那里的剧情行动还没做，比如提示“先去录音” */ });
+```
+集章默认存在浏览器里（`StampBook`，localStorage）。正式版应该交给任务系统存档：给 `setupCity` 传 `book`，或者监听 `stamp` 自己存。
+
+#### 打卡点（预览提案，等用户拍板）
+
+依据 `此间_打卡点预览_东京悉尼.md`。“必拍”是剧情任务，“可选”是逛街奖励。
+
+| 城市 | 编号 | 名字 | 点位名（Blender 里的空物体） | 要先完成的行动 | 特别条件 |
+|---|---|---|---|---|---|
+| 东京 | T1 | 遥的店 | `ANCHOR_photo_haruka` | `rec_bell` | |
+| 东京 | T2 | 喫茶 ひより | `ANCHOR_photo_hiyori` | `rec_cafe` | |
+| 东京 | T3 | 八百政 | `ANCHOR_photo_yaomasa` | `rec_thanks` | |
+| 东京 | T4 | 夕焼けだんだん | `ANCHOR_photo_dandan` | `deliver` | 只在日落算；镜头要大致朝着夕阳 |
+| 东京 | T5—T7 | 雷门大提灯 / 五重塔 / 电线杆与天空（可选） | `ANCHOR_photo_kaminarimon` / `_pagoda` / `_poles` | 无 | |
+| 悉尼 | S1 | Maya 的咖啡店 | `ANCHOR_photo_cafe`（也认 `ANCHOR_photo_group`） | `ask_group` | |
+| 悉尼 | S2 | 步道地标 | `ANCHOR_photo_landmark` | `meet_tess` | 远处的歌剧院也要在画面里 |
+| 悉尼 | S3 | Sam 的长椅 | `ANCHOR_photo_bench` | `bench_story` | |
+| 悉尼 | S4 | 黄昏的海 | `ANCHOR_photo_shore` | `deliver` | 只在黄金时段算 |
+| 悉尼 | S5—S7 | 歌剧院 / 海港大桥 / 蓝调时分（用户已定为必拍） | `ANCHOR_photo_opera` / `_bridge` / `_bluehour` | 无 | 蓝调时分只在蓝调时段算 |
+
+“要先完成的行动”的名字是暂定的，写任务系统时对上就行（改 presets 文件里的 `action`）。
+
+#### 在 Blender 里放打卡点
+1. 在要拍的东西那里加一个**空物体**（Add → Empty → Plain Axes），名字改成上表的点位名，比如 `ANCHOR_photo_hiyori`。
+2. **推荐**：把要拍的模型（店面、长椅）拖成这个空物体的子物体。这样判定按模型的实际大小算，最准。
+3. 不想动层级也行：只放空物体，代码就把它当成一个球，球的大小按 presets 里的 `radius`（米）算。放在要拍的东西的中心。
+4. 想单独调某个点，可以在空物体上加自定义属性：`radius`、`minCoverage`、`label`。glTF 导出时勾选 Custom Properties，代码会读到。
+5. Blender 复制出来的 `ANCHOR_photo_hiyori.001` 也认得。找不到的点会在浏览器控制台提示“找不到打卡点……先跳过”，不会报错。
+6. 如果场景是用 `anchors.json` 交付的，就把它传给 `setupTokyo(photo, { anchors: json })`。
+   - 支持 `photo_spot: [{ id, target }]`、`{ "ANCHOR_photo_xxx": [x, y, z] }` 几种写法。
+   - 坐标还是 Blender 的，就加 `coords: 'blender'`，代码会自动换成 (x, z, −y)。
+
+#### 改打卡点的名字、位置、数量
+全部在 `presets/tokyo.js` / `presets/sydney.js` 的 `spotDefs` 里，一个打卡点一段：
+
+| 想改什么 | 改哪个字段 |
+|---|---|
+| 名字（取景框和章上显示） | `label`（章上想写别的就加 `stampLabel`） |
+| 位置 | 在 Blender 里挪空物体；点位名对应 `anchor` |
+| 太远也算 / 太近才算 | `minCoverage`（占画面比例，0.04 = 4%） |
+| 凑近拍局部算不算 | `minVisible`（主体至少露出多少，默认 0.5） |
+| 只在某个时段算 | `phases: ['sunset']` |
+| 镜头要朝某个方向 | `facing` |
+| 某个东西要一起入画 | `also: ['sy_opera']` |
+| 取景框里的小字 | `tip`（时段不对时显示 `waitTip`） |
+| 章中间的图案 | `icon`（`stamps.js` 里的 ICONS） |
+| 去掉一个点 | 删掉那一段 |
+| 只开必拍的点 | `setupTokyo(photo, { include: (d) => d.required })` |
+
+回忆卡的标题、副标题、底下一行字在同一文件的 `card` 里。
+
+#### 纪念章
+`src/photo/stamps.js` 用 Canvas 程序画，全部是虚构图案，不是任何真章或品牌：
+- 东京：车站纪念章的样子。圆形双圈、上沿一圈小字、中间线描、下面一条站名带。
+- 悉尼：海岸步道标记牌的样子。圆角牌子、编号、线描、波浪线和箭头。
+
+两城都用朱红印泥，带随机的斑驳和白点。同一个打卡点每次画出来都一样。
+
 ### 按我们的场景设计的取景功能
 看过三台电脑的渲染（谷中窄街逆光、电线杆、五重塔和雷门大提灯、5060 的店面细节、悉尼远眺）后加的：
 
@@ -119,13 +220,20 @@ photo.addEventListener('photo', (e) => {
 | `styles.js` | 两台相机的参数 |
 | `store.js` / `album.js` / `card.js` | 存储、相册、冲印和回忆卡 |
 | `sound.js` / `photo.css` | 快门声（占位）、界面样式 |
+| `stamps.js` | 纪念章（程序画的虚构图案） |
+| `presets/` | 东京、悉尼的配置和 `setupCity`、`resolveSpots`、`applyPhase` |
 
 ## 测试页
 ```bash
 cd projects/cijian-app && python3 -m http.server 8766
 ```
 打开 http://127.0.0.1:8766/photo-test.html （改过代码后用 Cmd+Shift+R 强制刷新，否则浏览器会用旧文件）。
-场景是程序生成的小街，只用来测拍照，不是正式美术。
+- `?city=tokyo`（默认）：一条小街，摆着三家店、台阶、门和大提灯、五重塔、电线杆。
+- `?city=sydney`：北岸步道远眺海港，摆着咖啡店、望远镜地标、长椅、剧院和大桥示意。距离按真实大致比例。悉尼默认用 `?pipeline=composer`。
+
+场景是程序生成的占位几何（`src/test-scenes/`），只用来测拍照，不是正式美术。店名、招牌都是虚构的。
+左上角能切城市、切时段、换相机，打卡点列表里每个点有“去这里”按钮：跳到参考机位，并设好建议的焦段、横竖、低角度。
+“剧情行动已完成”勾掉后，可以测“先录音、后盖章”。
 Three.js r170 和后期扩展放在本目录 `vendor/`（`three.module.js` 来自 yuyake-dandan，`addons/postprocessing`、`addons/shaders` 来自 sydney-harbour，MIT），不依赖网络。
 `?pipeline=composer` 用悉尼同款管线测试。
 
@@ -134,6 +242,14 @@ Three.js r170 和后期扩展放在本目录 `vendor/`（`three.module.js` 来�
 没有这两个文件时自动退回 `StandardPipeline`；`?pipeline=standard` 可强制用后者。
 
 ## 已验证（2026-11-03，Mac M2，Claude 应用内置浏览器）
+东京、悉尼两套配置的两轮审改见 `REVIEW_ROUNDS.md`。要点：
+- **14 个打卡点都能在参考机位盖章。** 凑近只拍到一角、背对、太远、被挡、时段不对的都不算。
+- **照片和取景时颜色一致**：块平均差最大值东京白天、日落 ≤1.6/255，悉尼白天、黄金时段 ≤1.8/255。为此改成拍照时泛光按取景框的像素高度算。
+- **悉尼焦段**：在步道上拍约 1 公里外的歌剧院，85mm 以上才够 4%。
+- **竖拍和低角度**：胶片旁轴竖拍、24mm、低角度拍出 2000×3000，元信息正确。
+- **纪念章和回忆卡**：两城纪念章、带章的回忆卡（1—7 枚）都存成文件看过。
+
+以下是之前（东京/悉尼配置之前）的验证：
 - **悉尼同款管线（EffectComposer + UnrealBloom + ACES）**：照片和屏幕逐块比较，白天平均差 0.13/255、最大 1.15/255，日落最大 0.46/255；拍完 composer 恢复原尺寸。
 - 竖拍（2000×3000）、低角度、曝光补偿都在真拍的照片里生效，元信息正确；一次拍照约 0.3—0.4 秒。
 - **照片和屏幕颜色一致**：关掉相机风格后，同一机位 2048×1536（屏幕）和 3000×2250（照片）逐块比较（8×8 区块），白天最大差 0.23/255，日落（有泛光）最大差 0.52/255。为此把泛光链改成始终按屏幕分辨率起步，否则照片的泛光会偏小（差约 5/255）。
@@ -143,13 +259,20 @@ Three.js r170 和后期扩展放在本目录 `vendor/`（`three.module.js` 来�
 - 一次拍照从按快门到存好约 0.8 秒，显影小图 0.4 秒内出现。
 
 **没验证：**
-- 没接真实东京、悉尼场景（东京烘焙包约 477MB，本机磁盘和网络都不够）。两条管线的数学和原工程一致，取景功能按渲染图设计，但相机风格是在测试小街上调的，接上真场景后要再看一眼。
+- 没接真实东京、悉尼场景（东京烘焙包约 477MB，本机磁盘和网络都不够）。
+  - 两条管线的数学和原工程一致，取景功能按渲染图设计，但相机风格是在测试小街上调的，接上真场景后要再看一眼。
+  - 打卡点的门槛（`minCoverage`、`minVisible`、`radius`）是在占位几何上定的，接真模型后要在每个点拍一遍再调。
+- 东京夕阳方向按 `game.js` 的 `LIGHT.sunset` 换算，没在真场景里对过。
+- 悉尼三个时段的曝光、泛光数值是兜底值，没对过 sydney-harbour 的光照代码。
 - 没在 5070 上测帧率。取景时每帧多两次全屏调色，预计影响很小。
 - 内置浏览器不把下载存到磁盘，“点下载按钮 → 打开文件”要在 Chrome 里点一次确认。
 
 ## 临时的东西（之后要换）
+- **打卡点**全部是预览提案，名字、数量、位置等用户拍板。剧情行动的名字（`rec_bell` 等）是暂定的，要和任务系统对上。
+- 集章存在 localStorage，正式版交给任务系统存档。
+- `src/test-scenes/` 的占位场景、招牌和天空只给测试页用，不进正式游戏。
 - 两台相机的调色数值：要拿东京烘焙场景再看一遍，满意后可以导出成 `.cube` 填进 `styles.js` 的 `lut`。
 - 快门声是合成的占位声；中文字体用系统宋体兜底，正式版用思源宋体子集（`此间_相机.md` 3.5 节）。
 
 ## 还没做
-景深和点击对焦、快门转场（切时段）、点照片回到现场、换相机菜单（现在用 `photo.setStyle()`）、纪念章图案。
+景深和点击对焦、快门转场（切时段）、点照片回到现场、换相机菜单（现在用 `photo.setStyle()`）、书签地图页上盖章的动画。

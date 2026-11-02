@@ -163,11 +163,11 @@ export class HdrPipeline {
     this.tone.u.lutB.value = lutB;
   }
 
-  _chain(width, height, screen) {
+  _chain(width, height, screen, screenHeight) {
     const key = screen ? 'screen' : `${width}x${height}`;
     let c = this.chains.get(key);
-    // 泛光链始终按屏幕高度的一半起步
-    const ref = this.renderer.getDrawingBufferSize(new THREE.Vector2()).y;
+    // 泛光链按“这张图在屏幕上有多高”的一半起步：照片对应的是取景框那一块，所以用取景框的像素高度
+    const ref = screenHeight ?? this.renderer.getDrawingBufferSize(new THREE.Vector2()).y;
     const bloomHeight = Math.min(height, ref) >> 1;
     if (!c) {
       c = new Chain(width, height, this.bloomLevels, bloomHeight);
@@ -188,7 +188,8 @@ export class HdrPipeline {
 
   /**
    * @param target null 表示画到屏幕
-   * @param size  画到离屏目标时的像素尺寸（默认取 target 的尺寸）
+   * @param size  画到离屏目标时的像素尺寸（默认取 target 的尺寸）；
+   *              size.screenHeight 是这张图在屏幕上对应的像素高度（拍照时 = 取景框高度），泛光按它算
    */
   render(scene, camera, target = null, size = null) {
     const r = this.renderer;
@@ -202,7 +203,7 @@ export class HdrPipeline {
       w = s.x;
       h = s.y;
     }
-    const c = this._chain(w, h, !target);
+    const c = this._chain(w, h, !target, size?.screenHeight);
     r.setRenderTarget(c.hdr);
     r.clear();
     r.render(scene, camera);
@@ -345,7 +346,9 @@ export class ComposerPipeline {
         saved = { w: c._width, h: c._height, pr: c._pixelRatio };
         c.setPixelRatio(1);
         c.setSize(w, h);
-        for (const p of c.passes) if (p.renderTargetsHorizontal) p.setSize(db.x, db.y); // 泛光按屏幕分辨率
+        // 泛光按屏幕上的像素密度算：照片对应取景框那一块，所以用取景框的像素高度、照片的宽高比
+        const bh = size?.screenHeight ?? db.y;
+        for (const p of c.passes) if (p.renderTargetsHorizontal) p.setSize(Math.round((bh * w) / h), bh);
       }
       c.renderToScreen = false;
       c.render();

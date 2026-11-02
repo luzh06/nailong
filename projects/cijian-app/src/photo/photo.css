@@ -122,17 +122,23 @@
 /* 打卡提示：好构图时取景框四角和边线变成朱红偏金，框内下方出现地点名 */
 .photo-frame { transition: outline-color .25s; }
 .photo-corners i { transition: border-color .25s, width .25s, height .25s; }
-.photo-ui.spot-ok .photo-corners i { border-color: #e9a15f; width: 40px; height: 40px; }
-.photo-ui.spot-ok[data-finder="square"] .photo-frame { outline-color: rgba(233, 161, 95, .95); }
-.photo-ui[data-finder="square"].spot-ok .photo-corners { display: block; }
+/* 打卡构图对了：亮框四角变朱红、加粗加长；方框直接整圈变朱红（不再叠一层四角，免得双线） */
+.photo-ui.spot-ok .photo-corners i { border-color: #d9553c; width: 44px; height: 44px; border-width: 0; }
+.photo-ui.spot-ok .photo-corners i:nth-child(1) { border-left-width: 3px; border-top-width: 3px; }
+.photo-ui.spot-ok .photo-corners i:nth-child(2) { border-right-width: 3px; border-top-width: 3px; }
+.photo-ui.spot-ok .photo-corners i:nth-child(3) { border-left-width: 3px; border-bottom-width: 3px; }
+.photo-ui.spot-ok .photo-corners i:nth-child(4) { border-right-width: 3px; border-bottom-width: 3px; }
+.photo-ui.spot-ok[data-finder="square"] .photo-frame { outline: 3px solid #d9553c; outline-offset: -3px; }
 .photo-spot {
   position: absolute; left: 50%; bottom: 7%; transform: translateX(-50%);
   opacity: 0; transition: opacity .3s; pointer-events: none;
 }
 .photo-ui.spot-ok .photo-spot { opacity: 1; }
 .photo-spot b {
-  display: inline-block; font-weight: 400; font-size: 14px; letter-spacing: .3em; padding: 3px 4px 3px 12px;
-  color: #fff3e0; border-left: 3px solid var(--seal); background: rgba(29, 26, 23, .45);
+  /* 地点名像夹在取景框里的一张纸签：纸色底、墨色字、左边一道朱红 */
+  display: inline-block; font-weight: 600; font-size: 15px; letter-spacing: .32em; padding: 4px 8px 4px 14px;
+  color: var(--ink); background: rgba(238, 232, 220, .93); border-left: 4px solid var(--seal);
+  box-shadow: 0 2px 10px rgba(0,0,0,.28);
 }
 .photo-spot b:empty { display: none; }
 
@@ -154,3 +160,14 @@
   border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 7px solid #f1c27d;
   transition: left .15s;
 }
+
+/* 打卡点的小字提示（逆光加曝光、蓝调再来之类），在地点名下面 */
+.photo-spot { text-align: center; }
+.photo-spot small {
+  display: block; margin-top: 6px; font-size: 12px; letter-spacing: .18em; color: rgba(255, 243, 224, .85);
+  text-shadow: 0 1px 3px rgba(0,0,0,.6);
+}
+.photo-spot small:empty { display: none; }
+/* 构图对了、时段不对：地点名出现但不变暖 */
+.photo-ui.spot-wait .photo-spot { opacity: .8; }
+.photo-ui.spot-wait .photo-spot b { border-left-color: var(--grey); color: var(--grey); background: rgba(238, 232, 220, .7); }

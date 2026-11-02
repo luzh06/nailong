@@ -41,7 +41,8 @@ export class PhotoSystem extends EventTarget {
    * @param {boolean} [o.bindKeys]        是否由模块自己处理按键和鼠标（C 取景、空格/单击快门、滚轮焦段、B 相册、右键取景）
    * @param {object} [o.keys]             改按键：{ toggle, shoot, album, exit }，值是 KeyboardEvent.code
    * @param {number} [o.captureLongSide]  照片长边像素，默认 3000
-   * @param {Array}  [o.spots]            打卡点：[{ id, label?, target: Object3D 或 Vector3, minCoverage?: 0.02, radius?: 1 }]，见 checkSpot()
+   * @param {Array}  [o.spots]            打卡点：[{ id, label?, target: Object3D 或 Vector3, minCoverage?: 0.02, radius?: 1,
+   *                                        phases?, facing?, also?, tip?, waitTip? }]，见 checkSpot()；各城的配置在 presets/
    * @param {number[]} [o.focalLengths]   这座城市可用的焦段，默认 [24, 35, 50, 85]；悉尼远眺建议 [28, 50, 85, 135]
    * @param {THREE.Object3D[]} [o.occluders] 判断打卡点是否被挡时用的物体（建议给碰撞体等低面数模型）；默认整个场景
    */
@@ -168,8 +169,9 @@ export class PhotoSystem extends EventTarget {
     Object.assign(this.camera, this._saved);
     this.camera.updateProjectionMatrix();
     document.querySelectorAll('[data-hud]').forEach((el) => el.classList.remove('photo-hud-hidden'));
-    this.ui.root.classList.remove('on', 'spot-ok');
+    this.ui.root.classList.remove('on', 'spot-ok', 'spot-wait');
     this._liveSpot = null;
+    this._liveKey = '';
     this._layout();
     this.dispatchEvent(new Event('exit'));
   }
@@ -205,12 +207,18 @@ export class PhotoSystem extends EventTarget {
   }
 
   /**
-   * 判断某个打卡点是否被拍进照片：在画面里、没被挡住、占画面够大。
-   * @param {{target: THREE.Object3D|THREE.Vector3, minCoverage?: number, radius?: number}} spot
-   *   target 是物体时按它的包围盒算；是点时按 radius（米）当作一个球算占比
-   * @returns {{ok: boolean, inFrame: boolean, occluded: boolean, coverage: number}}
+   * 判断某个打卡点是否被拍进照片：在画面里、没被挡住、占画面够大，再加三个可选条件。
+   * @param {object} spot
+   * @param {THREE.Object3D|THREE.Vector3} spot.target 是物体时按它的包围盒算；是点时按 radius（米）当作一个球算占比
+   * @param {number} [spot.minCoverage]  最小占画面比例，默认 0.02
+   * @param {number} [spot.minVisible]   主体至少要有多少露在画面里，默认 0.5（凑太近、只拍到一角不算）
+   * @param {string[]} [spot.phases]     只在这些时段拍才算（和 getContext().phase 比），比如蓝调时分
+   * @param {{dir: THREE.Vector3, maxAngle?: number}} [spot.facing] 镜头水平朝向要在 dir 的 maxAngle 度以内（比如朝着夕阳）
+   * @param {Array<THREE.Object3D|THREE.Vector3>} [spot.also] 这些东西的中心也要在画面里（比如地标和远处的歌剧院同框）
+   * @returns {{ok, inFrame, occluded, coverage, timeOk, facingOk, alsoOk}}
    */
-  checkSpot(spot, cam = this.captureCamera(), { occlusion = true } = {}) {
+  checkSpot(spot, cam = this.captureCamera(), { occlusion = true, ctx = null } = {}) {
+    if (!spot.target) return { ok: false, inFrame: false, occluded: false, coverage: 0, timeOk: false, facingOk: false, alsoOk: false };
     const box = new THREE.Box3();
     let center;
     if (spot.target.isObject3D) {
@@ -225,17 +233,34 @@ export class PhotoSystem extends EventTarget {
       new THREE.Matrix4().multiplyMatrices(cam.projectionMatrix, cam.matrixWorldInverse),
     );
     const inFrame = frustum.containsPoint(center);
+    const phase = (ctx ?? this.getContext() ?? {}).phase;
+    const timeOk = !spot.phases || spot.phases.includes(phase);
+    let facingOk = true;
+    if (spot.facing) {
+      const f = cam.getWorldDirection(new THREE.Vector3()).setY(0).normalize();
+      const d = spot.facing.dir.clone().setY(0).normalize();
+      facingOk = f.dot(d) >= Math.cos(THREE.MathUtils.degToRad(spot.facing.maxAngle ?? 60));
+    }
+    const alsoOk = (spot.also ?? []).every((t) =>
+      frustum.containsPoint(t.isObject3D ? new THREE.Box3().setFromObject(t).getCenter(new THREE.Vector3()) : t),
+    );
     // 占比：包围盒 8 个角投影到画面后的外接矩形面积（裁到画面内）
     let x0 = 1, y0 = 1, x1 = -1, y1 = -1;
+    let behind = false;
     const v = new THREE.Vector3();
     for (let i = 0; i < 8; i++) {
-      v.set(i & 1 ? box.max.x : box.min.x, i & 2 ? box.max.y : box.min.y, i & 4 ? box.max.z : box.min.z).project(cam);
+      v.set(i & 1 ? box.max.x : box.min.x, i & 2 ? box.max.y : box.min.y, i & 4 ? box.max.z : box.min.z);
+      if (v.clone().applyMatrix4(cam.matrixWorldInverse).z > -cam.near) behind = true;
+      v.project(cam);
       x0 = Math.min(x0, v.x); x1 = Math.max(x1, v.x);
       y0 = Math.min(y0, v.y); y1 = Math.max(y1, v.y);
     }
     const cw = Math.max(0, Math.min(1, x1) - Math.max(-1, x0));
     const ch = Math.max(0, Math.min(1, y1) - Math.max(-1, y0));
     const coverage = inFrame ? (cw * ch) / 4 : 0;
+    // 露出比例：裁到画面内的面积 / 整个主体投影的面积。主体有一部分在相机背后时投影不可靠，不算这一条
+    const full = ((x1 - x0) * (y1 - y0)) / 4;
+    const visible = behind || full <= 0 ? 1 : Math.min(1, coverage / full);
     // 遮挡：从相机向中心打一条射线，先碰到的不是目标本身就算被挡
     let occluded = false;
     if (inFrame && occlusion) {
@@ -255,8 +280,8 @@ export class PhotoSystem extends EventTarget {
       });
       occluded = hits.length > 0;
     }
-    const ok = inFrame && !occluded && coverage >= (spot.minCoverage ?? 0.02);
-    return { ok, inFrame, occluded, coverage: +coverage.toFixed(4) };
+    const framed = inFrame && !occluded && coverage >= (spot.minCoverage ?? 0.02) && visible >= (spot.minVisible ?? 0.5) && facingOk && alsoOk;
+    return { ok: framed && timeOk, framed, inFrame, occluded, coverage: +coverage.toFixed(4), visible: +visible.toFixed(3), timeOk, facingOk, alsoOk };
   }
 
   // 取景框在屏幕上的位置（CSS 像素）
@@ -347,7 +372,7 @@ export class PhotoSystem extends EventTarget {
       const ctx = this.getContext() || {};
       // 打卡点判定：情境里没指定 spotId 时，取第一个拍到的打卡点
       const spotHits = this.spots
-        .map((sp) => ({ id: sp.id, ...this.checkSpot(sp, this._lastCam) }))
+        .map((sp) => ({ id: sp.id, ...this.checkSpot(sp, this._lastCam, { ctx }) }))
         .filter((h) => h.ok)
         .map((h) => h.id);
       const meta = {
@@ -411,7 +436,10 @@ export class PhotoSystem extends EventTarget {
     const outRT = new THREE.WebGLRenderTarget(W, H, { type: THREE.UnsignedByteType, depthBuffer: false });
     const prevTarget = r.getRenderTarget();
     try {
-      this.pipeline.render(this.scene, cam, srcRT, { width: W, height: H });
+      // screenHeight：这张照片在屏幕上对应取景框那一块，泛光按它的像素密度算，光晕大小才和取景时一样
+      const c = this._crop();
+      const screenHeight = Math.round(c.h * (r.getDrawingBufferSize(new THREE.Vector2()).y / c.H));
+      this.pipeline.render(this.scene, cam, srcRT, { width: W, height: H, screenHeight });
       this.grade.render(r, srcRT, outRT, { width: W, height: H, seed: Math.random() * 1000 });
       const px = new Uint8Array(W * H * 4);
       r.readRenderTargetPixels(outRT, 0, 0, W, H, px);
@@ -451,7 +479,7 @@ export class PhotoSystem extends EventTarget {
         <div class="photo-thirds"></div>
         <div class="photo-corners"><i></i><i></i><i></i><i></i></div>
         <div class="photo-level"></div>
-        <div class="photo-spot"><b></b></div>
+        <div class="photo-spot"><b></b><small></small></div>
         <div class="photo-ev"><span class="photo-ev-scale"></span><i class="photo-ev-mark"></i></div>
       </div>
       <div class="photo-info"><span class="photo-cam"></span><span class="photo-tags"></span></div>
@@ -466,6 +494,7 @@ export class PhotoSystem extends EventTarget {
       cam: root.querySelector('.photo-cam'),
       tags: root.querySelector('.photo-tags'),
       spot: root.querySelector('.photo-spot b'),
+      spotTip: root.querySelector('.photo-spot small'),
       evMark: root.querySelector('.photo-ev-mark'),
       shutter: root.querySelector('.photo-shutter'),
     };
@@ -487,19 +516,42 @@ export class PhotoSystem extends EventTarget {
     if ('exposureScale' in this.pipeline) this.pipeline.exposureScale = this.active ? 2 ** this.ev : 1;
   }
 
-  // 取景时的打卡提示：只看在不在画面里、够不够大（便宜），被挡住的判定留到按快门时再做
+  // 取景时的打卡提示：只看在不在画面里、够不够大（便宜），被挡住的判定留到按快门时再做。
+  // 构图对了但时段不对（比如蓝调才算），地点名照样出现，但框不变暖，下面写“什么时候再来”
   _liveSpotCheck() {
     if (!this.spots.length) return;
     const now = performance.now();
     if (now - this._spotTimer < SPOT_LIVE_MS) return;
     this._spotTimer = now;
     const cam = this.captureCamera();
-    const hit = this.spots.find((sp) => this.checkSpot(sp, cam, { occlusion: false }).ok) ?? null;
-    if (hit === this._liveSpot) return;
+    const ctx = this.getContext() || {};
+    // 优先级：剧情必拍点（required）拍对了 > 必拍点等时段 > 可选点拍对了 > 可选点等时段
+    let hit = null;
+    let wait = null;
+    const found = { hit: [null, null], wait: [null, null] };
+    for (const sp of this.spots) {
+      const r = this.checkSpot(sp, cam, { occlusion: false, ctx });
+      const k = sp.required === false ? 1 : 0;
+      if (r.ok) found.hit[k] ??= sp;
+      else if (r.framed) found.wait[k] ??= sp;
+    }
+    if (found.hit[0]) hit = found.hit[0];
+    else if (found.wait[0]) wait = found.wait[0];
+    else if (found.hit[1]) hit = found.hit[1];
+    else wait = found.wait[1];
+    const shown = hit ?? wait;
+    // tip 可以是函数，按现在的曝光、横竖、低角度给不同的话（已经加过曝光就不再提示加）
+    const tipOf = (t) => (typeof t === 'function' ? t(this) : t) ?? '';
+    const tip = hit ? tipOf(hit.tip) : wait ? tipOf(wait.waitTip) || '时段不对，换个时候再来' : '';
+    const key = shown ? `${shown.id}:${hit ? 1 : 0}:${tip}` : '';
+    if (key === this._liveKey) return;
+    this._liveKey = key;
     this._liveSpot = hit;
     this.ui.root.classList.toggle('spot-ok', !!hit);
-    this.ui.spot.textContent = hit ? hit.label ?? '' : '';
-    this.dispatchEvent(new CustomEvent('spotframe', { detail: { spot: hit } }));
+    this.ui.root.classList.toggle('spot-wait', !hit && !!wait);
+    this.ui.spot.textContent = shown ? shown.label ?? '' : '';
+    this.ui.spotTip.textContent = tip;
+    this.dispatchEvent(new CustomEvent('spotframe', { detail: { spot: hit, waiting: hit ? null : wait } }));
   }
 
   // 水平仪：画面倾斜时那条线跟着转

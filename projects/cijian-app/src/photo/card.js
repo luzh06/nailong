@@ -115,7 +115,7 @@ function seal(g, cx, cy, size, text = '此间') {
 /**
  * 合成回忆卡。
  * photos: [{ blob, meta }]，1—3 张
- * info: { title, subtitle, caption, sealText }
+ * info: { title, subtitle, caption, sealText, stamps? }，stamps 是纪念章 canvas 数组（见 stamps.js）
  */
 export async function composeMemoryCard(photos, info = {}) {
   if (!photos.length) throw new Error('还没有选照片');
@@ -172,18 +172,49 @@ export async function composeMemoryCard(photos, info = {}) {
     drawWithShadow(g, framed[0], W * 0.12, top, w1, h1, -0.025);
     drawWithShadow(g, framed[1], W * 0.88 - w2, top + areaH - h2, w2, h2, 0.03);
   } else {
+    // 一大两小：按实际高度排紧，整组在照片区里上下居中（横幅照片矮，不这样中间会空一大块）
     const [w1, h1] = fit(framed[0], W * 0.7, areaH * 0.6);
-    drawWithShadow(g, framed[0], (W - w1) / 2, top, w1, h1, -0.015);
     const [w2, h2] = fit(framed[1], W * 0.4, areaH * 0.36);
     const [w3, h3] = fit(framed[2], W * 0.4, areaH * 0.36);
-    drawWithShadow(g, framed[1], W * 0.08, top + areaH - h2, w2, h2, 0.035);
-    drawWithShadow(g, framed[2], W * 0.92 - w3, top + areaH - h3, w3, h3, -0.03);
+    const gap = 50;
+    const y0 = top + Math.max(0, (areaH - (h1 + gap + Math.max(h2, h3))) / 2);
+    drawWithShadow(g, framed[0], (W - w1) / 2, y0, w1, h1, -0.015);
+    drawWithShadow(g, framed[1], W * 0.08, y0 + h1 + gap, w2, h2, 0.035);
+    drawWithShadow(g, framed[2], W * 0.92 - w3, y0 + h1 + gap + (h2 - h3) / 2, w3, h3, -0.03);
   }
 
   // 一行说明：时间 · 天气 · 地点 · 当天的选择
+  const stamps = info.stamps ?? [];
   g.fillStyle = GREY;
   g.font = `400 30px ${SERIF}`;
-  spacedText(g, info.caption || '', W / 2, 1960, 4);
+  spacedText(g, info.caption || '', W / 2, stamps.length > 4 ? 1888 : stamps.length ? 1900 : 1960, 4);
+
+  // 这一城集到的纪念章：排在左下，像随手盖在纸上（正片叠底，略歪）
+  // 1—4 枚排一行；5 枚以上排成错开的两行，免得挤成一串、压到纸边
+  if (stamps.length) {
+    const left = 120;
+    const right = W - 330;
+    const rows = stamps.length > 4 ? [stamps.slice(0, Math.ceil(stamps.length / 2)), stamps.slice(Math.ceil(stamps.length / 2))] : [stamps];
+    const size = rows.length > 1 ? 138 : Math.min(210, (right - left) / (stamps.length * 0.8 + 0.2));
+    const rowY = rows.length > 1 ? [1968, 2110] : [2058];
+    let k = 0;
+    rows.forEach((row, ri) => {
+      const cols = rows[0].length;
+      const step = Math.min(size * (rows.length > 1 ? 1.3 : 1.12), (right - left - size) / Math.max(1, cols - 1));
+      const x0 = left + (right - left - (size + step * (cols - 1))) / 2 + size / 2 + (ri ? step / 2 : 0);
+      row.forEach((st, i) => {
+        const s = size * (0.94 + ((k * 29) % 5) * 0.015);
+        g.save();
+        g.globalCompositeOperation = 'multiply';
+        g.globalAlpha = 0.9;
+        g.translate(x0 + step * i, rowY[ri] + (((k * 37) % 5) - 2) * 6);
+        g.rotate((((k * 53) % 9) - 4) * 0.035);
+        g.drawImage(st, -s / 2, -s / 2, s, s);
+        g.restore();
+        k++;
+      });
+    });
+  }
 
   seal(g, W - 210, H - 170, 170, info.sealText || '此间');
   return c;

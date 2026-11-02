@@ -9,12 +9,28 @@
   canvas { display: block; width: 100vw; height: 100vh; touch-action: none; }
   .hud {
     position: fixed; left: 16px; top: 14px; z-index: 10; color: #eee8dc; font: 14px/1.7 "Songti SC", serif;
-    background: rgba(29, 26, 23, 0.55); padding: 10px 14px; border-radius: 4px; max-width: 360px;
+    background: rgba(29, 26, 23, 0.62); padding: 10px 14px; border-radius: 4px; width: 330px; max-height: calc(100vh - 60px); overflow: auto;
   }
   .hud b { color: #fff; }
-  .hud button { font: inherit; margin: 6px 6px 0 0; padding: 2px 10px; cursor: pointer; background: #eee8dc; border: 0; border-radius: 3px; }
+  .hud a { color: #eee8dc; margin-right: 8px; text-decoration: none; border-bottom: 1px solid transparent; }
+  .hud a.on { color: #fff; border-bottom-color: #b23428; }
+  .hud button { font: inherit; font-size: 13px; margin: 4px 6px 0 0; padding: 1px 9px; cursor: pointer; background: #eee8dc; border: 0; border-radius: 3px; }
   .hud button.on { background: #b23428; color: #fff; }
-  .toast { position: fixed; left: 50%; bottom: 12vh; transform: translateX(-50%); z-index: 40; color: #fff; background: rgba(0,0,0,.7); padding: 8px 16px; border-radius: 4px; font: 14px "Songti SC", serif; display: none; }
+  .hud hr { border: 0; border-top: 1px solid rgba(238,232,220,.25); margin: 8px 0; }
+  .hud small { color: #b8ae9e; }
+  .spot-row { display: flex; align-items: center; gap: 8px; font-size: 13px; }
+  .spot-row .code { color: #b8ae9e; width: 22px; }
+  .spot-row .name { flex: 1; }
+  .spot-row .kind { color: #b8ae9e; font-size: 12px; }
+  .spot-row.got .name::after { content: " ●"; color: #d0503c; }
+  .spot-row.missing { opacity: .45; }
+  .spot-row button { margin: 0; padding: 0 7px; font-size: 12px; }
+  .toast {
+    position: fixed; left: 50%; bottom: 12vh; transform: translateX(-50%); z-index: 40; color: #1d1a17; background: #eee8dc;
+    padding: 10px 18px 10px 12px; border-radius: 3px; font: 15px/1.6 "Songti SC", serif; display: none; align-items: center; gap: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,.35); max-width: 70vw;
+  }
+  .toast-stamp { width: 72px; height: 72px; mix-blend-mode: multiply; transform: rotate(-6deg); }
 </style>
 <script type="importmap">
 { "imports": {
@@ -25,13 +41,22 @@
 </head>
 <body>
 <div class="hud" data-hud>
-  <b>拍照测试</b>（替代场景，不是正式美术）<br>
-  WASD 走动 · 拖动鼠标 转视角<br>
+  <b>拍照测试</b>　<a data-city="tokyo">东京</a><a data-city="sydney">悉尼</a><br>
+  <small id="city-name"></small><br>
+  <small>占位场景，不是正式美术</small>
+  <hr>
+  WASD 走动（Shift 快跑）· 拖动鼠标 转视角<br>
   <b>C</b> 或右键 拿起相机 · 单击/空格 快门 · 滚轮 焦段 · <b>B</b> 相册<br>
-  取景时：<b>R</b> 横竖 · <b>V</b> 低角度 · <b>↑↓</b> 或 Shift+滚轮 曝光<br>
+  取景时：<b>R</b> 横竖 · <b>V</b> 低角度 · <b>↑↓</b> 曝光
+  <hr>
   相机：<button data-style="instant">即时成像</button><button data-style="rangefinder">胶片旁轴</button><br>
-  时段：<button data-phase="day">白天</button><button data-phase="sunset">日落</button><br>
-  <span id="pipe-info"></span>
+  时段：<span id="phases"></span><br>
+  <small>画面管线：<span id="pipe-info"></span></small>
+  <hr>
+  <b>打卡点</b>（预览提案）<br>
+  <div id="spots"></div>
+  <label><input type="checkbox" id="actions" checked> 剧情行动已完成（关掉可测“先录音再盖章”）</label><br>
+  <button id="clear-stamps">清空纪念章</button>
 </div>
 <div class="toast"></div>
 <script type="module" src="src/photo-test.js"></script>
