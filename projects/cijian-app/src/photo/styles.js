@@ -8,15 +8,17 @@ export const CAMERA_STYLES = {
     name: '即时成像相机',
     aspect: 1,                      // 照片画面宽高比
     frame: { side: 0.055, top: 0.055, bottom: 0.2, color: '#f3efe6' },  // 相纸白边，占画面边长的比例
+    // 柔和、奶油色高光、偏青的暗部、黑位略抬。底图已是 AgX，不再大幅去饱和
     grade: {
-      contrast: 0.88,
-      saturation: 0.8,
-      tint: [1.04, 1.0, 0.93],      // 乘在显示色上，偏暖
-      fade: 0.09,                   // 黑位抬起，褪色感
-      fadeColor: [0.16, 0.13, 0.12],
-      highlight: [1.0, 0.98, 0.94], // 高光压一点、偏奶油色
-      grain: 0.03,
-      vignette: 0.28,
+      contrast: 0.94,
+      saturation: 0.95,
+      tint: [1.02, 1.0, 0.97],
+      shadow: [0.93, 1.0, 1.04],
+      highlight: [1.01, 1.0, 0.96],
+      fade: 0.05,
+      fadeColor: [0.12, 0.14, 0.15],
+      grain: 0.025,
+      vignette: 0.24,
     },
     lut: null,
     develop: 'instant',             // 相纸慢慢显影
@@ -28,15 +30,17 @@ export const CAMERA_STYLES = {
     name: '胶片旁轴相机',
     aspect: 3 / 2,
     frame: { side: 0.025, top: 0.025, bottom: 0.025, color: '#f6f3ec' },  // 冲印的细白边
+    // 暖调负片：对比和饱和略加，高光偏暖、暗部保留一点暖褐不压死，天空的蓝留住
     grade: {
-      contrast: 1.08,
-      saturation: 1.04,
-      tint: [1.05, 1.0, 0.91],
-      fade: 0.02,
-      fadeColor: [0.1, 0.08, 0.07],
-      highlight: [1.0, 0.97, 0.9],
-      grain: 0.045,
-      vignette: 0.36,
+      contrast: 1.07,
+      saturation: 1.08,
+      tint: [1.02, 1.0, 0.97],
+      shadow: [1.03, 1.0, 0.97],
+      highlight: [1.02, 1.0, 0.95],
+      fade: 0.03,
+      fadeColor: [0.09, 0.07, 0.06],
+      grain: 0.04,
+      vignette: 0.3,
     },
     lut: null,
     develop: 'ink',                 // 书页上墨色浮现

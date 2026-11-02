@@ -4,7 +4,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>此间 · 拍照测试</title>
-<link rel="stylesheet" href="src/photo/photo.css">
 <style>
   html, body { margin: 0; height: 100%; overflow: hidden; background: #1d1a17; }
   canvas { display: block; width: 100vw; height: 100vh; touch-action: none; }
@@ -30,7 +29,8 @@
   WASD 走动 · 拖动鼠标 转视角<br>
   <b>C</b> 或右键 拿起相机 · 单击/空格 快门 · 滚轮 焦段 · <b>B</b> 相册<br>
   相机：<button data-style="instant">即时成像</button><button data-style="rangefinder">胶片旁轴</button><br>
-  时段：<button data-phase="day">白天</button><button data-phase="sunset">日落</button>
+  时段：<button data-phase="day">白天</button><button data-phase="sunset">日落</button><br>
+  <span id="pipe-info"></span>
 </div>
 <div class="toast"></div>
 <script type="module" src="src/photo-test.js"></script>
