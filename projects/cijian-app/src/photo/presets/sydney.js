@@ -38,6 +38,7 @@ export const SYDNEY = {
       id: 'sy_cafe', code: 'S1', required: true, label: 'Maya 的咖啡店', anchor: 'ANCHOR_photo_cafe',
       anchorAliases: ['ANCHOR_photo_group'],   // 第一天执行整合文档里写的是 group，两个名字都认
       story: '告别相册第 1 张：朋友们的合影（拍前先问“可以拍吗”）', action: 'ask_group',
+      needSubjects: ['maya'],                  // 合影里要拍到 Maya，而且问过她
       minCoverage: 0.06, radius: 3, suggest: '28mm 横拍', tip: '大家都看着你', icon: 'cafe',
     },
     {
@@ -72,12 +73,19 @@ export const SYDNEY = {
     },
   ],
 
+  // 可能入镜的人（预览提案），说明见 tokyo.js 的 people
+  people: [
+    { id: 'noah', label: 'Noah', avatar: true },
+    { id: 'maya', label: 'Maya', node: 'NPC_maya', needsConsent: true, story: '咖啡店的合影，拍前先问' },
+    { id: 'camille', label: 'Camille', node: 'NPC_camille' },
+  ],
+
   card: {
     title: '拍照的人也在照片里',
     subtitle: '三日归途 · 第一天 · 悉尼',
     place: '北岸',
     sunsetSpot: 'sy_shore',
-    caption: (f) => [f.date, f.weather, f.place, f.choice || (f.hasSunset ? '在海边等到了黄昏' : '替朋友们补拍了告别相册')].join(' · '),
+    caption: (f) => [f.date, f.weather, f.place, f.choice || (f.hasSelfie ? '这次，我也在照片里' : f.hasSunset ? '在海边等到了黄昏' : '替朋友们补拍了告别相册')].join(' · '),
   },
 };
 

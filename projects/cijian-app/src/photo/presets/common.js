@@ -97,6 +97,32 @@ function sameName(name, want) {
 }
 
 /**
+ * 把这座城的 people 变成 PhotoSystem 的 subjects：按 node 名在场景里找人物模型，或者直接用宿主给的物体。
+ * @param {object} city
+ * @param {THREE.Object3D} scene
+ * @param {object} [o]
+ * @param {THREE.Object3D} [o.avatar]   玩家人物（people 里 avatar: true 的那位）
+ * @param {Record<string, THREE.Object3D>} [o.people]  按 id 直接给人物物体，优先于按名字找
+ */
+export function resolveSubjects(city, scene, { avatar = null, people = {}, quiet = false } = {}) {
+  const out = [];
+  for (const d of city.people ?? []) {
+    let object = people[d.id] ?? (d.avatar ? avatar : null);
+    if (!object && d.node && scene?.isObject3D) {
+      scene.traverse((o) => {
+        if (!object && sameName(o.name, d.node)) object = o;
+      });
+    }
+    if (!object) {
+      if (!quiet && !d.avatar) console.warn(`[拍照·${city.name}] 找不到人物「${d.label}」（${d.node}），先不判断 ta 有没有入镜`);
+      continue;
+    }
+    out.push({ ...d, object });
+  }
+  return out;
+}
+
+/**
  * 切时段：把这座城时段表里的数值填进画面管线。
  * HdrPipeline（东京）填 exposure / bloom / lutMix；ComposerPipeline（悉尼）填 toneMappingExposure 和泛光强度。
  * 宿主自己已经在管光照和曝光的话，可以不调这个，只用 city.phases 查名字。
@@ -181,19 +207,36 @@ export class StampBook {
  * @returns {{ spots, book, dispose }}
  *   拍到打卡点且行动已完成 → photo 上派发 'stamp'（detail: { spot, canvas, first }）；
  *   拍到了但行动没完成 → 派发 'stampwait'（detail: { spot }），可以提示“先去录音”。
+ *   画面里有没问过的人 → 这张不盖章，派发 'consentwait'（detail: { subjects: [id], labels }）。
+ *   打卡点要求某人入镜（needSubjects，比如合影里要有 Maya）而没拍到 → 派发 'subjectwait'（detail: { spot, missing }）。
  */
 export function setupCity(photo, city, o = {}) {
   photo.setFocalLengths(city.focalLengths);
   const spots = resolveSpots(city, o.anchors ?? o.scene ?? photo.scene, o);
   photo.spots = spots;
+  if (o.avatar) photo.avatar = o.avatar;
+  photo.subjects = resolveSubjects(city, o.scene ?? photo.scene, { avatar: o.avatar ?? photo.avatar, people: o.people, quiet: o.quiet });
   const phase = () => o.getPhase?.() ?? city.defaultPhase;
   photo.getContext = () => ({ sceneId: city.sceneId, phase: phase(), weather: o.getWeather?.() ?? 'clear' });
   const book = o.book ?? new StampBook(city);
   const actionDone = o.actionDone ?? (() => true);
   const onPhoto = (e) => {
-    for (const id of e.detail.record.meta.spotHits) {
+    const meta = e.detail.record.meta;
+    if (meta.storyOk === false) {
+      const labels = meta.consentMissing.map((id) => photo.subjects.find((s) => s.id === id)?.label ?? id);
+      photo.dispatchEvent(new CustomEvent('consentwait', { detail: { subjects: meta.consentMissing, labels } }));
+      return;
+    }
+    for (const id of meta.spotHits) {
       const spot = spots.find((s) => s.id === id);
       if (!spot) continue;
+      const missing = (spot.needSubjects ?? []).filter((p) => !meta.subjects?.includes(p));
+      // 需要的人在场景里根本没找到（模型还没接）时不卡剧情
+      const known = missing.filter((p) => photo.subjects.some((s) => s.id === p));
+      if (known.length) {
+        photo.dispatchEvent(new CustomEvent('subjectwait', { detail: { spot, missing: known } }));
+        continue;
+      }
       if (spot.action && !actionDone(spot.action, spot)) {
         photo.dispatchEvent(new CustomEvent('stampwait', { detail: { spot } }));
         continue;
@@ -220,6 +263,7 @@ export function cardInfo(city, picked, { book, choice } = {}) {
     choice: choice ?? '',
     spots: spotIds.map((id) => city.spotDefs.find((s) => s.id === id)?.label).filter(Boolean),
     hasSunset: spotIds.includes(city.card.sunsetSpot),
+    hasSelfie: picked.some((p) => p.meta.selfie),
   };
   const t = city.card;
   return {

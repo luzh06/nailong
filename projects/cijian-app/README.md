@@ -194,6 +194,54 @@ photo.addEventListener('stampwait', (e) => { /* 拍到了，但那里的剧情�
 
 两城都用朱红印泥，带随机的斑驳和白点。同一个打卡点每次画出来都一样。
 
+### 人物进照片（自拍、合影、先问一声）
+四个 3D 人物（凛、林川、Camille、Noah）还没接进网页，下面这些接口和具体模型无关，模型接上后直接用。测试页里用“胶囊 + 球形头”的占位人形演示。
+
+**宿主要传的东西**（`setupTokyo` / `setupSydney` 的参数）：
+```js
+setupSydney(photo, {
+  getPhase: () => 当前时段,
+  avatar: 玩家人物,                 // Object3D；取景时自动藏起来，退出时恢复
+  people: { maya: mayaModel },     // 可选：按 id 直接给人物模型；不给就按 presets 里写的名字（如 NPC_maya）在场景里找
+});
+photo.setConsent('maya');          // 剧情里问过“可以拍吗”、对方答应后调用
+```
+各城可能入镜的人写在 presets 的 `people` 里（东京：凛、林川、路过的人；悉尼：Noah、Maya、Camille），都是预览提案，改那里就行。
+
+**1. 定时自拍（Noah 线的核心：“拍照的人也在照片里”）**
+- 取景时按 **T**：相机留在原地（像放上了三脚架），焦段、横竖、低角度都锁住，屏幕一直显示三脚架上的画面。
+- 10 秒倒数：取景框右上角一盏红色指示灯闪（最后 3 秒闪得快）和数字。再按 T 或 Esc 取消。
+- 人物从相机旁边走进画面，站到**画面里人少那一侧的三分线上**（不挡同伴、不挡中间的景），面向相机；剩 3 秒时摆姿势。
+- 宿主听这几个事件让人物动起来：
+
+  | 事件 | 宿主做什么 |
+  |---|---|
+  | `selftimer:start`（`standAt` 建议站位、`lookAt` 相机位置） | 让人物走到 `standAt`、转身面向 `lookAt`；这段时间玩家可以自己挪人物 |
+  | `selftimer:tick`（`remaining` 剩几秒） | 剩 3 秒时播放 `pose_photo` |
+  | `selftimer:fire` | 快门这一刻（还没摆好就立刻摆好） |
+  | `selftimer:end`（`record` 照片） / `selftimer:cancel` | 把镜头和控制还给玩家 |
+- 照片元信息记 `selfie: true`。悉尼回忆卡里有自拍时，那行字写“这次，我也在照片里”。
+- `new PhotoSystem({ selfTimer: { view: 'host' } })`：倒数时屏幕交还宿主自己的镜头（比如第三人称跟着人物），只在角上显示倒数。默认 `'tripod'`。
+
+**2. 谁被拍进了照片**
+- 和打卡点同一套判断：在画面里、没被挡住、占画面 ≥0.3%、至少一半露在画面里。人被别人挡住也算挡住。
+- 照片元信息：`subjects: ['noah', 'maya']`，`subjectsInFrame: [{ id, label, coverage, needsConsent, consent }]`。剧情可以据此判断“合影里有没有拍到某人”。
+- 打卡点可以要求某人入镜：悉尼咖啡店写了 `needSubjects: ['maya']`，合影里没有 Maya 就不盖章，派发 `subjectwait`。
+- 站在地标前面的人不算“挡住地标”，所以自拍、合影也能盖地标的章。
+
+**3. 拍人前先问一声**（Maya 的合影、东京录“谢谢”的路人）
+- `people` 里标 `needsConsent: true` 的人，没问过就出现在画面里时，取景框上方夹一张纸条“先问一声，可以拍吗？”，下面写名字；打卡点的框不变朱红，提示“问过 Maya 再拍，才算数”。
+- 照片照样能拍、照样留在相册，但元信息 `storyOk: false`、`consentMissing: ['maya']`，不盖章，派发 `consentwait`。
+
+**4. 取景时藏起自己**：进入取景把 `avatar` 设成不可见（第三人称镜头下人物会挡住画面），退出时恢复原样；定时自拍时例外。
+
+**人物模型接入时宿主要做的几步：**
+1. 队友的模型（现在是 zip/blend，在分支 `codex/library-character-5060` 的 `projects/cijian-5060-models/character/`）在 Blender 里导出成 GLB，带骨骼和三个动作：`idle`（站着）、`walk`（走）、`pose_photo`（拍照姿势）。人物正面朝 Blender 的 −Y（导出后是 three 的 +Z），脚底在原点，单位米。
+2. NPC 在场景里的物体名用 `NPC_linchuan`、`NPC_maya` 这种（和 presets 的 `node` 对上）；或者加载后用 `people: { maya: 模型 }` 直接传。
+3. 玩家人物传给 `avatar`。
+4. 在 `selftimer:*` 事件里用 `AnimationMixer` 切动作、移动人物（测试页 `src/photo-test.js` 里“定时自拍”那段就是照着做的，换成真模型只要把 `person.play('walk')` 换成播放对应动画）。
+5. 人物身上的包围盒会被用来算占比：如果模型带了很大的不可见物体（比如碰撞胶囊），给它设 `visible = false` 或单独放，不要挂在人物下面。
+
 ### 按我们的场景设计的取景功能
 看过三台电脑的渲染（谷中窄街逆光、电线杆、五重塔和雷门大提灯、5060 的店面细节、悉尼远眺）后加的：
 
@@ -204,11 +252,12 @@ photo.addEventListener('stampwait', (e) => { /* 拍到了，但那里的剧情�
 | 低角度 | 路面字、仰拍塔檐和提灯（参考 tokyo-fill 的 q_ground、q_pagoda 机位） | V，相机放低 0.7 米，不改宿主的人物位置 |
 | 每城不同焦段 | 东京街宽只有几米，要 24mm；悉尼隔着海看歌剧院和大桥，要 135mm | `focalLengths` / `setFocalLengths()` |
 | 构图提示 | 拍到打卡点时取景框四角变暖、框内出现地点名，玩家知道这张会盖章 | 自动；按快门时才做遮挡判定 |
+| 定时自拍 | Noah 线“拍照的人也在照片里” | T |
 
 照片元信息里会记下 `ev`、`orientation`（landscape / portrait / square）、`lowAngle`。
 
 ### 照片元信息
-`{ id, createdOrder, createdAt, sceneId, spotId, spotHits, phase, weather, cameraStyle, ev, orientation, lowAngle, camera: { position, quaternion, focalMm } }`
+`{ id, createdOrder, createdAt, sceneId, spotId, spotHits, selfie, subjects, subjectsInFrame, consentMissing, storyOk, phase, weather, cameraStyle, ev, orientation, lowAngle, camera: { position, quaternion, focalMm } }`
 `camera` 留给以后的“点照片回到当时现场”。
 
 ### 文件
@@ -234,6 +283,9 @@ cd projects/cijian-app && python3 -m http.server 8766
 场景是程序生成的占位几何（`src/test-scenes/`），只用来测拍照，不是正式美术。店名、招牌都是虚构的。
 左上角能切城市、切时段、换相机，打卡点列表里每个点有“去这里”按钮：跳到参考机位，并设好建议的焦段、横竖、低角度。
 “剧情行动已完成”勾掉后，可以测“先录音、后盖章”。
+“人物”一栏：定时自拍按钮（或取景时按 T）、“已经问过可以拍吗”开关；“上一张”显示入镜的人。
+测试页是第一人称，玩家人物就站在镜头的位置（从里面看不见自己的模型）；定时自拍结束后，镜头回到人物站的地方、看向刚才放相机的位置。
+浏览器面板在后台时动画会停，可以在控制台用 `setInterval(frame, 60)` 手动推帧。
 Three.js r170 和后期扩展放在本目录 `vendor/`（`three.module.js` 来自 yuyake-dandan，`addons/postprocessing`、`addons/shaders` 来自 sydney-harbour，MIT），不依赖网络。
 `?pipeline=composer` 用悉尼同款管线测试。
 
@@ -248,6 +300,13 @@ Three.js r170 和后期扩展放在本目录 `vendor/`（`three.module.js` 来�
 - **悉尼焦段**：在步道上拍约 1 公里外的歌剧院，85mm 以上才够 4%。
 - **竖拍和低角度**：胶片旁轴竖拍、24mm、低角度拍出 2000×3000，元信息正确。
 - **纪念章和回忆卡**：两城纪念章、带章的回忆卡（1—7 枚）都存成文件看过。
+
+人物进照片（第三、四轮，见 `REVIEW_ROUNDS.md`）：
+- **定时自拍**：东京台阶顶日落、悉尼咖啡店、悉尼海边黄金时段三处真拍，人物走到三分线、面向相机、摆姿势，照片 `selfie: true`、`subjects` 正确，同时盖了台阶 / 海边的章。
+- **人少的一侧**：林川在画面右边时人物站左三分线（画面坐标 −0.31），林川在左边时站右三分线（+0.31）。
+- **先问一声**：没问过 Maya 拍咖啡店，照片留下、不盖章、`storyOk: false`；问过之后盖章。没问过时框不变朱红，纸条和提示都出现。
+- **合影要有 Maya**：自拍时人物挡住了 Maya，判定为 Maya 不在画面里，派发 `subjectwait`，不盖章。
+- **藏起自己**：进取景人物不可见、退出恢复；定时中可见。
 
 以下是之前（东京/悉尼配置之前）的验证：
 - **悉尼同款管线（EffectComposer + UnrealBloom + ACES）**：照片和屏幕逐块比较，白天平均差 0.13/255、最大 1.15/255，日落最大 0.46/255；拍完 composer 恢复原尺寸。
@@ -266,9 +325,14 @@ Three.js r170 和后期扩展放在本目录 `vendor/`（`three.module.js` 来�
 - 悉尼三个时段的曝光、泛光数值是兜底值，没对过 sydney-harbour 的光照代码。
 - 没在 5070 上测帧率。取景时每帧多两次全屏调色，预计影响很小。
 - 内置浏览器不把下载存到磁盘，“点下载按钮 → 打开文件”要在 Chrome 里点一次确认。
+- 人物部分只用占位人形测过：真模型的包围盒（头发、裙摆、手里的东西）会让占比偏大，`SUBJECT_MIN_COVERAGE` 和自拍站位距离（人占画面约一半高）要接上模型再看。
+- 定时自拍的 `view: 'host'` 模式只确认了不画取景框、只显示倒数，没在第三人称镜头里实际玩过。
+- 内置浏览器面板在后台，定时自拍的走路是手动推帧测的，没看过 60 帧下的流畅度。
 
 ## 临时的东西（之后要换）
-- **打卡点**全部是预览提案，名字、数量、位置等用户拍板。剧情行动的名字（`rec_bell` 等）是暂定的，要和任务系统对上。
+- **打卡点**全部是预览提案，名字、数量、位置等用户拍板。
+- **入镜人物**（`people`）、谁要先问、咖啡店合影要有 Maya，都是按剧情方案写的提案。
+- 占位人形 `src/test-scenes/people.js` 只给测试页用。剧情行动的名字（`rec_bell` 等）是暂定的，要和任务系统对上。
 - 集章存在 localStorage，正式版交给任务系统存档。
 - `src/test-scenes/` 的占位场景、招牌和天空只给测试页用，不进正式游戏。
 - 两台相机的调色数值：要拿东京烘焙场景再看一遍，满意后可以导出成 `.cube` 填进 `styles.js` 的 `lut`。

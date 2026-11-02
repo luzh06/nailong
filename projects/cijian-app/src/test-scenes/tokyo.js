@@ -3,6 +3,7 @@
 // 布局：主街沿 z 轴，−z 端是台阶（夕焼けだんだん，站在台阶顶朝 +z 看夕阳，和 game.js 的太阳方向一致），
 // +z 端拼了浅草寺意象（大提灯的门、五重塔）。店名全部虚构。
 import * as THREE from 'three';
+import { makePerson } from './people.js';
 import { makeSky, signTexture, stripeTexture, mulberry32 } from './sky.js';
 
 const STEP_TOP = -36;   // 台阶顶边 z
@@ -194,6 +195,16 @@ export function buildTokyo({ renderer, scene, sun, hemi }) {
     ring.rotation.x = Math.PI / 2;
   }
 
+  // ---- 人（占位）：台阶顶等人的林川、八百政门口说“谢谢”的路人 ----
+  const linchuan = makePerson({ name: 'NPC_linchuan', color: 0x3c4c5e, height: 1.78 });
+  linchuan.position.set(1.6, 0, -27.5); // 台阶下面等着，抬头看台阶顶；定时自拍时正好在画面左边
+  linchuan.rotation.y = Math.PI * 1.06;
+  const passerby = makePerson({ name: 'NPC_passerby', color: 0x5e4a3c, hair: 0x9a948c, height: 1.6 });
+  passerby.position.set(-1.45, 0, 16.4); // 菜摊左头买菜的人，参考机位里在画面左边
+  passerby.rotation.y = Math.atan2(3.45, 1.6);
+  scene.add(linchuan, passerby);
+  const npcs = [linchuan, passerby];
+
   // ---- 时段 ----
   const SUNSET_DIR = new THREE.Vector3(0.035, 0.107, 0.999).normalize(); // 和 presets/tokyo.js 一致，仰角约 6°
   const PH = {
@@ -216,6 +227,7 @@ export function buildTokyo({ renderer, scene, sun, hemi }) {
   return {
     far: 600,
     eye: 1.6,
+    npcs,
     spawn: { pos: [0, 0, 22], yaw: 0 },
     setPhase,
     heightAt(x, z) {

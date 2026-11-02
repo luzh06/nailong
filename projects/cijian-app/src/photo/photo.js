@@ -8,6 +8,8 @@
 //   1. 每帧：if (!photo.render()) pipeline.render(scene, camera)
 //   2. photo.active 为 true 时暂停人物移动（视角转动可以保留）
 //   3. 需要提示物体（交互点标记等）在照片里消失时，给它 userData.hideInPhoto = true
+//   4. 有玩家人物时传 avatar（取景时自动藏起来）；定时自拍时 photo.timerRunning 为 true，
+//      这段时间让玩家控制人物走进画面（相机已经“放在三脚架上”，宿主的镜头怎么动都不影响照片）
 import * as THREE from 'three';
 import { CAMERA_STYLES, FOCAL_LENGTHS, verticalFovForFocal } from './styles.js';
 import { GradePass } from './grade.js';
@@ -23,11 +25,16 @@ const DEFAULT_KEYS = {
   rotate: 'KeyR',          // 横拍 / 竖拍
   low: 'KeyV',             // 低角度（相机放低 0.7 米）
   evUp: 'ArrowUp', evDown: 'ArrowDown', // 曝光补偿（也可 Shift + 滚轮）
+  timer: 'KeyT',           // 定时自拍：相机留在原地，10 秒后自动拍
 };
 const EV_STEP = 1 / 3;
 const EV_MAX = 2;
 const LOW_DROP = 0.7;      // 低角度时相机下降的米数
 const SPOT_LIVE_MS = 150;  // 取景时打卡点提示的刷新间隔
+const TIMER_SECONDS = 10;
+const PERSON_HEIGHT = 1.7; // 算自拍站位用：人在画面里约占一半高
+// 人入镜的最小占比：28mm 合影里 9 米外的一个人约 0.9%；小到约 0.3%（脸都看不清）就不算拍到 ta 了
+const SUBJECT_MIN_COVERAGE = 0.003;
 
 export class PhotoSystem extends EventTarget {
   /**
@@ -45,6 +52,10 @@ export class PhotoSystem extends EventTarget {
    *                                        phases?, facing?, also?, tip?, waitTip? }]，见 checkSpot()；各城的配置在 presets/
    * @param {number[]} [o.focalLengths]   这座城市可用的焦段，默认 [24, 35, 50, 85]；悉尼远眺建议 [28, 50, 85, 135]
    * @param {THREE.Object3D[]} [o.occluders] 判断打卡点是否被挡时用的物体（建议给碰撞体等低面数模型）；默认整个场景
+   * @param {THREE.Object3D} [o.avatar]   玩家自己的人物：取景时藏起来，定时自拍时再显示
+   * @param {Array}  [o.subjects]         可能入镜的人：[{ id, label, object, needsConsent?, minCoverage?: 0.003 }]，见 checkSubjects()
+   * @param {object} [o.selfTimer]        定时自拍：{ seconds: 10, view: 'tripod' | 'host', eyeHeight: 1.6 }
+   *                                      tripod = 屏幕一直显示三脚架上的取景（默认）；host = 屏幕交还宿主镜头，只在角上显示倒数
    */
   constructor({
     renderer,
@@ -60,8 +71,16 @@ export class PhotoSystem extends EventTarget {
     spots = [],
     focalLengths = FOCAL_LENGTHS,
     occluders = null,
+    avatar = null,
+    subjects = [],
+    selfTimer = {},
   }) {
     super();
+    this.avatar = avatar;
+    this.subjects = subjects;
+    this.consent = new Set(); // 已经问过“可以拍吗”的人的 id
+    this.timerOpts = { seconds: TIMER_SECONDS, view: 'tripod', eyeHeight: 1.6, ...selfTimer };
+    this._timer = null;
     this.keys = { ...DEFAULT_KEYS, ...keys };
     this.captureLongSide = captureLongSide;
     this.spots = spots;
@@ -157,19 +176,22 @@ export class PhotoSystem extends EventTarget {
     this.camera.near = Math.min(this.camera.near, 0.05);
     document.querySelectorAll('[data-hud]').forEach((el) => el.classList.add('photo-hud-hidden'));
     this.ui.root.classList.add('on');
+    this._hideAvatar(true);
     this._layout();
     this.dispatchEvent(new Event('enter'));
   }
 
   exit() {
     if (!this.active) return;
+    if (this._timer) this.cancelTimer();
     this.active = false;
+    this._hideAvatar(false);
     this.low = false;
     this.ev = 0; // 曝光补偿每次拿起相机都从 0 开始，避免忘了调回来
     Object.assign(this.camera, this._saved);
     this.camera.updateProjectionMatrix();
     document.querySelectorAll('[data-hud]').forEach((el) => el.classList.remove('photo-hud-hidden'));
-    this.ui.root.classList.remove('on', 'spot-ok', 'spot-wait');
+    this.ui.root.classList.remove('on', 'spot-ok', 'spot-wait', 'ask-on');
     this._liveSpot = null;
     this._liveKey = '';
     this._layout();
@@ -197,6 +219,7 @@ export class PhotoSystem extends EventTarget {
 
   /** 拍照实际用的相机（和取景框里看到的一致） */
   captureCamera() {
+    if (this._timer) return this._timer.capture.clone(); // 定时中：相机在三脚架上不动
     const cam = this.camera.clone();
     cam.fov = verticalFovForFocal(this.focalMm, this.frameAspect);
     cam.aspect = this.frameAspect;
@@ -217,7 +240,7 @@ export class PhotoSystem extends EventTarget {
    * @param {Array<THREE.Object3D|THREE.Vector3>} [spot.also] 这些东西的中心也要在画面里（比如地标和远处的歌剧院同框）
    * @returns {{ok, inFrame, occluded, coverage, timeOk, facingOk, alsoOk}}
    */
-  checkSpot(spot, cam = this.captureCamera(), { occlusion = true, ctx = null } = {}) {
+  checkSpot(spot, cam = this.captureCamera(), { occlusion = true, ctx = null, ignorePeople = true } = {}) {
     if (!spot.target) return { ok: false, inFrame: false, occluded: false, coverage: 0, timeOk: false, facingOk: false, alsoOk: false };
     const box = new THREE.Box3();
     let center;
@@ -267,14 +290,13 @@ export class PhotoSystem extends EventTarget {
       const dir = center.clone().sub(cam.position);
       const dist = dir.length();
       const ray = new THREE.Raycaster(cam.position, dir.normalize(), cam.near, dist * 0.98);
+      const people = new Set([this.avatar, ...this.subjects.map((s) => s.object)].filter(Boolean));
       const hits = ray.intersectObjects(this.occluders ?? [this.scene], true).filter((h) => {
         if (!h.object.visible || h.object.userData.hideInPhoto) return false;
-        if (spot.target.isObject3D) {
-          let o = h.object;
-          while (o) {
-            if (o === spot.target) return false;
-            o = o.parent;
-          }
+        // 站在地标前面的人不算“挡住”地标（自拍、合影本来就是人在前、景在后）
+        for (let o = h.object; o; o = o.parent) {
+          if (spot.target.isObject3D && o === spot.target) return false;
+          if (ignorePeople && people.has(o)) return false;
         }
         return true;
       });
@@ -283,6 +305,161 @@ export class PhotoSystem extends EventTarget {
     const framed = inFrame && !occluded && coverage >= (spot.minCoverage ?? 0.02) && visible >= (spot.minVisible ?? 0.5) && facingOk && alsoOk;
     return { ok: framed && timeOk, framed, inFrame, occluded, coverage: +coverage.toFixed(4), visible: +visible.toFixed(3), timeOk, facingOk, alsoOk };
   }
+
+  /**
+   * 哪些人被拍进了画面：和打卡点同一套判断（在画面里、没被挡、占比够、露出够），人被别人挡住也算挡住。
+   * 看不见的人（visible 为 false，比如取景时藏起来的自己）不算。
+   * @returns {Array<{id, label, coverage, needsConsent, consent}>}
+   */
+  checkSubjects(cam = this.captureCamera(), { occlusion = true } = {}) {
+    const all = [...this.subjects];
+    const out = [];
+    for (const s of all) {
+      if (!s.object || !isShown(s.object)) continue;
+      const r = this.checkSpot({ minCoverage: SUBJECT_MIN_COVERAGE, minVisible: 0.4, ...s, target: s.object, phases: null }, cam, { occlusion, ignorePeople: false });
+      if (!r.framed) continue;
+      out.push({
+        id: s.id,
+        label: s.label ?? s.id,
+        coverage: r.coverage,
+        needsConsent: !!s.needsConsent,
+        consent: !s.needsConsent || this.hasConsent(s.id),
+      });
+    }
+    return out;
+  }
+
+  /** 剧情里问过“可以拍吗”、对方答应了之后调用；on=false 撤回 */
+  setConsent(id, on = true) {
+    on ? this.consent.add(id) : this.consent.delete(id);
+    this._liveKey = ''; // 让取景提示马上刷新
+  }
+
+  hasConsent(id) {
+    return this.consent.has(id) || !!this.subjects.find((s) => s.id === id)?.consented;
+  }
+
+  // ---- 定时自拍 ----
+
+  get timerRunning() {
+    return !!this._timer;
+  }
+
+  /**
+   * 开始定时：相机留在现在的机位和焦段（像放上了三脚架），玩家人物显示出来，倒数结束自动拍。
+   * 派发事件（detail 里都有 remaining 剩余秒数）：
+   *   selftimer:start  { seconds, camera, standAt, lookAt }  宿主让人物走到 standAt、面向 lookAt（相机位置）
+   *   selftimer:tick   { remaining }                         每秒一次；剩 3 秒时建议播放姿势动作 pose_photo
+   *   selftimer:fire   { }                                   快门这一刻
+   *   selftimer:end    { record }                            拍完了（record 是照片记录），宿主把镜头还给玩家
+   *   selftimer:cancel { }                                   中途取消（再按一次 T 或 Esc）
+   */
+  startTimer(seconds = this.timerOpts.seconds) {
+    if (this._timer || this.busy) return;
+    if (!this.active) this.enter();
+    const capture = this.captureCamera();
+    const preview = this.camera.clone();
+    if (this.low) preview.position.y -= LOW_DROP;
+    preview.updateMatrixWorld();
+    // 建议站位：人大约占画面一半高的距离，站在右边那条三分线上（不挡住画面中间的景和人）
+    const vfov = THREE.MathUtils.degToRad(capture.fov);
+    const dist = THREE.MathUtils.clamp(PERSON_HEIGHT / (0.5 * 2 * Math.tan(vfov / 2)), 1.8, 14);
+    const fwd = capture.getWorldDirection(new THREE.Vector3()).setY(0);
+    if (fwd.lengthSq() < 1e-6) fwd.set(0, 0, -1);
+    fwd.normalize();
+    const right = new THREE.Vector3(-fwd.z, 0, fwd.x);
+    const halfW = dist * Math.tan(vfov / 2) * capture.aspect;
+    // 1 = 右三分线，−1 = 左，0 = 正中；没指定就站到画面里人少的那一边，免得挡住同伴
+    let side = this.timerOpts.side;
+    if (side === undefined) {
+      let l = 0;
+      let r = 0;
+      for (const p of this.checkSubjects(capture, { occlusion: false })) {
+        const o = this.subjects.find((s) => s.id === p.id).object;
+        if (o === this.avatar) continue;
+        const x = new THREE.Box3().setFromObject(o).getCenter(new THREE.Vector3()).project(capture).x;
+        x > 0 ? r++ : l++;
+      }
+      side = r > l ? -1 : 1;
+    }
+    const standAt = this.camera.position.clone().addScaledVector(fwd, dist).addScaledVector(right, (side * halfW) / 3);
+    standAt.y = this.camera.position.y - this.timerOpts.eyeHeight;
+    const t = { capture, preview, endAt: performance.now() + seconds * 1000, remaining: seconds, view: this.timerOpts.view };
+    this._timer = t;
+    this._hideAvatar(false);
+    this.ui.root.classList.add('timer-on');
+    this.ui.root.classList.toggle('timer-host', t.view === 'host');
+    this._timerShow(seconds);
+    this.dispatchEvent(new CustomEvent('selftimer:start', {
+      detail: { seconds, remaining: seconds, camera: capture, standAt, lookAt: capture.position.clone() },
+    }));
+    const step = () => {
+      if (this._timer !== t) return;
+      const left = Math.ceil((t.endAt - performance.now()) / 1000 - 1e-3);
+      if (left !== t.remaining && left > 0) {
+        t.remaining = left;
+        this._timerShow(left);
+        this.dispatchEvent(new CustomEvent('selftimer:tick', { detail: { remaining: left } }));
+      }
+      if (left <= 0) {
+        this._timerFire(t);
+        return;
+      }
+      t.handle = setTimeout(step, Math.min(200, Math.max(10, t.endAt - performance.now())));
+    };
+    t.handle = setTimeout(step, 200);
+  }
+
+  cancelTimer() {
+    const t = this._timer;
+    if (!t) return;
+    clearTimeout(t.handle);
+    this._timerDone();
+    this.dispatchEvent(new CustomEvent('selftimer:cancel', { detail: { remaining: t.remaining } }));
+  }
+
+  async _timerFire(t) {
+    t.remaining = 0;
+    this._timerShow(0);
+    this.dispatchEvent(new CustomEvent('selftimer:fire', { detail: { remaining: 0 } }));
+    // 等一帧，让宿主在 fire 里摆好的姿势画进照片（页面在后台时 requestAnimationFrame 会停，最多等 120 毫秒）
+    await new Promise((res) => {
+      requestAnimationFrame(() => res());
+      setTimeout(res, 120);
+    });
+    const record = await this.shoot({ selfie: true, force: true });
+    if (this._timer === t) this._timerDone();
+    this.dispatchEvent(new CustomEvent('selftimer:end', { detail: { record } }));
+  }
+
+  _timerDone() {
+    this._timer = null;
+    this.ui.root.classList.remove('timer-on', 'timer-host', 'timer-fast');
+    if (this.active) this._hideAvatar(true);
+    this._liveKey = '';
+    this._layout();
+  }
+
+  _timerShow(n) {
+    this.ui.timerNum.textContent = n > 0 ? String(n) : '';
+    this.ui.root.classList.toggle('timer-fast', n > 0 && n <= 3); // 最后 3 秒灯闪得快，和真相机一样
+  }
+
+  // 取景时把自己的人物藏起来（第三人称镜头下人物会挡住画面），退出时恢复成进入前的样子；定时自拍时显示
+  _hideAvatar(hide) {
+    const a = this.avatar;
+    if (!a) return;
+    if (hide) {
+      if (this._avatarWas === undefined) this._avatarWas = a.visible;
+      a.visible = false;
+    } else if (this._timer) {
+      a.visible = true;
+    } else if (this._avatarWas !== undefined) {
+      a.visible = this._avatarWas;
+      this._avatarWas = undefined;
+    }
+  }
+
 
   // 取景框在屏幕上的位置（CSS 像素）
   _crop() {
@@ -312,6 +489,11 @@ export class PhotoSystem extends EventTarget {
     this.camera.fov = THREE.MathUtils.radToDeg(2 * Math.atan(Math.tan(photoV / 2) / k));
     this.camera.aspect = c.W / c.H;
     this.camera.updateProjectionMatrix();
+    if (this._timer) {
+      // 定时中窗口大小变了：三脚架上的取景跟着改宽高比，焦段不变
+      Object.assign(this._timer.preview, { fov: this.camera.fov, aspect: this.camera.aspect });
+      this._timer.preview.updateProjectionMatrix();
+    }
   }
 
   _ensurePreviewTarget(w, h) {
@@ -324,13 +506,23 @@ export class PhotoSystem extends EventTarget {
   /** 取景时代替宿主的那一帧渲染，返回 true 表示这一帧已经画完 */
   render() {
     if (!this.active) return false;
+    // 定时自拍、屏幕交还宿主镜头：宿主照常画自己的镜头，倒数只在角上显示
+    if (this._timer?.view === 'host') {
+      this._liveSpotCheck();
+      return false;
+    }
     const r = this.renderer;
     const size = r.getDrawingBufferSize(new THREE.Vector2());
     const rt = this._ensurePreviewTarget(size.x, size.y);
     // 先用游戏管线画出玩家平时看到的画面（低角度时临时把相机放低，画完放回，宿主的人物控制不受影响）
-    if (this.low) this.camera.position.y -= LOW_DROP;
-    this.pipeline.render(this.scene, this.camera, rt, { width: size.x, height: size.y });
-    if (this.low) this.camera.position.y += LOW_DROP;
+    // 定时中用三脚架上那台相机，宿主的镜头去跟人物也不影响画面
+    if (this._timer) {
+      this.pipeline.render(this.scene, this._timer.preview, rt, { width: size.x, height: size.y });
+    } else {
+      if (this.low) this.camera.position.y -= LOW_DROP;
+      this.pipeline.render(this.scene, this.camera, rt, { width: size.x, height: size.y });
+      if (this.low) this.camera.position.y += LOW_DROP;
+    }
     this._liveSpotCheck();
 
     // 整屏先画一遍（框外会被遮暗），再按照片的取样区域把框内重画一遍，
@@ -354,9 +546,9 @@ export class PhotoSystem extends EventTarget {
     return true;
   }
 
-  /** 按下快门。返回保存好的照片记录 { id, meta, blob } */
-  async shoot() {
-    if (!this.active || this.busy) return null;
+  /** 按下快门。返回保存好的照片记录 { id, meta, blob }。定时中手动按快门不算（等倒数） */
+  async shoot({ selfie = false, force = false } = {}) {
+    if (!this.active || this.busy || (this._timer && !force)) return null;
     this.busy = true;
     playShutter(this.style.shutter);
     this._shutterAnim();
@@ -375,6 +567,9 @@ export class PhotoSystem extends EventTarget {
         .map((sp) => ({ id: sp.id, ...this.checkSpot(sp, this._lastCam, { ctx }) }))
         .filter((h) => h.ok)
         .map((h) => h.id);
+      // 入镜的人；画面里有没征得同意的人，这张照片照样留着，但不算进剧情（不盖章、不算合影）
+      const inFrame = this._lastSubjects ?? [];
+      const consentMissing = inFrame.filter((p) => !p.consent).map((p) => p.id);
       const meta = {
         ev: +this.ev.toFixed(2),
         orientation: this.frameAspect === 1 ? 'square' : this.frameAspect < 1 ? 'portrait' : 'landscape',
@@ -385,12 +580,17 @@ export class PhotoSystem extends EventTarget {
         sceneId: ctx.sceneId ?? null,
         spotId: ctx.spotId ?? spotHits[0] ?? null, // 空表示自由拍摄
         spotHits,
+        selfie,                              // 定时自拍：拍照的人也在照片里
+        subjects: inFrame.map((p) => p.id),  // 拍进画面的人的 id
+        subjectsInFrame: inFrame,            // 详细：[{ id, label, coverage, needsConsent, consent }]
+        consentMissing,
+        storyOk: consentMissing.length === 0,
         phase: ctx.phase ?? null,            // 拍摄时的时段、天气，之后不改
         weather: ctx.weather ?? null,
         cameraStyle: this.styleId,
         camera: {
-          position: this.camera.position.toArray(),
-          quaternion: this.camera.quaternion.toArray(),
+          position: this._lastCam.position.toArray(),
+          quaternion: this._lastCam.quaternion.toArray(),
           focalMm: this.focalMm,
         },
       };
@@ -422,6 +622,7 @@ export class PhotoSystem extends EventTarget {
 
     const cam = this.captureCamera();
     this._lastCam = cam;
+    this._lastSubjects = this.checkSubjects(cam);
 
     const hidden = [];
     this.scene.traverse((o) => {
@@ -481,9 +682,12 @@ export class PhotoSystem extends EventTarget {
         <div class="photo-level"></div>
         <div class="photo-spot"><b></b><small></small></div>
         <div class="photo-ev"><span class="photo-ev-scale"></span><i class="photo-ev-mark"></i></div>
+        <div class="photo-ask"><b>先问一声，可以拍吗？</b><small></small></div>
+        <div class="photo-timer"><i></i><span></span></div>
       </div>
+      <div class="photo-timer-hint">定时自拍 · 走进画面里　${keyName(this.keys.timer)} 取消</div>
       <div class="photo-info"><span class="photo-cam"></span><span class="photo-tags"></span></div>
-      <div class="photo-hint">滚轮 焦段　↑↓ 曝光　${keyName(this.keys.rotate)} 横竖　${keyName(this.keys.low)} 低角度　${keyName(this.keys.shoot)} 快门　${keyName(this.keys.toggle)} 收起</div>
+      <div class="photo-hint">滚轮 焦段　↑↓ 曝光　${keyName(this.keys.rotate)} 横竖　${keyName(this.keys.low)} 低角度　${keyName(this.keys.timer)} 定时　${keyName(this.keys.shoot)} 快门　${keyName(this.keys.toggle)} 收起</div>
       <div class="photo-shutter"></div>`;
     this.container.appendChild(root);
     this.ui = {
@@ -497,6 +701,8 @@ export class PhotoSystem extends EventTarget {
       spotTip: root.querySelector('.photo-spot small'),
       evMark: root.querySelector('.photo-ev-mark'),
       shutter: root.querySelector('.photo-shutter'),
+      ask: root.querySelector('.photo-ask small'),
+      timerNum: root.querySelector('.photo-timer span'),
     };
   }
 
@@ -519,12 +725,17 @@ export class PhotoSystem extends EventTarget {
   // 取景时的打卡提示：只看在不在画面里、够不够大（便宜），被挡住的判定留到按快门时再做。
   // 构图对了但时段不对（比如蓝调才算），地点名照样出现，但框不变暖，下面写“什么时候再来”
   _liveSpotCheck() {
-    if (!this.spots.length) return;
+    if (!this.spots.length && !this.subjects.length) return;
     const now = performance.now();
     if (now - this._spotTimer < SPOT_LIVE_MS) return;
     this._spotTimer = now;
     const cam = this.captureCamera();
     const ctx = this.getContext() || {};
+    // 画面里有没问过的人：框上方夹一张“先问一声”的纸条（不挡快门，只是提醒）
+    const ask = this.subjects.length && !this._timer ? this.checkSubjects(cam, { occlusion: false }).filter((p) => !p.consent) : [];
+    const askText = ask.map((p) => p.label).join('、');
+    this.ui.root.classList.toggle('ask-on', ask.length > 0);
+    if (this.ui.ask.textContent !== askText) this.ui.ask.textContent = askText;
     // 优先级：剧情必拍点（required）拍对了 > 必拍点等时段 > 可选点拍对了 > 可选点等时段
     let hit = null;
     let wait = null;
@@ -539,10 +750,17 @@ export class PhotoSystem extends EventTarget {
     else if (found.wait[0]) wait = found.wait[0];
     else if (found.hit[1]) hit = found.hit[1];
     else wait = found.wait[1];
+    // 构图对了但画面里有没问过的人：这张不会算，框不变朱红，提示先问
+    let askTip = '';
+    if (hit && ask.length) {
+      wait = hit;
+      hit = null;
+      askTip = `问过 ${askText} 再拍，才算数`;
+    }
     const shown = hit ?? wait;
     // tip 可以是函数，按现在的曝光、横竖、低角度给不同的话（已经加过曝光就不再提示加）
     const tipOf = (t) => (typeof t === 'function' ? t(this) : t) ?? '';
-    const tip = hit ? tipOf(hit.tip) : wait ? tipOf(wait.waitTip) || '时段不对，换个时候再来' : '';
+    const tip = hit ? tipOf(hit.tip) : askTip || (wait ? tipOf(wait.waitTip) || '时段不对，换个时候再来' : '');
     const key = shown ? `${shown.id}:${hit ? 1 : 0}:${tip}` : '';
     if (key === this._liveKey) return;
     this._liveKey = key;
@@ -567,7 +785,11 @@ export class PhotoSystem extends EventTarget {
       if (e.target instanceof HTMLInputElement) return;
       const k = this.keys;
       if (e.code === k.toggle) this.toggle();
-      else if (e.code === k.shoot && this.active) {
+      else if (e.code === k.timer) this._timer ? this.cancelTimer() : this.startTimer();
+      else if (this._timer) {
+        if (e.code === k.exit) this.cancelTimer();
+        return; // 定时中别的键（焦段、横竖、快门）都不动，相机已经架好了
+      } else if (e.code === k.shoot && this.active) {
         e.preventDefault();
         this.shoot();
       } else if (e.code === k.album) this.album.toggle();
@@ -592,6 +814,7 @@ export class PhotoSystem extends EventTarget {
       (e) => {
         if (!this.active) return;
         e.preventDefault();
+        if (this._timer) return;
         const up = (e.deltaY || e.deltaX) < 0;
         if (e.shiftKey) this.setEv(this.ev + (up ? EV_STEP : -EV_STEP));
         else this.setFocal(this.focalIndex + (up ? 1 : -1));
@@ -614,11 +837,18 @@ export class PhotoSystem extends EventTarget {
   dispose() {
     window.removeEventListener('resize', this._onResize);
     this.previewRT?.dispose();
+    if (this._timer) clearTimeout(this._timer.handle);
     this.grade.dispose();
     this.ui.root.remove();
     window.removeEventListener('keydown', this._onKey);
     this.album.dispose();
   }
+}
+
+// 物体和它所有上级都可见，才会被画出来
+function isShown(o) {
+  for (; o; o = o.parent) if (!o.visible) return false;
+  return true;
 }
 
 // 1/3 档显示成分数，和真相机一致

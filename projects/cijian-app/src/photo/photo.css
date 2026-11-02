@@ -171,3 +171,48 @@
 /* 构图对了、时段不对：地点名出现但不变暖 */
 .photo-ui.spot-wait .photo-spot { opacity: .8; }
 .photo-ui.spot-wait .photo-spot b { border-left-color: var(--grey); color: var(--grey); background: rgba(238, 232, 220, .7); }
+
+/* ---- 入镜的人还没问过：框上方夹一张纸条（墨字、灰边，不用朱红，因为这不是“好构图”的信号）---- */
+.photo-ask {
+  position: absolute; left: 50%; top: 5%; transform: translateX(-50%) translateY(-6px);
+  opacity: 0; transition: opacity .3s, transform .3s; text-align: center; white-space: nowrap;
+}
+.photo-ui.ask-on .photo-ask { opacity: 1; transform: translateX(-50%); }
+.photo-ask b {
+  display: inline-block; font-weight: 600; font-size: 14px; letter-spacing: .26em; padding: 4px 10px 4px 12px;
+  color: var(--ink); background: rgba(238, 232, 220, .93); border-left: 4px solid var(--grey);
+  box-shadow: 0 2px 10px rgba(0,0,0,.28);
+}
+.photo-ask small {
+  display: block; margin-top: 5px; font-size: 12px; letter-spacing: .18em; color: rgba(255, 243, 224, .85);
+  text-shadow: 0 1px 3px rgba(0,0,0,.6);
+}
+.photo-ask small:empty { display: none; }
+
+/* ---- 定时自拍：框右上角一盏指示灯 + 倒数数字；最后 3 秒灯闪得快 ---- */
+.photo-timer {
+  position: absolute; right: 18px; top: 14px; display: none; align-items: center; gap: 10px;
+  color: var(--paper); text-shadow: 0 1px 4px rgba(0,0,0,.55);
+}
+.photo-ui.timer-on .photo-timer { display: flex; }
+.photo-timer i {
+  width: 11px; height: 11px; border-radius: 50%; background: #e2432c;
+  box-shadow: 0 0 0 2px rgba(29,26,23,.35), 0 0 10px 2px rgba(226, 67, 44, .75);
+  animation: timer-blink 1s steps(1, end) infinite;
+}
+.photo-ui.timer-fast .photo-timer i { animation-duration: .25s; }
+@keyframes timer-blink { 0% { opacity: 1; } 50% { opacity: .15; box-shadow: 0 0 0 2px rgba(29,26,23,.35); } }
+.photo-timer span { font-size: 40px; line-height: 1; font-weight: 600; font-variant-numeric: tabular-nums; min-width: 1.2em; text-align: right; }
+.photo-timer-hint {
+  position: absolute; left: 50%; bottom: 3vh; transform: translateX(-50%); display: none;
+  color: rgba(255, 250, 240, 0.9); letter-spacing: 0.16em; font-size: 13px; text-shadow: 0 1px 3px rgba(0,0,0,.6); white-space: nowrap;
+}
+.photo-ui.timer-on .photo-hint { display: none; }
+.photo-ui.timer-on .photo-timer-hint { display: block; }
+/* 定时中三分线和水平仪收起来，画面更干净，人好找站位 */
+.photo-ui.timer-on .photo-thirds, .photo-ui.timer-on .photo-level { opacity: .35; }
+/* 屏幕交还宿主镜头：不画取景框和压暗，只留倒数 */
+.photo-ui.timer-host .photo-frame { box-shadow: none; outline: none; }
+.photo-ui.timer-host .photo-thirds, .photo-ui.timer-host .photo-level, .photo-ui.timer-host .photo-corners,
+.photo-ui.timer-host .photo-spot, .photo-ui.timer-host .photo-ask, .photo-ui.timer-host .photo-info { display: none; }
+.photo-ui.timer-host .photo-timer { position: fixed; right: 3vw; top: 3vh; }

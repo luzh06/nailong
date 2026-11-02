@@ -47,7 +47,7 @@
   <hr>
   WASD 走动（Shift 快跑）· 拖动鼠标 转视角<br>
   <b>C</b> 或右键 拿起相机 · 单击/空格 快门 · 滚轮 焦段 · <b>B</b> 相册<br>
-  取景时：<b>R</b> 横竖 · <b>V</b> 低角度 · <b>↑↓</b> 曝光
+  取景时：<b>R</b> 横竖 · <b>V</b> 低角度 · <b>↑↓</b> 曝光 · <b>T</b> 定时自拍
   <hr>
   相机：<button data-style="instant">即时成像</button><button data-style="rangefinder">胶片旁轴</button><br>
   时段：<span id="phases"></span><br>
@@ -57,6 +57,11 @@
   <div id="spots"></div>
   <label><input type="checkbox" id="actions" checked> 剧情行动已完成（关掉可测“先录音再盖章”）</label><br>
   <button id="clear-stamps">清空纪念章</button>
+  <hr>
+  <b>人物</b>（占位人形）<br>
+  <button id="timer-btn">定时自拍（T）</button><br>
+  <label><input type="checkbox" id="consent"> 已经问过“可以拍吗”：<span id="consent-names"></span></label><br>
+  <small id="last-shot"></small>
 </div>
 <div class="toast"></div>
 <script type="module" src="src/photo-test.js"></script>

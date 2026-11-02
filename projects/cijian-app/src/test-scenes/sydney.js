@@ -3,6 +3,7 @@
 // （北岸步道到歌剧院约 1 公里、到大桥约 500 米），这样焦段和打卡判定的测试才有意义。
 // 打卡点组的名字就是点位名（ANCHOR_photo_xxx）。咖啡店、长椅、地标是虚构的占位。
 import * as THREE from 'three';
+import { makePerson } from './people.js';
 import { makeSky, signTexture, stripeTexture, mulberry32 } from './sky.js';
 
 const SHORE_Z = -975;   // 北岸岸线
@@ -65,12 +66,20 @@ export function buildSydney({ renderer, scene, sun, hemi }) {
     const a = (i / 5) * Math.PI * 2 + 0.6;
     const p = new THREE.Group();
     p.position.set(Math.cos(a) * 1.15, 0, Math.sin(a) * 1.15);
+    if (i === 1) p.name = 'NPC_maya'; // 站着、面朝步道的这位是 Maya（合影要先问她）
     group.add(p);
     const sit = i % 2 === 0;
     add(new THREE.Mesh(new THREE.CapsuleGeometry(0.2, sit ? 0.45 : 0.75, 4, 10), std(shirt[i])), p).position.y = sit ? 0.85 : 1.05;
     add(new THREE.Mesh(new THREE.SphereGeometry(0.13, 12, 10), std(0xd9b08c)), p).position.y = sit ? 1.33 : 1.7;
     if (sit) add(new THREE.Mesh(new THREE.BoxGeometry(0.45, 0.45, 0.45), std(0x6a5a4a)), p).position.y = 0.22;
   }
+
+  // Camille：刚到咖啡店门口（占位人形）
+  const camille = makePerson({ name: 'NPC_camille', color: 0x8c3b44, hair: 0x6a4026, height: 1.66 });
+  camille.position.set(cafeX + 3.4, LAND_Y, cafeZ + 6.2);
+  camille.rotation.y = -0.5;
+  scene.add(camille);
+  const npcs = [camille];
 
   // ---- S2 步道地标：投币望远镜和一块说明牌 ----
   const mark = new THREE.Group();
@@ -214,6 +223,7 @@ export function buildSydney({ renderer, scene, sun, hemi }) {
   return {
     far: 8000,
     eye: 1.6,
+    npcs,
     spawn: { pos: [-300, SHORE_Z - 10], yaw: Math.PI },
     setPhase,
     heightAt: () => LAND_Y,

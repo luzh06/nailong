@@ -85,6 +85,14 @@ export const TOKYO = {
   ],
 
   // 回忆卡文字：caption 拿到 { date, weather, phase, place, choice, spots, hasSunset }
+  // 可能入镜的人（预览提案）。avatar = 这座城的玩家人物；node = 场景里人物模型的名字（宿主也可以直接传物体）。
+  // needsConsent：剧情要求拍之前先问“可以拍吗”，没问就拍，照片照样留着但不算进剧情。
+  people: [
+    { id: 'rin', label: '凛', avatar: true },
+    { id: 'linchuan', label: '林川', node: 'NPC_linchuan' },
+    { id: 'passerby', label: '路过的人', node: 'NPC_passerby', needsConsent: true, story: '录音 3 里说“谢谢”的路人' },
+  ],
+
   card: {
     title: '寄给明天的声音',
     subtitle: '三日归途 · 第一天 · 东京',
