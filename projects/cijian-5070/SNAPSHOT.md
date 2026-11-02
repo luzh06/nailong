@@ -16,9 +16,12 @@
 
 ## 获取
 
-需要 Git LFS。克隆后在仓库根目录执行：
+需要 Git LFS。Windows 下完整工具目录含较深路径，克隆时启用当前仓库的长路径支持：
 
 ```powershell
+git -c core.longpaths=true clone https://github.com/luzh06/nailong.git
+cd nailong
+git config core.longpaths true
 git lfs pull
 git lfs fsck
 ```
@@ -30,5 +33,5 @@ git lfs fsck
 - 本目录是制作机的原样快照，脚本可能仍包含 `D:\Cijian` 和制作机上的 Blender 路径。执行前先检查路径和覆盖行为。
 - 可以使用已打包的 `pack/` 继续核查当前版本；本次归档没有重新运行全部脚本或重新烘焙。
 - `web/profile/` 已排除，因此浏览器测试须创建自己的本机 profile。
-- 新街块 `block_A.glb`、`block_B.glb` 在本机源目录中未找到，不属于这份快照。其脚本、说明及总览图已在仓库的 `tokyo-5070ti-blocks` 分支；实际模型及配套交付文件仍需从原制作机取得。
+- 新街块 `block_A.glb`、`block_B.glb` 不在这份本机源目录快照中。归档上传期间，原制作方已将模型、配套 JSON 和预览补传到 `tokyo-5070ti-blocks` 分支；它们另存于仓库的 [`projects/tokyo-blocks/`](../tokyo-blocks/) 中，并与完整快照一起提供。
 - Blender、Python 及其他随附第三方工具保留原有许可证；归档行为不为这些组件或第三方素材重新指定许可证。

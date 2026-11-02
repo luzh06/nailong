@@ -26,8 +26,9 @@
 模型、纹理、天空图和大体积嵌入场景数据采用 Git LFS。协作者需要 Git 和 Git LFS：
 
 ```powershell
-git clone https://github.com/luzh06/nailong.git
+git -c core.longpaths=true clone https://github.com/luzh06/nailong.git
 cd nailong
+git config core.longpaths true
 git lfs pull
 ```
 
