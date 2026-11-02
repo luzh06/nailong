@@ -15,6 +15,7 @@
 | `projects/tokyo-market/` | 从原 `Cijian.zip` 整理的商店街原型：网页、模块化店铺与地标、人群、Blender 场景、纹理及来源记录 |
 | `projects/yuyake-dandan/` | 台阶与街巷质量样板：已完成 h1 场景、代表渲染图、生成脚本、raw/opt 模型与性能测试页 |
 | `projects/cijian-5070/` | `D:\Cijian` 完整本机快照；包含工具、历史文件、烘焙与 pack，保留源文件字节 |
+| `projects/tokyo-blocks/` | 按 PLATEAU 真实路网生成的两个街块：GLB、预览、接口坐标、店面预留位与生成脚本；地点未定，未烘焙 |
 | `docs/context/` | 团队提供的需求、两日规划与 Agent 手册原文；其中建议不等于已经确认或实现 |
 | `docs/reports/` | 文件审查、实际运行截图和核验数据；PDF 报告与 Markdown 结论相互补充 |
 | `docs/snapshot-manifest.json` | 原文件来源、快照时间、每个导入文件的大小与 SHA-256 |
