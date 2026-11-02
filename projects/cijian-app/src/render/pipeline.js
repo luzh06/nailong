@@ -1,10 +1,13 @@
 // 画面管线：把场景画成最终显示的图。游戏每帧用它画到屏幕，拍照用它画到离屏大图，两边颜色一致。
 //
-// HdrPipeline 照搬烘焙小样 projects/cijian-5070/web/game.js 的后期：
+// HdrPipeline 照搬烘焙小样 projects/cijian-5070/web/game.js 的后期（东京、图书馆）：
 //   场景 → HDR 目标（MSAA）→ 多级泛光 → 曝光 → AgX 查找表（log2 编码，48³）→ 抖动
+// ComposerPipeline 包一层 Three.js 的 EffectComposer（悉尼 sydney-harbour/web/src/post.js 就是这种：
+//   RenderPass → UnrealBloomPass → OutputPass）。
 // StandardPipeline 给没有自定义后期的场景用：Three.js 自带的色调映射 + sRGB。
 //
-// 两者接口相同：render(scene, camera, target, { width, height })，输出是显示空间（sRGB）的颜色。
+// 三者接口相同：render(scene, camera, target, { width, height })，输出是显示空间（sRGB）的颜色；
+// exposureScale 是拍照时的曝光补偿倍数（1 = 不补偿），只影响这条管线画出的画面。
 // 宿主有自己的后期也可以：只要提供同样签名的 render，能画到任意大小的 target 即可。
 import * as THREE from 'three';
 
@@ -90,6 +93,7 @@ export class HdrPipeline {
     this.lutSize = lutSize;
     this.bloomLevels = bloomLevels;
     this.exposure = 1;    // 线性倍数（game.js 里是 2^exposure）
+    this.exposureScale = 1;
     this.bloom = 0.35;
     this.bloomThreshold = 1.6;
     this.lutMix = 0;      // 0 用 lutA，1 用 lutB，中间混合（时段过渡）
@@ -223,7 +227,7 @@ export class HdrPipeline {
     u.t.value = c.hdr.texture;
     u.tBloom.value = prev.texture;
     u.uT.value = this.lutMix;
-    u.uExp.value = this.exposure;
+    u.uExp.value = this.exposure * this.exposureScale;
     u.uBloom.value = this.bloom;
     u.uTime.value = this.time;
     u.uDither.value = this.dither ? 1 : 0;
@@ -260,13 +264,17 @@ export class StandardPipeline {
       { t: { value: null }, toneMode: { value: 1 }, exposure: { value: 1 } },
     );
     this.rt = null;
+    this.exposureScale = 1;
   }
 
   render(scene, camera, target = null, size = null) {
     const r = this.renderer;
     if (!target) {
+      const e = r.toneMappingExposure;
+      r.toneMappingExposure = e * this.exposureScale;
       r.setRenderTarget(null);
       r.render(scene, camera);
+      r.toneMappingExposure = e;
       return;
     }
     const w = size?.width ?? target.width;
@@ -280,7 +288,7 @@ export class StandardPipeline {
     r.render(scene, camera);
     const u = this.pass.u;
     u.t.value = this.rt.texture;
-    u.exposure.value = r.toneMappingExposure;
+    u.exposure.value = r.toneMappingExposure * this.exposureScale;
     u.toneMode.value = r.toneMapping === THREE.NoToneMapping ? 0 : r.toneMapping === THREE.NeutralToneMapping ? 2 : 1; // AgX 等暂按 ACES
     this.pass.draw(r, target);
   }
@@ -293,5 +301,69 @@ export class StandardPipeline {
   dispose() {
     this.releaseOffscreen();
     this.pass.dispose();
+  }
+}
+
+// 包一层 EffectComposer。照片尺寸和屏幕不同时，临时把 composer 改到照片尺寸，
+// 但泛光（UnrealBloomPass）仍按屏幕分辨率算，这样泛光的相对大小和屏幕一致；画完恢复原尺寸。
+export class ComposerPipeline {
+  /**
+   * @param {THREE.WebGLRenderer} renderer
+   * @param {import('three/addons/postprocessing/EffectComposer.js').EffectComposer} composer 宿主已经搭好的 composer
+   * @param {object} [o]
+   * @param {object} [o.renderPass] 画场景的那个 pass；不给就取第一个带 scene 和 camera 的 pass
+   */
+  constructor(renderer, composer, { renderPass } = {}) {
+    this.renderer = renderer;
+    this.composer = composer;
+    this.renderPass = renderPass ?? composer.passes.find((p) => p.scene && p.camera);
+    if (!this.renderPass) throw new Error('ComposerPipeline：composer 里找不到画场景的 pass');
+    this.exposureScale = 1;
+    this.copy = fullscreenPass('uniform sampler2D t;void main(){oc=texture(t,vUv);}', { t: { value: null } });
+  }
+
+  render(scene, camera, target = null, size = null) {
+    const r = this.renderer;
+    const c = this.composer;
+    const rp = this.renderPass;
+    const prev = { camera: rp.camera, scene: rp.scene, exposure: r.toneMappingExposure };
+    rp.camera = camera;
+    rp.scene = scene;
+    r.toneMappingExposure = prev.exposure * this.exposureScale;
+    try {
+      if (!target) {
+        c.renderToScreen = true;
+        c.render();
+        return;
+      }
+      const db = r.getDrawingBufferSize(new THREE.Vector2());
+      const w = size?.width ?? target.width;
+      const h = size?.height ?? target.height;
+      const resize = w !== db.x || h !== db.y;
+      let saved;
+      if (resize) {
+        saved = { w: c._width, h: c._height, pr: c._pixelRatio };
+        c.setPixelRatio(1);
+        c.setSize(w, h);
+        for (const p of c.passes) if (p.renderTargetsHorizontal) p.setSize(db.x, db.y); // 泛光按屏幕分辨率
+      }
+      c.renderToScreen = false;
+      c.render();
+      this.copy.u.t.value = c.readBuffer.texture;
+      this.copy.draw(r, target);
+      c.renderToScreen = true;
+      if (resize) {
+        c.setPixelRatio(saved.pr);
+        c.setSize(saved.w, saved.h);
+      }
+    } finally {
+      rp.camera = prev.camera;
+      rp.scene = prev.scene;
+      r.toneMappingExposure = prev.exposure;
+    }
+  }
+
+  dispose() {
+    this.copy.dispose();
   }
 }

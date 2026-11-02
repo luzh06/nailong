@@ -3,9 +3,10 @@
 //
 // 画面管线默认用烘焙小样的那一套（HDR → 泛光 → 曝光 → AgX 查找表），查找表文件从
 //   test-data/lut_morning.bin、test-data/lut_sunset.bin 读（就是 cijian-5070/web/data 里的同名文件，
-//   不入库，见 README）。读不到就退回 StandardPipeline（ACES）。?pipeline=standard 可强制用后者。
+//   不入库，见 README）。读不到就退回 StandardPipeline（ACES）。
+// ?pipeline=standard 强制用 StandardPipeline；?pipeline=composer 用和悉尼一样的 EffectComposer（泛光 + ACES）。
 import * as THREE from 'three';
-import { PhotoSystem, HdrPipeline, StandardPipeline } from './photo/index.js';
+import { PhotoSystem, HdrPipeline, StandardPipeline, ComposerPipeline } from './photo/index.js';
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
@@ -52,7 +53,23 @@ function setPhase(p) {
 }
 
 async function makePipeline() {
-  if (new URLSearchParams(location.search).get('pipeline') !== 'standard') {
+  const want = new URLSearchParams(location.search).get('pipeline');
+  if (want === 'composer') {
+    // 照搬 sydney-harbour/web/src/post.js
+    const { EffectComposer } = await import('three/addons/postprocessing/EffectComposer.js');
+    const { RenderPass } = await import('three/addons/postprocessing/RenderPass.js');
+    const { UnrealBloomPass } = await import('three/addons/postprocessing/UnrealBloomPass.js');
+    const { OutputPass } = await import('three/addons/postprocessing/OutputPass.js');
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    const size = renderer.getSize(new THREE.Vector2());
+    const composer = new EffectComposer(renderer, new THREE.WebGLRenderTarget(size.x, size.y, { type: THREE.HalfFloatType, samples: 4 }));
+    composer.addPass(new RenderPass(scene, camera));
+    composer.addPass(new UnrealBloomPass(size.clone().multiplyScalar(0.5), 0.6, 0.55, 1.0));
+    composer.addPass(new OutputPass());
+    addEventListener('resize', () => composer.setSize(innerWidth, innerHeight));
+    return new ComposerPipeline(renderer, composer);
+  }
+  if (want !== 'standard') {
     try {
       const hdr = new HdrPipeline(renderer);
       const [a, b] = await Promise.all([hdr.loadLut('test-data/lut_morning.bin'), hdr.loadLut('test-data/lut_sunset.bin')]);
@@ -67,7 +84,11 @@ async function makePipeline() {
 }
 pipeline = await makePipeline();
 document.getElementById('pipe-info').textContent =
-  pipeline instanceof HdrPipeline ? '画面管线：烘焙小样同款（泛光 + AgX）' : '画面管线：Three.js ACES';
+  pipeline instanceof HdrPipeline
+    ? '画面管线：东京烘焙小样同款（泛光 + AgX）'
+    : pipeline instanceof ComposerPipeline
+      ? '画面管线：悉尼同款（EffectComposer 泛光 + ACES）'
+      : '画面管线：Three.js ACES';
 
 // ---- 一条小街：路、两排房子、暖帘、灯笼、电线杆、台阶 ----
 const rand = mulberry32(7);
@@ -154,7 +175,7 @@ const photo = new PhotoSystem({
   scene,
   camera,
   pipeline,
-  spots: [{ id: 'steps', target: steps, minCoverage: 0.03 }],
+  spots: [{ id: 'steps', label: '街尾的台阶', target: steps, minCoverage: 0.03 }],
   getContext: () => ({ sceneId: 'photo-test', spotId: null, phase, weather: 'clear' }),
 });
 photo.album.cardInfo = (picked) => ({

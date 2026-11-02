@@ -18,7 +18,16 @@ import { playShutter } from './sound.js';
 
 const CROP_HEIGHT = 0.8;   // 取景框高度占屏幕高度的比例
 const CROP_WIDTH_MAX = 0.9;
-const DEFAULT_KEYS = { toggle: 'KeyC', shoot: 'Space', album: 'KeyB', exit: 'Escape' };
+const DEFAULT_KEYS = {
+  toggle: 'KeyC', shoot: 'Space', album: 'KeyB', exit: 'Escape',
+  rotate: 'KeyR',          // 横拍 / 竖拍
+  low: 'KeyV',             // 低角度（相机放低 0.7 米）
+  evUp: 'ArrowUp', evDown: 'ArrowDown', // 曝光补偿（也可 Shift + 滚轮）
+};
+const EV_STEP = 1 / 3;
+const EV_MAX = 2;
+const LOW_DROP = 0.7;      // 低角度时相机下降的米数
+const SPOT_LIVE_MS = 150;  // 取景时打卡点提示的刷新间隔
 
 export class PhotoSystem extends EventTarget {
   /**
@@ -32,7 +41,9 @@ export class PhotoSystem extends EventTarget {
    * @param {boolean} [o.bindKeys]        是否由模块自己处理按键和鼠标（C 取景、空格/单击快门、滚轮焦段、B 相册、右键取景）
    * @param {object} [o.keys]             改按键：{ toggle, shoot, album, exit }，值是 KeyboardEvent.code
    * @param {number} [o.captureLongSide]  照片长边像素，默认 3000
-   * @param {Array}  [o.spots]            打卡点：[{ id, target: Object3D 或 Vector3, minCoverage?: 0.02, radius?: 0 }]，见 checkSpot()
+   * @param {Array}  [o.spots]            打卡点：[{ id, label?, target: Object3D 或 Vector3, minCoverage?: 0.02, radius?: 1 }]，见 checkSpot()
+   * @param {number[]} [o.focalLengths]   这座城市可用的焦段，默认 [24, 35, 50, 85]；悉尼远眺建议 [28, 50, 85, 135]
+   * @param {THREE.Object3D[]} [o.occluders] 判断打卡点是否被挡时用的物体（建议给碰撞体等低面数模型）；默认整个场景
    */
   constructor({
     renderer,
@@ -46,11 +57,20 @@ export class PhotoSystem extends EventTarget {
     styleId = 'instant',
     captureLongSide = 3000,
     spots = [],
+    focalLengths = FOCAL_LENGTHS,
+    occluders = null,
   }) {
     super();
     this.keys = { ...DEFAULT_KEYS, ...keys };
     this.captureLongSide = captureLongSide;
     this.spots = spots;
+    this.occluders = occluders;
+    this.focalLengths = [...focalLengths];
+    this.portrait = false;
+    this.low = false;
+    this.ev = 0;
+    this._spotTimer = 0;
+    this._liveSpot = null;
     injectCss();
     this.renderer = renderer;
     this.pipeline = pipeline ?? new StandardPipeline(renderer);
@@ -60,7 +80,7 @@ export class PhotoSystem extends EventTarget {
     this.getContext = getContext;
     this.active = false;
     this.busy = false;
-    this.focalIndex = 1; // 35mm
+    this.focalIndex = Math.max(0, this.focalLengths.indexOf(35)); // 默认 35mm，没有就取最广
     this.grade = new GradePass();
     this.store = new PhotoStore();
     this.order = 0;
@@ -81,7 +101,38 @@ export class PhotoSystem extends EventTarget {
   }
 
   get focalMm() {
-    return FOCAL_LENGTHS[this.focalIndex];
+    return this.focalLengths[this.focalIndex];
+  }
+
+  /** 照片画面的宽高比：方画幅不分横竖；其他画幅竖拍时宽高对调 */
+  get frameAspect() {
+    const a = this.style.aspect;
+    return a === 1 || !this.portrait ? a : 1 / a;
+  }
+
+  /** 换城市时换焦段，比如悉尼远眺要长焦 */
+  setFocalLengths(list) {
+    const cur = this.focalMm;
+    this.focalLengths = [...list];
+    const i = this.focalLengths.indexOf(cur);
+    this.focalIndex = i >= 0 ? i : Math.max(0, this.focalLengths.indexOf(35));
+    this._layout();
+  }
+
+  setPortrait(on) {
+    this.portrait = !!on;
+    this._layout();
+  }
+
+  setLow(on) {
+    this.low = !!on;
+    this._layout();
+  }
+
+  /** 曝光补偿，单位 EV，±2 档内按 1/3 档取整 */
+  setEv(ev) {
+    this.ev = THREE.MathUtils.clamp(Math.round(ev / EV_STEP) * EV_STEP, -EV_MAX, EV_MAX);
+    this._layout();
   }
 
   async setStyle(styleId) {
@@ -94,7 +145,7 @@ export class PhotoSystem extends EventTarget {
   }
 
   setFocal(index) {
-    this.focalIndex = THREE.MathUtils.clamp(index, 0, FOCAL_LENGTHS.length - 1);
+    this.focalIndex = THREE.MathUtils.clamp(index, 0, this.focalLengths.length - 1);
     this._layout();
   }
 
@@ -112,10 +163,14 @@ export class PhotoSystem extends EventTarget {
   exit() {
     if (!this.active) return;
     this.active = false;
+    this.low = false;
+    this.ev = 0; // 曝光补偿每次拿起相机都从 0 开始，避免忘了调回来
     Object.assign(this.camera, this._saved);
     this.camera.updateProjectionMatrix();
     document.querySelectorAll('[data-hud]').forEach((el) => el.classList.remove('photo-hud-hidden'));
-    this.ui.root.classList.remove('on');
+    this.ui.root.classList.remove('on', 'spot-ok');
+    this._liveSpot = null;
+    this._layout();
     this.dispatchEvent(new Event('exit'));
   }
 
@@ -141,8 +196,9 @@ export class PhotoSystem extends EventTarget {
   /** 拍照实际用的相机（和取景框里看到的一致） */
   captureCamera() {
     const cam = this.camera.clone();
-    cam.fov = verticalFovForFocal(this.focalMm, this.style.aspect);
-    cam.aspect = this.style.aspect;
+    cam.fov = verticalFovForFocal(this.focalMm, this.frameAspect);
+    cam.aspect = this.frameAspect;
+    if (this.low) cam.position.y -= LOW_DROP;
     cam.updateProjectionMatrix();
     cam.updateMatrixWorld();
     return cam;
@@ -154,7 +210,7 @@ export class PhotoSystem extends EventTarget {
    *   target 是物体时按它的包围盒算；是点时按 radius（米）当作一个球算占比
    * @returns {{ok: boolean, inFrame: boolean, occluded: boolean, coverage: number}}
    */
-  checkSpot(spot, cam = this.captureCamera()) {
+  checkSpot(spot, cam = this.captureCamera(), { occlusion = true } = {}) {
     const box = new THREE.Box3();
     let center;
     if (spot.target.isObject3D) {
@@ -182,11 +238,11 @@ export class PhotoSystem extends EventTarget {
     const coverage = inFrame ? (cw * ch) / 4 : 0;
     // 遮挡：从相机向中心打一条射线，先碰到的不是目标本身就算被挡
     let occluded = false;
-    if (inFrame) {
+    if (inFrame && occlusion) {
       const dir = center.clone().sub(cam.position);
       const dist = dir.length();
       const ray = new THREE.Raycaster(cam.position, dir.normalize(), cam.near, dist * 0.98);
-      const hits = ray.intersectObject(this.scene, true).filter((h) => {
+      const hits = ray.intersectObjects(this.occluders ?? [this.scene], true).filter((h) => {
         if (!h.object.visible || h.object.userData.hideInPhoto) return false;
         if (spot.target.isObject3D) {
           let o = h.object;
@@ -208,11 +264,12 @@ export class PhotoSystem extends EventTarget {
     const el = this.renderer.domElement;
     const W = el.clientWidth;
     const H = el.clientHeight;
+    const a = this.frameAspect;
     let h = H * CROP_HEIGHT;
-    let w = h * this.style.aspect;
+    let w = h * a;
     if (w > W * CROP_WIDTH_MAX) {
       w = W * CROP_WIDTH_MAX;
-      h = w / this.style.aspect;
+      h = w / a;
     }
     return { x: (W - w) / 2, y: (H - h) / 2, w, h, W, H };
   }
@@ -222,9 +279,10 @@ export class PhotoSystem extends EventTarget {
     if (!this.style) return;
     const c = this._crop();
     Object.assign(this.ui.frame.style, { left: `${c.x}px`, top: `${c.y}px`, width: `${c.w}px`, height: `${c.h}px` });
-    this.ui.info.textContent = `${this.style.name} · ${this.focalMm}mm`;
+    this._updateInfo();
+    this._applyExposure();
     if (!this.active) return;
-    const photoV = THREE.MathUtils.degToRad(verticalFovForFocal(this.focalMm, this.style.aspect));
+    const photoV = THREE.MathUtils.degToRad(verticalFovForFocal(this.focalMm, this.frameAspect));
     const k = c.h / c.H;
     this.camera.fov = THREE.MathUtils.radToDeg(2 * Math.atan(Math.tan(photoV / 2) / k));
     this.camera.aspect = c.W / c.H;
@@ -244,8 +302,11 @@ export class PhotoSystem extends EventTarget {
     const r = this.renderer;
     const size = r.getDrawingBufferSize(new THREE.Vector2());
     const rt = this._ensurePreviewTarget(size.x, size.y);
-    // 先用游戏管线画出玩家平时看到的画面
+    // 先用游戏管线画出玩家平时看到的画面（低角度时临时把相机放低，画完放回，宿主的人物控制不受影响）
+    if (this.low) this.camera.position.y -= LOW_DROP;
     this.pipeline.render(this.scene, this.camera, rt, { width: size.x, height: size.y });
+    if (this.low) this.camera.position.y += LOW_DROP;
+    this._liveSpotCheck();
 
     // 整屏先画一遍（框外会被遮暗），再按照片的取样区域把框内重画一遍，
     // 这样暗角和颗粒的位置与拍出来的照片一致。setViewport / setScissor 用 CSS 像素
@@ -290,6 +351,9 @@ export class PhotoSystem extends EventTarget {
         .filter((h) => h.ok)
         .map((h) => h.id);
       const meta = {
+        ev: +this.ev.toFixed(2),
+        orientation: this.frameAspect === 1 ? 'square' : this.frameAspect < 1 ? 'portrait' : 'landscape',
+        lowAngle: this.low,
         id: `p_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 6)}`,
         createdOrder: ++this.order,
         createdAt: new Date().toISOString(),
@@ -327,7 +391,7 @@ export class PhotoSystem extends EventTarget {
   // 渲染并读回像素，返回画好照片的 canvas（同步，读回的停顿被快门动画盖住）
   _capture() {
     const r = this.renderer;
-    const aspect = this.style.aspect;
+    const aspect = this.frameAspect;
     const W = aspect >= 1 ? this.captureLongSide : Math.round(this.captureLongSide * aspect);
     const H = Math.round(W / aspect);
 
@@ -387,9 +451,11 @@ export class PhotoSystem extends EventTarget {
         <div class="photo-thirds"></div>
         <div class="photo-corners"><i></i><i></i><i></i><i></i></div>
         <div class="photo-level"></div>
+        <div class="photo-spot"><b></b></div>
+        <div class="photo-ev"><span class="photo-ev-scale"></span><i class="photo-ev-mark"></i></div>
       </div>
-      <div class="photo-info"></div>
-      <div class="photo-hint">滚轮 换焦段 · 单击或${keyName(this.keys.shoot)} 按快门 · ${keyName(this.keys.toggle)} 收起相机 · ${keyName(this.keys.album)} 相册</div>
+      <div class="photo-info"><span class="photo-cam"></span><span class="photo-tags"></span></div>
+      <div class="photo-hint">滚轮 焦段　↑↓ 曝光　${keyName(this.keys.rotate)} 横竖　${keyName(this.keys.low)} 低角度　${keyName(this.keys.shoot)} 快门　${keyName(this.keys.toggle)} 收起</div>
       <div class="photo-shutter"></div>`;
     this.container.appendChild(root);
     this.ui = {
@@ -397,8 +463,43 @@ export class PhotoSystem extends EventTarget {
       frame: root.querySelector('.photo-frame'),
       level: root.querySelector('.photo-level'),
       info: root.querySelector('.photo-info'),
+      cam: root.querySelector('.photo-cam'),
+      tags: root.querySelector('.photo-tags'),
+      spot: root.querySelector('.photo-spot b'),
+      evMark: root.querySelector('.photo-ev-mark'),
       shutter: root.querySelector('.photo-shutter'),
     };
+  }
+
+  _updateInfo() {
+    if (!this.ui) return;
+    this.ui.cam.textContent = `${this.style.name}　${this.focalMm}mm`;
+    const tags = [];
+    if (this.ev) tags.push(`${this.ev > 0 ? '+' : '−'}${evText(Math.abs(this.ev))} EV`);
+    if (this.frameAspect < 1) tags.push('竖');
+    if (this.low) tags.push('低角度');
+    this.ui.tags.textContent = tags.join('　');
+    this.ui.evMark.style.left = `${50 + (this.ev / EV_MAX) * 50}%`;
+    this.ui.root.classList.toggle('ev-on', this.ev !== 0);
+  }
+
+  _applyExposure() {
+    if ('exposureScale' in this.pipeline) this.pipeline.exposureScale = this.active ? 2 ** this.ev : 1;
+  }
+
+  // 取景时的打卡提示：只看在不在画面里、够不够大（便宜），被挡住的判定留到按快门时再做
+  _liveSpotCheck() {
+    if (!this.spots.length) return;
+    const now = performance.now();
+    if (now - this._spotTimer < SPOT_LIVE_MS) return;
+    this._spotTimer = now;
+    const cam = this.captureCamera();
+    const hit = this.spots.find((sp) => this.checkSpot(sp, cam, { occlusion: false }).ok) ?? null;
+    if (hit === this._liveSpot) return;
+    this._liveSpot = hit;
+    this.ui.root.classList.toggle('spot-ok', !!hit);
+    this.ui.spot.textContent = hit ? hit.label ?? '' : '';
+    this.dispatchEvent(new CustomEvent('spotframe', { detail: { spot: hit } }));
   }
 
   // 水平仪：画面倾斜时那条线跟着转
@@ -418,6 +519,12 @@ export class PhotoSystem extends EventTarget {
         e.preventDefault();
         this.shoot();
       } else if (e.code === k.album) this.album.toggle();
+      else if (this.active && e.code === k.rotate) this.setPortrait(!this.portrait);
+      else if (this.active && e.code === k.low) this.setLow(!this.low);
+      else if (this.active && (e.code === k.evUp || e.code === k.evDown)) {
+        e.preventDefault();
+        this.setEv(this.ev + (e.code === k.evUp ? EV_STEP : -EV_STEP));
+      }
       else if (e.code === k.exit) {
         if (this.album.isOpen) this.album.close();
         else this.exit();
@@ -433,7 +540,9 @@ export class PhotoSystem extends EventTarget {
       (e) => {
         if (!this.active) return;
         e.preventDefault();
-        this.setFocal(this.focalIndex + (e.deltaY > 0 ? -1 : 1));
+        const up = (e.deltaY || e.deltaX) < 0;
+        if (e.shiftKey) this.setEv(this.ev + (up ? EV_STEP : -EV_STEP));
+        else this.setFocal(this.focalIndex + (up ? 1 : -1));
       },
       { passive: false },
     );
@@ -460,8 +569,17 @@ export class PhotoSystem extends EventTarget {
   }
 }
 
+// 1/3 档显示成分数，和真相机一致
+function evText(v) {
+  const thirds = Math.round(v * 3);
+  const whole = Math.floor(thirds / 3);
+  const rest = thirds % 3;
+  if (!rest) return `${whole}`;
+  return `${whole ? whole + ' ' : ''}${rest}/3`;
+}
+
 function keyName(code) {
-  return code === 'Space' ? '空格' : code.replace(/^Key|^Digit/, '');
+  return code === 'Space' ? '空格' : code.replace(/^Key|^Digit/, '').replace('ArrowUp', '↑').replace('ArrowDown', '↓');
 }
 
 // 样式表跟着模块走：宿主只要 import，不用另外引 CSS
