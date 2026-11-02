@@ -1,0 +1,182 @@
+{
+ "block": "D",
+ "tris": 170828,
+ "tris_by_material": {
+  "steel": 940,
+  "alu": 86924,
+  "polyc": 10,
+  "frost": 466,
+  "darkface": 8266,
+  "whitetile": 25980,
+  "concrete": 4418,
+  "plinth_top": 756,
+  "glass": 178,
+  "dark": 1416,
+  "curtain": 178,
+  "decal": 3868,
+  "shutter": 6,
+  "pvc": 792,
+  "facetile": 24738,
+  "shoplit": 2,
+  "asphalt": 10908,
+  "gravel": 100,
+  "pave": 360,
+  "paint": 342,
+  "blockwall": 36,
+  "plank": 144
+ },
+ "anchors": [
+  {
+   "type": "bicycle",
+   "building": "D01_condo_six_south",
+   "center_enu": [
+    -48.4,
+    -18.4,
+    0.68
+   ],
+   "outward_enu": [
+    0.0,
+    -1.0
+   ]
+  },
+  {
+   "type": "bicycle",
+   "building": "D01_condo_six_south",
+   "center_enu": [
+    -47.2,
+    -18.4,
+    0.68
+   ],
+   "outward_enu": [
+    0.0,
+    -1.0
+   ]
+  },
+  {
+   "type": "parking_pay_station",
+   "building": "lot",
+   "center_enu": [
+    -34.5,
+    -36.2,
+    0.923
+   ],
+   "outward_enu": [
+    0.33,
+    0.94
+   ]
+  },
+  {
+   "type": "planter",
+   "building": "D02_condo_six_core",
+   "center_enu": [
+    -55.6,
+    -7.95,
+    0.422
+   ],
+   "outward_enu": [
+    -1.0,
+    -0.0
+   ]
+  },
+  {
+   "type": "vending_or_bin",
+   "building": "D03_condo_seven_wing",
+   "center_enu": [
+    -31.4,
+    -22.6,
+    1.013
+   ],
+   "outward_enu": [
+    0.0,
+    -1.0
+   ]
+  },
+  {
+   "type": "vending_or_bin",
+   "building": "D04_condo_seven_link",
+   "center_enu": [
+    -45.0,
+    -21.6,
+    0.902
+   ],
+   "outward_enu": [
+    0.0,
+    -1.0
+   ]
+  },
+  {
+   "type": "storefront",
+   "building": "D04_condo_seven_link",
+   "center_enu": [
+    -43.2,
+    -21.6,
+    0.922
+   ],
+   "outward_enu": [
+    0.0,
+    -1.0
+   ],
+   "width": 3.4,
+   "height": 2.58,
+   "depth": 0.55
+  }
+ ],
+ "buildings": {
+  "D01_condo_six_south": {
+   "center": [
+    -50.6,
+    -15.2
+   ],
+   "size": [
+    10.0,
+    6.4
+   ],
+   "H": 18.6,
+   "storeys": 6,
+   "base_z": 0.68,
+   "roof": "flat"
+  },
+  "D02_condo_six_core": {
+   "center": [
+    -54.47,
+    -6.43
+   ],
+   "size": [
+    2.25,
+    10.95
+   ],
+   "H": 18.6,
+   "storeys": 6,
+   "base_z": 0.422,
+   "roof": "flat"
+  },
+  "D03_condo_seven_wing": {
+   "center": [
+    -36.8,
+    -15.9
+   ],
+   "size": [
+    8.4,
+    13.4
+   ],
+   "H": 21.4,
+   "storeys": 7,
+   "base_z": 1.013,
+   "roof": "flat"
+  },
+  "D04_condo_seven_link": {
+   "center": [
+    -43.2,
+    -18.4
+   ],
+   "size": [
+    4.0,
+    6.4
+   ],
+   "H": 6.4,
+   "storeys": 2,
+   "base_z": 0.902,
+   "roof": "flat"
+  }
+ }
+}

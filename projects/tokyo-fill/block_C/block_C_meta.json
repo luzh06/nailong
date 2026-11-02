@@ -1,0 +1,324 @@
+{
+ "block": "C",
+ "tris": 352674,
+ "tris_by_material": {
+  "concrete": 5128,
+  "alu": 101648,
+  "steel": 1444,
+  "polyc": 6,
+  "roofbase": 26,
+  "kawara": 133008,
+  "fasciaw": 1476,
+  "soffit": 9890,
+  "darkface": 3824,
+  "whitetile": 14610,
+  "plinth_top": 1908,
+  "glass": 190,
+  "dark": 1418,
+  "curtain": 190,
+  "decal": 3088,
+  "frost": 218,
+  "pvc": 4138,
+  "shoplit": 4,
+  "plank": 4640,
+  "paint": 2580,
+  "noren": 96,
+  "blackplank": 3234,
+  "plaster": 7252,
+  "galva": 4026,
+  "tin": 5082,
+  "signs": 6,
+  "shutter": 6,
+  "facetile": 9306,
+  "siding": 5446,
+  "slate": 288,
+  "mortar": 10710,
+  "siding2": 6112,
+  "cedar": 3656,
+  "asphalt": 1070,
+  "lot": 5184,
+  "gravel": 498,
+  "pave": 620,
+  "blockwall": 648
+ },
+ "anchors": [
+  {
+   "type": "ac_outdoor",
+   "building": "C01_five_storey_rc",
+   "center_enu": [
+    -34.1,
+    22.2,
+    0.709
+   ],
+   "outward_enu": [
+    -0.0,
+    1.0
+   ]
+  },
+  {
+   "type": "ac_outdoor",
+   "building": "C01_five_storey_rc",
+   "center_enu": [
+    -37.1,
+    22.2,
+    0.709
+   ],
+   "outward_enu": [
+    -0.0,
+    1.0
+   ]
+  },
+  {
+   "type": "gas_meter",
+   "building": "C01_five_storey_rc",
+   "center_enu": [
+    -41.9,
+    19.2,
+    1.709
+   ],
+   "outward_enu": [
+    -1.0,
+    -0.0
+   ]
+  },
+  {
+   "type": "storefront",
+   "building": "C01_five_storey_rc",
+   "center_enu": [
+    -32.1,
+    15.5,
+    0.629
+   ],
+   "outward_enu": [
+    1.0,
+    0.0
+   ],
+   "width": 4.0,
+   "height": 2.58,
+   "depth": 0.55
+  },
+  {
+   "type": "planter",
+   "building": "C02_craft_workshop",
+   "center_enu": [
+    -52.6,
+    15.0,
+    0.602
+   ],
+   "outward_enu": [
+    -1.0,
+    -0.0
+   ]
+  },
+  {
+   "type": "storefront",
+   "building": "C02_craft_workshop",
+   "center_enu": [
+    -52.6,
+    21.9,
+    0.522
+   ],
+   "outward_enu": [
+    -1.0,
+    -0.0
+   ],
+   "width": 4.2,
+   "height": 2.58,
+   "depth": 0.55
+  },
+  {
+   "type": "ac_outdoor",
+   "building": "C03_pencil_building",
+   "center_enu": [
+    -42.3,
+    14.5,
+    0.536
+   ],
+   "outward_enu": [
+    1.0,
+    0.0
+   ]
+  },
+  {
+   "type": "bicycle",
+   "building": "C04_lane_house",
+   "center_enu": [
+    -45.7,
+    28.95,
+    0.538
+   ],
+   "outward_enu": [
+    0.0,
+    -1.0
+   ]
+  },
+  {
+   "type": "planter",
+   "building": "C05_corner_kawara",
+   "center_enu": [
+    -39.7,
+    28.9,
+    0.405
+   ],
+   "outward_enu": [
+    0.0,
+    -1.0
+   ]
+  },
+  {
+   "type": "ac_outdoor",
+   "building": "C06_long_tin_house",
+   "center_enu": [
+    -50.4,
+    33.8,
+    0.554
+   ],
+   "outward_enu": [
+    0.0,
+    -1.0
+   ]
+  }
+ ],
+ "buildings": {
+  "C01_five_storey_rc": {
+   "center": [
+    -37.0,
+    17.6
+   ],
+   "size": [
+    9.8,
+    9.2
+   ],
+   "H": 16.8,
+   "storeys": 5,
+   "base_z": 0.609,
+   "roof": "flat"
+  },
+  "C02_craft_workshop": {
+   "center": [
+    -49.85,
+    18.9
+   ],
+   "size": [
+    5.5,
+    11.4
+   ],
+   "H": 8.4,
+   "storeys": 2,
+   "base_z": 0.502,
+   "roof": "gable"
+  },
+  "C02b_workshop_annex": {
+   "center": [
+    -45.3,
+    21.4
+   ],
+   "size": [
+    2.8,
+    6.0
+   ],
+   "H": 4.2,
+   "storeys": 1,
+   "base_z": 0.377,
+   "roof": "mono"
+  },
+  "C03_pencil_building": {
+   "center": [
+    -44.6,
+    15.45
+   ],
+   "size": [
+    4.6,
+    4.9
+   ],
+   "H": 13.5,
+   "storeys": 4,
+   "base_z": 0.436,
+   "roof": "flat"
+  },
+  "C04_lane_house": {
+   "center": [
+    -46.8,
+    31.23
+   ],
+   "size": [
+    10.8,
+    4.55
+   ],
+   "H": 6.1,
+   "storeys": 2,
+   "base_z": 0.438,
+   "roof": "gable"
+  },
+  "C05_corner_kawara": {
+   "center": [
+    -38.9,
+    32.35
+   ],
+   "size": [
+    4.6,
+    6.9
+   ],
+   "H": 7.0,
+   "storeys": 2,
+   "base_z": 0.305,
+   "roof": "hip"
+  },
+  "C06_long_tin_house": {
+   "center": [
+    -47.0,
+    36.9
+   ],
+   "size": [
+    10.8,
+    6.2
+   ],
+   "H": 7.0,
+   "storeys": 2,
+   "base_z": 0.454,
+   "roof": "gable"
+  },
+  "C06b_back_house": {
+   "center": [
+    -39.35,
+    38.1
+   ],
+   "size": [
+    3.5,
+    4.0
+   ],
+   "H": 6.5,
+   "storeys": 2,
+   "base_z": 0.319,
+   "roof": "gable"
+  },
+  "C07_wood_row": {
+   "center": [
+    -46.7,
+    42.45
+   ],
+   "size": [
+    12.6,
+    4.3
+   ],
+   "H": 7.5,
+   "storeys": 2,
+   "base_z": 0.436,
+   "roof": "gable"
+  },
+  "C08_three_storey_mortar": {
+   "center": [
+    -47.8,
+    46.95
+   ],
+   "size": [
+    13.2,
+    4.1
+   ],
+   "H": 9.3,
+   "storeys": 3,
+   "base_z": 0.423,
+   "roof": "mono"
+  }
+ }
+}
