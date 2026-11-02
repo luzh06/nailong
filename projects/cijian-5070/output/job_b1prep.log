@@ -1,0 +1,74 @@
+00:00.547  blend            | Read blend: "D:\Cijian\blend\qs_b1.blend"
+JOINED 37 9.8
+CROP apron 2334 3740
+CROP ac 1175 475
+CROP apt 1100 325
+CROP steel 2795 702
+CROP glass 384 286
+CROP apt2 850 200
+CROP pipe 417 303
+CROP glass_warm 94 31
+CROP awn_b 25 125
+CROP awn_c 41 34
+CROP awn_a 41 9
+CROP cover 5455 4174
+CROP cable 624 250
+CROP rusty 1700 1360
+CROP mortar 189 6
+CROP wood 3066 2689
+CROP roof 50 67
+CROP shutter 1532 1418
+CROP plaster 175 175
+CROP siding 132 93
+CROP soil 148 5
+CROP manhole 1008 336
+CROP pole 388 97
+CROP porcelain 1344 271
+CROP wire 9578 985
+ROADLO bk_road_a 31290 [ -2.6000006 -20.         -0.0667594] [2.2000008 1.396     0.0069964]
+ROADLO bk_road_b 10829 [ -2.600002   -34.          -0.06695677] [ 2.2000012e+00 -2.0000000e+01  6.7154658e-03]
+UV apron 2334 26.7
+UV ac 1175 26.7
+UV apt 1100 27.1
+UV steel 2795 27.2
+UV glass 384 27.2
+UV apt2 850 27.3
+UV pipe 417 27.3
+UV glass_warm 94 27.3
+UV awn_b 25 27.3
+UV awn_c 41 27.3
+UV awn_a 41 27.3
+UV cover 5455 27.6
+UV block_wall 25 27.6
+UV cable 624 27.6
+UV rusty 1700 27.6
+UV far 450 27.7
+UV ground 10 27.7
+UV mortar 189 27.7
+UV wood 3066 27.7
+UV roof 50 28.1
+UV shutter 1532 28.4
+UV plaster 175 28.4
+UV siding 132 28.7
+UV soil 148 28.7
+UV xfmr 870 28.7
+UV lens 5 28.8
+UV manhole 1008 28.8
+UV pavers 25 29.1
+UV brick 925 29.5
+UV pole 388 29.8
+UV porcelain 1344 29.8
+UV ad 10 29.9
+UV tag 10 29.9
+UV rail_green 522 29.9
+UV rail_top 2340 30.0
+UV stone 21600 30.1
+UV wire 9578 30.2
+PLANTLO dandelion_01 {'tris': 28867, 'mats': ['dandelion_01']}
+PLANTLO fern_02 {'tris': 110472, 'mats': ['fern_02']}
+PLANTLO grass_bermuda_01 {'tris': 813, 'mats': ['grass_bermuda_01']}
+PLANTLO nettle_plant {'tris': 296802, 'mats': ['nettle_plant']}
+PLANTLO shrub_01 {'tris': 561624, 'mats': ['shrub_01']}
+Info: Saved as "qs_bk.blend"
+PREPDONE 33.0 objs 416
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)

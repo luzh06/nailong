@@ -1,0 +1,512 @@
+00:00.610  blend            | Read blend: "D:\Cijian\blend\qs_bk.blend"
+00:01.297  cycles           | WARNING HIPEW initialization failed: Error opening HIP dynamic library
+00:01.391  cycles           | WARNING Driver version for device "Intel(R) Arc(TM) 140T GPU (16GB)" is too old. Expected "35716" or newer, but got "34938".
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_ac EMIT (512, 512) 8 4.1 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_ac ROUGHNESS (256, 256) 8 3.9 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_ac EMIT (256, 256) 8 3.7 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_ac NORMAL (256, 256) 8 3.7 s
+qs_bk_bake.py:44: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_ac DIFFUSE (1024, 1024) 512 22.0 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_ac DIFFUSE (512, 512) 32 4.0 s
+GROUP ac 42.7
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_ad EMIT (1024, 1024) 8 4.1 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_ad ROUGHNESS (256, 256) 8 3.8 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_ad EMIT (256, 256) 8 3.7 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_ad NORMAL (256, 256) 8 3.6 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_ad DIFFUSE (128, 128) 512 4.2 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_ad DIFFUSE (64, 64) 32 4.0 s
+GROUP ad 24.5
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_apron EMIT (4096, 4096) 8 8.1 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_apron ROUGHNESS (4096, 4096) 8 8.2 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_apron EMIT (4096, 4096) 8 8.2 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_apron NORMAL (4096, 4096) 8 8.4 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_apron DIFFUSE (2048, 2048) 512 11.9 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_apron DIFFUSE (1024, 1024) 32 4.2 s
+GROUP apron 52.2
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_apt EMIT (4096, 4096) 8 10.4 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_apt ROUGHNESS (2048, 2048) 8 5.5 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_apt EMIT (2048, 2048) 8 4.8 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_apt NORMAL (2048, 2048) 8 6.1 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_apt DIFFUSE (2048, 2048) 512 87.6 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_apt DIFFUSE (1024, 1024) 32 5.5 s
+GROUP apt 123.4
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_apt2 EMIT (4096, 4096) 8 11.0 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_apt2 ROUGHNESS (2048, 2048) 8 5.9 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_apt2 EMIT (2048, 2048) 8 5.3 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_apt2 NORMAL (2048, 2048) 8 6.2 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_apt2 DIFFUSE (2048, 2048) 512 95.6 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_apt2 DIFFUSE (1024, 1024) 32 4.9 s
+GROUP apt2 132.2
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_awn_a EMIT (512, 512) 8 3.9 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_awn_a ROUGHNESS (256, 256) 8 3.9 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_awn_a EMIT (256, 256) 8 3.8 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_awn_a NORMAL (256, 256) 8 3.5 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_awn_a DIFFUSE (256, 256) 512 4.2 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_awn_a DIFFUSE (128, 128) 32 3.8 s
+GROUP awn_a 24.3
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_awn_b EMIT (512, 512) 8 3.5 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_awn_b ROUGHNESS (256, 256) 8 3.9 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_awn_b EMIT (256, 256) 8 3.3 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_awn_b NORMAL (256, 256) 8 3.6 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_awn_b DIFFUSE (512, 512) 512 5.4 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_awn_b DIFFUSE (256, 256) 32 3.5 s
+GROUP awn_b 24.3
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_awn_c EMIT (512, 512) 8 4.0 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_awn_c ROUGHNESS (256, 256) 8 3.8 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_awn_c EMIT (256, 256) 8 3.5 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_awn_c NORMAL (256, 256) 8 3.8 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_awn_c DIFFUSE (256, 256) 512 4.3 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_awn_c DIFFUSE (128, 128) 32 3.9 s
+GROUP awn_c 24.5
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_block_wall EMIT (2048, 2048) 8 4.3 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_block_wall ROUGHNESS (2048, 2048) 8 4.9 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_block_wall EMIT (2048, 2048) 8 4.7 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_block_wall NORMAL (2048, 2048) 8 5.1 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_block_wall DIFFUSE (1024, 1024) 512 11.5 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_block_wall DIFFUSE (512, 512) 32 3.8 s
+GROUP block_wall 36.2
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_brick EMIT (4096, 4096) 8 9.3 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_brick ROUGHNESS (4096, 4096) 8 11.5 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_brick EMIT (4096, 4096) 8 8.4 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_brick NORMAL (4096, 4096) 8 12.8 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_brick DIFFUSE (2048, 2048) 512 92.5 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_brick DIFFUSE (1024, 1024) 32 4.9 s
+GROUP brick 145.3
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_cable EMIT (512, 512) 8 3.9 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_cable ROUGHNESS (256, 256) 8 3.8 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_cable EMIT (256, 256) 8 3.6 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_cable NORMAL (256, 256) 8 3.2 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_cable DIFFUSE (256, 256) 512 4.9 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_cable DIFFUSE (128, 128) 32 3.8 s
+GROUP cable 24.4
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_cover EMIT (2048, 2048) 8 4.7 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_cover ROUGHNESS (2048, 2048) 8 4.7 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_cover EMIT (2048, 2048) 8 4.6 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_cover NORMAL (2048, 2048) 8 4.9 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_cover DIFFUSE (1024, 1024) 512 9.9 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_cover DIFFUSE (512, 512) 32 4.0 s
+GROUP cover 34.6
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_far EMIT (4096, 4096) 8 7.7 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_far ROUGHNESS (2048, 2048) 8 4.1 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_far EMIT (2048, 2048) 8 4.2 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_far NORMAL (2048, 2048) 8 4.6 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_far DIFFUSE (1024, 1024) 512 12.4 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_far DIFFUSE (512, 512) 32 4.1 s
+GROUP far 39.3
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_glass EMIT (512, 512) 8 3.7 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_glass ROUGHNESS (256, 256) 8 3.8 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_glass EMIT (256, 256) 8 3.8 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_glass NORMAL (256, 256) 8 3.7 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_glass DIFFUSE (512, 512) 512 8.2 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_glass DIFFUSE (256, 256) 32 4.0 s
+GROUP glass 28.4
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_glass_warm EMIT (1024, 1024) 8 4.1 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_glass_warm ROUGHNESS (256, 256) 8 3.4 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_glass_warm EMIT (256, 256) 8 3.1 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_glass_warm NORMAL (256, 256) 8 3.8 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_glass_warm EMIT (1024, 1024) 8 4.4 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_glass_warm DIFFUSE (2048, 2048) 512 87.3 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_glass_warm DIFFUSE (1024, 1024) 32 4.8 s
+GROUP glass_warm 112.8
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_ground EMIT (2048, 2048) 8 4.8 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_ground ROUGHNESS (1024, 1024) 8 4.3 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_ground EMIT (1024, 1024) 8 3.9 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_ground NORMAL (1024, 1024) 8 4.3 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_ground DIFFUSE (1024, 1024) 512 22.5 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_ground DIFFUSE (512, 512) 32 4.1 s
+GROUP ground 45.7
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_lens EMIT (256, 256) 8 3.8 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_lens ROUGHNESS (256, 256) 8 4.0 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_lens EMIT (256, 256) 8 3.6 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_lens NORMAL (256, 256) 8 3.9 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_lens DIFFUSE (128, 128) 512 4.4 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_lens DIFFUSE (64, 64) 32 3.9 s
+GROUP lens 24.6
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_mortar EMIT (4096, 4096) 8 7.8 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_mortar ROUGHNESS (2048, 2048) 8 4.3 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_mortar EMIT (2048, 2048) 8 4.5 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_mortar NORMAL (2048, 2048) 8 4.8 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_mortar DIFFUSE (2048, 2048) 512 12.9 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_mortar DIFFUSE (1024, 1024) 32 4.0 s
+GROUP mortar 40.3
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_pavers EMIT (1024, 1024) 8 4.0 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_pavers ROUGHNESS (512, 512) 8 3.8 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_pavers EMIT (512, 512) 8 3.6 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_pavers NORMAL (512, 512) 8 3.8 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_pavers DIFFUSE (512, 512) 512 5.5 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_pavers DIFFUSE (256, 256) 32 3.9 s
+GROUP pavers 25.8
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_pipe EMIT (512, 512) 8 3.9 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_pipe ROUGHNESS (256, 256) 8 3.6 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_pipe EMIT (256, 256) 8 3.6 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_pipe NORMAL (256, 256) 8 4.0 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_pipe DIFFUSE (1024, 1024) 512 11.8 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_pipe DIFFUSE (512, 512) 32 3.8 s
+GROUP pipe 31.9
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_plaster EMIT (4096, 4096) 8 9.6 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_plaster ROUGHNESS (2048, 2048) 8 5.4 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_plaster EMIT (2048, 2048) 8 4.6 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_plaster NORMAL (2048, 2048) 8 5.6 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_plaster DIFFUSE (2048, 2048) 512 81.3 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_plaster DIFFUSE (1024, 1024) 32 5.4 s
+GROUP plaster 115.1
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_pole EMIT (4096, 4096) 8 8.7 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_pole ROUGHNESS (2048, 2048) 8 5.0 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_pole EMIT (2048, 2048) 8 4.4 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_pole NORMAL (2048, 2048) 8 4.8 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_pole DIFFUSE (1024, 1024) 512 11.9 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_pole DIFFUSE (512, 512) 32 4.1 s
+GROUP pole 41.4
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_porcelain EMIT (512, 512) 8 3.9 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_porcelain ROUGHNESS (256, 256) 8 3.7 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_porcelain EMIT (256, 256) 8 3.5 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_porcelain NORMAL (256, 256) 8 3.3 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_porcelain DIFFUSE (256, 256) 512 4.4 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_porcelain DIFFUSE (128, 128) 32 4.1 s
+GROUP porcelain 24.0
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_rail_green EMIT (1024, 1024) 8 3.5 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_rail_green ROUGHNESS (512, 512) 8 3.6 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_rail_green EMIT (512, 512) 8 3.6 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_rail_green NORMAL (512, 512) 8 3.6 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_rail_green DIFFUSE (512, 512) 512 7.2 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_rail_green DIFFUSE (256, 256) 32 3.8 s
+GROUP rail_green 26.6
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_rail_top EMIT (1024, 1024) 8 3.6 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_rail_top ROUGHNESS (512, 512) 8 3.4 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_rail_top EMIT (512, 512) 8 3.5 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_rail_top NORMAL (512, 512) 8 3.6 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_rail_top DIFFUSE (512, 512) 512 4.2 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_rail_top DIFFUSE (256, 256) 32 3.6 s
+GROUP rail_top 22.9
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_road_a EMIT (2048, 8192) 8 25.1 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_road_a ROUGHNESS (2048, 8192) 8 24.2 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_road_a EMIT (2048, 8192) 8 17.6 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_road_a NORMAL (2048, 8192) 8 27.2 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_road_a DIFFUSE (1024, 4096) 512 165.3 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_road_a DIFFUSE (512, 2048) 32 10.3 s
+GROUP road_a 277.4
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_road_b EMIT (2048, 4096) 8 17.8 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_road_b ROUGHNESS (2048, 4096) 8 15.8 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_road_b EMIT (2048, 4096) 8 12.4 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_road_b NORMAL (2048, 4096) 8 17.2 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_road_b DIFFUSE (1024, 2048) 512 86.1 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_road_b DIFFUSE (512, 1024) 32 9.5 s
+GROUP road_b 163.4
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_roof EMIT (4096, 4096) 8 8.8 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_roof ROUGHNESS (2048, 2048) 8 4.9 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_roof EMIT (2048, 2048) 8 4.1 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_roof NORMAL (2048, 2048) 8 5.4 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_roof DIFFUSE (2048, 2048) 512 50.5 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_roof DIFFUSE (1024, 1024) 32 4.5 s
+GROUP roof 81.9
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_rusty EMIT (1024, 1024) 8 4.0 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_rusty ROUGHNESS (512, 512) 8 3.6 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_rusty EMIT (512, 512) 8 3.9 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_rusty NORMAL (512, 512) 8 3.8 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_rusty DIFFUSE (512, 512) 512 7.2 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_rusty DIFFUSE (256, 256) 32 3.9 s
+GROUP rusty 27.6
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_shutter EMIT (2048, 2048) 8 4.6 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_shutter ROUGHNESS (1024, 1024) 8 3.9 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_shutter EMIT (1024, 1024) 8 3.8 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_shutter NORMAL (1024, 1024) 8 4.1 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_shutter DIFFUSE (1024, 1024) 512 22.2 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_shutter DIFFUSE (512, 512) 32 4.0 s
+GROUP shutter 44.3
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_siding EMIT (4096, 4096) 8 8.9 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_siding ROUGHNESS (2048, 2048) 8 5.1 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_siding EMIT (2048, 2048) 8 4.4 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_siding NORMAL (2048, 2048) 8 5.5 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_siding DIFFUSE (2048, 2048) 512 72.6 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_siding DIFFUSE (1024, 1024) 32 4.8 s
+GROUP siding 104.6
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_soil EMIT (4096, 4096) 8 9.3 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_soil ROUGHNESS (2048, 2048) 8 4.9 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_soil EMIT (2048, 2048) 8 4.5 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_soil NORMAL (2048, 2048) 8 5.4 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_soil DIFFUSE (2048, 2048) 512 59.1 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_soil DIFFUSE (1024, 1024) 32 5.1 s
+GROUP soil 91.3
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_steel EMIT (4096, 4096) 8 8.7 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_steel ROUGHNESS (2048, 2048) 8 5.0 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_steel EMIT (2048, 2048) 8 4.3 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_steel NORMAL (2048, 2048) 8 4.7 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_steel DIFFUSE (2048, 2048) 512 30.8 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_steel DIFFUSE (1024, 1024) 32 4.2 s
+GROUP steel 60.6
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_stone EMIT (4096, 4096) 8 9.6 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_stone ROUGHNESS (4096, 4096) 8 11.5 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_stone EMIT (4096, 4096) 8 7.8 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_stone NORMAL (4096, 4096) 8 13.6 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_stone DIFFUSE (4096, 4096) 512 298.1 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_stone DIFFUSE (2048, 2048) 32 9.2 s
+GROUP stone 355.2
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_tag EMIT (512, 512) 8 3.9 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_tag ROUGHNESS (256, 256) 8 3.8 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_tag EMIT (256, 256) 8 3.8 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_tag NORMAL (256, 256) 8 3.4 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_tag DIFFUSE (128, 128) 512 3.9 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_tag DIFFUSE (64, 64) 32 3.5 s
+GROUP tag 23.2
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_wire EMIT (512, 512) 8 3.4 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_wire ROUGHNESS (256, 256) 8 3.4 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_wire EMIT (256, 256) 8 3.4 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_wire NORMAL (256, 256) 8 3.5 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_wire DIFFUSE (512, 512) 512 4.0 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_wire DIFFUSE (256, 256) 32 3.7 s
+GROUP wire 22.5
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_wood EMIT (512, 512) 8 3.5 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_wood ROUGHNESS (256, 256) 8 3.4 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_wood EMIT (256, 256) 8 3.7 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_wood NORMAL (256, 256) 8 3.5 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_wood DIFFUSE (1024, 1024) 512 10.5 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_wood DIFFUSE (512, 512) 32 3.9 s
+GROUP wood 29.6
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_xfmr EMIT (1024, 1024) 8 3.9 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_xfmr ROUGHNESS (512, 512) 8 3.8 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_xfmr EMIT (512, 512) 8 3.8 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_xfmr NORMAL (512, 512) 8 3.8 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_xfmr DIFFUSE (512, 512) 512 7.9 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_xfmr DIFFUSE (256, 256) 32 3.8 s
+GROUP xfmr 28.1
+BAKED bkp_dandelion_01 DIFFUSE vertex 256 5.3 s
+PLANT bkp_dandelion_01 sunset 0.12082167 3.5877461
+BAKED bkp_fern_02 DIFFUSE vertex 256 7.4 s
+PLANT bkp_fern_02 sunset 0.08927451 2.5287259
+BAKED bkp_grass_bermuda_01 DIFFUSE vertex 256 4.5 s
+PLANT bkp_grass_bermuda_01 sunset 0.089786366 2.261087
+BAKED bkp_nettle_plant DIFFUSE vertex 256 11.9 s
+PLANT bkp_nettle_plant sunset 0.11945734 2.6188161
+BAKED bkp_shrub_01 DIFFUSE vertex 256 22.5 s
+PLANT bkp_shrub_01 sunset 0.12751485 2.6698518
+ALLDONE
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)

@@ -1,0 +1,20 @@
+<!doctype html><html lang=zh><meta charset=utf-8><title>此间 · 夕焼けだんだん</title>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<style>
+html,body{margin:0;height:100%;background:#0b0a09;overflow:hidden;color:#efe7da;font:15px/1.5 -apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+canvas{display:block;position:fixed;inset:0;width:100%;height:100%}
+#load{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px;background:#0b0a09;transition:opacity .6s}
+#load b{font-weight:400;letter-spacing:.5em;font-size:28px;padding-left:.5em}
+#bar{width:220px;height:1px;background:#3a342c}#bar i{display:block;height:1px;width:0;background:#e8c9a0}
+#hint{position:fixed;left:0;right:0;bottom:22px;text-align:center;font-size:13px;opacity:.72;pointer-events:none;text-shadow:0 1px 3px #0009}
+</style>
+<div id=load><b>此间</b><div id=bar><i></i></div><span id=msg>载入中</span></div>
+<div id=hint hidden>点击画面开始 · WASD 走动 · 鼠标看 · Shift 快走</div>
+<script>
+const _nm=new URLSearchParams(location.search).get('name')||'x';
+window.addEventListener('error',e=>fetch('/result?'+_nm+'_log',{method:'POST',body:'ERR '+e.message+' '+(e.filename||e.target&&e.target.src)+':'+e.lineno}),true);
+window.addEventListener('unhandledrejection',e=>fetch('/result?'+_nm+'_log',{method:'POST',body:'REJ '+(e.reason&&e.reason.stack||e.reason)}));
+</script>
+<script type=importmap>{"imports":{"three":"./vendor/three.module.js","three/addons/":"./vendor/"}}</script>
+<script type=module src=./game.js></script>
+</html>

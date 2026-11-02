@@ -1,0 +1,49 @@
+00:00.547  blend            | Read blend: "D:\Cijian\blend\qs_h1.blend"
+JOINED 37 9.9
+ROADLO bk_road_a 31290 [ -2.6000006 -20.         -0.0667594] [2.2000008 1.396     0.0069964]
+ROADLO bk_road_b 32476 [ -2.600001   -62.          -0.06696951] [ 2.2000020e+00 -2.0000000e+01  6.8938155e-03]
+UV apron 6074 35.1
+UV ac 1650 35.1
+UV apt 1425 35.5
+UV steel 3497 35.6
+UV glass 670 35.6
+UV apt2 1050 35.7
+UV pipe 720 35.7
+UV glass_warm 125 35.7
+UV awn_b 150 35.7
+UV awn_c 75 35.7
+UV awn_a 50 35.7
+UV cover 9629 36.0
+UV block_wall 25 36.0
+UV cable 874 36.0
+UV rusty 3060 36.1
+UV far 450 36.1
+UV ground 10 36.1
+UV mortar 195 36.1
+UV wood 5755 36.2
+UV roof 117 36.5
+UV shutter 2950 36.8
+UV plaster 350 36.8
+UV siding 225 37.2
+UV soil 153 37.2
+UV xfmr 870 37.2
+UV lens 5 37.2
+UV manhole 1344 37.3
+UV pavers 25 37.6
+UV brick 925 38.0
+UV pole 485 38.4
+UV porcelain 1615 38.4
+UV ad 10 38.5
+UV tag 10 38.5
+UV rail_green 522 38.6
+UV rail_top 2340 38.6
+UV stone 21600 38.7
+UV wire 10563 38.8
+PLANTLO dandelion_01 {'tris': 28867, 'mats': ['dandelion_01']}
+PLANTLO fern_02 {'tris': 110472, 'mats': ['fern_02']}
+PLANTLO grass_bermuda_01 {'tris': 813, 'mats': ['grass_bermuda_01']}
+PLANTLO nettle_plant {'tris': 296802, 'mats': ['nettle_plant']}
+PLANTLO shrub_01 {'tris': 561624, 'mats': ['shrub_01']}
+Info: Saved as "qs_bk.blend"
+PREPDONE 41.8 objs 391
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)

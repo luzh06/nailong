@@ -1,0 +1,29 @@
+{
+ "tag": "t0",
+ "tris": {
+  "apron": 98,
+  "block": 140,
+  "closure": 86,
+  "cover": 2058,
+  "grate": 924,
+  "ground": 10,
+  "gutter": 20,
+  "landing": 4000,
+  "manhole": 624,
+  "ph": 864,
+  "pole_A": 1985,
+  "pole_B": 1505,
+  "pole_Z": 1505,
+  "retain": 192,
+  "road": 8256,
+  "stair": 100,
+  "stairs": 3060,
+  "wires": 4166
+ },
+ "renders": [
+  {
+   "file": "D:\\Cijian\\output\\qs_t0_morning_main.jpg",
+   "sec": 152.4
+  }
+ ]
+}

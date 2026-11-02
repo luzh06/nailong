@@ -1,0 +1,18 @@
+00:00.563  blend            | Read blend: "D:\Cijian\blend\qs_bk.blend"
+00:01.234  cycles           | WARNING HIPEW initialization failed: Error opening HIP dynamic library
+00:01.313  cycles           | WARNING Driver version for device "Intel(R) Arc(TM) 140T GPU (16GB)" is too old. Expected "35716" or newer, but got "34938".
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_ac EMIT 256 8 3.4 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_ac ROUGHNESS 128 8 3.9 s
+Traceback (most recent call last):
+  File "D:\Cijian\scripts\qs_bk_all.py", line 6, in <module>
+    exec(compile(open(r'D:\Cijian\scripts\qs_bk_bake.py', encoding='utf-8').read(), 'qs_bk_bake.py', 'exec'))
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "qs_bk_bake.py", line 207, in <module>
+NameError: name 'mans' is not defined. Did you mean: 'mats'?
+
+Error: script failed, file: 'D:\Cijian\scripts\qs_bk_all.py', exiting.
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit

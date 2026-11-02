@@ -1,0 +1,96 @@
+00:00.562  blend            | Read blend: "D:\Cijian\blend\qs_bk.blend"
+EXPORT objs 43 tris 1160428
+INFO Draco is available, use library at D:\Cijian\tools\blender-5.2.3-windows-x64\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_draco_bridge.dll
+INFO MeshOptimizer is available, use library at D:\Cijian\tools\blender-5.2.3-windows-x64\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_meshopt_bridge.dll
+11:10:02 | INFO: Starting glTF 2.0 export
+11:10:02 | INFO: Extracting primitive: bk_ac
+11:10:02 | INFO: Primitives created: 1
+11:10:02 | INFO: Extracting primitive: bk_ad
+11:10:02 | INFO: Primitives created: 1
+11:10:02 | INFO: Extracting primitive: bk_apron
+11:10:02 | INFO: Primitives created: 1
+11:10:02 | INFO: Extracting primitive: bk_apt
+11:10:02 | INFO: Primitives created: 1
+11:10:02 | INFO: Extracting primitive: bk_apt2
+11:10:02 | INFO: Primitives created: 1
+11:10:02 | INFO: Extracting primitive: bk_awn_a
+11:10:02 | INFO: Primitives created: 1
+11:10:02 | INFO: Extracting primitive: bk_awn_b
+11:10:02 | INFO: Primitives created: 1
+11:10:02 | INFO: Extracting primitive: bk_awn_c
+11:10:02 | INFO: Primitives created: 1
+11:10:02 | INFO: Extracting primitive: bk_block_wall
+11:10:02 | INFO: Primitives created: 1
+11:10:02 | INFO: Extracting primitive: bk_brick
+11:10:02 | INFO: Primitives created: 1
+11:10:02 | INFO: Extracting primitive: bk_cable
+11:10:02 | INFO: Primitives created: 1
+11:10:02 | INFO: Extracting primitive: bk_cover
+11:10:02 | INFO: Primitives created: 1
+11:10:02 | INFO: Extracting primitive: bk_far
+11:10:02 | INFO: Primitives created: 1
+11:10:02 | INFO: Extracting primitive: bk_glass
+11:10:02 | INFO: Primitives created: 1
+11:10:02 | INFO: Extracting primitive: bk_glass_warm
+11:10:02 | INFO: Primitives created: 1
+11:10:02 | INFO: Extracting primitive: bk_ground
+11:10:02 | INFO: Primitives created: 1
+11:10:02 | INFO: Extracting primitive: bk_lens
+11:10:02 | INFO: Primitives created: 1
+11:10:02 | INFO: Extracting primitive: bk_mortar
+11:10:02 | INFO: Primitives created: 1
+11:10:02 | INFO: Extracting primitive: bk_pavers
+11:10:02 | INFO: Primitives created: 1
+11:10:02 | INFO: Extracting primitive: bk_pipe
+11:10:02 | INFO: Primitives created: 1
+11:10:02 | INFO: Extracting primitive: bk_plaster
+11:10:02 | INFO: Primitives created: 1
+11:10:02 | INFO: Extracting primitive: bk_pole
+11:10:02 | INFO: Primitives created: 1
+11:10:02 | INFO: Extracting primitive: bk_porcelain
+11:10:02 | INFO: Primitives created: 1
+11:10:02 | INFO: Extracting primitive: bk_rail_green
+11:10:02 | INFO: Primitives created: 1
+11:10:02 | INFO: Extracting primitive: bk_rail_top
+11:10:02 | INFO: Primitives created: 1
+11:10:02 | INFO: Extracting primitive: bk_road_a
+11:10:02 | INFO: Primitives created: 1
+11:10:02 | INFO: Extracting primitive: bk_road_b
+11:10:02 | INFO: Primitives created: 1
+11:10:02 | INFO: Extracting primitive: bk_roof
+11:10:02 | INFO: Primitives created: 1
+11:10:02 | INFO: Extracting primitive: bk_rusty
+11:10:02 | INFO: Primitives created: 1
+11:10:02 | INFO: Extracting primitive: bk_shutter
+11:10:02 | INFO: Primitives created: 1
+11:10:02 | INFO: Extracting primitive: bk_siding
+11:10:02 | INFO: Primitives created: 1
+11:10:02 | INFO: Extracting primitive: bk_soil
+11:10:02 | INFO: Primitives created: 1
+11:10:02 | INFO: Extracting primitive: bk_steel
+11:10:02 | INFO: Primitives created: 1
+11:10:02 | INFO: Extracting primitive: bk_stone
+11:10:02 | INFO: Primitives created: 1
+11:10:02 | INFO: Extracting primitive: bk_tag
+11:10:02 | INFO: Primitives created: 1
+11:10:02 | INFO: Extracting primitive: bk_wire
+11:10:02 | INFO: Primitives created: 1
+11:10:02 | INFO: Extracting primitive: bk_wood
+11:10:02 | INFO: Primitives created: 1
+11:10:02 | INFO: Extracting primitive: bk_xfmr
+11:10:02 | INFO: Primitives created: 1
+11:10:02 | INFO: Extracting primitive: bkp_dandelion_01
+11:10:02 | INFO: Primitives created: 1
+11:10:03 | INFO: Extracting primitive: bkp_fern_02
+11:10:03 | INFO: Primitives created: 1
+11:10:03 | INFO: Extracting primitive: bkp_grass_bermuda_01
+11:10:03 | INFO: Primitives created: 1
+11:10:03 | INFO: Extracting primitive: bkp_nettle_plant
+11:10:03 | INFO: Primitives created: 1
+11:10:03 | INFO: Extracting primitive: bkp_shrub_01
+11:10:04 | INFO: Primitives created: 1
+11:10:04 | INFO: Finished glTF 2.0 export in 2.2309088706970215 s
+
+GLB 63.4 MB
+EXPORTDONE
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)

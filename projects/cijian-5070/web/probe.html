@@ -1,0 +1,10 @@
+<!doctype html><meta charset=utf-8><body><script>
+(async()=>{
+ const c=document.createElement('canvas');const g=c.getContext('webgl2',{powerPreference:'high-performance'});
+ const r={webgl2:!!g};
+ if(g){const e=g.getExtension('WEBGL_debug_renderer_info');r.vendor=e&&g.getParameter(e.UNMASKED_VENDOR_WEBGL);r.renderer=e&&g.getParameter(e.UNMASKED_RENDERER_WEBGL);r.maxTex=g.getParameter(g.MAX_TEXTURE_SIZE);r.ext=['WEBGL_compressed_texture_s3tc','EXT_texture_compression_bptc','EXT_disjoint_timer_query_webgl2'].map(x=>[x,!!g.getExtension(x)])}
+ if(navigator.gpu){try{const a=await navigator.gpu.requestAdapter({powerPreference:'high-performance'});r.webgpu=a?(a.info?{vendor:a.info.vendor,arch:a.info.architecture,desc:a.info.description}:'yes'):null}catch(e){r.webgpu='err '+e}}
+ await fetch('/result',{method:'POST',body:JSON.stringify(r)}).catch(()=>{});
+ document.body.innerText=JSON.stringify(r);
+})()
+</script>

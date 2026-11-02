@@ -1,0 +1,18 @@
+D:\Cijian\scripts\qs_build.py:70: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  s.mat.use_nodes = True
+00:12.610  cycles           | WARNING HIPEW initialization failed: Error opening HIP dynamic library
+00:12.703  cycles           | WARNING Driver version for device "Intel(R) Arc(TM) 140T GPU (16GB)" is too old. Expected "35716" or newer, but got "34938".
+D:\Cijian\scripts\qs_build.py:973: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  w.use_nodes = True
+02:45.578  render           | Saved: 'D:\Cijian\output\qs_t0_morning_main.jpg'
+BUILD 0.4 s objs 223
+TRIS {"apron": 98, "block": 140, "closure": 86, "cover": 2058, "grate": 924, "ground": 10, "gutter": 20, "landing": 4000, "manhole": 624, "ph": 864, "pole_A": 1985, "pole_B": 1505, "pole_Z": 1505, "retain": 192, "road": 8256, "stair": 100, "stairs": 3060, "wires": 4166}
+DEVICES [('NVIDIA GeForce RTX 5070 Laptop GPU', 'CUDA'), ('Intel Core Ultra 9 285H', 'CPU'), ('NVIDIA GeForce RTX 5070 Laptop GPU', 'OPTIX')]
+Info: Saved as "qs_t0.blend"
+SAVED D:\Cijian\blend\qs_t0.blend
+SUN morning hdri_az -36.1 elev 20.3 peak 41216.0 rot -104.1
+RENDERED qs_t0_morning_main.jpg 152.4 s
+ALLDONE
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit

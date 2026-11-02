@@ -1,0 +1,56 @@
+{
+ "tag": "t9",
+ "tris": {
+  "apron": 98,
+  "apt": 7902,
+  "aw": 504,
+  "block": 140,
+  "closures": 400,
+  "cover": 19110,
+  "dandelion": 127728,
+  "drain": 350,
+  "far": 900,
+  "fern": 111872,
+  "grass": 1618,
+  "grate": 5236,
+  "ground": 20,
+  "gutter": 20,
+  "h": 19504,
+  "hf": 606,
+  "lamp": 360,
+  "landing": 10132,
+  "manhole": 624,
+  "moss": 204,
+  "nettle": 909472,
+  "pavers": 42,
+  "pl": 1794,
+  "pole_A": 4127,
+  "pole_ad": 20,
+  "pole_B": 1505,
+  "pole_C": 1505,
+  "pole_tag": 20,
+  "pole_Y0": 1505,
+  "pole_Z": 1505,
+  "rail": 5868,
+  "road": 1338400,
+  "shrub": 3900300,
+  "side": 56,
+  "stair": 360,
+  "stairs": 43200,
+  "wires": 21126
+ },
+ "renders": [
+  {
+   "file": "D:\\Cijian\\output\\qs_t9_sunset_west.jpg",
+   "sec": 12.7
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_t9_sunset_street.jpg",
+   "sec": 8.7
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_t9_sunset_main.jpg",
+   "sec": 8.5
+  }
+ ]
+}

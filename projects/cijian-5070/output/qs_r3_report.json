@@ -1,0 +1,67 @@
+{
+ "tag": "r3",
+ "tris": {
+  "apron": 98,
+  "block": 140,
+  "closure": 86,
+  "cover": 2058,
+  "grate": 924,
+  "ground": 20,
+  "gutter": 20,
+  "landing": 3916,
+  "manhole": 624,
+  "ph": 1080,
+  "pier": 196,
+  "pole_A": 1985,
+  "pole_B": 1505,
+  "pole_Z": 1505,
+  "retain": 192,
+  "road": 8256,
+  "stair": 100,
+  "stairs": 2640,
+  "weeds": 1290,
+  "wires": 4166
+ },
+ "renders": [
+  {
+   "file": "D:\\Cijian\\output\\qs_r3_morning_main.jpg",
+   "sec": 5.1
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r3_morning_steps.jpg",
+   "sec": 3.1
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r3_morning_road.jpg",
+   "sec": 3.3
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r3_morning_pole.jpg",
+   "sec": 4.6
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r3_morning_sky.jpg",
+   "sec": 1.2
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r3_sunset_main.jpg",
+   "sec": 3.7
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r3_sunset_steps.jpg",
+   "sec": 3.0
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r3_sunset_road.jpg",
+   "sec": 3.1
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r3_sunset_pole.jpg",
+   "sec": 3.3
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r3_sunset_sky.jpg",
+   "sec": 1.1
+  }
+ ]
+}

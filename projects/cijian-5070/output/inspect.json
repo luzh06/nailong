@@ -1,0 +1,1406 @@
+{
+"mats": {
+"ac": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 66
+},
+"ad": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 1
+},
+"apron": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 244
+},
+"apt": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 57
+},
+"apt2": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 42
+},
+"awn_a": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 2
+},
+"awn_b": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 6
+},
+"awn_c": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 3
+},
+"block_wall": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 1
+},
+"brick": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 37
+},
+"cable": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 25
+},
+"cover": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 197
+},
+"dandelion_01": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 5
+},
+"far": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 90
+},
+"fern_02": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 4
+},
+"fog": {
+"bsdf": 0,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": null,
+"disp": false,
+"vol": true
+},
+"dm": "BUMP",
+"nmats": 1
+},
+"glass": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 134
+},
+"glass_warm": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 25
+},
+"grass_bermuda_01": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 21
+},
+"lens": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 1
+},
+"manhole": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 4
+},
+"mortar": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 39
+},
+"moss_01": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 12
+},
+"nettle_plant": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 6
+},
+"pavers": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 1
+},
+"pipe": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 78
+},
+"plaster": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 14
+},
+"pole": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 5
+},
+"porcelain": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 6
+},
+"rail_green": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 3
+},
+"rail_top": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 3
+},
+"road": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": true,
+"vol": false
+},
+"dm": "BOTH",
+"nmats": 1
+},
+"roof": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 24
+},
+"rusty": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 324
+},
+"shrub_01": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 1
+},
+"shutter": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 118
+},
+"siding": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 9
+},
+"soil": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 27
+},
+"steel": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 179
+},
+"stone": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 1
+},
+"tag": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 1
+},
+"wire": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 1
+},
+"wood": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 499
+},
+"xfmr": {
+"bsdf": 1,
+"mix": 0,
+"emis": 0,
+"glass": 0,
+"transp": 0,
+"groups": 0,
+"out": {
+"surf": "ShaderNodeBsdfPrincipled",
+"disp": false,
+"vol": false
+},
+"dm": "BUMP",
+"nmats": 3
+}
+},
+"rows": {
+"apron": {
+"n": 244,
+"area": 1091496.5824172045,
+"multi": 0,
+"tris": 10240,
+"mn": [
+-520.0,
+-520.0,
+-0.5
+],
+"mx": [
+520.0,
+520.0,
+4.413492679595947
+]
+},
+"ac": {
+"n": 66,
+"area": 82.87287614867091,
+"multi": 0,
+"tris": 2772,
+"mn": [
+-4.099999904632568,
+-60.077911376953125,
+0.05000000074505806
+],
+"mx": [
+5.670000076293945,
+55.91373825073242,
+15.75
+]
+},
+"apt": {
+"n": 57,
+"area": 3638.8307761608885,
+"multi": 0,
+"tris": 2394,
+"mn": [
+3.299999952316284,
+-50.099735260009766,
+0.0
+],
+"mx": [
+14.779999732971191,
+29.850000381469727,
+19.049999237060547
+]
+},
+"steel": {
+"n": 179,
+"area": 95.22017447629332,
+"multi": 0,
+"tris": 6994,
+"mn": [
+-4.199999809265137,
+-59.99790954589844,
+0.0
+],
+"mx": [
+5.75,
+55.833736419677734,
+17.5
+]
+},
+"glass": {
+"n": 134,
+"area": 914.1179545149207,
+"multi": 0,
+"tris": 1340,
+"mn": [
+-4.093999862670898,
+-61.33955001831055,
+0.07999999821186066
+],
+"mx": [
+5.760000228881836,
+59.186668395996094,
+17.5
+]
+},
+"apt2": {
+"n": 42,
+"area": 363.8654514656737,
+"multi": 0,
+"tris": 1764,
+"mn": [
+3.319999933242798,
+-49.94973373413086,
+0.07999999821186066
+],
+"mx": [
+4.679999828338623,
+29.700000762939453,
+16.229999542236328
+]
+},
+"pipe": {
+"n": 78,
+"area": 174.1393856262439,
+"multi": 0,
+"tris": 1607,
+"mn": [
+-11.279999732971191,
+-62.650001525878906,
+-0.04008578509092331
+],
+"mx": [
+11.079999923706055,
+60.45000076293945,
+18.0
+]
+},
+"glass_warm": {
+"n": 25,
+"area": 161.32340729236603,
+"multi": 0,
+"tris": 250,
+"mn": [
+-4.093999862670898,
+-61.30203628540039,
+0.949999988079071
+],
+"mx": [
+5.760000228881836,
+59.186668395996094,
+15.312000274658203
+]
+},
+"awn_b": {
+"n": 6,
+"area": 42.4635507032508,
+"multi": 0,
+"tris": 252,
+"mn": [
+-3.25,
+-61.70000076293945,
+2.4200000762939453
+],
+"mx": [
+3.299999952316284,
+-16.799999237060547,
+2.5
+]
+},
+"awn_c": {
+"n": 3,
+"area": 22.172002128267195,
+"multi": 0,
+"tris": 126,
+"mn": [
+-3.25,
+-40.80916213989258,
+2.4200000762939453
+],
+"mx": [
+3.299999952316284,
+-21.93766975402832,
+2.5
+]
+},
+"awn_a": {
+"n": 2,
+"area": 14.940304412215482,
+"multi": 0,
+"tris": 84,
+"mn": [
+2.3499999046325684,
+-34.951045989990234,
+2.4200000762939453
+],
+"mx": [
+3.299999952316284,
+-21.023122787475586,
+2.5
+]
+},
+"cover": {
+"n": 197,
+"area": 83.8531944913151,
+"multi": 0,
+"tris": 19250,
+"mn": [
+-3.1700000762939453,
+-62.000736236572266,
+-0.14795225858688354
+],
+"mx": [
+2.6013712882995605,
+1.390523076057434,
+1.659999966621399
+]
+},
+"block_wall": {
+"n": 1,
+"area": 58.49692633275663,
+"multi": 0,
+"tris": 42,
+"mn": [
+-3.140000104904175,
+-16.0,
+-0.05000000074505806
+],
+"mx": [
+-3.0199999809265137,
+1.0,
+1.600000023841858
+]
+},
+"cable": {
+"n": 25,
+"area": 3.8360515452804975,
+"multi": 0,
+"tris": 1228,
+"mn": [
+-3.7669999599456787,
+-60.007911682128906,
+0.17000000178813934
+],
+"mx": [
+3.570000171661377,
+55.603736877441406,
+7.470000267028809
+]
+},
+"dandelion_01": {
+"n": 12,
+"area": 0.11297454468835863,
+"multi": 0,
+"tris": 115496,
+"mn": [
+-2.7403204441070557,
+-4.28460693359375,
+-0.06607094407081604
+],
+"mx": [
+3.2322330474853516,
+1.6621509790420532,
+0.1196790337562561
+]
+},
+"rusty": {
+"n": 324,
+"area": 13.775420364818274,
+"multi": 0,
+"tris": 5544,
+"mn": [
+-3.0,
+-59.0,
+-0.08513358235359192
+],
+"mx": [
+2.5999999046325684,
+0.3400000035762787,
+0.006000000052154064
+]
+},
+"far": {
+"n": 90,
+"area": 195479.06594848633,
+"multi": 0,
+"tris": 900,
+"mn": [
+-298.970703125,
+-467.5572509765625,
+-1.0
+],
+"mx": [
+320.8204650878906,
+356.1429748535156,
+36.0002326965332
+]
+},
+"fern_02": {
+"n": 72,
+"area": 19.836903088446864,
+"multi": 0,
+"tris": 110472,
+"mn": [
+-3.327268123626709,
+1.0656503438949585,
+0.7117258310317993
+],
+"mx": [
+3.954244613647461,
+15.756523132324219,
+5.0525031089782715
+]
+},
+"fog": {
+"n": 1,
+"area": 2188800.0,
+"multi": 0,
+"tris": 12,
+"mn": [
+-480.0,
+-520.0,
+-1.0
+],
+"mx": [
+480.0,
+440.0,
+89.0
+]
+},
+"grass_bermuda_01": {
+"n": 12,
+"area": 0.003691584048888339,
+"multi": 0,
+"tris": 813,
+"mn": [
+-2.6526296138763428,
+-4.186961650848389,
+-0.06684869527816772
+],
+"mx": [
+3.1722943782806396,
+1.5069671869277954,
+0.07813619077205658
+]
+},
+"mortar": {
+"n": 39,
+"area": 493.59562043845654,
+"multi": 0,
+"tris": 390,
+"mn": [
+-3.0199999809265137,
+-62.0,
+-0.30000001192092896
+],
+"mx": [
+2.700000047683716,
+60.0,
+4.400000095367432
+]
+},
+"wood": {
+"n": 499,
+"area": 216.26664277044256,
+"multi": 0,
+"tris": 10206,
+"mn": [
+-11.270000457763672,
+-62.650001525878906,
+0.8899999856948853
+],
+"mx": [
+11.069999694824219,
+60.45000076293945,
+9.81282901763916
+]
+},
+"roof": {
+"n": 24,
+"area": 2021.9686479710508,
+"multi": 0,
+"tris": 180,
+"mn": [
+-11.25,
+-62.650001525878906,
+4.75
+],
+"mx": [
+11.050000190734863,
+60.45000076293945,
+11.462828636169434
+]
+},
+"shutter": {
+"n": 118,
+"area": 88.99101346904718,
+"multi": 0,
+"tris": 4956,
+"mn": [
+-4.093999862670898,
+-61.39955139160156,
+2.0
+],
+"mx": [
+3.8940000534057617,
+59.246665954589844,
+9.41241455078125
+]
+},
+"plaster": {
+"n": 14,
+"area": 2965.33372988263,
+"multi": 0,
+"tris": 588,
+"mn": [
+-10.600000381469727,
+-62.0,
+0.0
+],
+"mx": [
+10.399999618530273,
+59.79999923706055,
+10.01200008392334
+]
+},
+"siding": {
+"n": 9,
+"area": 1738.3946790660048,
+"multi": 0,
+"tris": 378,
+"mn": [
+-10.600000381469727,
+-62.0,
+0.0
+],
+"mx": [
+9.899999618530273,
+50.099998474121094,
+10.012828826904297
+]
+},
+"soil": {
+"n": 27,
+"area": 2212.9708414673805,
+"multi": 0,
+"tris": 306,
+"mn": [
+-60.0,
+1.0,
+-1.0
+],
+"mx": [
+60.0,
+86.0,
+4.76200008392334
+]
+},
+"xfmr": {
+"n": 3,
+"area": 8.666522190964315,
+"multi": 0,
+"tris": 1780,
+"mn": [
+1.2300000190734863,
+0.286190390586853,
+3.9600000381469727
+],
+"mx": [
+3.6549999713897705,
+0.8700000047683716,
+8.539999961853027
+]
+},
+"lens": {
+"n": 1,
+"area": 0.06751982122659683,
+"multi": 0,
+"tris": 10,
+"mn": [
+1.25,
+0.4699999988079071,
+6.315000057220459
+],
+"mx": [
+1.5700000524520874,
+0.6299999952316284,
+6.331999778747559
+]
+},
+"manhole": {
+"n": 4,
+"area": 1.8902617793281027,
+"multi": 0,
+"tris": 2496,
+"mn": [
+-0.9870156049728394,
+-48.387020111083984,
+-0.035809364169836044
+],
+"mx": [
+1.536975383758545,
+-1.712960124015808,
+0.009919251315295696
+]
+},
+"nettle_plant": {
+"n": 168,
+"area": 16.374844727446508,
+"multi": 0,
+"tris": 848200,
+"mn": [
+-3.161911964416504,
+1.2401543855667114,
+0.7127658128738403
+],
+"mx": [
+3.6402409076690674,
+16.03009605407715,
+5.540691375732422
+]
+},
+"pavers": {
+"n": 1,
+"area": 7.15469732047859,
+"multi": 0,
+"tris": 42,
+"mn": [
+-2.5999999046325684,
+0.36000001430511475,
+-0.11999999731779099
+],
+"mx": [
+2.5999999046325684,
+1.4199999570846558,
+0.012000000104308128
+]
+},
+"brick": {
+"n": 37,
+"area": 81.72131022733811,
+"multi": 0,
+"tris": 1554,
+"mn": [
+-3.0,
+1.0399999618530273,
+-0.15000000596046448
+],
+"mx": [
+3.5,
+15.805000305175781,
+4.831999778747559
+]
+},
+"pole": {
+"n": 5,
+"area": 52.14036273304373,
+"multi": 0,
+"tris": 1010,
+"mn": [
+-3.427999973297119,
+-52.178001403808594,
+-0.3400000035762787
+],
+"mx": [
+3.197999954223633,
+23.977998733520508,
+16.41200065612793
+]
+},
+"porcelain": {
+"n": 6,
+"area": 1.4299686203012243,
+"multi": 0,
+"tris": 3386,
+"mn": [
+-4.107999801635742,
+-52.05799865722656,
+8.960000038146973
+],
+"mx": [
+3.878000020980835,
+23.857999801635742,
+16.07200050354004
+]
+},
+"ad": {
+"n": 1,
+"area": 0.3733222112059593,
+"multi": 0,
+"tris": 20,
+"mn": [
+2.7878358364105225,
+0.3870009481906891,
+2.4100000858306885
+],
+"mx": [
+2.9832112789154053,
+0.5997100472450256,
+3.509999990463257
+]
+},
+"tag": {
+"n": 1,
+"area": 0.041948397643864155,
+"multi": 0,
+"tris": 20,
+"mn": [
+2.787005662918091,
+0.38988128304481506,
+2.009999990463257
+],
+"mx": [
+2.919487953186035,
+0.6036350727081299,
+2.1600000858306885
+]
+},
+"rail_green": {
+"n": 3,
+"area": 7.684869850054383,
+"multi": 0,
+"tris": 1188,
+"mn": [
+-2.32099986076355,
+1.4789999723434448,
+0.030500000342726707
+],
+"mx": [
+2.5209999084472656,
+15.720999717712402,
+5.261499881744385
+]
+},
+"rail_top": {
+"n": 3,
+"area": 8.6587791705239,
+"multi": 0,
+"tris": 4680,
+"mn": [
+-2.326864242553711,
+1.2539231777191162,
+0.07005801796913147
+],
+"mx": [
+2.5268642902374268,
+16.086076736450195,
+5.355916976928711
+]
+},
+"road": {
+"n": 1,
+"area": 304.43644154390495,
+"multi": 0,
+"tris": 1338400,
+"mn": [
+-2.5999999046325684,
+-62.0,
+-0.06698119640350342
+],
+"mx": [
+2.200000047683716,
+1.3960000276565552,
+0.006999843753874302
+]
+},
+"shrub_01": {
+"n": 24,
+"area": 1.3468730290129962,
+"multi": 0,
+"tris": 3744288,
+"mn": [
+-2.7626426219940186,
+1.083565592765808,
+0.7327324748039246
+],
+"mx": [
+3.1588692665100098,
+15.249911308288574,
+4.908586502075195
+]
+},
+"stone": {
+"n": 1,
+"area": 94.30254564022471,
+"multi": 0,
+"tris": 43200,
+"mn": [
+-2.3975000381469727,
+1.3943454027175903,
+-0.06601607799530029
+],
+"mx": [
+2.5975000858306885,
+15.815427780151367,
+4.416137218475342
+]
+},
+"wire": {
+"n": 1,
+"area": 111.058052667212,
+"multi": 0,
+"tris": 21126,
+"mn": [
+-30.00361442565918,
+-55.2916259765625,
+2.4596762657165527
+],
+"mx": [
+5.756418704986572,
+23.807720184326172,
+16.073835372924805
+]
+}
+},
+"hidden": {
+"dandelion_01_a_LOD": 1,
+"dandelion_01_b_LOD": 1,
+"dandelion_01_c_LOD": 1,
+"dandelion_01_d_LOD": 1,
+"dandelion_01_e_LOD": 1,
+"fern_02_a": 1,
+"fern_02_b": 1,
+"fern_02_c": 1,
+"fern_02_d": 1,
+"grass_bermuda_01_dead_a": 1,
+"grass_bermuda_01_dead_b": 1,
+"grass_bermuda_01_flattened_a": 1,
+"grass_bermuda_01_medium_a": 1,
+"grass_bermuda_01_medium_b": 1,
+"grass_bermuda_01_medium_c": 1,
+"grass_bermuda_01_medium_d": 1,
+"grass_bermuda_01_medium_e": 1,
+"grass_bermuda_01_medium_f": 1,
+"grass_bermuda_01_seedling_a": 1,
+"grass_bermuda_01_seedling_b": 1,
+"grass_bermuda_01_seedling_c": 1,
+"grass_bermuda_01_seedling_d": 1,
+"grass_bermuda_01_single_a": 1,
+"grass_bermuda_01_single_b": 1,
+"grass_bermuda_01_small_a": 1,
+"grass_bermuda_01_small_b": 1,
+"grass_bermuda_01_small_c": 1,
+"grass_bermuda_01_small_d": 1,
+"grass_bermuda_01_small_e": 1,
+"grass_bermuda_01_small_f": 1,
+"moss_01_a_LOD": 1,
+"moss_01_b_LOD": 1,
+"moss_01_c_LOD": 1,
+"moss_01_d_LOD": 1,
+"moss_01_e_LOD": 1,
+"moss_01_f_LOD": 1,
+"moss_01_g_LOD": 1,
+"moss_01_h_LOD": 1,
+"moss_01_i_LOD": 1,
+"moss_01_j_LOD": 1,
+"moss_01_tall_a_LOD": 1,
+"moss_01_tall_b_LOD": 1,
+"nettle_plant_medium_a_LOD": 1,
+"nettle_plant_medium_b_LOD": 1,
+"nettle_plant_small_a_LOD": 1,
+"nettle_plant_small_b_LOD": 1,
+"nettle_plant_tall_a_LOD": 1,
+"nettle_plant_tall_b_LOD": 1,
+"shrub_01_a": 1
+},
+"world": null
+}

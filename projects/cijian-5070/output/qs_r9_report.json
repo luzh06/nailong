@@ -1,0 +1,111 @@
+{
+ "tag": "r9",
+ "tris": {
+  "apron": 98,
+  "apt": 9058,
+  "aw": 462,
+  "block": 140,
+  "closures": 400,
+  "cover": 19110,
+  "dandelion": 170260,
+  "drain": 350,
+  "far": 900,
+  "fern": 116704,
+  "grass": 1754,
+  "grate": 5236,
+  "ground": 20,
+  "gutter": 20,
+  "h": 20282,
+  "hf": 606,
+  "lamp": 360,
+  "landing": 10132,
+  "manhole": 624,
+  "manhole.001": 624,
+  "manhole.002": 624,
+  "manhole.003": 624,
+  "moss": 204,
+  "nettle": 879504,
+  "pavers": 42,
+  "pl": 1794,
+  "pole_A": 4127,
+  "pole_ad": 20,
+  "pole_B": 1505,
+  "pole_C": 1505,
+  "pole_tag": 20,
+  "pole_Y0": 1505,
+  "pole_Z": 1505,
+  "rail": 5868,
+  "road": 1338400,
+  "shrub": 3900300,
+  "side": 56,
+  "stair": 360,
+  "stairs": 43200,
+  "wires": 21126
+ },
+ "renders": [
+  {
+   "file": "D:\\Cijian\\output\\qs_r9_morning_west.jpg",
+   "sec": 40.3
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r9_morning_mid.jpg",
+   "sec": 36.2
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r9_morning_main.jpg",
+   "sec": 36.2
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r9_morning_street.jpg",
+   "sec": 52.0
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r9_morning_steps.jpg",
+   "sec": 39.6
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r9_morning_road.jpg",
+   "sec": 49.5
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r9_morning_pole.jpg",
+   "sec": 23.8
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r9_morning_sky.jpg",
+   "sec": 19.8
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r9_sunset_west.jpg",
+   "sec": 59.5
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r9_sunset_mid.jpg",
+   "sec": 64.1
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r9_sunset_main.jpg",
+   "sec": 61.9
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r9_sunset_street.jpg",
+   "sec": 72.1
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r9_sunset_steps.jpg",
+   "sec": 53.7
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r9_sunset_road.jpg",
+   "sec": 54.7
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r9_sunset_pole.jpg",
+   "sec": 48.3
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r9_sunset_sky.jpg",
+   "sec": 32.3
+  }
+ ]
+}

@@ -1,0 +1,82 @@
+{
+ "tag": "r7",
+ "tris": {
+  "apron": 98,
+  "apt": 6080,
+  "block": 140,
+  "closures": 400,
+  "cover": 2058,
+  "dandelion": 212684,
+  "drain": 350,
+  "fern": 70696,
+  "grass": 1118,
+  "grate": 924,
+  "ground": 20,
+  "gutter": 20,
+  "h": 6350,
+  "hf": 502,
+  "lamp": 360,
+  "landing": 3538,
+  "manhole": 624,
+  "moss": 204,
+  "nettle": 617640,
+  "pavers": 42,
+  "ph": 20,
+  "pl": 626,
+  "pole_A": 4127,
+  "pole_ad": 20,
+  "pole_B": 1505,
+  "pole_C": 1505,
+  "pole_tag": 20,
+  "pole_Z": 1505,
+  "rail": 5052,
+  "road": 461600,
+  "shrub": 1404108,
+  "side": 20,
+  "stair": 100,
+  "stairs": 12000,
+  "wires": 17538
+ },
+ "renders": [
+  {
+   "file": "D:\\Cijian\\output\\qs_r7_morning_main.jpg",
+   "sec": 13.7
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r7_morning_steps.jpg",
+   "sec": 10.4
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r7_morning_road.jpg",
+   "sec": 10.4
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r7_morning_pole.jpg",
+   "sec": 8.3
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r7_morning_sky.jpg",
+   "sec": 5.2
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r7_sunset_main.jpg",
+   "sec": 16.7
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r7_sunset_steps.jpg",
+   "sec": 11.8
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r7_sunset_road.jpg",
+   "sec": 13.3
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r7_sunset_pole.jpg",
+   "sec": 11.4
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r7_sunset_sky.jpg",
+   "sec": 6.9
+  }
+ ]
+}

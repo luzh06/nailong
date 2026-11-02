@@ -1,0 +1,4 @@
+00:00.547  blend            | Read blend: "D:\Cijian\blend\qs_h1.blend"
+D:\Cijian\scripts\qs_inspect.py:4: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  if not m.use_nodes:
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)

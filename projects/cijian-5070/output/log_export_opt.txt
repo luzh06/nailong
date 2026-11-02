@@ -1,0 +1,142 @@
+00:00.594  blend            | Read blend: "D:\Cijian\blend\qs_r8.blend"
+D:\Cijian\scripts\qs_export.py:25: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  if any(m.name.lower().startswith(p[:5]) for p in PLANT) or not m.use_nodes:
+GROUPS 32
+EXPORT opt objects 216 tris 309765
+INFO Draco is available, use library at D:\Cijian\tools\blender-5.2.3-windows-x64\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_draco_bridge.dll
+INFO MeshOptimizer is available, use library at D:\Cijian\tools\blender-5.2.3-windows-x64\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_meshopt_bridge.dll
+00:40:10 | INFO: Starting glTF 2.0 export
+00:40:10 | INFO: Extracting primitive: apron
+00:40:10 | INFO: Primitives created: 1
+00:40:10 | INFO: Extracting primitive: apt_R2_ac0_0
+00:40:10 | INFO: Primitives created: 1
+00:40:10 | INFO: Extracting primitive: apt_R2_body
+00:40:10 | INFO: Primitives created: 1
+00:40:10 | INFO: Extracting primitive: apt_R2_ft0_0
+00:40:10 | INFO: Primitives created: 1
+00:40:10 | INFO: Extracting primitive: apt_R2_g0_0
+00:40:10 | INFO: Primitives created: 1
+00:40:10 | INFO: Extracting primitive: apt_R2_p0_0
+00:40:10 | INFO: Primitives created: 1
+00:40:10 | INFO: Extracting primitive: apt_R2_pipe
+00:40:10 | INFO: Primitives created: 1
+00:40:10 | INFO: Extracting primitive: block_cap
+00:40:10 | INFO: Primitives created: 1
+00:40:10 | INFO: Extracting primitive: block_wall
+00:40:10 | INFO: Primitives created: 1
+00:40:10 | INFO: Extracting primitive: closures
+00:40:10 | INFO: Primitives created: 1
+00:40:10 | INFO: Extracting primitive: Plane.034
+00:40:10 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+00:40:11 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+00:40:11 | INFO: Primitives created: 1
+00:40:11 | INFO: Extracting primitive: Plane.033
+00:40:11 | INFO: Primitives created: 1
+00:40:11 | INFO: Extracting primitive: Plane.038
+00:40:11 | INFO: Primitives created: 1
+00:40:11 | INFO: Extracting primitive: Plane.037
+00:40:11 | INFO: Primitives created: 1
+00:40:11 | INFO: Extracting primitive: Plane.036
+00:40:11 | INFO: Primitives created: 1
+00:40:11 | INFO: Extracting primitive: drain_x_b1
+00:40:11 | INFO: Primitives created: 1
+00:40:11 | INFO: Extracting primitive: Plane.047
+00:40:11 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+00:40:11 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+00:40:11 | INFO: Primitives created: 1
+00:40:11 | INFO: Extracting primitive: Plane.059
+00:40:11 | INFO: Primitives created: 1
+00:40:11 | INFO: Extracting primitive: Plane.045
+00:40:11 | INFO: Primitives created: 1
+00:40:11 | INFO: Extracting primitive: Plane.020
+00:40:11 | INFO: Primitives created: 1
+00:40:11 | INFO: Extracting primitive: Plane.046
+00:40:11 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+00:40:11 | INFO: Primitives created: 1
+00:40:11 | INFO: Extracting primitive: Plane.030
+00:40:11 | INFO: Primitives created: 1
+00:40:11 | INFO: Extracting primitive: Plane.022
+00:40:11 | INFO: Primitives created: 1
+00:40:11 | INFO: Extracting primitive: Plane.014
+00:40:11 | INFO: Primitives created: 1
+00:40:11 | INFO: Extracting primitive: Plane.003
+00:40:11 | INFO: Primitives created: 1
+00:40:11 | INFO: Extracting primitive: Plane.002
+00:40:11 | INFO: Primitives created: 1
+00:40:11 | INFO: Extracting primitive: Plane.028
+00:40:11 | INFO: Primitives created: 1
+00:40:11 | INFO: Extracting primitive: Plane.039
+00:40:11 | INFO: Primitives created: 1
+00:40:11 | INFO: Extracting primitive: Plane.043
+00:40:11 | INFO: Primitives created: 1
+00:40:11 | INFO: Extracting primitive: Plane.035
+00:40:11 | INFO: Primitives created: 1
+00:40:11 | INFO: Extracting primitive: Plane.029
+00:40:11 | INFO: Primitives created: 1
+00:40:11 | INFO: Extracting primitive: gutter_L_base
+00:40:11 | INFO: Primitives created: 1
+00:40:11 | INFO: Extracting primitive: h_far_fascia1
+00:40:11 | INFO: Primitives created: 1
+00:40:11 | INFO: Extracting primitive: h_far_roof
+00:40:11 | INFO: Primitives created: 1
+00:40:11 | INFO: Extracting primitive: h_far_shut00
+00:40:11 | INFO: Primitives created: 1
+00:40:11 | INFO: Extracting primitive: h_far_w
+00:40:11 | INFO: Primitives created: 1
+00:40:11 | INFO: Extracting primitive: h_L1_w
+00:40:11 | INFO: Primitives created: 1
+00:40:11 | INFO: Extracting primitive: lamp_head
+00:40:11 | INFO: Primitives created: 1
+00:40:11 | INFO: Extracting primitive: lamp_lens
+00:40:11 | INFO: Primitives created: 1
+00:40:11 | INFO: Extracting primitive: manhole
+00:40:11 | INFO: Primitives created: 1
+00:40:11 | INFO: Extracting primitive: Plane.050
+00:40:12 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+00:40:12 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+00:40:12 | INFO: Primitives created: 1
+00:40:12 | INFO: Extracting primitive: Plane.129
+00:40:12 | INFO: Primitives created: 1
+00:40:12 | INFO: Extracting primitive: Plane.052
+00:40:12 | INFO: Primitives created: 1
+00:40:12 | INFO: Extracting primitive: Plane.048
+00:40:12 | INFO: Primitives created: 1
+00:40:12 | INFO: Extracting primitive: Plane.049
+00:40:12 | INFO: Primitives created: 1
+00:40:12 | INFO: Extracting primitive: Plane.051
+00:40:12 | INFO: Primitives created: 1
+00:40:12 | INFO: Extracting primitive: pavers
+00:40:12 | INFO: Primitives created: 1
+00:40:12 | INFO: Extracting primitive: pl_L_end0
+00:40:12 | INFO: Primitives created: 1
+00:40:12 | INFO: Extracting primitive: pl_L_soil0
+00:40:12 | INFO: Primitives created: 1
+00:40:12 | INFO: Extracting primitive: pole_A
+00:40:12 | INFO: Primitives created: 1
+00:40:12 | INFO: Extracting primitive: pole_A_cutout
+00:40:12 | INFO: Primitives created: 1
+00:40:12 | INFO: Extracting primitive: pole_ad
+00:40:12 | INFO: Primitives created: 1
+00:40:12 | INFO: Extracting primitive: pole_tag
+00:40:12 | INFO: Primitives created: 1
+00:40:12 | INFO: Extracting primitive: rail_c_posts
+00:40:12 | INFO: Primitives created: 1
+00:40:12 | INFO: Extracting primitive: rail_c_top
+00:40:12 | INFO: Primitives created: 1
+00:40:12 | INFO: Extracting primitive: road.001
+00:40:12 | INFO: Primitives created: 1
+00:40:12 | INFO: Extracting primitive: Circle.001
+00:40:13 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+00:40:13 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+00:40:13 | INFO: Primitives created: 1
+00:40:13 | INFO: Extracting primitive: stairs
+00:40:13 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+00:40:13 | INFO: Primitives created: 1
+00:40:13 | INFO: Extracting primitive: wires
+00:40:13 | INFO: Primitives created: 1
+00:40:13 | INFO: Finished glTF 2.0 export in 3.246102809906006 s
+
+DONE opt 36.5 MB 9.9 s
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit

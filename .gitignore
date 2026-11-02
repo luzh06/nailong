@@ -17,3 +17,13 @@
 .DS_Store
 Thumbs.db
 tmp/
+
+# Complete source snapshot, including tools, history, logs and bake outputs.
+!/projects/cijian-5070/
+!/projects/cijian-5070/**
+/projects/cijian-5070/**/profile/
+/projects/cijian-5070/**/profile_w/
+/projects/cijian-5070/**/.git/
+/projects/cijian-5070/**/.env
+/projects/cijian-5070/**/.env.*
+!/projects/cijian-5070/**/.env.example

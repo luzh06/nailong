@@ -1,0 +1,87 @@
+D:\Cijian\scripts\qs_build.py:75: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  s.mat.use_nodes = True
+23:42:49 | INFO: Data are loaded, start creating Blender stuff
+23:42:49 | INFO: Blender create Mesh node Plane.096
+23:42:49 | INFO: Blender create Mesh node Plane.021
+23:42:49 | INFO: Blender create Mesh node Plane.123
+23:42:49 | INFO: Blender create Mesh node Plane.129
+23:42:49 | INFO: Blender create Mesh node Plane
+23:42:49 | INFO: Blender create Mesh node Plane.044
+23:42:49 | INFO: glTF import finished in 0.18s
+PLANT nettle_plant [('nettle_plant_medium_a_LOD0', 5896, (0.08, 0.09, 0.13)), ('nettle_plant_medium_b_LOD0', 5664, (0.07, 0.07, 0.1)), ('nettle_plant_small_a_LOD0', 3592, (0.06, 0.04, 0.06)), ('nettle_plant_small_b_LOD0', 1088, (0.06, 0.04, 0.02)), ('nettle_plant_tall_a_LOD0', 6984, (0.1, 0.09, 0.22)), ('nettle_plant_tall_b_LOD0', 8080, (0.08, 0.09, 0.19))]
+23:42:49 | INFO: Data are loaded, start creating Blender stuff
+23:42:49 | INFO: Blender create Mesh node Plane.023
+23:42:49 | INFO: Blender create Mesh node Plane.095
+23:42:49 | INFO: Blender create Mesh node Plane.041
+23:42:49 | INFO: Blender create Mesh node Plane.066
+23:42:49 | INFO: Blender create Mesh node Plane.113
+23:42:49 | INFO: glTF import finished in 0.23s
+PLANT dandelion_01 [('dandelion_01_a_LOD0', 23542, (0.22, 0.26, 0.16)), ('dandelion_01_b_LOD0', 23358, (0.2, 0.22, 0.11)), ('dandelion_01_c_LOD0', 3180, (0.17, 0.17, 0.1)), ('dandelion_01_d_LOD0', 2604, (0.12, 0.14, 0.06)), ('dandelion_01_e_LOD0', 2080, (0.21, 0.21, 0.05))]
+23:42:49 | INFO: Data are loaded, start creating Blender stuff
+23:42:49 | INFO: Blender create Mesh node Plane.007
+23:42:49 | INFO: Blender create Mesh node Plane.010
+23:42:49 | INFO: Blender create Mesh node Plane.012
+23:42:49 | INFO: Blender create Mesh node Plane.014
+23:42:49 | INFO: Blender create Mesh node Plane.021
+23:42:49 | INFO: Blender create Mesh node Plane.022
+23:42:49 | INFO: Blender create Mesh node Plane.023
+23:42:49 | INFO: Blender create Mesh node Plane.024
+23:42:49 | INFO: Blender create Mesh node Plane.025
+23:42:49 | INFO: Blender create Mesh node Plane.026
+23:42:49 | INFO: Blender create Mesh node Plane.027
+23:42:49 | INFO: Blender create Mesh node Plane.028
+23:42:49 | INFO: Blender create Mesh node Plane.029
+23:42:49 | INFO: Blender create Mesh node Plane.030
+23:42:49 | INFO: Blender create Mesh node Plane.031
+23:42:49 | INFO: Blender create Mesh node Plane.035
+23:42:49 | INFO: Blender create Mesh node Plane.039
+23:42:49 | INFO: Blender create Mesh node Plane.041
+23:42:49 | INFO: Blender create Mesh node Plane.042
+23:42:49 | INFO: Blender create Mesh node Plane.043
+23:42:49 | INFO: Blender create Mesh node Plane.046
+23:42:49 | INFO: glTF import finished in 0.12s
+PLANT grass_bermuda_01 [('grass_bermuda_01_dead_a', 12, (0.07, 0.08, 0.02)), ('grass_bermuda_01_dead_b', 12, (0.07, 0.06, 0.04)), ('grass_bermuda_01_flattened_a', 19, (0.04, 0.07, 0.04)), ('grass_bermuda_01_medium_a', 17, (0.04, 0.03, 0.1)), ('grass_bermuda_01_medium_b', 8, (0.05, 0.02, 0.07)), ('grass_bermuda_01_medium_c', 20, (0.06, 0.09, 0.07))]
+23:42:49 | INFO: Data are loaded, start creating Blender stuff
+23:42:49 | INFO: Blender create Mesh node Plane.003
+23:42:49 | INFO: Blender create Mesh node Plane.004
+23:42:49 | INFO: Blender create Mesh node Plane.005
+23:42:49 | INFO: Blender create Mesh node Plane.006
+23:42:49 | INFO: Blender create Mesh node Plane.007
+23:42:49 | INFO: Blender create Mesh node Plane.008
+23:42:49 | INFO: Blender create Mesh node Plane.009
+23:42:49 | INFO: Blender create Mesh node Plane.010
+23:42:49 | INFO: Blender create Mesh node Plane.011
+23:42:49 | INFO: Blender create Mesh node Plane.032
+23:42:49 | INFO: Blender create Mesh node Plane.035
+23:42:49 | INFO: Blender create Mesh node Plane.040
+23:42:49 | INFO: glTF import finished in 0.09s
+PLANT moss_01 [('moss_01_a_LOD0', 24, (0.01, 0.02, 0.03)), ('moss_01_b_LOD0', 16, (0.01, 0.01, 0.01)), ('moss_01_c_LOD0', 24, (0.02, 0.01, 0.03)), ('moss_01_d_LOD0', 16, (0.01, 0.02, 0.03)), ('moss_01_e_LOD0', 20, (0.01, 0.01, 0.02)), ('moss_01_f_LOD0', 20, (0.01, 0.01, 0.03))]
+23:42:50 | INFO: Data are loaded, start creating Blender stuff
+23:42:50 | INFO: Blender create Mesh node Circle.010
+23:42:50 | INFO: glTF import finished in 0.39s
+PLANT shrub_01 [('shrub_01_a', 156012, (2.59, 0.22, 0.4))]
+23:42:50 | INFO: Data are loaded, start creating Blender stuff
+23:42:50 | INFO: Blender create Mesh node Plane.024
+23:42:50 | INFO: Blender create Mesh node Plane.044
+23:42:50 | INFO: Blender create Mesh node Plane.006
+23:42:50 | INFO: Blender create Mesh node Plane.059
+23:42:50 | INFO: glTF import finished in 0.09s
+00:39.812  cycles           | WARNING HIPEW initialization failed: Error opening HIP dynamic library
+00:39.937  cycles           | WARNING Driver version for device "Intel(R) Arc(TM) 140T GPU (16GB)" is too old. Expected "35716" or newer, but got "34938".
+D:\Cijian\scripts\qs_build.py:1151: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  w.use_nodes = True
+00:47.562  render           | Saved: 'D:\Cijian\output\qs_t5_morning_main.jpg'
+PLANT fern_02 [('fern_02_a', 784, (0.55, 0.61, 0.29)), ('fern_02_b', 2384, (0.99, 0.89, 0.43)), ('fern_02_c', 2248, (0.87, 0.77, 0.35)), ('fern_02_d', 816, (0.57, 0.59, 0.21))]
+PLANTS placed 128
+BUILD 3.5 s objs 839
+TRIS {"apron": 98, "apt": 9882, "block": 140, "closures": 400, "cover": 2058, "dandelion": 106006, "drain": 350, "fern": 48288, "grass": 1345, "grate": 924, "ground": 20, "gutter": 20, "h": 5372, "lamp": 360, "landing": 3538, "manhole": 624, "moss": 204, "nettle": 312272, "pavers": 42, "ph": 20, "pl": 542, "pole_A": 4127, "pole_ad": 20, "pole_B": 1505, "pole_tag": 20, "pole_Z": 1505, "rail": 5052, "road": 461600, "shrub": 3900300, "side": 20, "stair": 100, "stairs": 12000, "wires": 12658}
+CHECK no_uv1 [] images 73 over2k {'asphalt_02_Diffuse.jpg': (4096, 4096), 'asphalt_02_Displacement.png': (4096, 4096), 'asphalt_02_Rough.jpg': (4096, 4096), 'asphalt_04_Diffuse.jpg': (4096, 4096), 'asphalt_04_Displacement.png': (4096, 4096), 'asphalt_04_Rough.jpg': (4096, 4096), 'brushed_concrete_Diffuse.jpg': (4096, 4096), 'brushed_concrete_Displacement.png': (4096, 4096), 'brushed_concrete_Rough.jpg': (4096, 4096), 'concrete_floor_worn_001_Diffuse.jpg': (4096, 4096), 'concrete_floor_worn_001_Displacement.png': (4096, 4096), 'concrete_floor_worn_001_Rough.jpg': (4096, 4096), 'dirty_concrete_Diffuse.jpg': (4096, 4096), 'dirty_concrete_Displacement.png': (4096, 4096), 'dirty_concrete_Rough.jpg': (4096, 4096), 'granular_concrete_Diffuse.jpg': (4096, 4096), 'granular_concrete_Displacement.png': (4096, 4096), 'granular_concrete_Rough.jpg': (4096, 4096), 'grey_roof_tiles_Diffuse.jpg': (4096, 4096), 'grey_roof_tiles_Displacement.png': (4096, 4096), 'grey_roof_tiles_Rough.jpg': (4096, 4096), 'japanese_stone_wall_Diffuse.jpg': (4096, 4096), 'japanese_stone_wall_Displacement.png': (4096, 4096), 'japanese_stone_wall_Rough.jpg': (4096, 4096), 'painted_plaster_wall_Diffuse.jpg': (4096, 4096), 'painted_plaster_wall_Displacement.png': (4096, 4096), 'painted_plaster_wall_Rough.jpg': (4096, 4096), 'red_brick_Diffuse.jpg': (4096, 4096), 'red_brick_Displacement.png': (4096, 4096), 'red_brick_pavers_Diffuse.jpg': (4096, 4096), 'red_brick_pavers_Displacement.png': (4096, 4096), 'red_brick_pavers_Rough.jpg': (4096, 4096), 'red_brick_Rough.jpg': (4096, 4096), 'weathered_plank_siding_Diffuse.jpg': (4096, 4096), 'weathered_plank_siding_Displacement.png': (4096, 4096), 'weathered_plank_siding_Rough.jpg': (4096, 4096), 'wood_shutter_Diffuse.jpg': (4096, 4096), 'wood_shutter_Displacement.png': (4096, 4096), 'wood_shutter_Rough.jpg': (4096, 4096), 'worn_plaster_wall_Diffuse.jpg': (4096, 4096), 'worn_plaster_wall_Displacement.png': (4096, 4096), 'worn_plaster_wall_Rough.jpg': (4096, 4096)} max_tri_obj (461600, 'road')
+DEVICES [('NVIDIA GeForce RTX 5070 Laptop GPU', 'CUDA'), ('Intel Core Ultra 9 285H', 'CPU'), ('NVIDIA GeForce RTX 5070 Laptop GPU', 'OPTIX')]
+Info: Saved as "qs_t5.blend"
+SAVED D:\Cijian\blend\qs_t5.blend
+SUN morning hdri_az -36.1 elev 20.2 peak 142336.0 rot -124.1
+RENDERED qs_t5_morning_main.jpg 6.9 s
+ALLDONE
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit

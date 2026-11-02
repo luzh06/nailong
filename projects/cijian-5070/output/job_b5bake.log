@@ -1,0 +1,18 @@
+00:00.594  blend            | Read blend: "D:\Cijian\blend\qs_bk.blend"
+00:01.234  cycles           | WARNING HIPEW initialization failed: Error opening HIP dynamic library
+00:01.313  cycles           | WARNING Driver version for device "Intel(R) Arc(TM) 140T GPU (16GB)" is too old. Expected "35716" or newer, but got "34938".
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_siding ROUGHNESS (4096, 4096) 8 10.6 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_siding EMIT (4096, 4096) 8 8.1 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_siding NORMAL (4096, 4096) 8 12.5 s
+D:\Cijian\scripts\qs_bk_bake.py:44: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  w.use_nodes = True
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_siding DIFFUSE (4096, 4096) 512 270.6 s
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED bk_siding DIFFUSE (2048, 2048) 32 8.0 s
+GROUP siding 314.0
+ALLDONE
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)

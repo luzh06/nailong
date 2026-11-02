@@ -1,0 +1,33 @@
+D:\Cijian\scripts\qs_build.py:70: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  s.mat.use_nodes = True
+00:12.688  cycles           | WARNING HIPEW initialization failed: Error opening HIP dynamic library
+00:12.766  cycles           | WARNING Driver version for device "Intel(R) Arc(TM) 140T GPU (16GB)" is too old. Expected "35716" or newer, but got "34938".
+D:\Cijian\scripts\qs_build.py:981: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  w.use_nodes = True
+00:18.438  render           | Saved: 'D:\Cijian\output\qs_r2_morning_main.jpg'
+BUILD 0.5 s objs 230
+TRIS {"apron": 98, "block": 140, "closure": 86, "cover": 2058, "grate": 924, "ground": 20, "gutter": 20, "landing": 4000, "manhole": 624, "ph": 1080, "pier": 196, "pole_A": 1985, "pole_B": 1505, "pole_Z": 1505, "retain": 192, "road": 8256, "stair": 100, "stairs": 3060, "wires": 4166}
+DEVICES [('NVIDIA GeForce RTX 5070 Laptop GPU', 'CUDA'), ('Intel Core Ultra 9 285H', 'CPU'), ('NVIDIA GeForce RTX 5070 Laptop GPU', 'OPTIX')]
+Info: Saved as "qs_r2.blend"
+SAVED D:\Cijian\blend\qs_r2.blend
+SUN morning hdri_az -36.1 elev 20.3 peak 41216.0 rot -118.1
+RENDERED qs_r2_morning_main.jpg 5.3 s
+00:21.563  render           | Saved: 'D:\Cijian\output\qs_r2_morning_steps.jpg'
+RENDERED qs_r2_morning_steps.jpg 3.1 s
+00:25.594  render           | Saved: 'D:\Cijian\output\qs_r2_morning_road.jpg'
+RENDERED qs_r2_morning_road.jpg 4.0 s
+00:29.969  render           | Saved: 'D:\Cijian\output\qs_r2_morning_pole.jpg'
+RENDERED qs_r2_morning_pole.jpg 4.4 s
+00:33.829  render           | Saved: 'D:\Cijian\output\qs_r2_sunset_main.jpg'
+SUN sunset hdri_az -57.4 elev 1.4 peak 100693.3 rot 34.6
+RENDERED qs_r2_sunset_main.jpg 3.5 s
+00:36.594  render           | Saved: 'D:\Cijian\output\qs_r2_sunset_steps.jpg'
+RENDERED qs_r2_sunset_steps.jpg 2.8 s
+00:39.532  render           | Saved: 'D:\Cijian\output\qs_r2_sunset_road.jpg'
+RENDERED qs_r2_sunset_road.jpg 2.9 s
+00:42.813  render           | Saved: 'D:\Cijian\output\qs_r2_sunset_pole.jpg'
+RENDERED qs_r2_sunset_pole.jpg 3.3 s
+ALLDONE
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit

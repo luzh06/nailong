@@ -1,0 +1,44 @@
+{
+ "tag": "t5",
+ "tris": {
+  "apron": 98,
+  "apt": 9882,
+  "block": 140,
+  "closures": 400,
+  "cover": 2058,
+  "dandelion": 106006,
+  "drain": 350,
+  "fern": 48288,
+  "grass": 1345,
+  "grate": 924,
+  "ground": 20,
+  "gutter": 20,
+  "h": 5372,
+  "lamp": 360,
+  "landing": 3538,
+  "manhole": 624,
+  "moss": 204,
+  "nettle": 312272,
+  "pavers": 42,
+  "ph": 20,
+  "pl": 542,
+  "pole_A": 4127,
+  "pole_ad": 20,
+  "pole_B": 1505,
+  "pole_tag": 20,
+  "pole_Z": 1505,
+  "rail": 5052,
+  "road": 461600,
+  "shrub": 3900300,
+  "side": 20,
+  "stair": 100,
+  "stairs": 12000,
+  "wires": 12658
+ },
+ "renders": [
+  {
+   "file": "D:\\Cijian\\output\\qs_t5_morning_main.jpg",
+   "sec": 6.9
+  }
+ ]
+}

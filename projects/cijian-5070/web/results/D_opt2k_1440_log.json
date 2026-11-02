@@ -1,0 +1,5 @@
+boot http://127.0.0.1:8765/web/test.html?name=D_opt2k_1440&glb=/web/data/opt.glb&tex=2k&shadow=static&w=2560&h=1440
+three ok 170
+hdr ok
+glb ok
+loop start
