@@ -6,7 +6,9 @@
 
 [阅读文件审查 PDF](docs/reports/此间_项目文件审查报告_2026-11-02.pdf) · [查看文字版审查](docs/reports/2026-11-02-audit.md)
 
-完整本机工程快照位于 [`projects/cijian-5070/`](projects/cijian-5070/)，包含原始目录结构、历史场景、各轮烘焙、打包版本、原始 ZIP 和 Blender 工具。快照范围、获取方式及尚缺的外部街块模型见 [快照说明](projects/cijian-5070/SNAPSHOT.md)，逐文件校验值见 [完整清单](docs/snapshots/cijian-5070-2026-11-02.json)。
+完整本机工程快照位于 [`projects/cijian-5070/`](projects/cijian-5070/)，包含原始目录结构、历史场景、各轮烘焙、打包版本、原始 ZIP 和 Blender 工具。快照范围、获取方式及外部街块模型的独立来源见 [快照说明](projects/cijian-5070/SNAPSHOT.md)，逐文件校验值见 [完整清单](docs/snapshots/cijian-5070-2026-11-02.json)。
+
+[全量上传核验 PDF](docs/reports/此间_全量上传核验报告_2026-11-02.pdf) · [全量上传文字报告](docs/reports/2026-11-02-full-upload.md)。街块 A、B 的模型及配套文件已补齐并合入主分支，见 [`projects/tokyo-blocks/`](projects/tokyo-blocks/)。
 
 ## 目录
 
