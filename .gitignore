@@ -1,0 +1,19 @@
+# Local tools, browser sessions and transient build output
+**/tools/
+**/profile/
+**/__pycache__/
+*.py[cod]
+*.blend1
+*.blend2
+*.zip
+*.log
+*.log.done
+**/bake/
+**/output/
+**/web/results/
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+tmp/

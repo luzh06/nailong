@@ -1,0 +1,85 @@
+﻿资产名,作者或工具,来源网址,许可证,是否AI生成,备注
+YN_shop_A_01,Claude 编写的 Blender Python 程序化建模,scripts/kit_shops.py,项目自有,是,"宽 3.6 米, counter/lattice; 门脸结构没有平视例图, 属推断"
+YN_shop_B_01,Claude 编写的 Blender Python 程序化建模,scripts/kit_shops.py,项目自有,是,"宽 5.4 米, counter/plain; 门脸结构没有平视例图, 属推断"
+YN_shop_C_01,Claude 编写的 Blender Python 程序化建模,scripts/kit_shops.py,项目自有,是,"宽 3.6 米, hanging/plain; 门脸结构没有平视例图, 属推断"
+YN_shop_D_01,Claude 编写的 Blender Python 程序化建模,scripts/kit_shops.py,项目自有,是,"宽 5.4 米, hanging/lattice; 门脸结构没有平视例图, 属推断"
+YN_shop_E_01,Claude 编写的 Blender Python 程序化建模,scripts/kit_shops.py,项目自有,是,"宽 3.6 米, shelves/lattice; 门脸结构没有平视例图, 属推断"
+YN_shop_F_01,Claude 编写的 Blender Python 程序化建模,scripts/kit_shops.py,项目自有,是,"宽 5.4 米, shelves/plain; 门脸结构没有平视例图, 属推断"
+YN_shop_G_01,Claude 编写的 Blender Python 程序化建模,scripts/kit_shops.py,项目自有,是,"宽 3.6 米, table/plain; 门脸结构没有平视例图, 属推断"
+YN_shop_H_01,Claude 编写的 Blender Python 程序化建模,scripts/kit_shops.py,项目自有,是,"宽 3.6 米, bells/lattice; 门脸结构没有平视例图, 属推断"
+YN_sign_NN_wNN (16 家招牌),Claude 编写的 Blender Python 程序化建模,scripts/kit_shops.py,项目自有,是,"虚构店名, 文字待人工核实"
+YN_awning_corrugated/cloth/tile,Claude 编写的 Blender Python 程序化建模,scripts/kit_shops.py,项目自有,是,每种 3.6 和 5.4 两个宽度
+YN_shop_end_01/02,Claude 编写的 Blender Python 程序化建模,scripts/kit_shops.py,项目自有,是,"段尾山墙, 形状按 191 目测"
+YN_shop_lod_NN,Claude 编写的 Blender Python 程序化建模,scripts/kit_shops.py,项目自有,是,只用于主机位远景
+YN_prop_bicycle_01,Claude 编写的 Blender Python 程序化建模,scripts/kit_props.py,项目自有,是,无品牌
+YN_prop_vending_machine_01,Claude 编写的 Blender Python 程序化建模,scripts/kit_props.py,项目自有,是,无品牌
+YN_prop_utility_pole_01,Claude 编写的 Blender Python 程序化建模,scripts/kit_props.py,项目自有,是,无品牌
+YN_prop_street_lamp_01,Claude 编写的 Blender Python 程序化建模,scripts/kit_props.py,项目自有,是,无品牌
+YN_prop_planter_01,Claude 编写的 Blender Python 程序化建模,scripts/kit_props.py,项目自有,是,无品牌
+YN_prop_planter_02,Claude 编写的 Blender Python 程序化建模,scripts/kit_props.py,项目自有,是,无品牌
+YN_prop_plastic_crate_01,Claude 编写的 Blender Python 程序化建模,scripts/kit_props.py,项目自有,是,无品牌
+YN_prop_standing_sign_01,Claude 编写的 Blender Python 程序化建模,scripts/kit_props.py,项目自有,是,无品牌
+YN_prop_standing_sign_02,Claude 编写的 Blender Python 程序化建模,scripts/kit_props.py,项目自有,是,无品牌
+YN_prop_nobori_01,Claude 编写的 Blender Python 程序化建模,scripts/kit_props.py,项目自有,是,无品牌
+YN_prop_wires_01,Claude 编写的 Blender Python 程序化建模,scripts/kit_props.py,项目自有,是,按电杆位置生成
+"YN_ground_street_01, YN_ground_base_01",Claude 编写的 Blender Python 程序化建模,scripts/build_scene.py,项目自有,是,
+YN_bg_hozomon_standin,Claude 编写的 Blender Python 程序化建模,scripts/build_scene.py,项目自有,是,"宝藏门替身, 只为构图, 不是复原; 能否呈现待人工确认"
+YN_bg_pagoda_standin,Claude 编写的 Blender Python 程序化建模,scripts/build_scene.py,项目自有,是,"五重塔替身, 只为构图, 位置不是测绘; 能否呈现待人工确认"
+YN_bg_city_NN,Claude 编写的 Blender Python 程序化建模,scripts/kit_city.py,项目自有,是,"背景杂居楼, 按材质合并; 位置按 191 的感觉排, 不是测绘; 只有部分有 UV1"
+YN_person_NN (12 种),Claude 编写的 Blender Python 程序化建模,scripts/kit_city.py,项目自有,是,"低模行人, 只适合远看; 单独导出, 无 UV1"
+yn_signs_basecolor_2k,"Claude 编写的 Pillow 脚本, 字体 Zen Antique",scripts/02b_prepare_kit_textures.py,"项目自有, 字体见下",是,"招牌和货品图集, 文字待人工核实"
+yn_noren_basecolor_2k,"Claude 编写的 Pillow 脚本, 字体 Zen Antique",scripts/02b_prepare_kit_textures.py,"项目自有, 字体见下",是,"暖帘图集, 文字待人工核实"
+yn_props_basecolor_1k,"Claude 编写的 Pillow 脚本, 字体 Zen Antique",scripts/02b_prepare_kit_textures.py,"项目自有, 字体见下",是,"贩卖机, 看板, 条纹, 旗幡, 文字待人工核实"
+yn_lantern_basecolor_512,"Claude 编写的 Pillow 脚本, 字体 Zen Antique",scripts/02b_prepare_kit_textures.py,"项目自有, 字体见下",是,"灯笼, 文字待人工核实"
+yn_citysigns_1k,"Claude 编写的 Pillow 脚本, 字体 Zen Antique",scripts/02c_prepare_city_textures.py,"项目自有, 字体见下",是,"背景楼招牌和远景店面, 文字待人工核实"
+yn_roof_red_basecolor_2k,"Claude 编写的 NumPy 脚本, 由 grey_roof_tiles_02 染色",scripts/02c_prepare_city_textures.py,CC0 衍生,是,红瓦
+"yn_facade_plaster/tile/concrete/brick, basecolor + emissive",Claude 编写的 Pillow/NumPy 脚本,"scripts/02b_prepare_kit_textures.py, 02c_prepare_city_textures.py",项目自有,是,背景楼立面
+yn_people_palette,Claude 编写的 Pillow/NumPy 脚本,"scripts/02b_prepare_kit_textures.py, 02c_prepare_city_textures.py",项目自有,是,行人调色板
+"yn_grime_1k, yn_ground_stain_1k",Claude 编写的 Pillow/NumPy 脚本,"scripts/02b_prepare_kit_textures.py, 02c_prepare_city_textures.py",项目自有,是,污渍
+grey_roof_tiles_02,Rob Tuytel,https://polyhaven.com/a/grey_roof_tiles_02,CC0,否,"yn_mat_roof, 已压暗调色"
+distressed_painted_planks,Rob Tuytel,https://polyhaven.com/a/distressed_painted_planks,CC0,否,"yn_mat_vermilion_a/b/c, 已染朱红"
+japanese_cedar_planks,Charlotte Baglioni、Rico Cilliers,https://polyhaven.com/a/japanese_cedar_planks,CC0,否,"yn_mat_cedar, 已压暗调色"
+painted_metal_shutter,Dario Barresi、Rico Cilliers、Charlotte Baglioni,https://polyhaven.com/a/painted_metal_shutter,CC0,否,"yn_mat_shutter, 已调色并降到 1K"
+plastered_wall_02,Charlotte Baglioni,https://polyhaven.com/a/plastered_wall_02,CC0,否,"yn_mat_plaster, 降到 1K"
+rectangular_paving,Dimitrios Savva,https://polyhaven.com/a/rectangular_paving,CC0,否,"yn_mat_paving, 已调色"
+corrugated_iron_02,Jenelle van Heerden、Sergej Majboroda,https://polyhaven.com/a/corrugated_iron_02,CC0,否,"yn_mat_corrugated, 降到 1K"
+yn_kawara_basecolor/normal/orm_2k,Claude 编写的 NumPy/Pillow 脚本,scripts/02d_prepare_reference_textures.py,项目自有,是,"本瓦屋面, 由高度场计算"
+yn_roof_red_basecolor_2k,Claude 编写的 NumPy/Pillow 脚本,scripts/02d_prepare_reference_textures.py,项目自有,是,本瓦染红
+"yn_trim_basecolor/normal/orm_2k, emissive_1k",Claude 编写的 NumPy/Pillow 脚本,scripts/02d_prepare_reference_textures.py,项目自有,是,"屋檐 Trim Sheet, 结构对照 201 和 188"
+yn_shutter_art_2k,Claude 编写的 NumPy/Pillow 脚本,scripts/02d_prepare_reference_textures.py,项目自有,是,"卷帘画, 自己构图, 不是真实的浅草绘巻"
+yn_plaque_1k,Claude 编写的 NumPy/Pillow 脚本,scripts/02d_prepare_reference_textures.py,项目自有,是,"吊牌, 写的是街名"
+"YN_noren_NN, YN_shutter_*, YN_prop_plum_branch_*",Claude 编写的 Blender Python 程序化建模,scripts/kit_shops.py,项目自有,是,"暖帘, 关店卷帘, 季节花枝"
+YN_awning_nakamise_w36/w54,Claude 编写的 Blender Python 程序化建模,scripts/kit_shops.py,项目自有,是,"统一的仲见世店头, 对照平视照片"
+参考: 早晨的仲见世 (只看不下载),PAKUTASO 摄影师,https://www.pakutaso.com/20210109015post-32890.html,"站点免费素材条款, 未下载使用",否,"只用来看结构, 没有任何像素进贴图"
+参考: 雨夜的仲见世 (只看不下载),PAKUTASO 摄影师,https://www.pakutaso.com/en/20200730195post-27999.html,"站点免费素材条款, 未下载使用",否,"只用来看结构, 没有任何像素进贴图"
+hdri/morning.hdr,Poly Haven,https://polyhaven.com/a/kloppenheim_06_puresky,CC0,否,离线渲染的天空或墙面
+hdri/sunset.hdr,Poly Haven,https://polyhaven.com/a/belfast_sunset_puresky,CC0,否,离线渲染的天空或墙面
+hdri/dusk.hdr,Poly Haven,https://polyhaven.com/a/qwantani_dusk_2_puresky,CC0,否,离线渲染的天空或墙面
+wall_plaster,Poly Haven,https://polyhaven.com/a/white_plaster_rough_01,CC0,否,离线渲染的天空或墙面
+wall_concrete,Poly Haven,https://polyhaven.com/a/concrete_wall_006,CC0,否,离线渲染的天空或墙面
+wall_tile,Poly Haven,https://polyhaven.com/a/rectangular_facade_tiles,CC0,否,离线渲染的天空或墙面
+wall_brick,Poly Haven,https://polyhaven.com/a/red_brick_03,CC0,否,离线渲染的天空或墙面
+"wall_paint (已下载, 未使用)",Poly Haven,https://polyhaven.com/a/painted_concrete,CC0,否,离线渲染的天空或墙面
+"yn_skyline_morning/sunset/dusk_2k, YN_bg_skyline_far/near",reference/web/web_01.jpg 抠图调色 (Marco Almbauer),https://commons.wikimedia.org/wiki/File:Sens%C5%8D-ji_Tempel_mit_Nakamise-dor.jpg,CC0,否,远景背景; 照片里可能有真实招牌文字
+yn_goods_photo_2k,reference/shops 的货架实拍,见 reference/shops/sources.json,CC BY-SA 4.0 等,否,"店内货品贴图, 自用; 公开发布前要处理授权"
+yn_shutter_art_2k,"reference/web 的 web_06, web_07, web_12 照片校正而成",见 reference/web/sources.json,CC BY 2.0 / CC BY-SA 4.0,否,"自用可以; 公开发布前要署名, 且 CC BY-SA 有相同方式共享要求; 照片上可能有真实商号"
+reference/web/web_01.jpg,Marco Almbauer,https://commons.wikimedia.org/wiki/File:Sens%C5%8D-ji_Tempel_mit_Nakamise-dor.jpg,CC0,否,"只作建模参考, 不进 GLB; 原名 Sensō-ji Tempel mit Nakamise-dor.jpg; 本地 3412x3513, 原图 3412x3513"
+reference/web/web_02.jpg,DimiTalen,"https://commons.wikimedia.org/wiki/File:Five-storied_pagoda_and_Sens%C5%8D-ji_H%C5%8Dz%C5%8Dmon_at_night,_Asakusa,_Tokyo,_2016.jpg",CC0,否,"只作建模参考, 不进 GLB; 原名 Five-storied pagoda and Sensō-ji Hōzōmon at night, Asakusa, Tokyo, 2016.jpg; 本地 6016x4000, 原图 6016x4000"
+reference/web/web_03.jpg,Daderot,"https://commons.wikimedia.org/wiki/File:Hozomon_(main_gate),_Sensoji_Temple,_Asakusa,_Tokyo.jpg",Public domain,否,"只作建模参考, 不进 GLB; 原名 Hozomon (main gate), Sensoji Temple, Asakusa, Tokyo.jpg; 本地 3264x2448, 原图 3264x2448"
+reference/web/web_04.jpg,Daderot,"https://commons.wikimedia.org/wiki/File:Hozomon_and_pagoda,_Sensoji_Temple,_Asakusa,_Tokyo.jpg",Public domain,否,"只作建模参考, 不进 GLB; 原名 Hozomon and pagoda, Sensoji Temple, Asakusa, Tokyo.jpg; 本地 3264x2448, 原图 3264x2448"
+reference/web/web_05.jpg,"Bernard Spragg. NZ from Christchurch, New Zealand",https://commons.wikimedia.org/wiki/File:Sens%C5%8D-ji._Asakusa_Tokyo._(41781495365).jpg,Public domain,否,"只作建模参考, 不进 GLB; 原名 Sensō-ji. Asakusa Tokyo. (41781495365).jpg; 本地 5472x3648, 原图 5472x3648"
+reference/web/web_06.jpg,"Maarten Heerlien from Voorschoten, The Netherlands","https://commons.wikimedia.org/wiki/File:Nakamise-D%C5%8Dri,_Asakusa_(9409495501).jpg",CC BY 2.0,否,"只作建模参考, 不进 GLB; 原名 Nakamise-Dōri, Asakusa (9409495501).jpg; 本地 7360x4912, 原图 7360x4912"
+reference/web/web_07.jpg,"Maarten Heerlien from Voorschoten, The Netherlands",https://commons.wikimedia.org/wiki/File:Nakamise-D%C5%8Dri_by_night_(9412263950).jpg,CC BY 2.0,否,"只作建模参考, 不进 GLB; 原名 Nakamise-Dōri by night (9412263950).jpg; 本地 7360x4912, 原图 7360x4912"
+reference/web/web_08.jpg,"Maarten Heerlien from Voorschoten, The Netherlands","https://commons.wikimedia.org/wiki/File:Nakamise-D%C5%8Dri,_Asakusa_on_a_rainy_evening_(9409049063).jpg",CC BY 2.0,否,"只作建模参考, 不进 GLB; 原名 Nakamise-Dōri, Asakusa on a rainy evening (9409049063).jpg; 本地 7360x4912, 原图 7360x4912"
+reference/web/web_09.jpg,"Yoshikazu TAKADA from Tokyo, Japan",https://commons.wikimedia.org/wiki/File:Side_Street_of_Nakamise-D%C5%8Dri_(15204175141).jpg,CC BY 2.0,否,"只作建模参考, 不进 GLB; 原名 Side Street of Nakamise-Dōri (15204175141).jpg; 本地 4222x2815, 原图 4222x2815"
+reference/web/web_10.jpg,"This Photo was taken by Supanut Arunoprayote.
+
+Feel free to use any of my images, but please mention me as the author and may send me a message.  (สามารถใช้ภาพได้อิสระ แต่กรุณาใส่เครดิตผู้ถ่ายและอาจส่งข้อความบอกกล่าวด้วย) 
+
+
+
+Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.","https://commons.wikimedia.org/wiki/File:H%C5%8Dz%C5%8Dmon,_Sens%C5%8Dji_20241030.jpg",CC BY 4.0,否,"只作建模参考, 不进 GLB; 原名 Hōzōmon, Sensōji 20241030.jpg; 本地 1920x1280, 原图 6418x4279"
+reference/web/web_11.jpg,Jakub Hałun,"https://commons.wikimedia.org/wiki/File:Five-storied_Pagoda,_Sensoji,_Tokyo,_20240824_1103_5616.jpg",CC BY 4.0,否,"只作建模参考, 不进 GLB; 原名 Five-storied Pagoda, Sensoji, Tokyo, 20240824 1103 5616.jpg; 本地 1920x2877, 原图 2776x4160"
+reference/web/web_12.jpg,GuillemMedina,"https://commons.wikimedia.org/wiki/File:07_Nakamise-dori,_Asakusa_(T%C3%B2quio),_decoraci%C3%B3_pict%C3%B2rica_a_la_persiana_d%27una_botiga.jpg",CC BY-SA 4.0,否,"只作建模参考, 不进 GLB; 原名 07 Nakamise-dori, Asakusa (Tòquio), decoració pictòrica a la persiana d'una botiga.jpg; 本地 1920x1285, 原图 2362x1581"
+Zen Antique 字体,The Zen Antique Project Authors,https://github.com/googlefonts/zen-antique,SIL OFL 1.1,否,只用于生成招牌贴图
+"reference/ref_191_dusk.jpg, ref_189_day.jpg",原作者未知 (F:\东京 的手机截图),未知,"未知, 只作参考",未知,"只用来核对构图, 不进任何 GLB, 不要外传"

@@ -1,0 +1,79 @@
+{
+ "tag": "r10",
+ "tris": {
+  "apron": 98,
+  "apt": 9058,
+  "aw": 462,
+  "block": 140,
+  "closures": 400,
+  "cover": 19110,
+  "dandelion": 170260,
+  "drain": 350,
+  "far": 900,
+  "fern": 116704,
+  "grass": 1754,
+  "grate": 5236,
+  "ground": 20,
+  "gutter": 20,
+  "h": 20282,
+  "hf": 606,
+  "lamp": 360,
+  "landing": 10132,
+  "manhole": 624,
+  "manhole.001": 624,
+  "manhole.002": 624,
+  "manhole.003": 624,
+  "moss": 204,
+  "nettle": 879504,
+  "pavers": 42,
+  "pl": 1794,
+  "pole_A": 4127,
+  "pole_ad": 20,
+  "pole_B": 1505,
+  "pole_C": 1505,
+  "pole_tag": 20,
+  "pole_Y0": 1505,
+  "pole_Z": 1505,
+  "rail": 5868,
+  "road": 1338400,
+  "shrub": 3900300,
+  "side": 56,
+  "stair": 360,
+  "stairs": 43200,
+  "wires": 21126
+ },
+ "renders": [
+  {
+   "file": "D:\\Cijian\\output\\qs_r10_morning_west.jpg",
+   "sec": 50.5
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r10_morning_mid.jpg",
+   "sec": 48.1
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r10_morning_main.jpg",
+   "sec": 45.8
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r10_morning_street.jpg",
+   "sec": 63.7
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r10_morning_steps.jpg",
+   "sec": 50.2
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r10_morning_road.jpg",
+   "sec": 62.6
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r10_morning_pole.jpg",
+   "sec": 34.4
+  },
+  {
+   "file": "D:\\Cijian\\output\\qs_r10_morning_sky.jpg",
+   "sec": 25.5
+  }
+ ]
+}

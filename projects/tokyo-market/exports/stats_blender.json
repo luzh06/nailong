@@ -1,0 +1,122 @@
+{
+  "total_tris_instanced": 392654,
+  "total_tris_unique": 272174,
+  "play_60m_tris_instanced": 143650,
+  "objects": 345,
+  "shop_slots": 28,
+  "crowd_people": 533,
+  "crowd_tris_instanced": 181352,
+  "person_tris_max": 560,
+  "gate_tris": 5398,
+  "pagoda_tris": 7842,
+  "city_tris": 221994,
+  "bodies_used": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H"
+  ],
+  "signs_used": 16,
+  "modules": {
+    "YN_shop_A_01": {
+      "body": 1030,
+      "worst_with_sign_awning": 2132,
+      "limit": 8000
+    },
+    "YN_shop_B_01": {
+      "body": 1368,
+      "worst_with_sign_awning": 2604,
+      "limit": 8000
+    },
+    "YN_shop_C_01": {
+      "body": 870,
+      "worst_with_sign_awning": 1972,
+      "limit": 8000
+    },
+    "YN_shop_D_01": {
+      "body": 1178,
+      "worst_with_sign_awning": 2414,
+      "limit": 8000
+    },
+    "YN_shop_E_01": {
+      "body": 876,
+      "worst_with_sign_awning": 1978,
+      "limit": 8000
+    },
+    "YN_shop_F_01": {
+      "body": 1116,
+      "worst_with_sign_awning": 2352,
+      "limit": 8000
+    },
+    "YN_shop_G_01": {
+      "body": 1116,
+      "worst_with_sign_awning": 2218,
+      "limit": 8000
+    },
+    "YN_shop_H_01": {
+      "body": 2682,
+      "worst_with_sign_awning": 3784,
+      "limit": 8000
+    }
+  },
+  "props": {
+    "YN_prop_bicycle_01": {
+      "tris": 1266,
+      "kind": "small",
+      "limit": 1500
+    },
+    "YN_prop_vending_machine_01": {
+      "tris": 88,
+      "kind": "large",
+      "limit": 3000
+    },
+    "YN_prop_utility_pole_01": {
+      "tris": 798,
+      "kind": "large",
+      "limit": 3000
+    },
+    "YN_prop_street_lamp_01": {
+      "tris": 92,
+      "kind": "small",
+      "limit": 1500
+    },
+    "YN_prop_planter_01": {
+      "tris": 484,
+      "kind": "small",
+      "limit": 1500
+    },
+    "YN_prop_planter_02": {
+      "tris": 484,
+      "kind": "small",
+      "limit": 1500
+    },
+    "YN_prop_plastic_crate_01": {
+      "tris": 358,
+      "kind": "small",
+      "limit": 1500
+    },
+    "YN_prop_standing_sign_01": {
+      "tris": 26,
+      "kind": "small",
+      "limit": 1500
+    },
+    "YN_prop_standing_sign_02": {
+      "tris": 26,
+      "kind": "small",
+      "limit": 1500
+    },
+    "YN_prop_nobori_01": {
+      "tris": 74,
+      "kind": "small",
+      "limit": 1500
+    }
+  },
+  "uv1_meshes_checked": 87,
+  "uv1_problems": {},
+  "uv1_coverage_min": 0.09,
+  "uv1_coverage_mean": 0.495
+}

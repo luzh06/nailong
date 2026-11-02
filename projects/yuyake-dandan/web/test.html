@@ -1,0 +1,83 @@
+<!doctype html><meta charset=utf-8><title>cijian perf</title><style>html,body{margin:0;background:#000}</style>
+<script>
+const _nm=new URLSearchParams(location.search).get('name')||'x';
+window.addEventListener('error',e=>fetch('/result?'+_nm+'_log',{method:'POST',body:'ERR '+e.message+' '+(e.filename||e.target&&e.target.src)+':'+e.lineno}),true);
+window.addEventListener('unhandledrejection',e=>fetch('/result?'+_nm+'_log',{method:'POST',body:'REJ '+(e.reason&&e.reason.stack||e.reason)}));
+fetch('/result?'+_nm+'_log',{method:'POST',body:'boot '+location.href});
+</script>
+<script type=importmap>{"imports":{"three":"/web/vendor/three.module.js","three/addons/":"/web/vendor/"}}</script>
+<script type=module>
+import * as THREE from 'three';
+import {GLTFLoader} from 'three/addons/GLTFLoader.js';
+import {RGBELoader} from 'three/addons/RGBELoader.js';
+const q=new URLSearchParams(location.search);
+const NAME=q.get('name'),GLB=q.get('glb'),RES=q.get('tex'),SHADOW=q.get('shadow'),W=+q.get('w')||1920,H=+q.get('h')||1080,FRAMES=+q.get('frames')||900;
+const post=(p,b)=>fetch(p,{method:'POST',body:b});
+const log=m=>post('/result?'+NAME+'_log',m);
+const t0=performance.now();
+const renderer=new THREE.WebGLRenderer({antialias:true,powerPreference:'high-performance',preserveDrawingBuffer:true});
+renderer.setPixelRatio(1);renderer.setSize(W,H);document.body.appendChild(renderer.domElement);
+renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=.9;
+renderer.shadowMap.enabled=SHADOW!=='none';renderer.shadowMap.type=THREE.PCFSoftShadowMap;
+const gl=renderer.getContext();
+const scene=new THREE.Scene();
+const camera=new THREE.PerspectiveCamera(42,W/H,.1,600);
+const pm=new THREE.PMREMGenerator(renderer);
+log('three ok '+THREE.REVISION);
+const hdr=await new RGBELoader().loadAsync('/assets/hdri/kloofendal_48d_partly_cloudy_puresky_4k.hdr');
+hdr.mapping=THREE.EquirectangularReflectionMapping;scene.environment=pm.fromEquirectangular(hdr).texture;scene.background=hdr;scene.backgroundIntensity=.8;scene.environmentIntensity=.8;
+const sun=new THREE.DirectionalLight(0xfff2dd,3.4);sun.position.set(-22,40,-12);sun.target.position.set(0,0,-3);sun.castShadow=SHADOW!=='none';
+sun.shadow.mapSize.set(2048,2048);Object.assign(sun.shadow.camera,{left:-34,right:34,top:34,bottom:-34,near:1,far:120});sun.shadow.bias=-.0004;sun.shadow.normalBias=.03;scene.add(sun,sun.target);
+log('hdr ok');
+const gltf=await new GLTFLoader().loadAsync(GLB);
+log('glb ok');
+const MAP=await (await fetch('/web/matmap.json')).json();
+const tl=new THREE.TextureLoader(),cache={};
+const base=RES==='4k'?'/assets/textures4k/':'/assets/tex2k/';
+function tex(path,color,rep){
+ const k=path+rep;if(cache[k])return cache[k];
+ const t=tl.load(path);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.repeat.set(rep,rep);t.anisotropy=8;if(color)t.colorSpace=THREE.SRGBColorSpace;return cache[k]=t;}
+let meshes=0;
+gltf.scene.traverse(o=>{ if(!o.isMesh)return; meshes++;o.castShadow=o.receiveShadow=true;
+ const old=o.material,e=MAP[old.name];
+ if(e){const m=new THREE.MeshStandardMaterial({name:old.name,roughness:.8,metalness:0});
+  if(e.tex){const r=1/e.size;m.map=tex(base+e.tex+'/'+e.tex+'_Diffuse.jpg',true,r);m.roughnessMap=tex(base+e.tex+'/'+e.tex+'_Rough.jpg',false,r);if(e.nor)m.normalMap=tex('/assets/textures/'+e.tex+'/'+e.tex+'_nor_gl.jpg',false,r);}
+  if(e.photo){m.map=tl.load(e.photo);m.map.colorSpace=THREE.SRGBColorSpace;m.map.flipY=false;}
+  if(e.col)m.color.setRGB(...e.col);if(e.tint)m.color.setRGB(...e.tint);
+  o.material=m;}
+});
+scene.add(gltf.scene);
+const loadMs=performance.now()-t0;
+renderer.compile(scene,camera);
+await new Promise(r=>setTimeout(r,2500));
+// 固定路线：玩家视高 1.6 米，走到台阶顶，带左右环视。Blender(x,y,z)->(x,z,-y)
+const P=[[-1,-4.7,1.6],[.2,-1,1.6],[.2,1.2,1.62],[-1,3.2,2.3],[-1,5.4,2.85],[0,9,2.85],[0,12,2.85]].map(p=>new THREE.Vector3(p[0],p[2],-p[1]));
+const path=new THREE.CatmullRomCurve3(P);
+function place(i){const t=i/FRAMES,s=t<.5?t*2:(1-t)*2;const p=path.getPointAt(Math.min(s,.999));const ahead=path.getPointAt(Math.min(s+.02,1));
+ const yaw=Math.sin(t*Math.PI*6)*.7,dir=ahead.clone().sub(p).setY(0).normalize();if(t>=.5)dir.negate();dir.applyAxisAngle(new THREE.Vector3(0,1,0),yaw);
+ camera.position.copy(p);camera.lookAt(p.clone().add(dir).add(new THREE.Vector3(0,Math.sin(t*Math.PI*10)*.14+.05,0)));}
+const ext=gl.getExtension('EXT_disjoint_timer_query_webgl2');
+const cpu=[],gpu=[],raf=[],pend=[];let calls=0,tri=0,prev=0,frame=0;
+function pollQ(){while(pend.length){const q0=pend[0];if(!gl.getQueryParameter(q0,gl.QUERY_RESULT_AVAILABLE))break;if(!gl.getParameter(ext.GPU_DISJOINT_EXT))gpu.push(gl.getQueryParameter(q0,gl.QUERY_RESULT)/1e6);gl.deleteQuery(q0);pend.shift();}}
+const stat=a=>{const s=[...a].sort((x,y)=>x-y),n=s.length;return n?{n,avg:+(s.reduce((x,y)=>x+y,0)/n).toFixed(2),p50:+s[n>>1].toFixed(2),p95:+s[Math.floor(n*.95)].toFixed(2),p99:+s[Math.floor(n*.99)].toFixed(2),max:+s[n-1].toFixed(2)}:null};
+if(SHADOW==='static'){place(0);renderer.render(scene,camera);renderer.shadowMap.autoUpdate=false;}
+const shots=new Set([30,190,330]);const px=new Uint8Array(4);
+function loop(now){
+ if(prev&&frame>20)raf.push(now-prev);prev=now;place(frame);
+ const c0=performance.now();let qq;if(ext){qq=gl.createQuery();gl.beginQuery(ext.TIME_ELAPSED_EXT,qq);}
+ renderer.render(scene,camera);
+ if(ext){gl.endQuery(ext.TIME_ELAPSED_EXT);pend.push(qq);}
+ gl.readPixels(0,0,1,1,gl.RGBA,gl.UNSIGNED_BYTE,px); // 强制等 GPU 完成，帧时间才是真的
+ if(frame>20)cpu.push(performance.now()-c0);pollQ();
+ calls=Math.max(calls,renderer.info.render.calls);tri=Math.max(tri,renderer.info.render.triangles);
+ if(shots.has(frame))post('/shot?'+NAME+'_'+frame,renderer.domElement.toDataURL('image/jpeg',.82));
+ frame++;
+ if(frame<FRAMES)requestAnimationFrame(loop);else finish();
+}
+async function finish(){await new Promise(r=>setTimeout(r,800));gl.flush();pollQ();
+ const i=gl.getExtension('WEBGL_debug_renderer_info');
+ const out={name:NAME,glb:GLB,tex:RES,shadow:SHADOW,res:W+'x'+H,gpuName:i&&gl.getParameter(i.UNMASKED_RENDERER_WEBGL),loadMs:Math.round(loadMs),meshes,calls,triangles:tri,geometries:renderer.info.memory.geometries,textures:renderer.info.memory.textures,programs:renderer.info.programs.length,gpuMs:stat(gpu.slice(20)),cpuMs:stat(cpu),rafMs:stat(raf),heapMB:performance.memory?Math.round(performance.memory.usedJSHeapSize/1048576):null};
+ await post('/result?'+NAME,JSON.stringify(out));await post('/result?done_'+NAME,'1');}
+log('loop start');
+requestAnimationFrame(loop);
+</script>

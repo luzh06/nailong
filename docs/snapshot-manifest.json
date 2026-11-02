@@ -1,0 +1,2889 @@
+{
+  "snapshot_at": "2026-11-02T10:59:33.827138+08:00",
+  "source_root": "D:\\Cijian",
+  "source_untouched": true,
+  "excluded": [
+    "ongoing bake outputs and baked runtime",
+    "tools",
+    "browser profile",
+    "older scene versions",
+    "job temporary files",
+    "ZIP archive duplication"
+  ],
+  "files": [
+    {
+      "path": "projects/tokyo-market/asset-register.csv",
+      "origin": "Cijian.zip:Cijian/asset-register.csv",
+      "bytes": 14565,
+      "sha256": "19f06dc2ae2326501addec2944bebd3c8eccdc9edaf65b93ae520456779aefe8"
+    },
+    {
+      "path": "projects/tokyo-market/exports/layout_report.txt",
+      "origin": "Cijian.zip:Cijian/exports/layout_report.txt",
+      "bytes": 1641,
+      "sha256": "f702303ef7b6996c6e6623978865fb58d2fc9127265277ef33c0e88753702d69"
+    },
+    {
+      "path": "projects/tokyo-market/exports/master_tokyo_crowd.glb",
+      "origin": "Cijian.zip:Cijian/exports/master_tokyo_crowd.glb",
+      "bytes": 337812,
+      "sha256": "40c34a4803164e893f35de600a509f9305aa6588bbb4cb7ea168fdf543b44bd5"
+    },
+    {
+      "path": "projects/tokyo-market/exports/master_tokyo_scene.glb",
+      "origin": "Cijian.zip:Cijian/exports/master_tokyo_scene.glb",
+      "bytes": 31066496,
+      "sha256": "0691b654193896a93a0f303b4a94dc30f241754643d19dc702fcea2d8615f078"
+    },
+    {
+      "path": "projects/tokyo-market/exports/master_tokyo_shutters_closed.glb",
+      "origin": "Cijian.zip:Cijian/exports/master_tokyo_shutters_closed.glb",
+      "bytes": 610892,
+      "sha256": "508be9a161a7a3d7baa6d6eeadb28bfba381c4aa11cc20de177b0dc59436f414"
+    },
+    {
+      "path": "projects/tokyo-market/exports/stats_blender.json",
+      "origin": "Cijian.zip:Cijian/exports/stats_blender.json",
+      "bytes": 2526,
+      "sha256": "dbc33aa2f8a613d9eee40434f1d8569de170131e6a0890d6d799d6396602083f"
+    },
+    {
+      "path": "projects/tokyo-market/exports/stats_glb.json",
+      "origin": "Cijian.zip:Cijian/exports/stats_glb.json",
+      "bytes": 74401,
+      "sha256": "bc282a61df12f494fe745d9a2f15b4f4999480be460aff7a33ba8287a0767513"
+    },
+    {
+      "path": "projects/tokyo-market/exports/YN_prop_bicycle_01.glb",
+      "origin": "Cijian.zip:Cijian/exports/YN_prop_bicycle_01.glb",
+      "bytes": 110088,
+      "sha256": "fbfb14271dbe11c826344590626afaf2bf755dd170e37fbdb16f3518c0c7af23"
+    },
+    {
+      "path": "projects/tokyo-market/exports/YN_prop_nobori_01.glb",
+      "origin": "Cijian.zip:Cijian/exports/YN_prop_nobori_01.glb",
+      "bytes": 104728,
+      "sha256": "d2e5d0c86364f6e9481a0534c351907e1f53355d942962d7c2b378eb49a8607f"
+    },
+    {
+      "path": "projects/tokyo-market/exports/YN_prop_planter_01.glb",
+      "origin": "Cijian.zip:Cijian/exports/YN_prop_planter_01.glb",
+      "bytes": 48640,
+      "sha256": "db283ff701439c126fea0b0a569278af7f9ee2bbb6b098c165646ef15941dc09"
+    },
+    {
+      "path": "projects/tokyo-market/exports/YN_prop_planter_02.glb",
+      "origin": "Cijian.zip:Cijian/exports/YN_prop_planter_02.glb",
+      "bytes": 48640,
+      "sha256": "ed968b6268b044d8f841a192af8d20057f79e0b9853e1dc2e6bfc610de289d43"
+    },
+    {
+      "path": "projects/tokyo-market/exports/YN_prop_plastic_crate_01.glb",
+      "origin": "Cijian.zip:Cijian/exports/YN_prop_plastic_crate_01.glb",
+      "bytes": 32188,
+      "sha256": "71b99a3c3eec51891c8026b820826609b704c74434cdd67cb350aecf70fc8c75"
+    },
+    {
+      "path": "projects/tokyo-market/exports/YN_prop_standing_sign_01.glb",
+      "origin": "Cijian.zip:Cijian/exports/YN_prop_standing_sign_01.glb",
+      "bytes": 880852,
+      "sha256": "091127a28a2c5fa7415ab2bf68e33f9358b76b36820ec63a1dfdd19a3562b4bd"
+    },
+    {
+      "path": "projects/tokyo-market/exports/YN_prop_standing_sign_02.glb",
+      "origin": "Cijian.zip:Cijian/exports/YN_prop_standing_sign_02.glb",
+      "bytes": 880852,
+      "sha256": "95576ee0998d83ceabc0b1e8f6509745efbbb5b1d7e746b75affe7086be0ed76"
+    },
+    {
+      "path": "projects/tokyo-market/exports/YN_prop_street_lamp_01.glb",
+      "origin": "Cijian.zip:Cijian/exports/YN_prop_street_lamp_01.glb",
+      "bytes": 9480,
+      "sha256": "0a28e0fbd048042540761f5873e0f0df0c3581fd61cddebdc9ce96302bb1940f"
+    },
+    {
+      "path": "projects/tokyo-market/exports/YN_prop_utility_pole_01.glb",
+      "origin": "Cijian.zip:Cijian/exports/YN_prop_utility_pole_01.glb",
+      "bytes": 207712,
+      "sha256": "68316f2da080ca8cf14d6ad3979651ede594520015c8da2c4c99310accc9d2af"
+    },
+    {
+      "path": "projects/tokyo-market/exports/YN_prop_vending_machine_01.glb",
+      "origin": "Cijian.zip:Cijian/exports/YN_prop_vending_machine_01.glb",
+      "bytes": 377860,
+      "sha256": "228be3c7ec1ac3772f0d485f787884b5c63326775c3a930c6875ed98a8548ee3"
+    },
+    {
+      "path": "projects/tokyo-market/exports/YN_shop_A_01.glb",
+      "origin": "Cijian.zip:Cijian/exports/YN_shop_A_01.glb",
+      "bytes": 4103116,
+      "sha256": "53e759c87f63c861acf26ae5982f25419643bac167bd5cb1789314f146457d5d"
+    },
+    {
+      "path": "projects/tokyo-market/exports/YN_shop_B_01.glb",
+      "origin": "Cijian.zip:Cijian/exports/YN_shop_B_01.glb",
+      "bytes": 4084428,
+      "sha256": "60a738ab6a6e9db594fbf00135a5e61ffe2f8c98c54ca3bab1c0d677ae10caf0"
+    },
+    {
+      "path": "projects/tokyo-market/exports/YN_shop_C_01.glb",
+      "origin": "Cijian.zip:Cijian/exports/YN_shop_C_01.glb",
+      "bytes": 4089948,
+      "sha256": "8ca0fde4b2542f75c47860d8facc102e427b540ba4f4066c9d118ada02b3ae99"
+    },
+    {
+      "path": "projects/tokyo-market/exports/YN_shop_D_01.glb",
+      "origin": "Cijian.zip:Cijian/exports/YN_shop_D_01.glb",
+      "bytes": 4067344,
+      "sha256": "9bd46d260321f89ec9da681472dd5ead1b86f0c9073d2192f03e279cd35f4edb"
+    },
+    {
+      "path": "projects/tokyo-market/exports/YN_shop_E_01.glb",
+      "origin": "Cijian.zip:Cijian/exports/YN_shop_E_01.glb",
+      "bytes": 4090084,
+      "sha256": "e915f98ccba16be9f2ea4f64b26b2a4f7a631d26a6664b9e81030efb1dba3587"
+    },
+    {
+      "path": "projects/tokyo-market/exports/YN_shop_F_01.glb",
+      "origin": "Cijian.zip:Cijian/exports/YN_shop_F_01.glb",
+      "bytes": 4062496,
+      "sha256": "a4fdc3a43afe2e255aaa2290f43a490dd43417edc29350dd442bbaae51bd1034"
+    },
+    {
+      "path": "projects/tokyo-market/exports/YN_shop_G_01.glb",
+      "origin": "Cijian.zip:Cijian/exports/YN_shop_G_01.glb",
+      "bytes": 4088308,
+      "sha256": "9483ae58a0651eeac3232d2b3eef8d1918de08e2c1657772dc1fdf6d7c8e4e67"
+    },
+    {
+      "path": "projects/tokyo-market/exports/YN_shop_H_01.glb",
+      "origin": "Cijian.zip:Cijian/exports/YN_shop_H_01.glb",
+      "bytes": 4157388,
+      "sha256": "5f63962e4c4f60e8461e3e8373a1bd7971ab1d256d6265adace41b3818e995c5"
+    },
+    {
+      "path": "projects/tokyo-market/fonts/ZenAntique-OFL.txt",
+      "origin": "Cijian.zip:Cijian/fonts/ZenAntique-OFL.txt",
+      "bytes": 4394,
+      "sha256": "c76594cc8f4af2ea35d1e05278b1911b22cc6227bc3b0ad404f68be03fe3f107"
+    },
+    {
+      "path": "projects/tokyo-market/fonts/ZenAntique-Regular.ttf",
+      "origin": "Cijian.zip:Cijian/fonts/ZenAntique-Regular.ttf",
+      "bytes": 5507920,
+      "sha256": "8c5cf7a136837ee705d06bbc133ea18ac06b7dd284f38aace91f5de36725c315"
+    },
+    {
+      "path": "projects/tokyo-market/hdri/dusk.hdr",
+      "origin": "Cijian.zip:Cijian/hdri/dusk.hdr",
+      "bytes": 17976514,
+      "sha256": "dbe5f750e4753f51ef8d178553318ad8550035cac0ce5cfab058e76cf8f021d2"
+    },
+    {
+      "path": "projects/tokyo-market/hdri/morning.hdr",
+      "origin": "Cijian.zip:Cijian/hdri/morning.hdr",
+      "bytes": 66959416,
+      "sha256": "6a224eb99e2dd61c26179f6f18fdfb7724a7c2d0d9ddd86c0f483630f93f6938"
+    },
+    {
+      "path": "projects/tokyo-market/hdri/sunset.hdr",
+      "origin": "Cijian.zip:Cijian/hdri/sunset.hdr",
+      "bytes": 65609474,
+      "sha256": "f2610ff3ed21171063bc7be641deb4608b05e44d4da357634966a4febc94bb65"
+    },
+    {
+      "path": "projects/tokyo-market/japanese-text-list.csv",
+      "origin": "Cijian.zip:Cijian/japanese-text-list.csv",
+      "bytes": 4778,
+      "sha256": "b73e7c19a177a6c3e8feb55a65c6ec8369f7418dbe0c2103741aa24848c15082"
+    },
+    {
+      "path": "projects/tokyo-market/master_tokyo.blend",
+      "origin": "Cijian.zip:Cijian/master_tokyo.blend",
+      "bytes": 7416312,
+      "sha256": "82a0376d0f1eaae360617b50a0d1a4b1ab74d8987d3c9ecd20ff958d793d8dc7"
+    },
+    {
+      "path": "projects/tokyo-market/previews/compare_main_dusk_vs_191.jpg",
+      "origin": "Cijian.zip:Cijian/previews/compare_main_dusk_vs_191.jpg",
+      "bytes": 1757760,
+      "sha256": "2f2e47ec2f0e6dc1787cdac724b56fb2e6b28be71deffb401653e7b681106894"
+    },
+    {
+      "path": "projects/tokyo-market/previews/main_dusk.jpg",
+      "origin": "Cijian.zip:Cijian/previews/main_dusk.jpg",
+      "bytes": 817017,
+      "sha256": "011089709c07018589030b23fb3c230cf209a18e366714e4af1c0962b7cbc6cd"
+    },
+    {
+      "path": "projects/tokyo-market/previews/main_morning.jpg",
+      "origin": "Cijian.zip:Cijian/previews/main_morning.jpg",
+      "bytes": 842658,
+      "sha256": "36d870efcd5508a8c00531c0f908973088e67ca8af901fa498f67f84c0e55cca"
+    },
+    {
+      "path": "projects/tokyo-market/previews/main_sunset.jpg",
+      "origin": "Cijian.zip:Cijian/previews/main_sunset.jpg",
+      "bytes": 790759,
+      "sha256": "90569d12628e03e2d114e386226eb60d92cbedeb1b11ae04970f7f29f04c6a6f"
+    },
+    {
+      "path": "projects/tokyo-market/previews/walk_lane_dusk.jpg",
+      "origin": "Cijian.zip:Cijian/previews/walk_lane_dusk.jpg",
+      "bytes": 451982,
+      "sha256": "a61a307f647446cea6173f23eabb8ca22ca0d8836b073632e4194fafdc6dba86"
+    },
+    {
+      "path": "projects/tokyo-market/previews/walk_lane_morning.jpg",
+      "origin": "Cijian.zip:Cijian/previews/walk_lane_morning.jpg",
+      "bytes": 424301,
+      "sha256": "d17e66b21358f3c93d22d2668464b4054f69c75375d97f8d0fc440e9218ed296"
+    },
+    {
+      "path": "projects/tokyo-market/previews/walk_lane_sunset.jpg",
+      "origin": "Cijian.zip:Cijian/previews/walk_lane_sunset.jpg",
+      "bytes": 454736,
+      "sha256": "a5285ef03f76057784388f887eba40d24f885f336aa7d34c5293621173f8abcf"
+    },
+    {
+      "path": "projects/tokyo-market/previews/walk_mid_dusk.jpg",
+      "origin": "Cijian.zip:Cijian/previews/walk_mid_dusk.jpg",
+      "bytes": 544323,
+      "sha256": "25b1db2403439f802e8ca567abca99408928920779eef88ff1af69f42c2473bb"
+    },
+    {
+      "path": "projects/tokyo-market/previews/walk_mid_morning.jpg",
+      "origin": "Cijian.zip:Cijian/previews/walk_mid_morning.jpg",
+      "bytes": 504966,
+      "sha256": "f42dd303d111ec54a0e68d6fbde8280852973599a4b48471f4e5f8031c89a3d7"
+    },
+    {
+      "path": "projects/tokyo-market/previews/walk_mid_sunset.jpg",
+      "origin": "Cijian.zip:Cijian/previews/walk_mid_sunset.jpg",
+      "bytes": 519639,
+      "sha256": "66f6475dbf59bb9288369fb602a03b5ec7d84f307251e740ff2b125470ac111e"
+    },
+    {
+      "path": "projects/tokyo-market/previews/walk_street_dusk.jpg",
+      "origin": "Cijian.zip:Cijian/previews/walk_street_dusk.jpg",
+      "bytes": 543853,
+      "sha256": "72e97125ea60ee775d0f5b5ac400ab56b14c45013958528f125ca359b56cf93b"
+    },
+    {
+      "path": "projects/tokyo-market/previews/walk_street_morning.jpg",
+      "origin": "Cijian.zip:Cijian/previews/walk_street_morning.jpg",
+      "bytes": 505141,
+      "sha256": "b1ef51bc52062af7254f72e54b4096b1e946c67713c63bb70c319faed4c30cc8"
+    },
+    {
+      "path": "projects/tokyo-market/previews/walk_street_sunset.jpg",
+      "origin": "Cijian.zip:Cijian/previews/walk_street_sunset.jpg",
+      "bytes": 518653,
+      "sha256": "5930faa4faa183edd8dbfa934a0e6955df487bcbb49e02fdff781289f4da40ff"
+    },
+    {
+      "path": "projects/tokyo-market/reference/ref_189_day.jpg",
+      "origin": "Cijian.zip:Cijian/reference/ref_189_day.jpg",
+      "bytes": 619029,
+      "sha256": "b779812126a423c7ed870f93e4fa45d3ed232a611613f4784209e15f2414d234"
+    },
+    {
+      "path": "projects/tokyo-market/reference/ref_191_dusk.jpg",
+      "origin": "Cijian.zip:Cijian/reference/ref_191_dusk.jpg",
+      "bytes": 637341,
+      "sha256": "ac3df756bec6c6aae5fdda1eceb70f62e7d3304cc84479a0e78bda6fe3c60f4c"
+    },
+    {
+      "path": "projects/tokyo-market/reference/shops/shop_01.jpg",
+      "origin": "Cijian.zip:Cijian/reference/shops/shop_01.jpg",
+      "bytes": 499418,
+      "sha256": "e622833a02d39f633fa9e1406f2a1ad472ead6b6bd9a2ce413150775379f1baf"
+    },
+    {
+      "path": "projects/tokyo-market/reference/shops/shop_02.jpg",
+      "origin": "Cijian.zip:Cijian/reference/shops/shop_02.jpg",
+      "bytes": 424801,
+      "sha256": "d5c7432fe13ed526a0dbfab3496b7dc3313496fc6601750cda809d8d20af9ea1"
+    },
+    {
+      "path": "projects/tokyo-market/reference/shops/shop_03.jpg",
+      "origin": "Cijian.zip:Cijian/reference/shops/shop_03.jpg",
+      "bytes": 387803,
+      "sha256": "53b68093bbfffd688362d14944a5defa936fee39fd3904f057d31e3657c58d6d"
+    },
+    {
+      "path": "projects/tokyo-market/reference/shops/shop_04.jpg",
+      "origin": "Cijian.zip:Cijian/reference/shops/shop_04.jpg",
+      "bytes": 821194,
+      "sha256": "fc90a587d83b7df39a29d314338c0230ca71ce4ef9a7fa2c00f4f2f652882406"
+    },
+    {
+      "path": "projects/tokyo-market/reference/shops/shop_05.jpg",
+      "origin": "Cijian.zip:Cijian/reference/shops/shop_05.jpg",
+      "bytes": 590219,
+      "sha256": "a158674918137b485f89d50abbf5e7f0b6241ca2e16d6c69557dea5fb8bf3cda"
+    },
+    {
+      "path": "projects/tokyo-market/reference/web/notes.md",
+      "origin": "Cijian.zip:Cijian/reference/web/notes.md",
+      "bytes": 1825,
+      "sha256": "3325b937e20a9c839bedfeee77ccdfef459592387394596b8861b77d02300ed3"
+    },
+    {
+      "path": "projects/tokyo-market/reference/web/sources.json",
+      "origin": "Cijian.zip:Cijian/reference/web/sources.json",
+      "bytes": 5122,
+      "sha256": "17df5db6b8eb48e5fd254e87601cec6ec69fbd8b3294f9cecdce7c634cf8d30b"
+    },
+    {
+      "path": "projects/tokyo-market/reference/web/thumbs/web_01.jpg",
+      "origin": "Cijian.zip:Cijian/reference/web/thumbs/web_01.jpg",
+      "bytes": 306736,
+      "sha256": "53ee206afa014e2d08a040705fa3891e95f6c12e11afa1b3544b60776d05da50"
+    },
+    {
+      "path": "projects/tokyo-market/reference/web/thumbs/web_02.jpg",
+      "origin": "Cijian.zip:Cijian/reference/web/thumbs/web_02.jpg",
+      "bytes": 209221,
+      "sha256": "56c71ba8ceed62185f27a7f7bdba826e3c5e8e61a29472cee17e3c4aeead8bb2"
+    },
+    {
+      "path": "projects/tokyo-market/reference/web/thumbs/web_03.jpg",
+      "origin": "Cijian.zip:Cijian/reference/web/thumbs/web_03.jpg",
+      "bytes": 272008,
+      "sha256": "f0fa462d813280402544d6df846189416e5447a6b77c77df63fda8da0dc10f0e"
+    },
+    {
+      "path": "projects/tokyo-market/reference/web/thumbs/web_04.jpg",
+      "origin": "Cijian.zip:Cijian/reference/web/thumbs/web_04.jpg",
+      "bytes": 227501,
+      "sha256": "174b28483ce82eced4b1bae6b7cc99e6c17d7a8e6385ba290be46c67358a1908"
+    },
+    {
+      "path": "projects/tokyo-market/reference/web/thumbs/web_05.jpg",
+      "origin": "Cijian.zip:Cijian/reference/web/thumbs/web_05.jpg",
+      "bytes": 231197,
+      "sha256": "5a29e0674dc0db27533c7b45d2e9f4710d203eab475a370c7b55cc3b3b114125"
+    },
+    {
+      "path": "projects/tokyo-market/reference/web/thumbs/web_06.jpg",
+      "origin": "Cijian.zip:Cijian/reference/web/thumbs/web_06.jpg",
+      "bytes": 141733,
+      "sha256": "4d45384b1f1f382f201fd6318f7da2f9aa14f8dc78491cec444625d2d32c1fdd"
+    },
+    {
+      "path": "projects/tokyo-market/reference/web/thumbs/web_07.jpg",
+      "origin": "Cijian.zip:Cijian/reference/web/thumbs/web_07.jpg",
+      "bytes": 161204,
+      "sha256": "eddaa2979286b94d42bfbcfc61ad25198fd5aaca7e6d8af4cdd8ec38db6f62b6"
+    },
+    {
+      "path": "projects/tokyo-market/reference/web/thumbs/web_08.jpg",
+      "origin": "Cijian.zip:Cijian/reference/web/thumbs/web_08.jpg",
+      "bytes": 182846,
+      "sha256": "412c576d2f9e03b3ab943926b019405860f726f8d3fc8225a92a0989c84a512b"
+    },
+    {
+      "path": "projects/tokyo-market/reference/web/thumbs/web_09.jpg",
+      "origin": "Cijian.zip:Cijian/reference/web/thumbs/web_09.jpg",
+      "bytes": 204280,
+      "sha256": "a2e92a64cf23fb82b13064f32a8544cb580d41a3c420836becd5e48b1aa12840"
+    },
+    {
+      "path": "projects/tokyo-market/reference/web/thumbs/web_10.jpg",
+      "origin": "Cijian.zip:Cijian/reference/web/thumbs/web_10.jpg",
+      "bytes": 232179,
+      "sha256": "09d4824fec18f1578f88161018958825b3b333c2a271e1720bce6545133e8f2b"
+    },
+    {
+      "path": "projects/tokyo-market/reference/web/thumbs/web_11.jpg",
+      "origin": "Cijian.zip:Cijian/reference/web/thumbs/web_11.jpg",
+      "bytes": 257357,
+      "sha256": "fe071463284c575b8bc19b5a1989c578dfe0921ea2990c57e3b027e406591f3c"
+    },
+    {
+      "path": "projects/tokyo-market/reference/web/thumbs/web_12.jpg",
+      "origin": "Cijian.zip:Cijian/reference/web/thumbs/web_12.jpg",
+      "bytes": 310161,
+      "sha256": "b94480862abdf02120aeca69375d6f2dce7da48d1631a2e8300c8c8d13d6b473"
+    },
+    {
+      "path": "projects/tokyo-market/reference/web/web_01.jpg",
+      "origin": "Cijian.zip:Cijian/reference/web/web_01.jpg",
+      "bytes": 7864665,
+      "sha256": "a49b55f004ca187bac98976301f20ada0078e7f0e9521fa3278832e2f1f09318"
+    },
+    {
+      "path": "projects/tokyo-market/reference/web/web_02.jpg",
+      "origin": "Cijian.zip:Cijian/reference/web/web_02.jpg",
+      "bytes": 12815459,
+      "sha256": "ec7b4b4dad7781ca3358201633797854bdb6ef29fb7a48f141c40876b6a0dffe"
+    },
+    {
+      "path": "projects/tokyo-market/reference/web/web_03.jpg",
+      "origin": "Cijian.zip:Cijian/reference/web/web_03.jpg",
+      "bytes": 4053800,
+      "sha256": "32f03948116d9be0ec937eb812995465848e81576d4a99b4c4d04598674151d3"
+    },
+    {
+      "path": "projects/tokyo-market/reference/web/web_04.jpg",
+      "origin": "Cijian.zip:Cijian/reference/web/web_04.jpg",
+      "bytes": 3593540,
+      "sha256": "6a718e7d5b70fd25d7494ca142f2c39f781ba5445b96dec19fbfb96e79173ad6"
+    },
+    {
+      "path": "projects/tokyo-market/reference/web/web_05.jpg",
+      "origin": "Cijian.zip:Cijian/reference/web/web_05.jpg",
+      "bytes": 10195681,
+      "sha256": "97311ebb6dfec3513635d85806a1695680f72484956d29b16db8302951fa0fda"
+    },
+    {
+      "path": "projects/tokyo-market/reference/web/web_06.jpg",
+      "origin": "Cijian.zip:Cijian/reference/web/web_06.jpg",
+      "bytes": 19535513,
+      "sha256": "fd1cbccdc1c1ff53c7aa9527f52bd0ea529ec3c9c6b3bf0db8c62fc8b05b90c7"
+    },
+    {
+      "path": "projects/tokyo-market/reference/web/web_07.jpg",
+      "origin": "Cijian.zip:Cijian/reference/web/web_07.jpg",
+      "bytes": 16457225,
+      "sha256": "5703a6b80f6fe36b7f405b98c8bacba56e896c33cf6655fbaa4c9886d4076aa8"
+    },
+    {
+      "path": "projects/tokyo-market/reference/web/web_08.jpg",
+      "origin": "Cijian.zip:Cijian/reference/web/web_08.jpg",
+      "bytes": 23951845,
+      "sha256": "deb4b4ba8b616a649b5c8fcb8a71aef758e784d55fe51a4ea6b6beac4b1d39b3"
+    },
+    {
+      "path": "projects/tokyo-market/reference/web/web_09.jpg",
+      "origin": "Cijian.zip:Cijian/reference/web/web_09.jpg",
+      "bytes": 12311677,
+      "sha256": "de8150a65892219c6a346dae046c0df644d7753d9862a402642f96c6da5b29ab"
+    },
+    {
+      "path": "projects/tokyo-market/reference/web/web_10.jpg",
+      "origin": "Cijian.zip:Cijian/reference/web/web_10.jpg",
+      "bytes": 604851,
+      "sha256": "d041408ac8730150d044cf9d813071003c565ed599ad3957e0e95a786434e872"
+    },
+    {
+      "path": "projects/tokyo-market/reference/web/web_11.jpg",
+      "origin": "Cijian.zip:Cijian/reference/web/web_11.jpg",
+      "bytes": 1375050,
+      "sha256": "90bf136c1fecb10c7a1591a09b4be2cd97c65c6a138101b5a4f42c5941d9ad0a"
+    },
+    {
+      "path": "projects/tokyo-market/reference/web/web_12.jpg",
+      "origin": "Cijian.zip:Cijian/reference/web/web_12.jpg",
+      "bytes": 776267,
+      "sha256": "7b65b6656a2503378bf445cde30a29acf11b3436fd97bb0c7df0b2287df66f5a"
+    },
+    {
+      "path": "projects/tokyo-market/scripts/01b_fetch_realism_assets.py",
+      "origin": "Cijian.zip:Cijian/scripts/01b_fetch_realism_assets.py",
+      "bytes": 2650,
+      "sha256": "bc8f72bff7b39f0e2411865162790643b3c774573a94566229e36572058a7dc7"
+    },
+    {
+      "path": "projects/tokyo-market/scripts/01c_fetch_realism_assets.ps1",
+      "origin": "Cijian.zip:Cijian/scripts/01c_fetch_realism_assets.ps1",
+      "bytes": 1576,
+      "sha256": "d8c307e26b832e5adcafa8199951bea99409dcf8fea95740c59839eb5fe409fe"
+    },
+    {
+      "path": "projects/tokyo-market/scripts/01_fetch_assets.py",
+      "origin": "Cijian.zip:Cijian/scripts/01_fetch_assets.py",
+      "bytes": 2437,
+      "sha256": "b3b2bb24bacfc962900a80feaa4af43f3da8d0cdc07429f7ed577af8a1955743"
+    },
+    {
+      "path": "projects/tokyo-market/scripts/02b_prepare_kit_textures.py",
+      "origin": "Cijian.zip:Cijian/scripts/02b_prepare_kit_textures.py",
+      "bytes": 13409,
+      "sha256": "c60a306ce4ebe076f0269e3eced7eaf488b3c87f4945c66ebc929584d667f7cf"
+    },
+    {
+      "path": "projects/tokyo-market/scripts/02c_prepare_city_textures.py",
+      "origin": "Cijian.zip:Cijian/scripts/02c_prepare_city_textures.py",
+      "bytes": 8489,
+      "sha256": "2872efb28bb16aed9a836fd7e4c92cd60502117b17d5d18d8bcaf52fbae33c1d"
+    },
+    {
+      "path": "projects/tokyo-market/scripts/02d_prepare_reference_textures.py",
+      "origin": "Cijian.zip:Cijian/scripts/02d_prepare_reference_textures.py",
+      "bytes": 16681,
+      "sha256": "8748d58dddc4d2e6ab45a8e7698a8b6c998b9ef0e5bc65921e54ee4b862be024"
+    },
+    {
+      "path": "projects/tokyo-market/scripts/02e_prepare_realism_textures.py",
+      "origin": "Cijian.zip:Cijian/scripts/02e_prepare_realism_textures.py",
+      "bytes": 4592,
+      "sha256": "9e618be0c2923f1f6ce108706623948fab012c486b532028d6907500f81c3621"
+    },
+    {
+      "path": "projects/tokyo-market/scripts/02f_prepare_skyline.py",
+      "origin": "Cijian.zip:Cijian/scripts/02f_prepare_skyline.py",
+      "bytes": 3794,
+      "sha256": "68abba879ebc8d7a98788bb4381b640ae00ca74892390478e80a526f968aeccd"
+    },
+    {
+      "path": "projects/tokyo-market/scripts/02g_prepare_goods.py",
+      "origin": "Cijian.zip:Cijian/scripts/02g_prepare_goods.py",
+      "bytes": 1562,
+      "sha256": "8f19ee2d0f0d674f8e861310dcf3c86a44e30ca91321d2e365de942dabff1cf9"
+    },
+    {
+      "path": "projects/tokyo-market/scripts/02_prepare_textures.py",
+      "origin": "Cijian.zip:Cijian/scripts/02_prepare_textures.py",
+      "bytes": 8796,
+      "sha256": "b2fdd1dc0e0a9540d2a254a74d528baaae3644287c706239622802a49c61d0b1"
+    },
+    {
+      "path": "projects/tokyo-market/scripts/03_write_registers.py",
+      "origin": "Cijian.zip:Cijian/scripts/03_write_registers.py",
+      "bytes": 8303,
+      "sha256": "d57c781729d22823f5f7992c20b270fd6a92a6e5b5461ad6f3408b521a51d43f"
+    },
+    {
+      "path": "projects/tokyo-market/scripts/04b_fetch_shop_photos.py",
+      "origin": "Cijian.zip:Cijian/scripts/04b_fetch_shop_photos.py",
+      "bytes": 3538,
+      "sha256": "b717035a6663acef17eff5247eae66d429006e1cd44d5253c75c459dda335a8d"
+    },
+    {
+      "path": "projects/tokyo-market/scripts/04_fetch_reference_photos.py",
+      "origin": "Cijian.zip:Cijian/scripts/04_fetch_reference_photos.py",
+      "bytes": 3944,
+      "sha256": "d9fec505706bf3b6d7007fd1d117037b21efcda49e5f1a6fad931f16d1fd1d1b"
+    },
+    {
+      "path": "projects/tokyo-market/scripts/05_build_web_viewer.py",
+      "origin": "Cijian.zip:Cijian/scripts/05_build_web_viewer.py",
+      "bytes": 734,
+      "sha256": "058c47cf783f4eb6e5ba28e37ec23ab8e0980dd4c750e1f34e84b54be4f28a1d"
+    },
+    {
+      "path": "projects/tokyo-market/scripts/build_scene.py",
+      "origin": "Cijian.zip:Cijian/scripts/build_scene.py",
+      "bytes": 42840,
+      "sha256": "66d394696e97d351ccb876ca7619829751ce6d47c377f27157261f3ab828c21c"
+    },
+    {
+      "path": "projects/tokyo-market/scripts/build_whitebox.py",
+      "origin": "Cijian.zip:Cijian/scripts/build_whitebox.py",
+      "bytes": 6416,
+      "sha256": "d0ab48da7f5955e88e0be9dc8e3a8f9fe5d55fa229847b223e05360d5fc1c739"
+    },
+    {
+      "path": "projects/tokyo-market/scripts/camera_match.py",
+      "origin": "Cijian.zip:Cijian/scripts/camera_match.py",
+      "bytes": 1795,
+      "sha256": "018fc2b95a5e8a06207d18d36aa36c9c844dcfe8eef4037fabffdb110e818eaa"
+    },
+    {
+      "path": "projects/tokyo-market/scripts/check_blend.py",
+      "origin": "Cijian.zip:Cijian/scripts/check_blend.py",
+      "bytes": 921,
+      "sha256": "0dc5b2b4008658a47036ea32aaeb6b07a828ef83f4b15602bf2e005a6dcfc08a"
+    },
+    {
+      "path": "projects/tokyo-market/scripts/cijian_common.py",
+      "origin": "Cijian.zip:Cijian/scripts/cijian_common.py",
+      "bytes": 3815,
+      "sha256": "b5a14a322c05d223ee32bd6be8d18bcb4f2e73e80c330b165a1693820c340789"
+    },
+    {
+      "path": "projects/tokyo-market/scripts/compare.py",
+      "origin": "Cijian.zip:Cijian/scripts/compare.py",
+      "bytes": 740,
+      "sha256": "dae609fc88a2da0a99cb56d2811b8248f1890f6ed16c5d51932e35067db8e87a"
+    },
+    {
+      "path": "projects/tokyo-market/scripts/kit_atlas.py",
+      "origin": "Cijian.zip:Cijian/scripts/kit_atlas.py",
+      "bytes": 3824,
+      "sha256": "4cfa8d10c44b48ff12e753bdb61d2c38cb9407e3f84c7424bfac660099c64534"
+    },
+    {
+      "path": "projects/tokyo-market/scripts/kit_city.py",
+      "origin": "Cijian.zip:Cijian/scripts/kit_city.py",
+      "bytes": 26916,
+      "sha256": "968bf3aa85fdae5cd7f704cac1a186ffd5792e77dfb98c91f336d1e5dfd64091"
+    },
+    {
+      "path": "projects/tokyo-market/scripts/kit_core.py",
+      "origin": "Cijian.zip:Cijian/scripts/kit_core.py",
+      "bytes": 21801,
+      "sha256": "f45fd9ec6ec181c549269ebab6c7aeefade240d8bee22d4cfcaf8d78b48d963b"
+    },
+    {
+      "path": "projects/tokyo-market/scripts/kit_landmarks.py",
+      "origin": "Cijian.zip:Cijian/scripts/kit_landmarks.py",
+      "bytes": 14378,
+      "sha256": "65a9518081ed6abe21200d9cd50359bfea3f9ff90145e97d3dfd3bf530e0017e"
+    },
+    {
+      "path": "projects/tokyo-market/scripts/kit_props.py",
+      "origin": "Cijian.zip:Cijian/scripts/kit_props.py",
+      "bytes": 12513,
+      "sha256": "49726ece53f27ecc48189a4bfdcd6eac76444acc766998aa68a250db456205fe"
+    },
+    {
+      "path": "projects/tokyo-market/scripts/kit_shops.py",
+      "origin": "Cijian.zip:Cijian/scripts/kit_shops.py",
+      "bytes": 35764,
+      "sha256": "015800d89da93bc044556d1cb9b61634a67f857dcd8ac8c6e2281c37f4a8cff3"
+    },
+    {
+      "path": "projects/tokyo-market/scripts/post_grade.py",
+      "origin": "Cijian.zip:Cijian/scripts/post_grade.py",
+      "bytes": 1521,
+      "sha256": "4f4b6fb7d5cac03030a269fa448a25efe71d69007f9c964f18b57094e8b51bd7"
+    },
+    {
+      "path": "projects/tokyo-market/scripts/run_final_render.ps1",
+      "origin": "Cijian.zip:Cijian/scripts/run_final_render.ps1",
+      "bytes": 1724,
+      "sha256": "38df8e40f3c99fd5b681c6d353859af687d0e6f5d235ca22c8094b7e670348a7"
+    },
+    {
+      "path": "projects/tokyo-market/scripts/verify_glb.py",
+      "origin": "Cijian.zip:Cijian/scripts/verify_glb.py",
+      "bytes": 2933,
+      "sha256": "23b71740760da5f44a635d47315021252e5fab7c9c5642994d2cbbd28e6a80ca"
+    },
+    {
+      "path": "projects/tokyo-market/scripts/verify_layout.py",
+      "origin": "Cijian.zip:Cijian/scripts/verify_layout.py",
+      "bytes": 1511,
+      "sha256": "224ca31780438eca308b54e4c6b0105e4388df746a8b7d7be2d46376da2c2328"
+    },
+    {
+      "path": "projects/tokyo-market/scripts/verify_scene_details.py",
+      "origin": "Cijian.zip:Cijian/scripts/verify_scene_details.py",
+      "bytes": 2338,
+      "sha256": "f5ac237701dc3a60e03fd9b1e07e8fc46415d7c3aac2d27bd7dbab1afb704bed"
+    },
+    {
+      "path": "projects/tokyo-market/textures/corrugated_iron_02_arm_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/corrugated_iron_02_arm_2k.jpg",
+      "bytes": 4037544,
+      "sha256": "80ae7f8b9ff7521898049cb79b7cfb82a0bb95bf0cba312ffe1d0e5760f45dcb"
+    },
+    {
+      "path": "projects/tokyo-market/textures/corrugated_iron_02_diff_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/corrugated_iron_02_diff_2k.jpg",
+      "bytes": 2325335,
+      "sha256": "1bd2b9900e066d7e6cbacc5093aa4204db71c1bbe13b42a3d8ad23d04fa8075a"
+    },
+    {
+      "path": "projects/tokyo-market/textures/corrugated_iron_02_nor_gl_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/corrugated_iron_02_nor_gl_2k.jpg",
+      "bytes": 2178443,
+      "sha256": "a7972360f64fb44beee57750b0ad6bee1f3b64268cd9f649b5e92e1de4de0632"
+    },
+    {
+      "path": "projects/tokyo-market/textures/distressed_painted_planks_arm_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/distressed_painted_planks_arm_2k.jpg",
+      "bytes": 1449641,
+      "sha256": "66b615472647f5d92971ba484bb2b89fcd7650dff6e8b581cf90febc51c5c734"
+    },
+    {
+      "path": "projects/tokyo-market/textures/distressed_painted_planks_diff_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/distressed_painted_planks_diff_2k.jpg",
+      "bytes": 1422193,
+      "sha256": "d774c704ab449a860ae6620c4472fd75a01d48ac93a5bdd79d414b16e56bca30"
+    },
+    {
+      "path": "projects/tokyo-market/textures/distressed_painted_planks_nor_gl_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/distressed_painted_planks_nor_gl_2k.jpg",
+      "bytes": 1705372,
+      "sha256": "e5ec24e42ca30f7b66d23d74b409ce0a66998bffd17929f1d751af7e47d275ef"
+    },
+    {
+      "path": "projects/tokyo-market/textures/grey_roof_tiles_02_arm_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/grey_roof_tiles_02_arm_2k.jpg",
+      "bytes": 702157,
+      "sha256": "cdafc65c4cee9ca999090f2a433ed28846cf3ca625bdc26435fe807b9c15b966"
+    },
+    {
+      "path": "projects/tokyo-market/textures/grey_roof_tiles_02_diff_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/grey_roof_tiles_02_diff_2k.jpg",
+      "bytes": 1530646,
+      "sha256": "6a95a3d95a8d8b96f02caf9639f5ceaa814d0faae96f351d1e594b4d4feeb6d7"
+    },
+    {
+      "path": "projects/tokyo-market/textures/grey_roof_tiles_02_nor_gl_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/grey_roof_tiles_02_nor_gl_2k.jpg",
+      "bytes": 2553079,
+      "sha256": "95136d3c44c314838f3b62961986b64cdacfb54b6646302b1dab671eaefa5cca"
+    },
+    {
+      "path": "projects/tokyo-market/textures/japanese_cedar_planks_arm_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/japanese_cedar_planks_arm_2k.jpg",
+      "bytes": 2782361,
+      "sha256": "48b6a27493efc3b691ee4d3bbca74779f55480ca8a87626d5cf0f4ebd68119be"
+    },
+    {
+      "path": "projects/tokyo-market/textures/japanese_cedar_planks_diff_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/japanese_cedar_planks_diff_2k.jpg",
+      "bytes": 2812544,
+      "sha256": "92fd3742f4744e6262e8093c5dfb919a6bbabac48fe672734d4cba7bc5a4aea3"
+    },
+    {
+      "path": "projects/tokyo-market/textures/japanese_cedar_planks_nor_gl_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/japanese_cedar_planks_nor_gl_2k.jpg",
+      "bytes": 3776186,
+      "sha256": "8f9d6194b9345b9a89702a0a146edf70728a2dc2d23050b60260a1442a2df526"
+    },
+    {
+      "path": "projects/tokyo-market/textures/painted_metal_shutter_arm_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/painted_metal_shutter_arm_2k.jpg",
+      "bytes": 2565660,
+      "sha256": "86f1b5e96df17d30114007b17ba272b7c8771fc212223257cb2621aa9ce39ce1"
+    },
+    {
+      "path": "projects/tokyo-market/textures/painted_metal_shutter_diff_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/painted_metal_shutter_diff_2k.jpg",
+      "bytes": 2474114,
+      "sha256": "0aa6835b7da52960dd371897f1777166210ca07386a2872eb162ab8398595997"
+    },
+    {
+      "path": "projects/tokyo-market/textures/painted_metal_shutter_nor_gl_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/painted_metal_shutter_nor_gl_2k.jpg",
+      "bytes": 3097249,
+      "sha256": "2757f76146b522c9a0e5c057bd8fcac6600861def33a814c63b8b8e1f6a1d97f"
+    },
+    {
+      "path": "projects/tokyo-market/textures/plastered_wall_02_arm_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/plastered_wall_02_arm_2k.jpg",
+      "bytes": 2258378,
+      "sha256": "a110e1743704f636d3d4f80986c726310b304224d11429aa088e9c55f9c7e3ff"
+    },
+    {
+      "path": "projects/tokyo-market/textures/plastered_wall_02_diff_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/plastered_wall_02_diff_2k.jpg",
+      "bytes": 1713014,
+      "sha256": "caa72056d9157f08912a4c86c844296f93f323f8b30f418895625b052c837d0c"
+    },
+    {
+      "path": "projects/tokyo-market/textures/plastered_wall_02_nor_gl_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/plastered_wall_02_nor_gl_2k.jpg",
+      "bytes": 3842550,
+      "sha256": "7667573e538a6116892a3139fbecf5acb85728bf10e715111b87080af756cd78"
+    },
+    {
+      "path": "projects/tokyo-market/textures/rectangular_paving_arm_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/rectangular_paving_arm_2k.jpg",
+      "bytes": 3008463,
+      "sha256": "69cf4f6641dfd0331414a2f65f85653ec8f136b9e757e23379f2aa8c19d4d220"
+    },
+    {
+      "path": "projects/tokyo-market/textures/rectangular_paving_diff_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/rectangular_paving_diff_2k.jpg",
+      "bytes": 2899518,
+      "sha256": "8b53fa4454f561e6578e6322f69b426f6beaa832aa4eec341785534c6af24c90"
+    },
+    {
+      "path": "projects/tokyo-market/textures/rectangular_paving_nor_gl_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/rectangular_paving_nor_gl_2k.jpg",
+      "bytes": 3059539,
+      "sha256": "f5248ba369183c22c75ad5ded7af22a3541ad799acc026ce11185fdf81432470"
+    },
+    {
+      "path": "projects/tokyo-market/textures/sources.json",
+      "origin": "Cijian.zip:Cijian/textures/sources.json",
+      "bytes": 1957,
+      "sha256": "07e05d85b0d4ba24185a03f8cf648af2299fe9c8904ffa36c4b284d77b9037f2"
+    },
+    {
+      "path": "projects/tokyo-market/textures/wall_brick_arm_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/wall_brick_arm_2k.jpg",
+      "bytes": 697262,
+      "sha256": "8866779a31fdda349433ed749b299bf0b4bb7c56b1ca12637ca3d17642a07982"
+    },
+    {
+      "path": "projects/tokyo-market/textures/wall_brick_diff_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/wall_brick_diff_2k.jpg",
+      "bytes": 2969950,
+      "sha256": "c37ef11bb94a533d1c758c5c7d7199264e90f19b23946766c7c59aa189c11ff6"
+    },
+    {
+      "path": "projects/tokyo-market/textures/wall_brick_nor_gl_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/wall_brick_nor_gl_2k.jpg",
+      "bytes": 3684630,
+      "sha256": "3bcb8714c450369915a9608a9e5318433a5e5df932184519bdbfd993dec16a9f"
+    },
+    {
+      "path": "projects/tokyo-market/textures/wall_concrete_arm_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/wall_concrete_arm_2k.jpg",
+      "bytes": 3993163,
+      "sha256": "f1a60edecc22e1f6d0937ce4b65203e54a4b5d9abc720e5587d834a474ec6fe8"
+    },
+    {
+      "path": "projects/tokyo-market/textures/wall_concrete_diff_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/wall_concrete_diff_2k.jpg",
+      "bytes": 3109558,
+      "sha256": "daee26f5b5dae37e3fb2947c64f4045fd4e6d3b89884eb0d878ba6414746e8e8"
+    },
+    {
+      "path": "projects/tokyo-market/textures/wall_concrete_nor_gl_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/wall_concrete_nor_gl_2k.jpg",
+      "bytes": 4939794,
+      "sha256": "22bd9c17a6dfe3441f671cba1b40e2329767c79b6472004d1633aeac368d5210"
+    },
+    {
+      "path": "projects/tokyo-market/textures/wall_paint_arm_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/wall_paint_arm_2k.jpg",
+      "bytes": 3970117,
+      "sha256": "a96d3a07dfed7bfb812adcdc9867b5b8a22a9d262ad3c67889577b80ed304adc"
+    },
+    {
+      "path": "projects/tokyo-market/textures/wall_paint_diff_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/wall_paint_diff_2k.jpg",
+      "bytes": 4055196,
+      "sha256": "558ae59b4b9d159f24686e4ee0a768ea89cbc02f08ede82b91445d57850748b8"
+    },
+    {
+      "path": "projects/tokyo-market/textures/wall_paint_nor_gl_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/wall_paint_nor_gl_2k.jpg",
+      "bytes": 2786551,
+      "sha256": "8da7fbbb29311fc53b052167c9fcfa73027c0a06808120a200295d866587a813"
+    },
+    {
+      "path": "projects/tokyo-market/textures/wall_plaster_arm_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/wall_plaster_arm_2k.jpg",
+      "bytes": 1498782,
+      "sha256": "6e1cf382b9793cb7b9479a7f6271671dee3dfd1e49063e10cf2ca5840bd02284"
+    },
+    {
+      "path": "projects/tokyo-market/textures/wall_plaster_diff_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/wall_plaster_diff_2k.jpg",
+      "bytes": 2771885,
+      "sha256": "194545715b5c03e8715cbedf2f3ae9de164789ad7eb6c7a74a640f6483b0a89d"
+    },
+    {
+      "path": "projects/tokyo-market/textures/wall_plaster_nor_gl_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/wall_plaster_nor_gl_2k.jpg",
+      "bytes": 1287677,
+      "sha256": "af92612ba58e9d18cd222fc7d13f84b53851444c2e18c671c16016cd9e4a265a"
+    },
+    {
+      "path": "projects/tokyo-market/textures/wall_tile_arm_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/wall_tile_arm_2k.jpg",
+      "bytes": 1785921,
+      "sha256": "5b32321f9d8e5ca2ba358b480fcd2e3c0649b24727208154bb80aec78da31573"
+    },
+    {
+      "path": "projects/tokyo-market/textures/wall_tile_diff_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/wall_tile_diff_2k.jpg",
+      "bytes": 2288265,
+      "sha256": "a8d604be82d451f08094c628e9a49d88aaa9e981bbdd3363d67df48e5643c542"
+    },
+    {
+      "path": "projects/tokyo-market/textures/wall_tile_nor_gl_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/wall_tile_nor_gl_2k.jpg",
+      "bytes": 3584640,
+      "sha256": "c790ccf246c3020b92285b99f6a055d67b47fdea1158fe4be5fadd9e0c7f88b1"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_cedar_basecolor_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_cedar_basecolor_2k.jpg",
+      "bytes": 601698,
+      "sha256": "22d1ee0174d8953c754bd4c31deeb34eac339b1fb0e9dafab674e6b5bac7b574"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_cedar_normal_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_cedar_normal_2k.jpg",
+      "bytes": 1454917,
+      "sha256": "d14d13c38c3b7eae839be183e80d5b910c8f22b1ac1f0287f3660b200819c453"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_cedar_orm_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_cedar_orm_2k.jpg",
+      "bytes": 862116,
+      "sha256": "aa6fd48689aae06358605747c8e3708c78ee3152e83411eff4f48a5108062e03"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_citysigns_1k.png",
+      "origin": "Cijian.zip:Cijian/textures/yn_citysigns_1k.png",
+      "bytes": 834268,
+      "sha256": "25668c42d18179a7bb42595726ef3780eaa3c6dce534812b7fc30e6a3eb9db3d"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_city_facade_basecolor_1k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_city_facade_basecolor_1k.jpg",
+      "bytes": 223037,
+      "sha256": "7d1f21a4b59dbb2839d849aa2b49557cb2ecb16f3344f0fafd732cf6ebb39472"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_city_facade_emissive_1k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_city_facade_emissive_1k.jpg",
+      "bytes": 20460,
+      "sha256": "5b957b5a14ef5962e536896dbd7dc520a4c0cc4414e40d322268567601947241"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_corrugated_basecolor_1k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_corrugated_basecolor_1k.jpg",
+      "bytes": 207799,
+      "sha256": "ea20b1d5db7be5992ee583f9062f5e46d8d1d3f43977d65daf89dbdff6d8ed98"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_corrugated_normal_1k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_corrugated_normal_1k.jpg",
+      "bytes": 173670,
+      "sha256": "154f57db39a63a5cbac57d785cd19ddbd1bd05902ff22e91cf6bec562ae1ff32"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_corrugated_orm_1k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_corrugated_orm_1k.jpg",
+      "bytes": 351967,
+      "sha256": "f6b68f06f8faaa0f5838520586e716af3c90f1bd0254ae392618982663d8456b"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_facade_brick_basecolor_1k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_facade_brick_basecolor_1k.jpg",
+      "bytes": 274087,
+      "sha256": "86b8a5da297b4a371adb54e60603eb65a30adf53eea247f7020afc2425c21f48"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_facade_brick_emissive_1k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_facade_brick_emissive_1k.jpg",
+      "bytes": 20257,
+      "sha256": "481267f0695b7a2b17c17956a0558998f1527d1204d32f76d183c544bc595a4b"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_facade_concrete_basecolor_1k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_facade_concrete_basecolor_1k.jpg",
+      "bytes": 187768,
+      "sha256": "3adfd6a508698dc79edb9955735f721b6622da016c00c0d798f138ac529da1bf"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_facade_concrete_emissive_1k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_facade_concrete_emissive_1k.jpg",
+      "bytes": 33796,
+      "sha256": "69af5e0c67ec62ae635811539c24b8b3ee5d0e2330f4c5f4d7f0019159fe335c"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_facade_plaster_basecolor_1k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_facade_plaster_basecolor_1k.jpg",
+      "bytes": 185032,
+      "sha256": "6a7488abfa17cb1b0d977bbab9bf7530f24f5dd1039090006ddfd9bbf097a01e"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_facade_plaster_emissive_1k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_facade_plaster_emissive_1k.jpg",
+      "bytes": 20093,
+      "sha256": "ddcb109c47fd7ac05223c4ac55868d4df04272e73b9bd14e35f3a0704f8f61b3"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_facade_tile_basecolor_1k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_facade_tile_basecolor_1k.jpg",
+      "bytes": 237692,
+      "sha256": "83e65957fc387ae829d49a1d8d25197307d58d4d525b1abe474c2839e7707a74"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_facade_tile_emissive_1k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_facade_tile_emissive_1k.jpg",
+      "bytes": 17011,
+      "sha256": "820c69c18ff09236a41da5d59ddc17ef75b76757bbf3f91a975fdddf0a8bd210"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_goods_photo_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_goods_photo_2k.jpg",
+      "bytes": 1533481,
+      "sha256": "b00e32d2aa8351adcd2102cd4d0806cd7eb94d22dcf575db359ddfe5040f3f84"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_grime_1k.png",
+      "origin": "Cijian.zip:Cijian/textures/yn_grime_1k.png",
+      "bytes": 264353,
+      "sha256": "e892d95af8605a5363984c85918463340fc7a8ba7aebd8843da052ca518bc7d9"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_ground_stain_1k.png",
+      "origin": "Cijian.zip:Cijian/textures/yn_ground_stain_1k.png",
+      "bytes": 193266,
+      "sha256": "f1418b9b41dd8edee7eed8fc965e430f391be50e2847d9e85c52890c03fd801f"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_kawara_basecolor_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_kawara_basecolor_2k.jpg",
+      "bytes": 220532,
+      "sha256": "688fe359c8110b5794dc49ddb6d12617da95e3f9eab5c6ccc9a759fa08a6cabe"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_kawara_normal_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_kawara_normal_2k.jpg",
+      "bytes": 396169,
+      "sha256": "26fa9b03967b65c253a88b765d76cc5a5b24b1565f0a74b2b452a0d66401b52c"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_kawara_orm_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_kawara_orm_2k.jpg",
+      "bytes": 447309,
+      "sha256": "abdcf7583d2ac199b81083ad9b3896c6954dd356a0ad928d3a1bf35d385afc9e"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_lantern_basecolor_512.png",
+      "origin": "Cijian.zip:Cijian/textures/yn_lantern_basecolor_512.png",
+      "bytes": 275410,
+      "sha256": "ca2269c6bae501279ea2c8dae3c8ccc4d0b060e57bf75608907567e8e88c9336"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_noren_basecolor_2k.png",
+      "origin": "Cijian.zip:Cijian/textures/yn_noren_basecolor_2k.png",
+      "bytes": 4072738,
+      "sha256": "fa4ebefabd3ff05fa9552f0fe8cc41ca3c66043f06afcbec5c50223de1a5ab39"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_paving_basecolor_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_paving_basecolor_2k.jpg",
+      "bytes": 1298422,
+      "sha256": "b047bea3161d42de33750dfa8bf13084be50bdc5cd25d4c4913d1e73c9b4ba62"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_paving_normal_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_paving_normal_2k.jpg",
+      "bytes": 1001766,
+      "sha256": "71eb1727f0785f6cc55e960721615cf3234a7f28cd58a6b6ca0ae40928d72634"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_paving_orm_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_paving_orm_2k.jpg",
+      "bytes": 949281,
+      "sha256": "21e5f3af6ba2e8ca8de10c03e5e55ba3d68ab898f7d5b1ae60c9a1a5ff4a95e7"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_people_palette.png",
+      "origin": "Cijian.zip:Cijian/textures/yn_people_palette.png",
+      "bytes": 373,
+      "sha256": "1b98eddce3af286027d643cd8aa177270d6cd3f8791c1661dc365d2904b9f5eb"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_plaque_1k.png",
+      "origin": "Cijian.zip:Cijian/textures/yn_plaque_1k.png",
+      "bytes": 397332,
+      "sha256": "b3ee185c7e4a83d3667923bd4ac64d68da6fc5d7a3c3e8bc020a6e2b82bbaefb"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_plaster_basecolor_1k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_plaster_basecolor_1k.jpg",
+      "bytes": 139413,
+      "sha256": "1a3e5fe4697bdbfb805e1b492f004dc22cd16c1c0cb2702a4715acaabd438855"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_plaster_normal_1k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_plaster_normal_1k.jpg",
+      "bytes": 375440,
+      "sha256": "4f21d05c02e631cdaf9bf2798c424a8034df6262776e21dd60b8ee6fab0fa2e5"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_plaster_orm_1k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_plaster_orm_1k.jpg",
+      "bytes": 149568,
+      "sha256": "7c900d6888044a6c840af2d8f813be032c126ca4be135904fd4a9f03f36777bf"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_props_basecolor_1k.png",
+      "origin": "Cijian.zip:Cijian/textures/yn_props_basecolor_1k.png",
+      "bytes": 935944,
+      "sha256": "b3ad4aa6f878f38d1eb28e73d8b4bc52191de091fc323bb2e058370842654658"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_roof_basecolor_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_roof_basecolor_2k.jpg",
+      "bytes": 575834,
+      "sha256": "174aa8ab3aaeee822da6f2f28ea4ee60ada2573f39b2da588d94cfe73e6fcf88"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_roof_normal_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_roof_normal_2k.jpg",
+      "bytes": 1314047,
+      "sha256": "05f69fb91e414a3a083e54fdce4f4e9a08ec01657f73bdcb463694ad0fe48df9"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_roof_orm_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_roof_orm_2k.jpg",
+      "bytes": 917326,
+      "sha256": "cce33e78076668dd2dab0ad7cb6c7cae2c565a990c8c8e41338059137d807975"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_roof_red_basecolor_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_roof_red_basecolor_2k.jpg",
+      "bytes": 313534,
+      "sha256": "74c8c71a9288c078d8cb2df34aa22412dafe2d3844f7320efe15eea0bc5d7a96"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_shop_a_signs_basecolor_2k.png",
+      "origin": "Cijian.zip:Cijian/textures/yn_shop_a_signs_basecolor_2k.png",
+      "bytes": 4798709,
+      "sha256": "5b5b03025709a8258949220d82e11285da17ceb5639d9695ec59813c90aa49ff"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_shutter_art_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_shutter_art_2k.jpg",
+      "bytes": 1490083,
+      "sha256": "cf2267e6b6ad680e8840be54bcb1ccd56504573b86d7bdcff0efc90c05d9f3c6"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_shutter_basecolor_1k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_shutter_basecolor_1k.jpg",
+      "bytes": 228854,
+      "sha256": "5f97bfc445bc62a7781950d35874be20b452ee385f87277dd34d7ccb7a91ef3a"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_shutter_normal_1k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_shutter_normal_1k.jpg",
+      "bytes": 287576,
+      "sha256": "5097e94e74dc034ca9f4e557ccb7a88e74fe928ebce31568e7840f0da9e8d8c4"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_shutter_orm_1k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_shutter_orm_1k.jpg",
+      "bytes": 206991,
+      "sha256": "fc4d80aa6421bbfef8e0f148aba5974fb076ea2dfbe8f853dff4e88714f7a22b"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_signs_basecolor_2k.png",
+      "origin": "Cijian.zip:Cijian/textures/yn_signs_basecolor_2k.png",
+      "bytes": 4468172,
+      "sha256": "bea0c0e7d0b66d23ebcfe5834e2856bc13aed3953e2039cccd38aa994955ce94"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_skyline_dusk_2k.png",
+      "origin": "Cijian.zip:Cijian/textures/yn_skyline_dusk_2k.png",
+      "bytes": 607906,
+      "sha256": "53c843b8c33c4faedcd8a46c9017fdd1b4ebde6dd01897c4dfcef6c50daceaa9"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_skyline_morning_2k.png",
+      "origin": "Cijian.zip:Cijian/textures/yn_skyline_morning_2k.png",
+      "bytes": 1033808,
+      "sha256": "fed77c6c525f509268c43370363ade128bf894f394efc57e06c13fad15f9c211"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_skyline_sunset_2k.png",
+      "origin": "Cijian.zip:Cijian/textures/yn_skyline_sunset_2k.png",
+      "bytes": 971693,
+      "sha256": "2429bb42dca2b9ece5c22b30caa001f3969fef8678b3dbe0fd03688d40e2d3cd"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_trim_basecolor_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_trim_basecolor_2k.jpg",
+      "bytes": 1278051,
+      "sha256": "8305f745d763cfb1c95082dd18a19a562f075b9e44b4cc7d75e56dccac474267"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_trim_emissive_1k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_trim_emissive_1k.jpg",
+      "bytes": 211379,
+      "sha256": "b770729b2512b4e851e2f2a8f0f40245215bbf2c2c5038b44f83b04bf48af0e4"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_trim_normal_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_trim_normal_2k.jpg",
+      "bytes": 424391,
+      "sha256": "5adef066eb9f1b87d7ab9cab411a99b70ca89781188d4e01e088e773a10ebad1"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_trim_orm_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_trim_orm_2k.jpg",
+      "bytes": 287159,
+      "sha256": "e2e33bcc45fe9469123eb5c1289fc4da19d0cd50e61fa37b2da9b17930a4dc90"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_vermilion_basecolor_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_vermilion_basecolor_2k.jpg",
+      "bytes": 399090,
+      "sha256": "93a8e09e41ba32e211a32c1eec991f075dd186ee82ac5ea9e7fefbbeaafc22b9"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_vermilion_normal_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_vermilion_normal_2k.jpg",
+      "bytes": 501466,
+      "sha256": "2d260270127ec2012ea8ed9f1e774509a32d2a3971d4f6f76f07de75d8000bc2"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_vermilion_orm_2k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_vermilion_orm_2k.jpg",
+      "bytes": 399003,
+      "sha256": "f5fbbc554cbb3fb1b0ae596dafe0db89701895401b39eab6b26f6e0cf445139a"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_window_basecolor_1k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_window_basecolor_1k.jpg",
+      "bytes": 170437,
+      "sha256": "537938143c77cc69f95bbebdd1d99d0f201e7b51467e7ce18dd19bfdb5790c87"
+    },
+    {
+      "path": "projects/tokyo-market/textures/yn_window_emissive_1k.jpg",
+      "origin": "Cijian.zip:Cijian/textures/yn_window_emissive_1k.jpg",
+      "bytes": 110999,
+      "sha256": "4f460db7a15407e169004400c6fba94ec584b2e5fe4ec5a7d74f34af1b75400c"
+    },
+    {
+      "path": "projects/tokyo-market/web/data_crowd.js",
+      "origin": "Cijian.zip:Cijian/web/data_crowd.js",
+      "bytes": 450438,
+      "sha256": "c3c4d68187e2a46ac548684bfc7896d71c480b0da6c2dd54737948ec5271be1a"
+    },
+    {
+      "path": "projects/tokyo-market/web/data_scene.js",
+      "origin": "Cijian.zip:Cijian/web/data_scene.js",
+      "bytes": 41422018,
+      "sha256": "4b6eb6ac2c3177061ff11eda515b67763c0d2ae0a205d8ae28fc0cbaf609f260"
+    },
+    {
+      "path": "projects/tokyo-market/web/data_shutters.js",
+      "origin": "Cijian.zip:Cijian/web/data_shutters.js",
+      "bytes": 814549,
+      "sha256": "1810298f8b962bc6ec9561f7ff842c6c3ad58171838569b5d980af6e6286e8de"
+    },
+    {
+      "path": "projects/tokyo-market/web/index.html",
+      "origin": "Cijian.zip:Cijian/web/index.html",
+      "bytes": 2256,
+      "sha256": "cd10bea2ed2669d60fad78d9290bdd8a89d129e358e8ebe558c0edf03c864eb5"
+    },
+    {
+      "path": "projects/tokyo-market/web/viewer.js",
+      "origin": "Cijian.zip:Cijian/web/viewer.js",
+      "bytes": 13800,
+      "sha256": "a8f7c70d31863e6e92e39bc05dbf452c23a42bad94ceb11c680905c55df0a50f"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/hdri/kloofendal_48d_partly_cloudy_puresky_4k.hdr",
+      "origin": "D:\\Cijian\\assets\\hdri\\kloofendal_48d_partly_cloudy_puresky_4k.hdr",
+      "bytes": 20674857,
+      "sha256": "3061c00a16ecae748e84fd6c44c04804f539c118bb66325db858bad87b11bf88"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/hdri/qwantani_morning_puresky_4k.hdr",
+      "origin": "D:\\Cijian\\assets\\hdri\\qwantani_morning_puresky_4k.hdr",
+      "bytes": 17738688,
+      "sha256": "f896e72279e2bb294cfb7a5548181996d17c3810bb96761221eed2d8f393de73"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/hdri/qwantani_sunset_puresky_4k.hdr",
+      "origin": "D:\\Cijian\\assets\\hdri\\qwantani_sunset_puresky_4k.hdr",
+      "bytes": 16890545,
+      "sha256": "10ac5a0327925511e17fb0b6d903899265ffbb2b4a5ebdc9c66abec38778eddb"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/hdri/rosendal_park_sunset_puresky_4k.hdr",
+      "origin": "D:\\Cijian\\assets\\hdri\\rosendal_park_sunset_puresky_4k.hdr",
+      "bytes": 20435289,
+      "sha256": "9c5ce57318680bcb870b118e3a71c9cafb896d0d0dd930cb7c5a3c5d48049e31"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/hdri/shanghai_riverside_4k.hdr",
+      "origin": "D:\\Cijian\\assets\\hdri\\shanghai_riverside_4k.hdr",
+      "bytes": 25272079,
+      "sha256": "0195a71dd38c0528140b810063125f926b33b1d7f47f6edd0ebc350b4f28438d"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/hdri/signal_hill_sunrise_4k.hdr",
+      "origin": "D:\\Cijian\\assets\\hdri\\signal_hill_sunrise_4k.hdr",
+      "bytes": 23098664,
+      "sha256": "6e0d7eaa0af56d7516fbeacd0dcd7af472966ef2cae6c2aee6b90be99cbff650"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/masks/manhole.png",
+      "origin": "D:\\Cijian\\assets\\masks\\manhole.png",
+      "bytes": 561417,
+      "sha256": "ecfb56c467f865eb6e3f8151fb5ad127c795b2e1e67edc655b699c2f223a96f9"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/masks/road_b1.png",
+      "origin": "D:\\Cijian\\assets\\masks\\road_b1.png",
+      "bytes": 210511,
+      "sha256": "ee00cc1d58454679acc61afc990e508b1a03b2d112bc11dea87975b642e0c4fc"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/masks/road_b2.png",
+      "origin": "D:\\Cijian\\assets\\masks\\road_b2.png",
+      "bytes": 316218,
+      "sha256": "4ff29a7cfc0ecbfcb1ae89ac1fa3c7ed3106fe67c3cb1069260d975870b3d642"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/masks/road_b3.png",
+      "origin": "D:\\Cijian\\assets\\masks\\road_b3.png",
+      "bytes": 2194979,
+      "sha256": "c37e6512bfe3a301f193a875de5cb24bc22da642ab07ba7f21266fc2b3b842fe"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/masks/road_b4.png",
+      "origin": "D:\\Cijian\\assets\\masks\\road_b4.png",
+      "bytes": 2892010,
+      "sha256": "9c226115ac058221b7356536eb91bafda50eba10a7c6ba204ef8c0caca20d024"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/masks/road_m1.png",
+      "origin": "D:\\Cijian\\assets\\masks\\road_m1.png",
+      "bytes": 218696,
+      "sha256": "e22c29384ba3cc27734cacb11c10c323979182e227378d9c6cfe4d88e369d177"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/masks/road_m2.png",
+      "origin": "D:\\Cijian\\assets\\masks\\road_m2.png",
+      "bytes": 487233,
+      "sha256": "a71505468b7915442738d809f95c2151c4956bbfc657fa6751125a0b7651c8b5"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/masks/road_m3.png",
+      "origin": "D:\\Cijian\\assets\\masks\\road_m3.png",
+      "bytes": 2226787,
+      "sha256": "2943cdded0bb13ff1c50c49649131d1900ceaaeb9b475bc642c72bd3cf548460"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/masks/road_m4.png",
+      "origin": "D:\\Cijian\\assets\\masks\\road_m4.png",
+      "bytes": 2955320,
+      "sha256": "f098dd0a7adb7fe7c5a823c7fb3dc1c6aacd43a6baa9b8938cde9e42b5a5b92f"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/masks/stair_tile.png",
+      "origin": "D:\\Cijian\\assets\\masks\\stair_tile.png",
+      "bytes": 3136419,
+      "sha256": "df15992a8ec67604ad9031e431d4d285c688b12cfd2d4386bdcff433b5696668"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/photo/manhole_albedo.jpg",
+      "origin": "D:\\Cijian\\assets\\photo\\manhole_albedo.jpg",
+      "bytes": 1403094,
+      "sha256": "69718392f017be185e37c8c2ccb6c9ad4be6bf89ee6b4d750c54b720a792a4f2"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/photo/manhole_height.png",
+      "origin": "D:\\Cijian\\assets\\photo\\manhole_height.png",
+      "bytes": 2697759,
+      "sha256": "a406e2721029938faacd7e1a7f6995025c1256023925ffba7320ab77fd2a3b23"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/photo/pole_ad.png",
+      "origin": "D:\\Cijian\\assets\\photo\\pole_ad.png",
+      "bytes": 87296,
+      "sha256": "a17de1d358ff45ab9aad6706c432de0678acb3731335a032f0ae9dd5bfd2640e"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/photo/pole_tag.png",
+      "origin": "D:\\Cijian\\assets\\photo\\pole_tag.png",
+      "bytes": 17538,
+      "sha256": "f44b0d5825195c7469fc7aece9a501644595e538d450216c75869c75f50e7cb8"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/asphalt_02/asphalt_02_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\textures4k\\asphalt_02\\asphalt_02_Diffuse.jpg",
+      "bytes": 11654128,
+      "sha256": "d1601354507b6c4a46aa741b9134f9f23f738596a2bdcd20792e50ca554018e0"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/asphalt_02/asphalt_02_Displacement.png",
+      "origin": "D:\\Cijian\\assets\\textures4k\\asphalt_02\\asphalt_02_Displacement.png",
+      "bytes": 31908854,
+      "sha256": "329d2546705e7717f0df5ce6f10ff26d2203655ab08535713a22d27576afd05c"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/asphalt_02/asphalt_02_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\textures4k\\asphalt_02\\asphalt_02_Rough.jpg",
+      "bytes": 8506335,
+      "sha256": "62e0461c25fe1cb411abf8ef3afaf080e16bf96ef7fd2acd180e9867ce95aabd"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/asphalt_04/asphalt_04_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\textures4k\\asphalt_04\\asphalt_04_Diffuse.jpg",
+      "bytes": 17095862,
+      "sha256": "8bdcf7db4ca716160802c32d548e0c342d11ea50eeea97791fde9cb957cc8616"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/asphalt_04/asphalt_04_Displacement.png",
+      "origin": "D:\\Cijian\\assets\\textures4k\\asphalt_04\\asphalt_04_Displacement.png",
+      "bytes": 26733332,
+      "sha256": "84a740511e044d72fd3839e42e07f46dc49105dacf7a9cc03034a9fb98dc4527"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/asphalt_04/asphalt_04_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\textures4k\\asphalt_04\\asphalt_04_Rough.jpg",
+      "bytes": 10653459,
+      "sha256": "11d90ad425289e7d8a6ea52dbf2c335c4191f78648eef42e3d038fe8f31f429e"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/brushed_concrete/brushed_concrete_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\textures4k\\brushed_concrete\\brushed_concrete_Diffuse.jpg",
+      "bytes": 14348222,
+      "sha256": "73dfd690ff0e574e4dac84927c80e64c753ff375aab5eaf5de425a5cd87c8214"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/brushed_concrete/brushed_concrete_Displacement.png",
+      "origin": "D:\\Cijian\\assets\\textures4k\\brushed_concrete\\brushed_concrete_Displacement.png",
+      "bytes": 25688990,
+      "sha256": "4d3ea00af4385cbf7bdf423ce51bca06737c7f78671809faf779076219de3c98"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/brushed_concrete/brushed_concrete_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\textures4k\\brushed_concrete\\brushed_concrete_Rough.jpg",
+      "bytes": 13237497,
+      "sha256": "814f0d9b238d6b0927622f765d3937f8f07a2d406aa690133a92ab5b73c13dbe"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/concrete_floor_worn_001/concrete_floor_worn_001_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\textures4k\\concrete_floor_worn_001\\concrete_floor_worn_001_Diffuse.jpg",
+      "bytes": 1916459,
+      "sha256": "73a4f3fe96a2c31d34dd7e7af5f1db440362eed770c38384ee2948e10419e4fb"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/concrete_floor_worn_001/concrete_floor_worn_001_Displacement.png",
+      "origin": "D:\\Cijian\\assets\\textures4k\\concrete_floor_worn_001\\concrete_floor_worn_001_Displacement.png",
+      "bytes": 39250266,
+      "sha256": "04a2ba4ecc237395fdb4e29595df8960d05862d5e97840a01e171a1bdc2bfc99"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/concrete_floor_worn_001/concrete_floor_worn_001_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\textures4k\\concrete_floor_worn_001\\concrete_floor_worn_001_Rough.jpg",
+      "bytes": 2859541,
+      "sha256": "e33ff079f495c44f68f1a77872b897b9725f1222dd096b71ddb3ab39a35c709c"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/dirty_concrete/dirty_concrete_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\textures4k\\dirty_concrete\\dirty_concrete_Diffuse.jpg",
+      "bytes": 12522972,
+      "sha256": "8fd5ac96d998afbf65e67b06a00b9b618f87591b3340556cc8e8a4f61d2ba496"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/dirty_concrete/dirty_concrete_Displacement.png",
+      "origin": "D:\\Cijian\\assets\\textures4k\\dirty_concrete\\dirty_concrete_Displacement.png",
+      "bytes": 29751478,
+      "sha256": "85f8d35619840d32c3c48e32fc9ec777f14c0e8ec00674c443feca05b2612ee0"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/dirty_concrete/dirty_concrete_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\textures4k\\dirty_concrete\\dirty_concrete_Rough.jpg",
+      "bytes": 6033379,
+      "sha256": "bcc63bff6e225705b72812dd093536444460e2e9cba794efe341e2da4750eb10"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/granular_concrete/granular_concrete_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\textures4k\\granular_concrete\\granular_concrete_Diffuse.jpg",
+      "bytes": 12657505,
+      "sha256": "d467f2a0a9cd12ebf328b58d5f93d96a3d7aa69f5e29aa63eae362bf548ff297"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/granular_concrete/granular_concrete_Displacement.png",
+      "origin": "D:\\Cijian\\assets\\textures4k\\granular_concrete\\granular_concrete_Displacement.png",
+      "bytes": 26335909,
+      "sha256": "685159d93b45a3ce7a18db2e0535026a0c015b97f010575e9a4f0802b4f39581"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/granular_concrete/granular_concrete_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\textures4k\\granular_concrete\\granular_concrete_Rough.jpg",
+      "bytes": 6520524,
+      "sha256": "4f4f3f1ebeff7af69f92843062879394fc50cd2590ac90f034eb350598bb1b6a"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/grey_roof_tiles/grey_roof_tiles_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\textures4k\\grey_roof_tiles\\grey_roof_tiles_Diffuse.jpg",
+      "bytes": 6511882,
+      "sha256": "28b0a8716d492b6d121e62d12f0c23b061a6b41c1f441e7c9e79cc76db161e3f"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/grey_roof_tiles/grey_roof_tiles_Displacement.png",
+      "origin": "D:\\Cijian\\assets\\textures4k\\grey_roof_tiles\\grey_roof_tiles_Displacement.png",
+      "bytes": 24962203,
+      "sha256": "db484f47daaf0fa90a4804d3be086b960fd3a83ae5437e246e91cdab78eae899"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/grey_roof_tiles/grey_roof_tiles_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\textures4k\\grey_roof_tiles\\grey_roof_tiles_Rough.jpg",
+      "bytes": 3718512,
+      "sha256": "0c353bd476d3592a7d3d4dc481dd16238076e03f93634384c2311835d435d1ba"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/japanese_stone_wall/japanese_stone_wall_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\textures4k\\japanese_stone_wall\\japanese_stone_wall_Diffuse.jpg",
+      "bytes": 19632248,
+      "sha256": "ab524f59f08c3e14b5aa3f563733e66d18eff450647e348fabcf4876c2254a83"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/japanese_stone_wall/japanese_stone_wall_Displacement.png",
+      "origin": "D:\\Cijian\\assets\\textures4k\\japanese_stone_wall\\japanese_stone_wall_Displacement.png",
+      "bytes": 21913988,
+      "sha256": "c7eedfb56dc7daeeb368431ecca01d38abbec16c4a15e2178548c92b91e2addd"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/japanese_stone_wall/japanese_stone_wall_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\textures4k\\japanese_stone_wall\\japanese_stone_wall_Rough.jpg",
+      "bytes": 10446777,
+      "sha256": "7f9b3adc25c3db6f33b5f8ef753a5ab89bbcd64bb26e3002c0bddcc314465ff9"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/painted_plaster_wall/painted_plaster_wall_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\textures4k\\painted_plaster_wall\\painted_plaster_wall_Diffuse.jpg",
+      "bytes": 12556766,
+      "sha256": "0d175fb5bdcb8e8a1eedc87cd5ab41fbfd01de84ee7c4f8907017011181e3990"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/painted_plaster_wall/painted_plaster_wall_Displacement.png",
+      "origin": "D:\\Cijian\\assets\\textures4k\\painted_plaster_wall\\painted_plaster_wall_Displacement.png",
+      "bytes": 26093820,
+      "sha256": "a0c27c92004c27c1444cbd72cf95788a9dbc04e748ef7d89dddb128243a41c0b"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/painted_plaster_wall/painted_plaster_wall_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\textures4k\\painted_plaster_wall\\painted_plaster_wall_Rough.jpg",
+      "bytes": 6052444,
+      "sha256": "69a4972ca8c26a752ceb7ef5e9289b83fbfab48ccb583d0f0d699ecd06120423"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/pebble_embedded_concrete/pebble_embedded_concrete_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\textures4k\\pebble_embedded_concrete\\pebble_embedded_concrete_Diffuse.jpg",
+      "bytes": 15227744,
+      "sha256": "a7c284473241c6b78086a78c118ddbd54db1a4d59b55102e35246edeab65b418"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/pebble_embedded_concrete/pebble_embedded_concrete_Displacement.png",
+      "origin": "D:\\Cijian\\assets\\textures4k\\pebble_embedded_concrete\\pebble_embedded_concrete_Displacement.png",
+      "bytes": 27429828,
+      "sha256": "0cbc30d8f17e4f76e978a2ed92c8badb5c948a1616c1cc4546de5f6509820cf1"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/pebble_embedded_concrete/pebble_embedded_concrete_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\textures4k\\pebble_embedded_concrete\\pebble_embedded_concrete_Rough.jpg",
+      "bytes": 8428226,
+      "sha256": "654f7dc67749a163968ba506550bc9e72d95d2dab736095f386439692e28be63"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/red_brick/red_brick_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\textures4k\\red_brick\\red_brick_Diffuse.jpg",
+      "bytes": 13380210,
+      "sha256": "85b7a5eadd14766126069a6ee0033873cbe96a4a09246e8d21226613028b739c"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/red_brick/red_brick_Displacement.png",
+      "origin": "D:\\Cijian\\assets\\textures4k\\red_brick\\red_brick_Displacement.png",
+      "bytes": 24036834,
+      "sha256": "780914a1b324745d7ae25edac48b00becf6af1ed9696ed7f03d7789c556412bc"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/red_brick/red_brick_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\textures4k\\red_brick\\red_brick_Rough.jpg",
+      "bytes": 1586534,
+      "sha256": "eb84e52a2d07c7d7c195ccc4556668972fa540d381fcc828e8d485ddf5c52484"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/red_brick_pavers/red_brick_pavers_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\textures4k\\red_brick_pavers\\red_brick_pavers_Diffuse.jpg",
+      "bytes": 7965347,
+      "sha256": "8e53d5763aef957d820bac5091b78c104f9d687ef66958236a03f48907a7eedb"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/red_brick_pavers/red_brick_pavers_Displacement.png",
+      "origin": "D:\\Cijian\\assets\\textures4k\\red_brick_pavers\\red_brick_pavers_Displacement.png",
+      "bytes": 24052468,
+      "sha256": "be27157d43d38dad5f0ce74862fddce62791991ee89c17adb982953ad5f3abcc"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/red_brick_pavers/red_brick_pavers_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\textures4k\\red_brick_pavers\\red_brick_pavers_Rough.jpg",
+      "bytes": 4697730,
+      "sha256": "93de157094ff2097c80e81e1402a7446375509251eb0400d884aba2a12125b90"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/weathered_plank_siding/weathered_plank_siding_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\textures4k\\weathered_plank_siding\\weathered_plank_siding_Diffuse.jpg",
+      "bytes": 9416348,
+      "sha256": "3fd04c8e2c6ebadad9c26465dedb4a316bf3eab85097b0d78ec58dea77bdb186"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/weathered_plank_siding/weathered_plank_siding_Displacement.png",
+      "origin": "D:\\Cijian\\assets\\textures4k\\weathered_plank_siding\\weathered_plank_siding_Displacement.png",
+      "bytes": 17561462,
+      "sha256": "8c6cb34ed45f5c329c0f4dfe08a0eff80951acea2b0af1aa543ab885144f56b0"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/weathered_plank_siding/weathered_plank_siding_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\textures4k\\weathered_plank_siding\\weathered_plank_siding_Rough.jpg",
+      "bytes": 6310402,
+      "sha256": "9dc08a5253411b9c84fffea73a176543102d130311a02c0b8f712d60ed93a498"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/wood_shutter/wood_shutter_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\textures4k\\wood_shutter\\wood_shutter_Diffuse.jpg",
+      "bytes": 10863303,
+      "sha256": "aba6adb5d36b9008a4230cdf780133c85fcfd579b25491f0caa3aa4e0a6f1402"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/wood_shutter/wood_shutter_Displacement.png",
+      "origin": "D:\\Cijian\\assets\\textures4k\\wood_shutter\\wood_shutter_Displacement.png",
+      "bytes": 19062165,
+      "sha256": "38a6155f359ab5c17d5450977607cea5725936c38d0e53e5fbdf1516909ad02d"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/wood_shutter/wood_shutter_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\textures4k\\wood_shutter\\wood_shutter_Rough.jpg",
+      "bytes": 3840261,
+      "sha256": "2601e1097776bc93780817aa4c68c7c3e319aba602999dcbff380cae8afb88d7"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/worn_plaster_wall/worn_plaster_wall_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\textures4k\\worn_plaster_wall\\worn_plaster_wall_Diffuse.jpg",
+      "bytes": 12414438,
+      "sha256": "1ee65291339b65a0f36cd4526fb1ed25b3b589f12273d9714a54cb26fa4251d6"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/worn_plaster_wall/worn_plaster_wall_Displacement.png",
+      "origin": "D:\\Cijian\\assets\\textures4k\\worn_plaster_wall\\worn_plaster_wall_Displacement.png",
+      "bytes": 13213002,
+      "sha256": "b616688b613cf8ce2744d83fd3bfe2830fb49de6716ad02a8d71a27c4633c193"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures4k/worn_plaster_wall/worn_plaster_wall_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\textures4k\\worn_plaster_wall\\worn_plaster_wall_Rough.jpg",
+      "bytes": 4115330,
+      "sha256": "d8e61f2f11798321cc288a5cde03bc7d353c67c0ca61fcaf35667797b5f6b93a"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/asphalt_02/asphalt_02_AO.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\asphalt_02\\asphalt_02_AO.jpg",
+      "bytes": 2039487,
+      "sha256": "5fe1737cbbcd55f2fec3632d6170762e5733f24bbc7a7816afb22a23c710b11f"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/asphalt_02/asphalt_02_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\asphalt_02\\asphalt_02_Diffuse.jpg",
+      "bytes": 3075676,
+      "sha256": "28f5ba8690553f192c0e5e1a5ff40f34765b4b93f4cc7059b1a3e9c795b6c28c"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/asphalt_02/asphalt_02_Displacement.png",
+      "origin": "D:\\Cijian\\assets\\textures\\asphalt_02\\asphalt_02_Displacement.png",
+      "bytes": 8503947,
+      "sha256": "b054079f3d7fc876d4aef72ba72b36543213d63fb4c7d71e1c9ccfc903690f40"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/asphalt_02/asphalt_02_nor_gl.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\asphalt_02\\asphalt_02_nor_gl.jpg",
+      "bytes": 4943950,
+      "sha256": "ffe49db71a0fd34c1e259625df66a302a237597d6ef655307987ec4e45bc6f21"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/asphalt_02/asphalt_02_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\asphalt_02\\asphalt_02_Rough.jpg",
+      "bytes": 2230457,
+      "sha256": "b9a516b61b7040a9245ac206642d5f767ad9589a0169c4a1668221429e8a998c"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/asphalt_04/asphalt_04_AO.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\asphalt_04\\asphalt_04_AO.jpg",
+      "bytes": 2143804,
+      "sha256": "ba98b9ec276e8eee68a5b01b411207f386471ac898bac641380f4f5a5ae7b6ce"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/asphalt_04/asphalt_04_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\asphalt_04\\asphalt_04_Diffuse.jpg",
+      "bytes": 3999385,
+      "sha256": "e02ac16d23ea97008c2507cf58bfad7c18a3b5933b5bdea14f7f90f33a784976"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/asphalt_04/asphalt_04_Displacement.png",
+      "origin": "D:\\Cijian\\assets\\textures\\asphalt_04\\asphalt_04_Displacement.png",
+      "bytes": 6933024,
+      "sha256": "6df8e7244c40bbd2035b6005fb4fe7e1dcd133de8312aa9377589f48c4a983da"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/asphalt_04/asphalt_04_nor_gl.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\asphalt_04\\asphalt_04_nor_gl.jpg",
+      "bytes": 4581129,
+      "sha256": "16ab393a8e9135ff1f30545bc0bc46b7b7f79da8db881bcb0da22cd12d528257"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/asphalt_04/asphalt_04_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\asphalt_04\\asphalt_04_Rough.jpg",
+      "bytes": 2281861,
+      "sha256": "4a5090564b400e481af564f97e2f8ba0db820a61f6b2d50d0cfe92160a7161ab"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/brushed_concrete/brushed_concrete_AO.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\brushed_concrete\\brushed_concrete_AO.jpg",
+      "bytes": 2856456,
+      "sha256": "d0ef88ae30c09a2f6af1183e321c0be5b5432a12a27ad9226325d88d78148427"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/brushed_concrete/brushed_concrete_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\brushed_concrete\\brushed_concrete_Diffuse.jpg",
+      "bytes": 3590812,
+      "sha256": "5af96604b20e29862b449d86981b196b18ba5cbcb8659c451dd8976411a36130"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/brushed_concrete/brushed_concrete_Displacement.png",
+      "origin": "D:\\Cijian\\assets\\textures\\brushed_concrete\\brushed_concrete_Displacement.png",
+      "bytes": 6809254,
+      "sha256": "1b994e688c5d1a1fcfa7d19d5b7b8dae2561f67d7db3a6161c4795a54ed6bdae"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/brushed_concrete/brushed_concrete_nor_gl.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\brushed_concrete\\brushed_concrete_nor_gl.jpg",
+      "bytes": 3524683,
+      "sha256": "3d1f1c7a5f20a5f7a15f3bc5c5f58c0fdcaf49e71e65a5f17e086b551895c00c"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/brushed_concrete/brushed_concrete_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\brushed_concrete\\brushed_concrete_Rough.jpg",
+      "bytes": 3219426,
+      "sha256": "1100fc9e5c363144aff1b0872d7ed426ca143b63b90a4cbf15e2ab89a14ca905"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/concrete_block_wall/concrete_block_wall_AO.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\concrete_block_wall\\concrete_block_wall_AO.jpg",
+      "bytes": 2322185,
+      "sha256": "fba985b971a6388d334006e3d2d4ef81ab92da26982fa4fae5ff56ddb25dc16c"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/concrete_block_wall/concrete_block_wall_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\concrete_block_wall\\concrete_block_wall_Diffuse.jpg",
+      "bytes": 3501045,
+      "sha256": "c9159f6bb8713e00bc844ddf9f4007dc85008fa59e0f5d1ea559da632749cdd1"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/concrete_block_wall/concrete_block_wall_Displacement.png",
+      "origin": "D:\\Cijian\\assets\\textures\\concrete_block_wall\\concrete_block_wall_Displacement.png",
+      "bytes": 5347426,
+      "sha256": "c6f9e4af26ab2577d30a8d5ae4530a9ea5a765769e81c989e0ca8af0a3ec5709"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/concrete_block_wall/concrete_block_wall_nor_gl.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\concrete_block_wall\\concrete_block_wall_nor_gl.jpg",
+      "bytes": 4302780,
+      "sha256": "e7f6a5e8a83ac939590eca3a6be4e74dff3d803ddbf472598437bda13f59b951"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/concrete_block_wall/concrete_block_wall_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\concrete_block_wall\\concrete_block_wall_Rough.jpg",
+      "bytes": 746891,
+      "sha256": "0b4e9163cc341bf2c86a2fd32d80b6000e2054df114a211a6bae2b3ded77c118"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/concrete_floor_worn_001/concrete_floor_worn_001_AO.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\concrete_floor_worn_001\\concrete_floor_worn_001_AO.jpg",
+      "bytes": 689586,
+      "sha256": "94ac734a35df1d1ca15bbb4970f4bf56f9f827930b5532d8a5b971de63ec58b5"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/concrete_floor_worn_001/concrete_floor_worn_001_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\concrete_floor_worn_001\\concrete_floor_worn_001_Diffuse.jpg",
+      "bytes": 482906,
+      "sha256": "e29b45cdcd6d02fae3c087c456196ffa750779a9b62e7071aa3831dc322a0cc4"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/concrete_floor_worn_001/concrete_floor_worn_001_Displacement.png",
+      "origin": "D:\\Cijian\\assets\\textures\\concrete_floor_worn_001\\concrete_floor_worn_001_Displacement.png",
+      "bytes": 9906565,
+      "sha256": "31d3d4c9d339b5773a6872813e1cbdf793d21e6e4ad72aeb45c05a45a915ce4c"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/concrete_floor_worn_001/concrete_floor_worn_001_nor_gl.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\concrete_floor_worn_001\\concrete_floor_worn_001_nor_gl.jpg",
+      "bytes": 870609,
+      "sha256": "3b782137e34d63fd59b2e92b4e27b2ee4d082caf9dd23f00dc7ab4da5513daef"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/concrete_floor_worn_001/concrete_floor_worn_001_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\concrete_floor_worn_001\\concrete_floor_worn_001_Rough.jpg",
+      "bytes": 735249,
+      "sha256": "b904992f0d75da2c41edf832bbb838622cca076f48f7913065a152c3b640690e"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/concrete_moss/concrete_moss_AO.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\concrete_moss\\concrete_moss_AO.jpg",
+      "bytes": 612575,
+      "sha256": "dea4434a0f44643db17d6ca5d0ff2e2ea96f5e352cf4c42d6896fe4bef4b97c3"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/concrete_moss/concrete_moss_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\concrete_moss\\concrete_moss_Diffuse.jpg",
+      "bytes": 2777857,
+      "sha256": "764e43763490672a2067d3bd644ab0602a9d477533e598bcc0e3b3b01d8b937a"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/concrete_moss/concrete_moss_Displacement.png",
+      "origin": "D:\\Cijian\\assets\\textures\\concrete_moss\\concrete_moss_Displacement.png",
+      "bytes": 5805075,
+      "sha256": "7c584c9dbc03f9c45564be38fbe9c33d6612f32da6c07c07a600648743d22155"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/concrete_moss/concrete_moss_nor_gl.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\concrete_moss\\concrete_moss_nor_gl.jpg",
+      "bytes": 3713471,
+      "sha256": "4b680afc05e0e02aa96e8b3ad213d28e4805e980895f2c082c979a5c7ba8b3c2"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/concrete_moss/concrete_moss_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\concrete_moss\\concrete_moss_Rough.jpg",
+      "bytes": 1318868,
+      "sha256": "59b515c94d1759ecae0aa0f47bf5dfc6584d9bcc19b3de635cb0ad0218915626"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/dirty_concrete/dirty_concrete_AO.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\dirty_concrete\\dirty_concrete_AO.jpg",
+      "bytes": 963187,
+      "sha256": "eceb48aeec6a3f94db166227f65a01f93b796809a3ea884f447f7f4d6a9fc284"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/dirty_concrete/dirty_concrete_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\dirty_concrete\\dirty_concrete_Diffuse.jpg",
+      "bytes": 2952697,
+      "sha256": "774ed7fec21f4fe14d625b3d21d3fd882a766a7f63e16217f32f8513b93f78bc"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/dirty_concrete/dirty_concrete_Displacement.png",
+      "origin": "D:\\Cijian\\assets\\textures\\dirty_concrete\\dirty_concrete_Displacement.png",
+      "bytes": 7944534,
+      "sha256": "31e91704364cb017a6668559a4a0347fef4d8df0de189e0b867a0f6a80c03911"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/dirty_concrete/dirty_concrete_nor_gl.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\dirty_concrete\\dirty_concrete_nor_gl.jpg",
+      "bytes": 1507149,
+      "sha256": "c41502c1d07f7644428ad6c2141cc131ff04319672bf74b7dc8d5c3fe5f60610"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/dirty_concrete/dirty_concrete_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\dirty_concrete\\dirty_concrete_Rough.jpg",
+      "bytes": 1273849,
+      "sha256": "daab680ba06253257879a9ec9775d2d232abe70da56db4997d97ca74e6076d53"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/dry_decay_leaves/dry_decay_leaves_AO.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\dry_decay_leaves\\dry_decay_leaves_AO.jpg",
+      "bytes": 2888876,
+      "sha256": "516e66fa6038b91d4a8bb41b11b4a35469d47c6f57265820d00c64fbf26a212b"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/dry_decay_leaves/dry_decay_leaves_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\dry_decay_leaves\\dry_decay_leaves_Diffuse.jpg",
+      "bytes": 2856071,
+      "sha256": "4dc7dde86f3db0df3566ca0ae77390000e979db31fbdc861796d2e516e6ad04e"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/dry_decay_leaves/dry_decay_leaves_Displacement.png",
+      "origin": "D:\\Cijian\\assets\\textures\\dry_decay_leaves\\dry_decay_leaves_Displacement.png",
+      "bytes": 6326328,
+      "sha256": "bd4214e3302d084baa29e6327905fed26c530618a16a3937f26f42d73c30fb91"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/dry_decay_leaves/dry_decay_leaves_nor_gl.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\dry_decay_leaves\\dry_decay_leaves_nor_gl.jpg",
+      "bytes": 3920921,
+      "sha256": "76cbbca571145f9facf93db819cb909282df6bde8b81f82b5708be912611c5e1"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/dry_decay_leaves/dry_decay_leaves_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\dry_decay_leaves\\dry_decay_leaves_Rough.jpg",
+      "bytes": 1962109,
+      "sha256": "13024199e2f90d1a43733a1a599386b4a4a7778a0affcc310430629de6a623e7"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/granite_tile_03/granite_tile_03_AO.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\granite_tile_03\\granite_tile_03_AO.jpg",
+      "bytes": 2068206,
+      "sha256": "33f97dad5ef91b0b8584fb3eda7772265b4417d8b0a78c2e72b3e684873619c0"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/granite_tile_03/granite_tile_03_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\granite_tile_03\\granite_tile_03_Diffuse.jpg",
+      "bytes": 4086873,
+      "sha256": "afb8a91d3f8d9a091698285025b50dfa46e4dd27c4f55645ed458dbf68ac302c"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/granite_tile_03/granite_tile_03_Displacement.png",
+      "origin": "D:\\Cijian\\assets\\textures\\granite_tile_03\\granite_tile_03_Displacement.png",
+      "bytes": 6015286,
+      "sha256": "39323c3ea46bc57e3eac37840197b0cdaf0fd7182ebe3928d7d676be83b1053c"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/granite_tile_03/granite_tile_03_nor_gl.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\granite_tile_03\\granite_tile_03_nor_gl.jpg",
+      "bytes": 3183841,
+      "sha256": "dcc19d681cbf97a1cd4c16eeef0e6a82198d89183860abadb94049ade1216c94"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/granite_tile_03/granite_tile_03_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\granite_tile_03\\granite_tile_03_Rough.jpg",
+      "bytes": 1572000,
+      "sha256": "a96689e55c4e08b8a610cd8181134e9f357cc1ac5db62c72d501545a25ef7622"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/granular_concrete/granular_concrete_AO.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\granular_concrete\\granular_concrete_AO.jpg",
+      "bytes": 4143509,
+      "sha256": "f1088e9bdff6260fe5988cb1a140162343e2713c98d65632c48dd327efedca49"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/granular_concrete/granular_concrete_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\granular_concrete\\granular_concrete_Diffuse.jpg",
+      "bytes": 3397045,
+      "sha256": "37b70522207aff7a3ca7c70118b80ecc2d07a9fee983c2d544c5838e5fe8c8f5"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/granular_concrete/granular_concrete_Displacement.png",
+      "origin": "D:\\Cijian\\assets\\textures\\granular_concrete\\granular_concrete_Displacement.png",
+      "bytes": 7066804,
+      "sha256": "757a7bbffd291d8211d14035dad561ad6fd699c765f8d0fcd7d4ad111de5f06d"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/granular_concrete/granular_concrete_nor_gl.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\granular_concrete\\granular_concrete_nor_gl.jpg",
+      "bytes": 5054567,
+      "sha256": "56308c513a2aaebf532a01afcc7e9c0a5a0760b76a45ca2b6706215616a1ebd4"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/granular_concrete/granular_concrete_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\granular_concrete\\granular_concrete_Rough.jpg",
+      "bytes": 1692431,
+      "sha256": "a22a69325d033e2fb8751648c7b12918cc50ec3779877da6f2b080502b9e1887"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/gravel_concrete_03/gravel_concrete_03_AO.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\gravel_concrete_03\\gravel_concrete_03_AO.jpg",
+      "bytes": 1823687,
+      "sha256": "a7421888468d1f0650224ac31ee73712044bcbababd045b627c3ef20201c536d"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/gravel_concrete_03/gravel_concrete_03_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\gravel_concrete_03\\gravel_concrete_03_Diffuse.jpg",
+      "bytes": 3495448,
+      "sha256": "371a6cbe1f03f1117eb46e2fa26e11f80ac1c7cc361b4807d3990b6eb2704501"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/gravel_concrete_03/gravel_concrete_03_Displacement.png",
+      "origin": "D:\\Cijian\\assets\\textures\\gravel_concrete_03\\gravel_concrete_03_Displacement.png",
+      "bytes": 6716680,
+      "sha256": "0e2bffeaed91ee2b8c56337c4535129a1e6f12ddab30201004b1dcf79e7d432a"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/gravel_concrete_03/gravel_concrete_03_nor_gl.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\gravel_concrete_03\\gravel_concrete_03_nor_gl.jpg",
+      "bytes": 3365934,
+      "sha256": "804f336849f64fbe72351556de84348d396076b41a90eed2d0e16d49b0bc9ee7"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/gravel_concrete_03/gravel_concrete_03_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\gravel_concrete_03\\gravel_concrete_03_Rough.jpg",
+      "bytes": 1537093,
+      "sha256": "2f1e61c34c46e6f32f5692214997d65afd938dfd2a26d8586bd3bb37d352d882"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/japanese_stone_wall/japanese_stone_wall_AO.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\japanese_stone_wall\\japanese_stone_wall_AO.jpg",
+      "bytes": 2185746,
+      "sha256": "46965e9a86143041fad0af93793f61b4e7c70b9e0b07fd44e112a2674c717a47"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/japanese_stone_wall/japanese_stone_wall_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\japanese_stone_wall\\japanese_stone_wall_Diffuse.jpg",
+      "bytes": 4623186,
+      "sha256": "a411d298f552c62f9cce4aab216f1cff06391955c5e0e187c6cfae446523a583"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/japanese_stone_wall/japanese_stone_wall_Displacement.png",
+      "origin": "D:\\Cijian\\assets\\textures\\japanese_stone_wall\\japanese_stone_wall_Displacement.png",
+      "bytes": 6092902,
+      "sha256": "e2ec410281ef1f96e320f16946f5bd5a3bce8e45ee7a2c66a4350f04a87b0cf1"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/japanese_stone_wall/japanese_stone_wall_nor_gl.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\japanese_stone_wall\\japanese_stone_wall_nor_gl.jpg",
+      "bytes": 4093483,
+      "sha256": "9d3486706b09e1860864de236d082f5949dfb16979b5c789202a21b5a3b5e363"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/japanese_stone_wall/japanese_stone_wall_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\japanese_stone_wall\\japanese_stone_wall_Rough.jpg",
+      "bytes": 2607278,
+      "sha256": "49f68275dc40174e115039d2fab9a317ccdcdca9033e77adfb7d6b113a133754"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/rusty_metal_02/rusty_metal_02_AO.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\rusty_metal_02\\rusty_metal_02_AO.jpg",
+      "bytes": 2103272,
+      "sha256": "84d6f92cfadd4880dc65f32ab8d00c4b614397f4a04c0a4f9a5a5b2971fa8879"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/rusty_metal_02/rusty_metal_02_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\rusty_metal_02\\rusty_metal_02_Diffuse.jpg",
+      "bytes": 1952454,
+      "sha256": "4c887dd400ed8a5964377c65e20654262307d6888443eae85feb80cc6e72287a"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/rusty_metal_02/rusty_metal_02_Displacement.png",
+      "origin": "D:\\Cijian\\assets\\textures\\rusty_metal_02\\rusty_metal_02_Displacement.png",
+      "bytes": 7813121,
+      "sha256": "a0f551c9b91471d158e15edf16c8ffbfe96f51898fd51af81d538963274fd9de"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/rusty_metal_02/rusty_metal_02_nor_gl.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\rusty_metal_02\\rusty_metal_02_nor_gl.jpg",
+      "bytes": 1307478,
+      "sha256": "a7aa9c3e4b6859c723c8e9dc5b96d7ed6eed863271358a91641c727555da75ce"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/rusty_metal_02/rusty_metal_02_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\rusty_metal_02\\rusty_metal_02_Rough.jpg",
+      "bytes": 411581,
+      "sha256": "1d0748dfe7754d8b18c1dea5a2dff2da30848787d35abeb916c34b804decca3a"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/rusty_painted_metal/rusty_painted_metal_AO.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\rusty_painted_metal\\rusty_painted_metal_AO.jpg",
+      "bytes": 1444428,
+      "sha256": "f27560f05484d0060f92b3db5a5373fb7fad8981518be158228782aa32da4772"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/rusty_painted_metal/rusty_painted_metal_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\rusty_painted_metal\\rusty_painted_metal_Diffuse.jpg",
+      "bytes": 1930544,
+      "sha256": "883118fafabb56304f9e33ea2da3c183379b1c1b1c5a4702fdc335b0cf84614f"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/rusty_painted_metal/rusty_painted_metal_Displacement.png",
+      "origin": "D:\\Cijian\\assets\\textures\\rusty_painted_metal\\rusty_painted_metal_Displacement.png",
+      "bytes": 5121841,
+      "sha256": "69e1473261d980aa663918f670d0be0264a108fe93d5b4a078ed74ceffd22473"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/rusty_painted_metal/rusty_painted_metal_nor_gl.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\rusty_painted_metal\\rusty_painted_metal_nor_gl.jpg",
+      "bytes": 2293576,
+      "sha256": "2289c10422d5082aea3cf37661008b281c4aec20f6d0b574df6d7887573eb70c"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/rusty_painted_metal/rusty_painted_metal_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\rusty_painted_metal\\rusty_painted_metal_Rough.jpg",
+      "bytes": 1342923,
+      "sha256": "17e6a4cab6d42576ce0bffecc53ba364d18a40b5d941471273b947e6f347a3b5"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/rust_coarse_01/rust_coarse_01_AO.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\rust_coarse_01\\rust_coarse_01_AO.jpg",
+      "bytes": 2817642,
+      "sha256": "4340b7de13e1690b2132234ec631d9b1166c70ae2c8076b2d32cf51808bad7f5"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/rust_coarse_01/rust_coarse_01_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\rust_coarse_01\\rust_coarse_01_Diffuse.jpg",
+      "bytes": 3519719,
+      "sha256": "5b8801674fa53ff1b6f7853300f50aa7a1b31e69278554803bd957fe9fa7e392"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/rust_coarse_01/rust_coarse_01_Displacement.png",
+      "origin": "D:\\Cijian\\assets\\textures\\rust_coarse_01\\rust_coarse_01_Displacement.png",
+      "bytes": 9252123,
+      "sha256": "1b6c114ee36c89bf9cf86f4e55028346c59e5e6a0e8b0351c3a5b788278ac393"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/rust_coarse_01/rust_coarse_01_nor_gl.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\rust_coarse_01\\rust_coarse_01_nor_gl.jpg",
+      "bytes": 3685688,
+      "sha256": "495d3c87da059827ffaf49dae59f967cb3e0b187f4426ab0a47088c3fa83e50b"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/textures/rust_coarse_01/rust_coarse_01_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\textures\\rust_coarse_01\\rust_coarse_01_Rough.jpg",
+      "bytes": 2845362,
+      "sha256": "652eaa2e668c4d24b038716e01c460e6614429634f67ddbcd7f9593296a24885"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/tex2k/asphalt_02/asphalt_02_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\tex2k\\asphalt_02\\asphalt_02_Diffuse.jpg",
+      "bytes": 1949360,
+      "sha256": "15a26cf73a7475a125d7fba1a28bab3cdd0f2aad31a75944d53b13ccee96bba6"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/tex2k/asphalt_02/asphalt_02_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\tex2k\\asphalt_02\\asphalt_02_Rough.jpg",
+      "bytes": 1734015,
+      "sha256": "0a51fb7d04646ed743e589d4d4dfd3b82aafdd85f9598cc0ab0ce5dba5c7a32f"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/tex2k/asphalt_04/asphalt_04_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\tex2k\\asphalt_04\\asphalt_04_Diffuse.jpg",
+      "bytes": 1714940,
+      "sha256": "9201ba1affc3064bb0f97d4506eb06ae0cdc440c8d3725d23f25612326a008c1"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/tex2k/asphalt_04/asphalt_04_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\tex2k\\asphalt_04\\asphalt_04_Rough.jpg",
+      "bytes": 678688,
+      "sha256": "0ed58943a988f92d197cbf812b1d80ff61977ec60758546d0229aa34abf5ed7e"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/tex2k/brushed_concrete/brushed_concrete_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\tex2k\\brushed_concrete\\brushed_concrete_Diffuse.jpg",
+      "bytes": 1273705,
+      "sha256": "9afaa897b9e43551bfeb2d9067694e3b3dfc7745d29604ad412ecdb64fabfbe1"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/tex2k/brushed_concrete/brushed_concrete_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\tex2k\\brushed_concrete\\brushed_concrete_Rough.jpg",
+      "bytes": 1353636,
+      "sha256": "c0755881ffd490e499e1e45c2e9682dc367adb7c9b08dd801867c2b7da3db6c4"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/tex2k/concrete_floor_worn_001/concrete_floor_worn_001_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\tex2k\\concrete_floor_worn_001\\concrete_floor_worn_001_Diffuse.jpg",
+      "bytes": 566215,
+      "sha256": "d4621041972db16bce95db8de04007ab77272942642c77b2d51c0cc8765541c6"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/tex2k/concrete_floor_worn_001/concrete_floor_worn_001_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\tex2k\\concrete_floor_worn_001\\concrete_floor_worn_001_Rough.jpg",
+      "bytes": 845896,
+      "sha256": "3b058cf294218828b59c53ee5863b1f54aae5fa43cedae5d94f99d8fa21bd9e5"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/tex2k/dirty_concrete/dirty_concrete_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\tex2k\\dirty_concrete\\dirty_concrete_Diffuse.jpg",
+      "bytes": 1638381,
+      "sha256": "aaadbdddfef27a3ce87f7a471e4c27e6578ab1e7d91f5d080fdb00bed6b293b7"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/tex2k/dirty_concrete/dirty_concrete_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\tex2k\\dirty_concrete\\dirty_concrete_Rough.jpg",
+      "bytes": 846589,
+      "sha256": "d5629376b03f28f1a4871f5a8ca828337b52d2e4acd04af2c1b6ea393c577017"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/tex2k/granular_concrete/granular_concrete_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\tex2k\\granular_concrete\\granular_concrete_Diffuse.jpg",
+      "bytes": 1111383,
+      "sha256": "8c5e7a5faad7eaec9ea4bbe9cb985c574438c7a814b17dc82dbb84c7b5c6d4e5"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/tex2k/granular_concrete/granular_concrete_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\tex2k\\granular_concrete\\granular_concrete_Rough.jpg",
+      "bytes": 401939,
+      "sha256": "973ae1b01c0bc49a04b4cc621c988627afc9c01d0d0587ba582d7f4f5d2ce031"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/tex2k/grey_roof_tiles/grey_roof_tiles_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\tex2k\\grey_roof_tiles\\grey_roof_tiles_Diffuse.jpg",
+      "bytes": 1157139,
+      "sha256": "571902d9c642f8c1466807a8264f5c4be335be209dd1b27d2dd76f7f99f9f445"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/tex2k/grey_roof_tiles/grey_roof_tiles_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\tex2k\\grey_roof_tiles\\grey_roof_tiles_Rough.jpg",
+      "bytes": 678839,
+      "sha256": "c4644b8cabf45af579d553f1d38d72fa2a6bfc95434f2702fd6127e03f0ca05f"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/tex2k/japanese_stone_wall/japanese_stone_wall_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\tex2k\\japanese_stone_wall\\japanese_stone_wall_Diffuse.jpg",
+      "bytes": 1989747,
+      "sha256": "d09aba5ab4a4adb74b7c775c6cbab3900fa2c2d30a3a869bb3de4e23f1c38071"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/tex2k/japanese_stone_wall/japanese_stone_wall_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\tex2k\\japanese_stone_wall\\japanese_stone_wall_Rough.jpg",
+      "bytes": 923611,
+      "sha256": "8a3476a5604b47b6894be6199932cb8cf4e3cb3a9483412c1c08136a90dfe29d"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/tex2k/painted_plaster_wall/painted_plaster_wall_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\tex2k\\painted_plaster_wall\\painted_plaster_wall_Diffuse.jpg",
+      "bytes": 1142009,
+      "sha256": "3853130cf2096ef5396e19c65c272f52119dfa9cd6868c18a3a066948add1aad"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/tex2k/painted_plaster_wall/painted_plaster_wall_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\tex2k\\painted_plaster_wall\\painted_plaster_wall_Rough.jpg",
+      "bytes": 365938,
+      "sha256": "12ed5ac088ddd1525c0ee191a1fcd539e967606ac56de082383c79c74f3ee0cc"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/tex2k/pebble_embedded_concrete/pebble_embedded_concrete_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\tex2k\\pebble_embedded_concrete\\pebble_embedded_concrete_Diffuse.jpg",
+      "bytes": 1450228,
+      "sha256": "d757357945aef0974f3587cc433a9430efeab866ee0a8e152de5f40ef314365f"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/tex2k/pebble_embedded_concrete/pebble_embedded_concrete_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\tex2k\\pebble_embedded_concrete\\pebble_embedded_concrete_Rough.jpg",
+      "bytes": 811017,
+      "sha256": "9eacbb9b2876c9b2bbfa635f0654203e6b112b15aefc49a915ef153ce21e304d"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/tex2k/red_brick/red_brick_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\tex2k\\red_brick\\red_brick_Diffuse.jpg",
+      "bytes": 928642,
+      "sha256": "7f6bf8b4df33bf8be543519f8108c72dd1da61a4bbd85092914c5400a8427797"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/tex2k/red_brick/red_brick_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\tex2k\\red_brick\\red_brick_Rough.jpg",
+      "bytes": 152390,
+      "sha256": "01b6dc999ae1838d4a653bb94791459e1271b5fd695b886d9e96df7b917888e9"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/tex2k/red_brick_pavers/red_brick_pavers_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\tex2k\\red_brick_pavers\\red_brick_pavers_Diffuse.jpg",
+      "bytes": 378065,
+      "sha256": "8e74bf856be0b6ea9eec2856865de6fde6b19324459c7875964dcfa5eaab7923"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/tex2k/red_brick_pavers/red_brick_pavers_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\tex2k\\red_brick_pavers\\red_brick_pavers_Rough.jpg",
+      "bytes": 265378,
+      "sha256": "69de12d69ef6cb2344f2b32afda6dd031851c209a24600859fd1889033e73630"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/tex2k/weathered_plank_siding/weathered_plank_siding_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\tex2k\\weathered_plank_siding\\weathered_plank_siding_Diffuse.jpg",
+      "bytes": 669799,
+      "sha256": "6693ae057f8ddd2da1f292fa411b1b9d526c2e12f343326ceb5c8f73ee528d98"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/tex2k/weathered_plank_siding/weathered_plank_siding_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\tex2k\\weathered_plank_siding\\weathered_plank_siding_Rough.jpg",
+      "bytes": 449406,
+      "sha256": "72dba24e30d3b91c23abe5b90d0366e029ee0d8d8da6eb9997a2e1d177c4c825"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/tex2k/wood_shutter/wood_shutter_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\tex2k\\wood_shutter\\wood_shutter_Diffuse.jpg",
+      "bytes": 824830,
+      "sha256": "6aea876679d3bdc4b4275159b45b80e1aaa9eade042694268804c63392db8de0"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/tex2k/wood_shutter/wood_shutter_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\tex2k\\wood_shutter\\wood_shutter_Rough.jpg",
+      "bytes": 215451,
+      "sha256": "0da507dbd1223636be5d418dc2e1d7329347eb20c94ee34e9c3749c4588377b8"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/tex2k/worn_plaster_wall/worn_plaster_wall_Diffuse.jpg",
+      "origin": "D:\\Cijian\\assets\\tex2k\\worn_plaster_wall\\worn_plaster_wall_Diffuse.jpg",
+      "bytes": 1047755,
+      "sha256": "66e00c44e0a04aca5f1ac1bde281ccb386104628b8cc35ef2742ba4a532145a4"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/tex2k/worn_plaster_wall/worn_plaster_wall_Rough.jpg",
+      "origin": "D:\\Cijian\\assets\\tex2k\\worn_plaster_wall\\worn_plaster_wall_Rough.jpg",
+      "bytes": 222793,
+      "sha256": "cb6acdfbaa34306dfb16faf95d843a3f5c874374d260ae5a79c31b2b026cd672"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/dandelion_01/dandelion_01.bin",
+      "origin": "D:\\Cijian\\assets\\models\\dandelion_01\\dandelion_01.bin",
+      "bytes": 1676648,
+      "sha256": "ccff5a564f56a69374c09c25ae86c3684c46329309b4eef4569255b1ad54bdd0"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/dandelion_01/dandelion_01_2k.gltf",
+      "origin": "D:\\Cijian\\assets\\models\\dandelion_01\\dandelion_01_2k.gltf",
+      "bytes": 8915,
+      "sha256": "06f560226c9a54fa29c60cb7cb3f6b508c07f5787ceaf0ab9146da291d00ed57"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/fern_02/fern_02.bin",
+      "origin": "D:\\Cijian\\assets\\models\\fern_02\\fern_02.bin",
+      "bytes": 176176,
+      "sha256": "fe1abb762bcbbc7ad9e86925c8080437a62add257d9280e9142fdc85c226e64c"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/fern_02/fern_02_2k.gltf",
+      "origin": "D:\\Cijian\\assets\\models\\fern_02\\fern_02_2k.gltf",
+      "bytes": 6899,
+      "sha256": "50540d37531f93fd693d5340d5b3095c9d6d2834fa05c74bea797d54f290cb6a"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/grass_bermuda_01/grass_bermuda_01.bin",
+      "origin": "D:\\Cijian\\assets\\models\\grass_bermuda_01\\grass_bermuda_01.bin",
+      "bytes": 32260,
+      "sha256": "b98be48b43afb9d57f6c722d918a49996635064b829b16dc14ef4a48c0f04dae"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/grass_bermuda_01/grass_bermuda_01_2k.gltf",
+      "origin": "D:\\Cijian\\assets\\models\\grass_bermuda_01\\grass_bermuda_01_2k.gltf",
+      "bytes": 32912,
+      "sha256": "52e20d25fc126ebb59e724b49baff7a38737d33ce2a245a39796647e8d0b9f34"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/modular_electricity_poles/modular_electricity_poles.bin",
+      "origin": "D:\\Cijian\\assets\\models\\modular_electricity_poles\\modular_electricity_poles.bin",
+      "bytes": 7215652,
+      "sha256": "143bc8cd007674c74a6bac784a24fd4181234c07498b3a2bbdbf6abcd8a5897f"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/modular_electricity_poles/modular_electricity_poles_2k.gltf",
+      "origin": "D:\\Cijian\\assets\\models\\modular_electricity_poles\\modular_electricity_poles_2k.gltf",
+      "bytes": 149324,
+      "sha256": "c94c180b10a876a773b38210be16f5069ed8d73f7f948662c1401b4d0d90bc9b"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/modular_electric_cables/modular_electric_cables.bin",
+      "origin": "D:\\Cijian\\assets\\models\\modular_electric_cables\\modular_electric_cables.bin",
+      "bytes": 1563316,
+      "sha256": "3990f8b60c244ecfc64f80b1242d2a0fef0a3e39288c9ba9fd31becad4734d8a"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/modular_electric_cables/modular_electric_cables_2k.gltf",
+      "origin": "D:\\Cijian\\assets\\models\\modular_electric_cables\\modular_electric_cables_2k.gltf",
+      "bytes": 82607,
+      "sha256": "4fea2727cf11b55d74ba4212bb4e7c64e095da20cc5a5dcf49f4ef75bb543e99"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/moss_01/moss_01.bin",
+      "origin": "D:\\Cijian\\assets\\models\\moss_01\\moss_01.bin",
+      "bytes": 7260,
+      "sha256": "440e3cadbd93ad383cdbb9b4c17c3236774924c33ff62ac409ab00b8ed622861"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/moss_01/moss_01_2k.gltf",
+      "origin": "D:\\Cijian\\assets\\models\\moss_01\\moss_01_2k.gltf",
+      "bytes": 18481,
+      "sha256": "16c490f2d8c932d85455a6943b0a45283fb867669d6139054b2b7951d66fe13a"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/nettle_plant/nettle_plant.bin",
+      "origin": "D:\\Cijian\\assets\\models\\nettle_plant\\nettle_plant.bin",
+      "bytes": 956560,
+      "sha256": "24810f9d80b5fafdd71e1599b0cc81afa3eb9b744cfa8bf388c5e9f30271ba46"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/nettle_plant/nettle_plant_2k.gltf",
+      "origin": "D:\\Cijian\\assets\\models\\nettle_plant\\nettle_plant_2k.gltf",
+      "bytes": 10450,
+      "sha256": "75e1debf2fce510fb119847ec4a427d6dea4de33a1aac3e6484d880845e4047b"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/rock_moss_set_01/rock_moss_set_01.bin",
+      "origin": "D:\\Cijian\\assets\\models\\rock_moss_set_01\\rock_moss_set_01.bin",
+      "bytes": 1466380,
+      "sha256": "de8360e6175879aaf02c171911069cf5f1852547f9ca7f10e440085dbcc3315e"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/rock_moss_set_01/rock_moss_set_01_2k.gltf",
+      "origin": "D:\\Cijian\\assets\\models\\rock_moss_set_01\\rock_moss_set_01_2k.gltf",
+      "bytes": 9987,
+      "sha256": "794beaf2f4dc0ab155114f286049dc912a8f3287520965ca8bf6bb0d821ae3e2"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/shrub_01/shrub_01.bin",
+      "origin": "D:\\Cijian\\assets\\models\\shrub_01\\shrub_01.bin",
+      "bytes": 5239664,
+      "sha256": "a8646f51386c84b12a6be8324dd0c2357c393c9108aac911847a203cf490b426"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/shrub_01/shrub_01_2k.gltf",
+      "origin": "D:\\Cijian\\assets\\models\\shrub_01\\shrub_01_2k.gltf",
+      "bytes": 2895,
+      "sha256": "21f6db42b2e8948b44f635cfc26bdd8c00b91f11c6a3bd46c7c27d789168009b"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/shrub_01/textures/shrub_01_arm_2k.jpg",
+      "origin": "D:\\Cijian\\assets\\models\\shrub_01\\textures\\shrub_01_arm_2k.jpg",
+      "bytes": 1232008,
+      "sha256": "0c984bae6f587aba20eadc44e5a4de8c950c8246d1c0da234a4d6043d5a688e4"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/shrub_01/textures/shrub_01_diff_2k.jpg",
+      "origin": "D:\\Cijian\\assets\\models\\shrub_01\\textures\\shrub_01_diff_2k.jpg",
+      "bytes": 1651989,
+      "sha256": "d464a823982b28832a92d3edacc62461adfb3f99117829127e79eb253051e940"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/shrub_01/textures/shrub_01_nor_gl_2k.jpg",
+      "origin": "D:\\Cijian\\assets\\models\\shrub_01\\textures\\shrub_01_nor_gl_2k.jpg",
+      "bytes": 2628947,
+      "sha256": "1b2f8631a66ef35c876238d6269f2cd2d1603102b7422f2cc57e3ec9ab209b62"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/rock_moss_set_01/textures/rock_moss_set_01_diff_2k.jpg",
+      "origin": "D:\\Cijian\\assets\\models\\rock_moss_set_01\\textures\\rock_moss_set_01_diff_2k.jpg",
+      "bytes": 649415,
+      "sha256": "bdee6da8baba67bd7e85e414e669cd46aab9afaf755114fb5163f0e68775c3d6"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/rock_moss_set_01/textures/rock_moss_set_01_nor_gl_2k.jpg",
+      "origin": "D:\\Cijian\\assets\\models\\rock_moss_set_01\\textures\\rock_moss_set_01_nor_gl_2k.jpg",
+      "bytes": 840957,
+      "sha256": "f11c238a203eebd5e82da3a50468040a78d25fd2e46783c4ad79b1022b144c0d"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/rock_moss_set_01/textures/rock_moss_set_01_rough_2k.jpg",
+      "origin": "D:\\Cijian\\assets\\models\\rock_moss_set_01\\textures\\rock_moss_set_01_rough_2k.jpg",
+      "bytes": 293827,
+      "sha256": "a05a8bd9f2563cf55b738484b894671df7b2391aa02d66451366c5ad38077cd2"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/nettle_plant/textures/nettle_plant_arm_2k.jpg",
+      "origin": "D:\\Cijian\\assets\\models\\nettle_plant\\textures\\nettle_plant_arm_2k.jpg",
+      "bytes": 1566589,
+      "sha256": "94a5bcfdb6c00f3f44105e06eef9cc759e6826bf30bd3ef56c4991b18691d230"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/nettle_plant/textures/nettle_plant_diff_2k.jpg",
+      "origin": "D:\\Cijian\\assets\\models\\nettle_plant\\textures\\nettle_plant_diff_2k.jpg",
+      "bytes": 1197929,
+      "sha256": "7baf0c5bf0695ddbba590baba686e284803244703959092526eb2bc226724351"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/nettle_plant/textures/nettle_plant_nor_gl_2k.jpg",
+      "origin": "D:\\Cijian\\assets\\models\\nettle_plant\\textures\\nettle_plant_nor_gl_2k.jpg",
+      "bytes": 2356297,
+      "sha256": "90d75c7ac70df26d6abb938e14676b0ecc08e35a596034a47f54865a5ab283a2"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/moss_01/textures/moss_01_arm_2k.jpg",
+      "origin": "D:\\Cijian\\assets\\models\\moss_01\\textures\\moss_01_arm_2k.jpg",
+      "bytes": 1095803,
+      "sha256": "91d01f1f37d3bc1ce9b699878dc42bd5ca7cf5508b8513607f900e643237b561"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/moss_01/textures/moss_01_diff_2k.jpg",
+      "origin": "D:\\Cijian\\assets\\models\\moss_01\\textures\\moss_01_diff_2k.jpg",
+      "bytes": 511727,
+      "sha256": "75acf965b37418e1f35401a307d759bb2f7171f231e88e0c327f94d142d2499a"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/moss_01/textures/moss_01_nor_gl_2k.jpg",
+      "origin": "D:\\Cijian\\assets\\models\\moss_01\\textures\\moss_01_nor_gl_2k.jpg",
+      "bytes": 1632699,
+      "sha256": "1d8489019937af3dd4c72b6a187c84baa166d18b6712fcbb037034e04c6182e7"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/modular_electric_cables/textures/modular_electric_cables_arm_2k.jpg",
+      "origin": "D:\\Cijian\\assets\\models\\modular_electric_cables\\textures\\modular_electric_cables_arm_2k.jpg",
+      "bytes": 2679133,
+      "sha256": "8be46df764812f43ba2c55906ee544b22be81fc416db0467c825a9a0892dceac"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/modular_electric_cables/textures/modular_electric_cables_boxes_arm_2k.jpg",
+      "origin": "D:\\Cijian\\assets\\models\\modular_electric_cables\\textures\\modular_electric_cables_boxes_arm_2k.jpg",
+      "bytes": 3140374,
+      "sha256": "560fa1d5fe3cb38cdc46118677f6924def4aa5a25895465ddd46a1c6706ef178"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/modular_electric_cables/textures/modular_electric_cables_boxes_diff_2k.jpg",
+      "origin": "D:\\Cijian\\assets\\models\\modular_electric_cables\\textures\\modular_electric_cables_boxes_diff_2k.jpg",
+      "bytes": 2327515,
+      "sha256": "4efd2dcf8cb6cda3f455b00c7864a38d65b4a3042033aade08e501f1fd9b33e3"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/modular_electric_cables/textures/modular_electric_cables_boxes_nor_gl_2k.jpg",
+      "origin": "D:\\Cijian\\assets\\models\\modular_electric_cables\\textures\\modular_electric_cables_boxes_nor_gl_2k.jpg",
+      "bytes": 2707023,
+      "sha256": "d88c5e0a576b111b28d82784c1e36213e9e61842db4ea39ee170079aab502ccb"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/modular_electric_cables/textures/modular_electric_cables_diff_2k.jpg",
+      "origin": "D:\\Cijian\\assets\\models\\modular_electric_cables\\textures\\modular_electric_cables_diff_2k.jpg",
+      "bytes": 1628766,
+      "sha256": "7332324468d194e83e7e25e380ff865be2dfb9a1601eca00e5a0e71416965e57"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/modular_electric_cables/textures/modular_electric_cables_nor_gl_2k.jpg",
+      "origin": "D:\\Cijian\\assets\\models\\modular_electric_cables\\textures\\modular_electric_cables_nor_gl_2k.jpg",
+      "bytes": 3532531,
+      "sha256": "ce7d0411d1455aac0266a9b96dae1d1695f8fcfc57dbe7e132f94c8e1b52527c"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/modular_electricity_poles/textures/modular_electricity_poles_arm_2k.jpg",
+      "origin": "D:\\Cijian\\assets\\models\\modular_electricity_poles\\textures\\modular_electricity_poles_arm_2k.jpg",
+      "bytes": 2938395,
+      "sha256": "e18dbe2c240430c68648ac5f51e0a1cac51e20dc771ff877cf9335b0a089e208"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/modular_electricity_poles/textures/modular_electricity_poles_diff_2k.jpg",
+      "origin": "D:\\Cijian\\assets\\models\\modular_electricity_poles\\textures\\modular_electricity_poles_diff_2k.jpg",
+      "bytes": 2652895,
+      "sha256": "22d8049a1b0b0b9fca42f0d74da0b1aef1eb349c74d3b8c973c5d1d8fd76f741"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/modular_electricity_poles/textures/modular_electricity_poles_nor_gl_2k.jpg",
+      "origin": "D:\\Cijian\\assets\\models\\modular_electricity_poles\\textures\\modular_electricity_poles_nor_gl_2k.jpg",
+      "bytes": 3833235,
+      "sha256": "aef7f84361823372045dafaa8692cde3ecdeeec8aa6e910f6d20fa3aa76bb94d"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/modular_electricity_poles/textures/modular_electricity_poles_pieces_arm_2k.jpg",
+      "origin": "D:\\Cijian\\assets\\models\\modular_electricity_poles\\textures\\modular_electricity_poles_pieces_arm_2k.jpg",
+      "bytes": 3534574,
+      "sha256": "00b6c8c407b736cd79034f28d12b820ff5bcc5a04835883e70fe0c752cab6aa5"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/modular_electricity_poles/textures/modular_electricity_poles_pieces_diff_2k.jpg",
+      "origin": "D:\\Cijian\\assets\\models\\modular_electricity_poles\\textures\\modular_electricity_poles_pieces_diff_2k.jpg",
+      "bytes": 2671327,
+      "sha256": "82a192204965609a3a2ed15d672761a48cbc918d0b4787346eaf45fde46f2ee6"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/modular_electricity_poles/textures/modular_electricity_poles_pieces_nor_gl_2k.jpg",
+      "origin": "D:\\Cijian\\assets\\models\\modular_electricity_poles\\textures\\modular_electricity_poles_pieces_nor_gl_2k.jpg",
+      "bytes": 2923685,
+      "sha256": "9aafba5192af7825e24f385b048cb199bae9ad40ab3931f2efa4af5f48b01eee"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/grass_bermuda_01/textures/grass_bermuda_01_arm_2k.jpg",
+      "origin": "D:\\Cijian\\assets\\models\\grass_bermuda_01\\textures\\grass_bermuda_01_arm_2k.jpg",
+      "bytes": 1656451,
+      "sha256": "ab8f1a577b768906222f52c7e51855408c795e497344b15e337bf87ec0aabd1f"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/grass_bermuda_01/textures/grass_bermuda_01_diff_2k.jpg",
+      "origin": "D:\\Cijian\\assets\\models\\grass_bermuda_01\\textures\\grass_bermuda_01_diff_2k.jpg",
+      "bytes": 494673,
+      "sha256": "30183c203739dee9812b70f21916fcdcd88719dcfe4fa3270d8ce208369ec933"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/grass_bermuda_01/textures/grass_bermuda_01_nor_gl_2k.jpg",
+      "origin": "D:\\Cijian\\assets\\models\\grass_bermuda_01\\textures\\grass_bermuda_01_nor_gl_2k.jpg",
+      "bytes": 2556691,
+      "sha256": "d8a16471065a1206e455d0c4128694b56d265d7cb9908718fc83c581fddb1dc8"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/fern_02/textures/fern_02_arm_2k.jpg",
+      "origin": "D:\\Cijian\\assets\\models\\fern_02\\textures\\fern_02_arm_2k.jpg",
+      "bytes": 850856,
+      "sha256": "1eaf9bd29e2d83a77ca5d89bdddebcd9216b8b4ba244644580fe5b89bbe713f1"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/fern_02/textures/fern_02_diff_2k.jpg",
+      "origin": "D:\\Cijian\\assets\\models\\fern_02\\textures\\fern_02_diff_2k.jpg",
+      "bytes": 993703,
+      "sha256": "9ee18172170728050871772e2cd6d8d37b52f9138e61b49b04486623f9caf84b"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/fern_02/textures/fern_02_nor_gl_2k.jpg",
+      "origin": "D:\\Cijian\\assets\\models\\fern_02\\textures\\fern_02_nor_gl_2k.jpg",
+      "bytes": 1365615,
+      "sha256": "dfe1ac4a428d21f7c134411500177d66b8dd800c8fec6f0040c50f44414a777b"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/dandelion_01/textures/dandelion_01_arm_2k.jpg",
+      "origin": "D:\\Cijian\\assets\\models\\dandelion_01\\textures\\dandelion_01_arm_2k.jpg",
+      "bytes": 1499438,
+      "sha256": "3bee6803f9b0775901524da1a7feb711c0857c0305eef4cd2d721ae3d3e50a60"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/dandelion_01/textures/dandelion_01_diff_2k.jpg",
+      "origin": "D:\\Cijian\\assets\\models\\dandelion_01\\textures\\dandelion_01_diff_2k.jpg",
+      "bytes": 1466191,
+      "sha256": "565a926562a7a2e7b4af99b85da2a7aabff70d7e2238511245a601901fab182f"
+    },
+    {
+      "path": "projects/yuyake-dandan/assets/models/dandelion_01/textures/dandelion_01_nor_gl_2k.jpg",
+      "origin": "D:\\Cijian\\assets\\models\\dandelion_01\\textures\\dandelion_01_nor_gl_2k.jpg",
+      "bytes": 1684671,
+      "sha256": "d709fa1f58abc1d3e6c3b5b023122a06bf10f7b3e32f6ea547dd7e2e1c155f96"
+    },
+    {
+      "path": "projects/yuyake-dandan/refs_web/stairs1.jpg",
+      "origin": "D:\\Cijian\\refs_web\\stairs1.jpg",
+      "bytes": 3313163,
+      "sha256": "07fdf5a06fd2085a57b80c1cf6ca2c96d75351aa81ccc262ca14ea1c7a6d189c"
+    },
+    {
+      "path": "projects/yuyake-dandan/refs_web/stairs5.jpg",
+      "origin": "D:\\Cijian\\refs_web\\stairs5.jpg",
+      "bytes": 7774640,
+      "sha256": "47c166cc02d93a49e2f6e04958173340aa79492b22cb2c2285a91d6169588c2b"
+    },
+    {
+      "path": "projects/yuyake-dandan/refs_web/xfmr.jpg",
+      "origin": "D:\\Cijian\\refs_web\\xfmr.jpg",
+      "bytes": 850995,
+      "sha256": "3e5190a0e0f472f81a464570c404eacd168f5cc1f2f59cd005db227762ef50bb"
+    },
+    {
+      "path": "projects/yuyake-dandan/scripts/qs_build.py",
+      "origin": "D:\\Cijian\\scripts\\qs_build.py",
+      "bytes": 60826,
+      "sha256": "ace09cf3668591542512a512257deb642cfb5ecf79fb700ff995144ab4846b6a"
+    },
+    {
+      "path": "projects/yuyake-dandan/scripts/qs_masks.py",
+      "origin": "D:\\Cijian\\scripts\\qs_masks.py",
+      "bytes": 9363,
+      "sha256": "b2bab37cc9d105f7f553ae5a10d629ed47414225b525641805536b23d9e459d4"
+    },
+    {
+      "path": "projects/yuyake-dandan/scripts/qs_ext.py",
+      "origin": "D:\\Cijian\\scripts\\qs_ext.py",
+      "bytes": 26358,
+      "sha256": "850d14796cf1df544a562ece0752646e234353c5536ada83369b305330ee92de"
+    },
+    {
+      "path": "projects/yuyake-dandan/scripts/qs_export.py",
+      "origin": "D:\\Cijian\\scripts\\qs_export.py",
+      "bytes": 3886,
+      "sha256": "6b1671e3b6deaabbc753d916aa17ec1d52c630d3b6ea8b493b30e0c2d01a4c31"
+    },
+    {
+      "path": "projects/yuyake-dandan/scripts/qs_lut.py",
+      "origin": "D:\\Cijian\\scripts\\qs_lut.py",
+      "bytes": 1678,
+      "sha256": "f5413687d99932a49e2e98c858f08cd4c0e22902daab73b125c7eaaac349818f"
+    },
+    {
+      "path": "projects/yuyake-dandan/scripts/tex2k.py",
+      "origin": "D:\\Cijian\\scripts\\tex2k.py",
+      "bytes": 695,
+      "sha256": "f88a32317f3731c5f24b77456b5551aca2d570c7a41654bd22798b68fa210909"
+    },
+    {
+      "path": "projects/yuyake-dandan/scripts/assets.json",
+      "origin": "D:\\Cijian\\scripts\\assets.json",
+      "bytes": 12136,
+      "sha256": "35b3d53233f1e1dd3b74da8e1774bb392f1b88b0634c597f344e377afe4f9442"
+    },
+    {
+      "path": "projects/yuyake-dandan/scripts/fetch_assets.ps1",
+      "origin": "D:\\Cijian\\scripts\\fetch_assets.ps1",
+      "bytes": 570,
+      "sha256": "e7bcd4407547745e2ab4a0a0408e64c098efdd3ec8219c500244a4fd3dbf3047"
+    },
+    {
+      "path": "projects/yuyake-dandan/blend/qs_h1.blend",
+      "origin": "D:\\Cijian\\blend\\qs_h1.blend",
+      "bytes": 67697385,
+      "sha256": "d2667e3c3561a1978980ff6c0d5bd7a3c6c08947b137fe06a04ca71040eff380"
+    },
+    {
+      "path": "projects/yuyake-dandan/web/test.html",
+      "origin": "D:\\Cijian\\web\\test.html",
+      "bytes": 6568,
+      "sha256": "a66ac72213633652e10780a2197a041078d006cbc18a8d844032f2d9539e12b8"
+    },
+    {
+      "path": "projects/yuyake-dandan/web/srv.py",
+      "origin": "D:\\Cijian\\web\\srv.py",
+      "bytes": 832,
+      "sha256": "de2425db9397e9d836d14f4604a8b5dd86bb079ae2f235558e5318238bb7f95a"
+    },
+    {
+      "path": "projects/yuyake-dandan/web/matmap.json",
+      "origin": "D:\\Cijian\\web\\matmap.json",
+      "bytes": 1703,
+      "sha256": "10f2abb6b7d8c66fe06b58b4393a44ac1faec43ad397bb6a4d6f319bf5026d04"
+    },
+    {
+      "path": "projects/yuyake-dandan/web/vendor/BufferGeometryUtils.js",
+      "origin": "D:\\Cijian\\web\\vendor\\BufferGeometryUtils.js",
+      "bytes": 31768,
+      "sha256": "c25b7930e570e9ec56173cd3b866ec8d2e10016630db3937efb439daf1cedbf6"
+    },
+    {
+      "path": "projects/yuyake-dandan/web/vendor/EXRLoader.js",
+      "origin": "D:\\Cijian\\web\\vendor\\EXRLoader.js",
+      "bytes": 61180,
+      "sha256": "9ab29edbe812c6f48fd70910643d15433d5efcd0e4e2a2ca24b2bcb9a7eefe6b"
+    },
+    {
+      "path": "projects/yuyake-dandan/web/vendor/GLTFLoader.js",
+      "origin": "D:\\Cijian\\web\\vendor\\GLTFLoader.js",
+      "bytes": 110273,
+      "sha256": "45139faddd5aaf48ed2d62203d976e5cbd703db1a592de40527f9f6cf58abd44"
+    },
+    {
+      "path": "projects/yuyake-dandan/web/vendor/RGBELoader.js",
+      "origin": "D:\\Cijian\\web\\vendor\\RGBELoader.js",
+      "bytes": 11377,
+      "sha256": "f0e87d0008d9484d31358b32befd1bf80e4301f77573cc9a7cf7d871cc3f64b4"
+    },
+    {
+      "path": "projects/yuyake-dandan/web/vendor/three.module.js",
+      "origin": "D:\\Cijian\\web\\vendor\\three.module.js",
+      "bytes": 1314681,
+      "sha256": "ce1fa418de16a19495a9f72495580e3015d7745c296d3ce0485897f902ddedfb"
+    },
+    {
+      "path": "projects/yuyake-dandan/web/utils/BufferGeometryUtils.js",
+      "origin": "D:\\Cijian\\web\\utils\\BufferGeometryUtils.js",
+      "bytes": 31768,
+      "sha256": "c25b7930e570e9ec56173cd3b866ec8d2e10016630db3937efb439daf1cedbf6"
+    },
+    {
+      "path": "projects/yuyake-dandan/web/libs/fflate.module.js",
+      "origin": "D:\\Cijian\\web\\libs\\fflate.module.js",
+      "bytes": 89384,
+      "sha256": "209a4412eb48ce609edb4391992a792ffcc3983d30ee7e2b0b89a8c470f3cd8a"
+    },
+    {
+      "path": "projects/yuyake-dandan/web/data/raw.glb",
+      "origin": "D:\\Cijian\\web\\data\\raw.glb",
+      "bytes": 58513752,
+      "sha256": "2b845fe5cde62bda692a869efd2e27f30d96ec0f608bae5714c6386f1de11246"
+    },
+    {
+      "path": "projects/yuyake-dandan/web/data/opt.glb",
+      "origin": "D:\\Cijian\\web\\data\\opt.glb",
+      "bytes": 36491908,
+      "sha256": "03e680141a663a1bfa4e5aa08899dd4b9f60020ad195d726606244217c0e80b5"
+    },
+    {
+      "path": "projects/yuyake-dandan/web/data/lut_morning.bin",
+      "origin": "D:\\Cijian\\web\\data\\lut_morning.bin",
+      "bytes": 1327104,
+      "sha256": "34e326527469bbb212f26916c1da72f9a74e2772825eba96daa2f782d9850b0a"
+    },
+    {
+      "path": "projects/yuyake-dandan/web/data/lut_morning.png",
+      "origin": "D:\\Cijian\\web\\data\\lut_morning.png",
+      "bytes": 344665,
+      "sha256": "d8b4cf92051ec50c77a0196e70abe13aa33675a61b2c474073a739f4b69f7ce6"
+    },
+    {
+      "path": "projects/yuyake-dandan/web/data/lut_sunset.bin",
+      "origin": "D:\\Cijian\\web\\data\\lut_sunset.bin",
+      "bytes": 1327104,
+      "sha256": "86e6349f2a92136069eaca8cd8249f89f3bc6b821eb4767b00d95745914a606d"
+    },
+    {
+      "path": "projects/yuyake-dandan/web/data/lut_sunset.png",
+      "origin": "D:\\Cijian\\web\\data\\lut_sunset.png",
+      "bytes": 303358,
+      "sha256": "d47bd7ed8285b020a368b8783fd3425f7da94720f30ee54164e17ddd95ede618"
+    },
+    {
+      "path": "projects/yuyake-dandan/previews/qs_h1_sunset_west.jpg",
+      "origin": "D:\\Cijian\\output\\qs_h1_sunset_west.jpg",
+      "bytes": 559357,
+      "sha256": "be222408fcd172dd3ca4c4e17c386bd4e75392efd2d9992b49f7952d58427196"
+    },
+    {
+      "path": "projects/yuyake-dandan/previews/qs_h1_report.json",
+      "origin": "D:\\Cijian\\output\\qs_h1_report.json",
+      "bytes": 870,
+      "sha256": "0915501b431c81508a35c67057f57ca79eb7fc6405193c879e7fdc6b1024b04b"
+    },
+    {
+      "path": "projects/yuyake-dandan/previews/qs_r10_morning_main.jpg",
+      "origin": "D:\\Cijian\\output\\qs_r10_morning_main.jpg",
+      "bytes": 346639,
+      "sha256": "7ff5212b0b317b7326265b157dd4b311f744efb0a0dfc3e68b2df5c9d17fa490"
+    },
+    {
+      "path": "projects/yuyake-dandan/previews/qs_r10_morning_steps.jpg",
+      "origin": "D:\\Cijian\\output\\qs_r10_morning_steps.jpg",
+      "bytes": 366219,
+      "sha256": "985f206fd2605b7e7dbce4efaae95c1f9c396370e7febd50e92f5627eccd9cf7"
+    },
+    {
+      "path": "projects/yuyake-dandan/previews/qs_r10_morning_pole.jpg",
+      "origin": "D:\\Cijian\\output\\qs_r10_morning_pole.jpg",
+      "bytes": 206858,
+      "sha256": "5e05f61dae31e0026295dbbda318af4ed1faf266d7d0859beea21af01fb7b6da"
+    },
+    {
+      "path": "projects/yuyake-dandan/previews/qs_r10_report.json",
+      "origin": "D:\\Cijian\\output\\qs_r10_report.json",
+      "bytes": 1475,
+      "sha256": "4aaef9fc88d7472a54a67fa8840e6b00535b1d02c0ca7c0a0087f6159aab2c8f"
+    },
+    {
+      "path": "projects/yuyake-dandan/reports/performance/A_raw4k.json",
+      "origin": "D:\\Cijian\\web\\results\\A_raw4k.json",
+      "bytes": 532,
+      "sha256": "988f150c83100a49e7ff07eb3065de035c627c5c605751a6cd5392e3e5c848c8"
+    },
+    {
+      "path": "projects/yuyake-dandan/reports/performance/B_opt2k.json",
+      "origin": "D:\\Cijian\\web\\results\\B_opt2k.json",
+      "bytes": 527,
+      "sha256": "16ed36b1bf62ee485ef69d1c547aec244cd7590355163b197237949060a8e7df"
+    },
+    {
+      "path": "projects/yuyake-dandan/reports/performance/C_opt2k_static.json",
+      "origin": "D:\\Cijian\\web\\results\\C_opt2k_static.json",
+      "bytes": 537,
+      "sha256": "67f5f2cb3b90599a8bd796fe844bb0ec76c47b2cb288de3020e6d423f2eee6cb"
+    },
+    {
+      "path": "projects/yuyake-dandan/reports/performance/D_opt2k_1440.json",
+      "origin": "D:\\Cijian\\web\\results\\D_opt2k_1440.json",
+      "bytes": 526,
+      "sha256": "c4b1d7ae86277e8100d3f6016710dcf327be5f71a15ad753243d5df4374c3b67"
+    },
+    {
+      "path": "projects/yuyake-dandan/reports/performance/vram.jsonl",
+      "origin": "D:\\Cijian\\web\\results\\vram.jsonl",
+      "bytes": 415,
+      "sha256": "6e86a1c9cdf934b35ebebe03ff74dfbaffb921760a3a91dbbbab33bf0074db25"
+    },
+    {
+      "path": "projects/yuyake-dandan/reports/performance/B_opt2k_30.jpg",
+      "origin": "D:\\Cijian\\web\\results\\B_opt2k_30.jpg",
+      "bytes": 348922,
+      "sha256": "b488164194d02707a33ac4629b1404670addb507a3b30c5a4a19c6b10e3448b7"
+    },
+    {
+      "path": "projects/yuyake-dandan/asset-register.csv",
+      "origin": "D:\\Cijian\\asset-register.csv",
+      "bytes": 11173,
+      "sha256": "b977fbbe74f7d85db5ba236864fabcc7d4393e4339a4967e14e83d1236bb96c8"
+    },
+    {
+      "path": "docs/context/requirements.md",
+      "origin": "C:\\Users\\LU\\Desktop\\此间_完整需求汇总_供Agent共享(1).md",
+      "bytes": 22549,
+      "sha256": "0f945fa4fb4466e753c41018e9477d4982366997f6bc5cfd6d0552f7bf55de02"
+    },
+    {
+      "path": "docs/context/agent-handbook.md",
+      "origin": "C:\\Users\\LU\\Desktop\\此间_Agent执行手册(1).md",
+      "bytes": 12063,
+      "sha256": "8ffac84d879de2ea4a6ec423950745e5e229c52eceaec841722b94acce269647"
+    },
+    {
+      "path": "docs/context/two-day-plan.md",
+      "origin": "C:\\Users\\LU\\Desktop\\此间_两日项目规划书(1).md",
+      "bytes": 41120,
+      "sha256": "0ef478002dd1b1d88130e6c5c206f1ea5b784824a6e1bdde67878cd0b7611f16"
+    },
+    {
+      "path": "docs/reports/2026-11-02-audit.md",
+      "origin": "Read-only audit",
+      "bytes": 9264,
+      "sha256": "fe6ec2f1930fcd0dd53ca8cb04db670400342cc8fced831d8e882076455a05b7"
+    },
+    {
+      "path": "docs/reports/evidence/runtime-check.json",
+      "origin": "Read-only audit",
+      "bytes": 8992,
+      "sha256": "27af337cae8060181a97d2d2acfe872db20235b447c052bbc9e40812d56c8483"
+    },
+    {
+      "path": "docs/reports/evidence/inventory-check.json",
+      "origin": "Read-only audit",
+      "bytes": 5952,
+      "sha256": "dd745caaa4553c06abe87eba2cbe9c0967ee23963b63dec05ce4b448880bba0e"
+    },
+    {
+      "path": "docs/reports/evidence/zip-initial.png",
+      "origin": "Read-only audit",
+      "bytes": 1225148,
+      "sha256": "a5124ecc719a6c1ec84fca2004bbd8fc0d99b339383982e818f6b4f776aae6cd"
+    },
+    {
+      "path": "docs/reports/evidence/zip-main.png",
+      "origin": "Read-only audit",
+      "bytes": 479675,
+      "sha256": "69fa7dd672fa7a257a17371c128c77c16f98b6b48d06bc47c3c709d985224f8b"
+    },
+    {
+      "path": "docs/reports/evidence/test-initial.png",
+      "origin": "Read-only audit",
+      "bytes": 1251592,
+      "sha256": "f8c7260002b92d09164e4c0a671b001c90502189eaebf27409f0d81f27169e9e"
+    },
+    {
+      "path": "docs/reports/evidence/current-initial.png",
+      "origin": "Read-only audit",
+      "bytes": 8310,
+      "sha256": "0745cddd64d580ce8d44c24630ca52328ff95b4662c6571c0414fdbda524f6cf"
+    }
+  ]
+}

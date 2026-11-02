@@ -1,0 +1,380 @@
+{
+  "current": {
+    "title": "此间 · 夕焼けだんだん",
+    "text": "此间\n载入贴图",
+    "errors": [
+      "fetch for \"http://127.0.0.1:60531/bake/t3/ac_sunset_vis.exr\" responded with 404: Not Found"
+    ],
+    "bad": [
+      {
+        "url": "/bake/t3/ac_sunset_vis.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/ac_sunset.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/ad_sunset.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/ad_sunset_vis.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/apron_sunset.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/apron_sunset_vis.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/apt_sunset.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/apt_sunset_vis.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/apt2_sunset.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/apt2_sunset_vis.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/awn_a_sunset.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/awn_a_sunset_vis.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/awn_b_sunset.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/awn_b_sunset_vis.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/awn_c_sunset.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/awn_c_sunset_vis.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/block_wall_sunset.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/block_wall_sunset_vis.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/brick_sunset.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/brick_sunset_vis.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/cable_sunset.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/cable_sunset_vis.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/cover_sunset.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/cover_sunset_vis.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/far_sunset.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/far_sunset_vis.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/glass_sunset.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/glass_sunset_vis.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/glass_warm_sunset.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/glass_warm_sunset_vis.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/lens_sunset.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/lens_sunset_vis.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/mortar_sunset.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/mortar_sunset_vis.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/pavers_sunset.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/pavers_sunset_vis.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/pipe_sunset.exr",
+        "status": 404
+      },
+      {
+        "url": "/assets/models/road/textures/road_diff_2k.jpg",
+        "status": 404
+      },
+      {
+        "url": "/assets/models/road/textures/road_nor_gl_2k.jpg",
+        "status": 404
+      },
+      {
+        "url": "/assets/models/road/textures/road_arm_2k.jpg",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/pipe_sunset_vis.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/plaster_sunset.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/plaster_sunset_vis.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/pole_sunset.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/pole_sunset_vis.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/porcelain_sunset.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/porcelain_sunset_vis.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/rail_green_sunset.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/rail_green_sunset_vis.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/rail_top_sunset.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/rail_top_sunset_vis.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/roof_sunset.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/roof_sunset_vis.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/rusty_sunset.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/rusty_sunset_vis.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/shutter_sunset.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/shutter_sunset_vis.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/siding_sunset.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/siding_sunset_vis.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/soil_sunset.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/soil_sunset_vis.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/steel_sunset.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/steel_sunset_vis.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/stone_sunset.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/stone_sunset_vis.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/tag_sunset.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/tag_sunset_vis.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/wire_sunset.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/wire_sunset_vis.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/wood_sunset.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/wood_sunset_vis.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/xfmr_sunset.exr",
+        "status": 404
+      },
+      {
+        "url": "/bake/t3/xfmr_sunset_vis.exr",
+        "status": 404
+      }
+    ],
+    "failed": []
+  },
+  "test": {
+    "title": "cijian perf",
+    "text": "",
+    "errors": [],
+    "bad": [],
+    "failed": []
+  },
+  "zip": {
+    "title": "此间 实时预览",
+    "text": "光线\n早晨\n日落\n蓝调\n机位\n步行\n主机位\n显示\n行人\n—\n按住鼠标拖动看四周，WASD 走动，Shift 快走",
+    "errors": [],
+    "bad": [],
+    "failed": [],
+    "viewer": {
+      "loaded": true,
+      "gpu": "ANGLE (Intel, Intel(R) Arc(TM) 140T GPU (16GB) (0x00007D51) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "pos": {
+        "x": -0.7,
+        "y": 1.6,
+        "z": -1
+      }
+    },
+    "actions": {
+      "movedFrom": {
+        "x": -0.7,
+        "y": 1.6,
+        "z": -1
+      },
+      "movedTo": {
+        "x": -0.7,
+        "y": 1.6,
+        "z": -1.9801399998664844
+      },
+      "duskActive": "on",
+      "crowdClass": "",
+      "mainActive": "on"
+    }
+  },
+  "posts": [
+    {
+      "path": "/result?x_log",
+      "body": "ERR Uncaught Error: fetch for \"http://127.0.0.1:60531/bake/t3/ac_sunset_vis.exr\" responded with 404: Not Found http://127.0.0.1:60531/web/vendor/three.module.js:44921"
+    },
+    {
+      "path": "/result?audit_opt_log",
+      "body": "boot http://127.0.0.1:60531/web/test.html?name=audit_opt&glb=/web/data/opt.glb&tex=2k&shadow=static&w=1280&h=720&frames=90"
+    },
+    {
+      "path": "/result?audit_opt_log",
+      "body": "three ok 170"
+    },
+    {
+      "path": "/result?audit_opt_log",
+      "body": "hdr ok"
+    },
+    {
+      "path": "/result?audit_opt_log",
+      "body": "glb ok"
+    },
+    {
+      "path": "/result?audit_opt_log",
+      "body": "loop start"
+    },
+    {
+      "path": "/shot?audit_opt_30",
+      "body": "[image omitted]"
+    },
+    {
+      "path": "/result?audit_opt",
+      "body": "{\"name\":\"audit_opt\",\"glb\":\"/web/data/opt.glb\",\"tex\":\"2k\",\"shadow\":\"static\",\"res\":\"1280x720\",\"gpuName\":\"ANGLE (Intel, Intel(R) Arc(TM) 140T GPU (16GB) (0x00007D51) Direct3D11 vs_5_0 ps_5_0, D3D11)\",\"loadMs\":1025,\"meshes\":216,\"calls\":217,\"triangles\":309777,\"geometries\":73,\"textures\":57,\"programs\":11,\"gpuMs\":{\"n\":70,\"avg\":3.82,\"p50\":2.52,\"p95\":4.03,\"p99\":90.58,\"max\":90.58},\"cpuMs\":{\"n\":69,\"avg\":6.94,\"p50\":5.7,\"p95\":7.3,\"p99\":93.6,\"max\":93.6},\"rafMs\":{\"n\":69,\"avg\":18.12,\"p50\":16.7,\"p95\":19.7,\"p99\":83.3,\"max\":83.3},\"heapMB\":140}"
+    },
+    {
+      "path": "/result?done_audit_opt",
+      "body": "1"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+﻿asset_id,type,resolution,maps,source_url,license,authors,used_for,downloaded,local_path
+asphalt_02,texture,2k,"Diffuse,nor_gl,Rough,Displacement,AO",https://polyhaven.com/a/asphalt_02,CC0,Rob Tuytel,路面/台阶/电杆/做旧质量样板,2026-11-01,D:\Cijian\assets\textures\asphalt_02
+asphalt_04,texture,2k,"Diffuse,nor_gl,Rough,Displacement,AO",https://polyhaven.com/a/asphalt_04,CC0,Jenelle van Heerden;Sergej Majboroda,路面/台阶/电杆/做旧质量样板,2026-11-01,D:\Cijian\assets\textures\asphalt_04
+concrete_floor_worn_001,texture,2k,"Diffuse,nor_gl,Rough,Displacement,AO",https://polyhaven.com/a/concrete_floor_worn_001,CC0,Dimitrios Savva;Rico Cilliers,路面/台阶/电杆/做旧质量样板,2026-11-01,D:\Cijian\assets\textures\concrete_floor_worn_001
+dirty_concrete,texture,2k,"Diffuse,nor_gl,Rough,Displacement,AO",https://polyhaven.com/a/dirty_concrete,CC0,Rob Tuytel,路面/台阶/电杆/做旧质量样板,2026-11-01,D:\Cijian\assets\textures\dirty_concrete
+granular_concrete,texture,2k,"Diffuse,nor_gl,Rough,Displacement,AO",https://polyhaven.com/a/granular_concrete,CC0,Dario Barresi;Michael Jenkins,路面/台阶/电杆/做旧质量样板,2026-11-01,D:\Cijian\assets\textures\granular_concrete
+gravel_concrete_03,texture,2k,"Diffuse,nor_gl,Rough,Displacement,AO",https://polyhaven.com/a/gravel_concrete_03,CC0,Charlotte Baglioni,路面/台阶/电杆/做旧质量样板,2026-11-01,D:\Cijian\assets\textures\gravel_concrete_03
+japanese_stone_wall,texture,2k,"Diffuse,nor_gl,Rough,Displacement,AO",https://polyhaven.com/a/japanese_stone_wall,CC0,Rico Cilliers;Charlotte Baglioni;Dario Barresi,路面/台阶/电杆/做旧质量样板,2026-11-01,D:\Cijian\assets\textures\japanese_stone_wall
+concrete_moss,texture,2k,"Diffuse,nor_gl,Rough,Displacement,AO",https://polyhaven.com/a/concrete_moss,CC0,Rob Tuytel,路面/台阶/电杆/做旧质量样板,2026-11-01,D:\Cijian\assets\textures\concrete_moss
+concrete_block_wall,texture,2k,"Diffuse,nor_gl,Rough,Displacement,AO",https://polyhaven.com/a/concrete_block_wall,CC0,Charlotte Baglioni,路面/台阶/电杆/做旧质量样板,2026-11-01,D:\Cijian\assets\textures\concrete_block_wall
+brushed_concrete,texture,2k,"Diffuse,nor_gl,Rough,Displacement,AO",https://polyhaven.com/a/brushed_concrete,CC0,Dario Barresi;Dimitrios Savva,路面/台阶/电杆/做旧质量样板,2026-11-01,D:\Cijian\assets\textures\brushed_concrete
+rusty_metal_02,texture,2k,"Diffuse,nor_gl,Rough,Displacement,AO",https://polyhaven.com/a/rusty_metal_02,CC0,Rob Tuytel,路面/台阶/电杆/做旧质量样板,2026-11-01,D:\Cijian\assets\textures\rusty_metal_02
+rust_coarse_01,texture,2k,"Diffuse,nor_gl,Rough,Displacement,AO",https://polyhaven.com/a/rust_coarse_01,CC0,Dimitrios Savva;Rico Cilliers,路面/台阶/电杆/做旧质量样板,2026-11-01,D:\Cijian\assets\textures\rust_coarse_01
+rusty_painted_metal,texture,2k,"Diffuse,nor_gl,Rough,Displacement,AO",https://polyhaven.com/a/rusty_painted_metal,CC0,Amal Kumar,路面/台阶/电杆/做旧质量样板,2026-11-01,D:\Cijian\assets\textures\rusty_painted_metal
+dry_decay_leaves,texture,2k,"Diffuse,nor_gl,Rough,Displacement,AO",https://polyhaven.com/a/dry_decay_leaves,CC0,Amal Kumar,路面/台阶/电杆/做旧质量样板,2026-11-01,D:\Cijian\assets\textures\dry_decay_leaves
+granite_tile_03,texture,2k,"Diffuse,nor_gl,Rough,Displacement,AO",https://polyhaven.com/a/granite_tile_03,CC0,Charlotte Baglioni,路面/台阶/电杆/做旧质量样板,2026-11-01,D:\Cijian\assets\textures\granite_tile_03
+shanghai_riverside,hdri,4k,hdr,https://polyhaven.com/a/shanghai_riverside,CC0,Alex Radosnov,样板光照（仅烘焙用，不进游戏包）,2026-11-01,D:\Cijian\assets\hdri\shanghai_riverside_4k.hdr
+signal_hill_sunrise,hdri,4k,hdr,https://polyhaven.com/a/signal_hill_sunrise,CC0,Greg Zaal;Rico Cilliers,样板光照（仅烘焙用，不进游戏包）,2026-11-01,D:\Cijian\assets\hdri\signal_hill_sunrise_4k.hdr
+blender-5.2.3-windows-x64,tool,,zip,https://mirrors.aliyun.com/blender/release/Blender5.2/,GPL-3.0,Blender Foundation,后台渲染（商店版无法经 SSH 启动）,2026-11-01,D:\Cijian\tools
+modular_electricity_poles,model,2k,gltf,https://polyhaven.com/a/modular_electricity_poles,CC0,James Ray Cock,真实扫描参考/烘焙源（面数超预算，不直接进游戏）,2026-11-01,D:\Cijian\assets\models\modular_electricity_poles
+modular_electric_cables,model,2k,gltf,https://polyhaven.com/a/modular_electric_cables,CC0,Kuutti Siitonen,真实扫描参考/烘焙源（面数超预算，不直接进游戏）,2026-11-01,D:\Cijian\assets\models\modular_electric_cables
+dandelion_01,model,2k,gltf,https://polyhaven.com/a/dandelion_01,CC0,Rob Tuytel;Rico Cilliers,真实扫描参考/烘焙源（面数超预算，不直接进游戏）,2026-11-01,D:\Cijian\assets\models\dandelion_01
+nettle_plant,model,2k,gltf,https://polyhaven.com/a/nettle_plant,CC0,Rob Tuytel;Rico Cilliers,真实扫描参考/烘焙源（面数超预算，不直接进游戏）,2026-11-01,D:\Cijian\assets\models\nettle_plant
+grass_bermuda_01,model,2k,gltf,https://polyhaven.com/a/grass_bermuda_01,CC0,Rico Cilliers,真实扫描参考/烘焙源（面数超预算，不直接进游戏）,2026-11-01,D:\Cijian\assets\models\grass_bermuda_01
+moss_01,model,2k,gltf,https://polyhaven.com/a/moss_01,CC0,Rob Tuytel,真实扫描参考/烘焙源（面数超预算，不直接进游戏）,2026-11-01,D:\Cijian\assets\models\moss_01
+rock_moss_set_01,model,2k,gltf,https://polyhaven.com/a/rock_moss_set_01,CC0,Kless Gyzen,真实扫描参考/烘焙源（面数超预算，不直接进游戏）,2026-11-01,D:\Cijian\assets\models\rock_moss_set_01
+asphalt_02,texture,4k,"Diffuse,Rough,Displacement",https://polyhaven.com/a/asphalt_02,CC0,Rob Tuytel,样板 r5 高清贴图（不受 2K 预算限制）,2026-11-01,D:\Cijian\assets\textures4k\asphalt_02
+asphalt_04,texture,4k,"Diffuse,Rough,Displacement",https://polyhaven.com/a/asphalt_04,CC0,Jenelle van Heerden;Sergej Majboroda,样板 r5 高清贴图（不受 2K 预算限制）,2026-11-01,D:\Cijian\assets\textures4k\asphalt_04
+granular_concrete,texture,4k,"Diffuse,Rough,Displacement",https://polyhaven.com/a/granular_concrete,CC0,Dario Barresi;Michael Jenkins,样板 r5 高清贴图（不受 2K 预算限制）,2026-11-01,D:\Cijian\assets\textures4k\granular_concrete
+japanese_stone_wall,texture,4k,"Diffuse,Rough,Displacement",https://polyhaven.com/a/japanese_stone_wall,CC0,Rico Cilliers;Charlotte Baglioni;Dario Barresi,样板 r5 高清贴图（不受 2K 预算限制）,2026-11-01,D:\Cijian\assets\textures4k\japanese_stone_wall
+brushed_concrete,texture,4k,"Diffuse,Rough,Displacement",https://polyhaven.com/a/brushed_concrete,CC0,Dario Barresi;Dimitrios Savva,样板 r5 高清贴图（不受 2K 预算限制）,2026-11-01,D:\Cijian\assets\textures4k\brushed_concrete
+dirty_concrete,texture,4k,"Diffuse,Rough,Displacement",https://polyhaven.com/a/dirty_concrete,CC0,Rob Tuytel,样板 r5 高清贴图（不受 2K 预算限制）,2026-11-01,D:\Cijian\assets\textures4k\dirty_concrete
+concrete_floor_worn_001,texture,4k,"Diffuse,Rough,Displacement",https://polyhaven.com/a/concrete_floor_worn_001,CC0,Dimitrios Savva;Rico Cilliers,样板 r5 高清贴图（不受 2K 预算限制）,2026-11-01,D:\Cijian\assets\textures4k\concrete_floor_worn_001
+pebble_embedded_concrete,texture,4k,"Diffuse,Rough,Displacement",https://polyhaven.com/a/pebble_embedded_concrete,CC0,Charlotte Baglioni,样板 r5 高清贴图（不受 2K 预算限制）,2026-11-01,D:\Cijian\assets\textures4k\pebble_embedded_concrete
+red_brick_pavers,texture,4k,"Diffuse,Rough,Displacement",https://polyhaven.com/a/red_brick_pavers,CC0,Amal Kumar,样板 r5 高清贴图（不受 2K 预算限制）,2026-11-01,D:\Cijian\assets\textures4k\red_brick_pavers
+red_brick,texture,4k,"Diffuse,Rough,Displacement",https://polyhaven.com/a/red_brick,CC0,Rob Tuytel,样板 r5 高清贴图（不受 2K 预算限制）,2026-11-01,D:\Cijian\assets\textures4k\red_brick
+grey_roof_tiles,texture,4k,"Diffuse,Rough,Displacement",https://polyhaven.com/a/grey_roof_tiles,CC0,Rob Tuytel,样板 r5 高清贴图（不受 2K 预算限制）,2026-11-01,D:\Cijian\assets\textures4k\grey_roof_tiles
+painted_plaster_wall,texture,4k,"Diffuse,Rough,Displacement",https://polyhaven.com/a/painted_plaster_wall,CC0,Amal Kumar,样板 r5 高清贴图（不受 2K 预算限制）,2026-11-01,D:\Cijian\assets\textures4k\painted_plaster_wall
+worn_plaster_wall,texture,4k,"Diffuse,Rough,Displacement",https://polyhaven.com/a/worn_plaster_wall,CC0,Dimitrios Savva,样板 r5 高清贴图（不受 2K 预算限制）,2026-11-01,D:\Cijian\assets\textures4k\worn_plaster_wall
+wood_shutter,texture,4k,"Diffuse,Rough,Displacement",https://polyhaven.com/a/wood_shutter,CC0,Dimitrios Savva,样板 r5 高清贴图（不受 2K 预算限制）,2026-11-01,D:\Cijian\assets\textures4k\wood_shutter
+weathered_plank_siding,texture,4k,"Diffuse,Rough,Displacement",https://polyhaven.com/a/weathered_plank_siding,CC0,Dimitrios Savva,样板 r5 高清贴图（不受 2K 预算限制）,2026-11-01,D:\Cijian\assets\textures4k\weathered_plank_siding
+kloofendal_48d_partly_cloudy_puresky,hdri,4k,hdr,https://polyhaven.com/a/kloofendal_48d_partly_cloudy_puresky,CC0,Greg Zaal;Jarod Guest,云天 HDRI 候选,2026-11-01,D:\Cijian\assets\hdri
+qwantani_morning_puresky,hdri,4k,hdr,https://polyhaven.com/a/qwantani_morning_puresky,CC0,Jarod Guest,云天 HDRI 候选,2026-11-01,D:\Cijian\assets\hdri
+qwantani_sunset_puresky,hdri,4k,hdr,https://polyhaven.com/a/qwantani_sunset_puresky,CC0,Greg Zaal;Jarod Guest,云天 HDRI 候选,2026-11-01,D:\Cijian\assets\hdri
+rosendal_park_sunset_puresky,hdri,4k,hdr,https://polyhaven.com/a/rosendal_park_sunset_puresky,CC0,Dimitrios Savva;Jarod Guest,云天 HDRI 候选,2026-11-01,D:\Cijian\assets\hdri
+shrub_01,model,2k,gltf,https://polyhaven.com/a/shrub_01,CC0,Rico Cilliers,花坛植物,2026-11-01,D:\Cijian\assets\models\shrub_01
+fern_02,model,2k,gltf,https://polyhaven.com/a/fern_02,CC0,Rob Tuytel;Rico Cilliers,花坛植物,2026-11-01,D:\Cijian\assets\models\fern_02
+manhole,photo,,jpg,https://commons.wikimedia.org/wiki/File:Manhole_Cover_in_Tokyo.jpg,CC BY-SA 3.0,Thirteen-fri,井盖贴图,2026-11-01,Mac 临时目录 / D:\Cijian\refs_web
+stairs5,photo,,jpg,https://commons.wikimedia.org/wiki/File:Y%C5%AByake_Dandan.jpg,CC BY-SA 4.0,Christophe95,台阶实拍参考,2026-11-01,Mac 临时目录 / D:\Cijian\refs_web
+stairs1,photo,,jpg,"https://commons.wikimedia.org/wiki/File:Yuyake_dandan_Yanaka_Taito_Tokyo_Mar_7,_2014.jpg",CC BY 2.0,Emma,台阶和街道实拍参考,2026-11-01,Mac 临时目录 / D:\Cijian\refs_web
+xfmr,photo,,jpg,https://commons.wikimedia.org/wiki/File:Distribution_transformer_in_Japan_01.jpg,CC BY-SA 4.0,Bio06940,变压器实拍参考,2026-11-01,Mac 临时目录 / D:\Cijian\refs_web
+poles,photo,,jpg,https://commons.wikimedia.org/wiki/File:Utility_poles_Takadanobaba.jpg,CC BY-SA 4.0,Gzzz,电杆线缆实拍参考,2026-11-01,Mac 临时目录 / D:\Cijian\refs_web
+powerline,photo,,jpg,https://commons.wikimedia.org/wiki/File:Power_Line_in_Tokyo.jpg,CC BY-SA 3.0,Ventus,电杆线缆实拍参考,2026-11-01,Mac 临时目录 / D:\Cijian\refs_web

@@ -1,0 +1,225 @@
+{
+  "captured_at": "2026-11-02T10:52:42.490038+08:00",
+  "files": {
+    "web/game.js": {
+      "bytes": 22501,
+      "sha256": "26ba06651bfe8babee2d5e72f0cb6620dc5e88ccd3dee5acce5305c7eaf727c0",
+      "mtime": "2026-11-02T10:50:46.800645+08:00"
+    },
+    "web/data/bk.json": {
+      "bytes": 651,
+      "sha256": "24e01fd6f3b43bb0a11af026aef8c439a9f2250687fb417a0e729c9d63d83081",
+      "mtime": "2026-11-02T10:50:15.548521+08:00"
+    },
+    "scripts/qs_bk_export.py": {
+      "bytes": 2535,
+      "sha256": "76c73245107962222cfcbb58ba84891b31cc018544ddd253cea45a55e633bed1",
+      "mtime": "2026-11-02T10:27:24.269630+08:00"
+    },
+    "scripts/qs_bk_bake.py": {
+      "bytes": 10781,
+      "sha256": "e341555f12602069f62cb7438a9579f811d2d45115f2ef418916d9f239885374",
+      "mtime": "2026-11-02T10:51:00.640854+08:00"
+    },
+    "scripts/run_b1.cmd": {
+      "bytes": 903,
+      "sha256": "7d9d6e5f568f26392e2729559afba99e29e2fd56f7ad034dad0a86847dd51dbe",
+      "mtime": "2026-11-02T10:45:29.410454+08:00"
+    }
+  },
+  "sizes": {
+    "asset-register.csv": {
+      "bytes": 11173
+    },
+    "assets": {
+      "files": 221,
+      "MiB": 1111.1
+    },
+    "bake": {
+      "files": 39,
+      "MiB": 181.6
+    },
+    "blend": {
+      "files": 19,
+      "MiB": 884.3
+    },
+    "Cijian.zip": {
+      "bytes": 619580802
+    },
+    "output": {
+      "files": 189,
+      "MiB": 32.4
+    },
+    "refs_web": {
+      "files": 3,
+      "MiB": 11.4
+    },
+    "scripts": {
+      "files": 25,
+      "MiB": 0.2
+    },
+    "tools": {
+      "files": 7175,
+      "MiB": 1301.8
+    },
+    "web": {
+      "files": 962,
+      "MiB": 455.7
+    }
+  },
+  "manifest": {
+    "dir": "t3",
+    "lights": [
+      "sunset"
+    ],
+    "groups": {
+      "ac": [
+        "albedo.png"
+      ],
+      "ad": [],
+      "apron": [],
+      "apt": [],
+      "apt2": [],
+      "awn_a": [],
+      "awn_b": [],
+      "awn_c": [],
+      "block_wall": [],
+      "brick": [],
+      "cable": [],
+      "cover": [],
+      "far": [],
+      "glass": [],
+      "glass_warm": [],
+      "ground": [],
+      "lens": [],
+      "mortar": [],
+      "pavers": [],
+      "pipe": [],
+      "plaster": [],
+      "pole": [],
+      "porcelain": [],
+      "rail_green": [],
+      "rail_top": [],
+      "road_a": [],
+      "road_b": [],
+      "roof": [],
+      "rusty": [],
+      "shutter": [],
+      "siding": [],
+      "soil": [],
+      "steel": [],
+      "stone": [],
+      "tag": [],
+      "wire": [],
+      "wood": [],
+      "xfmr": []
+    },
+    "plants": [
+      "dandelion_01",
+      "fern_02",
+      "grass_bermuda_01",
+      "nettle_plant",
+      "shrub_01"
+    ]
+  },
+  "bake_groups_complete": [
+    "ac",
+    "ad",
+    "apron"
+  ],
+  "missing_lightmaps": [
+    "bake\\t3\\apt_sunset.exr",
+    "bake\\t3\\apt_sunset_vis.exr",
+    "bake\\t3\\apt2_sunset.exr",
+    "bake\\t3\\apt2_sunset_vis.exr",
+    "bake\\t3\\awn_a_sunset.exr",
+    "bake\\t3\\awn_a_sunset_vis.exr",
+    "bake\\t3\\awn_b_sunset.exr",
+    "bake\\t3\\awn_b_sunset_vis.exr",
+    "bake\\t3\\awn_c_sunset.exr",
+    "bake\\t3\\awn_c_sunset_vis.exr",
+    "bake\\t3\\block_wall_sunset.exr",
+    "bake\\t3\\block_wall_sunset_vis.exr",
+    "bake\\t3\\brick_sunset.exr",
+    "bake\\t3\\brick_sunset_vis.exr",
+    "bake\\t3\\cable_sunset.exr",
+    "bake\\t3\\cable_sunset_vis.exr",
+    "bake\\t3\\cover_sunset.exr",
+    "bake\\t3\\cover_sunset_vis.exr",
+    "bake\\t3\\far_sunset.exr",
+    "bake\\t3\\far_sunset_vis.exr",
+    "bake\\t3\\glass_sunset.exr",
+    "bake\\t3\\glass_sunset_vis.exr",
+    "bake\\t3\\glass_warm_sunset.exr",
+    "bake\\t3\\glass_warm_sunset_vis.exr",
+    "bake\\t3\\ground_sunset.exr",
+    "bake\\t3\\ground_sunset_vis.exr",
+    "bake\\t3\\lens_sunset.exr",
+    "bake\\t3\\lens_sunset_vis.exr",
+    "bake\\t3\\mortar_sunset.exr",
+    "bake\\t3\\mortar_sunset_vis.exr",
+    "bake\\t3\\pavers_sunset.exr",
+    "bake\\t3\\pavers_sunset_vis.exr",
+    "bake\\t3\\pipe_sunset.exr",
+    "bake\\t3\\pipe_sunset_vis.exr",
+    "bake\\t3\\plaster_sunset.exr",
+    "bake\\t3\\plaster_sunset_vis.exr",
+    "bake\\t3\\pole_sunset.exr",
+    "bake\\t3\\pole_sunset_vis.exr",
+    "bake\\t3\\porcelain_sunset.exr",
+    "bake\\t3\\porcelain_sunset_vis.exr",
+    "bake\\t3\\rail_green_sunset.exr",
+    "bake\\t3\\rail_green_sunset_vis.exr",
+    "bake\\t3\\rail_top_sunset.exr",
+    "bake\\t3\\rail_top_sunset_vis.exr",
+    "bake\\t3\\road_a_sunset.exr",
+    "bake\\t3\\road_a_sunset_vis.exr",
+    "bake\\t3\\road_b_sunset.exr",
+    "bake\\t3\\road_b_sunset_vis.exr",
+    "bake\\t3\\roof_sunset.exr",
+    "bake\\t3\\roof_sunset_vis.exr",
+    "bake\\t3\\rusty_sunset.exr",
+    "bake\\t3\\rusty_sunset_vis.exr",
+    "bake\\t3\\shutter_sunset.exr",
+    "bake\\t3\\shutter_sunset_vis.exr",
+    "bake\\t3\\siding_sunset.exr",
+    "bake\\t3\\siding_sunset_vis.exr",
+    "bake\\t3\\soil_sunset.exr",
+    "bake\\t3\\soil_sunset_vis.exr",
+    "bake\\t3\\steel_sunset.exr",
+    "bake\\t3\\steel_sunset_vis.exr",
+    "bake\\t3\\stone_sunset.exr",
+    "bake\\t3\\stone_sunset_vis.exr",
+    "bake\\t3\\tag_sunset.exr",
+    "bake\\t3\\tag_sunset_vis.exr",
+    "bake\\t3\\wire_sunset.exr",
+    "bake\\t3\\wire_sunset_vis.exr",
+    "bake\\t3\\wood_sunset.exr",
+    "bake\\t3\\wood_sunset_vis.exr",
+    "bake\\t3\\xfmr_sunset.exr",
+    "bake\\t3\\xfmr_sunset_vis.exr"
+  ],
+  "unmapped_materials": [
+    "road"
+  ],
+  "bake_t3_files": [
+    "ac_albedo.png",
+    "ac_normal.png",
+    "ac_orm.png",
+    "ac_sunset.exr",
+    "ac_sunset_vis.exr",
+    "ad_albedo.png",
+    "ad_normal.png",
+    "ad_orm.png",
+    "ad_sunset.exr",
+    "ad_sunset_vis.exr",
+    "apron_albedo.png",
+    "apron_normal.png",
+    "apron_orm.png",
+    "apron_sunset.exr",
+    "apron_sunset_vis.exr",
+    "apt_albedo.png",
+    "apt_normal.png",
+    "apt_orm.png"
+  ]
+}

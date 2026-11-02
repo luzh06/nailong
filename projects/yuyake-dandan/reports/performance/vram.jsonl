@@ -1,0 +1,4 @@
+{"name":"A_raw4k","vramBaseMB":890,"vramPeakMB":4724,"gpuUtilPeak":45,"seconds":20,"finished":true}
+{"name":"B_opt2k","vramBaseMB":890,"vramPeakMB":2780,"gpuUtilPeak":47,"seconds":10,"finished":true}
+{"name":"C_opt2k_static","vramBaseMB":890,"vramPeakMB":2839,"gpuUtilPeak":72,"seconds":8,"finished":true}
+{"name":"D_opt2k_1440","vramBaseMB":890,"vramPeakMB":2868,"gpuUtilPeak":70,"seconds":10,"finished":true}

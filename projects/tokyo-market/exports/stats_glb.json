@@ -1,0 +1,4130 @@
+﻿[
+ {
+  "file": "master_tokyo_crowd.glb",
+  "glb_version": 2,
+  "size_MB": 0.32,
+  "tris": 181352,
+  "meshes": 16,
+  "uv_sets_per_primitive": [
+   1
+  ],
+  "bounds_min_xyz": [
+   1000000000.0,
+   1000000000.0,
+   1000000000.0
+  ],
+  "bounds_max_xyz": [
+   -1000000000.0,
+   -1000000000.0,
+   -1000000000.0
+  ],
+  "textures_KB": 0,
+  "images": [
+   {
+    "name": "yn_people_palette",
+    "size": "128x128",
+    "KB": 0
+   }
+  ],
+  "materials": [
+   {
+    "name": "yn_mat_people",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   }
+  ]
+ },
+ {
+  "file": "master_tokyo_scene.glb",
+  "glb_version": 2,
+  "size_MB": 29.63,
+  "tris": 392654,
+  "meshes": 86,
+  "uv_sets_per_primitive": [
+   1,
+   2
+  ],
+  "bounds_min_xyz": [
+   -1000,
+   -20,
+   -1100
+  ],
+  "bounds_max_xyz": [
+   1000,
+   102,
+   1000
+  ],
+  "textures_KB": 11426,
+  "images": [
+   {
+    "name": "yn_vermilion_normal_2k",
+    "size": "2048x2048",
+    "KB": 64
+   },
+   {
+    "name": "yn_vermilion_orm_2k",
+    "size": "2048x2048",
+    "KB": 43
+   },
+   {
+    "name": "yn_vermilion_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 53
+   },
+   {
+    "name": "yn_kawara_normal_2k",
+    "size": "2048x2048",
+    "KB": 60
+   },
+   {
+    "name": "yn_kawara_orm_2k",
+    "size": "2048x2048",
+    "KB": 86
+   },
+   {
+    "name": "yn_kawara_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 26
+   },
+   {
+    "name": "yn_cedar_normal_2k",
+    "size": "2048x2048",
+    "KB": 544
+   },
+   {
+    "name": "yn_cedar_orm_2k",
+    "size": "2048x2048",
+    "KB": 149
+   },
+   {
+    "name": "yn_cedar_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 70
+   },
+   {
+    "name": "yn_plaster_normal_1k",
+    "size": "1024x1024",
+    "KB": 130
+   },
+   {
+    "name": "yn_plaster_orm_1k",
+    "size": "1024x1024",
+    "KB": 8
+   },
+   {
+    "name": "yn_plaster_basecolor_1k",
+    "size": "1024x1024",
+    "KB": 6
+   },
+   {
+    "name": "yn_shutter_normal_1k",
+    "size": "1024x1024",
+    "KB": 41
+   },
+   {
+    "name": "yn_shutter_orm_1k",
+    "size": "1024x1024",
+    "KB": 28
+   },
+   {
+    "name": "yn_shutter_basecolor_1k",
+    "size": "1024x1024",
+    "KB": 47
+   },
+   {
+    "name": "yn_corrugated_normal_1k",
+    "size": "1024x1024",
+    "KB": 16
+   },
+   {
+    "name": "yn_corrugated_orm_1k",
+    "size": "1024x1024",
+    "KB": 113
+   },
+   {
+    "name": "yn_corrugated_basecolor_1k",
+    "size": "1024x1024",
+    "KB": 29
+   },
+   {
+    "name": "yn_signs_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 692
+   },
+   {
+    "name": "yn_grime_1k",
+    "size": "1024x1024",
+    "KB": 164
+   },
+   {
+    "name": "yn_trim_emissive_1k",
+    "size": "1024x1024",
+    "KB": 40
+   },
+   {
+    "name": "yn_trim_normal_2k",
+    "size": "2048x2048",
+    "KB": 61
+   },
+   {
+    "name": "yn_trim_orm_2k",
+    "size": "2048x2048",
+    "KB": 40
+   },
+   {
+    "name": "yn_trim_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 201
+   },
+   {
+    "name": "yn_goods_photo_2k",
+    "size": "2048x2048",
+    "KB": 566
+   },
+   {
+    "name": "yn_lantern_basecolor_512",
+    "size": "512x512",
+    "KB": 37
+   },
+   {
+    "name": "yn_plaque_1k",
+    "size": "1024x512",
+    "KB": 15
+   },
+   {
+    "name": "yn_noren_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 495
+   },
+   {
+    "name": "yn_paving_normal_2k",
+    "size": "2048x2048",
+    "KB": 192
+   },
+   {
+    "name": "yn_paving_orm_2k",
+    "size": "2048x2048",
+    "KB": 137
+   },
+   {
+    "name": "yn_paving_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 480
+   },
+   {
+    "name": "yn_ground_stain_1k",
+    "size": "1024x1024",
+    "KB": 106
+   },
+   {
+    "name": "yn_props_basecolor_1k",
+    "size": "1024x1024",
+    "KB": 92
+   },
+   {
+    "name": "yn_roof_red_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 45
+   },
+   {
+    "name": "yn_citysigns_1k",
+    "size": "1024x1024",
+    "KB": 56
+   },
+   {
+    "name": "wall_plaster_nor_gl_2k",
+    "size": "2048x2048",
+    "KB": 94
+   },
+   {
+    "name": "wall_plaster_arm_2k",
+    "size": "2048x2048",
+    "KB": 949
+   },
+   {
+    "name": "wall_plaster_diff_2k",
+    "size": "2048x2048",
+    "KB": 1013
+   },
+   {
+    "name": "yn_window_emissive_1k",
+    "size": "1024x1024",
+    "KB": 12
+   },
+   {
+    "name": "yn_window_basecolor_1k",
+    "size": "1024x1024",
+    "KB": 19
+   },
+   {
+    "name": "wall_tile_nor_gl_2k",
+    "size": "2048x2048",
+    "KB": 338
+   },
+   {
+    "name": "wall_tile_arm_2k",
+    "size": "2048x2048",
+    "KB": 97
+   },
+   {
+    "name": "wall_tile_diff_2k",
+    "size": "2048x2048",
+    "KB": 121
+   },
+   {
+    "name": "wall_concrete_nor_gl_2k",
+    "size": "2048x2048",
+    "KB": 1013
+   },
+   {
+    "name": "wall_concrete_arm_2k",
+    "size": "2048x2048",
+    "KB": 553
+   },
+   {
+    "name": "wall_concrete_diff_2k",
+    "size": "2048x2048",
+    "KB": 357
+   },
+   {
+    "name": "wall_brick_nor_gl_2k",
+    "size": "2048x2048",
+    "KB": 642
+   },
+   {
+    "name": "wall_brick_arm_2k",
+    "size": "2048x2048",
+    "KB": 225
+   },
+   {
+    "name": "wall_brick_diff_2k",
+    "size": "2048x2048",
+    "KB": 1016
+   },
+   {
+    "name": "yn_skyline_sunset_2k",
+    "size": "1846x401",
+    "KB": 45
+   }
+  ],
+  "materials": [
+   {
+    "name": "yn_mat_vermilion_a",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_roof",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_cedar",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_plaster",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_metal_dark",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_shutter",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_corrugated",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_signs",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": true
+   },
+   {
+    "name": "yn_mat_glow",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_glass_dark",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_grime",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_trim",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_goods_photo",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_lantern",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_plaque",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": true
+   },
+   {
+    "name": "yn_mat_bronze",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_globe",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_rubber",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_bulb",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_blossom",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": true
+   },
+   {
+    "name": "yn_mat_vermilion_b",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_vermilion_c",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_gold",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_noren",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": true
+   },
+   {
+    "name": "yn_mat_paving",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_ground_stain",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_props",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": true
+   },
+   {
+    "name": "yn_mat_concrete",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_roof_red",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_citysigns",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": true
+   },
+   {
+    "name": "yn_mat_city_plaster_0",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_window",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_city_plaster_1",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_city_plaster_2",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_city_plaster_3",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_city_plaster_4",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_city_tile_0",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_city_tile_1",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_city_concrete_0",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_city_concrete_1",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_city_brick_0",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_city_brick_1",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_skyline",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": true
+   },
+   {
+    "name": "yn_mat_leaf",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": true
+   },
+   {
+    "name": "yn_mat_steel",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_plastic_blue",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   }
+  ]
+ },
+ {
+  "file": "master_tokyo_shutters_closed.glb",
+  "glb_version": 2,
+  "size_MB": 0.58,
+  "tris": 230,
+  "meshes": 19,
+  "uv_sets_per_primitive": [
+   2
+  ],
+  "bounds_min_xyz": [
+   1000000000.0,
+   1000000000.0,
+   1000000000.0
+  ],
+  "bounds_max_xyz": [
+   -1000000000.0,
+   -1000000000.0,
+   -1000000000.0
+  ],
+  "textures_KB": 560,
+  "images": [
+   {
+    "name": "yn_shutter_normal_1k",
+    "size": "1024x1024",
+    "KB": 41
+   },
+   {
+    "name": "yn_shutter_orm_1k",
+    "size": "1024x1024",
+    "KB": 28
+   },
+   {
+    "name": "yn_shutter_art_2k",
+    "size": "2048x2048",
+    "KB": 491
+   }
+  ],
+  "materials": [
+   {
+    "name": "yn_mat_shutter_art",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   }
+  ]
+ },
+ {
+  "file": "YN_prop_bicycle_01.glb",
+  "glb_version": 2,
+  "size_MB": 0.1,
+  "tris": 1266,
+  "meshes": 1,
+  "uv_sets_per_primitive": [
+   2
+  ],
+  "bounds_min_xyz": [
+   -0.279,
+   0.006,
+   -0.86
+  ],
+  "bounds_max_xyz": [
+   0.279,
+   1.014,
+   0.86
+  ],
+  "textures_KB": 0,
+  "images": [],
+  "materials": [
+   {
+    "name": "yn_mat_metal_dark",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_rubber",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_steel",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   }
+  ]
+ },
+ {
+  "file": "YN_prop_nobori_01.glb",
+  "glb_version": 2,
+  "size_MB": 0.1,
+  "tris": 74,
+  "meshes": 1,
+  "uv_sets_per_primitive": [
+   2
+  ],
+  "bounds_min_xyz": [
+   -0.12,
+   0,
+   -0.12
+  ],
+  "bounds_max_xyz": [
+   0.62,
+   2.5,
+   0.12
+  ],
+  "textures_KB": 92,
+  "images": [
+   {
+    "name": "yn_props_basecolor_1k",
+    "size": "1024x1024",
+    "KB": 92
+   }
+  ],
+  "materials": [
+   {
+    "name": "yn_mat_props",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": true
+   },
+   {
+    "name": "yn_mat_metal_dark",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_steel",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   }
+  ]
+ },
+ {
+  "file": "YN_prop_planter_01.glb",
+  "glb_version": 2,
+  "size_MB": 0.05,
+  "tris": 484,
+  "meshes": 1,
+  "uv_sets_per_primitive": [
+   2
+  ],
+  "bounds_min_xyz": [
+   -0.591,
+   0,
+   -0.716
+  ],
+  "bounds_max_xyz": [
+   0.596,
+   1.15,
+   0.579
+  ],
+  "textures_KB": 0,
+  "images": [],
+  "materials": [
+   {
+    "name": "yn_mat_leaf",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": true
+   },
+   {
+    "name": "yn_mat_concrete",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   }
+  ]
+ },
+ {
+  "file": "YN_prop_planter_02.glb",
+  "glb_version": 2,
+  "size_MB": 0.05,
+  "tris": 484,
+  "meshes": 1,
+  "uv_sets_per_primitive": [
+   2
+  ],
+  "bounds_min_xyz": [
+   -0.68,
+   0,
+   -0.617
+  ],
+  "bounds_max_xyz": [
+   0.616,
+   1.15,
+   0.628
+  ],
+  "textures_KB": 0,
+  "images": [],
+  "materials": [
+   {
+    "name": "yn_mat_leaf",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": true
+   },
+   {
+    "name": "yn_mat_concrete",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   }
+  ]
+ },
+ {
+  "file": "YN_prop_plastic_crate_01.glb",
+  "glb_version": 2,
+  "size_MB": 0.03,
+  "tris": 358,
+  "meshes": 1,
+  "uv_sets_per_primitive": [
+   2
+  ],
+  "bounds_min_xyz": [
+   -0.225,
+   0,
+   -0.175
+  ],
+  "bounds_max_xyz": [
+   0.225,
+   0.3,
+   0.175
+  ],
+  "textures_KB": 0,
+  "images": [],
+  "materials": [
+   {
+    "name": "yn_mat_plastic_blue",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   }
+  ]
+ },
+ {
+  "file": "YN_prop_standing_sign_01.glb",
+  "glb_version": 2,
+  "size_MB": 0.84,
+  "tris": 26,
+  "meshes": 1,
+  "uv_sets_per_primitive": [
+   2
+  ],
+  "bounds_min_xyz": [
+   -0.26,
+   0,
+   -0.142
+  ],
+  "bounds_max_xyz": [
+   0.26,
+   0.89,
+   0.142
+  ],
+  "textures_KB": 855,
+  "images": [
+   {
+    "name": "yn_cedar_normal_2k",
+    "size": "2048x2048",
+    "KB": 544
+   },
+   {
+    "name": "yn_cedar_orm_2k",
+    "size": "2048x2048",
+    "KB": 149
+   },
+   {
+    "name": "yn_cedar_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 70
+   },
+   {
+    "name": "yn_props_basecolor_1k",
+    "size": "1024x1024",
+    "KB": 92
+   }
+  ],
+  "materials": [
+   {
+    "name": "yn_mat_cedar",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_props",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": true
+   }
+  ]
+ },
+ {
+  "file": "YN_prop_standing_sign_02.glb",
+  "glb_version": 2,
+  "size_MB": 0.84,
+  "tris": 26,
+  "meshes": 1,
+  "uv_sets_per_primitive": [
+   2
+  ],
+  "bounds_min_xyz": [
+   -0.26,
+   0,
+   -0.142
+  ],
+  "bounds_max_xyz": [
+   0.26,
+   0.89,
+   0.142
+  ],
+  "textures_KB": 855,
+  "images": [
+   {
+    "name": "yn_cedar_normal_2k",
+    "size": "2048x2048",
+    "KB": 544
+   },
+   {
+    "name": "yn_cedar_orm_2k",
+    "size": "2048x2048",
+    "KB": 149
+   },
+   {
+    "name": "yn_cedar_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 70
+   },
+   {
+    "name": "yn_props_basecolor_1k",
+    "size": "1024x1024",
+    "KB": 92
+   }
+  ],
+  "materials": [
+   {
+    "name": "yn_mat_cedar",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_props",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": true
+   }
+  ]
+ },
+ {
+  "file": "YN_prop_street_lamp_01.glb",
+  "glb_version": 2,
+  "size_MB": 0.01,
+  "tris": 92,
+  "meshes": 1,
+  "uv_sets_per_primitive": [
+   2
+  ],
+  "bounds_min_xyz": [
+   -0.09,
+   0,
+   -0.075
+  ],
+  "bounds_max_xyz": [
+   0.09,
+   4.341,
+   1.02
+  ],
+  "textures_KB": 0,
+  "images": [],
+  "materials": [
+   {
+    "name": "yn_mat_metal_dark",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_glow",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   }
+  ]
+ },
+ {
+  "file": "YN_prop_utility_pole_01.glb",
+  "glb_version": 2,
+  "size_MB": 0.2,
+  "tris": 798,
+  "meshes": 1,
+  "uv_sets_per_primitive": [
+   2
+  ],
+  "bounds_min_xyz": [
+   -0.9,
+   0,
+   -0.39
+  ],
+  "bounds_max_xyz": [
+   0.9,
+   10,
+   0.24
+  ],
+  "textures_KB": 144,
+  "images": [
+   {
+    "name": "yn_plaster_normal_1k",
+    "size": "1024x1024",
+    "KB": 130
+   },
+   {
+    "name": "yn_plaster_orm_1k",
+    "size": "1024x1024",
+    "KB": 8
+   },
+   {
+    "name": "yn_plaster_basecolor_1k",
+    "size": "1024x1024",
+    "KB": 6
+   }
+  ],
+  "materials": [
+   {
+    "name": "yn_mat_plaster",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_metal_dark",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_concrete",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_gold",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_steel",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   }
+  ]
+ },
+ {
+  "file": "YN_prop_vending_machine_01.glb",
+  "glb_version": 2,
+  "size_MB": 0.36,
+  "tris": 88,
+  "meshes": 1,
+  "uv_sets_per_primitive": [
+   2
+  ],
+  "bounds_min_xyz": [
+   -0.527,
+   0,
+   -0.725
+  ],
+  "bounds_max_xyz": [
+   0.527,
+   1.83,
+   0.03
+  ],
+  "textures_KB": 352,
+  "images": [
+   {
+    "name": "yn_shutter_normal_1k",
+    "size": "1024x1024",
+    "KB": 41
+   },
+   {
+    "name": "yn_shutter_orm_1k",
+    "size": "1024x1024",
+    "KB": 28
+   },
+   {
+    "name": "yn_shutter_basecolor_1k",
+    "size": "1024x1024",
+    "KB": 47
+   },
+   {
+    "name": "yn_plaster_normal_1k",
+    "size": "1024x1024",
+    "KB": 130
+   },
+   {
+    "name": "yn_plaster_orm_1k",
+    "size": "1024x1024",
+    "KB": 8
+   },
+   {
+    "name": "yn_plaster_basecolor_1k",
+    "size": "1024x1024",
+    "KB": 6
+   },
+   {
+    "name": "yn_props_basecolor_1k",
+    "size": "1024x1024",
+    "KB": 92
+   }
+  ],
+  "materials": [
+   {
+    "name": "yn_mat_shutter",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_plaster",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_props",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": true
+   },
+   {
+    "name": "yn_mat_metal_dark",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_glow",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_steel",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   }
+  ]
+ },
+ {
+  "file": "YN_shop_A_01.glb",
+  "glb_version": 2,
+  "size_MB": 3.91,
+  "tris": 2320,
+  "meshes": 4,
+  "uv_sets_per_primitive": [
+   2
+  ],
+  "bounds_min_xyz": [
+   -1.83,
+   0,
+   -7.47
+  ],
+  "bounds_max_xyz": [
+   1.83,
+   7.42,
+   1.05
+  ],
+  "textures_KB": 3824,
+  "images": [
+   {
+    "name": "yn_vermilion_normal_2k",
+    "size": "2048x2048",
+    "KB": 64
+   },
+   {
+    "name": "yn_vermilion_orm_2k",
+    "size": "2048x2048",
+    "KB": 43
+   },
+   {
+    "name": "yn_vermilion_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 53
+   },
+   {
+    "name": "yn_kawara_normal_2k",
+    "size": "2048x2048",
+    "KB": 60
+   },
+   {
+    "name": "yn_kawara_orm_2k",
+    "size": "2048x2048",
+    "KB": 86
+   },
+   {
+    "name": "yn_kawara_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 26
+   },
+   {
+    "name": "yn_cedar_normal_2k",
+    "size": "2048x2048",
+    "KB": 544
+   },
+   {
+    "name": "yn_cedar_orm_2k",
+    "size": "2048x2048",
+    "KB": 149
+   },
+   {
+    "name": "yn_cedar_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 70
+   },
+   {
+    "name": "yn_shutter_normal_1k",
+    "size": "1024x1024",
+    "KB": 41
+   },
+   {
+    "name": "yn_shutter_orm_1k",
+    "size": "1024x1024",
+    "KB": 28
+   },
+   {
+    "name": "yn_shutter_basecolor_1k",
+    "size": "1024x1024",
+    "KB": 47
+   },
+   {
+    "name": "yn_plaster_normal_1k",
+    "size": "1024x1024",
+    "KB": 130
+   },
+   {
+    "name": "yn_plaster_orm_1k",
+    "size": "1024x1024",
+    "KB": 8
+   },
+   {
+    "name": "yn_plaster_basecolor_1k",
+    "size": "1024x1024",
+    "KB": 6
+   },
+   {
+    "name": "yn_corrugated_normal_1k",
+    "size": "1024x1024",
+    "KB": 16
+   },
+   {
+    "name": "yn_corrugated_orm_1k",
+    "size": "1024x1024",
+    "KB": 113
+   },
+   {
+    "name": "yn_corrugated_basecolor_1k",
+    "size": "1024x1024",
+    "KB": 29
+   },
+   {
+    "name": "yn_signs_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 692
+   },
+   {
+    "name": "yn_grime_1k",
+    "size": "1024x1024",
+    "KB": 164
+   },
+   {
+    "name": "yn_trim_emissive_1k",
+    "size": "1024x1024",
+    "KB": 40
+   },
+   {
+    "name": "yn_trim_normal_2k",
+    "size": "2048x2048",
+    "KB": 61
+   },
+   {
+    "name": "yn_trim_orm_2k",
+    "size": "2048x2048",
+    "KB": 40
+   },
+   {
+    "name": "yn_trim_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 201
+   },
+   {
+    "name": "yn_goods_photo_2k",
+    "size": "2048x2048",
+    "KB": 566
+   },
+   {
+    "name": "yn_lantern_basecolor_512",
+    "size": "512x512",
+    "KB": 37
+   },
+   {
+    "name": "yn_plaque_1k",
+    "size": "1024x512",
+    "KB": 15
+   },
+   {
+    "name": "yn_noren_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 495
+   }
+  ],
+  "materials": [
+   {
+    "name": "yn_mat_vermilion_a",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_roof",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_cedar",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_shutter",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_plaster",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_corrugated",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_signs",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": true
+   },
+   {
+    "name": "yn_mat_metal_dark",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_glow",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_glass_dark",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_grime",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_trim",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_goods_photo",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_lantern",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_plaque",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": true
+   },
+   {
+    "name": "yn_mat_bronze",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_globe",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_rubber",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_bulb",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_noren",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": true
+   }
+  ]
+ },
+ {
+  "file": "YN_shop_B_01.glb",
+  "glb_version": 2,
+  "size_MB": 3.9,
+  "tris": 2524,
+  "meshes": 4,
+  "uv_sets_per_primitive": [
+   2
+  ],
+  "bounds_min_xyz": [
+   -2.73,
+   0,
+   -7.47
+  ],
+  "bounds_max_xyz": [
+   2.73,
+   7.42,
+   1.05
+  ],
+  "textures_KB": 3787,
+  "images": [
+   {
+    "name": "yn_vermilion_normal_2k",
+    "size": "2048x2048",
+    "KB": 64
+   },
+   {
+    "name": "yn_vermilion_orm_2k",
+    "size": "2048x2048",
+    "KB": 43
+   },
+   {
+    "name": "yn_vermilion_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 53
+   },
+   {
+    "name": "yn_kawara_normal_2k",
+    "size": "2048x2048",
+    "KB": 60
+   },
+   {
+    "name": "yn_kawara_orm_2k",
+    "size": "2048x2048",
+    "KB": 86
+   },
+   {
+    "name": "yn_kawara_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 26
+   },
+   {
+    "name": "yn_cedar_normal_2k",
+    "size": "2048x2048",
+    "KB": 544
+   },
+   {
+    "name": "yn_cedar_orm_2k",
+    "size": "2048x2048",
+    "KB": 149
+   },
+   {
+    "name": "yn_cedar_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 70
+   },
+   {
+    "name": "yn_shutter_normal_1k",
+    "size": "1024x1024",
+    "KB": 41
+   },
+   {
+    "name": "yn_shutter_orm_1k",
+    "size": "1024x1024",
+    "KB": 28
+   },
+   {
+    "name": "yn_shutter_basecolor_1k",
+    "size": "1024x1024",
+    "KB": 47
+   },
+   {
+    "name": "yn_plaster_normal_1k",
+    "size": "1024x1024",
+    "KB": 130
+   },
+   {
+    "name": "yn_plaster_orm_1k",
+    "size": "1024x1024",
+    "KB": 8
+   },
+   {
+    "name": "yn_plaster_basecolor_1k",
+    "size": "1024x1024",
+    "KB": 6
+   },
+   {
+    "name": "yn_corrugated_normal_1k",
+    "size": "1024x1024",
+    "KB": 16
+   },
+   {
+    "name": "yn_corrugated_orm_1k",
+    "size": "1024x1024",
+    "KB": 113
+   },
+   {
+    "name": "yn_corrugated_basecolor_1k",
+    "size": "1024x1024",
+    "KB": 29
+   },
+   {
+    "name": "yn_signs_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 692
+   },
+   {
+    "name": "yn_grime_1k",
+    "size": "1024x1024",
+    "KB": 164
+   },
+   {
+    "name": "yn_trim_emissive_1k",
+    "size": "1024x1024",
+    "KB": 40
+   },
+   {
+    "name": "yn_trim_normal_2k",
+    "size": "2048x2048",
+    "KB": 61
+   },
+   {
+    "name": "yn_trim_orm_2k",
+    "size": "2048x2048",
+    "KB": 40
+   },
+   {
+    "name": "yn_trim_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 201
+   },
+   {
+    "name": "yn_goods_photo_2k",
+    "size": "2048x2048",
+    "KB": 566
+   },
+   {
+    "name": "yn_plaque_1k",
+    "size": "1024x512",
+    "KB": 15
+   },
+   {
+    "name": "yn_noren_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 495
+   }
+  ],
+  "materials": [
+   {
+    "name": "yn_mat_vermilion_b",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_roof",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_cedar",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_shutter",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_plaster",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_corrugated",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_signs",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": true
+   },
+   {
+    "name": "yn_mat_metal_dark",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_glow",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_glass_dark",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_grime",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_trim",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_goods_photo",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_vermilion_a",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_plaque",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": true
+   },
+   {
+    "name": "yn_mat_bronze",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_globe",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_rubber",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_bulb",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_noren",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": true
+   }
+  ]
+ },
+ {
+  "file": "YN_shop_C_01.glb",
+  "glb_version": 2,
+  "size_MB": 3.9,
+  "tris": 2160,
+  "meshes": 4,
+  "uv_sets_per_primitive": [
+   2
+  ],
+  "bounds_min_xyz": [
+   -1.83,
+   0,
+   -7.47
+  ],
+  "bounds_max_xyz": [
+   1.83,
+   7.42,
+   1.05
+  ],
+  "textures_KB": 3824,
+  "images": [
+   {
+    "name": "yn_vermilion_normal_2k",
+    "size": "2048x2048",
+    "KB": 64
+   },
+   {
+    "name": "yn_vermilion_orm_2k",
+    "size": "2048x2048",
+    "KB": 43
+   },
+   {
+    "name": "yn_vermilion_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 53
+   },
+   {
+    "name": "yn_kawara_normal_2k",
+    "size": "2048x2048",
+    "KB": 60
+   },
+   {
+    "name": "yn_kawara_orm_2k",
+    "size": "2048x2048",
+    "KB": 86
+   },
+   {
+    "name": "yn_kawara_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 26
+   },
+   {
+    "name": "yn_cedar_normal_2k",
+    "size": "2048x2048",
+    "KB": 544
+   },
+   {
+    "name": "yn_cedar_orm_2k",
+    "size": "2048x2048",
+    "KB": 149
+   },
+   {
+    "name": "yn_cedar_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 70
+   },
+   {
+    "name": "yn_shutter_normal_1k",
+    "size": "1024x1024",
+    "KB": 41
+   },
+   {
+    "name": "yn_shutter_orm_1k",
+    "size": "1024x1024",
+    "KB": 28
+   },
+   {
+    "name": "yn_shutter_basecolor_1k",
+    "size": "1024x1024",
+    "KB": 47
+   },
+   {
+    "name": "yn_plaster_normal_1k",
+    "size": "1024x1024",
+    "KB": 130
+   },
+   {
+    "name": "yn_plaster_orm_1k",
+    "size": "1024x1024",
+    "KB": 8
+   },
+   {
+    "name": "yn_plaster_basecolor_1k",
+    "size": "1024x1024",
+    "KB": 6
+   },
+   {
+    "name": "yn_corrugated_normal_1k",
+    "size": "1024x1024",
+    "KB": 16
+   },
+   {
+    "name": "yn_corrugated_orm_1k",
+    "size": "1024x1024",
+    "KB": 113
+   },
+   {
+    "name": "yn_corrugated_basecolor_1k",
+    "size": "1024x1024",
+    "KB": 29
+   },
+   {
+    "name": "yn_signs_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 692
+   },
+   {
+    "name": "yn_grime_1k",
+    "size": "1024x1024",
+    "KB": 164
+   },
+   {
+    "name": "yn_trim_emissive_1k",
+    "size": "1024x1024",
+    "KB": 40
+   },
+   {
+    "name": "yn_trim_normal_2k",
+    "size": "2048x2048",
+    "KB": 61
+   },
+   {
+    "name": "yn_trim_orm_2k",
+    "size": "2048x2048",
+    "KB": 40
+   },
+   {
+    "name": "yn_trim_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 201
+   },
+   {
+    "name": "yn_goods_photo_2k",
+    "size": "2048x2048",
+    "KB": 566
+   },
+   {
+    "name": "yn_lantern_basecolor_512",
+    "size": "512x512",
+    "KB": 37
+   },
+   {
+    "name": "yn_plaque_1k",
+    "size": "1024x512",
+    "KB": 15
+   },
+   {
+    "name": "yn_noren_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 495
+   }
+  ],
+  "materials": [
+   {
+    "name": "yn_mat_vermilion_c",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_roof",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_cedar",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_shutter",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_plaster",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_corrugated",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_signs",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": true
+   },
+   {
+    "name": "yn_mat_metal_dark",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_glow",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_glass_dark",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_grime",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_trim",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_goods_photo",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_vermilion_a",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_lantern",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_plaque",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": true
+   },
+   {
+    "name": "yn_mat_bronze",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_globe",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_rubber",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_bulb",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_noren",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": true
+   }
+  ]
+ },
+ {
+  "file": "YN_shop_D_01.glb",
+  "glb_version": 2,
+  "size_MB": 3.88,
+  "tris": 2334,
+  "meshes": 4,
+  "uv_sets_per_primitive": [
+   2
+  ],
+  "bounds_min_xyz": [
+   -2.73,
+   0,
+   -7.47
+  ],
+  "bounds_max_xyz": [
+   2.73,
+   7.42,
+   1.05
+  ],
+  "textures_KB": 3787,
+  "images": [
+   {
+    "name": "yn_vermilion_normal_2k",
+    "size": "2048x2048",
+    "KB": 64
+   },
+   {
+    "name": "yn_vermilion_orm_2k",
+    "size": "2048x2048",
+    "KB": 43
+   },
+   {
+    "name": "yn_vermilion_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 53
+   },
+   {
+    "name": "yn_kawara_normal_2k",
+    "size": "2048x2048",
+    "KB": 60
+   },
+   {
+    "name": "yn_kawara_orm_2k",
+    "size": "2048x2048",
+    "KB": 86
+   },
+   {
+    "name": "yn_kawara_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 26
+   },
+   {
+    "name": "yn_cedar_normal_2k",
+    "size": "2048x2048",
+    "KB": 544
+   },
+   {
+    "name": "yn_cedar_orm_2k",
+    "size": "2048x2048",
+    "KB": 149
+   },
+   {
+    "name": "yn_cedar_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 70
+   },
+   {
+    "name": "yn_shutter_normal_1k",
+    "size": "1024x1024",
+    "KB": 41
+   },
+   {
+    "name": "yn_shutter_orm_1k",
+    "size": "1024x1024",
+    "KB": 28
+   },
+   {
+    "name": "yn_shutter_basecolor_1k",
+    "size": "1024x1024",
+    "KB": 47
+   },
+   {
+    "name": "yn_plaster_normal_1k",
+    "size": "1024x1024",
+    "KB": 130
+   },
+   {
+    "name": "yn_plaster_orm_1k",
+    "size": "1024x1024",
+    "KB": 8
+   },
+   {
+    "name": "yn_plaster_basecolor_1k",
+    "size": "1024x1024",
+    "KB": 6
+   },
+   {
+    "name": "yn_corrugated_normal_1k",
+    "size": "1024x1024",
+    "KB": 16
+   },
+   {
+    "name": "yn_corrugated_orm_1k",
+    "size": "1024x1024",
+    "KB": 113
+   },
+   {
+    "name": "yn_corrugated_basecolor_1k",
+    "size": "1024x1024",
+    "KB": 29
+   },
+   {
+    "name": "yn_signs_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 692
+   },
+   {
+    "name": "yn_grime_1k",
+    "size": "1024x1024",
+    "KB": 164
+   },
+   {
+    "name": "yn_trim_emissive_1k",
+    "size": "1024x1024",
+    "KB": 40
+   },
+   {
+    "name": "yn_trim_normal_2k",
+    "size": "2048x2048",
+    "KB": 61
+   },
+   {
+    "name": "yn_trim_orm_2k",
+    "size": "2048x2048",
+    "KB": 40
+   },
+   {
+    "name": "yn_trim_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 201
+   },
+   {
+    "name": "yn_goods_photo_2k",
+    "size": "2048x2048",
+    "KB": 566
+   },
+   {
+    "name": "yn_plaque_1k",
+    "size": "1024x512",
+    "KB": 15
+   },
+   {
+    "name": "yn_noren_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 495
+   }
+  ],
+  "materials": [
+   {
+    "name": "yn_mat_vermilion_a",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_roof",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_cedar",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_shutter",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_plaster",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_corrugated",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_signs",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": true
+   },
+   {
+    "name": "yn_mat_metal_dark",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_glow",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_glass_dark",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_grime",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_trim",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_goods_photo",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_plaque",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": true
+   },
+   {
+    "name": "yn_mat_bronze",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_globe",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_rubber",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_bulb",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_noren",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": true
+   }
+  ]
+ },
+ {
+  "file": "YN_shop_E_01.glb",
+  "glb_version": 2,
+  "size_MB": 3.9,
+  "tris": 2166,
+  "meshes": 4,
+  "uv_sets_per_primitive": [
+   2
+  ],
+  "bounds_min_xyz": [
+   -1.83,
+   0,
+   -7.47
+  ],
+  "bounds_max_xyz": [
+   1.83,
+   7.42,
+   1.05
+  ],
+  "textures_KB": 3824,
+  "images": [
+   {
+    "name": "yn_vermilion_normal_2k",
+    "size": "2048x2048",
+    "KB": 64
+   },
+   {
+    "name": "yn_vermilion_orm_2k",
+    "size": "2048x2048",
+    "KB": 43
+   },
+   {
+    "name": "yn_vermilion_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 53
+   },
+   {
+    "name": "yn_kawara_normal_2k",
+    "size": "2048x2048",
+    "KB": 60
+   },
+   {
+    "name": "yn_kawara_orm_2k",
+    "size": "2048x2048",
+    "KB": 86
+   },
+   {
+    "name": "yn_kawara_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 26
+   },
+   {
+    "name": "yn_cedar_normal_2k",
+    "size": "2048x2048",
+    "KB": 544
+   },
+   {
+    "name": "yn_cedar_orm_2k",
+    "size": "2048x2048",
+    "KB": 149
+   },
+   {
+    "name": "yn_cedar_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 70
+   },
+   {
+    "name": "yn_shutter_normal_1k",
+    "size": "1024x1024",
+    "KB": 41
+   },
+   {
+    "name": "yn_shutter_orm_1k",
+    "size": "1024x1024",
+    "KB": 28
+   },
+   {
+    "name": "yn_shutter_basecolor_1k",
+    "size": "1024x1024",
+    "KB": 47
+   },
+   {
+    "name": "yn_plaster_normal_1k",
+    "size": "1024x1024",
+    "KB": 130
+   },
+   {
+    "name": "yn_plaster_orm_1k",
+    "size": "1024x1024",
+    "KB": 8
+   },
+   {
+    "name": "yn_plaster_basecolor_1k",
+    "size": "1024x1024",
+    "KB": 6
+   },
+   {
+    "name": "yn_corrugated_normal_1k",
+    "size": "1024x1024",
+    "KB": 16
+   },
+   {
+    "name": "yn_corrugated_orm_1k",
+    "size": "1024x1024",
+    "KB": 113
+   },
+   {
+    "name": "yn_corrugated_basecolor_1k",
+    "size": "1024x1024",
+    "KB": 29
+   },
+   {
+    "name": "yn_signs_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 692
+   },
+   {
+    "name": "yn_grime_1k",
+    "size": "1024x1024",
+    "KB": 164
+   },
+   {
+    "name": "yn_trim_emissive_1k",
+    "size": "1024x1024",
+    "KB": 40
+   },
+   {
+    "name": "yn_trim_normal_2k",
+    "size": "2048x2048",
+    "KB": 61
+   },
+   {
+    "name": "yn_trim_orm_2k",
+    "size": "2048x2048",
+    "KB": 40
+   },
+   {
+    "name": "yn_trim_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 201
+   },
+   {
+    "name": "yn_goods_photo_2k",
+    "size": "2048x2048",
+    "KB": 566
+   },
+   {
+    "name": "yn_lantern_basecolor_512",
+    "size": "512x512",
+    "KB": 37
+   },
+   {
+    "name": "yn_plaque_1k",
+    "size": "1024x512",
+    "KB": 15
+   },
+   {
+    "name": "yn_noren_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 495
+   }
+  ],
+  "materials": [
+   {
+    "name": "yn_mat_vermilion_b",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_roof",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_cedar",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_shutter",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_plaster",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_corrugated",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_signs",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": true
+   },
+   {
+    "name": "yn_mat_metal_dark",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_glow",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_glass_dark",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_grime",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_trim",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_goods_photo",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_vermilion_a",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_lantern",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_plaque",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": true
+   },
+   {
+    "name": "yn_mat_bronze",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_globe",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_rubber",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_bulb",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_noren",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": true
+   }
+  ]
+ },
+ {
+  "file": "YN_shop_F_01.glb",
+  "glb_version": 2,
+  "size_MB": 3.87,
+  "tris": 2272,
+  "meshes": 4,
+  "uv_sets_per_primitive": [
+   2
+  ],
+  "bounds_min_xyz": [
+   -2.73,
+   0,
+   -7.47
+  ],
+  "bounds_max_xyz": [
+   2.73,
+   7.42,
+   1.05
+  ],
+  "textures_KB": 3787,
+  "images": [
+   {
+    "name": "yn_vermilion_normal_2k",
+    "size": "2048x2048",
+    "KB": 64
+   },
+   {
+    "name": "yn_vermilion_orm_2k",
+    "size": "2048x2048",
+    "KB": 43
+   },
+   {
+    "name": "yn_vermilion_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 53
+   },
+   {
+    "name": "yn_kawara_normal_2k",
+    "size": "2048x2048",
+    "KB": 60
+   },
+   {
+    "name": "yn_kawara_orm_2k",
+    "size": "2048x2048",
+    "KB": 86
+   },
+   {
+    "name": "yn_kawara_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 26
+   },
+   {
+    "name": "yn_cedar_normal_2k",
+    "size": "2048x2048",
+    "KB": 544
+   },
+   {
+    "name": "yn_cedar_orm_2k",
+    "size": "2048x2048",
+    "KB": 149
+   },
+   {
+    "name": "yn_cedar_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 70
+   },
+   {
+    "name": "yn_shutter_normal_1k",
+    "size": "1024x1024",
+    "KB": 41
+   },
+   {
+    "name": "yn_shutter_orm_1k",
+    "size": "1024x1024",
+    "KB": 28
+   },
+   {
+    "name": "yn_shutter_basecolor_1k",
+    "size": "1024x1024",
+    "KB": 47
+   },
+   {
+    "name": "yn_plaster_normal_1k",
+    "size": "1024x1024",
+    "KB": 130
+   },
+   {
+    "name": "yn_plaster_orm_1k",
+    "size": "1024x1024",
+    "KB": 8
+   },
+   {
+    "name": "yn_plaster_basecolor_1k",
+    "size": "1024x1024",
+    "KB": 6
+   },
+   {
+    "name": "yn_corrugated_normal_1k",
+    "size": "1024x1024",
+    "KB": 16
+   },
+   {
+    "name": "yn_corrugated_orm_1k",
+    "size": "1024x1024",
+    "KB": 113
+   },
+   {
+    "name": "yn_corrugated_basecolor_1k",
+    "size": "1024x1024",
+    "KB": 29
+   },
+   {
+    "name": "yn_signs_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 692
+   },
+   {
+    "name": "yn_grime_1k",
+    "size": "1024x1024",
+    "KB": 164
+   },
+   {
+    "name": "yn_trim_emissive_1k",
+    "size": "1024x1024",
+    "KB": 40
+   },
+   {
+    "name": "yn_trim_normal_2k",
+    "size": "2048x2048",
+    "KB": 61
+   },
+   {
+    "name": "yn_trim_orm_2k",
+    "size": "2048x2048",
+    "KB": 40
+   },
+   {
+    "name": "yn_trim_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 201
+   },
+   {
+    "name": "yn_goods_photo_2k",
+    "size": "2048x2048",
+    "KB": 566
+   },
+   {
+    "name": "yn_plaque_1k",
+    "size": "1024x512",
+    "KB": 15
+   },
+   {
+    "name": "yn_noren_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 495
+   }
+  ],
+  "materials": [
+   {
+    "name": "yn_mat_vermilion_c",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_roof",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_cedar",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_shutter",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_plaster",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_corrugated",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_signs",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": true
+   },
+   {
+    "name": "yn_mat_metal_dark",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_glow",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_glass_dark",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_grime",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_trim",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_goods_photo",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_vermilion_a",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_plaque",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": true
+   },
+   {
+    "name": "yn_mat_bronze",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_globe",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_rubber",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_bulb",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_noren",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": true
+   }
+  ]
+ },
+ {
+  "file": "YN_shop_G_01.glb",
+  "glb_version": 2,
+  "size_MB": 3.9,
+  "tris": 2138,
+  "meshes": 4,
+  "uv_sets_per_primitive": [
+   2
+  ],
+  "bounds_min_xyz": [
+   -1.83,
+   0,
+   -7.47
+  ],
+  "bounds_max_xyz": [
+   1.83,
+   7.42,
+   1.05
+  ],
+  "textures_KB": 3824,
+  "images": [
+   {
+    "name": "yn_vermilion_normal_2k",
+    "size": "2048x2048",
+    "KB": 64
+   },
+   {
+    "name": "yn_vermilion_orm_2k",
+    "size": "2048x2048",
+    "KB": 43
+   },
+   {
+    "name": "yn_vermilion_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 53
+   },
+   {
+    "name": "yn_kawara_normal_2k",
+    "size": "2048x2048",
+    "KB": 60
+   },
+   {
+    "name": "yn_kawara_orm_2k",
+    "size": "2048x2048",
+    "KB": 86
+   },
+   {
+    "name": "yn_kawara_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 26
+   },
+   {
+    "name": "yn_cedar_normal_2k",
+    "size": "2048x2048",
+    "KB": 544
+   },
+   {
+    "name": "yn_cedar_orm_2k",
+    "size": "2048x2048",
+    "KB": 149
+   },
+   {
+    "name": "yn_cedar_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 70
+   },
+   {
+    "name": "yn_shutter_normal_1k",
+    "size": "1024x1024",
+    "KB": 41
+   },
+   {
+    "name": "yn_shutter_orm_1k",
+    "size": "1024x1024",
+    "KB": 28
+   },
+   {
+    "name": "yn_shutter_basecolor_1k",
+    "size": "1024x1024",
+    "KB": 47
+   },
+   {
+    "name": "yn_plaster_normal_1k",
+    "size": "1024x1024",
+    "KB": 130
+   },
+   {
+    "name": "yn_plaster_orm_1k",
+    "size": "1024x1024",
+    "KB": 8
+   },
+   {
+    "name": "yn_plaster_basecolor_1k",
+    "size": "1024x1024",
+    "KB": 6
+   },
+   {
+    "name": "yn_corrugated_normal_1k",
+    "size": "1024x1024",
+    "KB": 16
+   },
+   {
+    "name": "yn_corrugated_orm_1k",
+    "size": "1024x1024",
+    "KB": 113
+   },
+   {
+    "name": "yn_corrugated_basecolor_1k",
+    "size": "1024x1024",
+    "KB": 29
+   },
+   {
+    "name": "yn_signs_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 692
+   },
+   {
+    "name": "yn_lantern_basecolor_512",
+    "size": "512x512",
+    "KB": 37
+   },
+   {
+    "name": "yn_grime_1k",
+    "size": "1024x1024",
+    "KB": 164
+   },
+   {
+    "name": "yn_trim_emissive_1k",
+    "size": "1024x1024",
+    "KB": 40
+   },
+   {
+    "name": "yn_trim_normal_2k",
+    "size": "2048x2048",
+    "KB": 61
+   },
+   {
+    "name": "yn_trim_orm_2k",
+    "size": "2048x2048",
+    "KB": 40
+   },
+   {
+    "name": "yn_trim_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 201
+   },
+   {
+    "name": "yn_goods_photo_2k",
+    "size": "2048x2048",
+    "KB": 566
+   },
+   {
+    "name": "yn_plaque_1k",
+    "size": "1024x512",
+    "KB": 15
+   },
+   {
+    "name": "yn_noren_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 495
+   }
+  ],
+  "materials": [
+   {
+    "name": "yn_mat_vermilion_a",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_roof",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_cedar",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_shutter",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_plaster",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_corrugated",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_signs",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": true
+   },
+   {
+    "name": "yn_mat_lantern",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_metal_dark",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_glow",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_glass_dark",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_grime",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_gold",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_trim",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_goods_photo",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_plaque",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": true
+   },
+   {
+    "name": "yn_mat_bronze",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_globe",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_rubber",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_bulb",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_noren",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": true
+   }
+  ]
+ },
+ {
+  "file": "YN_shop_H_01.glb",
+  "glb_version": 2,
+  "size_MB": 3.96,
+  "tris": 3704,
+  "meshes": 4,
+  "uv_sets_per_primitive": [
+   2
+  ],
+  "bounds_min_xyz": [
+   -1.83,
+   0,
+   -7.47
+  ],
+  "bounds_max_xyz": [
+   1.83,
+   7.42,
+   1.05
+  ],
+  "textures_KB": 3787,
+  "images": [
+   {
+    "name": "yn_vermilion_normal_2k",
+    "size": "2048x2048",
+    "KB": 64
+   },
+   {
+    "name": "yn_vermilion_orm_2k",
+    "size": "2048x2048",
+    "KB": 43
+   },
+   {
+    "name": "yn_vermilion_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 53
+   },
+   {
+    "name": "yn_kawara_normal_2k",
+    "size": "2048x2048",
+    "KB": 60
+   },
+   {
+    "name": "yn_kawara_orm_2k",
+    "size": "2048x2048",
+    "KB": 86
+   },
+   {
+    "name": "yn_kawara_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 26
+   },
+   {
+    "name": "yn_cedar_normal_2k",
+    "size": "2048x2048",
+    "KB": 544
+   },
+   {
+    "name": "yn_cedar_orm_2k",
+    "size": "2048x2048",
+    "KB": 149
+   },
+   {
+    "name": "yn_cedar_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 70
+   },
+   {
+    "name": "yn_shutter_normal_1k",
+    "size": "1024x1024",
+    "KB": 41
+   },
+   {
+    "name": "yn_shutter_orm_1k",
+    "size": "1024x1024",
+    "KB": 28
+   },
+   {
+    "name": "yn_shutter_basecolor_1k",
+    "size": "1024x1024",
+    "KB": 47
+   },
+   {
+    "name": "yn_plaster_normal_1k",
+    "size": "1024x1024",
+    "KB": 130
+   },
+   {
+    "name": "yn_plaster_orm_1k",
+    "size": "1024x1024",
+    "KB": 8
+   },
+   {
+    "name": "yn_plaster_basecolor_1k",
+    "size": "1024x1024",
+    "KB": 6
+   },
+   {
+    "name": "yn_corrugated_normal_1k",
+    "size": "1024x1024",
+    "KB": 16
+   },
+   {
+    "name": "yn_corrugated_orm_1k",
+    "size": "1024x1024",
+    "KB": 113
+   },
+   {
+    "name": "yn_corrugated_basecolor_1k",
+    "size": "1024x1024",
+    "KB": 29
+   },
+   {
+    "name": "yn_signs_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 692
+   },
+   {
+    "name": "yn_grime_1k",
+    "size": "1024x1024",
+    "KB": 164
+   },
+   {
+    "name": "yn_trim_emissive_1k",
+    "size": "1024x1024",
+    "KB": 40
+   },
+   {
+    "name": "yn_trim_normal_2k",
+    "size": "2048x2048",
+    "KB": 61
+   },
+   {
+    "name": "yn_trim_orm_2k",
+    "size": "2048x2048",
+    "KB": 40
+   },
+   {
+    "name": "yn_trim_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 201
+   },
+   {
+    "name": "yn_goods_photo_2k",
+    "size": "2048x2048",
+    "KB": 566
+   },
+   {
+    "name": "yn_plaque_1k",
+    "size": "1024x512",
+    "KB": 15
+   },
+   {
+    "name": "yn_noren_basecolor_2k",
+    "size": "2048x2048",
+    "KB": 495
+   }
+  ],
+  "materials": [
+   {
+    "name": "yn_mat_vermilion_c",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_roof",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_cedar",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_shutter",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_plaster",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_corrugated",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_signs",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": true
+   },
+   {
+    "name": "yn_mat_metal_dark",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_glow",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_glass_dark",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_grime",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_trim",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_goods_photo",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_vermilion_a",
+    "base": true,
+    "orm": true,
+    "ao": true,
+    "normal": true,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_plaque",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": true
+   },
+   {
+    "name": "yn_mat_bronze",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_globe",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_rubber",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_bulb",
+    "base": false,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": true,
+    "double_sided": false
+   },
+   {
+    "name": "yn_mat_noren",
+    "base": true,
+    "orm": false,
+    "ao": false,
+    "normal": false,
+    "emissive": false,
+    "double_sided": true
+   }
+  ]
+ }
+]

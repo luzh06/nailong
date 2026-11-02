@@ -1,0 +1,90 @@
+{
+  "roof": {
+    "asset": "grey_roof_tiles_02",
+    "url": "https://polyhaven.com/a/grey_roof_tiles_02",
+    "authors": [
+      "Rob Tuytel"
+    ],
+    "license": "CC0",
+    "dimensions_mm": [
+      1500,
+      1500
+    ]
+  },
+  "paint_wood": {
+    "asset": "distressed_painted_planks",
+    "url": "https://polyhaven.com/a/distressed_painted_planks",
+    "authors": [
+      "Rob Tuytel"
+    ],
+    "license": "CC0",
+    "dimensions_mm": [
+      1599.9999046325684,
+      1599.9999046325684
+    ]
+  },
+  "cedar": {
+    "asset": "japanese_cedar_planks",
+    "url": "https://polyhaven.com/a/japanese_cedar_planks",
+    "authors": [
+      "Charlotte Baglioni",
+      "Rico Cilliers"
+    ],
+    "license": "CC0",
+    "dimensions_mm": [
+      1130.000114440918,
+      1130.000114440918
+    ]
+  },
+  "shutter": {
+    "asset": "painted_metal_shutter",
+    "url": "https://polyhaven.com/a/painted_metal_shutter",
+    "authors": [
+      "Dario Barresi",
+      "Rico Cilliers",
+      "Charlotte Baglioni"
+    ],
+    "license": "CC0",
+    "dimensions_mm": [
+      2000,
+      2000
+    ]
+  },
+  "plaster": {
+    "asset": "plastered_wall_02",
+    "url": "https://polyhaven.com/a/plastered_wall_02",
+    "authors": [
+      "Charlotte Baglioni"
+    ],
+    "license": "CC0",
+    "dimensions_mm": [
+      2229.999542236328,
+      2229.999542236328
+    ]
+  },
+  "paving": {
+    "asset": "rectangular_paving",
+    "url": "https://polyhaven.com/a/rectangular_paving",
+    "authors": [
+      "Dimitrios Savva"
+    ],
+    "license": "CC0",
+    "dimensions_mm": [
+      2000,
+      2000
+    ]
+  },
+  "corrugated": {
+    "asset": "corrugated_iron_02",
+    "url": "https://polyhaven.com/a/corrugated_iron_02",
+    "authors": [
+      "Jenelle van Heerden",
+      "Sergej Majboroda"
+    ],
+    "license": "CC0",
+    "dimensions_mm": [
+      2700.000047683716,
+      2700.000047683716
+    ]
+  }
+}

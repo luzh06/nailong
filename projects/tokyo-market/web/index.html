@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>此间 实时预览</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #111; overflow: hidden; color: #eee;
+    font: 14px/1.5 "PingFang SC", "Microsoft YaHei", sans-serif; }
+  canvas { display: block; }
+  #ui { position: fixed; left: 12px; top: 12px; display: flex; flex-direction: column; gap: 8px; max-width: calc(100vw - 24px); }
+  .row { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .row span { opacity: .7; margin-right: 2px; }
+  button { background: rgba(20,20,24,.75); color: #eee; border: 1px solid rgba(255,255,255,.25); border-radius: 6px;
+    padding: 5px 11px; font: inherit; cursor: pointer; }
+  button.on { background: #b8452c; border-color: #b8452c; }
+  #stats { background: rgba(20,20,24,.75); padding: 5px 9px; border-radius: 6px; font-variant-numeric: tabular-nums; width: fit-content; }
+  #help { position: fixed; left: 12px; bottom: 12px; background: rgba(20,20,24,.75); padding: 5px 9px; border-radius: 6px; }
+  #load { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; background: #111; font-size: 16px; text-align: center; padding: 16px; }
+</style>
+</head>
+<body>
+<div id="load">正在加载场景…</div>
+<div id="ui">
+  <div class="row"><span>光线</span><button data-look="morning">早晨</button><button data-look="sunset">日落</button><button data-look="dusk">蓝调</button></div>
+  <div class="row"><span>机位</span><button data-cam="walk">步行</button><button data-cam="main">主机位</button></div>
+  <div class="row"><span>显示</span><button id="crowd" class="on">行人</button></div>
+  <div id="stats">—</div>
+</div>
+<div id="help">按住鼠标拖动看四周，WASD 走动，Shift 快走</div>
+<script src="data_scene.js"></script>
+<script src="data_crowd.js"></script>
+<script src="data_shutters.js"></script>
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+} }
+</script>
+<script type="module" src="viewer.js"></script>
+</body>
+</html>
