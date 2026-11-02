@@ -1,0 +1,1 @@
+3d-tiles-renderer 0.5.3 (Apache-2.0), build/ files copied unmodified from the npm package

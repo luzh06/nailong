@@ -5,3 +5,6 @@ __pycache__/
 *.blend1
 # Browser test artefacts
 .playwright-mcp/
+
+# Local secrets (Google Maps API key)
+web/config.local.js

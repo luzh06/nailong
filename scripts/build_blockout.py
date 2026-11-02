@@ -27,9 +27,10 @@ from shapely.ops import nearest_points, unary_union  # noqa: E402
 
 from bridge import (BRIDGE_ARCH_TOP, BRIDGE_PANELS, BRIDGE_PYLON_BASE, BRIDGE_PYLON_HEIGHT,  # noqa: E402
                     BRIDGE_SPAN, BRIDGE_TRUSS_OFFSET, BridgeLayout, build_bridge)
-from ground import WALK_LIFT, build_buildings, build_ground, land_height  # noqa: E402
+from ground import WALK_LIFT, build_buildings, build_ground, build_water_mask, land_height  # noqa: E402
 from meshkit import material, new_collection, rings_to_polygon  # noqa: E402
 from opera import build_opera_house, opera_footprint  # noqa: E402
+from prep_osm import ORIGIN_LAT, ORIGIN_LON  # noqa: E402
 from terrain import Terrain  # noqa: E402
 
 HEIGHTFIELD_STEP = 2.0  # resolution of the walk-zone height grid sent to the web viewer
@@ -100,6 +101,7 @@ def write_meta(scene, zone, terrain, extra):
     zone = orient(zone, 1.0)
     meta = {
         "units": "metres; three.js axes (x east, y up, -z north); origin Sydney Opera House",
+        "origin": {"lat": ORIGIN_LAT, "lon": ORIGIN_LON},
         "eyeHeight": EYE_HEIGHT,
         "ground": walk_heightfield(zone, terrain),
         "walkZone": [to_three(x, y)[::2] for x, y in list(zone.exterior.coords)[:-1]],
@@ -178,6 +180,7 @@ def main():
         "tile": material("opera_tile", (0.93, 0.91, 0.86), 0.3),
         "glass": material("opera_glass", (0.10, 0.085, 0.07), 0.3, 0.3),
         "podium": material("opera_podium", (0.55, 0.38, 0.30), 0.85),
+        "water_mask": material("water_mask", (0.0, 0.2, 0.4), 1.0),
     }
     terrain = Terrain()
     zone = walk_zone_polygon(scene)
@@ -187,6 +190,7 @@ def main():
     opera = opera_footprint()
     build_opera_house(opera, new_collection("L1_OperaHouse"), mats)
     build_buildings(scene, opera, terrain, new_collection("L2_Buildings"), mats)
+    build_water_mask(scene, new_collection("Z_WaterMask"), mats)
     write_meta(scene, zone, terrain, {"bridgeLamps": bridge_lights(layout)})
 
     (ROOT / "blend").mkdir(exist_ok=True)

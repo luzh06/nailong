@@ -5,11 +5,25 @@ import { Environment, TIME_PRESETS } from './environment.js';
 import { createBridgeLamps } from './lights.js';
 import { applyMaterials, createMaterials } from './materials.js';
 import { Player } from './player.js';
+import { createGoogleTiles } from './tiles.js';
 import { createPost } from './post.js';
 import { TextureLibrary } from './textures.js';
 import { createTrees } from './vegetation.js';
 
 const params = new URLSearchParams(window.location.search);
+
+// Our own meshes that the Google photogrammetry replaces in hybrid mode. The water, the walk-zone
+// collision, the bridge lamps and the sky stay ours.
+const REPLACED_BY_PHOTOGRAMMETRY = ['Buildings', 'Ground', 'HarbourBridge', 'OperaHouse'];
+
+/** web/config.local.js (git-ignored) holds the Google Maps API key; see config.example.js. */
+async function loadConfig() {
+  try {
+    return (await import('../config.local.js')).default ?? {};
+  } catch {
+    return {};
+  }
+}
 const quality = params.get('q') === 'low' ? 'low' : 'high';
 const status = document.getElementById('loading');
 const setStatus = (text) => { if (status) status.textContent = text; };
@@ -46,15 +60,39 @@ const materials = createMaterials(library, environment.csm, landcover);
 const lamps = createBridgeLamps(meta.bridgeLamps);
 scene.add(lamps.mesh);
 
+const config = await loadConfig();
+// layers=hybrid: Google photogrammetry for the city, ours for water, sky, lighting and walking.
+// layers=own: everything from our own models (works offline and without a key).
+const layerMode = params.get('layers') ?? (config.googleMapsApiKey ? 'hybrid' : 'own');
+let googleTiles = null;
+
 try {
   setStatus('载入场景模型…');
   const draco = new DRACOLoader().setDecoderPath('./vendor/three/examples/jsm/libs/draco/');
   const gltf = await new GLTFLoader().setDRACOLoader(draco).loadAsync('./data/blockout.glb');
-  draco.dispose();
-  const missing = applyMaterials(gltf.scene, materials);
+  const missing = applyMaterials(gltf.scene, materials).filter((name) => name !== 'water_mask');
   if (missing.length) console.warn('No web material for:', missing);
   scene.add(gltf.scene);
-  if (params.get('trees') !== '0') { // trees=0: performance comparison without vegetation
+  const waterMask = gltf.scene.getObjectByName('WaterMask');
+  if (waterMask) waterMask.visible = false;
+
+  if (layerMode === 'hybrid') {
+    if (!config.googleMapsApiKey) throw new Error('混合模式需要 Google Maps API Key：见 web/config.example.js');
+    setStatus('连接 Google 实景三维…');
+    googleTiles = createGoogleTiles({
+      apiKey: config.googleMapsApiKey, origin: meta.origin, renderer, camera, draco,
+    });
+    scene.add(googleTiles.group);
+    scene.updateMatrixWorld(true);
+    if (waterMask) googleTiles.flattenWater(waterMask);
+    for (const name of REPLACED_BY_PHOTOGRAMMETRY) {
+      const obj = gltf.scene.getObjectByName(name);
+      if (obj) obj.visible = false;
+    }
+  } else {
+    draco.dispose();
+  }
+  if (layerMode !== 'hybrid' && params.get('trees') !== '0') { // trees=0: perf comparison
     setStatus('种树…');
     const trees = await createTrees(environment.csm);
     scene.add(trees.group);
@@ -69,6 +107,7 @@ player.setView('spawn');
 
 async function setTime(name) {
   const preset = await environment.apply(name);
+  googleTiles?.setTint(preset.tileTint ?? 0xffffff);
   materials.setNight(preset.night);
   lamps.setNight(preset.night);
   post.setBloom(preset.bloom);
@@ -103,7 +142,12 @@ if (params.get('still') === '1') environment.waterSpeed = 0;
 if (params.get('hud') === '0') {
   document.querySelectorAll('.hud, .hint, .stats, .credit').forEach((el) => { el.style.display = 'none'; });
 }
-document.getElementById('credit').textContent = meta.attribution;
+const credit = document.getElementById('credit');
+const updateCredit = () => {
+  credit.textContent = googleTiles ? `${googleTiles.attribution()} · ${meta.attribution}` : meta.attribution;
+};
+updateCredit();
+if (googleTiles) setInterval(updateCredit, 1000); // data credits follow the tiles in view
 
 // bench=1: window.__bench(frames) renders synchronously and waits for the GPU, so it measures real
 // frame cost even when the browser throttles requestAnimationFrame in a background window
@@ -134,6 +178,7 @@ window.addEventListener('resize', () => {
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
   post.setSize(window.innerWidth, window.innerHeight);
+  googleTiles?.setSize(camera, renderer);
   environment.csm.updateFrustums();
 });
 
@@ -148,6 +193,8 @@ renderer.setAnimationLoop(() => {
   renderer.info.reset();
   player.update(dt);
   player.applyTo(camera);
+  camera.updateMatrixWorld();
+  googleTiles?.update();
   environment.update(dt);
   post.composer.render(dt);
 

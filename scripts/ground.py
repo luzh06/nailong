@@ -122,6 +122,38 @@ def build_ground(scene, walk_zone, terrain, col, mats):
     return obj
 
 
+WATER_MASK_INSET = 3.0    # keep clear of seawalls so their tops are never pulled down
+WATER_MASK_DEPTH = -1.0   # Google photogrammetry water is pressed down to here, under our ocean
+
+
+def build_water_mask(scene, col, mats):
+    """Flat harbour shape for the web viewer's TileFlatteningPlugin (never rendered).
+
+    Photogrammetry water is a noisy textured surface near sea level; flattening it below the
+    simulated ocean stops the two from fighting. Only vertices close to the shape move, so the
+    bridge deck and anything else above the water is left alone.
+    """
+    x0, y0, x1, y1 = scene["extent"]
+    land = unary_union([rings_to_polygon(r) for r in scene["land"]])
+    water = shapely.box(x0, y0, x1, y1).difference(land).buffer(-WATER_MASK_INSET)
+    bm = bmesh.new()
+    for poly in getattr(water, "geoms", [water]):
+        if poly.geom_type != "Polygon" or poly.area < 100:
+            continue
+        rings = oriented_rings(poly.simplify(1.0))
+        verts = [bm.verts.new((x, y, WATER_MASK_DEPTH)) for ring in rings for x, y in ring]
+        for tri in tessellate_polygon([[Vector((x, y, 0.0)) for x, y in ring] for ring in rings]):
+            face = [verts[i] for i in tri]
+            if (face[1].co - face[0].co).cross(face[2].co - face[0].co).z < 0:
+                face.reverse()
+            try:
+                add_face(bm, face, 0)
+            except ValueError:
+                pass
+    print(f"water mask: {water.area / 1e6:.2f} km²")
+    return new_object("WaterMask", bm, [mats["water_mask"]], col)
+
+
 def building_style(b, rng):
     kind, mat, h = b.get("kind", ""), b.get("mat", ""), b["h"]
     if kind in UTILITY_KINDS:

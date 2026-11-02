@@ -22,7 +22,12 @@
     #loading { position: fixed; inset: 0; display: grid; place-items: center; font-size: 15px; letter-spacing: 0.1em; background: #0d1116; z-index: 5; }
   </style>
   <script type="importmap">
-    { "imports": { "three": "./vendor/three/build/three.module.js", "three/addons/": "./vendor/three/examples/jsm/" } }
+    { "imports": {
+      "three": "./vendor/three/build/three.module.js",
+      "three/addons/": "./vendor/three/examples/jsm/",
+      "3d-tiles-renderer": "./vendor/3d-tiles-renderer/index.three.js",
+      "3d-tiles-renderer/plugins": "./vendor/3d-tiles-renderer/index.plugins.js"
+    } }
   </script>
 </head>
 <body>

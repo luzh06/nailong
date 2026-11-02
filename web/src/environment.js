@@ -14,19 +14,19 @@ export const TIME_PRESETS = {
   day: {
     label: '白天', sky: 'kloofendal_48d_partly_cloudy_puresky', hdrSun: { u: 0.5952, elevation: 47.99 },
     azimuth: 20, sunColor: 0xfff1de, sunIntensity: 3.2, envIntensity: 1.0, backgroundIntensity: 1.0,
-    exposure: 0.8, fog: 0x9ca0af, fogDensity: 0.00010, night: 0, bloom: 0.1, water: 0x0e3a49,
+    exposure: 0.8, fog: 0x9ca0af, fogDensity: 0.00010, night: 0, bloom: 0.1, water: 0x0e3a49, tileTint: 0xffffff,
   },
   golden: {
     label: '黄金时段', sky: 'belfast_sunset_puresky', hdrSun: { u: 0.605, elevation: 1.93 },
     azimuth: 285, lightElevation: 7, sunColor: 0xffb46e, sunIntensity: 2.6, envIntensity: 0.9,
     backgroundIntensity: 1.0, exposure: 0.8, fog: 0x978b84, fogDensity: 0.00013, night: 0.12, bloom: 0.3,
-    water: 0x123446,
+    water: 0x123446, tileTint: 0xf2d2b0,
   },
   blue: {
     label: '蓝调', sky: 'qwantani_dusk_2_puresky', hdrSun: { u: 0.5903, elevation: 12.13 },
     azimuth: 280, lightElevation: 8, sunColor: 0x9db4ff, sunIntensity: 0.15, envIntensity: 0.32,
     backgroundIntensity: 0.55, exposure: 1.1, fog: 0x524850, fogDensity: 0.00015, night: 1, bloom: 0.75,
-    water: 0x07202d,
+    water: 0x07202d, tileTint: 0x39405a,
   },
 };
 
