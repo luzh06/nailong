@@ -1,0 +1,37 @@
+[
+  {
+    "path": "图书馆/图书馆模型.blend",
+    "bytes": 188187369,
+    "sha256": "f7260d13c9df4f583e5ce79117e24020f1975b5da228c21fce6455e3749f99bf"
+  },
+  {
+    "path": "图书馆/gothic_library.glb",
+    "bytes": 178689732,
+    "sha256": "621353eb16df1fbc95774be3323c2ffd5deadbbf059b87160831c3403c6f2adc"
+  },
+  {
+    "path": "character/4人模型.blend",
+    "bytes": 280341624,
+    "sha256": "bb3aaf59ba7ec57f00224934ca4733abe01cbc671edc7f45c8b690c556330f41"
+  },
+  {
+    "path": "character/8d9e4ba7173f9bda79c17d4a23c0f026.zip",
+    "bytes": 54453793,
+    "sha256": "b9c4e9b7c2bac03d853bbf207295847aba50bcb6c5c399aeb5189da24f03639c"
+  },
+  {
+    "path": "character/95025d2f418472d0526ffeb3b3e3a68e.zip",
+    "bytes": 51386647,
+    "sha256": "a570c0a16b139270022b4c93f31ab37bcdc07a58c2bc1e6573262d6ebcf0bc99"
+  },
+  {
+    "path": "character/a85bbf71799f627bb5104a8f8f420ae1.zip",
+    "bytes": 53947449,
+    "sha256": "e29c6dd2fe7b79ac06da30cac67f5f867d298cf4edbe1d9e1f8f3336e2a64605"
+  },
+  {
+    "path": "character/Syney man.zip",
+    "bytes": 52550193,
+    "sha256": "33abc490725949b6807a83868c8616db3028b30549ef4cf9f582d9dfb98a6b32"
+  }
+]
