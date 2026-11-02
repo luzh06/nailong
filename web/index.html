@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>悉尼港 · 白模</title>
+  <title>悉尼港 · 此间</title>
   <style>
     :root { --ink: #f4efe6; --panel: rgba(18, 22, 28, 0.62); --accent: #e8a35a; }
     html, body { margin: 0; height: 100%; background: #0d1116; overflow: hidden; font: 13px/1.4 system-ui, "Microsoft YaHei", sans-serif; color: var(--ink); }
@@ -19,14 +19,14 @@
     .hint { left: 12px; bottom: 12px; }
     .stats { right: 12px; top: 12px; font-variant-numeric: tabular-nums; white-space: pre; }
     .credit { right: 12px; bottom: 12px; max-width: 34vw; text-align: right; opacity: 0.75; font-size: 11px; }
-    #loading { position: fixed; inset: 0; display: grid; place-items: center; font-size: 15px; letter-spacing: 0.1em; }
+    #loading { position: fixed; inset: 0; display: grid; place-items: center; font-size: 15px; letter-spacing: 0.1em; background: #0d1116; z-index: 5; }
   </style>
   <script type="importmap">
     { "imports": { "three": "./vendor/three/build/three.module.js", "three/addons/": "./vendor/three/examples/jsm/" } }
   </script>
 </head>
 <body>
-  <div id="loading">载入悉尼港白模…</div>
+  <div id="loading">载入悉尼港…</div>
   <div class="hud">
     <div class="row"><span>光线</span>
       <button data-time="day">白天</button><button data-time="golden" class="on">黄金时段</button><button data-time="blue">蓝调</button>
@@ -38,6 +38,6 @@
   <div class="hint">按住鼠标拖动环视 · WASD 行走 · Shift 快走 · 自由飞行时 Q/E 升降</div>
   <div class="stats" id="stats"></div>
   <div class="credit" id="credit"></div>
-  <script type="module" src="./main.js"></script>
+  <script type="module" src="./src/main.js"></script>
 </body>
 </html>

@@ -175,6 +175,8 @@ def collect_buildings(ways, nodes, relations, clip):
                 "h": round(height, 1),
                 "base": round(base, 1),
                 "name": tags.get("name", ""),
+                "kind": tags.get("building") or "part",
+                "mat": tags.get("building:material", ""),
                 **to_rings(poly, simplify=0.3),
             })
     return result

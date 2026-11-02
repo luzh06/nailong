@@ -1,0 +1,19 @@
+{
+ "extent": [
+  -1900.0,
+  -2500.0,
+  1500.0,
+  2000.0
+ ],
+ "metresPerPixel": 1.25,
+ "size": [
+  2720,
+  3600
+ ],
+ "channels": [
+  "vegetation",
+  "road",
+  "sand",
+  "rock"
+ ]
+}

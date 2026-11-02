@@ -1,6 +1,6 @@
-# 悉尼港白模（Blockout）
+# 悉尼港 · 网页漫游场景
 
-站在北岸 Kirribilli / Milsons Point 远眺歌剧院、CBD 与海港大桥的网页漫游白模。只用于确认构图、比例与可行走范围，不是最终美术。
+站在北岸 Kirribilli / Milsons Point 远眺歌剧院、CBD 与海港大桥的网页漫游。几何来自真实数据（OSM、NSW 高程）并经过校准，材质、天空、光影、水面和夜景已做真实化处理；拍照模块尚未加入。
 
 ## 运行
 
@@ -8,7 +8,9 @@
 D:\Cijian\tools\blender-5.2.3-windows-x64\5.2\python\bin\python.exe -m http.server 8770 --bind 127.0.0.1 --directory web
 ```
 
-打开 <http://127.0.0.1:8770/>。拖动鼠标环视，WASD 行走，Shift 快走；“自由飞行”下 Q/E 升降，用来检查全场。
+打开 <http://127.0.0.1:8770/>。拖动鼠标环视，WASD 行走，Shift 快走；“自由飞行”下 Q/E 升降（后续直升机体验的基础）。左上角切换白天 / 黄金时段 / 蓝调（夜景灯光）。
+
+URL 参数：`q=low` 低画质（2 级阴影、1024 阴影图、无 MSAA）；`time=day|golden|blue`；`cam=x,y,z&look=x,y,z&fov=` 指定机位；`hud=0` 隐藏界面；`still=1` 冻结水面；`trees=0` 不加载树；`bench=1` 暴露 `window.__bench(n)`（同步渲染 n 帧并回读像素，测真实帧耗时，不受后台窗口限帧影响）。
 
 ## 重建
 
@@ -16,8 +18,28 @@ D:\Cijian\tools\blender-5.2.3-windows-x64\5.2\python\bin\python.exe -m http.serv
 $blender = 'D:\Cijian\tools\blender-5.2.3-windows-x64'
 & "$blender\5.2\python\bin\python.exe" -m pip install --target .pydeps shapely pillow   # 只需一次
 & "$blender\5.2\python\bin\python.exe" scripts\prep_osm.py                       # data/*.json -> data/scene.json
+& "$blender\5.2\python\bin\python.exe" scripts\fetch_assets.py                   # 纹理 / 天空 -> assets_src/ + web/assets/
+& "$blender\5.2\python\bin\python.exe" scripts\build_landcover.py                # 地表遮罩 + 树 -> web/assets/ground/, web/data/trees.json
 & "$blender\blender.exe" -b --factory-startup -P scripts\build_blockout.py       # -> blend/ + web/data/
 ```
+
+脚本分工：`prep_osm.py`（OSM → 场景 JSON）、`terrain.py`（高程采样）、`meshkit.py`（网格与米制 UV）、`ground.py`（地形、海堤、步行区、建筑及其风格属性）、`bridge.py`、`opera.py`、`build_blockout.py`（组装、导出、元数据）、`build_landcover.py`、`fetch_assets.py`。`tools/review_shots.js` 是固定机位批量截图脚本（Playwright）。
+
+## 真实化渲染（web/src/）
+
+| 模块 | 内容 |
+|---|---|
+| `materials.js` | 按 glTF 材质名替换为真实材质；自定义着色器在 CSM 阴影补丁之后串接 |
+| `shaders/facade.js` | 程序化立面：8 种风格（玻璃幕墙、办公、砂岩、砖、抹灰、住宅、附属、仓库）× 每栋随机种子；窗格抗锯齿、远处渐变为平均色；玻璃反射环境；屋顶混凝土 / 赤陶瓦 / 彩钢；夜间按楼层随机亮灯 |
+| `shaders/ground.js` | 按地表遮罩混合铺装、沥青路、草坪、沙、砂岩，陡坡自动变岩石；双尺度采样消除重复；夜间路面暖光 |
+| `shaders/opera.js` | 歌剧院瓷砖：亮白 / 哑光米色两种砖的人字纹，远处渐变为平均色；夜间泛光 |
+| `environment.js` | Poly Haven HDRI 天空（三档时间），按 HDRI 中实测太阳位置旋转天空，使阴影方向与天空一致；3 级 CSM 阴影；雾色取天空地平线实测平均色；水面用 three.js Water + 真实法线贴图 |
+| `vegetation.js` | 约 1 万棵树（OSM 实测位置 + 林地补植），四类树形，透明叶片卡片树冠，按 700 m 分块以便视锥 / 阴影剔除 |
+| `lights.js` / `post.js` | 大桥灯串；HDR 泛光 + ACES 色调映射，4x MSAA |
+
+素材全部记录在 `web/assets/ASSETS.csv`（来源、作者、许可）：Poly Haven 纹理与 HDRI（CC0）、ambientCG 草坪（CC0）、three.js 水面法线（MIT）。原始下载保存在 `assets_src/`，网页用压缩版在 `web/assets/`（约 23 MB）。
+
+性能（本机 Intel Arc 140T，1280×800，高画质）：每帧约 300 万三角面、400–570 次绘制，前台实测 33–56 fps；同步回读测得每帧约 14–15 ms。
 
 `data/osm_*.json` 是 2026-11-02 从 Overpass 拉取的 OSM 原始数据；需要更新时重新下载即可。
 
@@ -61,11 +83,12 @@ $blender = 'D:\Cijian\tools\blender-5.2.3-windows-x64'
 
 ## 已知差距
 
-- 地形：远处 10 m 网格较粗。
-- 大桥：桥端以外的道路（北侧是弯道，Wikipedia 称 "curved northern approach"）不在远眺范围内，没有建模，桥台在桥端直接落地。拱弦线用抛物线近似。
+- 近处的树是叶片卡片拼成的，远看自然，走近仍能看出卡片；草坪近看缺少法线起伏。
+- 立面是程序化的统一规则，标志楼（Crown、Salesforce、Quay Quarter 等）没有专门造型和立面；无招牌、无屋顶设备细节。
+- 歌剧院基座为整块挤出（无台阶、无大台阶）；壳体无厚度和肋线。
+- 水面是 three.js Water：无岸边白浪、无船只与尾迹；黄金时段航拍时远处海面与天空交界仍有一条偏亮的雾带。
+- 场景中没有人、车、船；北侧 1:38 短坡段未单独建模；桥端以外的道路未建模。
 - 高程许可证：服务元数据只写 "DFSI 2019"，Data.NSW 上该数据集标注 "License Not Specified"；NSW 政府网站默认 CC BY 4.0，Spatial Services 的框架文件写的是 CC BY 3.0 AU。当前按 "© State of New South Wales (Spatial Services)" 署名；公开发布前建议向 Spatial Services 书面确认。数据精度：水平 ±1.25 m、垂直 ±0.9 m（95% 置信）。
-- 歌剧院：轮廓和比例已校准，但壳体无厚度、无肋线和瓷砖纹理，基座是整块挤出（无台阶、无大台阶）；前排壳在正面看仍比照片略窄。大桥桁架和引桥桁架为示意，无铁路/车道细节。
-- 水面法线是程序生成的，近处偏平；没有船、灯光、夜景。
-- 无高度标注的楼按类型估高，个别 `building=yes` 的 CBD 楼仍可能偏矮。
+- 纹理仍是 JPEG（约 23 MB）；正式发布可转 KTX2 进一步减小体积和显存。
 
-数据：© OpenStreetMap contributors（ODbL）；高程 © State of New South Wales (Spatial Services)。两者均已在网页右下角署名。three.js r170（MIT）位于 `web/vendor/three/`。
+数据：© OpenStreetMap contributors（ODbL）；高程 © State of New South Wales (Spatial Services)；纹理与天空 Poly Haven / ambientCG（CC0）。均已在网页右下角署名。three.js r170（MIT）位于 `web/vendor/three/`。
