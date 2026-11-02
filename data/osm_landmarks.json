@@ -1,0 +1,6720 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-02T07:44:19Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "way",
+  "id": 142518151,
+  "nodes": [
+    9923751349,
+    9923751346,
+    13227083856,
+    13227083855,
+    13800029837,
+    3891239371,
+    13800029838,
+    13227083848,
+    1559637913,
+    1559637890,
+    13227083847,
+    13227083845,
+    1559637824,
+    1559637802,
+    1559637794,
+    1559637788,
+    11276749741,
+    1559637773,
+    1559637771,
+    1559637764,
+    1559637758,
+    1559637741,
+    11276749740,
+    1559637737,
+    11276749738,
+    1559637735,
+    1559637732,
+    1559637723,
+    11276749735,
+    3921237833
+  ],
+  "tags": {
+    "bridge": "yes",
+    "bridge:name": "Sydney Harbour Bridge",
+    "covered": "yes",
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "layer": "1",
+    "loading_gauge": "3200",
+    "loading_gauge:ref": "Wide",
+    "maxspeed": "60",
+    "oneway": "yes",
+    "operator": "RailCorp",
+    "passenger_lines": "2",
+    "railway": "rail",
+    "railway:ats": "yes",
+    "railway:etcs": "1",
+    "railway:traffic_mode": "passenger",
+    "ref": "Down Shore",
+    "source": "professional_knowledge;extrapolation;Bing",
+    "usage": "main",
+    "voltage": "1500"
+  }
+},
+{
+  "type": "way",
+  "id": 142518159,
+  "nodes": [
+    1559637719,
+    11276749736,
+    1559637731,
+    11276749737,
+    1559637734,
+    1559637736,
+    11276749739,
+    1559637738,
+    1559637761,
+    1559637768,
+    1559637772,
+    1559637775,
+    11276749742,
+    1559637791,
+    1559637800,
+    1559637805,
+    11276749743,
+    2151261222,
+    11276749744,
+    13227083846,
+    13227083849,
+    1559637917,
+    13227083857,
+    13227083854,
+    9923751347,
+    9923751348
+  ],
+  "tags": {
+    "bridge": "yes",
+    "bridge:name": "Sydney Harbour Bridge",
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "layer": "1",
+    "loading_gauge": "3200",
+    "loading_gauge:ref": "Wide",
+    "maxspeed": "50",
+    "oneway": "yes",
+    "operator": "Sydney Trains",
+    "passenger_lines": "2",
+    "railway": "rail",
+    "railway:ats": "yes",
+    "railway:etcs": "1",
+    "railway:traffic_mode": "passenger",
+    "ref": "Up Shore",
+    "source": "professional_knowledge;extrapolation;Bing",
+    "usage": "main",
+    "voltage": "1500"
+  }
+},
+{
+  "type": "way",
+  "id": 142518160,
+  "nodes": [
+    1559637902,
+    1559637935,
+    1559637925,
+    1559637894,
+    1559637902
+  ],
+  "tags": {
+    "building:part": "yes",
+    "height": "89m",
+    "layer": "2",
+    "min_height": "59",
+    "name": "Sydney Harbour Bridge - South East Pylon",
+    "wikipedia": "en:Sydney Harbour Bridge#Pylons"
+  }
+},
+{
+  "type": "way",
+  "id": 142518161,
+  "nodes": [
+    1559637892,
+    1559637922,
+    1559637913,
+    2151261229,
+    1559637901,
+    1559637878,
+    1559637890,
+    1559637892
+  ],
+  "tags": {
+    "building:part": "yes",
+    "height": "89m",
+    "layer": "2",
+    "min_height": "59",
+    "name": "Sydney Harbour Bridge - South West Pylon",
+    "wikipedia": "en:Sydney Harbour Bridge#Pylons"
+  }
+},
+{
+  "type": "way",
+  "id": 142518162,
+  "nodes": [
+    1559637865,
+    1559637876,
+    1559637870,
+    1559637840,
+    1559637865
+  ],
+  "tags": {
+    "building:part": "yes",
+    "fixme": "levels=? minheight=?",
+    "height": "89m",
+    "layer": "2",
+    "min_height": "59",
+    "name": "Sydney Harbour Bridge - North East Pylon",
+    "wikipedia": "en:Sydney Harbour Bridge#Pylons"
+  }
+},
+{
+  "type": "way",
+  "id": 142518163,
+  "nodes": [
+    1559637826,
+    1559637869,
+    1559637844,
+    1559637808,
+    1559637826
+  ],
+  "tags": {
+    "building:part": "yes",
+    "fixme": "levels=? minheight=?",
+    "height": "89m",
+    "layer": "2",
+    "min_height": "59",
+    "name": "Sydney Harbour Bridge - North West Pylon",
+    "wikipedia": "en:Sydney Harbour Bridge#Pylons"
+  }
+},
+{
+  "type": "way",
+  "id": 156584774,
+  "nodes": [
+    1688163450,
+    1688163451,
+    1688163449,
+    1688163447,
+    2151261222,
+    1688163450
+  ],
+  "tags": {
+    "building": "yes",
+    "fixme": "levels=?",
+    "height": "89",
+    "name": "Sydney Harbour Bridge - North Pylons",
+    "wikipedia": "en:Sydney Harbour Bridge#Pylons"
+  }
+},
+{
+  "type": "way",
+  "id": 382401361,
+  "nodes": [
+    3855995748,
+    3855995749,
+    12079898538,
+    12079898534,
+    12079898535,
+    3855995747,
+    3855995744,
+    3855995748
+  ],
+  "tags": {
+    "building": "yes",
+    "fixme": "levels=?",
+    "height": "89",
+    "name": "Sydney Harbour Bridge - South Pylons",
+    "wikipedia": "en:Sydney Harbour Bridge#Pylons"
+  }
+},
+{
+  "type": "way",
+  "id": 404862197,
+  "nodes": [
+    4071152574,
+    4071152572,
+    11607494624,
+    4071152570,
+    4071152573,
+    11607494625,
+    4071152574
+  ],
+  "tags": {
+    "bridge:structure": "beam",
+    "layer": "1",
+    "man_made": "bridge",
+    "maxweight": "1",
+    "width": "1.5"
+  }
+},
+{
+  "type": "way",
+  "id": 449335834,
+  "nodes": [
+    3921239298,
+    13227083844,
+    1559637715,
+    1559637708,
+    1559637705,
+    1559637701,
+    11276749733,
+    1559637698,
+    11276749732,
+    1559637688,
+    13227083839,
+    9189029754
+  ],
+  "tags": {
+    "bridge": "yes",
+    "bridge:name": "Sydney Harbour Bridge",
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "layer": "1",
+    "level": "2",
+    "loading_gauge": "3200",
+    "loading_gauge:ref": "Wide",
+    "maxspeed": "60",
+    "oneway": "yes",
+    "operator": "RailCorp",
+    "passenger_lines": "2",
+    "railway": "rail",
+    "railway:ats": "yes",
+    "railway:etcs": "1",
+    "railway:traffic_mode": "passenger",
+    "ref": "Down Shore",
+    "source": "professional_knowledge;extrapolation;Bing",
+    "usage": "main",
+    "voltage": "1500"
+  }
+},
+{
+  "type": "way",
+  "id": 449335852,
+  "nodes": [
+    9184212406,
+    1559637695,
+    11276749731,
+    3921239282,
+    14175216804,
+    14175216805,
+    6553012225,
+    1559637711
+  ],
+  "tags": {
+    "bridge": "yes",
+    "bridge:name": "Sydney Harbour Bridge",
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "layer": "1",
+    "level": "2",
+    "loading_gauge": "3200",
+    "loading_gauge:ref": "Wide",
+    "maxspeed": "50",
+    "oneway": "yes",
+    "operator": "Sydney Trains",
+    "passenger_lines": "2",
+    "railway": "rail",
+    "railway:ats": "yes",
+    "railway:etcs": "1",
+    "railway:traffic_mode": "passenger",
+    "ref": "Up Shore",
+    "source": "professional_knowledge;extrapolation;Bing",
+    "usage": "main",
+    "voltage": "1500"
+  }
+},
+{
+  "type": "way",
+  "id": 554373477,
+  "nodes": [
+    5350221859,
+    5350221860,
+    5350221861,
+    5211521886,
+    5350221859
+  ],
+  "tags": {
+    "bridge:structure": "beam",
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 554373478,
+  "nodes": [
+    5350221862,
+    5350221863,
+    651310730,
+    5350221864,
+    5350221865,
+    5350221862
+  ],
+  "tags": {
+    "bridge:structure": "beam",
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 554373479,
+  "nodes": [
+    5350221866,
+    5350221867,
+    3884399786,
+    5350221868,
+    5350221866
+  ],
+  "tags": {
+    "bridge:structure": "beam",
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 554386930,
+  "nodes": [
+    5350391503,
+    11765961770,
+    1842727781,
+    5350391504,
+    11765961836,
+    5350391505,
+    5350391506,
+    5350391507,
+    5350391508,
+    5350391509,
+    1842727783,
+    11765961838,
+    11765961839,
+    11765961771,
+    5350391510,
+    11765961837,
+    1655460119,
+    6364421423,
+    1655460134,
+    5350391503
+  ],
+  "tags": {
+    "bridge:structure": "beam",
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 995099437,
+  "nodes": [
+    3921237833,
+    11276749734,
+    3921239298
+  ],
+  "tags": {
+    "bridge": "yes",
+    "bridge:name": "Sydney Harbour Bridge",
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "layer": "1",
+    "loading_gauge": "3200",
+    "loading_gauge:ref": "Wide",
+    "maxspeed": "60",
+    "oneway": "yes",
+    "operator": "RailCorp",
+    "passenger_lines": "2",
+    "railway": "rail",
+    "railway:ats": "yes",
+    "railway:etcs": "1",
+    "railway:traffic_mode": "passenger",
+    "ref": "Down Shore",
+    "source": "professional_knowledge;extrapolation;Bing",
+    "usage": "main",
+    "voltage": "1500"
+  }
+},
+{
+  "type": "way",
+  "id": 995099438,
+  "nodes": [
+    1559637711,
+    1559637719
+  ],
+  "tags": {
+    "bridge": "yes",
+    "bridge:name": "Sydney Harbour Bridge",
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "layer": "1",
+    "loading_gauge": "3200",
+    "loading_gauge:ref": "Wide",
+    "maxspeed": "50",
+    "oneway": "yes",
+    "operator": "Sydney Trains",
+    "passenger_lines": "2",
+    "railway": "rail",
+    "railway:ats": "yes",
+    "railway:etcs": "1",
+    "railway:traffic_mode": "passenger",
+    "ref": "Up Shore",
+    "source": "professional_knowledge;extrapolation;Bing",
+    "usage": "main",
+    "voltage": "1500"
+  }
+},
+{
+  "type": "way",
+  "id": 1063656771,
+  "nodes": [
+    9770015037,
+    9923751345
+  ],
+  "tags": {
+    "bridge": "yes",
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "layer": "1",
+    "loading_gauge": "3200",
+    "loading_gauge:ref": "Wide",
+    "maxspeed": "40",
+    "oneway": "yes",
+    "operator": "Sydney Trains",
+    "passenger_lines": "2",
+    "railway": "rail",
+    "railway:ats": "yes",
+    "railway:traffic_mode": "passenger",
+    "ref": "Up Shore",
+    "source": "professional_knowledge;extrapolation;Bing",
+    "usage": "main",
+    "voltage": "1500"
+  }
+},
+{
+  "type": "way",
+  "id": 1069465383,
+  "nodes": [
+    13809174,
+    9816227687,
+    9816227685,
+    1655431777,
+    9816227689,
+    9816227690,
+    13809174
+  ],
+  "tags": {
+    "bridge:structure": "beam",
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1069465384,
+  "nodes": [
+    9816227691,
+    9816227692,
+    9816227693,
+    9816227694,
+    9816227695,
+    9816227696,
+    9816227691
+  ],
+  "tags": {
+    "bridge:structure": "beam",
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1069465386,
+  "nodes": [
+    9816227703,
+    9816227704,
+    9816227705,
+    9816227706,
+    9816227707,
+    9816227708,
+    9816227703
+  ],
+  "tags": {
+    "bridge:structure": "beam",
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1069465387,
+  "nodes": [
+    9816227709,
+    9816227710,
+    11640423274,
+    651310672,
+    9816227711,
+    9816227712,
+    9816227713,
+    9816227714,
+    1832327859,
+    9816227709
+  ],
+  "tags": {
+    "bridge:structure": "beam",
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1082805665,
+  "nodes": [
+    9923751344,
+    9923751349
+  ],
+  "tags": {
+    "bridge": "yes",
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "layer": "1",
+    "loading_gauge": "3200",
+    "loading_gauge:ref": "Wide",
+    "maxspeed": "60",
+    "oneway": "yes",
+    "operator": "RailCorp",
+    "passenger_lines": "2",
+    "railway": "rail",
+    "railway:ats": "yes",
+    "railway:etcs": "1",
+    "railway:traffic_mode": "passenger",
+    "ref": "Down Shore",
+    "source": "professional_knowledge;extrapolation;Bing",
+    "usage": "main",
+    "voltage": "1500"
+  }
+},
+{
+  "type": "way",
+  "id": 1082805666,
+  "nodes": [
+    9923751345,
+    8038148399
+  ],
+  "tags": {
+    "bridge": "yes",
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "layer": "1",
+    "loading_gauge": "3200",
+    "loading_gauge:ref": "Wide",
+    "maxspeed": "40",
+    "oneway": "yes",
+    "operator": "Sydney Trains",
+    "passenger_lines": "2",
+    "railway": "rail",
+    "railway:ats": "yes",
+    "railway:etcs": "1",
+    "railway:traffic_mode": "passenger",
+    "ref": "Up Shore",
+    "source": "professional_knowledge;extrapolation;Bing",
+    "usage": "main",
+    "voltage": "1500"
+  }
+},
+{
+  "type": "way",
+  "id": 1082805667,
+  "nodes": [
+    8038148398,
+    9923751344
+  ],
+  "tags": {
+    "bridge": "yes",
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "layer": "1",
+    "loading_gauge": "3200",
+    "loading_gauge:ref": "Wide",
+    "maxspeed": "60",
+    "oneway": "yes",
+    "operator": "RailCorp",
+    "passenger_lines": "2",
+    "railway": "rail",
+    "railway:ats": "yes",
+    "railway:etcs": "1",
+    "railway:traffic_mode": "passenger",
+    "ref": "Down Shore",
+    "source": "professional_knowledge;extrapolation;Bing",
+    "usage": "main",
+    "voltage": "1500"
+  }
+},
+{
+  "type": "way",
+  "id": 1082805668,
+  "nodes": [
+    9923751348,
+    9770015037
+  ],
+  "tags": {
+    "bridge": "yes",
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "layer": "1",
+    "maxspeed": "50",
+    "operator": "Sydney Trains",
+    "passenger_lines": "2",
+    "railway": "rail",
+    "railway:ats": "yes",
+    "railway:etcs": "1",
+    "railway:traffic_mode": "passenger",
+    "ref": "Up Shore",
+    "source": "professional_knowledge;extrapolation;Bing",
+    "usage": "main",
+    "voltage": "1500"
+  }
+},
+{
+  "type": "way",
+  "id": 1218241141,
+  "nodes": [
+    11288443899,
+    11288443900,
+    7880232806,
+    1986176505,
+    11288443904,
+    11288443901,
+    11288443902,
+    11288443903,
+    1986176507,
+    7880232805,
+    11288443899
+  ],
+  "tags": {
+    "bridge:structure": "beam",
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1238819115,
+  "nodes": [
+    11508281427,
+    11508281433,
+    11508281428,
+    11508281429,
+    11508281430,
+    11508281435,
+    2174945121,
+    2174945124,
+    11508281431,
+    11508281432,
+    11508281427
+  ],
+  "tags": {
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1238822735,
+  "nodes": [
+    11508315734,
+    11508315733,
+    11508315740,
+    11508315736,
+    11508315735,
+    11508315739,
+    11508315734
+  ],
+  "tags": {
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1238825792,
+  "nodes": [
+    11508320003,
+    11508320055,
+    11508320056,
+    11508320052,
+    11508356969,
+    11508320053,
+    11508320057,
+    11508320058,
+    11508320004,
+    11508320054,
+    11508320068,
+    9503965889,
+    11508320003
+  ],
+  "tags": {
+    "bridge:structure": "beam",
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1238825798,
+  "nodes": [
+    11508356976,
+    11508356977,
+    11508356978,
+    11508356990,
+    11508356989,
+    11508356988,
+    11508356979,
+    11508356980,
+    11508319992,
+    5601134426,
+    11508319993,
+    11508319994,
+    11508356976
+  ],
+  "tags": {
+    "bridge:structure": "floating",
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1240420346,
+  "nodes": [
+    11524596977,
+    13818853,
+    1832328118,
+    5391108263,
+    11524596978,
+    11524596979,
+    11524596977
+  ],
+  "tags": {
+    "bridge:structure": "beam",
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1240421946,
+  "nodes": [
+    11288428459,
+    11524617005,
+    11524617006,
+    11524617007,
+    11524617008,
+    11524617009,
+    11524617010,
+    11524617011,
+    11524617012,
+    11524617064,
+    11524617013,
+    11524617065,
+    11524617014,
+    11524617066,
+    11524617015,
+    11524617016,
+    11524617067,
+    11524617017,
+    11524617018,
+    11524617019,
+    11524617020,
+    11524617021,
+    11524617022,
+    11524617023,
+    11324760933,
+    11524617024,
+    11524617025,
+    11524617026,
+    11524617027,
+    11524617028,
+    11524617029,
+    11524617030,
+    11524617031,
+    11524617032,
+    11524617033,
+    11524617034,
+    11524617035,
+    11524617036,
+    11524617037,
+    11524617038,
+    11524617039,
+    11524617040,
+    11524617041,
+    11524617042,
+    11524617043,
+    11524617044,
+    11524617045,
+    11524617046,
+    11288428459
+  ],
+  "tags": {
+    "layer": "1",
+    "man_made": "bridge",
+    "name": "Harbour Bridge Cycle Ramp",
+    "start_date": "2025-07-11"
+  }
+},
+{
+  "type": "way",
+  "id": 1243161027,
+  "nodes": [
+    11288428463,
+    11553755185,
+    11288428461,
+    4424603590,
+    4424603488,
+    13428319568,
+    13428319567,
+    4424603479,
+    4424603461,
+    3921232515,
+    3921181495,
+    9816203825,
+    9816203824,
+    4424638120,
+    3921239287,
+    4424638121,
+    9816203836,
+    9816203835,
+    9816203834,
+    11288437996,
+    11288437995,
+    11288437994,
+    11288428462,
+    11288428463
+  ],
+  "tags": {
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1245515098,
+  "nodes": [
+    11578877262,
+    11578877263,
+    11578877264,
+    11578877268,
+    11578877265,
+    11578877266,
+    11578877267,
+    1326017170,
+    11578877262
+  ],
+  "tags": {
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1245515148,
+  "nodes": [
+    11578884460,
+    11578884461,
+    11578884462,
+    11578884463,
+    11578884464,
+    11578884474,
+    11578884475,
+    11578884465,
+    11578884466,
+    11578884467,
+    11578884468,
+    11578884469,
+    11578884470,
+    11578884471,
+    11578884472,
+    2174945129,
+    11578884476,
+    2174945114,
+    2174945125,
+    11578884477,
+    2174945144,
+    2174945156,
+    11578884473,
+    11578884460
+  ],
+  "tags": {
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1248781962,
+  "nodes": [
+    11607494609,
+    1659900641,
+    4072664624,
+    11607494611,
+    11607494619,
+    11607494612,
+    11607494609
+  ],
+  "tags": {
+    "bridge:structure": "beam",
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1252335011,
+  "nodes": [
+    11359908185,
+    11640787866,
+    11359908180,
+    11359908183,
+    11640787865,
+    11359908186,
+    11359908185
+  ],
+  "tags": {
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1259572543,
+  "nodes": [
+    11710168340,
+    11710168344,
+    11710168341,
+    11710168342,
+    11710168345,
+    11710168343,
+    11710168340
+  ],
+  "tags": {
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1259572546,
+  "nodes": [
+    11710168354,
+    11710168355,
+    11710168359,
+    11710168356,
+    11710168357,
+    11710168358,
+    11710168354
+  ],
+  "tags": {
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1259572548,
+  "nodes": [
+    1711513706,
+    11710168369,
+    11710168372,
+    11710168370,
+    11710133850,
+    11710168371,
+    1711513706
+  ],
+  "tags": {
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1259572551,
+  "nodes": [
+    11710168381,
+    11710168385,
+    11710168382,
+    11710168383,
+    11710168386,
+    11710168384,
+    11710168381
+  ],
+  "tags": {
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1259572555,
+  "nodes": [
+    11710168402,
+    11710168403,
+    11710168407,
+    11710168404,
+    11710168405,
+    11710168406,
+    11710168402
+  ],
+  "tags": {
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1259572557,
+  "nodes": [
+    5391107262,
+    11710168419,
+    1711513672,
+    11710168417,
+    11710168420,
+    11710168418,
+    5391107262
+  ],
+  "tags": {
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1259572589,
+  "nodes": [
+    11710168560,
+    6496416862,
+    6496416854,
+    11710168561,
+    11710168559,
+    6496416855,
+    11710168560
+  ],
+  "tags": {
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1259572598,
+  "nodes": [
+    11710168615,
+    11710168614,
+    11710168616,
+    11710168617,
+    11710168618,
+    11710168619,
+    11710168620,
+    11710168621,
+    11710168279,
+    11710168622,
+    11710168623,
+    11710168624,
+    11710168615
+  ],
+  "tags": {
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1261796750,
+  "nodes": [
+    4101244595,
+    9958456549,
+    4101244597,
+    11724239842,
+    9958456543,
+    11724239843,
+    4101244595
+  ],
+  "tags": {
+    "bridge:structure": "simple-suspension",
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1352044999,
+  "nodes": [
+    12509102121,
+    12509102170,
+    12509102122,
+    12509102140,
+    12509102123,
+    12509102141,
+    12509102142,
+    12509102143,
+    12509102124,
+    12509102144,
+    12509102145,
+    12509102146,
+    12509102147,
+    12509102125,
+    12509102126,
+    12509102159,
+    12509102127,
+    12509102128,
+    12509102129,
+    12509102130,
+    12509102131,
+    12509102132,
+    12509102133,
+    12509102134,
+    12509102135,
+    12509102136,
+    12509102137,
+    12509102138,
+    12509102139,
+    12509102121
+  ],
+  "tags": {
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1352897534,
+  "nodes": [
+    12518136851,
+    12518136852,
+    12518136853,
+    12518136854,
+    12518136859,
+    12518136855,
+    6582636751,
+    12518136856,
+    12518136851
+  ],
+  "tags": {
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1352897536,
+  "nodes": [
+    12518136861,
+    12518136862,
+    12518136863,
+    12518136877,
+    12518136879,
+    12518136864,
+    12518136865,
+    12518136878,
+    12518136866,
+    12518136867,
+    12518136861
+  ],
+  "tags": {
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1352897552,
+  "nodes": [
+    12518136898,
+    12518140904,
+    12518136899,
+    12518140903,
+    12518136900,
+    12518140901,
+    12518140902,
+    12518136898
+  ],
+  "tags": {
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1383471686,
+  "nodes": [
+    12808377238,
+    12808377239,
+    12808377240,
+    12808377253,
+    12808377241,
+    12808377242,
+    12808377243,
+    12808377255,
+    12808377238
+  ],
+  "tags": {
+    "bridge:structure": "beam",
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1383471687,
+  "nodes": [
+    12808377244,
+    12808377245,
+    12808377246,
+    12808377252,
+    12808377247,
+    12808377248,
+    12808377249,
+    12808377250,
+    12808377244
+  ],
+  "tags": {
+    "bridge:structure": "beam",
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1383471692,
+  "nodes": [
+    12808377258,
+    12808377280,
+    12808377259,
+    12808377279,
+    12808377260,
+    12808377278,
+    12808377261,
+    12808377262,
+    12808377277,
+    12808377276,
+    12808377263,
+    12808377275,
+    12808377264,
+    12808377274,
+    12808377265,
+    12808377273,
+    12808377266,
+    12808377272,
+    12808377267,
+    12808377271,
+    12808377268,
+    12808377270,
+    12808377269,
+    12808377289,
+    12808377237,
+    12808377281,
+    12808377258
+  ],
+  "tags": {
+    "bridge:structure": "beam",
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1383471694,
+  "nodes": [
+    12808877907,
+    12808877908,
+    12808877909,
+    12808877910,
+    12808877911,
+    12808877912,
+    12808877913,
+    12808877919,
+    12808877914,
+    12808877915,
+    12808877916,
+    12808877917,
+    12808877918,
+    12808877923,
+    12808877907
+  ],
+  "tags": {
+    "bridge:structure": "beam",
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1383471700,
+  "nodes": [
+    12808877940,
+    12808877941,
+    12808877942,
+    12808877943,
+    12808877944,
+    12808877952,
+    12808877945,
+    12808877946,
+    12808877947,
+    12808877948,
+    12808877949,
+    12808877950,
+    12808877951,
+    12808877956,
+    12808877940
+  ],
+  "tags": {
+    "bridge:structure": "beam",
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1383471713,
+  "nodes": [
+    12808878017,
+    12808878051,
+    12808878018,
+    12808878019,
+    12808878052,
+    12808878020,
+    12808878017
+  ],
+  "tags": {
+    "bridge:structure": "suspension",
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1383471714,
+  "nodes": [
+    12808878021,
+    12808878055,
+    12808878022,
+    12808878023,
+    12808878056,
+    12808878024,
+    12808878021
+  ],
+  "tags": {
+    "bridge:structure": "suspension",
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1383471715,
+  "nodes": [
+    12808878025,
+    12808878059,
+    12808878026,
+    12808878027,
+    12808878060,
+    12808878028,
+    12808878025
+  ],
+  "tags": {
+    "bridge:structure": "suspension",
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1383471716,
+  "nodes": [
+    12808878029,
+    12808878063,
+    12808878030,
+    12808878031,
+    12808878064,
+    12808878032,
+    12808878029
+  ],
+  "tags": {
+    "bridge:structure": "suspension",
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1383471717,
+  "nodes": [
+    12808878033,
+    12808878066,
+    12808878034,
+    12808878035,
+    12808878067,
+    12808878036,
+    12808878033
+  ],
+  "tags": {
+    "bridge:structure": "suspension",
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1383471806,
+  "nodes": [
+    12808878242,
+    12808878243,
+    12808878244,
+    12808878245,
+    12808878246,
+    12808878247,
+    12808878242
+  ],
+  "tags": {
+    "bridge:structure": "suspension",
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1383471811,
+  "nodes": [
+    12808878255,
+    12808878256,
+    12808878257,
+    12808878258,
+    12808878259,
+    12808878260,
+    12808878255
+  ],
+  "tags": {
+    "bridge:structure": "suspension",
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1383471816,
+  "nodes": [
+    12808878268,
+    12808878269,
+    12808878270,
+    12808878271,
+    12808878272,
+    12808878273,
+    12808878268
+  ],
+  "tags": {
+    "bridge:structure": "suspension",
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1383490169,
+  "nodes": [
+    12809053061,
+    12809053063,
+    11813535797,
+    12809053064,
+    12809053062,
+    11813535798,
+    12809053061
+  ],
+  "tags": {
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1383490235,
+  "nodes": [
+    12809053087,
+    12809053760,
+    12809053761,
+    12809053762,
+    12809053763,
+    12809053770,
+    12809053764,
+    12809053765,
+    12809053766,
+    12809053767,
+    12809053768,
+    12809053769,
+    12809053087
+  ],
+  "tags": {
+    "layer": "2",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1383490237,
+  "nodes": [
+    12809053764,
+    12809053771,
+    12809053756,
+    12809053772,
+    12809053763,
+    12809053770,
+    12809053764
+  ],
+  "tags": {
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1383490239,
+  "nodes": [
+    12809053773,
+    12809053774,
+    12809053719,
+    12809053775,
+    12809053776,
+    12809053720,
+    12809053773
+  ],
+  "tags": {
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1473298835,
+  "nodes": [
+    13516328574,
+    13516328575,
+    13516328576,
+    13516328577,
+    13516328584,
+    13516328578,
+    13516328579,
+    13516328580,
+    13516328581,
+    13516328582,
+    13516328583,
+    13516328585,
+    13516328574
+  ],
+  "tags": {
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1484905077,
+  "nodes": [
+    13614262429,
+    13614262430,
+    13614262433,
+    13614262431,
+    13614262432,
+    13614262434,
+    13614262429
+  ],
+  "tags": {
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1510889237,
+  "nodes": [
+    13810711028,
+    13810711029,
+    13810711037,
+    13810711030,
+    13810711031,
+    13810711036,
+    13810711028
+  ],
+  "tags": {
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1510889238,
+  "nodes": [
+    13810711032,
+    13810711033,
+    13810711040,
+    13810711034,
+    13810711035,
+    13810711039,
+    13810711032
+  ],
+  "tags": {
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1546538759,
+  "nodes": [
+    13433409527,
+    2174959367,
+    2174959362,
+    14066180669,
+    14066180670,
+    14066180673,
+    13296331303,
+    14066236140,
+    13296331304,
+    5357599177,
+    2174959372,
+    2174959373,
+    2174959361,
+    14066236135,
+    14066180671,
+    14066180674,
+    13433409524,
+    13433409521,
+    14066180672,
+    13433409520,
+    321191104,
+    13433409526,
+    13433409527
+  ],
+  "tags": {
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1546548792,
+  "nodes": [
+    14066339767,
+    14066339768,
+    14066339769,
+    14066339770,
+    14066339767
+  ],
+  "tags": {
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1546548831,
+  "nodes": [
+    5357695820,
+    14066339935,
+    14066339936,
+    14066339937,
+    14066339938,
+    14066339939,
+    14066339940,
+    14066339941,
+    14066339942,
+    14066339948,
+    14066339943,
+    14066339944,
+    14066339945,
+    14066339946,
+    14066339947,
+    5357695818,
+    5357695819,
+    5357695820
+  ],
+  "tags": {
+    "layer": "1",
+    "man_made": "bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 1555873656,
+  "nodes": [
+    6171639324,
+    14152966719,
+    14152966720,
+    14152966721,
+    14152966722,
+    14152966723,
+    14152966724,
+    14152966725,
+    14152966726,
+    14152966727,
+    14152966728,
+    14152966729,
+    14152966730,
+    14152966731,
+    14152966732,
+    14152966733,
+    14152966734,
+    14152966735,
+    14152966736,
+    14152966737,
+    14152966707,
+    14152966710,
+    14152966711,
+    14152966712,
+    14152966713,
+    14152966714,
+    14152966715,
+    14152966716,
+    14152966717,
+    14152966718,
+    14152966708,
+    14152966709,
+    6171639324
+  ],
+  "tags": {
+    "access": "yes",
+    "amenity": "parking",
+    "brand": "Wilson Parking",
+    "brand:wikidata": "Q28448427",
+    "description": "Double helix parking area.",
+    "fee": "yes",
+    "layer": "-2",
+    "name": "Opera House Car Park",
+    "operator": "Wilson Parking",
+    "operator:type": "private",
+    "operator:wikidata": "Q28448427",
+    "parking": "underground",
+    "website": "https://www.wilsonparking.com.au/go/wilson-car-parks/nsw/sydney-opera-house"
+  }
+},
+{
+  "type": "relation",
+  "id": 9596872,
+  "members": [
+    {
+      "type": "way",
+      "ref": 331158718,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 690623852,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 690623837,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 690623822,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 690623805,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 690623804,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 690839896,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 681275615,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 690846159,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 690846161,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 690839900,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 690839901,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 690839902,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 690623800,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 690839906,
+      "role": "outer"
+    },
+    {
+      "type": "way",
+      "ref": 690623799,
+      "role": "outer"
+    }
+  ],
+  "tags": {
+    "addr:housenumber": "2",
+    "addr:postcode": "2000",
+    "addr:street": "Macquarie Street",
+    "addr:suburb": "Sydney",
+    "amenity": "arts_centre",
+    "architect": "Jørn Utzon",
+    "architect:wikidata": "Q180398",
+    "building": "civic",
+    "building:levels": "5",
+    "comment": "base ~10? meters height.",
+    "heritage": "1",
+    "heritage:operator": "whc",
+    "landmark": "1",
+    "max_level": "4",
+    "min_level": "-1",
+    "name": "Sydney Opera House",
+    "name:af": "Sydney Operahuis",
+    "name:ckb": "خانەی ئۆپێرای سیندی",
+    "name:cs": "Opera v Sydney",
+    "name:de": "Sydney Opernhaus",
+    "name:es": "Casa del Ópera de Sídney",
+    "name:et": "Sydney ooperiteater",
+    "name:fr": "Opéra de Sydney",
+    "name:he": "בית האופרה של סידני",
+    "name:it": "Teatro dell'opera di Sydney",
+    "name:ja": "オペラハウス",
+    "name:kn": "ಸಿಡ್ನಿ ಒಪೆರಾ ಹೌಸ್",
+    "name:ko": "시드니 오페라 하우스",
+    "name:no": "Sydney Operahuset",
+    "name:pl": "Opera w Sydney",
+    "name:pt": "Ópera de Sydney",
+    "name:ru": "Сиднейский оперный театр",
+    "name:sk": "Opera v Sydney",
+    "name:uk": "Сіднейський оперний театр",
+    "name:zh": "悉尼歌剧院",
+    "ref:whc": "166",
+    "roof:shape": "many",
+    "source": "nearmap",
+    "start_date": "1973",
+    "theatre:genre": "opera",
+    "tourism": "attraction",
+    "type": "multipolygon",
+    "website": "https://www.sydneyoperahouse.com/",
+    "whc:inscription_date": "2007",
+    "wheelchair": "yes",
+    "wikidata": "Q45178",
+    "wikipedia": "en:Sydney Opera House"
+  }
+},
+{
+  "type": "node",
+  "id": 4101244595,
+  "lat": -33.8600023,
+  "lon": 151.2127068
+},
+{
+  "type": "node",
+  "id": 4101244597,
+  "lat": -33.8600216,
+  "lon": 151.2127040
+},
+{
+  "type": "node",
+  "id": 9958456543,
+  "lat": -33.8600023,
+  "lon": 151.2126099
+},
+{
+  "type": "node",
+  "id": 9958456549,
+  "lat": -33.8600118,
+  "lon": 151.2127054
+},
+{
+  "type": "node",
+  "id": 11724239842,
+  "lat": -33.8600123,
+  "lon": 151.2126085
+},
+{
+  "type": "node",
+  "id": 11724239843,
+  "lat": -33.8599929,
+  "lon": 151.2126112
+},
+{
+  "type": "node",
+  "id": 14152966723,
+  "lat": -33.8591631,
+  "lon": 151.2147326
+},
+{
+  "type": "node",
+  "id": 14152966724,
+  "lat": -33.8591627,
+  "lon": 151.2148186
+},
+{
+  "type": "node",
+  "id": 13809174,
+  "lat": -33.8551273,
+  "lon": 151.2076232
+},
+{
+  "type": "node",
+  "id": 13818853,
+  "lat": -33.8569813,
+  "lon": 151.2098439
+},
+{
+  "type": "node",
+  "id": 651310672,
+  "lat": -33.8543009,
+  "lon": 151.2084933
+},
+{
+  "type": "node",
+  "id": 651310730,
+  "lat": -33.8563201,
+  "lon": 151.2060470
+},
+{
+  "type": "node",
+  "id": 1559637878,
+  "lat": -33.8543382,
+  "lon": 151.2090827
+},
+{
+  "type": "node",
+  "id": 1559637890,
+  "lat": -33.8543659,
+  "lon": 151.2091465
+},
+{
+  "type": "node",
+  "id": 1559637892,
+  "lat": -33.8543809,
+  "lon": 151.2091810
+},
+{
+  "type": "node",
+  "id": 1559637894,
+  "lat": -33.8545121,
+  "lon": 151.2094713
+},
+{
+  "type": "node",
+  "id": 1559637901,
+  "lat": -33.8545395,
+  "lon": 151.2089560
+},
+{
+  "type": "node",
+  "id": 1559637902,
+  "lat": -33.8545548,
+  "lon": 151.2095696
+},
+{
+  "type": "node",
+  "id": 1559637913,
+  "lat": -33.8545686,
+  "lon": 151.2090213
+},
+{
+  "type": "node",
+  "id": 1559637917,
+  "lat": -33.8545983,
+  "lon": 151.2090882
+},
+{
+  "type": "node",
+  "id": 1559637922,
+  "lat": -33.8545830,
+  "lon": 151.2090538
+},
+{
+  "type": "node",
+  "id": 1559637925,
+  "lat": -33.8547126,
+  "lon": 151.2093452
+},
+{
+  "type": "node",
+  "id": 1559637935,
+  "lat": -33.8547560,
+  "lon": 151.2094430
+},
+{
+  "type": "node",
+  "id": 1655431777,
+  "lat": -33.8550953,
+  "lon": 151.2072083
+},
+{
+  "type": "node",
+  "id": 1655460119,
+  "lat": -33.8575015,
+  "lon": 151.2097925
+},
+{
+  "type": "node",
+  "id": 1655460134,
+  "lat": -33.8574860,
+  "lon": 151.2096867
+},
+{
+  "type": "node",
+  "id": 1832327859,
+  "lat": -33.8542460,
+  "lon": 151.2081955
+},
+{
+  "type": "node",
+  "id": 1832328118,
+  "lat": -33.8569820,
+  "lon": 151.2098554
+},
+{
+  "type": "node",
+  "id": 1842727781,
+  "lat": -33.8575121,
+  "lon": 151.2094466
+},
+{
+  "type": "node",
+  "id": 1842727783,
+  "lat": -33.8576490,
+  "lon": 151.2099096
+},
+{
+  "type": "node",
+  "id": 1986176505,
+  "lat": -33.8588550,
+  "lon": 151.2071761
+},
+{
+  "type": "node",
+  "id": 1986176507,
+  "lat": -33.8590197,
+  "lon": 151.2071077
+},
+{
+  "type": "node",
+  "id": 2151261229,
+  "lat": -33.8545573,
+  "lon": 151.2089958
+},
+{
+  "type": "node",
+  "id": 3855995744,
+  "lat": -33.8543010,
+  "lon": 151.2090440
+},
+{
+  "type": "node",
+  "id": 3855995747,
+  "lat": -33.8545265,
+  "lon": 151.2089018
+},
+{
+  "type": "node",
+  "id": 3855995748,
+  "lat": -33.8545509,
+  "lon": 151.2096189
+},
+{
+  "type": "node",
+  "id": 3855995749,
+  "lat": -33.8547765,
+  "lon": 151.2094767
+},
+{
+  "type": "node",
+  "id": 3884399786,
+  "lat": -33.8570434,
+  "lon": 151.2053923
+},
+{
+  "type": "node",
+  "id": 3891239371,
+  "lat": -33.8548683,
+  "lon": 151.2088600
+},
+{
+  "type": "node",
+  "id": 5211521886,
+  "lat": -33.8559586,
+  "lon": 151.2070447
+},
+{
+  "type": "node",
+  "id": 5350221859,
+  "lat": -33.8560132,
+  "lon": 151.2069717
+},
+{
+  "type": "node",
+  "id": 5350221860,
+  "lat": -33.8556800,
+  "lon": 151.2068998
+},
+{
+  "type": "node",
+  "id": 5350221861,
+  "lat": -33.8556177,
+  "lon": 151.2069700
+},
+{
+  "type": "node",
+  "id": 5350221862,
+  "lat": -33.8565963,
+  "lon": 151.2061925
+},
+{
+  "type": "node",
+  "id": 5350221863,
+  "lat": -33.8562881,
+  "lon": 151.2060873
+},
+{
+  "type": "node",
+  "id": 5350221864,
+  "lat": -33.8563524,
+  "lon": 151.2060062
+},
+{
+  "type": "node",
+  "id": 5350221865,
+  "lat": -33.8566665,
+  "lon": 151.2061013
+},
+{
+  "type": "node",
+  "id": 5350221866,
+  "lat": -33.8568069,
+  "lon": 151.2052010
+},
+{
+  "type": "node",
+  "id": 5350221867,
+  "lat": -33.8570673,
+  "lon": 151.2053104
+},
+{
+  "type": "node",
+  "id": 5350221868,
+  "lat": -33.8567846,
+  "lon": 151.2052809
+},
+{
+  "type": "node",
+  "id": 5350391503,
+  "lat": -33.8574555,
+  "lon": 151.2094576
+},
+{
+  "type": "node",
+  "id": 5350391504,
+  "lat": -33.8575542,
+  "lon": 151.2094384
+},
+{
+  "type": "node",
+  "id": 5350391505,
+  "lat": -33.8576094,
+  "lon": 151.2098423
+},
+{
+  "type": "node",
+  "id": 5350391506,
+  "lat": -33.8576210,
+  "lon": 151.2098641
+},
+{
+  "type": "node",
+  "id": 5350391507,
+  "lat": -33.8576343,
+  "lon": 151.2098775
+},
+{
+  "type": "node",
+  "id": 5350391508,
+  "lat": -33.8576515,
+  "lon": 151.2098802
+},
+{
+  "type": "node",
+  "id": 5350391509,
+  "lat": -33.8576560,
+  "lon": 151.2099083
+},
+{
+  "type": "node",
+  "id": 5350391510,
+  "lat": -33.8575218,
+  "lon": 151.2099327
+},
+{
+  "type": "node",
+  "id": 5391108263,
+  "lat": -33.8569827,
+  "lon": 151.2098678
+},
+{
+  "type": "node",
+  "id": 6364421423,
+  "lat": -33.8574889,
+  "lon": 151.2097064
+},
+{
+  "type": "node",
+  "id": 7880232805,
+  "lat": -33.8590014,
+  "lon": 151.2070376
+},
+{
+  "type": "node",
+  "id": 7880232806,
+  "lat": -33.8588361,
+  "lon": 151.2071032
+},
+{
+  "type": "node",
+  "id": 8038148398,
+  "lat": -33.8588661,
+  "lon": 151.2063253
+},
+{
+  "type": "node",
+  "id": 8038148399,
+  "lat": -33.8588862,
+  "lon": 151.2063771
+},
+{
+  "type": "node",
+  "id": 9770015037,
+  "lat": -33.8578467,
+  "lon": 151.2070344
+},
+{
+  "type": "node",
+  "id": 9816227685,
+  "lat": -33.8550588,
+  "lon": 151.2071931
+},
+{
+  "type": "node",
+  "id": 9816227687,
+  "lat": -33.8549233,
+  "lon": 151.2076798
+},
+{
+  "type": "node",
+  "id": 9816227689,
+  "lat": -33.8551267,
+  "lon": 151.2072215
+},
+{
+  "type": "node",
+  "id": 9816227690,
+  "lat": -33.8550169,
+  "lon": 151.2075883
+},
+{
+  "type": "node",
+  "id": 9816227691,
+  "lat": -33.8546905,
+  "lon": 151.2070361
+},
+{
+  "type": "node",
+  "id": 9816227692,
+  "lat": -33.8546762,
+  "lon": 151.2070866
+},
+{
+  "type": "node",
+  "id": 9816227693,
+  "lat": -33.8545272,
+  "lon": 151.2070255
+},
+{
+  "type": "node",
+  "id": 9816227694,
+  "lat": -33.8545183,
+  "lon": 151.2070569
+},
+{
+  "type": "node",
+  "id": 9816227695,
+  "lat": -33.8546883,
+  "lon": 151.2071267
+},
+{
+  "type": "node",
+  "id": 9816227696,
+  "lat": -33.8547115,
+  "lon": 151.2070447
+},
+{
+  "type": "node",
+  "id": 9816227703,
+  "lat": -33.8542914,
+  "lon": 151.2078416
+},
+{
+  "type": "node",
+  "id": 9816227704,
+  "lat": -33.8542896,
+  "lon": 151.2078320
+},
+{
+  "type": "node",
+  "id": 9816227705,
+  "lat": -33.8541625,
+  "lon": 151.2078658
+},
+{
+  "type": "node",
+  "id": 9816227706,
+  "lat": -33.8541603,
+  "lon": 151.2078538
+},
+{
+  "type": "node",
+  "id": 9816227707,
+  "lat": -33.8543129,
+  "lon": 151.2078132
+},
+{
+  "type": "node",
+  "id": 9816227708,
+  "lat": -33.8543168,
+  "lon": 151.2078349
+},
+{
+  "type": "node",
+  "id": 9816227709,
+  "lat": -33.8541782,
+  "lon": 151.2082127
+},
+{
+  "type": "node",
+  "id": 9816227710,
+  "lat": -33.8542362,
+  "lon": 151.2085094
+},
+{
+  "type": "node",
+  "id": 9816227711,
+  "lat": -33.8543663,
+  "lon": 151.2084771
+},
+{
+  "type": "node",
+  "id": 9816227712,
+  "lat": -33.8543637,
+  "lon": 151.2084660
+},
+{
+  "type": "node",
+  "id": 9816227713,
+  "lat": -33.8543229,
+  "lon": 151.2084413
+},
+{
+  "type": "node",
+  "id": 9816227714,
+  "lat": -33.8542779,
+  "lon": 151.2081872
+},
+{
+  "type": "node",
+  "id": 9923751344,
+  "lat": -33.8586793,
+  "lon": 151.2064442
+},
+{
+  "type": "node",
+  "id": 9923751345,
+  "lat": -33.8586859,
+  "lon": 151.2065038
+},
+{
+  "type": "node",
+  "id": 9923751346,
+  "lat": -33.8569592,
+  "lon": 151.2075393
+},
+{
+  "type": "node",
+  "id": 9923751347,
+  "lat": -33.8569762,
+  "lon": 151.2075848
+},
+{
+  "type": "node",
+  "id": 9923751348,
+  "lat": -33.8575653,
+  "lon": 151.2072123
+},
+{
+  "type": "node",
+  "id": 9923751349,
+  "lat": -33.8575495,
+  "lon": 151.2071635
+},
+{
+  "type": "node",
+  "id": 11288443899,
+  "lat": -33.8589982,
+  "lon": 151.2070253
+},
+{
+  "type": "node",
+  "id": 11288443900,
+  "lat": -33.8588321,
+  "lon": 151.2070879
+},
+{
+  "type": "node",
+  "id": 11288443901,
+  "lat": -33.8588825,
+  "lon": 151.2072816
+},
+{
+  "type": "node",
+  "id": 11288443902,
+  "lat": -33.8590486,
+  "lon": 151.2072189
+},
+{
+  "type": "node",
+  "id": 11288443903,
+  "lat": -33.8590432,
+  "lon": 151.2071980
+},
+{
+  "type": "node",
+  "id": 11288443904,
+  "lat": -33.8588779,
+  "lon": 151.2072640
+},
+{
+  "type": "node",
+  "id": 11524596977,
+  "lat": -33.8568958,
+  "lon": 151.2098513
+},
+{
+  "type": "node",
+  "id": 11524596978,
+  "lat": -33.8568972,
+  "lon": 151.2098752
+},
+{
+  "type": "node",
+  "id": 11524596979,
+  "lat": -33.8568965,
+  "lon": 151.2098633
+},
+{
+  "type": "node",
+  "id": 11640423274,
+  "lat": -33.8542438,
+  "lon": 151.2085075
+},
+{
+  "type": "node",
+  "id": 11765961770,
+  "lat": -33.8574648,
+  "lon": 151.2094558
+},
+{
+  "type": "node",
+  "id": 11765961771,
+  "lat": -33.8575315,
+  "lon": 151.2099309
+},
+{
+  "type": "node",
+  "id": 11765961836,
+  "lat": -33.8576066,
+  "lon": 151.2098218
+},
+{
+  "type": "node",
+  "id": 11765961837,
+  "lat": -33.8575086,
+  "lon": 151.2098417
+},
+{
+  "type": "node",
+  "id": 11765961838,
+  "lat": -33.8575903,
+  "lon": 151.2099203
+},
+{
+  "type": "node",
+  "id": 11765961839,
+  "lat": -33.8575609,
+  "lon": 151.2099256
+},
+{
+  "type": "node",
+  "id": 12079898534,
+  "lat": -33.8546344,
+  "lon": 151.2091490
+},
+{
+  "type": "node",
+  "id": 12079898535,
+  "lat": -33.8545882,
+  "lon": 151.2090467
+},
+{
+  "type": "node",
+  "id": 12079898538,
+  "lat": -33.8546587,
+  "lon": 151.2092028
+},
+{
+  "type": "node",
+  "id": 12808377237,
+  "lat": -33.8558513,
+  "lon": 151.2059218
+},
+{
+  "type": "node",
+  "id": 12808377238,
+  "lat": -33.8552296,
+  "lon": 151.2056603
+},
+{
+  "type": "node",
+  "id": 12808377239,
+  "lat": -33.8552379,
+  "lon": 151.2056311
+},
+{
+  "type": "node",
+  "id": 12808377240,
+  "lat": -33.8553679,
+  "lon": 151.2056850
+},
+{
+  "type": "node",
+  "id": 12808377241,
+  "lat": -33.8553614,
+  "lon": 151.2057077
+},
+{
+  "type": "node",
+  "id": 12808377242,
+  "lat": -33.8552876,
+  "lon": 151.2056771
+},
+{
+  "type": "node",
+  "id": 12808377243,
+  "lat": -33.8552858,
+  "lon": 151.2056836
+},
+{
+  "type": "node",
+  "id": 12808377244,
+  "lat": -33.8549262,
+  "lon": 151.2055002
+},
+{
+  "type": "node",
+  "id": 12808377245,
+  "lat": -33.8548229,
+  "lon": 151.2054563
+},
+{
+  "type": "node",
+  "id": 12808377246,
+  "lat": -33.8548145,
+  "lon": 151.2054850
+},
+{
+  "type": "node",
+  "id": 12808377247,
+  "lat": -33.8548330,
+  "lon": 151.2054928
+},
+{
+  "type": "node",
+  "id": 12808377248,
+  "lat": -33.8548347,
+  "lon": 151.2054869
+},
+{
+  "type": "node",
+  "id": 12808377249,
+  "lat": -33.8549196,
+  "lon": 151.2055229
+},
+{
+  "type": "node",
+  "id": 12808377250,
+  "lat": -33.8549227,
+  "lon": 151.2055122
+},
+{
+  "type": "node",
+  "id": 12808377252,
+  "lat": -33.8548244,
+  "lon": 151.2054892
+},
+{
+  "type": "node",
+  "id": 12808377253,
+  "lat": -33.8553647,
+  "lon": 151.2056963
+},
+{
+  "type": "node",
+  "id": 12808377255,
+  "lat": -33.8552552,
+  "lon": 151.2056709
+},
+{
+  "type": "node",
+  "id": 12808377258,
+  "lat": -33.8558066,
+  "lon": 151.2059027
+},
+{
+  "type": "node",
+  "id": 12808377259,
+  "lat": -33.8558095,
+  "lon": 151.2058956
+},
+{
+  "type": "node",
+  "id": 12808377260,
+  "lat": -33.8558156,
+  "lon": 151.2058920
+},
+{
+  "type": "node",
+  "id": 12808377261,
+  "lat": -33.8558205,
+  "lon": 151.2058926
+},
+{
+  "type": "node",
+  "id": 12808377262,
+  "lat": -33.8558572,
+  "lon": 151.2059090
+},
+{
+  "type": "node",
+  "id": 12808377263,
+  "lat": -33.8558657,
+  "lon": 151.2059167
+},
+{
+  "type": "node",
+  "id": 12808377264,
+  "lat": -33.8558669,
+  "lon": 151.2059242
+},
+{
+  "type": "node",
+  "id": 12808377265,
+  "lat": -33.8558653,
+  "lon": 151.2059302
+},
+{
+  "type": "node",
+  "id": 12808377266,
+  "lat": -33.8558619,
+  "lon": 151.2059346
+},
+{
+  "type": "node",
+  "id": 12808377267,
+  "lat": -33.8558564,
+  "lon": 151.2059372
+},
+{
+  "type": "node",
+  "id": 12808377268,
+  "lat": -33.8558522,
+  "lon": 151.2059369
+},
+{
+  "type": "node",
+  "id": 12808377269,
+  "lat": -33.8558469,
+  "lon": 151.2059345
+},
+{
+  "type": "node",
+  "id": 12808377270,
+  "lat": -33.8558497,
+  "lon": 151.2059358
+},
+{
+  "type": "node",
+  "id": 12808377271,
+  "lat": -33.8558543,
+  "lon": 151.2059373
+},
+{
+  "type": "node",
+  "id": 12808377272,
+  "lat": -33.8558593,
+  "lon": 151.2059364
+},
+{
+  "type": "node",
+  "id": 12808377273,
+  "lat": -33.8558638,
+  "lon": 151.2059326
+},
+{
+  "type": "node",
+  "id": 12808377274,
+  "lat": -33.8558664,
+  "lon": 151.2059273
+},
+{
+  "type": "node",
+  "id": 12808377275,
+  "lat": -33.8558667,
+  "lon": 151.2059203
+},
+{
+  "type": "node",
+  "id": 12808377276,
+  "lat": -33.8558636,
+  "lon": 151.2059131
+},
+{
+  "type": "node",
+  "id": 12808377277,
+  "lat": -33.8558607,
+  "lon": 151.2059104
+},
+{
+  "type": "node",
+  "id": 12808377278,
+  "lat": -33.8558181,
+  "lon": 151.2058919
+},
+{
+  "type": "node",
+  "id": 12808377279,
+  "lat": -33.8558123,
+  "lon": 151.2058931
+},
+{
+  "type": "node",
+  "id": 12808377280,
+  "lat": -33.8558076,
+  "lon": 151.2058988
+},
+{
+  "type": "node",
+  "id": 12808377281,
+  "lat": -33.8558099,
+  "lon": 151.2059041
+},
+{
+  "type": "node",
+  "id": 12808377289,
+  "lat": -33.8558482,
+  "lon": 151.2059310
+},
+{
+  "type": "node",
+  "id": 12808877907,
+  "lat": -33.8543155,
+  "lon": 151.2055913
+},
+{
+  "type": "node",
+  "id": 12808877908,
+  "lat": -33.8542984,
+  "lon": 151.2056520
+},
+{
+  "type": "node",
+  "id": 12808877909,
+  "lat": -33.8543521,
+  "lon": 151.2056740
+},
+{
+  "type": "node",
+  "id": 12808877910,
+  "lat": -33.8543591,
+  "lon": 151.2056490
+},
+{
+  "type": "node",
+  "id": 12808877911,
+  "lat": -33.8544094,
+  "lon": 151.2056696
+},
+{
+  "type": "node",
+  "id": 12808877912,
+  "lat": -33.8544166,
+  "lon": 151.2056441
+},
+{
+  "type": "node",
+  "id": 12808877913,
+  "lat": -33.8543718,
+  "lon": 151.2056257
+},
+{
+  "type": "node",
+  "id": 12808877914,
+  "lat": -33.8543696,
+  "lon": 151.2056332
+},
+{
+  "type": "node",
+  "id": 12808877915,
+  "lat": -33.8544029,
+  "lon": 151.2056468
+},
+{
+  "type": "node",
+  "id": 12808877916,
+  "lat": -33.8544017,
+  "lon": 151.2056510
+},
+{
+  "type": "node",
+  "id": 12808877917,
+  "lat": -33.8543623,
+  "lon": 151.2056349
+},
+{
+  "type": "node",
+  "id": 12808877918,
+  "lat": -33.8543685,
+  "lon": 151.2056130
+},
+{
+  "type": "node",
+  "id": 12808877919,
+  "lat": -33.8543708,
+  "lon": 151.2056293
+},
+{
+  "type": "node",
+  "id": 12808877923,
+  "lat": -33.8543403,
+  "lon": 151.2056015
+},
+{
+  "type": "node",
+  "id": 12808877940,
+  "lat": -33.8549919,
+  "lon": 151.2058753
+},
+{
+  "type": "node",
+  "id": 12808877941,
+  "lat": -33.8549858,
+  "lon": 151.2058960
+},
+{
+  "type": "node",
+  "id": 12808877942,
+  "lat": -33.8549472,
+  "lon": 151.2058796
+},
+{
+  "type": "node",
+  "id": 12808877943,
+  "lat": -33.8549480,
+  "lon": 151.2058769
+},
+{
+  "type": "node",
+  "id": 12808877944,
+  "lat": -33.8549810,
+  "lon": 151.2058910
+},
+{
+  "type": "node",
+  "id": 12808877945,
+  "lat": -33.8549840,
+  "lon": 151.2058807
+},
+{
+  "type": "node",
+  "id": 12808877946,
+  "lat": -33.8549360,
+  "lon": 151.2058602
+},
+{
+  "type": "node",
+  "id": 12808877947,
+  "lat": -33.8549284,
+  "lon": 151.2058858
+},
+{
+  "type": "node",
+  "id": 12808877948,
+  "lat": -33.8549825,
+  "lon": 151.2059089
+},
+{
+  "type": "node",
+  "id": 12808877949,
+  "lat": -33.8549747,
+  "lon": 151.2059353
+},
+{
+  "type": "node",
+  "id": 12808877950,
+  "lat": -33.8550256,
+  "lon": 151.2059570
+},
+{
+  "type": "node",
+  "id": 12808877951,
+  "lat": -33.8550432,
+  "lon": 151.2058972
+},
+{
+  "type": "node",
+  "id": 12808877952,
+  "lat": -33.8549826,
+  "lon": 151.2058856
+},
+{
+  "type": "node",
+  "id": 12808877956,
+  "lat": -33.8550183,
+  "lon": 151.2058865
+},
+{
+  "type": "node",
+  "id": 12808878017,
+  "lat": -33.8557223,
+  "lon": 151.2050587
+},
+{
+  "type": "node",
+  "id": 12808878018,
+  "lat": -33.8557348,
+  "lon": 151.2050637
+},
+{
+  "type": "node",
+  "id": 12808878019,
+  "lat": -33.8557024,
+  "lon": 151.2051808
+},
+{
+  "type": "node",
+  "id": 12808878020,
+  "lat": -33.8556900,
+  "lon": 151.2051758
+},
+{
+  "type": "node",
+  "id": 12808878021,
+  "lat": -33.8558565,
+  "lon": 151.2051148
+},
+{
+  "type": "node",
+  "id": 12808878022,
+  "lat": -33.8558689,
+  "lon": 151.2051201
+},
+{
+  "type": "node",
+  "id": 12808878023,
+  "lat": -33.8558348,
+  "lon": 151.2052351
+},
+{
+  "type": "node",
+  "id": 12808878024,
+  "lat": -33.8558224,
+  "lon": 151.2052298
+},
+{
+  "type": "node",
+  "id": 12808878025,
+  "lat": -33.8559932,
+  "lon": 151.2051725
+},
+{
+  "type": "node",
+  "id": 12808878026,
+  "lat": -33.8560042,
+  "lon": 151.2051769
+},
+{
+  "type": "node",
+  "id": 12808878027,
+  "lat": -33.8559716,
+  "lon": 151.2052941
+},
+{
+  "type": "node",
+  "id": 12808878028,
+  "lat": -33.8559606,
+  "lon": 151.2052897
+},
+{
+  "type": "node",
+  "id": 12808878029,
+  "lat": -33.8561282,
+  "lon": 151.2052292
+},
+{
+  "type": "node",
+  "id": 12808878030,
+  "lat": -33.8561405,
+  "lon": 151.2052345
+},
+{
+  "type": "node",
+  "id": 12808878031,
+  "lat": -33.8561060,
+  "lon": 151.2053503
+},
+{
+  "type": "node",
+  "id": 12808878032,
+  "lat": -33.8560937,
+  "lon": 151.2053450
+},
+{
+  "type": "node",
+  "id": 12808878033,
+  "lat": -33.8562873,
+  "lon": 151.2053256
+},
+{
+  "type": "node",
+  "id": 12808878034,
+  "lat": -33.8562996,
+  "lon": 151.2053343
+},
+{
+  "type": "node",
+  "id": 12808878035,
+  "lat": -33.8562476,
+  "lon": 151.2054400
+},
+{
+  "type": "node",
+  "id": 12808878036,
+  "lat": -33.8562353,
+  "lon": 151.2054312
+},
+{
+  "type": "node",
+  "id": 12808878051,
+  "lat": -33.8557288,
+  "lon": 151.2050613
+},
+{
+  "type": "node",
+  "id": 12808878052,
+  "lat": -33.8556954,
+  "lon": 151.2051780
+},
+{
+  "type": "node",
+  "id": 12808878055,
+  "lat": -33.8558630,
+  "lon": 151.2051176
+},
+{
+  "type": "node",
+  "id": 12808878056,
+  "lat": -33.8558277,
+  "lon": 151.2052320
+},
+{
+  "type": "node",
+  "id": 12808878059,
+  "lat": -33.8559993,
+  "lon": 151.2051750
+},
+{
+  "type": "node",
+  "id": 12808878060,
+  "lat": -33.8559653,
+  "lon": 151.2052916
+},
+{
+  "type": "node",
+  "id": 12808878063,
+  "lat": -33.8561342,
+  "lon": 151.2052318
+},
+{
+  "type": "node",
+  "id": 12808878064,
+  "lat": -33.8561004,
+  "lon": 151.2053479
+},
+{
+  "type": "node",
+  "id": 12808878066,
+  "lat": -33.8562929,
+  "lon": 151.2053295
+},
+{
+  "type": "node",
+  "id": 12808878067,
+  "lat": -33.8562416,
+  "lon": 151.2054357
+},
+{
+  "type": "node",
+  "id": 12808878242,
+  "lat": -33.8553182,
+  "lon": 151.2048880
+},
+{
+  "type": "node",
+  "id": 12808878243,
+  "lat": -33.8553243,
+  "lon": 151.2048906
+},
+{
+  "type": "node",
+  "id": 12808878244,
+  "lat": -33.8553304,
+  "lon": 151.2048932
+},
+{
+  "type": "node",
+  "id": 12808878245,
+  "lat": -33.8552980,
+  "lon": 151.2050044
+},
+{
+  "type": "node",
+  "id": 12808878246,
+  "lat": -33.8552918,
+  "lon": 151.2050018
+},
+{
+  "type": "node",
+  "id": 12808878247,
+  "lat": -33.8552870,
+  "lon": 151.2049999
+},
+{
+  "type": "node",
+  "id": 12808878255,
+  "lat": -33.8554521,
+  "lon": 151.2049443
+},
+{
+  "type": "node",
+  "id": 12808878256,
+  "lat": -33.8554579,
+  "lon": 151.2049466
+},
+{
+  "type": "node",
+  "id": 12808878257,
+  "lat": -33.8554625,
+  "lon": 151.2049485
+},
+{
+  "type": "node",
+  "id": 12808878258,
+  "lat": -33.8554313,
+  "lon": 151.2050597
+},
+{
+  "type": "node",
+  "id": 12808878259,
+  "lat": -33.8554254,
+  "lon": 151.2050573
+},
+{
+  "type": "node",
+  "id": 12808878260,
+  "lat": -33.8554209,
+  "lon": 151.2050555
+},
+{
+  "type": "node",
+  "id": 12808878268,
+  "lat": -33.8555883,
+  "lon": 151.2050018
+},
+{
+  "type": "node",
+  "id": 12808878269,
+  "lat": -33.8555942,
+  "lon": 151.2050042
+},
+{
+  "type": "node",
+  "id": 12808878270,
+  "lat": -33.8555991,
+  "lon": 151.2050062
+},
+{
+  "type": "node",
+  "id": 12808878271,
+  "lat": -33.8555665,
+  "lon": 151.2051226
+},
+{
+  "type": "node",
+  "id": 12808878272,
+  "lat": -33.8555604,
+  "lon": 151.2051201
+},
+{
+  "type": "node",
+  "id": 12808878273,
+  "lat": -33.8555557,
+  "lon": 151.2051182
+},
+{
+  "type": "node",
+  "id": 13227083848,
+  "lat": -33.8545985,
+  "lon": 151.2090047
+},
+{
+  "type": "node",
+  "id": 13227083849,
+  "lat": -33.8543367,
+  "lon": 151.2092508
+},
+{
+  "type": "node",
+  "id": 13227083854,
+  "lat": -33.8558610,
+  "lon": 151.2082818
+},
+{
+  "type": "node",
+  "id": 13227083855,
+  "lat": -33.8554086,
+  "lon": 151.2085199
+},
+{
+  "type": "node",
+  "id": 13227083856,
+  "lat": -33.8558428,
+  "lon": 151.2082453
+},
+{
+  "type": "node",
+  "id": 13227083857,
+  "lat": -33.8554279,
+  "lon": 151.2085584
+},
+{
+  "type": "node",
+  "id": 13800029837,
+  "lat": -33.8550509,
+  "lon": 151.2087527
+},
+{
+  "type": "node",
+  "id": 13800029838,
+  "lat": -33.8547079,
+  "lon": 151.2089458
+},
+{
+  "type": "node",
+  "id": 1723392482,
+  "lat": -33.8569484,
+  "lon": 151.2146577
+},
+{
+  "type": "node",
+  "id": 2386873642,
+  "lat": -33.8574179,
+  "lon": 151.2145248
+},
+{
+  "type": "node",
+  "id": 2386873649,
+  "lat": -33.8575441,
+  "lon": 151.2155602
+},
+{
+  "type": "node",
+  "id": 2386873659,
+  "lat": -33.8576809,
+  "lon": 151.2155167
+},
+{
+  "type": "node",
+  "id": 2386873660,
+  "lat": -33.8577520,
+  "lon": 151.2144272
+},
+{
+  "type": "node",
+  "id": 2386873661,
+  "lat": -33.8577603,
+  "lon": 151.2144681
+},
+{
+  "type": "node",
+  "id": 2386873665,
+  "lat": -33.8578459,
+  "lon": 151.2149053
+},
+{
+  "type": "node",
+  "id": 2386873668,
+  "lat": -33.8579304,
+  "lon": 151.2153334
+},
+{
+  "type": "node",
+  "id": 5209251521,
+  "lat": -33.8565794,
+  "lon": 151.2146934
+},
+{
+  "type": "node",
+  "id": 6171639324,
+  "lat": -33.8589688,
+  "lon": 151.2143927
+},
+{
+  "type": "node",
+  "id": 6371304507,
+  "lat": -33.8578268,
+  "lon": 151.2148088
+},
+{
+  "type": "node",
+  "id": 6379773641,
+  "lat": -33.8563428,
+  "lon": 151.2147018
+},
+{
+  "type": "node",
+  "id": 6379773642,
+  "lat": -33.8565366,
+  "lon": 151.2152819
+},
+{
+  "type": "node",
+  "id": 6379773643,
+  "lat": -33.8563345,
+  "lon": 151.2152034
+},
+{
+  "type": "node",
+  "id": 6379773644,
+  "lat": -33.8565199,
+  "lon": 151.2147119
+},
+{
+  "type": "node",
+  "id": 6379773645,
+  "lat": -33.8577470,
+  "lon": 151.2154971
+},
+{
+  "type": "node",
+  "id": 6379773646,
+  "lat": -33.8563295,
+  "lon": 151.2147468
+},
+{
+  "type": "node",
+  "id": 6379773647,
+  "lat": -33.8566630,
+  "lon": 151.2153026
+},
+{
+  "type": "node",
+  "id": 6379773648,
+  "lat": -33.8563050,
+  "lon": 151.2149526
+},
+{
+  "type": "node",
+  "id": 6379773649,
+  "lat": -33.8565099,
+  "lon": 151.2146556
+},
+{
+  "type": "node",
+  "id": 6379773650,
+  "lat": -33.8565155,
+  "lon": 151.2156654
+},
+{
+  "type": "node",
+  "id": 6379773651,
+  "lat": -33.8563072,
+  "lon": 151.2150257
+},
+{
+  "type": "node",
+  "id": 6379773652,
+  "lat": -33.8568273,
+  "lon": 151.2146924
+},
+{
+  "type": "node",
+  "id": 6379773653,
+  "lat": -33.8568897,
+  "lon": 151.2158163
+},
+{
+  "type": "node",
+  "id": 6379773654,
+  "lat": -33.8565327,
+  "lon": 151.2157177
+},
+{
+  "type": "node",
+  "id": 6379773655,
+  "lat": -33.8564559,
+  "lon": 151.2153120
+},
+{
+  "type": "node",
+  "id": 6379773656,
+  "lat": -33.8565979,
+  "lon": 151.2158532
+},
+{
+  "type": "node",
+  "id": 6379773657,
+  "lat": -33.8566853,
+  "lon": 151.2146596
+},
+{
+  "type": "node",
+  "id": 6379773658,
+  "lat": -33.8570088,
+  "lon": 151.2157143
+},
+{
+  "type": "node",
+  "id": 6379773659,
+  "lat": -33.8565010,
+  "lon": 151.2155481
+},
+{
+  "type": "node",
+  "id": 6379773660,
+  "lat": -33.8565322,
+  "lon": 151.2153194
+},
+{
+  "type": "node",
+  "id": 6379773661,
+  "lat": -33.8566319,
+  "lon": 151.2158894
+},
+{
+  "type": "node",
+  "id": 6379773662,
+  "lat": -33.8563178,
+  "lon": 151.2148205
+},
+{
+  "type": "node",
+  "id": 6379773663,
+  "lat": -33.8566742,
+  "lon": 151.2153509
+},
+{
+  "type": "node",
+  "id": 6379773664,
+  "lat": -33.8565027,
+  "lon": 151.2155963
+},
+{
+  "type": "node",
+  "id": 6379773665,
+  "lat": -33.8563607,
+  "lon": 151.2152919
+},
+{
+  "type": "node",
+  "id": 6379773666,
+  "lat": -33.8565533,
+  "lon": 151.2157707
+},
+{
+  "type": "node",
+  "id": 6379773667,
+  "lat": -33.8563094,
+  "lon": 151.2148815
+},
+{
+  "type": "node",
+  "id": 6379773669,
+  "lat": -33.8564971,
+  "lon": 151.2155125
+},
+{
+  "type": "node",
+  "id": 6379773670,
+  "lat": -33.8563128,
+  "lon": 151.2150934
+},
+{
+  "type": "node",
+  "id": 6379773671,
+  "lat": -33.8563946,
+  "lon": 151.2152993
+},
+{
+  "type": "node",
+  "id": 6379773672,
+  "lat": -33.8565767,
+  "lon": 151.2158156
+},
+{
+  "type": "node",
+  "id": 6382157325,
+  "lat": -33.8570952,
+  "lon": 151.2146162
+},
+{
+  "type": "node",
+  "id": 6382157326,
+  "lat": -33.8573009,
+  "lon": 151.2145577
+},
+{
+  "type": "node",
+  "id": 6382157329,
+  "lat": -33.8569151,
+  "lon": 151.2146675
+},
+{
+  "type": "node",
+  "id": 6382157330,
+  "lat": -33.8567930,
+  "lon": 151.2146845
+},
+{
+  "type": "node",
+  "id": 6382157331,
+  "lat": -33.8568147,
+  "lon": 151.2146895
+},
+{
+  "type": "node",
+  "id": 6382157334,
+  "lat": -33.8567719,
+  "lon": 151.2146796
+},
+{
+  "type": "node",
+  "id": 6384485839,
+  "lat": -33.8578606,
+  "lon": 151.2153574
+},
+{
+  "type": "node",
+  "id": 6384485840,
+  "lat": -33.8576931,
+  "lon": 151.2144449
+},
+{
+  "type": "node",
+  "id": 6384485842,
+  "lat": -33.8577272,
+  "lon": 151.2153951
+},
+{
+  "type": "node",
+  "id": 6479847296,
+  "lat": -33.8576481,
+  "lon": 151.2155271
+},
+{
+  "type": "node",
+  "id": 6481887357,
+  "lat": -33.8575261,
+  "lon": 151.2144928
+},
+{
+  "type": "node",
+  "id": 6481966337,
+  "lat": -33.8566008,
+  "lon": 151.2152924
+},
+{
+  "type": "node",
+  "id": 6550419152,
+  "lat": -33.8573473,
+  "lon": 151.2145451
+},
+{
+  "type": "node",
+  "id": 13125712566,
+  "lat": -33.8564282,
+  "lon": 151.2146782
+},
+{
+  "type": "node",
+  "id": 13125712568,
+  "lat": -33.8564388,
+  "lon": 151.2146753
+},
+{
+  "type": "node",
+  "id": 13125712569,
+  "lat": -33.8564187,
+  "lon": 151.2146808
+},
+{
+  "type": "node",
+  "id": 14152966707,
+  "lat": -33.8584650,
+  "lon": 151.2148594
+},
+{
+  "type": "node",
+  "id": 14152966708,
+  "lat": -33.8588314,
+  "lon": 151.2143488
+},
+{
+  "type": "node",
+  "id": 14152966709,
+  "lat": -33.8589020,
+  "lon": 151.2143624
+},
+{
+  "type": "node",
+  "id": 14152966710,
+  "lat": -33.8584578,
+  "lon": 151.2147821
+},
+{
+  "type": "node",
+  "id": 14152966711,
+  "lat": -33.8584625,
+  "lon": 151.2147045
+},
+{
+  "type": "node",
+  "id": 14152966712,
+  "lat": -33.8584788,
+  "lon": 151.2146292
+},
+{
+  "type": "node",
+  "id": 14152966713,
+  "lat": -33.8585062,
+  "lon": 151.2145587
+},
+{
+  "type": "node",
+  "id": 14152966714,
+  "lat": -33.8585438,
+  "lon": 151.2144954
+},
+{
+  "type": "node",
+  "id": 14152966715,
+  "lat": -33.8585903,
+  "lon": 151.2144415
+},
+{
+  "type": "node",
+  "id": 14152966716,
+  "lat": -33.8586443,
+  "lon": 151.2143986
+},
+{
+  "type": "node",
+  "id": 14152966717,
+  "lat": -33.8587038,
+  "lon": 151.2143683
+},
+{
+  "type": "node",
+  "id": 14152966718,
+  "lat": -33.8587669,
+  "lon": 151.2143515
+},
+{
+  "type": "node",
+  "id": 14152966719,
+  "lat": -33.8590292,
+  "lon": 151.2144387
+},
+{
+  "type": "node",
+  "id": 14152966720,
+  "lat": -33.8590807,
+  "lon": 151.2144983
+},
+{
+  "type": "node",
+  "id": 14152966721,
+  "lat": -33.8591212,
+  "lon": 151.2145691
+},
+{
+  "type": "node",
+  "id": 14152966722,
+  "lat": -33.8591490,
+  "lon": 151.2146483
+},
+{
+  "type": "node",
+  "id": 14152966725,
+  "lat": -33.8591481,
+  "lon": 151.2149028
+},
+{
+  "type": "node",
+  "id": 14152966726,
+  "lat": -33.8591197,
+  "lon": 151.2149817
+},
+{
+  "type": "node",
+  "id": 14152966727,
+  "lat": -33.8590787,
+  "lon": 151.2150521
+},
+{
+  "type": "node",
+  "id": 14152966728,
+  "lat": -33.8590268,
+  "lon": 151.2151112
+},
+{
+  "type": "node",
+  "id": 14152966729,
+  "lat": -33.8589660,
+  "lon": 151.2151565
+},
+{
+  "type": "node",
+  "id": 14152966730,
+  "lat": -33.8588990,
+  "lon": 151.2151861
+},
+{
+  "type": "node",
+  "id": 14152966731,
+  "lat": -33.8588284,
+  "lon": 151.2151990
+},
+{
+  "type": "node",
+  "id": 14152966732,
+  "lat": -33.8587571,
+  "lon": 151.2151944
+},
+{
+  "type": "node",
+  "id": 14152966733,
+  "lat": -33.8586879,
+  "lon": 151.2151727
+},
+{
+  "type": "node",
+  "id": 14152966734,
+  "lat": -33.8586239,
+  "lon": 151.2151347
+},
+{
+  "type": "node",
+  "id": 14152966735,
+  "lat": -33.8585674,
+  "lon": 151.2150820
+},
+{
+  "type": "node",
+  "id": 14152966736,
+  "lat": -33.8585210,
+  "lon": 151.2150167
+},
+{
+  "type": "node",
+  "id": 14152966737,
+  "lat": -33.8584863,
+  "lon": 151.2149415
+},
+{
+  "type": "node",
+  "id": 1326017170,
+  "lat": -33.8467775,
+  "lon": 151.2101849
+},
+{
+  "type": "node",
+  "id": 5601134426,
+  "lat": -33.8494234,
+  "lon": 151.2107041
+},
+{
+  "type": "node",
+  "id": 6496416854,
+  "lat": -33.8487288,
+  "lon": 151.2066001
+},
+{
+  "type": "node",
+  "id": 6496416855,
+  "lat": -33.8486074,
+  "lon": 151.2064607
+},
+{
+  "type": "node",
+  "id": 6496416862,
+  "lat": -33.8487374,
+  "lon": 151.2065896
+},
+{
+  "type": "node",
+  "id": 6582636751,
+  "lat": -33.8465712,
+  "lon": 151.2059220
+},
+{
+  "type": "node",
+  "id": 9503965889,
+  "lat": -33.8497790,
+  "lon": 151.2110368
+},
+{
+  "type": "node",
+  "id": 11508319992,
+  "lat": -33.8494196,
+  "lon": 151.2107116
+},
+{
+  "type": "node",
+  "id": 11508319993,
+  "lat": -33.8494302,
+  "lon": 151.2106953
+},
+{
+  "type": "node",
+  "id": 11508319994,
+  "lat": -33.8494391,
+  "lon": 151.2106893
+},
+{
+  "type": "node",
+  "id": 11508320003,
+  "lat": -33.8497825,
+  "lon": 151.2110306
+},
+{
+  "type": "node",
+  "id": 11508320004,
+  "lat": -33.8497651,
+  "lon": 151.2110646
+},
+{
+  "type": "node",
+  "id": 11508320052,
+  "lat": -33.8499115,
+  "lon": 151.2111304
+},
+{
+  "type": "node",
+  "id": 11508320053,
+  "lat": -33.8498981,
+  "lon": 151.2111504
+},
+{
+  "type": "node",
+  "id": 11508320054,
+  "lat": -33.8497700,
+  "lon": 151.2110546
+},
+{
+  "type": "node",
+  "id": 11508320055,
+  "lat": -33.8497986,
+  "lon": 151.2110304
+},
+{
+  "type": "node",
+  "id": 11508320056,
+  "lat": -33.8499188,
+  "lon": 151.2111195
+},
+{
+  "type": "node",
+  "id": 11508320057,
+  "lat": -33.8498897,
+  "lon": 151.2111629
+},
+{
+  "type": "node",
+  "id": 11508320058,
+  "lat": -33.8497723,
+  "lon": 151.2110778
+},
+{
+  "type": "node",
+  "id": 11508320068,
+  "lat": -33.8497738,
+  "lon": 151.2110472
+},
+{
+  "type": "node",
+  "id": 11508356969,
+  "lat": -33.8499050,
+  "lon": 151.2111401
+},
+{
+  "type": "node",
+  "id": 11508356976,
+  "lat": -33.8494464,
+  "lon": 151.2106865
+},
+{
+  "type": "node",
+  "id": 11508356977,
+  "lat": -33.8494473,
+  "lon": 151.2106736
+},
+{
+  "type": "node",
+  "id": 11508356978,
+  "lat": -33.8493680,
+  "lon": 151.2105619
+},
+{
+  "type": "node",
+  "id": 11508356979,
+  "lat": -33.8493396,
+  "lon": 151.2106031
+},
+{
+  "type": "node",
+  "id": 11508356980,
+  "lat": -33.8494109,
+  "lon": 151.2107068
+},
+{
+  "type": "node",
+  "id": 11508356988,
+  "lat": -33.8493478,
+  "lon": 151.2105912
+},
+{
+  "type": "node",
+  "id": 11508356989,
+  "lat": -33.8493552,
+  "lon": 151.2105805
+},
+{
+  "type": "node",
+  "id": 11508356990,
+  "lat": -33.8493608,
+  "lon": 151.2105724
+},
+{
+  "type": "node",
+  "id": 11578877262,
+  "lat": -33.8467781,
+  "lon": 151.2101738
+},
+{
+  "type": "node",
+  "id": 11578877263,
+  "lat": -33.8470563,
+  "lon": 151.2101939
+},
+{
+  "type": "node",
+  "id": 11578877264,
+  "lat": -33.8470548,
+  "lon": 151.2102242
+},
+{
+  "type": "node",
+  "id": 11578877265,
+  "lat": -33.8470343,
+  "lon": 151.2102228
+},
+{
+  "type": "node",
+  "id": 11578877266,
+  "lat": -33.8470346,
+  "lon": 151.2102177
+},
+{
+  "type": "node",
+  "id": 11578877267,
+  "lat": -33.8467768,
+  "lon": 151.2101992
+},
+{
+  "type": "node",
+  "id": 11578877268,
+  "lat": -33.8470438,
+  "lon": 151.2102234
+},
+{
+  "type": "node",
+  "id": 11710168279,
+  "lat": -33.8474695,
+  "lon": 151.2056628
+},
+{
+  "type": "node",
+  "id": 11710168340,
+  "lat": -33.8465482,
+  "lon": 151.2062053
+},
+{
+  "type": "node",
+  "id": 11710168341,
+  "lat": -33.8465605,
+  "lon": 151.2062027
+},
+{
+  "type": "node",
+  "id": 11710168342,
+  "lat": -33.8465752,
+  "lon": 151.2063052
+},
+{
+  "type": "node",
+  "id": 11710168343,
+  "lat": -33.8465629,
+  "lon": 151.2063078
+},
+{
+  "type": "node",
+  "id": 11710168344,
+  "lat": -33.8465536,
+  "lon": 151.2062042
+},
+{
+  "type": "node",
+  "id": 11710168345,
+  "lat": -33.8465694,
+  "lon": 151.2063064
+},
+{
+  "type": "node",
+  "id": 11710168559,
+  "lat": -33.8485978,
+  "lon": 151.2064728
+},
+{
+  "type": "node",
+  "id": 11710168560,
+  "lat": -33.8486159,
+  "lon": 151.2064500
+},
+{
+  "type": "node",
+  "id": 11710168561,
+  "lat": -33.8487191,
+  "lon": 151.2066121
+},
+{
+  "type": "node",
+  "id": 11710168614,
+  "lat": -33.8476539,
+  "lon": 151.2055257
+},
+{
+  "type": "node",
+  "id": 11710168615,
+  "lat": -33.8476606,
+  "lon": 151.2055431
+},
+{
+  "type": "node",
+  "id": 11710168616,
+  "lat": -33.8476483,
+  "lon": 151.2055110
+},
+{
+  "type": "node",
+  "id": 11710168617,
+  "lat": -33.8474859,
+  "lon": 151.2055974
+},
+{
+  "type": "node",
+  "id": 11710168618,
+  "lat": -33.8474678,
+  "lon": 151.2056162
+},
+{
+  "type": "node",
+  "id": 11710168619,
+  "lat": -33.8474555,
+  "lon": 151.2056374
+},
+{
+  "type": "node",
+  "id": 11710168620,
+  "lat": -33.8474527,
+  "lon": 151.2056562
+},
+{
+  "type": "node",
+  "id": 11710168621,
+  "lat": -33.8474547,
+  "lon": 151.2056707
+},
+{
+  "type": "node",
+  "id": 11710168622,
+  "lat": -33.8474860,
+  "lon": 151.2056536
+},
+{
+  "type": "node",
+  "id": 11710168623,
+  "lat": -33.8474974,
+  "lon": 151.2056369
+},
+{
+  "type": "node",
+  "id": 11710168624,
+  "lat": -33.8475097,
+  "lon": 151.2056236
+},
+{
+  "type": "node",
+  "id": 11813535797,
+  "lat": -33.8485450,
+  "lon": 151.2097931
+},
+{
+  "type": "node",
+  "id": 11813535798,
+  "lat": -33.8485669,
+  "lon": 151.2098022
+},
+{
+  "type": "node",
+  "id": 12509102121,
+  "lat": -33.8464097,
+  "lon": 151.2058272
+},
+{
+  "type": "node",
+  "id": 12509102122,
+  "lat": -33.8464470,
+  "lon": 151.2058224
+},
+{
+  "type": "node",
+  "id": 12509102123,
+  "lat": -33.8464529,
+  "lon": 151.2058418
+},
+{
+  "type": "node",
+  "id": 12509102124,
+  "lat": -33.8464829,
+  "lon": 151.2058542
+},
+{
+  "type": "node",
+  "id": 12509102125,
+  "lat": -33.8465042,
+  "lon": 151.2058156
+},
+{
+  "type": "node",
+  "id": 12509102126,
+  "lat": -33.8464997,
+  "lon": 151.2057675
+},
+{
+  "type": "node",
+  "id": 12509102127,
+  "lat": -33.8465367,
+  "lon": 151.2057438
+},
+{
+  "type": "node",
+  "id": 12509102128,
+  "lat": -33.8465448,
+  "lon": 151.2058192
+},
+{
+  "type": "node",
+  "id": 12509102129,
+  "lat": -33.8465417,
+  "lon": 151.2058456
+},
+{
+  "type": "node",
+  "id": 12509102130,
+  "lat": -33.8465360,
+  "lon": 151.2058618
+},
+{
+  "type": "node",
+  "id": 12509102131,
+  "lat": -33.8465253,
+  "lon": 151.2058781
+},
+{
+  "type": "node",
+  "id": 12509102132,
+  "lat": -33.8465102,
+  "lon": 151.2058919
+},
+{
+  "type": "node",
+  "id": 12509102133,
+  "lat": -33.8464908,
+  "lon": 151.2059003
+},
+{
+  "type": "node",
+  "id": 12509102134,
+  "lat": -33.8464729,
+  "lon": 151.2059033
+},
+{
+  "type": "node",
+  "id": 12509102135,
+  "lat": -33.8464541,
+  "lon": 151.2059010
+},
+{
+  "type": "node",
+  "id": 12509102136,
+  "lat": -33.8464392,
+  "lon": 151.2058924
+},
+{
+  "type": "node",
+  "id": 12509102137,
+  "lat": -33.8464274,
+  "lon": 151.2058804
+},
+{
+  "type": "node",
+  "id": 12509102138,
+  "lat": -33.8464181,
+  "lon": 151.2058684
+},
+{
+  "type": "node",
+  "id": 12509102139,
+  "lat": -33.8464122,
+  "lon": 151.2058541
+},
+{
+  "type": "node",
+  "id": 12509102140,
+  "lat": -33.8464487,
+  "lon": 151.2058326
+},
+{
+  "type": "node",
+  "id": 12509102141,
+  "lat": -33.8464589,
+  "lon": 151.2058488
+},
+{
+  "type": "node",
+  "id": 12509102142,
+  "lat": -33.8464663,
+  "lon": 151.2058534
+},
+{
+  "type": "node",
+  "id": 12509102143,
+  "lat": -33.8464746,
+  "lon": 151.2058553
+},
+{
+  "type": "node",
+  "id": 12509102144,
+  "lat": -33.8464906,
+  "lon": 151.2058503
+},
+{
+  "type": "node",
+  "id": 12509102145,
+  "lat": -33.8464971,
+  "lon": 151.2058439
+},
+{
+  "type": "node",
+  "id": 12509102146,
+  "lat": -33.8465018,
+  "lon": 151.2058354
+},
+{
+  "type": "node",
+  "id": 12509102147,
+  "lat": -33.8465042,
+  "lon": 151.2058257
+},
+{
+  "type": "node",
+  "id": 12509102159,
+  "lat": -33.8465144,
+  "lon": 151.2057581
+},
+{
+  "type": "node",
+  "id": 12509102170,
+  "lat": -33.8464276,
+  "lon": 151.2058249
+},
+{
+  "type": "node",
+  "id": 12518136851,
+  "lat": -33.8465848,
+  "lon": 151.2059206
+},
+{
+  "type": "node",
+  "id": 12518136852,
+  "lat": -33.8465811,
+  "lon": 151.2058688
+},
+{
+  "type": "node",
+  "id": 12518136853,
+  "lat": -33.8465543,
+  "lon": 151.2058715
+},
+{
+  "type": "node",
+  "id": 12518136854,
+  "lat": -33.8465568,
+  "lon": 151.2059076
+},
+{
+  "type": "node",
+  "id": 12518136855,
+  "lat": -33.8465701,
+  "lon": 151.2059062
+},
+{
+  "type": "node",
+  "id": 12518136856,
+  "lat": -33.8465780,
+  "lon": 151.2059213
+},
+{
+  "type": "node",
+  "id": 12518136859,
+  "lat": -33.8465633,
+  "lon": 151.2059069
+},
+{
+  "type": "node",
+  "id": 12518136861,
+  "lat": -33.8464155,
+  "lon": 151.2059651
+},
+{
+  "type": "node",
+  "id": 12518136862,
+  "lat": -33.8463996,
+  "lon": 151.2057910
+},
+{
+  "type": "node",
+  "id": 12518136863,
+  "lat": -33.8463929,
+  "lon": 151.2057919
+},
+{
+  "type": "node",
+  "id": 12518136864,
+  "lat": -33.8463908,
+  "lon": 151.2057678
+},
+{
+  "type": "node",
+  "id": 12518136865,
+  "lat": -33.8463734,
+  "lon": 151.2057702
+},
+{
+  "type": "node",
+  "id": 12518136866,
+  "lat": -33.8463914,
+  "lon": 151.2059683
+},
+{
+  "type": "node",
+  "id": 12518136867,
+  "lat": -33.8464022,
+  "lon": 151.2059669
+},
+{
+  "type": "node",
+  "id": 12518136877,
+  "lat": -33.8463928,
+  "lon": 151.2057879
+},
+{
+  "type": "node",
+  "id": 12518136878,
+  "lat": -33.8463754,
+  "lon": 151.2057903
+},
+{
+  "type": "node",
+  "id": 12518136879,
+  "lat": -33.8463918,
+  "lon": 151.2057778
+},
+{
+  "type": "node",
+  "id": 12518136898,
+  "lat": -33.8473531,
+  "lon": 151.2057365
+},
+{
+  "type": "node",
+  "id": 12518136899,
+  "lat": -33.8473507,
+  "lon": 151.2056461
+},
+{
+  "type": "node",
+  "id": 12518136900,
+  "lat": -33.8473255,
+  "lon": 151.2056616
+},
+{
+  "type": "node",
+  "id": 12518140901,
+  "lat": -33.8473284,
+  "lon": 151.2057374
+},
+{
+  "type": "node",
+  "id": 12518140902,
+  "lat": -33.8473407,
+  "lon": 151.2057370
+},
+{
+  "type": "node",
+  "id": 12518140903,
+  "lat": -33.8473381,
+  "lon": 151.2056538
+},
+{
+  "type": "node",
+  "id": 12518140904,
+  "lat": -33.8473515,
+  "lon": 151.2056738
+},
+{
+  "type": "node",
+  "id": 12809053061,
+  "lat": -33.8485706,
+  "lon": 151.2097893
+},
+{
+  "type": "node",
+  "id": 12809053062,
+  "lat": -33.8485627,
+  "lon": 151.2098167
+},
+{
+  "type": "node",
+  "id": 12809053063,
+  "lat": -33.8485487,
+  "lon": 151.2097802
+},
+{
+  "type": "node",
+  "id": 12809053064,
+  "lat": -33.8485408,
+  "lon": 151.2098076
+},
+{
+  "type": "node",
+  "id": 12809053087,
+  "lat": -33.8470246,
+  "lon": 151.2100380
+},
+{
+  "type": "node",
+  "id": 12809053719,
+  "lat": -33.8473848,
+  "lon": 151.2099909
+},
+{
+  "type": "node",
+  "id": 12809053720,
+  "lat": -33.8472767,
+  "lon": 151.2099524
+},
+{
+  "type": "node",
+  "id": 12809053756,
+  "lat": -33.8470354,
+  "lon": 151.2099706
+},
+{
+  "type": "node",
+  "id": 12809053760,
+  "lat": -33.8470501,
+  "lon": 151.2100407
+},
+{
+  "type": "node",
+  "id": 12809053761,
+  "lat": -33.8470462,
+  "lon": 151.2100938
+},
+{
+  "type": "node",
+  "id": 12809053762,
+  "lat": -33.8470220,
+  "lon": 151.2100912
+},
+{
+  "type": "node",
+  "id": 12809053763,
+  "lat": -33.8470243,
+  "lon": 151.2100609
+},
+{
+  "type": "node",
+  "id": 12809053764,
+  "lat": -33.8470319,
+  "lon": 151.2100618
+},
+{
+  "type": "node",
+  "id": 12809053765,
+  "lat": -33.8470307,
+  "lon": 151.2100776
+},
+{
+  "type": "node",
+  "id": 12809053766,
+  "lat": -33.8470344,
+  "lon": 151.2100780
+},
+{
+  "type": "node",
+  "id": 12809053767,
+  "lat": -33.8470358,
+  "lon": 151.2100590
+},
+{
+  "type": "node",
+  "id": 12809053768,
+  "lat": -33.8470231,
+  "lon": 151.2100576
+},
+{
+  "type": "node",
+  "id": 12809053769,
+  "lat": -33.8470239,
+  "lon": 151.2100468
+},
+{
+  "type": "node",
+  "id": 12809053770,
+  "lat": -33.8470282,
+  "lon": 151.2100614
+},
+{
+  "type": "node",
+  "id": 12809053771,
+  "lat": -33.8470397,
+  "lon": 151.2099711
+},
+{
+  "type": "node",
+  "id": 12809053772,
+  "lat": -33.8470321,
+  "lon": 151.2099701
+},
+{
+  "type": "node",
+  "id": 12809053773,
+  "lat": -33.8472779,
+  "lon": 151.2099475
+},
+{
+  "type": "node",
+  "id": 12809053774,
+  "lat": -33.8473861,
+  "lon": 151.2099858
+},
+{
+  "type": "node",
+  "id": 12809053775,
+  "lat": -33.8473832,
+  "lon": 151.2099976
+},
+{
+  "type": "node",
+  "id": 12809053776,
+  "lat": -33.8472750,
+  "lon": 151.2099593
+},
+{
+  "type": "node",
+  "id": 13227083846,
+  "lat": -33.8512925,
+  "lon": 151.2111437
+},
+{
+  "type": "node",
+  "id": 13227083847,
+  "lat": -33.8512698,
+  "lon": 151.2110662
+},
+{
+  "type": "node",
+  "id": 13516328574,
+  "lat": -33.8470818,
+  "lon": 151.2110189
+},
+{
+  "type": "node",
+  "id": 13516328575,
+  "lat": -33.8471269,
+  "lon": 151.2110262
+},
+{
+  "type": "node",
+  "id": 13516328576,
+  "lat": -33.8471277,
+  "lon": 151.2110190
+},
+{
+  "type": "node",
+  "id": 13516328577,
+  "lat": -33.8471117,
+  "lon": 151.2110167
+},
+{
+  "type": "node",
+  "id": 13516328578,
+  "lat": -33.8471129,
+  "lon": 151.2110011
+},
+{
+  "type": "node",
+  "id": 13516328579,
+  "lat": -33.8471356,
+  "lon": 151.2110045
+},
+{
+  "type": "node",
+  "id": 13516328580,
+  "lat": -33.8471422,
+  "lon": 151.2110158
+},
+{
+  "type": "node",
+  "id": 13516328581,
+  "lat": -33.8471396,
+  "lon": 151.2110333
+},
+{
+  "type": "node",
+  "id": 13516328582,
+  "lat": -33.8471306,
+  "lon": 151.2110416
+},
+{
+  "type": "node",
+  "id": 13516328583,
+  "lat": -33.8470801,
+  "lon": 151.2110334
+},
+{
+  "type": "node",
+  "id": 13516328584,
+  "lat": -33.8471124,
+  "lon": 151.2110079
+},
+{
+  "type": "node",
+  "id": 13516328585,
+  "lat": -33.8470811,
+  "lon": 151.2110255
+},
+{
+  "type": "node",
+  "id": 13614262429,
+  "lat": -33.8460646,
+  "lon": 151.2063454
+},
+{
+  "type": "node",
+  "id": 13614262434,
+  "lat": -33.8460581,
+  "lon": 151.2063476
+},
+{
+  "type": "node",
+  "id": 321191104,
+  "lat": -33.8496849,
+  "lon": 151.2113352
+},
+{
+  "type": "node",
+  "id": 1559637705,
+  "lat": -33.8462285,
+  "lon": 151.2118845
+},
+{
+  "type": "node",
+  "id": 1559637708,
+  "lat": -33.8463818,
+  "lon": 151.2119525
+},
+{
+  "type": "node",
+  "id": 1559637711,
+  "lat": -33.8465898,
+  "lon": 151.2121650
+},
+{
+  "type": "node",
+  "id": 1559637715,
+  "lat": -33.8465230,
+  "lon": 151.2120244
+},
+{
+  "type": "node",
+  "id": 1559637719,
+  "lat": -33.8466951,
+  "lon": 151.2122064
+},
+{
+  "type": "node",
+  "id": 1559637723,
+  "lat": -33.8472779,
+  "lon": 151.2123719
+},
+{
+  "type": "node",
+  "id": 1559637731,
+  "lat": -33.8472896,
+  "lon": 151.2124173
+},
+{
+  "type": "node",
+  "id": 1559637732,
+  "lat": -33.8473749,
+  "lon": 151.2123981
+},
+{
+  "type": "node",
+  "id": 1559637734,
+  "lat": -33.8476287,
+  "lon": 151.2124951
+},
+{
+  "type": "node",
+  "id": 1559637735,
+  "lat": -33.8475073,
+  "lon": 151.2124301
+},
+{
+  "type": "node",
+  "id": 1559637736,
+  "lat": -33.8478121,
+  "lon": 151.2125193
+},
+{
+  "type": "node",
+  "id": 1559637737,
+  "lat": -33.8478219,
+  "lon": 151.2124789
+},
+{
+  "type": "node",
+  "id": 1559637738,
+  "lat": -33.8481541,
+  "lon": 151.2125350
+},
+{
+  "type": "node",
+  "id": 1559637741,
+  "lat": -33.8481728,
+  "lon": 151.2124939
+},
+{
+  "type": "node",
+  "id": 1559637758,
+  "lat": -33.8482535,
+  "lon": 151.2124896
+},
+{
+  "type": "node",
+  "id": 1559637761,
+  "lat": -33.8482555,
+  "lon": 151.2125318
+},
+{
+  "type": "node",
+  "id": 1559637764,
+  "lat": -33.8485129,
+  "lon": 151.2124678
+},
+{
+  "type": "node",
+  "id": 1559637768,
+  "lat": -33.8485121,
+  "lon": 151.2125125
+},
+{
+  "type": "node",
+  "id": 1559637771,
+  "lat": -33.8487324,
+  "lon": 151.2124372
+},
+{
+  "type": "node",
+  "id": 1559637772,
+  "lat": -33.8487456,
+  "lon": 151.2124738
+},
+{
+  "type": "node",
+  "id": 1559637773,
+  "lat": -33.8489182,
+  "lon": 151.2123924
+},
+{
+  "type": "node",
+  "id": 1559637775,
+  "lat": -33.8489415,
+  "lon": 151.2124276
+},
+{
+  "type": "node",
+  "id": 1559637788,
+  "lat": -33.8492852,
+  "lon": 151.2122665
+},
+{
+  "type": "node",
+  "id": 1559637791,
+  "lat": -33.8493292,
+  "lon": 151.2122990
+},
+{
+  "type": "node",
+  "id": 1559637794,
+  "lat": -33.8494808,
+  "lon": 151.2121718
+},
+{
+  "type": "node",
+  "id": 1559637800,
+  "lat": -33.8495069,
+  "lon": 151.2122235
+},
+{
+  "type": "node",
+  "id": 1559637802,
+  "lat": -33.8498077,
+  "lon": 151.2119744
+},
+{
+  "type": "node",
+  "id": 1559637805,
+  "lat": -33.8496911,
+  "lon": 151.2121312
+},
+{
+  "type": "node",
+  "id": 1559637808,
+  "lat": -33.8498171,
+  "lon": 151.2119025
+},
+{
+  "type": "node",
+  "id": 1559637824,
+  "lat": -33.8500214,
+  "lon": 151.2118403
+},
+{
+  "type": "node",
+  "id": 1559637826,
+  "lat": -33.8498597,
+  "lon": 151.2120009
+},
+{
+  "type": "node",
+  "id": 1559637840,
+  "lat": -33.8499921,
+  "lon": 151.2122989
+},
+{
+  "type": "node",
+  "id": 1559637844,
+  "lat": -33.8500183,
+  "lon": 151.2117759
+},
+{
+  "type": "node",
+  "id": 1559637865,
+  "lat": -33.8500359,
+  "lon": 151.2123985
+},
+{
+  "type": "node",
+  "id": 1559637869,
+  "lat": -33.8500610,
+  "lon": 151.2118742
+},
+{
+  "type": "node",
+  "id": 1559637870,
+  "lat": -33.8501922,
+  "lon": 151.2121710
+},
+{
+  "type": "node",
+  "id": 1559637876,
+  "lat": -33.8502361,
+  "lon": 151.2122706
+},
+{
+  "type": "node",
+  "id": 1659900641,
+  "lat": -33.8497304,
+  "lon": 151.2141271
+},
+{
+  "type": "node",
+  "id": 1688163447,
+  "lat": -33.8497927,
+  "lon": 151.2118792
+},
+{
+  "type": "node",
+  "id": 1688163449,
+  "lat": -33.8500096,
+  "lon": 151.2117397
+},
+{
+  "type": "node",
+  "id": 1688163450,
+  "lat": -33.8500425,
+  "lon": 151.2124422
+},
+{
+  "type": "node",
+  "id": 1688163451,
+  "lat": -33.8502594,
+  "lon": 151.2123027
+},
+{
+  "type": "node",
+  "id": 2151261222,
+  "lat": -33.8498611,
+  "lon": 151.2120333
+},
+{
+  "type": "node",
+  "id": 2174945114,
+  "lat": -33.8486162,
+  "lon": 151.2141395
+},
+{
+  "type": "node",
+  "id": 2174945121,
+  "lat": -33.8482162,
+  "lon": 151.2142108
+},
+{
+  "type": "node",
+  "id": 2174945124,
+  "lat": -33.8482013,
+  "lon": 151.2142085
+},
+{
+  "type": "node",
+  "id": 2174945125,
+  "lat": -33.8486263,
+  "lon": 151.2142046
+},
+{
+  "type": "node",
+  "id": 2174945129,
+  "lat": -33.8484738,
+  "lon": 151.2141169
+},
+{
+  "type": "node",
+  "id": 2174945144,
+  "lat": -33.8486592,
+  "lon": 151.2142307
+},
+{
+  "type": "node",
+  "id": 2174945156,
+  "lat": -33.8487126,
+  "lon": 151.2142185
+},
+{
+  "type": "node",
+  "id": 2174959361,
+  "lat": -33.8494099,
+  "lon": 151.2115979
+},
+{
+  "type": "node",
+  "id": 2174959362,
+  "lat": -33.8494646,
+  "lon": 151.2115268
+},
+{
+  "type": "node",
+  "id": 2174959367,
+  "lat": -33.8495943,
+  "lon": 151.2113624
+},
+{
+  "type": "node",
+  "id": 2174959372,
+  "lat": -33.8493272,
+  "lon": 151.2115214
+},
+{
+  "type": "node",
+  "id": 2174959373,
+  "lat": -33.8494029,
+  "lon": 151.2116069
+},
+{
+  "type": "node",
+  "id": 3921237833,
+  "lat": -33.8469619,
+  "lon": 151.2122545
+},
+{
+  "type": "node",
+  "id": 3921239282,
+  "lat": -33.8461093,
+  "lon": 151.2119848
+},
+{
+  "type": "node",
+  "id": 3921239298,
+  "lat": -33.8466616,
+  "lon": 151.2120990
+},
+{
+  "type": "node",
+  "id": 4071152570,
+  "lat": -33.8499720,
+  "lon": 151.2148690
+},
+{
+  "type": "node",
+  "id": 4071152572,
+  "lat": -33.8499892,
+  "lon": 151.2148592
+},
+{
+  "type": "node",
+  "id": 4071152573,
+  "lat": -33.8499989,
+  "lon": 151.2149375
+},
+{
+  "type": "node",
+  "id": 4071152574,
+  "lat": -33.8500161,
+  "lon": 151.2149277
+},
+{
+  "type": "node",
+  "id": 4072664624,
+  "lat": -33.8497454,
+  "lon": 151.2141316
+},
+{
+  "type": "node",
+  "id": 4424603479,
+  "lat": -33.8461718,
+  "lon": 151.2120358
+},
+{
+  "type": "node",
+  "id": 4424603488,
+  "lat": -33.8466105,
+  "lon": 151.2122071
+},
+{
+  "type": "node",
+  "id": 4424603590,
+  "lat": -33.8466461,
+  "lon": 151.2120587
+},
+{
+  "type": "node",
+  "id": 5357599177,
+  "lat": -33.8492837,
+  "lon": 151.2115773
+},
+{
+  "type": "node",
+  "id": 5357695818,
+  "lat": -33.8489298,
+  "lon": 151.2150504
+},
+{
+  "type": "node",
+  "id": 5357695819,
+  "lat": -33.8489995,
+  "lon": 151.2150254
+},
+{
+  "type": "node",
+  "id": 5357695820,
+  "lat": -33.8489855,
+  "lon": 151.2149691
+},
+{
+  "type": "node",
+  "id": 6553012225,
+  "lat": -33.8464013,
+  "lon": 151.2120979
+},
+{
+  "type": "node",
+  "id": 9816203834,
+  "lat": -33.8461382,
+  "lon": 151.2125247
+},
+{
+  "type": "node",
+  "id": 9816203835,
+  "lat": -33.8461827,
+  "lon": 151.2123003
+},
+{
+  "type": "node",
+  "id": 11276749734,
+  "lat": -33.8468627,
+  "lon": 151.2122036
+},
+{
+  "type": "node",
+  "id": 11276749735,
+  "lat": -33.8471084,
+  "lon": 151.2123130
+},
+{
+  "type": "node",
+  "id": 11276749736,
+  "lat": -33.8467238,
+  "lon": 151.2122168
+},
+{
+  "type": "node",
+  "id": 11276749737,
+  "lat": -33.8474549,
+  "lon": 151.2124610
+},
+{
+  "type": "node",
+  "id": 11276749738,
+  "lat": -33.8476714,
+  "lon": 151.2124587
+},
+{
+  "type": "node",
+  "id": 11276749739,
+  "lat": -33.8479745,
+  "lon": 151.2125326
+},
+{
+  "type": "node",
+  "id": 11276749740,
+  "lat": -33.8479942,
+  "lon": 151.2124899
+},
+{
+  "type": "node",
+  "id": 11276749741,
+  "lat": -33.8491233,
+  "lon": 151.2123309
+},
+{
+  "type": "node",
+  "id": 11276749742,
+  "lat": -33.8491355,
+  "lon": 151.2123708
+},
+{
+  "type": "node",
+  "id": 11276749743,
+  "lat": -33.8498428,
+  "lon": 151.2120443
+},
+{
+  "type": "node",
+  "id": 11276749744,
+  "lat": -33.8501688,
+  "lon": 151.2118424
+},
+{
+  "type": "node",
+  "id": 11288428459,
+  "lat": -33.8468416,
+  "lon": 151.2121096
+},
+{
+  "type": "node",
+  "id": 11288428461,
+  "lat": -33.8467041,
+  "lon": 151.2120848
+},
+{
+  "type": "node",
+  "id": 11288428462,
+  "lat": -33.8465252,
+  "lon": 151.2125895
+},
+{
+  "type": "node",
+  "id": 11288428463,
+  "lat": -33.8466550,
+  "lon": 151.2126131
+},
+{
+  "type": "node",
+  "id": 11288437994,
+  "lat": -33.8462662,
+  "lon": 151.2125367
+},
+{
+  "type": "node",
+  "id": 11288437995,
+  "lat": -33.8461581,
+  "lon": 151.2125136
+},
+{
+  "type": "node",
+  "id": 11288437996,
+  "lat": -33.8461561,
+  "lon": 151.2125297
+},
+{
+  "type": "node",
+  "id": 11508281427,
+  "lat": -33.8483707,
+  "lon": 151.2141515
+},
+{
+  "type": "node",
+  "id": 11508281428,
+  "lat": -33.8483746,
+  "lon": 151.2141680
+},
+{
+  "type": "node",
+  "id": 11508281429,
+  "lat": -33.8482415,
+  "lon": 151.2142323
+},
+{
+  "type": "node",
+  "id": 11508281430,
+  "lat": -33.8482143,
+  "lon": 151.2142285
+},
+{
+  "type": "node",
+  "id": 11508281431,
+  "lat": -33.8482020,
+  "lon": 151.2142019
+},
+{
+  "type": "node",
+  "id": 11508281432,
+  "lat": -33.8482381,
+  "lon": 151.2142055
+},
+{
+  "type": "node",
+  "id": 11508281433,
+  "lat": -33.8483725,
+  "lon": 151.2141594
+},
+{
+  "type": "node",
+  "id": 11508281435,
+  "lat": -33.8482157,
+  "lon": 151.2142156
+},
+{
+  "type": "node",
+  "id": 11508315733,
+  "lat": -33.8479283,
+  "lon": 151.2115852
+},
+{
+  "type": "node",
+  "id": 11508315734,
+  "lat": -33.8479183,
+  "lon": 151.2115837
+},
+{
+  "type": "node",
+  "id": 11508315735,
+  "lat": -33.8479058,
+  "lon": 151.2117017
+},
+{
+  "type": "node",
+  "id": 11508315736,
+  "lat": -33.8479157,
+  "lon": 151.2117032
+},
+{
+  "type": "node",
+  "id": 11508315739,
+  "lat": -33.8479121,
+  "lon": 151.2116428
+},
+{
+  "type": "node",
+  "id": 11508315740,
+  "lat": -33.8479219,
+  "lon": 151.2116450
+},
+{
+  "type": "node",
+  "id": 11524617005,
+  "lat": -33.8468509,
+  "lon": 151.2120769
+},
+{
+  "type": "node",
+  "id": 11524617006,
+  "lat": -33.8468520,
+  "lon": 151.2120614
+},
+{
+  "type": "node",
+  "id": 11524617007,
+  "lat": -33.8468457,
+  "lon": 151.2120402
+},
+{
+  "type": "node",
+  "id": 11524617008,
+  "lat": -33.8468340,
+  "lon": 151.2120216
+},
+{
+  "type": "node",
+  "id": 11524617009,
+  "lat": -33.8465702,
+  "lon": 151.2119039
+},
+{
+  "type": "node",
+  "id": 11524617010,
+  "lat": -33.8462231,
+  "lon": 151.2117597
+},
+{
+  "type": "node",
+  "id": 11524617011,
+  "lat": -33.8461240,
+  "lon": 151.2117166
+},
+{
+  "type": "node",
+  "id": 11524617012,
+  "lat": -33.8460769,
+  "lon": 151.2116851
+},
+{
+  "type": "node",
+  "id": 11524617037,
+  "lat": -33.8460670,
+  "lon": 151.2117146
+},
+{
+  "type": "node",
+  "id": 11524617038,
+  "lat": -33.8461054,
+  "lon": 151.2117393
+},
+{
+  "type": "node",
+  "id": 11524617039,
+  "lat": -33.8461506,
+  "lon": 151.2117628
+},
+{
+  "type": "node",
+  "id": 11524617040,
+  "lat": -33.8462178,
+  "lon": 151.2117915
+},
+{
+  "type": "node",
+  "id": 11524617041,
+  "lat": -33.8465655,
+  "lon": 151.2119388
+},
+{
+  "type": "node",
+  "id": 11524617042,
+  "lat": -33.8467097,
+  "lon": 151.2120033
+},
+{
+  "type": "node",
+  "id": 11524617043,
+  "lat": -33.8467460,
+  "lon": 151.2120328
+},
+{
+  "type": "node",
+  "id": 11524617044,
+  "lat": -33.8467709,
+  "lon": 151.2120597
+},
+{
+  "type": "node",
+  "id": 11524617045,
+  "lat": -33.8467836,
+  "lon": 151.2120799
+},
+{
+  "type": "node",
+  "id": 11524617046,
+  "lat": -33.8468126,
+  "lon": 151.2120947
+},
+{
+  "type": "node",
+  "id": 11553755185,
+  "lat": -33.8467406,
+  "lon": 151.2121037
+},
+{
+  "type": "node",
+  "id": 11578884460,
+  "lat": -33.8487386,
+  "lon": 151.2142759
+},
+{
+  "type": "node",
+  "id": 11578884461,
+  "lat": -33.8486476,
+  "lon": 151.2142501
+},
+{
+  "type": "node",
+  "id": 11578884462,
+  "lat": -33.8485903,
+  "lon": 151.2143423
+},
+{
+  "type": "node",
+  "id": 11578884463,
+  "lat": -33.8486005,
+  "lon": 151.2143851
+},
+{
+  "type": "node",
+  "id": 11578884464,
+  "lat": -33.8485425,
+  "lon": 151.2144063
+},
+{
+  "type": "node",
+  "id": 11578884465,
+  "lat": -33.8485153,
+  "lon": 151.2142919
+},
+{
+  "type": "node",
+  "id": 11578884466,
+  "lat": -33.8485406,
+  "lon": 151.2142856
+},
+{
+  "type": "node",
+  "id": 11578884467,
+  "lat": -33.8485466,
+  "lon": 151.2143119
+},
+{
+  "type": "node",
+  "id": 11578884468,
+  "lat": -33.8485706,
+  "lon": 151.2143042
+},
+{
+  "type": "node",
+  "id": 11578884469,
+  "lat": -33.8486168,
+  "lon": 151.2142263
+},
+{
+  "type": "node",
+  "id": 11578884470,
+  "lat": -33.8485603,
+  "lon": 151.2141501
+},
+{
+  "type": "node",
+  "id": 11578884471,
+  "lat": -33.8484785,
+  "lon": 151.2141367
+},
+{
+  "type": "node",
+  "id": 11578884472,
+  "lat": -33.8484762,
+  "lon": 151.2141271
+},
+{
+  "type": "node",
+  "id": 11578884473,
+  "lat": -33.8487256,
+  "lon": 151.2142472
+},
+{
+  "type": "node",
+  "id": 11578884474,
+  "lat": -33.8485375,
+  "lon": 151.2143854
+},
+{
+  "type": "node",
+  "id": 11578884475,
+  "lat": -33.8485243,
+  "lon": 151.2143296
+},
+{
+  "type": "node",
+  "id": 11578884476,
+  "lat": -33.8485880,
+  "lon": 151.2141350
+},
+{
+  "type": "node",
+  "id": 11578884477,
+  "lat": -33.8486401,
+  "lon": 151.2142156
+},
+{
+  "type": "node",
+  "id": 11607494609,
+  "lat": -33.8497139,
+  "lon": 151.2141223
+},
+{
+  "type": "node",
+  "id": 11607494611,
+  "lat": -33.8497893,
+  "lon": 151.2143230
+},
+{
+  "type": "node",
+  "id": 11607494612,
+  "lat": -33.8497569,
+  "lon": 151.2143066
+},
+{
+  "type": "node",
+  "id": 11607494619,
+  "lat": -33.8497730,
+  "lon": 151.2143144
+},
+{
+  "type": "node",
+  "id": 11607494624,
+  "lat": -33.8499813,
+  "lon": 151.2148637
+},
+{
+  "type": "node",
+  "id": 11607494625,
+  "lat": -33.8500077,
+  "lon": 151.2149325
+},
+{
+  "type": "node",
+  "id": 13227083844,
+  "lat": -33.8466199,
+  "lon": 151.2120760
+},
+{
+  "type": "node",
+  "id": 13227083845,
+  "lat": -33.8504510,
+  "lon": 151.2115739
+},
+{
+  "type": "node",
+  "id": 13296331303,
+  "lat": -33.8493023,
+  "lon": 151.2115059
+},
+{
+  "type": "node",
+  "id": 13296331304,
+  "lat": -33.8492622,
+  "lon": 151.2115543
+},
+{
+  "type": "node",
+  "id": 13428319567,
+  "lat": -33.8462541,
+  "lon": 151.2120679
+},
+{
+  "type": "node",
+  "id": 13428319568,
+  "lat": -33.8463929,
+  "lon": 151.2121221
+},
+{
+  "type": "node",
+  "id": 13433409520,
+  "lat": -33.8496475,
+  "lon": 151.2113826
+},
+{
+  "type": "node",
+  "id": 13433409521,
+  "lat": -33.8496162,
+  "lon": 151.2113993
+},
+{
+  "type": "node",
+  "id": 13433409524,
+  "lat": -33.8494846,
+  "lon": 151.2115660
+},
+{
+  "type": "node",
+  "id": 13433409526,
+  "lat": -33.8496489,
+  "lon": 151.2112933
+},
+{
+  "type": "node",
+  "id": 13433409527,
+  "lat": -33.8496075,
+  "lon": 151.2113457
+},
+{
+  "type": "node",
+  "id": 13810711028,
+  "lat": -33.8491511,
+  "lon": 151.2142487
+},
+{
+  "type": "node",
+  "id": 13810711029,
+  "lat": -33.8490917,
+  "lon": 151.2142866
+},
+{
+  "type": "node",
+  "id": 13810711030,
+  "lat": -33.8490820,
+  "lon": 151.2142647
+},
+{
+  "type": "node",
+  "id": 13810711031,
+  "lat": -33.8491415,
+  "lon": 151.2142268
+},
+{
+  "type": "node",
+  "id": 13810711032,
+  "lat": -33.8492336,
+  "lon": 151.2144413
+},
+{
+  "type": "node",
+  "id": 13810711033,
+  "lat": -33.8491795,
+  "lon": 151.2144747
+},
+{
+  "type": "node",
+  "id": 13810711034,
+  "lat": -33.8491902,
+  "lon": 151.2144997
+},
+{
+  "type": "node",
+  "id": 13810711035,
+  "lat": -33.8492443,
+  "lon": 151.2144663
+},
+{
+  "type": "node",
+  "id": 13810711036,
+  "lat": -33.8491463,
+  "lon": 151.2142376
+},
+{
+  "type": "node",
+  "id": 13810711037,
+  "lat": -33.8490868,
+  "lon": 151.2142756
+},
+{
+  "type": "node",
+  "id": 13810711039,
+  "lat": -33.8492395,
+  "lon": 151.2144551
+},
+{
+  "type": "node",
+  "id": 13810711040,
+  "lat": -33.8491856,
+  "lon": 151.2144890
+},
+{
+  "type": "node",
+  "id": 14066180669,
+  "lat": -33.8494487,
+  "lon": 151.2115469
+},
+{
+  "type": "node",
+  "id": 14066180670,
+  "lat": -33.8493525,
+  "lon": 151.2114367
+},
+{
+  "type": "node",
+  "id": 14066180671,
+  "lat": -33.8494360,
+  "lon": 151.2116274
+},
+{
+  "type": "node",
+  "id": 14066180672,
+  "lat": -33.8496380,
+  "lon": 151.2113717
+},
+{
+  "type": "node",
+  "id": 14066180673,
+  "lat": -33.8493403,
+  "lon": 151.2114529
+},
+{
+  "type": "node",
+  "id": 14066180674,
+  "lat": -33.8494719,
+  "lon": 151.2115820
+},
+{
+  "type": "node",
+  "id": 14066236135,
+  "lat": -33.8494225,
+  "lon": 151.2116121
+},
+{
+  "type": "node",
+  "id": 14066236140,
+  "lat": -33.8492936,
+  "lon": 151.2115164
+},
+{
+  "type": "node",
+  "id": 14066339767,
+  "lat": -33.8488495,
+  "lon": 151.2147074
+},
+{
+  "type": "node",
+  "id": 14066339768,
+  "lat": -33.8488034,
+  "lon": 151.2147238
+},
+{
+  "type": "node",
+  "id": 14066339769,
+  "lat": -33.8488077,
+  "lon": 151.2147412
+},
+{
+  "type": "node",
+  "id": 14066339770,
+  "lat": -33.8488533,
+  "lon": 151.2147230
+},
+{
+  "type": "node",
+  "id": 14066339935,
+  "lat": -33.8489792,
+  "lon": 151.2149717
+},
+{
+  "type": "node",
+  "id": 14066339936,
+  "lat": -33.8489872,
+  "lon": 151.2150035
+},
+{
+  "type": "node",
+  "id": 14066339937,
+  "lat": -33.8489804,
+  "lon": 151.2150196
+},
+{
+  "type": "node",
+  "id": 14066339938,
+  "lat": -33.8489108,
+  "lon": 151.2150432
+},
+{
+  "type": "node",
+  "id": 14066339939,
+  "lat": -33.8489047,
+  "lon": 151.2150219
+},
+{
+  "type": "node",
+  "id": 14066339940,
+  "lat": -33.8488965,
+  "lon": 151.2150129
+},
+{
+  "type": "node",
+  "id": 14066339941,
+  "lat": -33.8488885,
+  "lon": 151.2150088
+},
+{
+  "type": "node",
+  "id": 14066339942,
+  "lat": -33.8488769,
+  "lon": 151.2150091
+},
+{
+  "type": "node",
+  "id": 14066339943,
+  "lat": -33.8488769,
+  "lon": 151.2150222
+},
+{
+  "type": "node",
+  "id": 14066339944,
+  "lat": -33.8488854,
+  "lon": 151.2150228
+},
+{
+  "type": "node",
+  "id": 14066339945,
+  "lat": -33.8488923,
+  "lon": 151.2150251
+},
+{
+  "type": "node",
+  "id": 14066339946,
+  "lat": -33.8488960,
+  "lon": 151.2150304
+},
+{
+  "type": "node",
+  "id": 14066339947,
+  "lat": -33.8489035,
+  "lon": 151.2150590
+},
+{
+  "type": "node",
+  "id": 14066339948,
+  "lat": -33.8488769,
+  "lon": 151.2150156
+},
+{
+  "type": "node",
+  "id": 14175216804,
+  "lat": -33.8461498,
+  "lon": 151.2120010
+},
+{
+  "type": "node",
+  "id": 14175216805,
+  "lat": -33.8462900,
+  "lon": 151.2120550
+},
+{
+  "type": "node",
+  "id": 1711513672,
+  "lat": -33.8450519,
+  "lon": 151.2069234
+},
+{
+  "type": "node",
+  "id": 1711513706,
+  "lat": -33.8457782,
+  "lon": 151.2062750
+},
+{
+  "type": "node",
+  "id": 5391107262,
+  "lat": -33.8450373,
+  "lon": 151.2069275
+},
+{
+  "type": "node",
+  "id": 11359908180,
+  "lat": -33.8450302,
+  "lon": 151.2067994
+},
+{
+  "type": "node",
+  "id": 11359908183,
+  "lat": -33.8450388,
+  "lon": 151.2068358
+},
+{
+  "type": "node",
+  "id": 11359908185,
+  "lat": -33.8450046,
+  "lon": 151.2068086
+},
+{
+  "type": "node",
+  "id": 11359908186,
+  "lat": -33.8450131,
+  "lon": 151.2068451
+},
+{
+  "type": "node",
+  "id": 11640787865,
+  "lat": -33.8450260,
+  "lon": 151.2068405
+},
+{
+  "type": "node",
+  "id": 11640787866,
+  "lat": -33.8450174,
+  "lon": 151.2068040
+},
+{
+  "type": "node",
+  "id": 11710133850,
+  "lat": -33.8457692,
+  "lon": 151.2062797
+},
+{
+  "type": "node",
+  "id": 11710168354,
+  "lat": -33.8459734,
+  "lon": 151.2063038
+},
+{
+  "type": "node",
+  "id": 11710168355,
+  "lat": -33.8459900,
+  "lon": 151.2063522
+},
+{
+  "type": "node",
+  "id": 11710168356,
+  "lat": -33.8459794,
+  "lon": 151.2063567
+},
+{
+  "type": "node",
+  "id": 11710168357,
+  "lat": -33.8459637,
+  "lon": 151.2063084
+},
+{
+  "type": "node",
+  "id": 11710168358,
+  "lat": -33.8459685,
+  "lon": 151.2063061
+},
+{
+  "type": "node",
+  "id": 11710168359,
+  "lat": -33.8459847,
+  "lon": 151.2063545
+},
+{
+  "type": "node",
+  "id": 11710168369,
+  "lat": -33.8458376,
+  "lon": 151.2063418
+},
+{
+  "type": "node",
+  "id": 11710168370,
+  "lat": -33.8458316,
+  "lon": 151.2063502
+},
+{
+  "type": "node",
+  "id": 11710168371,
+  "lat": -33.8457732,
+  "lon": 151.2062776
+},
+{
+  "type": "node",
+  "id": 11710168372,
+  "lat": -33.8458346,
+  "lon": 151.2063459
+},
+{
+  "type": "node",
+  "id": 11710168381,
+  "lat": -33.8457662,
+  "lon": 151.2063628
+},
+{
+  "type": "node",
+  "id": 11710168382,
+  "lat": -33.8457750,
+  "lon": 151.2063601
+},
+{
+  "type": "node",
+  "id": 11710168383,
+  "lat": -33.8457883,
+  "lon": 151.2064235
+},
+{
+  "type": "node",
+  "id": 11710168384,
+  "lat": -33.8457794,
+  "lon": 151.2064262
+},
+{
+  "type": "node",
+  "id": 11710168385,
+  "lat": -33.8457705,
+  "lon": 151.2063615
+},
+{
+  "type": "node",
+  "id": 11710168386,
+  "lat": -33.8457837,
+  "lon": 151.2064249
+},
+{
+  "type": "node",
+  "id": 11710168402,
+  "lat": -33.8454564,
+  "lon": 151.2065484
+},
+{
+  "type": "node",
+  "id": 11710168403,
+  "lat": -33.8454888,
+  "lon": 151.2065998
+},
+{
+  "type": "node",
+  "id": 11710168404,
+  "lat": -33.8454786,
+  "lon": 151.2066091
+},
+{
+  "type": "node",
+  "id": 11710168405,
+  "lat": -33.8454462,
+  "lon": 151.2065577
+},
+{
+  "type": "node",
+  "id": 11710168406,
+  "lat": -33.8454513,
+  "lon": 151.2065530
+},
+{
+  "type": "node",
+  "id": 11710168407,
+  "lat": -33.8454837,
+  "lon": 151.2066044
+},
+{
+  "type": "node",
+  "id": 11710168417,
+  "lat": -33.8450825,
+  "lon": 151.2069832
+},
+{
+  "type": "node",
+  "id": 11710168418,
+  "lat": -33.8450706,
+  "lon": 151.2069900
+},
+{
+  "type": "node",
+  "id": 11710168419,
+  "lat": -33.8450446,
+  "lon": 151.2069255
+},
+{
+  "type": "node",
+  "id": 11710168420,
+  "lat": -33.8450766,
+  "lon": 151.2069866
+},
+{
+  "type": "node",
+  "id": 13614262430,
+  "lat": -33.8460465,
+  "lon": 151.2062714
+},
+{
+  "type": "node",
+  "id": 13614262431,
+  "lat": -33.8460319,
+  "lon": 151.2062712
+},
+{
+  "type": "node",
+  "id": 13614262432,
+  "lat": -33.8460515,
+  "lon": 151.2063498
+},
+{
+  "type": "node",
+  "id": 13614262433,
+  "lat": -33.8460392,
+  "lon": 151.2062713
+},
+{
+  "type": "node",
+  "id": 1559637688,
+  "lat": -33.8453001,
+  "lon": 151.2115407
+},
+{
+  "type": "node",
+  "id": 1559637695,
+  "lat": -33.8456101,
+  "lon": 151.2117902
+},
+{
+  "type": "node",
+  "id": 1559637698,
+  "lat": -33.8457566,
+  "lon": 151.2116984
+},
+{
+  "type": "node",
+  "id": 1559637701,
+  "lat": -33.8460241,
+  "lon": 151.2118045
+},
+{
+  "type": "node",
+  "id": 3921181495,
+  "lat": -33.8455665,
+  "lon": 151.2120523
+},
+{
+  "type": "node",
+  "id": 3921232515,
+  "lat": -33.8455923,
+  "lon": 151.2119089
+},
+{
+  "type": "node",
+  "id": 3921239287,
+  "lat": -33.8458066,
+  "lon": 151.2124192
+},
+{
+  "type": "node",
+  "id": 4424603461,
+  "lat": -33.8456132,
+  "lon": 151.2118250
+},
+{
+  "type": "node",
+  "id": 4424638120,
+  "lat": -33.8457872,
+  "lon": 151.2124124
+},
+{
+  "type": "node",
+  "id": 4424638121,
+  "lat": -33.8458261,
+  "lon": 151.2124258
+},
+{
+  "type": "node",
+  "id": 9184212406,
+  "lat": -33.8450641,
+  "lon": 151.2115755
+},
+{
+  "type": "node",
+  "id": 9189029754,
+  "lat": -33.8450969,
+  "lon": 151.2114897
+},
+{
+  "type": "node",
+  "id": 9816203824,
+  "lat": -33.8458341,
+  "lon": 151.2121930
+},
+{
+  "type": "node",
+  "id": 9816203825,
+  "lat": -33.8455574,
+  "lon": 151.2120964
+},
+{
+  "type": "node",
+  "id": 9816203836,
+  "lat": -33.8458759,
+  "lon": 151.2122084
+},
+{
+  "type": "node",
+  "id": 11276749731,
+  "lat": -33.8458299,
+  "lon": 151.2118749
+},
+{
+  "type": "node",
+  "id": 11276749732,
+  "lat": -33.8453940,
+  "lon": 151.2115671
+},
+{
+  "type": "node",
+  "id": 11276749733,
+  "lat": -33.8458670,
+  "lon": 151.2117409
+},
+{
+  "type": "node",
+  "id": 11324760933,
+  "lat": -33.8451924,
+  "lon": 151.2114276
+},
+{
+  "type": "node",
+  "id": 11524617013,
+  "lat": -33.8460300,
+  "lon": 151.2116426
+},
+{
+  "type": "node",
+  "id": 11524617014,
+  "lat": -33.8459969,
+  "lon": 151.2116174
+},
+{
+  "type": "node",
+  "id": 11524617015,
+  "lat": -33.8459495,
+  "lon": 151.2116048
+},
+{
+  "type": "node",
+  "id": 11524617016,
+  "lat": -33.8459149,
+  "lon": 151.2116028
+},
+{
+  "type": "node",
+  "id": 11524617017,
+  "lat": -33.8458768,
+  "lon": 151.2116101
+},
+{
+  "type": "node",
+  "id": 11524617018,
+  "lat": -33.8458418,
+  "lon": 151.2116051
+},
+{
+  "type": "node",
+  "id": 11524617019,
+  "lat": -33.8457938,
+  "lon": 151.2115882
+},
+{
+  "type": "node",
+  "id": 11524617020,
+  "lat": -33.8456206,
+  "lon": 151.2115309
+},
+{
+  "type": "node",
+  "id": 11524617021,
+  "lat": -33.8454632,
+  "lon": 151.2114817
+},
+{
+  "type": "node",
+  "id": 11524617022,
+  "lat": -33.8453017,
+  "lon": 151.2114373
+},
+{
+  "type": "node",
+  "id": 11524617023,
+  "lat": -33.8451887,
+  "lon": 151.2114111
+},
+{
+  "type": "node",
+  "id": 11524617024,
+  "lat": -33.8451968,
+  "lon": 151.2114478
+},
+{
+  "type": "node",
+  "id": 11524617025,
+  "lat": -33.8452990,
+  "lon": 151.2114734
+},
+{
+  "type": "node",
+  "id": 11524617026,
+  "lat": -33.8454625,
+  "lon": 151.2115143
+},
+{
+  "type": "node",
+  "id": 11524617027,
+  "lat": -33.8456162,
+  "lon": 151.2115546
+},
+{
+  "type": "node",
+  "id": 11524617028,
+  "lat": -33.8457890,
+  "lon": 151.2116222
+},
+{
+  "type": "node",
+  "id": 11524617029,
+  "lat": -33.8458263,
+  "lon": 151.2116340
+},
+{
+  "type": "node",
+  "id": 11524617030,
+  "lat": -33.8458610,
+  "lon": 151.2116379
+},
+{
+  "type": "node",
+  "id": 11524617031,
+  "lat": -33.8458945,
+  "lon": 151.2116362
+},
+{
+  "type": "node",
+  "id": 11524617032,
+  "lat": -33.8459185,
+  "lon": 151.2116340
+},
+{
+  "type": "node",
+  "id": 11524617033,
+  "lat": -33.8459447,
+  "lon": 151.2116342
+},
+{
+  "type": "node",
+  "id": 11524617034,
+  "lat": -33.8459711,
+  "lon": 151.2116396
+},
+{
+  "type": "node",
+  "id": 11524617035,
+  "lat": -33.8460043,
+  "lon": 151.2116552
+},
+{
+  "type": "node",
+  "id": 11524617036,
+  "lat": -33.8460325,
+  "lon": 151.2116817
+},
+{
+  "type": "node",
+  "id": 11524617064,
+  "lat": -33.8460452,
+  "lon": 151.2116588
+},
+{
+  "type": "node",
+  "id": 11524617065,
+  "lat": -33.8460121,
+  "lon": 151.2116270
+},
+{
+  "type": "node",
+  "id": 11524617066,
+  "lat": -33.8459729,
+  "lon": 151.2116092
+},
+{
+  "type": "node",
+  "id": 11524617067,
+  "lat": -33.8458925,
+  "lon": 151.2116075
+},
+{
+  "type": "node",
+  "id": 13227083839,
+  "lat": -33.8451664,
+  "lon": 151.2115061
+},
+{
+  "type": "way",
+  "id": 331158718,
+  "nodes": [
+    2386873668,
+    2386873665,
+    6371304507,
+    2386873661,
+    2386873660
+  ]
+},
+{
+  "type": "way",
+  "id": 681275615,
+  "nodes": [
+    6379773656,
+    6379773672,
+    6379773666,
+    6379773654,
+    6379773650,
+    6379773664,
+    6379773659,
+    6379773669,
+    6379773663,
+    6379773647,
+    6481966337
+  ]
+},
+{
+  "type": "way",
+  "id": 690623799,
+  "nodes": [
+    6481887357,
+    6384485840,
+    2386873660
+  ]
+},
+{
+  "type": "way",
+  "id": 690623800,
+  "nodes": [
+    1723392482,
+    6382157325,
+    6382157326,
+    6550419152,
+    2386873642
+  ]
+},
+{
+  "type": "way",
+  "id": 690623804,
+  "nodes": [
+    2386873649,
+    6379773658
+  ]
+},
+{
+  "type": "way",
+  "id": 690623805,
+  "nodes": [
+    6479847296,
+    2386873649
+  ]
+},
+{
+  "type": "way",
+  "id": 690623822,
+  "nodes": [
+    2386873659,
+    6479847296
+  ]
+},
+{
+  "type": "way",
+  "id": 690623837,
+  "nodes": [
+    6384485842,
+    6379773645,
+    2386873659
+  ]
+},
+{
+  "type": "way",
+  "id": 690623852,
+  "nodes": [
+    2386873668,
+    6384485839,
+    6384485842
+  ]
+},
+{
+  "type": "way",
+  "id": 690839896,
+  "nodes": [
+    6379773658,
+    6379773653,
+    6379773661,
+    6379773656
+  ]
+},
+{
+  "type": "way",
+  "id": 690839900,
+  "nodes": [
+    6379773649,
+    13125712568,
+    13125712566,
+    13125712569,
+    6379773641
+  ]
+},
+{
+  "type": "way",
+  "id": 690839901,
+  "nodes": [
+    5209251521,
+    6379773644,
+    6379773649
+  ]
+},
+{
+  "type": "way",
+  "id": 690839902,
+  "nodes": [
+    1723392482,
+    6382157329,
+    6379773652,
+    6382157331,
+    6382157330,
+    6382157334,
+    6379773657,
+    5209251521
+  ]
+},
+{
+  "type": "way",
+  "id": 690839906,
+  "nodes": [
+    2386873642,
+    6481887357
+  ]
+},
+{
+  "type": "way",
+  "id": 690846159,
+  "nodes": [
+    6481966337,
+    6379773642,
+    6379773660
+  ]
+},
+{
+  "type": "way",
+  "id": 690846161,
+  "nodes": [
+    6379773660,
+    6379773655,
+    6379773671,
+    6379773665,
+    6379773643,
+    6379773670,
+    6379773651,
+    6379773648,
+    6379773667,
+    6379773662,
+    6379773646,
+    6379773641
+  ]
+}
+
+  ]
+}

@@ -1,0 +1,7 @@
+# Local Python packages installed with pip --target (recreate per README)
+.pydeps/
+__pycache__/
+# Blender autosave backups
+*.blend1
+# Browser test artefacts
+.playwright-mcp/

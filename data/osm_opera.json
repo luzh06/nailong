@@ -1,0 +1,258 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-02T07:46:22Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "relation",
+  "id": 9596872,
+  "bounds": {
+    "minlat": -33.8579304,
+    "minlon": 151.2144272,
+    "maxlat": -33.8563050,
+    "maxlon": 151.2158894
+  },
+  "members": [
+    {
+      "type": "way",
+      "ref": 331158718,
+      "role": "outer",
+      "geometry": [
+         { "lat": -33.8579304, "lon": 151.2153334 },
+         { "lat": -33.8578459, "lon": 151.2149053 },
+         { "lat": -33.8578268, "lon": 151.2148088 },
+         { "lat": -33.8577603, "lon": 151.2144681 },
+         { "lat": -33.8577520, "lon": 151.2144272 }
+      ]
+    },
+    {
+      "type": "way",
+      "ref": 690623852,
+      "role": "outer",
+      "geometry": [
+         { "lat": -33.8579304, "lon": 151.2153334 },
+         { "lat": -33.8578606, "lon": 151.2153574 },
+         { "lat": -33.8577272, "lon": 151.2153951 }
+      ]
+    },
+    {
+      "type": "way",
+      "ref": 690623837,
+      "role": "outer",
+      "geometry": [
+         { "lat": -33.8577272, "lon": 151.2153951 },
+         { "lat": -33.8577470, "lon": 151.2154971 },
+         { "lat": -33.8576809, "lon": 151.2155167 }
+      ]
+    },
+    {
+      "type": "way",
+      "ref": 690623822,
+      "role": "outer",
+      "geometry": [
+         { "lat": -33.8576809, "lon": 151.2155167 },
+         { "lat": -33.8576481, "lon": 151.2155271 }
+      ]
+    },
+    {
+      "type": "way",
+      "ref": 690623805,
+      "role": "outer",
+      "geometry": [
+         { "lat": -33.8576481, "lon": 151.2155271 },
+         { "lat": -33.8575441, "lon": 151.2155602 }
+      ]
+    },
+    {
+      "type": "way",
+      "ref": 690623804,
+      "role": "outer",
+      "geometry": [
+         { "lat": -33.8575441, "lon": 151.2155602 },
+         { "lat": -33.8570088, "lon": 151.2157143 }
+      ]
+    },
+    {
+      "type": "way",
+      "ref": 690839896,
+      "role": "outer",
+      "geometry": [
+         { "lat": -33.8570088, "lon": 151.2157143 },
+         { "lat": -33.8568897, "lon": 151.2158163 },
+         { "lat": -33.8566319, "lon": 151.2158894 },
+         { "lat": -33.8565979, "lon": 151.2158532 }
+      ]
+    },
+    {
+      "type": "way",
+      "ref": 681275615,
+      "role": "outer",
+      "geometry": [
+         { "lat": -33.8565979, "lon": 151.2158532 },
+         { "lat": -33.8565767, "lon": 151.2158156 },
+         { "lat": -33.8565533, "lon": 151.2157707 },
+         { "lat": -33.8565327, "lon": 151.2157177 },
+         { "lat": -33.8565155, "lon": 151.2156654 },
+         { "lat": -33.8565027, "lon": 151.2155963 },
+         { "lat": -33.8565010, "lon": 151.2155481 },
+         { "lat": -33.8564971, "lon": 151.2155125 },
+         { "lat": -33.8566742, "lon": 151.2153509 },
+         { "lat": -33.8566630, "lon": 151.2153026 },
+         { "lat": -33.8566008, "lon": 151.2152924 }
+      ]
+    },
+    {
+      "type": "way",
+      "ref": 690846159,
+      "role": "outer",
+      "geometry": [
+         { "lat": -33.8566008, "lon": 151.2152924 },
+         { "lat": -33.8565366, "lon": 151.2152819 },
+         { "lat": -33.8565322, "lon": 151.2153194 }
+      ]
+    },
+    {
+      "type": "way",
+      "ref": 690846161,
+      "role": "outer",
+      "geometry": [
+         { "lat": -33.8565322, "lon": 151.2153194 },
+         { "lat": -33.8564559, "lon": 151.2153120 },
+         { "lat": -33.8563946, "lon": 151.2152993 },
+         { "lat": -33.8563607, "lon": 151.2152919 },
+         { "lat": -33.8563345, "lon": 151.2152034 },
+         { "lat": -33.8563128, "lon": 151.2150934 },
+         { "lat": -33.8563072, "lon": 151.2150257 },
+         { "lat": -33.8563050, "lon": 151.2149526 },
+         { "lat": -33.8563094, "lon": 151.2148815 },
+         { "lat": -33.8563178, "lon": 151.2148205 },
+         { "lat": -33.8563295, "lon": 151.2147468 },
+         { "lat": -33.8563428, "lon": 151.2147018 }
+      ]
+    },
+    {
+      "type": "way",
+      "ref": 690839900,
+      "role": "outer",
+      "geometry": [
+         { "lat": -33.8565099, "lon": 151.2146556 },
+         { "lat": -33.8564388, "lon": 151.2146753 },
+         { "lat": -33.8564282, "lon": 151.2146782 },
+         { "lat": -33.8564187, "lon": 151.2146808 },
+         { "lat": -33.8563428, "lon": 151.2147018 }
+      ]
+    },
+    {
+      "type": "way",
+      "ref": 690839901,
+      "role": "outer",
+      "geometry": [
+         { "lat": -33.8565794, "lon": 151.2146934 },
+         { "lat": -33.8565199, "lon": 151.2147119 },
+         { "lat": -33.8565099, "lon": 151.2146556 }
+      ]
+    },
+    {
+      "type": "way",
+      "ref": 690839902,
+      "role": "outer",
+      "geometry": [
+         { "lat": -33.8569484, "lon": 151.2146577 },
+         { "lat": -33.8569151, "lon": 151.2146675 },
+         { "lat": -33.8568273, "lon": 151.2146924 },
+         { "lat": -33.8568147, "lon": 151.2146895 },
+         { "lat": -33.8567930, "lon": 151.2146845 },
+         { "lat": -33.8567719, "lon": 151.2146796 },
+         { "lat": -33.8566853, "lon": 151.2146596 },
+         { "lat": -33.8565794, "lon": 151.2146934 }
+      ]
+    },
+    {
+      "type": "way",
+      "ref": 690623800,
+      "role": "outer",
+      "geometry": [
+         { "lat": -33.8569484, "lon": 151.2146577 },
+         { "lat": -33.8570952, "lon": 151.2146162 },
+         { "lat": -33.8573009, "lon": 151.2145577 },
+         { "lat": -33.8573473, "lon": 151.2145451 },
+         { "lat": -33.8574179, "lon": 151.2145248 }
+      ]
+    },
+    {
+      "type": "way",
+      "ref": 690839906,
+      "role": "outer",
+      "geometry": [
+         { "lat": -33.8574179, "lon": 151.2145248 },
+         { "lat": -33.8575261, "lon": 151.2144928 }
+      ]
+    },
+    {
+      "type": "way",
+      "ref": 690623799,
+      "role": "outer",
+      "geometry": [
+         { "lat": -33.8575261, "lon": 151.2144928 },
+         { "lat": -33.8576931, "lon": 151.2144449 },
+         { "lat": -33.8577520, "lon": 151.2144272 }
+      ]
+    }
+  ],
+  "tags": {
+    "addr:housenumber": "2",
+    "addr:postcode": "2000",
+    "addr:street": "Macquarie Street",
+    "addr:suburb": "Sydney",
+    "amenity": "arts_centre",
+    "architect": "Jørn Utzon",
+    "architect:wikidata": "Q180398",
+    "building": "civic",
+    "building:levels": "5",
+    "comment": "base ~10? meters height.",
+    "heritage": "1",
+    "heritage:operator": "whc",
+    "landmark": "1",
+    "max_level": "4",
+    "min_level": "-1",
+    "name": "Sydney Opera House",
+    "name:af": "Sydney Operahuis",
+    "name:ckb": "خانەی ئۆپێرای سیندی",
+    "name:cs": "Opera v Sydney",
+    "name:de": "Sydney Opernhaus",
+    "name:es": "Casa del Ópera de Sídney",
+    "name:et": "Sydney ooperiteater",
+    "name:fr": "Opéra de Sydney",
+    "name:he": "בית האופרה של סידני",
+    "name:it": "Teatro dell'opera di Sydney",
+    "name:ja": "オペラハウス",
+    "name:kn": "ಸಿಡ್ನಿ ಒಪೆರಾ ಹೌಸ್",
+    "name:ko": "시드니 오페라 하우스",
+    "name:no": "Sydney Operahuset",
+    "name:pl": "Opera w Sydney",
+    "name:pt": "Ópera de Sydney",
+    "name:ru": "Сиднейский оперный театр",
+    "name:sk": "Opera v Sydney",
+    "name:uk": "Сіднейський оперний театр",
+    "name:zh": "悉尼歌剧院",
+    "ref:whc": "166",
+    "roof:shape": "many",
+    "source": "nearmap",
+    "start_date": "1973",
+    "theatre:genre": "opera",
+    "tourism": "attraction",
+    "type": "multipolygon",
+    "website": "https://www.sydneyoperahouse.com/",
+    "whc:inscription_date": "2007",
+    "wheelchair": "yes",
+    "wikidata": "Q45178",
+    "wikipedia": "en:Sydney Opera House"
+  }
+}
+
+  ]
+}
