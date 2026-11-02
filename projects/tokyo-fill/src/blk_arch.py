@@ -181,7 +181,8 @@ class Bld:
 
     def sc_for(s, mat):
         return {"facetile": 1.6, "whitetile": 1.15, "tin": 1.6, "rustytin": 1.9, "galva": 1.9, "blackplank": 2.2, "cedar": 1.9, "plank": 1.9,
-                "siding": 1.7, "siding2": 1.7, "beige": 3.1, "mortar": 3.4, "plaster": 2.6, "mossy": 3.0, "darkface": .95}.get(mat, s.sc)
+                "siding": 1.7, "siding2": 1.7, "beige": 3.1, "mortar": 3.4, "plaster": 2.6, "mossy": 3.0, "darkface": .95,
+                "plaster5": 2.2, "rough3": 1.2, "cracked": 2.0, "damaged": 2.2}.get(mat, s.sc)
 
     def bump_for(s, mat):
         return .006 if mat in ("mortar", "plaster", "beige", "greyplaster") else .0015

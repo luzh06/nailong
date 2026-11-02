@@ -71,7 +71,8 @@ K.gravel = [[(-47.0, -12.0), (-45.6, -12.0), (-45.6, -9.0), (-47.0, -9.0)]]
 K.default_cls = 1          # everything open here is road or parking asphalt; avoids lot slivers along PLATEAU's road edge
 gm = K.ground(-55.7, -32.5, -40.0, -.8)
 K.patch(-48, -24.5, 6.0, 1.4, -.29); K.patch(-40, -27.0, 4.0, 1.2, -.29); K.patch(-56, -30, 1.6, 4.5, .4)
-K.scatter_stains(40, -55, -33, -39, -9)
+K.scatter_stains(80, -55, -33, -39, -9)
+for x, y in ((-50.0, -23.8), (-38.5, -27.6), (-57.8, -14.5)): K.manhole(x, y, K.R.random() * 3)
 ribbon_lids(gm, [(-45.4, -22.6), (-32.6, -26.4)], G, K.R, width=.4); ribbon_lids(gm, [(-55.4, -18.8), (-45.8, -22.1)], G, K.R, width=.4)
 road_paint(gm, [(-51.0, -24.0), (-36.0, -28.6)], G, width=.15); road_paint(gm, [(-55.2, -21.4), (-55.2, -19.4)], G, width=.3)
 wm = M("D_walls")

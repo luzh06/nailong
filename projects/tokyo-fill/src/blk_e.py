@@ -17,7 +17,7 @@ def kerb_s(E0, E1): return min(street_edges(e)[0] for e in (E0, (E0 + E1) / 2, E
 # ---- north frontage, facing the street (south) ----
 n1 = mk("E_n1_zakka", rect(-124.0, kerb_n(-124, -120.3), -120.3, 15.8), 7.6, 2, clad=["plaster", "siding"], tcs={"plaster": (.9, .88, .82), "siding": (.62, .64, .62)},
         roof="gable", pitch=.42, over=.4, gover=.2, rax=1, front=(0, -1), roofmat="slate", slatetc=(.45, .44, .46), metalfascia=True, fasciacol=(.3, .3, .3), framecol=(.4, .4, .38), hoodp=.2)
-n2 = mk("E_n2_greengrocer", rect(-120.1, kerb_n(-120.1, -114.1), -114.1, 12.6), 7.0, 2, clad=["mortar"], tc=(.8, .8, .74), roof="gable", pitch=.32, over=.35, gover=.2, rax=1, front=(0, -1),
+n2 = mk("E_n2_greengrocer", rect(-120.1, kerb_n(-120.1, -114.1), -114.1, 12.6), 7.0, 2, clad=["damaged"], tc=(.9, .9, .84), roof="gable", pitch=.32, over=.35, gover=.2, rax=1, front=(0, -1),
         roofmat="galva", roofcol=(.34, .52, .4), framecol=(.5, .5, .46), moss=True, hoodp=.3)
 n3 = mk("E_n3_senbei", rect(-113.9, kerb_n(-113.9, -110.6), -110.6, 12.6), 7.0, 2, clad=["blackplank", "plank"], tcs={"plank": (.6, .52, .42), "blackplank": (.8, .8, .8)}, roof="gable",
         pitch=.48, over=.45, gover=.25, rax=0, front=(0, -1), fasciacol=(.26, .2, .16), framecol=(.34, .26, .2), moss=True)
@@ -26,18 +26,18 @@ n4 = mk("E_n4_tea_machiya", rect(-110.4, kerb_n(-110.4, -100.4), -100.4, 12.6), 
 # ---- south frontage, facing the street (north) ----
 s1 = mk("E_s1_books_rc", rect(-124.0, -5.8, -117.4, kerb_s(-124, -117.4)), 9.4, 3, clad=["facetile", "plaster", "plaster"], tcs={"facetile": (.7, .6, .5), "plaster": (.86, .84, .8)},
         roof="flat", front=(0, 1), framecol=(.45, .44, .42), capcol=(.48, .48, .46), tank=True, hoodp=0)
-s2 = mk("E_s2_coffee", rect(-116.6, -5.3, -110.4, kerb_s(-116.6, -110.4)), 6.6, 2, clad=["siding2", "mortar"], tcs={"siding2": (.46, .52, .5), "mortar": (.86, .82, .74)},
+s2 = mk("E_s2_coffee", rect(-116.6, -5.3, -110.4, kerb_s(-116.6, -110.4)), 6.6, 2, clad=["siding2", "rough3"], tcs={"siding2": (.46, .52, .5), "rough3": (.92, .86, .76)},
         roof="mono", pitch=.12, over=.3, gover=.12, rax=0, roofmat="galva", roofcol=(.4, .42, .44), front=(0, 1), metalfascia=True, fasciacol=(.28, .28, .28), framecol=(.3, .3, .3), hoodp=.1)
 s3 = mk("E_s3_deli_double", rect(-110.1, -7.8, -100.6, kerb_s(-110.1, -100.6)), 8.1, 2, clad=["mortar"], tc=(.9, .84, .72), roof="gable", pitch=.42, over=.5, rax=0, front=(0, 1),
         moss=True, fasciacol=(.3, .24, .18), soffitcol=(.5, .4, .3), framecol=(.45, .4, .34))
 s4 = mk("E_s4_bakery_narrow", rect(-99.8, -8.6, -95.3, kerb_s(-99.8, -95.3)), 7.5, 2, clad=["tin", "siding"], tcs={"tin": (.82, .74, .62), "siding": (.86, .84, .8)}, roof="mono", pitch=.14,
         over=.3, gover=.1, rax=1, roofmat="galva", roofcol=(.5, .46, .4), front=(0, 1), rust=True, framecol=(.5, .48, .44))
 # ---- rear row, facing block A's lane (south) ----
-r1 = mk("E_r1_long_house", rect(-124.0, -11.6, -110.6, -6.1), 7.6, 2, clad=["plaster"], tc=(.86, .84, .78), roof="hip", pitch=.45, over=.55, front=(0, -1), moss=True,
+r1 = mk("E_r1_long_house", rect(-124.0, -11.6, -110.6, -6.1), 7.6, 2, clad=["cracked"], tc=(.95, .92, .86), roof="hip", pitch=.45, over=.55, front=(0, -1), moss=True,
         fasciacol=(.3, .25, .2), soffitcol=(.48, .4, .3), framecol=(.42, .4, .36), weather=1.2)
 g1 = mk("E_g1_tile_house", rect(-118.3, -17.2, -110.6, -11.9), 7.5, 2, clad=["facetile", "siding"], tcs={"facetile": (.66, .6, .54), "siding": (.78, .76, .7)}, roof="gable", pitch=.36,
         over=.3, gover=.18, rax=0, roofmat="slate", slatetc=(.5, .48, .5), front=(0, -1), metalfascia=True, fasciacol=(.3, .28, .26), framecol=(.3, .28, .26))
-g2 = mk("E_g2_corner_mortar", rect(-109.8, -17.2, -100.2, -8.1), 7.4, 2, clad=["beige"], tc=(.84, .78, .66), roof="hip", pitch=.46, over=.5, front=(0, -1), moss=True,
+g2 = mk("E_g2_corner_mortar", rect(-109.8, -17.2, -100.2, -8.1), 7.4, 2, clad=["plaster5"], tc=(.96, .88, .74), roof="hip", pitch=.46, over=.5, front=(0, -1), moss=True,
         fasciacol=(.32, .26, .2), framecol=(.5, .46, .4), hoodp=.4)
 g3 = mk("E_g3_mokuchin_apartment", rect(-99.7, -15.9, -87.3, -11.6), 7.8, 2, clad=["siding2"], tc=(.78, .74, .66), roof="gable", pitch=.3, over=.4, gover=.25, rax=0,
         roofmat="slate", slatetc=(.4, .38, .4), front=(0, -1), metalfascia=True, fasciacol=(.36, .34, .3), framecol=(.6, .58, .54), hoodp=0)
@@ -142,7 +142,9 @@ K.gravel = [[(-86.9, -17.6), (-83.5, -17.6), (-83.5, -13.6), (-86.9, -13.6)], [(
 gm = K.ground(-124.0, -53.4, -17.6, 15.9, keep=lambda E, N: not (E > -55.7 and N < -.8))
 for p_, sz, r_ in (((-110, 3.4), (5.0, 1.3), .02), ((-121, 4.4), (3.5, 1.1), .05), ((-58, -9.5), (1.4, 4.0), 0), ((-56, 8.8), (1.5, 3.4), 0)):
     K.patch(p_[0], p_[1], sz[0], sz[1], r_)
-K.scatter_stains(60, -124, -54, -17.5, 15)
+K.scatter_stains(110, -124, -54, -17.5, 15)
+for x, y in ((-101.5, 3.0), (-116.0, 4.4), (-57.9, -9.0), (-56.2, 9.5)): K.manhole(x, y, K.R.random() * 3)
+K.road_text(-57.9, -4.6, 0, 1.3, 2.6); K.road_text(-56.1, 8.0, pi, 1.2, 2.4)        # 止まれ on both minor legs; 止 sits on the junction side, read by drivers approaching the main street
 ribbon_lids(gm, [(e, n - .2) for e, n in st_n], G, K.R); ribbon_lids(gm, [(e, s + .2) for e, s in st_s], G, K.R)
 ribbon_lids(gm, [(-55.95, -18.6), (-55.95, -1.0)], G, K.R, width=.4); ribbon_lids(gm, [(-59.8, -18.6), (-59.8, -1.0)], G, K.R, width=.4)
 ribbon_lids(gm, [(-58.2, 6.4), (-57.3, 12.9)], G, K.R)
@@ -171,7 +173,25 @@ def lantern(m, x, y):
 
 
 for xx in (-80.2, -72.8): lantern(wm, xx, -17.85)
-K.flush_all(extra=(gm, wm))
+# utility poles continuing qs_h1's line west from pole_Y0 (E-84.5, N-1.15): spans of ~26 m on the south kerb
+from blk_equip import utility_pole, cable
+pm = M("E_poles")
+Y0 = {"hv": [V((-84.5, n, 11.6)) for n in (-2.0, -1.15, -.3)], "lv": [V((-84.5, n, 10.2)) for n in (-1.8, -.5)], "tel": [V((-84.5, -.7, 6.8)), V((-84.5, -.7, 7.3))]}
+prev = Y0
+for k, E_ in enumerate((-110.2, -123.6)):
+    N_ = street_edges(E_)[0] - .35
+    cur = utility_pole(pm, E_, N_, G(E_, N_), (0, 1), K.R, xfmr=(k == 0))
+    for kind, sag in (("hv", .45), ("lv", .55), ("tel", .7)):
+        for a_, b_ in zip(prev[kind], cur[kind]):
+            cable(pm, a_, b_, sag, r=.009 if kind == "hv" else (.012 if kind == "lv" else .018))
+    prev = cur
+for kind in ("hv", "lv", "tel"):        # lines leave the area westward
+    for a_ in prev[kind]: cable(pm, a_, a_ + V((-9.0, .6, -.3)), .2, r=.01)
+# service drops from the transformer pole to shopfronts on both sides
+for (hx, hy, hz) in ((-106.0, kerb_n(-110.4, -100.4) + .02, 5.2), (-113.0, kerb_n(-113.9, -110.6) + .02, 5.0), (-105.5, kerb_s(-110.1, -100.6) - .02, 5.3)):
+    p = V((-110.2, street_edges(-110.2)[0] - .35, G(-110.2, 0) + 9.6)); q = V((hx, hy, G(hx, hy) + hz))
+    cable(pm, p, q, .35, r=.007); tube(pm, "paint", [q, q + V((0, 0, -.12))], .03, 6, (.85, .85, .82))
+K.flush_all(extra=(gm, wm, pm))
 
 CAMS = {"west": ((-88, 1.6, 1.65), (-124, 4.0, 2.6), 26), "east": ((-121, 4.2, 1.65), (-90, 1.8, 2.8), 26), "lane": ((-121.5, -18.6, 1.65), (-95, -15.0, 3.0), 26),
         "temple": ((-65.5, -20.4, 1.65), (-79, -15.6, 3.2), 26), "mokuchin": ((-84.5, -19.2, 1.65), (-97, -15.2, 3.0), 26), "junction": ((-57.8, -14.5, 1.65), (-57.3, 14, 3.2), 26),

@@ -172,6 +172,8 @@ MDEF = {
     "plinth_top": dict(solid=(1, 1, 1), rough=.4, metal=.6), "glass": dict(solid=(.03, .04, .045), rough=.04, alpha=.62, spec=.9),
     "frost": dict(solid=(.42, .47, .46), rough=.28, spec=.7), "dark": dict(solid=(1, 1, 1), rough=.9), "polyc": dict(solid=(.85, .88, .85), rough=.25, alpha=.72),
     "decal": {}, "curtain": {},
+    # wall variety (neutralised Poly Haven CC0 plasters, tinted per house)
+    "plaster5": dict(texid="plaster5_n", nor_k=.8), "rough3": dict(texid="rough3_n", nor_k=.9), "cracked": dict(texid="cracked_n", nor_k=.9), "damaged": dict(texid="damaged_n", nor_k=.9),
 }
 
 
@@ -209,6 +211,28 @@ def uvcell(c, flip=False):
 GOODS = ((.72, .2, .16), (.86, .7, .3), (.3, .45, .26), (.85, .82, .74), (.25, .3, .5), (.6, .42, .26), (.9, .55, .2), (.5, .16, .2))
 
 
+def goods(m, f, a, y, R, kind):
+    """One shelf item at wall coords (a along, y shelf top), set back inside the shop."""
+    from blk_temple import lathe
+    c = f.p(a + .05, y, -.42); cc = tint(R.choice(GOODS), R.uniform(.75, 1.05))
+    if kind == "jars":           # ceramic or glass jars with lids (sweets, pickles, tea)
+        h = R.uniform(.12, .22); r = R.uniform(.035, .055)
+        lathe(m, "paint" if R.random() < .6 else "glass", c, [(.01, 0), (r, .005), (r * 1.1, h * .6), (r * .8, h * .9), (r * .8, h)], 10, cc if R.random() < .6 else (.9, .9, .88))
+        lathe(m, "paint", c + V((0, 0, h)), [(r * .85, 0), (r * .9, .02), (.01, .03)], 10, tint(cc, .6))
+    elif kind == "bottles":      # sake / soy bottles
+        h = R.uniform(.18, .3); r = R.uniform(.025, .04)
+        lathe(m, "glass" if R.random() < .5 else "paint", c, [(.01, 0), (r, .005), (r, h * .65), (r * .4, h * .8), (r * .35, h)], 10, R.choice(((.25, .4, .2), (.35, .2, .1), (.85, .85, .8))))
+        box(m, "paint", f, a + .05 - r * .9, a + .05 + r * .9, y + h * .25, y + h * .5, -.42 + r + .001, -.42 + r + .003, col=R.choice(GOODS))
+    elif kind == "boxes":        # wrapped gift boxes, stacked
+        for k in range(R.randint(1, 3)):
+            bw = R.uniform(.08, .12); bh = R.uniform(.04, .07); z0 = y + k * bh
+            box(m, "paint", f, a, a + bw, z0, z0 + bh, -.48, -.36, ch=.004, col=tint(cc, 1 - .1 * k))
+            box(m, "paint", f, a + bw * .45, a + bw * .55, z0, z0 + bh + .001, -.481, -.359, col=(.9, .85, .7))
+    else:                        # paper bags and small baskets
+        lathe(m, "plank", c, [(.01, 0), (.06, .005), (.065, .05), (.06, .06)], 8, (.62, .5, .32))
+        tube(m, "paint", [c + V((0, 0, .05)), c + V((0, 0, .12))], .04, 7, cc)
+
+
 def shopfront(b, i, x, w, h=2.6, style="glass", sign=None, vsign=None, noren=None, awning="tent", awncol=(.62, .16, .12), sub=False):
     """Cut a storefront and register its fit-out; geometry is added after the shell is built."""
     b.add_shop(i, x, w, h)
@@ -227,13 +251,15 @@ def _fit(b, i, x, w, h, style, sign, vsign, noren, awning, awncol):
     P = [f.p(x + .05, y0, -.52), f.p(x + w - .05, y0, -.52), f.p(x + w - .05, h, -.52), f.p(x + .05, h, -.52)]
     m.poly("shoplit", P, None, (.95, .86, .72) if style != "shutter" else (.25, .22, .2))
     if style in ("glass", "open", "lattice"):
+        kind = R.choice(("jars", "bottles", "boxes", "mixed"))
         for k in range(int(w / .9)):
             a = x + .15 + k * .9
             for yy in (.45, 1.0, 1.55):
                 box(m, "plank", f, a, a + .8, yy - .03, yy, -.5, -.3, ch=.004, col=(.55, .45, .35), sc=1.9)
-                for q in frange(a + .04, a + .74, R.uniform(.09, .16)):
-                    hh = R.uniform(.1, .3); cc = R.choice(GOODS)
-                    box(m, "paint", f, q, q + R.uniform(.05, .1), yy, yy + hh, -.48, -.34, col=tint(cc, R.uniform(.7, 1.05)))
+                q = a + .05
+                while q < a + .72:
+                    goods(m, f, q, yy, R, kind if kind != "mixed" else R.choice(("jars", "bottles", "boxes", "bags")))
+                    q += R.uniform(.11, .17)
     if style == "glass":
         n = max(2, int(round(w / .95))); sw = w / n
         for k in range(n + 1):
@@ -339,10 +365,17 @@ class Block:
         s.mats = build_materials(MDEF)
         s.mats["signs"] = tex_mat("signs", GEN + r"\signs.jpg", .5); s.mats["noren"] = tex_mat("noren", GEN + r"\noren.jpg", .95)
         s.mats["shoplit"] = lit_mat(); s.mats["cloth"] = pbr("cloth", solid=(1, 1, 1), rough=.85)
+        s.mats["manhole"] = tex_mat("manhole", GEN + r"\manhole.jpg", .55)
+        s.mats["manhole"].node_tree.nodes["Principled BSDF"].inputs["Metallic"].default_value = .6
+        rm = tex_mat("roadmark", GEN + r"\roadmark.png", .6); nt = rm.node_tree
+        img = [n_ for n_ in nt.nodes if n_.bl_idname == "ShaderNodeTexImage"][0]
+        nt.links.new(img.outputs["Alpha"], nt.nodes["Principled BSDF"].inputs["Alpha"]); rm.surface_render_method = "BLENDED"
+        s.mats["roadmark"] = rm
         s.coll = bpy.data.collections.new("block_" + name); bpy.context.scene.collection.children.link(s.coll)
         s.ctx = bpy.data.collections.new("context"); bpy.context.scene.collection.children.link(s.ctx)
         s.S = {}; s.objs = []; s.R = random.Random(seed)
         s.extra_roads = []; s.gravel = []; s.pave = []; s.default_cls = 0      # 0 lot, 1 asphalt for open ground
+        s.equip = 1.0                                                          # AC units, meters, pots per house (0 = off)
 
     def mk(s, name, fp, H, st, **spec):
         b = Bld(name, fp, H, st, G, random.Random(sum(map(ord, name)) * 211), **spec); s.S[name] = b; return b
@@ -420,7 +453,36 @@ class Block:
         for k in range(n):
             x = s.R.uniform(E0, E1); y = s.R.uniform(N0, N1); c = s.cls_at(x, y)
             if c in (-1, 2): continue
-            z = s.R.uniform(.8, 3.0); s.on_ground(x, y, z, z * s.R.uniform(.5, 1), s.R.choice((14, 6, 7)), s.R.random() * 3, c)
+            z = s.R.uniform(.8, 3.0)
+            cell = s.R.choice((14, 6, 7, 9, 10, 14) if c == 1 else (14, 6, 7, 8))       # oil, grime, cracks on asphalt; moss on lots
+            s.on_ground(x, y, z, z * s.R.uniform(.5, 1), cell, s.R.random() * 3, c)
+
+    def disc_on_ground(s, mat, x, y, r, rot=0, lift=.006, uvs=(0, 0, 1, 1), w=None, h=None):
+        """Ground-conforming quad grid (manhole r>0 as disc mapped square; road text w x h)."""
+        w = w or 2 * r; h = h or 2 * r; u = V((cos(rot), sin(rot), 0)); v = V((-sin(rot), cos(rot), 0)); n_ = 8; P = []; UV = []
+        c = s.cls_at(x, y)
+        for i in range(n_ + 1):
+            row = []; q = []
+            for j in range(n_ + 1):
+                p = V((x, y, 0)) + u * (w * (i / n_ - .5)) + v * (h * (j / n_ - .5))
+                row.append(V((p.x, p.y, s.gz(p.x, p.y, 1 if c == 1 else 0) + lift))); q.append((lerp(uvs[0], uvs[2], i / n_), lerp(uvs[1], uvs[3], j / n_)))
+            P.append(row); UV.append(q)
+        s.gm.grid(mat, P, UV, [[(1, 1, 1)] * (n_ + 1) for _ in range(n_ + 1)], smooth=True)
+
+    def manhole(s, x, y, rot=0):
+        """Polar disc so only the cast-iron circle shows; frame ring proud by 6 mm."""
+        r = .33; c = s.cls_at(x, y); P = []; UV = []
+        for i in range(33):
+            th = 2 * pi * i / 32 + rot; row = []; q = []
+            for rr in (0, .5, 1.0):
+                p = (x + r * rr * cos(th), y + r * rr * sin(th))
+                row.append(V((p[0], p[1], s.gz(p[0], p[1], 1 if c == 1 else 0) + .014))); q.append((.5 + .485 * rr * cos(th - rot), .5 + .485 * rr * sin(th - rot)))
+            P.append(row); UV.append(q)
+        s.gm.grid("manhole", P, UV, [[(1, 1, 1)] * 3 for _ in P], smooth=True)
+        s.on_ground(x, y, .9, .9, 14, rot, s.cls_at(x, y))                      # dark ring of seepage around it
+
+    def road_text(s, x, y, rot, w=1.3, h=2.6):
+        s.disc_on_ground("roadmark", x, y, 0, rot, .007, w=w, h=h)
 
     def patch(s, x, y, w, h, rot=0):
         """Asphalt repair with tar seams, as blocks A/B."""
@@ -431,9 +493,29 @@ class Block:
     # ---- output ----
     def flush_all(s, extra=()):
         s.objs = []
+        from blk_equip import equip_house
         for b in s.S.values():
-            b.build(); build_fitout(b); s.objs.append(flush(b.m, s.mats, s.coll))
+            b.build(); build_fitout(b)
+            if s.equip: equip_house(b, random.Random(sum(map(ord, b.name)) * 7), s.equip)
+            s.objs.append(flush(b.m, s.mats, s.coll))
         for m in extra: s.objs.append(flush(m, s.mats, s.coll))
+        s.instance_props()
+
+    def instance_props(s):
+        """CC0 plant models from the 5070 asset folder, one mesh per asset shared by every instance."""
+        import blk_equip, mathutils
+        src = {}
+        for asset, pos, rot, sc in blk_equip.PROPS:
+            if asset not in src:
+                before = set(bpy.data.objects)
+                bpy.ops.import_scene.gltf(filepath=rf"D:\Cijian\assets\models\{asset}\{asset}_2k.gltf")
+                new = [o for o in set(bpy.data.objects) - before if o.type == "MESH"]
+                src[asset] = [(o.data, o.matrix_world.copy()) for o in new]
+                for o in set(bpy.data.objects) - before: bpy.data.objects.remove(o, do_unlink=True)
+            T = mathutils.Matrix.Translation(V(to_model(pos))) @ mathutils.Matrix.Rotation(rot, 4, "Z") @ mathutils.Matrix.Scale(sc, 4)
+            for me, mw in src[asset]:
+                ob = bpy.data.objects.new(f"prop_{asset}", me); ob.matrix_world = T @ mw; s.coll.objects.link(ob)
+        print("PROPS", len(blk_equip.PROPS), {k: len(v) for k, v in src.items()}, flush=True)
 
     def context(s, own_box):
         """Preview-only: PLATEAU masses beyond own_box, plus delivered blocks A/B and the qs_h1 frontage when available."""

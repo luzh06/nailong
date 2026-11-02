@@ -1,0 +1,18 @@
+{
+ "block": "X",
+ "tris": 77424,
+ "tris_by_material": {
+  "ctx_plaster": 6538,
+  "kawara": 2564,
+  "ctx_tile": 2306,
+  "concrete": 6824,
+  "steel": 7420,
+  "ctx_siding": 3862,
+  "ctx_concrete": 2104,
+  "granite": 40824,
+  "plank": 4980,
+  "gravel": 2
+ },
+ "anchors": [],
+ "buildings": {}
+}

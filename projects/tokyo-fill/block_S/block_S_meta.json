@@ -1,0 +1,29 @@
+{
+ "block": "S",
+ "tris": 784644,
+ "tris_by_material": {
+  "shu": 118204,
+  "granite": 11088,
+  "bronze": 7896,
+  "paint": 171792,
+  "roofbase": 11520,
+  "kawara_temple": 367208,
+  "soffit": 5944,
+  "gold": 15156,
+  "tplaster": 21712,
+  "dark": 464,
+  "steel": 7248,
+  "chochin_km": 3840,
+  "lacq": 384,
+  "relief": 128,
+  "plank": 640,
+  "chochin_kb": 3840,
+  "asphalt": 16,
+  "stonepave": 33900,
+  "decal": 3664
+ },
+ "anchors": [],
+ "note": "Fictional composite: Senso-ji landmarks placed on Yanaka temple-cemetery land. Not real geography.",
+ "precinct_z": 0.9795555555555557,
+ "buildings": {}
+}

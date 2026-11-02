@@ -20,7 +20,7 @@ c3 = mk("C03_pencil_building", rect(-46.9, 13.0, -42.3, 17.9), 13.5, 4, clad=["f
 # ---- north of the lane ----
 c4 = mk("C04_lane_house", rect(-52.2, 28.95, -41.4, 33.5), 6.1, 2, clad=["siding"], tc=(.84, .82, .76), roof="gable", pitch=.4, over=.4, gover=.25, rax=0, front=(0, -1),
         roofmat="slate", slatetc=(.48, .46, .48), metalfascia=True, fasciacol=(.3, .3, .3), framecol=(.36, .34, .32))
-c5 = mk("C05_corner_kawara", rect(-41.2, 28.9, -36.6, 35.8), 7.0, 2, clad=["mortar"], tc=(.88, .8, .66), roof="hip", pitch=.46, over=.5, front=(0, -1), moss=True,
+c5 = mk("C05_corner_kawara", rect(-41.2, 28.9, -36.6, 35.8), 7.0, 2, clad=["rough3"], tc=(.98, .9, .76), roof="hip", pitch=.46, over=.5, front=(0, -1), moss=True,
         fasciacol=(.3, .24, .18), soffitcol=(.5, .4, .3), framecol=(.45, .4, .34))
 c6 = mk("C06_long_tin_house", rect(-52.4, 33.8, -41.6, 40.0), 7.0, 2, clad=["tin", "siding2"], tcs={"tin": (.7, .76, .8), "siding2": (.62, .58, .52)}, roof="gable", pitch=.36,
         over=.35, gover=.2, rax=0, roofmat="galva", roofcol=(.36, .38, .42), front=(-1, 0), rust=True, framecol=(.5, .48, .44))
@@ -28,7 +28,7 @@ c6b = mk("C06b_back_house", rect(-41.1, 36.1, -37.6, 40.1), 6.5, 2, clad=["plast
          fasciacol=(.3, .26, .2), framecol=(.42, .4, .36))
 c7 = mk("C07_wood_row", rect(-53.0, 40.3, -40.4, 44.6), 7.5, 2, clad=["cedar", "plank"], tcs={"cedar": (.92, .8, .64), "plank": (.62, .54, .44)}, roof="gable", pitch=.44, over=.5,
         rax=0, front=(-1, 0), moss=True, palette=((.075, .08, .09), (.06, .062, .07), (.1, .1, .11)), fasciacol=(.26, .2, .16), framecol=(.34, .26, .2))
-c8 = mk("C08_three_storey_mortar", rect(-54.4, 44.9, -41.2, 49.0), 9.3, 3, clad=["mortar", "mortar", "siding2"], tcs={"mortar": (.78, .8, .76), "siding2": (.5, .52, .54)},
+c8 = mk("C08_three_storey_mortar", rect(-54.4, 44.9, -41.2, 49.0), 9.3, 3, clad=["plaster5", "plaster5", "siding2"], tcs={"plaster5": (.86, .88, .84), "siding2": (.5, .52, .54)},
         roof="mono", pitch=.1, over=.3, gover=.12, rax=0, roofmat="galva", roofcol=(.38, .4, .42), front=(0, 1), metalfascia=True, fasciacol=(.28, .28, .28), framecol=(.32, .32, .32))
 
 # ---- openings ----
@@ -82,7 +82,8 @@ K.gravel = [[(-46.8, 18.0), (-42.1, 18.0), (-42.1, 25.4), (-46.8, 25.4)]]       
 K.pave = [[(-41.9, 22.4), (-32.6, 22.4), (-32.6, 25.4), (-41.9, 25.4)]]               # concrete apron behind the RC block
 gm = K.ground(-50.0, -32.5, 12.9, 49.5)
 K.patch(-44, 27.1, 5.0, 1.2, .01); K.patch(-37, 27.0, 2.2, 1.0, .02)
-K.scatter_stains(30, -50, -33, 13, 49)
+K.scatter_stains(60, -50, -33, 13, 49)
+K.manhole(-45.5, 27.2, .4); K.manhole(-37.0, 27.0, 1.3)
 ribbon_lids(gm, [(-50.0, 25.85), (-33.8, 25.55)], G, K.R, width=.3, grate_every=6, tc=(.5, .5, .48))
 ribbon_lids(gm, [(-50.0, 28.75), (-33.8, 28.4)], G, K.R, width=.3, grate_every=6, tc=(.5, .5, .48))
 wm = M("C_walls")

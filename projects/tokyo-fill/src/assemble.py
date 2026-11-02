@@ -14,7 +14,9 @@ a = ap.parse_args(sys.argv[sys.argv.index("--") + 1:])
 ROOT = r"D:\project\cijian\work"; OUT = ROOT + r"\output\assembly"; os.makedirs(OUT, exist_ok=True)
 t0 = time.time(); sc = bpy.context.scene
 GLBS = {"A": ROOT + r"\ref\block_A.glb", "B": ROOT + r"\ref\block_B.glb", "C": ROOT + r"\export\blocks\block_C\block_C.glb",
-        "D": ROOT + r"\export\blocks\block_D\block_D.glb", "E": ROOT + r"\export\blocks\block_E\block_E.glb"}
+        "D": ROOT + r"\export\blocks\block_D\block_D.glb", "E": ROOT + r"\export\blocks\block_E\block_E.glb",
+        "S": ROOT + r"\export\blocks\block_S\block_S.glb", "X": ROOT + r"\export\blocks\block_X\block_X.glb"}
+GLBS = {k: p for k, p in GLBS.items() if os.path.exists(p)}
 import math
 import numpy as np
 from mathutils import Vector
@@ -69,6 +71,8 @@ if not a.before:
         c = sum((o.matrix_world @ V(b) for b in o.bound_box), V()) / 8
         if h1_removed(o.name, (c.y - ALIGN_E, ALIGN_N - c.x)):
             removed.append(o.name); bpy.data.objects.remove(o, do_unlink=True)
+    if "X" in GLBS:          # the PLATEAU context ring replaces the window-grid skyline cards
+        for o in [o for o in bpy.data.objects if o.name.startswith("far_")]: removed.append(o.name); bpy.data.objects.remove(o, do_unlink=True)
     g = bpy.data.objects.get("ground_far")
     if g: g.location.z -= .4          # new terrain west of the street dips to -0.46; keep the far plane under it
     for k, p in GLBS.items():
@@ -85,7 +89,13 @@ if not a.before:
 CAMS = {"stairs_west": None,                                                                                      # qs_h1's own hero camera
         "street_east": ((-121.0, 4.0, 1.65), (-62, 2.0, 3.2), 26), "junction": ((-58.2, -.3, 1.65), (-56.4, 20, 3.4), 24),
         "temple": ((-65.5, -20.4, 1.65), (-79, -15.6, 3.2), 26), "parking": ((-35.5, -31.5, 1.65), (-55, -16, 6.0), 24),
-        "clane": ((-52.0, 27.2, 1.65), (-34, 26.8, 3.2), 26), "aerial": ((-12, -78, 52), (-74, -4, 0), 30)}
+        "clane": ((-52.0, 27.2, 1.65), (-34, 26.8, 3.2), 26), "aerial": ((-12, -78, 52), (-74, -4, 0), 30),
+        # quality-round close-ups
+        "q_wall": ((-118.8, 4.6, 1.6), (-121.5, 1.0, 2.6), 30), "q_ground": ((-57.4, -1.2, 1.5), (-57.9, -6.5, 0), 28),
+        "q_ac": ((-38.5, 24.4, 1.6), (-36.0, 22.3, 1.2), 30), "q_mokuchin": ((-101.0, -18.4, 1.65), (-93.0, -15.4, 2.6), 26),
+        "q_eave": ((-50.5, -67.0, 1.65), (-51.0, -69.8, 9.0), 20), "q_lantern": ((-39.4, -39.6, 1.65), (-42.0, -44.2, 4.4), 26),
+        "q_pagoda": ((-34.0, -45.2, 1.65), (-26.0, -54, 26), 18), "q_sando": ((-42.6, -48.4, 1.65), (-42.0, -73, 9.0), 24),
+        "q_km": ((-40.5, -27.5, 1.65), (-41.0, -46, 8.5), 24), "q_poles": ((-97.0, 3.2, 1.65), (-118, .8, 6.5), 26), "q_from_street": ((-58.2, -.3, 1.65), (-40, -55, 18), 26)}
 c = sc.render.engine = "CYCLES"
 sc.cycles.samples = a.spp; sc.cycles.use_denoising = True
 sc.render.resolution_x = a.res; sc.render.resolution_y = int(a.res * 9 / 16); sc.render.resolution_percentage = 100
