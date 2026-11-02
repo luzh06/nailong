@@ -9,6 +9,7 @@ from mathutils import Vector
 from mathutils.geometry import tessellate_polygon
 from shapely.ops import unary_union
 
+from landmarks import CROWNS, LANDMARKS, REPLACE_MIN_HEIGHT, STYLE_SLOTS, build_landmark, tower_crown
 from meshkit import add_face, add_prism, new_object, oriented_rings, rings_to_polygon
 
 SHORE_MIN = 1.5         # land never drops below this: seawalls stand above harbour water (z = 0)
@@ -20,7 +21,6 @@ WALK_LIFT = 0.08        # walk-zone surface sits just above the ground mesh
 # Façade styles understood by the web shader (stored in the building colour attribute)
 STYLE_GLASS_TOWER, STYLE_OFFICE, STYLE_SANDSTONE, STYLE_BRICK = 0, 1, 2, 3
 STYLE_RENDERED, STYLE_HOUSE, STYLE_UTILITY, STYLE_SHED = 4, 5, 6, 7
-STYLE_COUNT = 8
 UTILITY_KINDS = {"garage", "garages", "shed", "carport", "service", "kiosk", "toilets", "roof"}
 HOUSE_KINDS = {"house", "detached", "semidetached_house", "bungalow", "terrace"}
 SHED_KINDS = {"industrial", "warehouse", "hangar", "boathouse", "transportation", "train_station"}
@@ -177,29 +177,70 @@ def building_style(b, rng):
     return STYLE_SANDSTONE if roll < 0.3 else STYLE_BRICK if roll < 0.6 else STYLE_RENDERED
 
 
+def in_site(poly, height, sites):
+    """True when an OSM part belongs to a landmark site that is rebuilt by landmarks.py."""
+    c = poly.centroid
+    return height > REPLACE_MIN_HEIGHT and any(
+        math.hypot(c.x - x, c.y - y) < r for (x, y), r, _ in sites)
+
+
+def nearest_tall(buildings, site, radius=30.0):
+    """Tallest OSM building whose centroid lies within `radius` of `site`."""
+    best = None
+    for b in buildings:
+        poly = rings_to_polygon(b)
+        if poly.is_empty or poly.geom_type != "Polygon":
+            continue
+        if poly.centroid.distance(shapely.Point(site)) < radius and (best is None or b["h"] > best[0]["h"]):
+            best = (b, poly)
+    return best
+
+
 def build_buildings(scene, hero_footprint, terrain, col, mats):
     """One mesh, one material: the façade shader reads the style and seed from the colour attribute.
 
-    Colour attribute: R = per-building random seed, G = style / STYLE_COUNT,
-    B = height / HEIGHT_NORMALISER, A = 1.
+    Colour attribute: R = per-building random seed, G = (style + 0.5) / STYLE_SLOTS,
+    B = height / HEIGHT_NORMALISER, A = 1. Landmark towers (landmarks.py) replace their OSM parts.
     """
     rng = random.Random(1932)
     bm = bmesh.new()
-    counts = [0] * STYLE_COUNT
+    counts = [0] * STYLE_SLOTS
+    sites = list(LANDMARKS.values())
+
+    def ground_under(poly):
+        pts = np.array(poly.exterior.coords)
+        return float(land_height(terrain, pts[:, 0], pts[:, 1]).min())
+
     for b in scene["buildings"]:
         poly = rings_to_polygon(b)
         if poly.is_empty or poly.geom_type != "Polygon":
             continue
         if hero_footprint.contains(poly.representative_point()):
             continue  # unnamed OSM parts of the Opera House are covered by the hero model
+        if in_site(poly, b["h"], sites):
+            continue  # rebuilt below with its real massing
         style = building_style(b, rng)
         counts[style] += 1
-        color = (rng.random(), (style + 0.5) / STYLE_COUNT, min(b["h"] / HEIGHT_NORMALISER, 1.0), 1.0)
+        color = (rng.random(), (style + 0.5) / STYLE_SLOTS, min(b["h"] / HEIGHT_NORMALISER, 1.0), 1.0)
         # OSM heights are measured from the ground: stand on the lowest footprint corner and
         # sink the base a little so the uphill side does not float
-        pts = np.array(poly.exterior.coords)
-        ground = float(land_height(terrain, pts[:, 0], pts[:, 1]).min())
+        ground = ground_under(poly)
         bottom = ground + b["base"] - (1.0 if b["base"] == 0 else 0.0)
         add_prism(bm, oriented_rings(poly), bottom, ground + b["h"], 0, color=color)
-    print("buildings by style (glass, office, sandstone, brick, rendered, house, utility, shed):", counts)
+
+    for name, ((x, y), _, kind) in LANDMARKS.items():
+        ground = float(land_height(terrain, [x], [y])[0])
+        build_landmark(bm, kind, x, y, ground - 1.0)
+        print(f"landmark {name} at ({x:.0f}, {y:.0f}), ground {ground:.1f} m")
+    for name, (site, crown_height, mast) in CROWNS.items():
+        found = nearest_tall(scene["buildings"], site)
+        if not found:
+            print(f"crown {name}: no OSM tower found")
+            continue
+        b, poly = found
+        top = ground_under(poly) + b["h"]
+        ring = oriented_rings(poly)[0]
+        tower_crown(bm, ring, top, crown_height, mast, poly.centroid.x, poly.centroid.y)
+        print(f"crown {name}: on {b['h']:.0f} m tower, top {top:.0f} m")
+    print("buildings by style:", counts)
     return new_object("Buildings", bm, [mats["facade"]], col)

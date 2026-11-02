@@ -27,6 +27,7 @@ from shapely.ops import nearest_points, unary_union  # noqa: E402
 
 from bridge import (BRIDGE_ARCH_TOP, BRIDGE_PANELS, BRIDGE_PYLON_BASE, BRIDGE_PYLON_HEIGHT,  # noqa: E402
                     BRIDGE_SPAN, BRIDGE_TRUSS_OFFSET, BridgeLayout, build_bridge)
+from foreshore import build_railings, build_wharves  # noqa: E402
 from ground import WALK_LIFT, build_buildings, build_ground, build_water_mask, land_height  # noqa: E402
 from meshkit import material, new_collection, rings_to_polygon  # noqa: E402
 from opera import build_opera_house, opera_footprint  # noqa: E402
@@ -181,6 +182,9 @@ def main():
         "glass": material("opera_glass", (0.10, 0.085, 0.07), 0.3, 0.3),
         "podium": material("opera_podium", (0.55, 0.38, 0.30), 0.85),
         "water_mask": material("water_mask", (0.0, 0.2, 0.4), 1.0),
+        "wharf_deck": material("wharf_timber", (0.45, 0.4, 0.34), 0.85),
+        "wharf_pile": material("wharf_pile", (0.25, 0.22, 0.2), 0.9),
+        "railing": material("railing_metal", (0.6, 0.62, 0.62), 0.45, 0.8),
     }
     terrain = Terrain()
     zone = walk_zone_polygon(scene)
@@ -191,6 +195,10 @@ def main():
     build_opera_house(opera, new_collection("L1_OperaHouse"), mats)
     build_buildings(scene, opera, terrain, new_collection("L2_Buildings"), mats)
     build_water_mask(scene, new_collection("Z_WaterMask"), mats)
+    foreshore = new_collection("L0_Foreshore")
+    build_wharves(scene, foreshore, mats)
+    build_railings(zone, scene, lambda x, y: float(land_height(terrain, [x], [y])[0]) + WALK_LIFT,
+                   foreshore, mats)
     write_meta(scene, zone, terrain, {"bridgeLamps": bridge_lights(layout)})
 
     (ROOT / "blend").mkdir(exist_ok=True)

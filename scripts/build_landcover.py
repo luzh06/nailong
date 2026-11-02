@@ -171,6 +171,25 @@ def collect_trees(nodes, groups, land, buildings, terrain):
     return out
 
 
+SHORE_STEPS = (0.0, 0.5, 1.0, 1.5, 2.0, 3.0, 4.0, 6.0, 8.0, 12.0, 16.0, 24.0, 32.0, 48.0, 64.0)
+SHORE_MAX = 64.0
+
+
+def shore_distance(raster, land):
+    """Distance from each water pixel to the nearest land, in metres, as 8-bit (255 = 64 m+).
+
+    Built by rasterising the land grown by each step in SHORE_STEPS (fine near the shore, where
+    the foam line and shallow tint need it) and keeping the smallest step that covers a pixel.
+    """
+    out = np.full((raster.height, raster.width), SHORE_MAX, dtype=np.float32)
+    # walk outward from the coarsest buffer so smaller ones overwrite larger ones
+    for step in reversed(SHORE_STEPS):
+        grown = land.buffer(step, quad_segs=4) if step > 0 else land
+        covered = np.asarray(raster.draw(grown.simplify(0.3)), dtype=np.float32) > 127
+        out[covered] = step
+    return Image.fromarray(np.round(out / SHORE_MAX * 255).astype(np.uint8), mode="L")
+
+
 def main():
     scene = json.loads((ROOT / "data" / "scene.json").read_text(encoding="utf8"))
     land = unary_union([Polygon(r["outer"], r["holes"]).buffer(0) for r in scene["land"]])
@@ -196,6 +215,9 @@ def main():
     mask_path = out_dir / "landcover.webp"
     # exact=True keeps RGB where alpha (rock) is 0; WebP discards it otherwise
     Image.merge("RGBA", channels).save(mask_path, lossless=True, method=6, exact=True)
+
+    shore_path = ROOT / "web" / "assets" / "water" / "shore_distance.png"
+    shore_distance(raster, land).save(shore_path, optimize=True)
 
     trees = collect_trees(nature_nodes, groups, land, buildings, Terrain())
     tree_path = ROOT / "web" / "data" / "trees.json"

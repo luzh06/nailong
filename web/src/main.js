@@ -50,7 +50,7 @@ document.body.appendChild(renderer.domElement);
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 0.5, 45000);
-const environment = new Environment(renderer, scene, camera, quality);
+const environment = new Environment(renderer, scene, camera, quality, landcover.extent);
 const post = createPost(renderer, scene, camera, quality);
 
 const manager = new THREE.LoadingManager();
@@ -108,7 +108,7 @@ player.setView('spawn');
 async function setTime(name) {
   const preset = await environment.apply(name);
   googleTiles?.setTint(preset.tileTint ?? 0xffffff);
-  materials.setNight(preset.night);
+  materials.setTimeOfDay({ night: preset.night, interior: preset.interior });
   lamps.setNight(preset.night);
   post.setBloom(preset.bloom);
 }

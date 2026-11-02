@@ -43,6 +43,7 @@ TEXTURES = {
     "concrete_wall_008": ("1k", 1024, "Building walls (masonry)"),
     "concrete_floor_worn_001": ("1k", 1024, "Flat roofs and paving"),
     "ceramic_roof_01": ("1k", 1024, "Terracotta house roofs"),
+    "wood_planks_grey": ("1k", 1024, "Wharf decks and piles"),
 }
 
 # id -> (lighting resolution, used for)

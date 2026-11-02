@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import { CSM } from 'three/addons/csm/CSM.js';
 import { RGBELoader } from 'three/addons/loaders/RGBELoader.js';
 import { Water } from 'three/addons/objects/Water.js';
+import { loadShoreTexture, upgradeWater } from './water.js';
 
 const SKY = './assets/sky';
 
@@ -10,23 +11,24 @@ const SKY = './assets/sky';
 // north. The sky is rotated so the two agree, and the shadow-casting light follows the same line.
 // fog: average colour of the sky backdrop 1-5 degrees above the horizon (x background intensity),
 // so distant water fades into the sky rather than into a band of a different colour.
+// water: light reaching the water body (x2 in the shader; 0x808080 = neutral daylight).
 export const TIME_PRESETS = {
   day: {
     label: '白天', sky: 'kloofendal_48d_partly_cloudy_puresky', hdrSun: { u: 0.5952, elevation: 47.99 },
     azimuth: 20, sunColor: 0xfff1de, sunIntensity: 3.2, envIntensity: 1.0, backgroundIntensity: 1.0,
-    exposure: 0.8, fog: 0x9ca0af, fogDensity: 0.00010, night: 0, bloom: 0.1, water: 0x0e3a49, tileTint: 0xffffff,
+    exposure: 0.8, fog: 0x9ca0af, fogDensity: 0.00010, night: 0, bloom: 0.1, water: 0x808080, tileTint: 0xffffff, interior: 0.22,
   },
   golden: {
     label: '黄金时段', sky: 'belfast_sunset_puresky', hdrSun: { u: 0.605, elevation: 1.93 },
     azimuth: 285, lightElevation: 7, sunColor: 0xffb46e, sunIntensity: 2.6, envIntensity: 0.9,
     backgroundIntensity: 1.0, exposure: 0.8, fog: 0x978b84, fogDensity: 0.00013, night: 0.12, bloom: 0.3,
-    water: 0x123446, tileTint: 0xf2d2b0,
+    water: 0x6e6256, tileTint: 0xf2d2b0, interior: 0.15,
   },
   blue: {
     label: '蓝调', sky: 'qwantani_dusk_2_puresky', hdrSun: { u: 0.5903, elevation: 12.13 },
     azimuth: 280, lightElevation: 8, sunColor: 0x9db4ff, sunIntensity: 0.15, envIntensity: 0.32,
     backgroundIntensity: 0.55, exposure: 1.1, fog: 0x524850, fogDensity: 0.00015, night: 1, bloom: 0.75,
-    water: 0x07202d, tileTint: 0x39405a,
+    water: 0x1a2030, tileTint: 0x39405a, interior: 0.05,
   },
 };
 
@@ -44,7 +46,7 @@ function skyRotation(u, azimuthDeg) {
 }
 
 export class Environment {
-  constructor(renderer, scene, camera, quality) {
+  constructor(renderer, scene, camera, quality, extent) {
     this.renderer = renderer;
     this.scene = scene;
     this.pmrem = new THREE.PMREMGenerator(renderer);
@@ -78,12 +80,13 @@ export class Environment {
       sunDirection: new THREE.Vector3(0, 1, 0),
       sunColor: 0xffffff,
       waterColor: 0x0e3a49,
-      // Harbour chop: stronger distortion and finer ripples than a calm mirror
-      distortionScale: 7.0,
+      // Moderate chop: reflections stay readable, broken up but not smeared
+      distortionScale: 3.5,
       fog: true,
     });
+    upgradeWater(this.water, { shoreTexture: loadShoreTexture(), extent });
     this.water.rotation.x = -Math.PI / 2;
-    this.water.material.uniforms.size.value = 3.0;
+    this.water.material.uniforms.size.value = 2.0;
     this.water.receiveShadow = false;
     scene.add(this.water);
   }
