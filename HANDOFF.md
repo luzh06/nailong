@@ -20,6 +20,8 @@
 4. 岸线 `scripts/foreshore.py`：OSM 码头 186 个平台 + 518 根桩，步行区临水边 457 根栏杆柱；海堤水线湿痕/藻类（materials.js 补丁）。
 5. 新材质：wharf_timber / wharf_pile / railing_metal；`fetch_assets.py` 新增 wood_planks_grey。
 
+**已知问题**：本轮最后一次截图脚本在等待页面加载完成时超时（90 s），页面很可能没加载完，原因可能是新代码的 JS 或着色器报错。先打开页面看浏览器控制台；最可能的位置是 `water.js` 的字符串替换（替换失败时会抛错）和 `facade.js` 的编译。
+
 **下一步先做**：跑 `tools/review_shots.js`（Playwright，见文件内机位）看是否有着色器编译错误（重点 facade.js 的 struct/室内映射、water.js 字符串替换），再逐张调参。
 
 ## 尚未开始
