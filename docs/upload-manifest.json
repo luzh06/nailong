@@ -1,10 +1,12 @@
 {
   "date": "2026-11-03",
+  "scope": "Working-file SHA256 snapshot; excludes this manifest itself. Git checkout may normalize text line endings.",
   "sourceCommit": "73470531d30c96f0107074cc8157e5c93d2c307f",
+  "reviewBaselineCommit": "502af7e01d232c1fd291890bf7add4686ed7f134",
   "sourceOriginalCommits": 5,
   "repository": "https://github.com/luzh06/nailong",
   "branch": "sydney-harbour",
-  "status": "Quality sample uploaded as WIP; runtime and visual acceptance pending. Review screenshots are from 68cedfa.",
+  "status": "Latest day loads at high and low quality. Facade appearance remains unresolved. Other phases and dynamic effects need visual acceptance. Old review screenshots are from 68cedfa; handoff evidence is from 502af7e.",
   "files": [
     {
       "path": ".gitignore",
@@ -292,6 +294,21 @@
       "sha256": "257688f1b165f903c3fbadedab7299b2cbef6a8d1b3b624d53bb8310a3e718d4"
     },
     {
+      "path": "docs/handoff/evidence/latest-day-high.png",
+      "bytes": 1557593,
+      "sha256": "4443c2d17b916456311e4d093075b34e337d3629e2d346f9e5dde8f7e0c90583"
+    },
+    {
+      "path": "docs/handoff/evidence/latest-day-low.png",
+      "bytes": 1500426,
+      "sha256": "51d36d7bd405da903112003f6c2acd8b1116b403c22f33b69c48c3acb7c7dc7c"
+    },
+    {
+      "path": "docs/handoff/SYDNEY_高质量场景交接_2026-11-03.md",
+      "bytes": 31348,
+      "sha256": "b2386d1766fe798f4711c7ed6ae7658c81b386d5b02ecfba92146b6b7b058456"
+    },
+    {
       "path": "docs/review/research/悉尼场景实查与升级方案_2026-11-02.md",
       "bytes": 6064,
       "sha256": "d19594a09af2bab30dca20f46799b71cbfd42d87ffd41de53471f01da0b0f3f1"
@@ -318,13 +335,13 @@
     },
     {
       "path": "HANDOFF.md",
-      "bytes": 3546,
-      "sha256": "61b8d5ec59f1b0fcc37c05d58cfd80c77489662cc877c198eebe43b85c147193"
+      "bytes": 3971,
+      "sha256": "71f2707a248311e6ec94e2f3e6f17fddaa8d6c6717262ab5961aa8b77459b7cd"
     },
     {
       "path": "README.md",
-      "bytes": 11909,
-      "sha256": "76f5d0734d5997ff0757366bfaf3c494b73a9e25082179e25f5764fa3846a460"
+      "bytes": 12275,
+      "sha256": "7506821aef61fd6ae3beb6e3cc430a2111b412a7ebce0a0ad5e2381f1e14ae64"
     },
     {
       "path": "scripts/bridge.py",
