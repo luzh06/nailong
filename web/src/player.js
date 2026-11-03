@@ -29,6 +29,7 @@ export class Player {
     this.yaw = 0;
     this.pitch = 0;
     this.mode = 'walk';
+    this.lookScale = 1; // 拍照取景时由宿主调小（长焦转得慢）
     this.keys = new Set();
     this.bindInput(domElement);
   }
@@ -39,8 +40,8 @@ export class Player {
     el.addEventListener('pointerup', () => { dragging = false; });
     el.addEventListener('pointermove', (e) => {
       if (!dragging) return;
-      this.yaw -= e.movementX * LOOK_SENSITIVITY;
-      this.pitch = THREE.MathUtils.clamp(this.pitch - e.movementY * LOOK_SENSITIVITY, -PITCH_LIMIT, PITCH_LIMIT);
+      this.yaw -= e.movementX * LOOK_SENSITIVITY * this.lookScale;
+      this.pitch = THREE.MathUtils.clamp(this.pitch - e.movementY * LOOK_SENSITIVITY * this.lookScale, -PITCH_LIMIT, PITCH_LIMIT);
     });
     window.addEventListener('keydown', (e) => this.keys.add(e.code));
     window.addEventListener('keyup', (e) => this.keys.delete(e.code));

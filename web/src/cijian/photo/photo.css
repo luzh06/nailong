@@ -1,0 +1,218 @@
+/* 拍照界面。配色取自海报：纸 #eee8dc、墨 #1d1a17、灰 #787066、朱红 #b23428 */
+:root {
+  --paper: #eee8dc;
+  --ink: #1d1a17;
+  --grey: #787066;
+  --seal: #b23428;
+  --serif: "Source Han Serif SC", "Noto Serif SC", "Songti SC", "STSong", serif;
+}
+
+.photo-hud-hidden { visibility: hidden !important; }
+
+.photo-ui { position: fixed; inset: 0; pointer-events: none; display: none; z-index: 20; font-family: var(--serif); }
+.photo-ui.on { display: block; }
+
+/* 取景框：框外压暗 */
+.photo-frame { position: absolute; box-shadow: 0 0 0 200vmax rgba(8, 7, 6, 0.55); }
+.photo-thirds {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(to right, transparent calc(33.333% - 0.5px), rgba(255,255,255,.28) calc(33.333% - 0.5px), rgba(255,255,255,.28) calc(33.333% + 0.5px), transparent calc(33.333% + 0.5px),
+      transparent calc(66.666% - 0.5px), rgba(255,255,255,.28) calc(66.666% - 0.5px), rgba(255,255,255,.28) calc(66.666% + 0.5px), transparent calc(66.666% + 0.5px)),
+    linear-gradient(to bottom, transparent calc(33.333% - 0.5px), rgba(255,255,255,.28) calc(33.333% - 0.5px), rgba(255,255,255,.28) calc(33.333% + 0.5px), transparent calc(33.333% + 0.5px),
+      transparent calc(66.666% - 0.5px), rgba(255,255,255,.28) calc(66.666% - 0.5px), rgba(255,255,255,.28) calc(66.666% + 0.5px), transparent calc(66.666% + 0.5px));
+}
+.photo-level {
+  position: absolute; left: 50%; top: 50%; width: 18%; height: 1px;
+  background: rgba(255, 255, 255, 0.6); transform: translate(-50%, -50%);
+}
+.photo-level::before, .photo-level::after { content: ""; position: absolute; top: -3px; width: 1px; height: 7px; background: rgba(255,255,255,.6); }
+.photo-level::before { left: 0; }
+.photo-level::after { right: 0; }
+
+/* 胶片旁轴：亮框四角 */
+.photo-corners i { position: absolute; width: 28px; height: 28px; border: 0 solid rgba(255, 244, 214, 0.9); }
+.photo-corners i:nth-child(1) { left: 6px; top: 6px; border-left-width: 2px; border-top-width: 2px; }
+.photo-corners i:nth-child(2) { right: 6px; top: 6px; border-right-width: 2px; border-top-width: 2px; }
+.photo-corners i:nth-child(3) { left: 6px; bottom: 6px; border-left-width: 2px; border-bottom-width: 2px; }
+.photo-corners i:nth-child(4) { right: 6px; bottom: 6px; border-right-width: 2px; border-bottom-width: 2px; }
+/* 即时成像：简单的方形取景框 */
+.photo-ui[data-finder="square"] .photo-frame { outline: 2px solid rgba(255, 255, 255, 0.75); outline-offset: -2px; border-radius: 4px; }
+.photo-ui[data-finder="square"] .photo-corners { display: none; }
+
+.photo-info, .photo-hint {
+  position: absolute; left: 50%; transform: translateX(-50%);
+  color: rgba(255, 250, 240, 0.9); letter-spacing: 0.12em; text-shadow: 0 1px 3px rgba(0,0,0,.6); white-space: nowrap;
+}
+.photo-info { top: 3.2vh; font-size: 15px; }
+.photo-hint { bottom: 3vh; font-size: 13px; opacity: 0.75; }
+
+/* 快门：圆形光圈合上再打开 */
+.photo-shutter {
+  position: absolute; left: 50%; top: 50%; width: 0; height: 0; border-radius: 50%;
+  box-shadow: 0 0 0 0 #000; opacity: 0;
+}
+.photo-shutter.fire { animation: shutter 0.32s cubic-bezier(.5,0,.5,1); }
+@keyframes shutter {
+  0%   { opacity: 1; width: 160vmax; height: 160vmax; margin: -80vmax; box-shadow: 0 0 0 100vmax #000; }
+  40%  { opacity: 1; width: 0; height: 0; margin: 0; box-shadow: 0 0 0 100vmax #000; }
+  55%  { opacity: 1; width: 0; height: 0; margin: 0; box-shadow: 0 0 0 100vmax #000; }
+  100% { opacity: 1; width: 160vmax; height: 160vmax; margin: -80vmax; box-shadow: 0 0 0 100vmax #000; }
+}
+
+/* 拍完后角落里的显影小照片 */
+.develop-toast {
+  position: fixed; right: 3vw; bottom: 4vh; width: min(22vw, 280px); z-index: 25; pointer-events: none;
+  transform: translateY(30px) rotate(3deg); opacity: 0; transition: opacity .4s, transform .5s;
+}
+.develop-toast.show { opacity: 1; transform: translateY(0) rotate(-2deg); }
+.develop-toast canvas { width: 100%; height: auto; display: block; box-shadow: 0 10px 26px rgba(0,0,0,.35); }
+.develop-instant { animation: develop-instant 4.5s ease-out both; }
+@keyframes develop-instant {
+  0%   { filter: brightness(0.35) sepia(0.6) contrast(0.4) blur(1.5px); }
+  60%  { filter: brightness(0.9) sepia(0.25) contrast(0.85) blur(0.3px); }
+  100% { filter: none; }
+}
+.develop-ink { animation: develop-ink 2.6s ease-out both; }
+@keyframes develop-ink {
+  0%   { filter: grayscale(1) brightness(1.8) contrast(0.3); opacity: .3; }
+  50%  { filter: grayscale(.6) brightness(1.25) contrast(.7); opacity: .85; }
+  100% { filter: none; opacity: 1; }
+}
+
+/* 相册：像摊开的书页 */
+.album { position: fixed; inset: 0; z-index: 30; display: none; background: rgba(20, 16, 12, 0.62); font-family: var(--serif); color: var(--ink); }
+.album.on { display: flex; align-items: center; justify-content: center; }
+.album-sheet {
+  width: min(1100px, 92vw); max-height: 88vh; display: flex; flex-direction: column;
+  background: var(--paper); border-radius: 6px; box-shadow: 0 20px 60px rgba(0,0,0,.4);
+}
+.album.show-card .album-sheet { display: none; }
+.album header, .album footer { display: flex; align-items: center; gap: 16px; padding: 18px 26px; }
+.album header { border-bottom: 1px solid rgba(120,112,102,.35); }
+.album footer { border-top: 1px solid rgba(120,112,102,.35); justify-content: flex-end; }
+.album h2 { margin: 0; font-size: 22px; letter-spacing: .3em; font-weight: 700; }
+.album-note, .album-sel { color: var(--grey); font-size: 14px; flex: 1; }
+.album button {
+  font: inherit; font-size: 14px; letter-spacing: .1em; padding: 6px 14px; cursor: pointer;
+  background: transparent; color: var(--ink); border: 1px solid var(--ink); border-radius: 3px;
+}
+.album button:disabled { opacity: .35; cursor: default; }
+.album button[data-act="card"], .album button[data-act="card-download"] { background: var(--seal); border-color: var(--seal); color: #fff; }
+.album-grid { overflow: auto; padding: 22px 26px; display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 22px; }
+.album-empty { color: var(--grey); grid-column: 1 / -1; text-align: center; padding: 40px 0; }
+.album-item { margin: 0; background: #f6f3ec; padding: 8px 8px 6px; box-shadow: 0 4px 12px rgba(40,30,20,.18); position: relative; }
+.album-item.style-instant { padding-bottom: 20px; }
+.album-item img { width: 100%; display: block; aspect-ratio: auto; }
+.album-item figcaption { font-size: 12px; color: var(--grey); margin-top: 6px; }
+.album-item.sel { outline: 3px solid var(--seal); outline-offset: 2px; }
+.album-item-actions { display: flex; gap: 6px; margin-top: 6px; }
+.album-item-actions button { padding: 2px 8px; font-size: 12px; }
+
+.card-view { display: none; flex-direction: column; align-items: center; gap: 16px; }
+.album.show-card .card-view { display: flex; }
+.card-view img { max-height: 80vh; max-width: 90vw; box-shadow: 0 20px 60px rgba(0,0,0,.45); }
+.card-actions { display: flex; gap: 12px; }
+.card-actions button { background: var(--paper); }
+
+/* ---- 取景信息：相机名和焦段在上，状态标签（曝光、竖拍、低角度）跟在后面 ---- */
+.photo-info { display: flex; gap: 18px; align-items: baseline; }
+.photo-tags { color: #f1c27d; font-size: 13px; letter-spacing: .14em; }
+
+/* 打卡提示：好构图时取景框四角和边线变成朱红偏金，框内下方出现地点名 */
+.photo-frame { transition: outline-color .25s; }
+.photo-corners i { transition: border-color .25s, width .25s, height .25s; }
+/* 打卡构图对了：亮框四角变朱红、加粗加长；方框直接整圈变朱红（不再叠一层四角，免得双线） */
+.photo-ui.spot-ok .photo-corners i { border-color: #d9553c; width: 44px; height: 44px; border-width: 0; }
+.photo-ui.spot-ok .photo-corners i:nth-child(1) { border-left-width: 3px; border-top-width: 3px; }
+.photo-ui.spot-ok .photo-corners i:nth-child(2) { border-right-width: 3px; border-top-width: 3px; }
+.photo-ui.spot-ok .photo-corners i:nth-child(3) { border-left-width: 3px; border-bottom-width: 3px; }
+.photo-ui.spot-ok .photo-corners i:nth-child(4) { border-right-width: 3px; border-bottom-width: 3px; }
+.photo-ui.spot-ok[data-finder="square"] .photo-frame { outline: 3px solid #d9553c; outline-offset: -3px; }
+.photo-spot {
+  position: absolute; left: 50%; bottom: 7%; transform: translateX(-50%);
+  opacity: 0; transition: opacity .3s; pointer-events: none;
+}
+.photo-ui.spot-ok .photo-spot { opacity: 1; }
+.photo-spot b {
+  /* 地点名像夹在取景框里的一张纸签：纸色底、墨色字、左边一道朱红 */
+  display: inline-block; font-weight: 600; font-size: 15px; letter-spacing: .32em; padding: 4px 8px 4px 14px;
+  color: var(--ink); background: rgba(238, 232, 220, .93); border-left: 4px solid var(--seal);
+  box-shadow: 0 2px 10px rgba(0,0,0,.28);
+}
+.photo-spot b:empty { display: none; }
+
+/* 曝光刻度：只在调了曝光补偿时出现，在框下沿 */
+.photo-ev {
+  position: absolute; left: 50%; bottom: -26px; width: 180px; height: 12px; transform: translateX(-50%);
+  opacity: 0; transition: opacity .25s;
+}
+.photo-ui.ev-on .photo-ev { opacity: 1; }
+.photo-ev-scale {
+  position: absolute; inset: 5px 0 auto 0; height: 1px; background: rgba(255,255,255,.5);
+}
+.photo-ev-scale::before {
+  content: ""; position: absolute; left: 0; right: 0; top: -3px; height: 7px;
+  background: repeating-linear-gradient(to right, rgba(255,255,255,.6) 0 1px, transparent 1px calc(100% / 12));
+}
+.photo-ev-mark {
+  position: absolute; top: -1px; width: 0; height: 0; transform: translateX(-50%);
+  border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 7px solid #f1c27d;
+  transition: left .15s;
+}
+
+/* 打卡点的小字提示（逆光加曝光、蓝调再来之类），在地点名下面 */
+.photo-spot { text-align: center; }
+.photo-spot small {
+  display: block; margin-top: 6px; font-size: 12px; letter-spacing: .18em; color: rgba(255, 243, 224, .85);
+  text-shadow: 0 1px 3px rgba(0,0,0,.6);
+}
+.photo-spot small:empty { display: none; }
+/* 构图对了、时段不对：地点名出现但不变暖 */
+.photo-ui.spot-wait .photo-spot { opacity: .8; }
+.photo-ui.spot-wait .photo-spot b { border-left-color: var(--grey); color: var(--grey); background: rgba(238, 232, 220, .7); }
+
+/* ---- 入镜的人还没问过：框上方夹一张纸条（墨字、灰边，不用朱红，因为这不是“好构图”的信号）---- */
+.photo-ask {
+  position: absolute; left: 50%; top: 5%; transform: translateX(-50%) translateY(-6px);
+  opacity: 0; transition: opacity .3s, transform .3s; text-align: center; white-space: nowrap;
+}
+.photo-ui.ask-on .photo-ask { opacity: 1; transform: translateX(-50%); }
+.photo-ask b {
+  display: inline-block; font-weight: 600; font-size: 14px; letter-spacing: .26em; padding: 4px 10px 4px 12px;
+  color: var(--ink); background: rgba(238, 232, 220, .93); border-left: 4px solid var(--grey);
+  box-shadow: 0 2px 10px rgba(0,0,0,.28);
+}
+.photo-ask small {
+  display: block; margin-top: 5px; font-size: 12px; letter-spacing: .18em; color: rgba(255, 243, 224, .85);
+  text-shadow: 0 1px 3px rgba(0,0,0,.6);
+}
+.photo-ask small:empty { display: none; }
+
+/* ---- 定时自拍：框右上角一盏指示灯 + 倒数数字；最后 3 秒灯闪得快 ---- */
+.photo-timer {
+  position: absolute; right: 18px; top: 14px; display: none; align-items: center; gap: 10px;
+  color: var(--paper); text-shadow: 0 1px 4px rgba(0,0,0,.55);
+}
+.photo-ui.timer-on .photo-timer { display: flex; }
+.photo-timer i {
+  width: 11px; height: 11px; border-radius: 50%; background: #e2432c;
+  box-shadow: 0 0 0 2px rgba(29,26,23,.35), 0 0 10px 2px rgba(226, 67, 44, .75);
+  animation: timer-blink 1s steps(1, end) infinite;
+}
+.photo-ui.timer-fast .photo-timer i { animation-duration: .25s; }
+@keyframes timer-blink { 0% { opacity: 1; } 50% { opacity: .15; box-shadow: 0 0 0 2px rgba(29,26,23,.35); } }
+.photo-timer span { font-size: 40px; line-height: 1; font-weight: 600; font-variant-numeric: tabular-nums; min-width: 1.2em; text-align: right; }
+.photo-timer-hint {
+  position: absolute; left: 50%; bottom: 3vh; transform: translateX(-50%); display: none;
+  color: rgba(255, 250, 240, 0.9); letter-spacing: 0.16em; font-size: 13px; text-shadow: 0 1px 3px rgba(0,0,0,.6); white-space: nowrap;
+}
+.photo-ui.timer-on .photo-hint { display: none; }
+.photo-ui.timer-on .photo-timer-hint { display: block; }
+/* 定时中三分线和水平仪收起来，画面更干净，人好找站位 */
+.photo-ui.timer-on .photo-thirds, .photo-ui.timer-on .photo-level { opacity: .35; }
+/* 屏幕交还宿主镜头：不画取景框和压暗，只留倒数 */
+.photo-ui.timer-host .photo-frame { box-shadow: none; outline: none; }
+.photo-ui.timer-host .photo-thirds, .photo-ui.timer-host .photo-level, .photo-ui.timer-host .photo-corners,
+.photo-ui.timer-host .photo-spot, .photo-ui.timer-host .photo-ask, .photo-ui.timer-host .photo-info { display: none; }
+.photo-ui.timer-host .photo-timer { position: fixed; right: 3vw; top: 3vh; }

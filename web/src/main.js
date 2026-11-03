@@ -9,6 +9,9 @@ import { createGoogleTiles } from './tiles.js';
 import { createPost } from './post.js';
 import { TextureLibrary } from './textures.js';
 import { createTrees } from './vegetation.js';
+import { PhotoSystem } from './cijian/photo/index.js';
+import { SYDNEY, setupSydney, createSydneyPipeline } from './cijian/photo/presets/index.js';
+import { NoahDay1, loadNoahAnchors } from './noah.js';
 
 const params = new URLSearchParams(window.location.search);
 
@@ -65,6 +68,7 @@ const config = await loadConfig();
 // layers=own: everything from our own models (works offline and without a key).
 const layerMode = params.get('layers') ?? (config.googleMapsApiKey ? 'hybrid' : 'own');
 let googleTiles = null;
+let blockoutRoot = null;
 
 try {
   setStatus('载入场景模型…');
@@ -73,6 +77,7 @@ try {
   const missing = applyMaterials(gltf.scene, materials).filter((name) => name !== 'water_mask');
   if (missing.length) console.warn('No web material for:', missing);
   scene.add(gltf.scene);
+  blockoutRoot = gltf.scene;
   const waterMask = gltf.scene.getObjectByName('WaterMask');
   if (waterMask) waterMask.visible = false;
 
@@ -105,7 +110,10 @@ try {
 const player = new Player(meta, renderer.domElement);
 player.setView('spawn');
 
+let currentTime = 'golden';
 async function setTime(name) {
+  currentTime = name;
+  document.querySelectorAll('[data-time]').forEach((b) => b.classList.toggle('on', b.dataset.time === name));
   const preset = await environment.apply(name);
   googleTiles?.setTint(preset.tileTint ?? 0xffffff);
   materials.setTimeOfDay({ night: preset.night, interior: preset.interior });
@@ -128,7 +136,9 @@ bindButtons('view', (name) => player.setView(name));
 // Reference-matching camera for calibration, e.g. ?cam=-470,90,280&look=0,30,30&fov=24&time=day&hud=0
 // still=1 freezes the water so renders can be diffed pixel by pixel.
 const vec = (key) => params.get(key)?.split(',').map(Number);
-const startTime = TIME_PRESETS[params.get('time')] ? params.get('time') : 'golden';
+// quest=0: 只看风景，不跑 Noah 的任务线
+const questOn = params.get('quest') !== '0' && !params.has('cam');
+const startTime = TIME_PRESETS[params.get('time')] ? params.get('time') : (questOn ? 'day' : 'golden');
 document.querySelectorAll('[data-time]').forEach((b) => b.classList.toggle('on', b.dataset.time === startTime));
 await setTime(startTime);
 if (params.has('cam')) {
@@ -171,6 +181,39 @@ if (params.get('bench') === '1') {
     return (performance.now() - t0) / frames;
   };
 }
+// ---- 拍照（app-photo 分支的 cijian 拍照模块）和 Noah 第一天 ----
+// camera=instant|rangefinder：图书馆里选的相机，默认 Noah 推荐的胶片旁轴
+const pipeline = await createSydneyPipeline(renderer, scene, camera, { composer: post.composer });
+const photo = new PhotoSystem({
+  ...SYDNEY, renderer, scene, camera, pipeline,
+  styleId: ['instant', 'rangefinder'].includes(params.get('camera')) ? params.get('camera') : SYDNEY.styleId,
+});
+let quest = null;
+if (questOn) {
+  setStatus('布置前景…');
+  const { data: anchorData, usingProps } = await loadNoahAnchors(meta, player, scene);
+  if (!usingProps) console.info('[Noah] 还没有 5060 的前景道具，先用出生点附近的临时点位');
+  quest = new NoahDay1({ photo, player, scene, anchors: anchorData, setTime, getTime: () => currentTime });
+  setupSydney(photo, {
+    anchors: anchorData,
+    getPhase: () => currentTime,
+    actionDone: quest.actionDone,
+    getChoice: quest.getChoice,
+    // Maya 还没有 3D 模型：合影先不要求她入镜，问过“可以拍吗”就算
+    overrides: { sy_cafe: { needSubjects: [] } },
+  });
+} else {
+  setupSydney(photo, { anchors: { anchors: { ANCHOR_photo_opera: [0, 30, 0], ANCHOR_photo_bridge: [-401, 70, -513], ANCHOR_photo_bluehour: [-401, 70, -513] } }, getPhase: () => currentTime });
+}
+document.querySelectorAll('.hud, .hint, .stats, .credit').forEach((e) => { e.dataset.hud = ''; });
+// 远景地标按真实模型判定（点在楼里面会被楼自己挡住）；遮挡只算实心的场景，不算透明叶片的卡片树
+const landmarkObjects = { sy_opera: 'OperaHouse', sy_bridge: 'HarbourBridge', sy_bluehour: 'HarbourBridge' };
+for (const spot of photo.spots) {
+  const obj = landmarkObjects[spot.id] && blockoutRoot?.getObjectByName(landmarkObjects[spot.id]);
+  if (obj) spot.target = obj;
+}
+if (blockoutRoot) photo.occluders = [blockoutRoot];
+if (params.get('debug') === '1') window.__cijian = { photo, quest, player, setTime }; // 测试用
 status?.remove();
 
 window.addEventListener('resize', () => {
@@ -191,12 +234,15 @@ environment.csm.updateFrustums();
 renderer.setAnimationLoop(() => {
   const dt = Math.min(clock.getDelta(), 0.1);
   renderer.info.reset();
-  player.update(dt);
+  // 取景、对白、地图页打开时人物不走；取景时视角灵敏度跟着焦段变慢
+  player.lookScale = photo.active ? photo.lookScale : 1;
+  if (!photo.active && !quest?.blocking) player.update(dt);
   player.applyTo(camera);
+  quest?.update(clock.elapsedTime);
   camera.updateMatrixWorld();
   googleTiles?.update();
   environment.update(dt);
-  post.composer.render(dt);
+  if (!photo.render()) pipeline.render(scene, camera);
 
   // Measure fps from wall-clock time: dt is clamped, so it would overstate slow frame rates
   frames += 1;
