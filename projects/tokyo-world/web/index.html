@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>此间 · 三日归途</title>
+<link rel="icon" href="data:,">
+<style>
+*{box-sizing:border-box}html,body{margin:0;height:100%;overflow:hidden;background:#141513;color:#f2e9da;font:14px/1.5 "Microsoft YaHei",sans-serif}canvas{display:block;position:fixed;inset:0}button,select{font:inherit;color:inherit;background:#202520c9;border:1px solid #b7b8a34d;border-radius:4px;padding:8px 12px;cursor:pointer}button:hover,select:hover{background:#454d3c}button:focus-visible,select:focus-visible,a:focus-visible{outline:2px solid #e5ca90;outline-offset:3px}#top{position:fixed;top:22px;left:26px;right:26px;display:flex;justify-content:space-between;align-items:flex-start;gap:18px;pointer-events:none}#top>*{pointer-events:auto}#brand{font:26px Georgia,serif;letter-spacing:.15em;text-shadow:0 2px 8px #000}#brand small{display:block;font:11px/2 "Microsoft YaHei",sans-serif;letter-spacing:.1em;color:#d7d4c9}nav{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}#hint{position:fixed;left:22px;bottom:24px;padding:10px 14px;background:#151916b8;border-left:2px solid #d3bc8e;pointer-events:none;max-width:80vw;font-size:12px}#stats{position:fixed;right:25px;bottom:25px;font:12px/1.5 monospace;text-align:right;text-shadow:0 1px 3px #000}#load{position:fixed;inset:0;z-index:10;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:15px;background:#111510;transition:opacity .6s}#load b{font:36px Georgia,serif;letter-spacing:.3em}#bar{width:260px;height:2px;background:#3e4737}#bar i{display:block;height:2px;width:0;background:#e4c58f}#msg{max-width:80vw;font-size:12px;color:#c4cbbd}#credits{position:fixed;right:24px;bottom:70px;max-width:380px;background:#171e17ed;padding:20px;border:1px solid #707762;z-index:3;font-size:12px}#credits a{color:#e3c88c}#credits[hidden]{display:none}@media(max-width:720px){#top{left:12px;right:12px;top:12px}#brand{font-size:20px}button,select{padding:6px;font-size:12px}#hint{left:12px;bottom:12px}#stats{bottom:90px;right:12px}}
+canvas{width:100%;height:100%}
+body:has(.xc-root[data-xc-touch="true"][data-xc-mode="walk"]) #hint{display:none}
+@media(max-width:720px){#top{gap:10px}#top nav{max-width:270px}#top button,#top select{min-height:44px}#top select{max-width:160px}#credits{left:12px;right:12px;bottom:100px;max-height:60dvh;overflow:auto}}
+</style>
+<div id="load" role="status"><b>此间</b><div id="bar"><i></i></div><span id="msg">正在打开谷中街巷…</span></div>
+<header id="top"><div id="brand">此间<small>YANAKA · TOKYO</small></div><nav aria-label="场景控制">
+<select id="view" aria-label="选择机位"><option value="west">台阶望向街道</option><option value="street_east">西段商店街</option><option value="junction">街巷路口</option><option value="clane">北侧小巷</option><option value="temple_gate">雷门</option><option value="temple_court">宝蔵门与参道</option><option value="aerial">全景俯瞰</option></select>
+<button id="walk">进入行走</button><button id="shot">保存照片</button><button id="quality" aria-label="切换画质">画质：标准</button><button id="credit">来源</button>
+</nav></header>
+<div id="hint">拖动环视 · 滚轮调整视角 · 选择机位游览 · 进入行走后 WASD 移动，Esc 退出</div>
+<div id="stats" aria-live="off"></div>
+<aside id="credits" hidden><b>此间 · 谷中街区</b><p>核心区规划 80×80 米。台阶、西延街道与浅草寺位于核心区外；浅草寺为虚构拼接，不代表真实地理。</p><p>建筑数据：国土交通省 Project PLATEAU<br>地图：© OpenStreetMap contributors<br>高程与航拍参考：国土地理院<br>部分纹理与植物：Poly Haven（CC0）<br>店名与品牌为虚构。模型由项目团队共同制作。</p><a href="../licenses/tokyo-fill.csv" target="_blank">街区素材表</a> · <a href="../licenses/tokyo-props.md" target="_blank">道具来源</a></aside>
+<script type="importmap">{"imports":{"three":"./vendor/three.module.js","three/addons/":"./vendor/"}}</script>
+<script type="module" src="./world.js"></script>
+<script type="module">if(!new URLSearchParams(location.search).has('classic'))import('./game/main.mjs').catch(e=>{console.error(e);const m=document.getElementById('hint');if(m){m.hidden=false;m.textContent='游戏层载入失败：'+e.message;}});</script>
+</html>

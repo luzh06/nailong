@@ -1,0 +1,68 @@
+{
+  "projection": "orthographic ENU, north up",
+  "bounds": {
+    "eastMin": -137,
+    "eastMax": 22,
+    "northMin": -88,
+    "northMax": 71,
+    "width": 1536,
+    "height": 1536
+  },
+  "inputs": [
+    {
+      "layer": "core",
+      "file": "output\\tokyo-three\\web\\data\\bk.glb",
+      "sha256": "636ccaa9337eb0a9c168a58cec9f066bb7818e674fc93b4f34429b9db9944b0a",
+      "projectedTriangles": 70532
+    },
+    {
+      "layer": "A",
+      "file": "output\\tokyo-three\\web\\models\\block_A.gltf",
+      "sha256": "5dc573376420a249975e0c6264e6211aeb47e93da5fa8c80409992fc9d44aeac",
+      "projectedTriangles": 102802
+    },
+    {
+      "layer": "B",
+      "file": "output\\tokyo-three\\web\\models\\block_B.gltf",
+      "sha256": "f5192a77e088eb080d8dd396d862ebf285600e2cb11ef3aa07cdb61b259ca209",
+      "projectedTriangles": 67582
+    },
+    {
+      "layer": "C",
+      "file": "output\\tokyo-three\\web\\models\\block_C.gltf",
+      "sha256": "5419d222d547b0eab20c8c84c0cc1f10fab6adf584280a106e795ed9e2304bf1",
+      "projectedTriangles": 35658
+    },
+    {
+      "layer": "D",
+      "file": "output\\tokyo-three\\web\\models\\block_D.gltf",
+      "sha256": "946aac5dced44591c9edc04b53838a8b2c0fd203d71aa3a125187ee56fd29dd7",
+      "projectedTriangles": 26490
+    },
+    {
+      "layer": "E",
+      "file": "output\\tokyo-three\\web\\models\\block_E.gltf",
+      "sha256": "7a162d18d2d6ebc3b40ddb7b7c964223b4ea9a368cb996674a80ca5471313da8",
+      "projectedTriangles": 77419
+    },
+    {
+      "layer": "S",
+      "file": "output\\tokyo-three\\web\\models\\block_S.gltf",
+      "sha256": "49c22cbf9e3fdbeeadac48886055e30dd522372a2b8e510cfb2c0cdaf6faff93",
+      "projectedTriangles": 281602
+    },
+    {
+      "layer": "L",
+      "file": "output\\tokyo-three\\web\\models\\temple-access.glb",
+      "sha256": "f4bd8cd8ef5dfd3e0be015b777a4ce3e4b9614cd794c62f21d0b8f906c09f239",
+      "projectedTriangles": 72
+    },
+    {
+      "layer": "J",
+      "file": "output\\tokyo-three\\web\\models\\junction-details.glb",
+      "sha256": "661d76a45438dfcd0e872beb2dbcb6f73b8d515a42846b1b963ad7dae8fdbdad",
+      "projectedTriangles": 7915
+    }
+  ],
+  "note": "Actual delivered model geometry. Senso-ji is the authored fictional splice, not its real geographic location. Generated illustration is decorative only."
+}

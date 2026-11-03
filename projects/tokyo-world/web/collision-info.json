@@ -1,0 +1,32 @@
+{
+  "triangles": 451406,
+  "sources": {
+    "bk.glb": 18625,
+    "block_A.gltf": 107858,
+    "block_B.gltf": 75024,
+    "block_C.gltf": 55428,
+    "block_D.gltf": 17290,
+    "block_E.gltf": 146300,
+    "block_S.gltf": 28368,
+    "temple-access.glb": 136,
+    "junction-details.glb": 1947,
+    "pr_aircon.gltf": 120,
+    "pr_plants.gltf": 40,
+    "vm02.gltf": 10,
+    "sf08_front.gltf": 10,
+    "sf08_tent.gltf": 10,
+    "sf08_goods.gltf": 10,
+    "sf04_front.gltf": 10,
+    "sf04_goods.gltf": 10,
+    "sf06_front.gltf": 10,
+    "sf06_goods.gltf": 10,
+    "sf05_front.gltf": 10,
+    "sf05_tent.gltf": 10,
+    "sf05_goods.gltf": 10,
+    "bike01.gltf": 60,
+    "pr_gasmeter.gltf": 20,
+    "sf02_front.gltf": 40,
+    "sf02_tent.gltf": 10,
+    "sf02_goods.gltf": 30
+  }
+}

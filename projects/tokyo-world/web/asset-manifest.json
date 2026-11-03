@@ -1,0 +1,3630 @@
+{
+  "version": 1,
+  "urlBase": "web/",
+  "totalBytes": 487567914,
+  "totalTransferBytes": 274849992,
+  "groups": {
+    "core": 207602238,
+    "layer-A": 39402918,
+    "layer-B": 32632956,
+    "layer-C": 35602906,
+    "layer-D": 19345226,
+    "layer-E": 52876054,
+    "layer-J": 1205060,
+    "layer-L": 32412,
+    "layer-S": 53105473,
+    "layer-X": 13430949,
+    "map": 428470,
+    "props": 75725726,
+    "runtime": 1747164
+  },
+  "transferGroups": {
+    "core": 165476426,
+    "layer-A": 17213978,
+    "layer-B": 15623799,
+    "layer-C": 18878696,
+    "layer-D": 10905869,
+    "layer-E": 23740118,
+    "layer-J": 249808,
+    "layer-L": 7685,
+    "layer-S": 18850171,
+    "layer-X": 6402899,
+    "map": 428470,
+    "props": 42263139,
+    "runtime": 378572
+  },
+  "assets": [
+    {
+      "url": "../assets/hdri/qwantani_sunset_puresky_4k.hdr",
+      "bytes": 16890545,
+      "groups": [
+        "core"
+      ],
+      "transferBytes": 9906157,
+      "encoding": "gzip"
+    },
+    {
+      "url": "../assets/models/dandelion_01/textures/dandelion_01_arm_2k.jpg",
+      "bytes": 1499438,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../assets/models/dandelion_01/textures/dandelion_01_diff_2k.jpg",
+      "bytes": 1466191,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../assets/models/dandelion_01/textures/dandelion_01_nor_gl_2k.jpg",
+      "bytes": 1684671,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../assets/models/fern_02/textures/fern_02_arm_2k.jpg",
+      "bytes": 850856,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../assets/models/fern_02/textures/fern_02_diff_2k.jpg",
+      "bytes": 993703,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../assets/models/fern_02/textures/fern_02_nor_gl_2k.jpg",
+      "bytes": 1365615,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../assets/models/grass_bermuda_01/textures/grass_bermuda_01_arm_2k.jpg",
+      "bytes": 1656451,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../assets/models/grass_bermuda_01/textures/grass_bermuda_01_diff_2k.jpg",
+      "bytes": 494673,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../assets/models/grass_bermuda_01/textures/grass_bermuda_01_nor_gl_2k.jpg",
+      "bytes": 2556691,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../assets/models/nettle_plant/textures/nettle_plant_arm_2k.jpg",
+      "bytes": 1566589,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../assets/models/nettle_plant/textures/nettle_plant_diff_2k.jpg",
+      "bytes": 1197929,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../assets/models/nettle_plant/textures/nettle_plant_nor_gl_2k.jpg",
+      "bytes": 2356297,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../assets/models/shrub_01/textures/shrub_01_arm_2k.jpg",
+      "bytes": 1232008,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../assets/models/shrub_01/textures/shrub_01_diff_2k.jpg",
+      "bytes": 1651989,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../assets/models/shrub_01/textures/shrub_01_nor_gl_2k.jpg",
+      "bytes": 2628947,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/ac_albedo.jpg",
+      "bytes": 10511,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/ac_normal.jpg",
+      "bytes": 9642,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/ac_orm.jpg",
+      "bytes": 2682,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/ac_sunset.exr",
+      "bytes": 4216842,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/ac_sunset_vis.exr",
+      "bytes": 87342,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/ad_albedo.jpg",
+      "bytes": 46518,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/ad_normal.jpg",
+      "bytes": 1831,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/ad_orm.jpg",
+      "bytes": 2692,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/ad_sunset.exr",
+      "bytes": 12124,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/ad_sunset_vis.exr",
+      "bytes": 595,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/apron_albedo.jpg",
+      "bytes": 57435,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/apron_normal.jpg",
+      "bytes": 29849,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/apron_orm.jpg",
+      "bytes": 68502,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/apron_sunset.exr",
+      "bytes": 577942,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/apron_sunset_vis.exr",
+      "bytes": 242091,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/apt2_albedo.jpg",
+      "bytes": 160179,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/apt2_normal.jpg",
+      "bytes": 53749,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/apt2_orm.jpg",
+      "bytes": 42432,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/apt2_sunset.exr",
+      "bytes": 3542317,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/apt2_sunset_vis.exr",
+      "bytes": 17985,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/apt_albedo.jpg",
+      "bytes": 183773,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/apt_normal.jpg",
+      "bytes": 34947,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/apt_orm.jpg",
+      "bytes": 53118,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/apt_sunset.exr",
+      "bytes": 2968163,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/apt_sunset_vis.exr",
+      "bytes": 821320,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/awn_a_albedo.jpg",
+      "bytes": 24199,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/awn_a_normal.jpg",
+      "bytes": 4923,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/awn_a_orm.jpg",
+      "bytes": 6753,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/awn_a_sunset.exr",
+      "bytes": 116709,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/awn_a_sunset_vis.exr",
+      "bytes": 1386,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/awn_b_albedo.jpg",
+      "bytes": 19300,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/awn_b_normal.jpg",
+      "bytes": 4482,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/awn_b_orm.jpg",
+      "bytes": 5291,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/awn_b_sunset.exr",
+      "bytes": 325084,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/awn_b_sunset_vis.exr",
+      "bytes": 86554,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/awn_c_albedo.jpg",
+      "bytes": 26511,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/awn_c_normal.jpg",
+      "bytes": 3769,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/awn_c_orm.jpg",
+      "bytes": 5677,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/awn_c_sunset.exr",
+      "bytes": 101638,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/awn_c_sunset_vis.exr",
+      "bytes": 18276,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/block_wall_albedo.jpg",
+      "bytes": 62166,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/block_wall_normal.jpg",
+      "bytes": 43321,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/block_wall_orm.jpg",
+      "bytes": 38661,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/block_wall_sunset.exr",
+      "bytes": 975036,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/block_wall_sunset_vis.exr",
+      "bytes": 112731,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/brick_albedo.jpg",
+      "bytes": 293973,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/brick_normal.jpg",
+      "bytes": 118377,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/brick_orm.jpg",
+      "bytes": 186955,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/brick_sunset.exr",
+      "bytes": 4272417,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/brick_sunset_vis.exr",
+      "bytes": 368578,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/cable_albedo.jpg",
+      "bytes": 20291,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/cable_normal.jpg",
+      "bytes": 2842,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/cable_orm.jpg",
+      "bytes": 7854,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/cable_sunset.exr",
+      "bytes": 208462,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/cable_sunset_vis.exr",
+      "bytes": 14257,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/cover_albedo.jpg",
+      "bytes": 66313,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/cover_normal.jpg",
+      "bytes": 55900,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/cover_orm.jpg",
+      "bytes": 62461,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/cover_sunset.exr",
+      "bytes": 1424479,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/cover_sunset_vis.exr",
+      "bytes": 161416,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/glass_albedo.jpg",
+      "bytes": 7198,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/glass_normal.jpg",
+      "bytes": 1831,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/glass_orm.jpg",
+      "bytes": 2119,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/glass_sunset.exr",
+      "bytes": 1016856,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/glass_sunset_vis.exr",
+      "bytes": 8146,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/glass_warm_albedo.jpg",
+      "bytes": 20201,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/glass_warm_emit.jpg",
+      "bytes": 63722,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/glass_warm_normal.jpg",
+      "bytes": 1831,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/glass_warm_orm.jpg",
+      "bytes": 2109,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/glass_warm_sunset.exr",
+      "bytes": 3697300,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/glass_warm_sunset_vis.exr",
+      "bytes": 40520,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/ground_albedo.jpg",
+      "bytes": 171024,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/ground_normal.jpg",
+      "bytes": 17191,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/ground_orm.jpg",
+      "bytes": 78708,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/ground_sunset.exr",
+      "bytes": 2640887,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/ground_sunset_vis.exr",
+      "bytes": 475666,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/lens_albedo.jpg",
+      "bytes": 2541,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/lens_normal.jpg",
+      "bytes": 1831,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/lens_orm.jpg",
+      "bytes": 2624,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/lens_sunset.exr",
+      "bytes": 18566,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/lens_sunset_vis.exr",
+      "bytes": 5702,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/mortar_albedo.jpg",
+      "bytes": 20229,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/mortar_normal.jpg",
+      "bytes": 17049,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/mortar_orm.jpg",
+      "bytes": 22469,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/mortar_sunset.exr",
+      "bytes": 458712,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/mortar_sunset_vis.exr",
+      "bytes": 42450,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/pavers_albedo.jpg",
+      "bytes": 47758,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/pavers_normal.jpg",
+      "bytes": 29368,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/pavers_orm.jpg",
+      "bytes": 8696,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/pavers_sunset.exr",
+      "bytes": 302563,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/pavers_sunset_vis.exr",
+      "bytes": 57852,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/pipe_albedo.jpg",
+      "bytes": 37665,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/pipe_normal.jpg",
+      "bytes": 5481,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/pipe_orm.jpg",
+      "bytes": 5203,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/pipe_sunset.exr",
+      "bytes": 2924146,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/pipe_sunset_vis.exr",
+      "bytes": 153207,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/plaster_albedo.jpg",
+      "bytes": 139129,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/plaster_normal.jpg",
+      "bytes": 29317,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/plaster_orm.jpg",
+      "bytes": 55348,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/plaster_sunset.exr",
+      "bytes": 2644687,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/plaster_sunset_vis.exr",
+      "bytes": 85633,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/pole_albedo.jpg",
+      "bytes": 102035,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/pole_normal.jpg",
+      "bytes": 36964,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/pole_orm.jpg",
+      "bytes": 62250,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/pole_sunset.exr",
+      "bytes": 1515582,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/pole_sunset_vis.exr",
+      "bytes": 165734,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/porcelain_albedo.jpg",
+      "bytes": 50228,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/porcelain_normal.jpg",
+      "bytes": 3038,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/porcelain_orm.jpg",
+      "bytes": 2733,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/porcelain_sunset.exr",
+      "bytes": 234237,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/porcelain_sunset_vis.exr",
+      "bytes": 50341,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/rail_green_albedo.jpg",
+      "bytes": 383381,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/rail_green_normal.jpg",
+      "bytes": 49488,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/rail_green_orm.jpg",
+      "bytes": 96861,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/rail_green_sunset.exr",
+      "bytes": 1020954,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/rail_green_sunset_vis.exr",
+      "bytes": 129590,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/rail_top_albedo.jpg",
+      "bytes": 46779,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/rail_top_normal.jpg",
+      "bytes": 9191,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/rail_top_orm.jpg",
+      "bytes": 13016,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/rail_top_sunset.exr",
+      "bytes": 103420,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/rail_top_sunset_vis.exr",
+      "bytes": 26942,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/road_a_albedo.jpg",
+      "bytes": 52219,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/road_a_normal.jpg",
+      "bytes": 52463,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/road_a_orm.jpg",
+      "bytes": 54864,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/road_a_sunset.exr",
+      "bytes": 982837,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/road_a_sunset_vis.exr",
+      "bytes": 998020,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/road_b_albedo.jpg",
+      "bytes": 110776,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/road_b_normal.jpg",
+      "bytes": 157215,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/road_b_orm.jpg",
+      "bytes": 118962,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/road_b_sunset.exr",
+      "bytes": 2172378,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/road_b_sunset_vis.exr",
+      "bytes": 2265559,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/roof_albedo.jpg",
+      "bytes": 237203,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/roof_normal.jpg",
+      "bytes": 151499,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/roof_orm.jpg",
+      "bytes": 139592,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/roof_sunset.exr",
+      "bytes": 2884384,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/roof_sunset_vis.exr",
+      "bytes": 1606101,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/rusty_albedo.jpg",
+      "bytes": 359224,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/rusty_normal.jpg",
+      "bytes": 16979,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/rusty_orm.jpg",
+      "bytes": 47503,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/rusty_sunset.exr",
+      "bytes": 1018805,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/rusty_sunset_vis.exr",
+      "bytes": 69532,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/shutter_albedo.jpg",
+      "bytes": 228251,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/shutter_normal.jpg",
+      "bytes": 104592,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/shutter_orm.jpg",
+      "bytes": 62122,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/shutter_sunset.exr",
+      "bytes": 3763891,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/shutter_sunset_vis.exr",
+      "bytes": 107201,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/siding_albedo.jpg",
+      "bytes": 148320,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/siding_normal.jpg",
+      "bytes": 50698,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/siding_orm.jpg",
+      "bytes": 104320,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/siding_sunset.exr",
+      "bytes": 2780569,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/siding_sunset_vis.exr",
+      "bytes": 168265,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/soil_albedo.jpg",
+      "bytes": 103230,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/soil_normal.jpg",
+      "bytes": 65158,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/soil_orm.jpg",
+      "bytes": 82539,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/soil_sunset.exr",
+      "bytes": 2293616,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/soil_sunset_vis.exr",
+      "bytes": 476934,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/steel_albedo.jpg",
+      "bytes": 421389,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/steel_normal.jpg",
+      "bytes": 54367,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/steel_orm.jpg",
+      "bytes": 376458,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/steel_sunset.exr",
+      "bytes": 3523257,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/steel_sunset_vis.exr",
+      "bytes": 398773,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/stone_albedo.jpg",
+      "bytes": 315542,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/stone_normal.jpg",
+      "bytes": 92737,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/stone_orm.jpg",
+      "bytes": 335975,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/stone_sunset.exr",
+      "bytes": 3560627,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/stone_sunset_vis.exr",
+      "bytes": 3394172,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/tag_albedo.jpg",
+      "bytes": 14904,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/tag_normal.jpg",
+      "bytes": 1831,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/tag_orm.jpg",
+      "bytes": 3310,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/tag_sunset.exr",
+      "bytes": 11913,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/tag_sunset_vis.exr",
+      "bytes": 595,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/wire_albedo.jpg",
+      "bytes": 67263,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/wire_normal.jpg",
+      "bytes": 4157,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/wire_orm.jpg",
+      "bytes": 29957,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/wire_sunset.exr",
+      "bytes": 576556,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/wire_sunset_vis.exr",
+      "bytes": 93882,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/wood_albedo.jpg",
+      "bytes": 21707,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/wood_normal.jpg",
+      "bytes": 4459,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/wood_orm.jpg",
+      "bytes": 2149,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/wood_sunset.exr",
+      "bytes": 3684884,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/wood_sunset_vis.exr",
+      "bytes": 312033,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/xfmr_albedo.jpg",
+      "bytes": 245102,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/xfmr_normal.jpg",
+      "bytes": 12933,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/xfmr_orm.jpg",
+      "bytes": 34496,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/xfmr_sunset.exr",
+      "bytes": 936767,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "../bake/t4/xfmr_sunset_vis.exr",
+      "bytes": 69913,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "collision-info.json",
+      "bytes": 797,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "collision.bin",
+      "bytes": 16250616,
+      "groups": [
+        "core"
+      ],
+      "transferBytes": 5388680,
+      "encoding": "gzip"
+    },
+    {
+      "url": "collision.mjs",
+      "bytes": 5424,
+      "groups": [
+        "runtime"
+      ],
+      "transferBytes": 2052,
+      "encoding": "gzip"
+    },
+    {
+      "url": "data/bk.glb",
+      "bytes": 63578612,
+      "groups": [
+        "core"
+      ],
+      "transferBytes": 41700164,
+      "encoding": "gzip"
+    },
+    {
+      "url": "data/bk.json",
+      "bytes": 3400,
+      "groups": [
+        "core"
+      ]
+    },
+    {
+      "url": "data/lut_sunset.bin",
+      "bytes": 1327104,
+      "groups": [
+        "core"
+      ],
+      "transferBytes": 589502,
+      "encoding": "gzip"
+    },
+    {
+      "url": "experience-controls.css",
+      "bytes": 5122,
+      "groups": [
+        "runtime"
+      ],
+      "transferBytes": 1965,
+      "encoding": "gzip"
+    },
+    {
+      "url": "experience-controls.mjs",
+      "bytes": 24135,
+      "groups": [
+        "runtime"
+      ],
+      "transferBytes": 7242,
+      "encoding": "gzip"
+    },
+    {
+      "url": "index.html",
+      "bytes": 4209,
+      "groups": [
+        "runtime"
+      ],
+      "transferBytes": 2201,
+      "encoding": "gzip"
+    },
+    {
+      "url": "libs/fflate.module.js",
+      "bytes": 89384,
+      "groups": [
+        "runtime"
+      ],
+      "transferBytes": 21931,
+      "encoding": "gzip"
+    },
+    {
+      "url": "loading-progress.mjs",
+      "bytes": 1208,
+      "groups": [
+        "runtime"
+      ]
+    },
+    {
+      "url": "map-ui.css",
+      "bytes": 6480,
+      "groups": [
+        "runtime"
+      ],
+      "transferBytes": 2044,
+      "encoding": "gzip"
+    },
+    {
+      "url": "map-ui.mjs",
+      "bytes": 6915,
+      "groups": [
+        "runtime"
+      ],
+      "transferBytes": 2798,
+      "encoding": "gzip"
+    },
+    {
+      "url": "map/actual-map-preview.jpg",
+      "bytes": 239338,
+      "groups": [
+        "map"
+      ]
+    },
+    {
+      "url": "map/actual-map.png",
+      "bytes": 186637,
+      "groups": [
+        "map"
+      ]
+    },
+    {
+      "url": "map/map-provenance.json",
+      "bytes": 2378,
+      "groups": [
+        "map"
+      ]
+    },
+    {
+      "url": "map/registration.json",
+      "bytes": 117,
+      "groups": [
+        "map"
+      ]
+    },
+    {
+      "url": "models/bike01.bin",
+      "bytes": 2812308,
+      "groups": [
+        "props"
+      ],
+      "transferBytes": 1500730,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/bike01.gltf",
+      "bytes": 4103,
+      "groups": [
+        "props"
+      ],
+      "transferBytes": 1198,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/block_A.bin",
+      "bytes": 29657288,
+      "groups": [
+        "layer-A"
+      ],
+      "transferBytes": 7664796,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/block_A.gltf",
+      "bytes": 233977,
+      "groups": [
+        "layer-A"
+      ],
+      "transferBytes": 37529,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/block_B.bin",
+      "bytes": 21314720,
+      "groups": [
+        "layer-B"
+      ],
+      "transferBytes": 4452298,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/block_B.gltf",
+      "bytes": 173451,
+      "groups": [
+        "layer-B"
+      ],
+      "transferBytes": 26716,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/block_C.bin",
+      "bytes": 21954568,
+      "groups": [
+        "layer-C"
+      ],
+      "transferBytes": 5401710,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/block_C.gltf",
+      "bytes": 203218,
+      "groups": [
+        "layer-C"
+      ],
+      "transferBytes": 31866,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/block_D.bin",
+      "bytes": 11332764,
+      "groups": [
+        "layer-D"
+      ],
+      "transferBytes": 2966621,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/block_D.gltf",
+      "bytes": 88306,
+      "groups": [
+        "layer-D"
+      ],
+      "transferBytes": 15092,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/block_E.bin",
+      "bytes": 37485272,
+      "groups": [
+        "layer-E"
+      ],
+      "transferBytes": 8606076,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/block_E.gltf",
+      "bytes": 303947,
+      "groups": [
+        "layer-E"
+      ],
+      "transferBytes": 47207,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/block_S.bin",
+      "bytes": 46357020,
+      "groups": [
+        "layer-S"
+      ],
+      "transferBytes": 12144840,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/block_S.gltf",
+      "bytes": 52600,
+      "groups": [
+        "layer-S"
+      ],
+      "transferBytes": 9478,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/block_X.bin",
+      "bytes": 10280020,
+      "groups": [
+        "layer-X"
+      ],
+      "transferBytes": 3266544,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/block_X.gltf",
+      "bytes": 18912,
+      "groups": [
+        "layer-X"
+      ],
+      "transferBytes": 4338,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/junction-details.glb",
+      "bytes": 1205060,
+      "groups": [
+        "layer-J"
+      ],
+      "transferBytes": 249808,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/pr_aircon.bin",
+      "bytes": 1363500,
+      "groups": [
+        "props"
+      ],
+      "transferBytes": 653928,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/pr_aircon.gltf",
+      "bytes": 4131,
+      "groups": [
+        "props"
+      ],
+      "transferBytes": 1156,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/pr_gasmeter.bin",
+      "bytes": 1502604,
+      "groups": [
+        "props"
+      ],
+      "transferBytes": 628153,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/pr_gasmeter.gltf",
+      "bytes": 4172,
+      "groups": [
+        "props"
+      ],
+      "transferBytes": 1153,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/pr_plants.bin",
+      "bytes": 6758520,
+      "groups": [
+        "props"
+      ],
+      "transferBytes": 3399495,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/pr_plants.gltf",
+      "bytes": 4170,
+      "groups": [
+        "props"
+      ],
+      "transferBytes": 1151,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/sf02_front.bin",
+      "bytes": 4848968,
+      "groups": [
+        "props"
+      ],
+      "transferBytes": 1803710,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/sf02_front.gltf",
+      "bytes": 5566,
+      "groups": [
+        "props"
+      ],
+      "transferBytes": 1489,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/sf02_goods.bin",
+      "bytes": 23129800,
+      "groups": [
+        "props"
+      ],
+      "transferBytes": 11045881,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/sf02_goods.gltf",
+      "bytes": 4215,
+      "groups": [
+        "props"
+      ],
+      "transferBytes": 1208,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/sf02_tent.bin",
+      "bytes": 2649968,
+      "groups": [
+        "props"
+      ],
+      "transferBytes": 1633881,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/sf02_tent.gltf",
+      "bytes": 4347,
+      "groups": [
+        "props"
+      ],
+      "transferBytes": 1224,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/sf04_front.bin",
+      "bytes": 444724,
+      "groups": [
+        "props"
+      ],
+      "transferBytes": 183727,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/sf04_front.gltf",
+      "bytes": 5429,
+      "groups": [
+        "props"
+      ],
+      "transferBytes": 1443,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/sf04_goods.bin",
+      "bytes": 6745440,
+      "groups": [
+        "props"
+      ],
+      "transferBytes": 3320186,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/sf04_goods.gltf",
+      "bytes": 4141,
+      "groups": [
+        "props"
+      ],
+      "transferBytes": 1229,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/sf05_front.bin",
+      "bytes": 555404,
+      "groups": [
+        "props"
+      ],
+      "transferBytes": 228751,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/sf05_front.gltf",
+      "bytes": 5535,
+      "groups": [
+        "props"
+      ],
+      "transferBytes": 1453,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/sf05_goods.bin",
+      "bytes": 530428,
+      "groups": [
+        "props"
+      ],
+      "transferBytes": 296628,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/sf05_goods.gltf",
+      "bytes": 4147,
+      "groups": [
+        "props"
+      ],
+      "transferBytes": 1160,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/sf05_tent.bin",
+      "bytes": 2563172,
+      "groups": [
+        "props"
+      ],
+      "transferBytes": 1654617,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/sf05_tent.gltf",
+      "bytes": 4181,
+      "groups": [
+        "props"
+      ],
+      "transferBytes": 1186,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/sf06_front.bin",
+      "bytes": 900860,
+      "groups": [
+        "props"
+      ],
+      "transferBytes": 461441,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/sf06_front.gltf",
+      "bytes": 4268,
+      "groups": [
+        "props"
+      ],
+      "transferBytes": 1137,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/sf06_goods.bin",
+      "bytes": 1176628,
+      "groups": [
+        "props"
+      ],
+      "transferBytes": 605090,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/sf06_goods.gltf",
+      "bytes": 4169,
+      "groups": [
+        "props"
+      ],
+      "transferBytes": 1227,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/sf08_front.bin",
+      "bytes": 432640,
+      "groups": [
+        "props"
+      ],
+      "transferBytes": 213667,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/sf08_front.gltf",
+      "bytes": 4190,
+      "groups": [
+        "props"
+      ],
+      "transferBytes": 1163,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/sf08_goods.bin",
+      "bytes": 4840416,
+      "groups": [
+        "props"
+      ],
+      "transferBytes": 1893541,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/sf08_goods.gltf",
+      "bytes": 4144,
+      "groups": [
+        "props"
+      ],
+      "transferBytes": 1206,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/sf08_tent.bin",
+      "bytes": 2653844,
+      "groups": [
+        "props"
+      ],
+      "transferBytes": 1718837,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/sf08_tent.gltf",
+      "bytes": 4189,
+      "groups": [
+        "props"
+      ],
+      "transferBytes": 1189,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/temple-access.glb",
+      "bytes": 32412,
+      "groups": [
+        "layer-L"
+      ],
+      "transferBytes": 7685,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/vm02.bin",
+      "bytes": 1352912,
+      "groups": [
+        "props"
+      ],
+      "transferBytes": 615353,
+      "encoding": "gzip"
+    },
+    {
+      "url": "models/vm02.gltf",
+      "bytes": 5484,
+      "groups": [
+        "props"
+      ],
+      "transferBytes": 1542,
+      "encoding": "gzip"
+    },
+    {
+      "url": "navigation.json",
+      "bytes": 1730399,
+      "groups": [
+        "core"
+      ],
+      "transferBytes": 87215,
+      "encoding": "gzip"
+    },
+    {
+      "url": "textures/015ca4b15bf12df10fe79d09.jpg",
+      "bytes": 39333,
+      "groups": [
+        "layer-S"
+      ]
+    },
+    {
+      "url": "textures/01f12dd83342172896447e73.jpg",
+      "bytes": 262669,
+      "groups": [
+        "layer-A",
+        "layer-C",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/02cdea826c05072bc73f6ef0.jpg",
+      "bytes": 223391,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-C",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/074c57e7ddd87298da168b68.jpg",
+      "bytes": 331480,
+      "groups": [
+        "layer-C",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/080b033be3054ef0d5e31be3.jpg",
+      "bytes": 312555,
+      "groups": [
+        "layer-B",
+        "layer-C",
+        "layer-D"
+      ]
+    },
+    {
+      "url": "textures/0a25499f6e688ca05e5b2e7d.jpg",
+      "bytes": 10141,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/0ce4170a629f9eeafea8b91c.jpg",
+      "bytes": 7510,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/107ea7e9510835044539217c.jpg",
+      "bytes": 96875,
+      "groups": [
+        "layer-S"
+      ]
+    },
+    {
+      "url": "textures/1086df846b84f2285c5413c5.jpg",
+      "bytes": 252867,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/10d78c4c57362d5e02b47699.jpg",
+      "bytes": 7017,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/11479ac3745cfdd3ae82abc5.jpg",
+      "bytes": 373709,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/12318c7537cf8e289c39a563.jpg",
+      "bytes": 41132,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/127d35f24c1450de15bd514f.jpg",
+      "bytes": 263585,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/16fd958a603d5aa8da41f2d5.jpg",
+      "bytes": 149265,
+      "groups": [
+        "layer-B",
+        "layer-C",
+        "layer-D"
+      ]
+    },
+    {
+      "url": "textures/181debf01d7d26ba7c7318f5.jpg",
+      "bytes": 183971,
+      "groups": [
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/184bd4c833f1bad1f4a1a936.jpg",
+      "bytes": 376448,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/1b3e9f70ad131147c7214c26.jpg",
+      "bytes": 242119,
+      "groups": [
+        "layer-A",
+        "layer-C",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/1f16c1b1f64ef13428b02a4e.jpg",
+      "bytes": 146111,
+      "groups": [
+        "layer-C",
+        "layer-D",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/201cec2b40674f2a8bfd1ba5.jpg",
+      "bytes": 119025,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/20bf9a87d5ad6b468fe0d323.jpg",
+      "bytes": 104769,
+      "groups": [
+        "layer-S"
+      ]
+    },
+    {
+      "url": "textures/20c91ce76b7a69b1778121c9.jpg",
+      "bytes": 229756,
+      "groups": [
+        "layer-S"
+      ]
+    },
+    {
+      "url": "textures/22d0f875c2eefbb4cc3e5716.jpg",
+      "bytes": 277892,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/25fe308f55016c4571c0457b.jpg",
+      "bytes": 170655,
+      "groups": [
+        "layer-B",
+        "layer-C",
+        "layer-D"
+      ]
+    },
+    {
+      "url": "textures/26769a63b68491427bfe90d2.jpg",
+      "bytes": 187404,
+      "groups": [
+        "layer-B",
+        "layer-C",
+        "layer-D",
+        "layer-E",
+        "layer-X"
+      ]
+    },
+    {
+      "url": "textures/281039076cc14ee9a023d74e.jpg",
+      "bytes": 362960,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/284b2a19651d88a03ec36e42.jpg",
+      "bytes": 355231,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/2bdc1a522db5344f94bd42b0.jpg",
+      "bytes": 291955,
+      "groups": [
+        "layer-A",
+        "layer-C",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/2f4461112850ae7e5c870f0c.jpg",
+      "bytes": 250777,
+      "groups": [
+        "layer-A",
+        "layer-C",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/34f97a1d75c170a963c5c649.jpg",
+      "bytes": 390472,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-C",
+        "layer-D",
+        "layer-E",
+        "layer-S"
+      ]
+    },
+    {
+      "url": "textures/354fd0c7d0f810154aa9a807.jpg",
+      "bytes": 190426,
+      "groups": [
+        "layer-S"
+      ]
+    },
+    {
+      "url": "textures/3576077f1fe0def6cfda2d4f.jpg",
+      "bytes": 194018,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/366461b9a725048cf2c47bfd.jpg",
+      "bytes": 94221,
+      "groups": [
+        "layer-B",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/38db43b6091905c2a5bf2739.jpg",
+      "bytes": 416254,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/394e3a3d05dd363943a19e8e.jpg",
+      "bytes": 145025,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-C",
+        "layer-D",
+        "layer-E",
+        "layer-X"
+      ]
+    },
+    {
+      "url": "textures/3979034253b5e8b819d3df6a.jpg",
+      "bytes": 274048,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/3f4d4695ff735f6712dab68d.jpg",
+      "bytes": 65006,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-C",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/4074da75d98b36751c22dcd0.jpg",
+      "bytes": 154603,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-C",
+        "layer-D",
+        "layer-E",
+        "layer-S",
+        "layer-X"
+      ]
+    },
+    {
+      "url": "textures/4088807d7ce24632f3ec8254.jpg",
+      "bytes": 23707,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/41854f44391265eb0e594e17.jpg",
+      "bytes": 90762,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-C",
+        "layer-D",
+        "layer-E",
+        "layer-S",
+        "layer-X"
+      ]
+    },
+    {
+      "url": "textures/431aa463719316652b42b879.jpg",
+      "bytes": 406834,
+      "groups": [
+        "layer-C",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/45c4365c2c1f24c4457be5fd.jpg",
+      "bytes": 415570,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-C",
+        "layer-D",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/467fafdcbfc2f2fa6bcfc258.jpg",
+      "bytes": 6967,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/486ad97e01e63d7796ff903b.jpg",
+      "bytes": 194719,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-C",
+        "layer-D",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/49022e81a22eaa438ccf93c5.jpg",
+      "bytes": 95375,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-C",
+        "layer-D",
+        "layer-E",
+        "layer-S",
+        "layer-X"
+      ]
+    },
+    {
+      "url": "textures/4c07800a3b9cc437115f7f06.jpg",
+      "bytes": 115768,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/4f983f3354358d683435a4f0.jpg",
+      "bytes": 283334,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/50fb426bfaf4165b0fa957a1.jpg",
+      "bytes": 39332,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/519a758ef44be3b647b57039.jpg",
+      "bytes": 329176,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/524d99e6026769b724e008d2.jpg",
+      "bytes": 159884,
+      "groups": [
+        "layer-S",
+        "layer-X"
+      ]
+    },
+    {
+      "url": "textures/54a475ec23b405c548354929.jpg",
+      "bytes": 85827,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-C",
+        "layer-D",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/552919da21d6f63ea7c9e91e.jpg",
+      "bytes": 129109,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-C",
+        "layer-D",
+        "layer-E",
+        "layer-X"
+      ]
+    },
+    {
+      "url": "textures/55754aca39ef3db9f82da663.jpg",
+      "bytes": 194625,
+      "groups": [
+        "layer-S"
+      ]
+    },
+    {
+      "url": "textures/5640e913ec7891db27ea51ff.jpg",
+      "bytes": 80085,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/57c96e93e3aea8a648f60cb2.jpg",
+      "bytes": 206675,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-C",
+        "layer-D",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/5825e9d556df366d983d38d2.jpg",
+      "bytes": 82109,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/592aa1a932dd1d35fecfbcc1.jpg",
+      "bytes": 199475,
+      "groups": [
+        "layer-S"
+      ]
+    },
+    {
+      "url": "textures/5bf6a710647b24b14af5e338.jpg",
+      "bytes": 140368,
+      "groups": [
+        "layer-B"
+      ]
+    },
+    {
+      "url": "textures/5d478467cf4c7da1040d2af5.jpg",
+      "bytes": 359617,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/5d4adf4b08960d1779539736.jpg",
+      "bytes": 296422,
+      "groups": [
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/5f7f1aeb139c7b26816d260e.jpg",
+      "bytes": 195341,
+      "groups": [
+        "layer-C",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/618daa46dbe959f03162e0e3.jpg",
+      "bytes": 272138,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/620d8989b6558294d3655d1a.jpg",
+      "bytes": 245291,
+      "groups": [
+        "layer-A",
+        "layer-C",
+        "layer-D",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/639a01a42c23504c6fdf1366.jpg",
+      "bytes": 13334,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/643ae0d3f99db98e065a7664.jpg",
+      "bytes": 59906,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/660bc5c06851d70196573e71.jpg",
+      "bytes": 395306,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/66fbab6dce45d263e00e2062.jpg",
+      "bytes": 124190,
+      "groups": [
+        "layer-A",
+        "layer-C",
+        "layer-D",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/67340d2b16a26f868949e1b6.jpg",
+      "bytes": 107939,
+      "groups": [
+        "layer-C",
+        "layer-D",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/67a5aaf81f3917fb1c4c5e3e.jpg",
+      "bytes": 160933,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-C",
+        "layer-D",
+        "layer-E",
+        "layer-S",
+        "layer-X"
+      ]
+    },
+    {
+      "url": "textures/67c394bcb8a514550e5ba414.jpg",
+      "bytes": 368648,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/67fcfbe1536e86a89b5716f8.jpg",
+      "bytes": 234096,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/68d27e7c5cdf20112f9243ec.jpg",
+      "bytes": 152809,
+      "groups": [
+        "layer-C",
+        "layer-D",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/68fc495842375820c64c90e4.jpg",
+      "bytes": 126380,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-C",
+        "layer-D",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/6926f81c3509fa24d2a61342.jpg",
+      "bytes": 184121,
+      "groups": [
+        "layer-B",
+        "layer-C",
+        "layer-D"
+      ]
+    },
+    {
+      "url": "textures/6b0eb8c19cf29f58fe052e49.jpg",
+      "bytes": 117557,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/6b2d2435c2317680692d686e.jpg",
+      "bytes": 32727,
+      "groups": [
+        "layer-X"
+      ]
+    },
+    {
+      "url": "textures/6b3581b412f45ac116b82ea3.jpg",
+      "bytes": 99606,
+      "groups": [
+        "layer-C",
+        "layer-D",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/6b3ee12ab0960fd28c5f7ac6.jpg",
+      "bytes": 180351,
+      "groups": [
+        "layer-B"
+      ]
+    },
+    {
+      "url": "textures/6b598dbfbb33725ec3e42e98.jpg",
+      "bytes": 59384,
+      "groups": [
+        "layer-S"
+      ]
+    },
+    {
+      "url": "textures/6c6a2d6da0dc13f139a5c179.jpg",
+      "bytes": 393310,
+      "groups": [
+        "layer-B"
+      ]
+    },
+    {
+      "url": "textures/70cb88b28e339946303e40f0.jpg",
+      "bytes": 9980,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/71352446402227bc2ac912f6.jpg",
+      "bytes": 230766,
+      "groups": [
+        "layer-B"
+      ]
+    },
+    {
+      "url": "textures/747b9c16a7a5ed88b9b16865.jpg",
+      "bytes": 350719,
+      "groups": [
+        "layer-S"
+      ]
+    },
+    {
+      "url": "textures/76ff7093d51835884a6b7aad.jpg",
+      "bytes": 269190,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/780053cf2e5cf9b7e20b82f5.jpg",
+      "bytes": 265345,
+      "groups": [
+        "layer-C",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/780f45a2cbb0570e4abcee58.jpg",
+      "bytes": 127128,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-C",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/7965df164a19a78c3b26db3a.jpg",
+      "bytes": 86912,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/79b9b39c633aa47259b464af.jpg",
+      "bytes": 329334,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/79ddd1dc19a8917b29f54db7.jpg",
+      "bytes": 25148,
+      "groups": [
+        "layer-X"
+      ]
+    },
+    {
+      "url": "textures/7b170a25fb54f4c718326434.jpg",
+      "bytes": 248821,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/7f960e9d7277bc950275de12.jpg",
+      "bytes": 158065,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-C",
+        "layer-E",
+        "layer-S"
+      ]
+    },
+    {
+      "url": "textures/801976ae74c9400fa001a016.jpg",
+      "bytes": 223791,
+      "groups": [
+        "layer-B"
+      ]
+    },
+    {
+      "url": "textures/81a834f05d33f5fcf4941758.jpg",
+      "bytes": 14902,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-C",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/84791aa0f39dada6317cfdbf.jpg",
+      "bytes": 23131,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/84daa9832cc0790bf0a62a49.jpg",
+      "bytes": 153071,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/854ddb0daeb795605c8c8393.jpg",
+      "bytes": 44439,
+      "groups": [
+        "layer-S"
+      ]
+    },
+    {
+      "url": "textures/88b04013dd0ca58ac2cb54a7.jpg",
+      "bytes": 244931,
+      "groups": [
+        "layer-C",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/89b4d417c0667fa51a3eeea7.jpg",
+      "bytes": 93029,
+      "groups": [
+        "layer-C",
+        "layer-D",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/8b8c2ecb811eb362b7730a51.jpg",
+      "bytes": 349588,
+      "groups": [
+        "layer-S"
+      ]
+    },
+    {
+      "url": "textures/8becc58796f189532ee472e4.jpg",
+      "bytes": 214377,
+      "groups": [
+        "layer-C",
+        "layer-D",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/91495d68b296133e65bfc22a.jpg",
+      "bytes": 111000,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-C",
+        "layer-D",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/9173e577c8db2d21290fdf7a.jpg",
+      "bytes": 158292,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-C",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/919540a0f2ff89bf61dcbb3f.jpg",
+      "bytes": 381746,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/92ec565efcb27bd68b5dca23.jpg",
+      "bytes": 132446,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-C",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/93f1e79a9c67fa6d26735fdf.jpg",
+      "bytes": 92386,
+      "groups": [
+        "layer-S"
+      ]
+    },
+    {
+      "url": "textures/9652b7cf39e223ffa5916cff.jpg",
+      "bytes": 422756,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/9694f9167dd055d1dfb1f7ff.jpg",
+      "bytes": 36592,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/9779d82b9dd48d74c378fcff.jpg",
+      "bytes": 304681,
+      "groups": [
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/9ab0e4dee7e2d55c4d9c3a8a.jpg",
+      "bytes": 309459,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-C",
+        "layer-D",
+        "layer-E",
+        "layer-S"
+      ]
+    },
+    {
+      "url": "textures/9bd6646990ece5944b683e25.jpg",
+      "bytes": 198916,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-C",
+        "layer-D",
+        "layer-E",
+        "layer-X"
+      ]
+    },
+    {
+      "url": "textures/9d5e60569034478c15a9a1de.jpg",
+      "bytes": 32330,
+      "groups": [
+        "layer-X"
+      ]
+    },
+    {
+      "url": "textures/9e384ce4923d33aae7a8a04d.jpg",
+      "bytes": 113661,
+      "groups": [
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/a00d0569bd91ba4254ffefeb.jpg",
+      "bytes": 112952,
+      "groups": [
+        "layer-S",
+        "layer-X"
+      ]
+    },
+    {
+      "url": "textures/a208c70756246f6a4ebbcd46.jpg",
+      "bytes": 395303,
+      "groups": [
+        "layer-S",
+        "layer-X"
+      ]
+    },
+    {
+      "url": "textures/a2c2cd5ae5c24beae698a806.jpg",
+      "bytes": 35739,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/a316f079254eeb711ac8948b.jpg",
+      "bytes": 177428,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/a5f86b86880e9c2d1658018c.jpg",
+      "bytes": 466231,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-C",
+        "layer-D",
+        "layer-E",
+        "layer-S"
+      ]
+    },
+    {
+      "url": "textures/a681ff26799ce6121996df5a.jpg",
+      "bytes": 208406,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/aa17403217d99a9c1d2ac617.jpg",
+      "bytes": 188978,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-C",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/ab1be910ff216f3c51bab338.jpg",
+      "bytes": 254907,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/ac8809780471e757aa03e308.jpg",
+      "bytes": 125309,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-C",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/ade1953cea36f2bb60117148.jpg",
+      "bytes": 88592,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-C",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/ae5c5beba3e83ea2c4a3f7cc.jpg",
+      "bytes": 94204,
+      "groups": [
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/aef9b002b8f256fea9df234d.jpg",
+      "bytes": 226872,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-C",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/af375079c925dc79271de1a2.jpg",
+      "bytes": 42505,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-C",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/b0a6255cef307799a41ed95d.jpg",
+      "bytes": 7015,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/b1a25a3fb0d9d2c2a1b7443a.jpg",
+      "bytes": 256166,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/b233368b9361bae0b55ff435.jpg",
+      "bytes": 93054,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-C",
+        "layer-D",
+        "layer-E",
+        "layer-S",
+        "layer-X"
+      ]
+    },
+    {
+      "url": "textures/b9033a832b29e41b33841b81.jpg",
+      "bytes": 307100,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/b95ff3709f9a27c71fa681db.jpg",
+      "bytes": 207065,
+      "groups": [
+        "layer-C",
+        "layer-D",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/bb6e1ec066e8dc1558723dc6.jpg",
+      "bytes": 289366,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/bbc3158766c2ca9a5894c545.jpg",
+      "bytes": 436831,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/bc21fddc0a641a7ce9816abd.jpg",
+      "bytes": 380675,
+      "groups": [
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/bc78e2cd034784140cfe43c4.jpg",
+      "bytes": 92272,
+      "groups": [
+        "layer-C",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/bdb37233b05354ea923138ab.jpg",
+      "bytes": 66760,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/bde6644b806f08a31950ad46.jpg",
+      "bytes": 55956,
+      "groups": [
+        "layer-S"
+      ]
+    },
+    {
+      "url": "textures/bdee104e45fff6305bc82147.jpg",
+      "bytes": 224879,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/bffa81afeaefba0fdbd3f900.jpg",
+      "bytes": 164430,
+      "groups": [
+        "layer-B",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/c3cfaec46993edfe18d255ac.png",
+      "bytes": 137422,
+      "groups": [
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/c4f80ae1bd87a14a29ebfc4a.png",
+      "bytes": 791465,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-C",
+        "layer-D",
+        "layer-E",
+        "layer-S"
+      ]
+    },
+    {
+      "url": "textures/c566248ee5d2f59f8c915892.jpg",
+      "bytes": 120671,
+      "groups": [
+        "layer-A",
+        "layer-C",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/c7fdb0604aebebcdd10336fd.jpg",
+      "bytes": 175510,
+      "groups": [
+        "layer-B",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/c81b3c0a73ea2056507b90f6.jpg",
+      "bytes": 91990,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/caf8d0c86dd7b211fd7f6517.jpg",
+      "bytes": 245753,
+      "groups": [
+        "layer-S",
+        "layer-X"
+      ]
+    },
+    {
+      "url": "textures/cc9543fdc43d967015ec7be9.jpg",
+      "bytes": 164466,
+      "groups": [
+        "layer-A",
+        "layer-C",
+        "layer-D",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/cdf5ce9c23c86517830cf02a.jpg",
+      "bytes": 23210,
+      "groups": [
+        "layer-X"
+      ]
+    },
+    {
+      "url": "textures/cf8ce611e71fc3aab45d0c10.jpg",
+      "bytes": 135595,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-C",
+        "layer-E",
+        "layer-S"
+      ]
+    },
+    {
+      "url": "textures/d474c30aef890c7e3b90ab3a.jpg",
+      "bytes": 135292,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-C",
+        "layer-E",
+        "layer-S"
+      ]
+    },
+    {
+      "url": "textures/d67607899ee6fdf1f160ca9d.jpg",
+      "bytes": 6464,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/d698dc00bbac582a85176f14.jpg",
+      "bytes": 118569,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-C",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/d8e52ca0b1f92b1b9f97b40f.jpg",
+      "bytes": 279815,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/da7dc2db152b0059ad46c11b.jpg",
+      "bytes": 92841,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-C",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/dc1a7dbd4bfbe572cb95c8fc.jpg",
+      "bytes": 191149,
+      "groups": [
+        "layer-B",
+        "layer-C",
+        "layer-D"
+      ]
+    },
+    {
+      "url": "textures/dcd031c1dd288c1c0fd645ba.jpg",
+      "bytes": 127337,
+      "groups": [
+        "layer-C",
+        "layer-D",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/ddca2577d7abda5790c90d50.jpg",
+      "bytes": 342846,
+      "groups": [
+        "layer-S",
+        "layer-X"
+      ]
+    },
+    {
+      "url": "textures/df2ea819b524374665f644af.jpg",
+      "bytes": 59244,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-C",
+        "layer-D",
+        "layer-E",
+        "layer-S",
+        "layer-X"
+      ]
+    },
+    {
+      "url": "textures/e09763aa104024b7fe836b14.jpg",
+      "bytes": 139535,
+      "groups": [
+        "layer-A",
+        "layer-C",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/e0baafdd753a417bfaa9055b.jpg",
+      "bytes": 133471,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/e10406de69369c96c804a9a7.jpg",
+      "bytes": 26853,
+      "groups": [
+        "layer-B",
+        "layer-C",
+        "layer-D",
+        "layer-E",
+        "layer-X"
+      ]
+    },
+    {
+      "url": "textures/e2780d1dbea2d6c3f558bbf7.jpg",
+      "bytes": 222560,
+      "groups": [
+        "layer-B"
+      ]
+    },
+    {
+      "url": "textures/e474ae7224fe4af765353cca.jpg",
+      "bytes": 101985,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/e6d1c753795983529205ee69.jpg",
+      "bytes": 311159,
+      "groups": [
+        "layer-B",
+        "layer-C",
+        "layer-D",
+        "layer-E",
+        "layer-X"
+      ]
+    },
+    {
+      "url": "textures/e770d9d0ca4410c974d77c8a.jpg",
+      "bytes": 116337,
+      "groups": [
+        "layer-B",
+        "layer-C",
+        "layer-D"
+      ]
+    },
+    {
+      "url": "textures/eae21818e6a2fe153afb5f47.jpg",
+      "bytes": 180548,
+      "groups": [
+        "layer-S"
+      ]
+    },
+    {
+      "url": "textures/ec7a7f36301c90c53381ae6f.jpg",
+      "bytes": 62947,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-C",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/ecd1906f19e2d5a6b3b5ad90.jpg",
+      "bytes": 8517,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/f0846088787c07e14fcae66a.jpg",
+      "bytes": 23155,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/f1ae3f8d68f8dc398edb5ab4.jpg",
+      "bytes": 23625,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/f42a36929850a618aacb6a4e.jpg",
+      "bytes": 101410,
+      "groups": [
+        "layer-C",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/f535d9fcf315f0ea7fce7824.jpg",
+      "bytes": 100859,
+      "groups": [
+        "layer-S"
+      ]
+    },
+    {
+      "url": "textures/f7c3380fee5e11540e8a51c0.jpg",
+      "bytes": 367619,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-C",
+        "layer-D",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/f8fb700689119d645a70f2ed.jpg",
+      "bytes": 56851,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/faa4f08589a72b90f9b5804c.jpg",
+      "bytes": 22927,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "textures/fd8d5e2a0b4e4e8a460b54c0.jpg",
+      "bytes": 318683,
+      "groups": [
+        "layer-C",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/fdebd8e7b8d7af3fc009e14d.jpg",
+      "bytes": 109427,
+      "groups": [
+        "layer-S",
+        "layer-X"
+      ]
+    },
+    {
+      "url": "textures/fe4ac4507d9e6079c79eebfd.jpg",
+      "bytes": 160212,
+      "groups": [
+        "layer-A",
+        "layer-B",
+        "layer-C",
+        "layer-E"
+      ]
+    },
+    {
+      "url": "textures/ff0e548d229c3d146ce40b43.jpg",
+      "bytes": 115762,
+      "groups": [
+        "props"
+      ]
+    },
+    {
+      "url": "utils/BufferGeometryUtils.js",
+      "bytes": 31768,
+      "groups": [
+        "runtime"
+      ],
+      "transferBytes": 6912,
+      "encoding": "gzip"
+    },
+    {
+      "url": "vendor/BufferGeometryUtils.js",
+      "bytes": 31768,
+      "groups": [
+        "runtime"
+      ],
+      "transferBytes": 6912,
+      "encoding": "gzip"
+    },
+    {
+      "url": "vendor/Capsule.js",
+      "bytes": 1538,
+      "groups": [
+        "runtime"
+      ]
+    },
+    {
+      "url": "vendor/EXRLoader.js",
+      "bytes": 61180,
+      "groups": [
+        "runtime"
+      ],
+      "transferBytes": 13299,
+      "encoding": "gzip"
+    },
+    {
+      "url": "vendor/GLTFLoader.js",
+      "bytes": 110273,
+      "groups": [
+        "runtime"
+      ],
+      "transferBytes": 23657,
+      "encoding": "gzip"
+    },
+    {
+      "url": "vendor/Octree.js",
+      "bytes": 10564,
+      "groups": [
+        "runtime"
+      ],
+      "transferBytes": 2545,
+      "encoding": "gzip"
+    },
+    {
+      "url": "vendor/RGBELoader.js",
+      "bytes": 11377,
+      "groups": [
+        "runtime"
+      ],
+      "transferBytes": 3493,
+      "encoding": "gzip"
+    },
+    {
+      "url": "vendor/three.module.js",
+      "bytes": 1314681,
+      "groups": [
+        "runtime"
+      ],
+      "transferBytes": 266601,
+      "encoding": "gzip"
+    },
+    {
+      "url": "world.js",
+      "bytes": 31138,
+      "groups": [
+        "runtime"
+      ],
+      "transferBytes": 12174,
+      "encoding": "gzip"
+    },
+    {
+      "url": "world.json",
+      "bytes": 22866,
+      "groups": [
+        "core"
+      ],
+      "transferBytes": 2612,
+      "encoding": "gzip"
+    }
+  ]
+}

@@ -1,0 +1,782 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:,">
+<title>此间 · 操作层测试</title>
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%;overflow:hidden;background:#101510;color:#f2e9da;font:13px/1.5 "Microsoft YaHei",sans-serif}
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;
+    background:
+      radial-gradient(ellipse at 50% 35%,#38442f 0,#192016 55%,#0b0f0b 100%),
+      repeating-linear-gradient(0deg,#ffffff06 0 1px,transparent 1px 48px),
+      repeating-linear-gradient(90deg,#ffffff06 0 1px,transparent 1px 48px);
+  }
+  #scene{position:fixed;inset:0;width:100%;height:100%;display:block;background:transparent}
+  #testbar{
+    position:fixed;z-index:50;left:12px;right:12px;top:12px;display:flex;align-items:center;flex-wrap:wrap;gap:8px;
+    padding:10px 12px;border:1px solid #d3bc8e42;background:#111711e8;border-radius:4px;
+  }
+  #testbar strong{font:15px/1.2 Georgia,serif;letter-spacing:.08em;color:#f2e9da;margin-right:6px}
+  #testbar button,#testbar input,#testbar textarea,#testbar select,#testbar [contenteditable]{
+    font:12px/1.2 "Microsoft YaHei",sans-serif;color:#f2e9da;background:#202520;border:1px solid #d3bc8e42;
+    border-radius:4px;padding:7px 10px;min-height:34px;
+  }
+  #testbar button{cursor:pointer}
+  #testbar button:hover{background:#454d3c}
+  #testbar button:focus-visible,#testbar input:focus-visible,#testbar textarea:focus-visible,#testbar select:focus-visible,#testbar [contenteditable]:focus-visible{outline:2px solid #e5ca90;outline-offset:2px}
+  #testbar input{width:110px}
+  #testbar textarea{width:86px;height:34px;resize:none;padding:6px 8px}
+  #testbar select{width:76px;cursor:pointer}
+  #testbar [contenteditable]{min-width:74px;padding:6px 8px;cursor:text}
+  #hint-live{flex:1;min-width:180px;color:#d8d0bd;font-size:11px;text-align:right}
+  #log{
+    position:fixed;z-index:40;right:14px;bottom:14px;width:min(470px,calc(100vw - 28px));max-height:52vh;overflow:auto;
+    padding:13px 15px;border:1px solid #d3bc8e42;background:#111711ed;border-radius:4px;
+    box-shadow:0 18px 60px #0006;font-size:11px;
+  }
+  #log h2{font:13px/1.3 Georgia,serif;letter-spacing:.12em;margin:0 0 8px;color:#f2e9da}
+  #results{list-style:none;margin:0;padding:0;display:grid;gap:3px}
+  #results li{padding:3px 0;border-bottom:1px solid #f2e9da0f;display:flex;gap:7px;align-items:baseline}
+  #results .ok{color:#b9d29a}
+  #results .fail{color:#e2a28f}
+  #results .mark{width:13px;flex:0 0 13px;text-align:center;font-weight:700}
+  #results .err{display:block;color:#e2a28f;margin-top:2px;font-size:10px;white-space:pre-wrap}
+  #summary{margin:10px 0 0;color:#d8d0bd;font-size:11px}
+  #summary b{color:#f2e9da}
+  #status{color:#b9d29a;font-size:11px;margin-left:auto}
+  @media(max-width:720px){
+    #testbar{left:8px;right:8px;top:8px;padding:8px;gap:5px}
+    #testbar strong{width:100%}
+    #testbar button,#testbar input,#testbar textarea,#testbar select,#testbar [contenteditable]{min-height:44px;padding:6px 9px}
+    #hint-live{text-align:left}
+    #log{right:8px;bottom:8px;width:calc(100vw - 16px);max-height:38vh}
+  }
+</style>
+
+<canvas id="scene" aria-label="操作测试画布"></canvas>
+
+<header id="testbar">
+  <strong>experience-controls 测试</strong>
+  <button id="preview" type="button">创建触屏行走预览</button>
+  <button id="preview-dispose" type="button">销毁预览</button>
+  <button id="mode-view" type="button">view</button>
+  <button id="mode-walk" type="button">walk</button>
+  <button id="mode-blocked" type="button">blocked</button>
+  <button id="ui-test-button" type="button">UI 按钮（不应旋转）</button>
+  <label>焦点测试 <input id="focus-input" placeholder="输入框"></label>
+  <textarea id="focus-textarea" placeholder="textarea"></textarea>
+  <select id="focus-select" aria-label="焦点测试下拉框"><option>select</option></select>
+  <div id="focus-editable" contenteditable="true" tabindex="0" role="textbox" aria-label="焦点测试可编辑区">可编辑</div>
+  <button id="focus-button" type="button">按钮焦点</button>
+  <span id="hint-live" role="status">等待测试…</span>
+</header>
+
+<section id="log" aria-label="测试报告">
+  <h2>TEST REPORT</h2>
+  <ol id="results"></ol>
+  <p id="summary">运行中…</p>
+  <p id="status"></p>
+</section>
+
+<script type="application/json" id="xc-results">{"pending":true}</script>
+
+<script type="module">
+import { createExperienceControls } from '../web/experience-controls.mjs';
+
+const canvas = document.getElementById('scene');
+const resultsEl = document.getElementById('results');
+const summaryEl = document.getElementById('summary');
+const hintLive = document.getElementById('hint-live');
+const statusEl = document.getElementById('status');
+const unhandled = [];
+
+window.addEventListener('unhandledrejection', (event) => {
+  unhandled.push(String(event.reason?.message || event.reason));
+  event.preventDefault();
+});
+
+// 真实 pointer lock 在无头浏览器中不可用；用可控的 document/ canvas 桩验证状态机。
+let fakeLocked = null;
+let lockMode = 'reject';
+try {
+  Object.defineProperty(document, 'pointerLockElement', {
+    configurable: true,
+    get: () => fakeLocked
+  });
+} catch (error) {
+  // 如果浏览器不允许覆盖，锁相关测试会给出明确失败，而不是静默跳过。
+  window.__XC_LOCK_STUB__ = String(error);
+}
+canvas.requestPointerLock = function requestPointerLockStub() {
+  if (lockMode === 'success') {
+    fakeLocked = canvas;
+    document.dispatchEvent(new Event('pointerlockchange'));
+    return Promise.resolve();
+  }
+  if (lockMode === 'reject') return Promise.reject(new Error('测试拒绝 Pointer Lock'));
+  if (lockMode === 'error') {
+    setTimeout(() => document.dispatchEvent(new Event('pointerlockerror')), 0);
+    return undefined;
+  }
+  if (lockMode === 'late') {
+    // 模拟“请求已发出、宿主先 dispose、浏览器稍后才真正锁定”的竞态。
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        fakeLocked = canvas;
+        document.dispatchEvent(new Event('pointerlockchange'));
+        resolve();
+      }, 30);
+    });
+  }
+  return undefined;
+};
+document.exitPointerLock = function exitPointerLockStub() {
+  if (fakeLocked === canvas) {
+    fakeLocked = null;
+    document.dispatchEvent(new Event('pointerlockchange'));
+  }
+};
+
+const tick = () => new Promise((resolve) => setTimeout(resolve, 0));
+const last = (arr) => arr[arr.length - 1];
+const eq = (actual, expected, message) => {
+  if (!Object.is(actual, expected)) {
+    throw new Error(`${message}（期望 ${JSON.stringify(expected)}，实际 ${JSON.stringify(actual)}）`);
+  }
+};
+const near = (actual, expected, eps, message) => {
+  if (!Number.isFinite(actual) || Math.abs(actual - expected) > eps) {
+    throw new Error(`${message}（期望 ≈${expected}，实际 ${actual}）`);
+  }
+};
+const ok = (condition, message) => {
+  if (!condition) throw new Error(message);
+};
+const keyDown = (code, extra = {}) => window.dispatchEvent(new KeyboardEvent('keydown', {
+  code, bubbles: true, cancelable: true, ...extra
+}));
+const keyUp = (code) => window.dispatchEvent(new KeyboardEvent('keyup', { code, bubbles: true, cancelable: true }));
+const pointer = (type, target, id, x, y, pointerType = 'touch', button = 0) => {
+  target.dispatchEvent(new PointerEvent(type, {
+    pointerId: id,
+    pointerType,
+    isPrimary: id === 11,
+    clientX: x,
+    clientY: y,
+    button,
+    buttons: (type === 'pointerup' || type === 'pointercancel') ? 0 : 1,
+    bubbles: true,
+    cancelable: true
+  }));
+};
+const wheel = (deltaY, extra = {}) => canvas.dispatchEvent(new WheelEvent('wheel', {
+  deltaY, bubbles: true, cancelable: true, ...extra
+}));
+
+function make(options = {}) {
+  fakeLocked = null;
+  const events = { look: [], zoom: [], exit: [], hint: [] };
+  const controls = createExperienceControls({
+    canvas,
+    container: document.body,
+    onLook: (event) => events.look.push(event),
+    onZoom: (event) => events.zoom.push(event),
+    onExit: (event) => events.exit.push(event),
+    onHint: (text) => {
+      events.hint.push(text);
+      hintLive.textContent = text || '（提示为空）';
+    },
+    ...options
+  });
+  return { controls, events };
+}
+
+async function withControls(options, body) {
+  const { controls, events } = make(options);
+  try {
+    await body(controls, events);
+  } finally {
+    controls.dispose();
+  }
+}
+
+const tests = [];
+const results = [];
+async function run(name, fn) {
+  const started = performance.now();
+  try {
+    await fn();
+    const item = { name, ok: true, ms: +(performance.now() - started).toFixed(1) };
+    results.push(item);
+    const li = document.createElement('li');
+    li.className = 'ok';
+    li.innerHTML = '<span class="mark">✓</span><span>' + name + '</span>';
+    resultsEl.append(li);
+  } catch (error) {
+    const item = { name, ok: false, ms: +(performance.now() - started).toFixed(1), error: String(error?.stack || error) };
+    results.push(item);
+    const li = document.createElement('li');
+    li.className = 'fail';
+    li.innerHTML = '<span class="mark">✗</span><span>' + name + '<span class="err"></span></span>';
+    li.querySelector('.err').textContent = String(error?.message || error);
+    resultsEl.append(li);
+  }
+}
+
+// ---------------------------------------------------------------- 测试用例
+await run('WASD / 方向键 / 对角线归一化 / 左右 Shift', async () => {
+  await withControls({ pointerLock: false }, async (controls) => {
+    controls.setMode('walk');
+    let intent = controls.getMoveIntent();
+    eq(intent.forward, 0, '初始 forward');
+    eq(intent.right, 0, '初始 right');
+    eq(intent.sprint, false, '初始 sprint');
+
+    keyDown('KeyW');
+    intent = controls.getMoveIntent();
+    eq(intent.forward, 1, 'W forward');
+    eq(intent.right, 0, 'W right');
+
+    keyDown('KeyD');
+    intent = controls.getMoveIntent();
+    near(intent.forward, Math.SQRT1_2, 1e-9, 'W+D forward 归一化');
+    near(intent.right, Math.SQRT1_2, 1e-9, 'W+D right 归一化');
+    near(Math.hypot(intent.forward, intent.right), 1, 1e-9, '对角线长度不能大于 1');
+
+    keyUp('KeyW');
+    intent = controls.getMoveIntent();
+    eq(intent.forward, 0, '松开 W 后 forward');
+    eq(intent.right, 1, '按住 D 的 right');
+
+    keyDown('ShiftLeft');
+    eq(controls.getMoveIntent().sprint, true, '左 Shift 加速');
+    keyUp('ShiftLeft');
+    keyDown('ShiftRight');
+    eq(controls.getMoveIntent().sprint, true, '右 Shift 加速');
+    keyUp('ShiftRight');
+    keyUp('KeyD');
+
+    keyDown('ArrowUp');
+    keyDown('ArrowLeft');
+    intent = controls.getMoveIntent();
+    near(intent.forward, Math.SQRT1_2, 1e-9, '方向键上+左 forward');
+    near(intent.right, -Math.SQRT1_2, 1e-9, '方向键上+左 right');
+    keyUp('ArrowUp');
+    keyUp('ArrowLeft');
+  });
+});
+
+await run('按住后窗口失焦：立即清零且可恢复', async () => {
+  await withControls({ pointerLock: false }, async (controls) => {
+    controls.setMode('walk');
+    keyDown('KeyW');
+    keyDown('ShiftLeft');
+    eq(controls.getMoveIntent().forward, 1, '失焦前 forward');
+    eq(controls.getMoveIntent().sprint, true, '失焦前 sprint');
+
+    window.dispatchEvent(new Event('blur'));
+    let intent = controls.getMoveIntent();
+    eq(intent.forward, 0, '失焦后 forward');
+    eq(intent.right, 0, '失焦后 right');
+    eq(intent.sprint, false, '失焦后 sprint');
+
+    keyUp('KeyW');
+    keyUp('ShiftLeft');
+    keyDown('KeyW');
+    eq(controls.getMoveIntent().forward, 1, '失焦后重新按 W');
+    keyUp('KeyW');
+  });
+});
+
+await run('visibilitychange 隐藏：立即清空按键和摇杆', async () => {
+  await withControls({ touch: true, pointerLock: false }, async (controls) => {
+    controls.setMode('walk');
+    keyDown('KeyW');
+    const base = document.querySelector('[data-xc-stick-base]');
+    const knob = document.querySelector('[data-xc-stick-knob]');
+    base.style.width = '128px';
+    base.style.height = '128px';
+    knob.style.width = '54px';
+    knob.style.height = '54px';
+    const rect = base.getBoundingClientRect();
+    const cx = rect.left + rect.width / 2;
+    const cy = rect.top + rect.height / 2;
+    pointer('pointerdown', base, 51, cx, cy, 'touch');
+    pointer('pointermove', base, 51, cx, cy - 60, 'touch');
+    eq(controls.getMoveIntent().forward, 1, '隐藏前键盘+摇杆应前进');
+    eq(controls.getMoveIntent().right, 0, '隐藏前 right 为零');
+
+    let overridden = false;
+    try {
+      Object.defineProperty(document, 'hidden', { configurable: true, get: () => true });
+      overridden = true;
+      document.dispatchEvent(new Event('visibilitychange'));
+    } finally {
+      if (overridden) delete document.hidden;
+    }
+    ok(overridden, '测试需要能模拟 document.hidden');
+    keyUp('KeyW');
+    const intent = controls.getMoveIntent();
+    eq(intent.forward, 0, 'visibilitychange 后 forward');
+    eq(intent.right, 0, 'visibilitychange 后 right');
+    eq(document.querySelector('[data-xc-stick]').dataset.active, 'false', 'visibilitychange 后摇杆复位');
+  });
+});
+
+await run('焦点在 input/textarea/select/contenteditable 时不拦截；按钮焦点仍可 WASD', async () => {
+  await withControls({ pointerLock: false }, async (controls) => {
+    controls.setMode('walk');
+    keyDown('KeyW');
+    eq(controls.getMoveIntent().forward, 1, '普通焦点下 W');
+    keyUp('KeyW');
+
+    const editableTargets = [
+      ['input', document.getElementById('focus-input')],
+      ['textarea', document.getElementById('focus-textarea')],
+      ['select', document.getElementById('focus-select')],
+      ['contenteditable', document.getElementById('focus-editable')]
+    ];
+    for (const [label, target] of editableTargets) {
+      target.focus();
+      eq(document.activeElement, target, `${label} 应获得焦点`);
+      keyDown('KeyW');
+      eq(controls.getMoveIntent().forward, 0, `${label} 焦点下 W 不应移动`);
+      keyUp('KeyW');
+      target.blur();
+    }
+
+    const button = document.getElementById('focus-button');
+    button.focus();
+    keyDown('KeyW');
+    eq(controls.getMoveIntent().forward, 1, '按钮焦点下 W 仍应移动');
+    keyUp('KeyW');
+    button.blur();
+  });
+});
+
+await run('视角模式：画布拖动环视、滚轮缩放，UI 点击不旋转', async () => {
+  await withControls({ pointerLock: false, touch: false }, async (controls, events) => {
+    const uiButton = document.getElementById('ui-test-button');
+    uiButton.dispatchEvent(new PointerEvent('pointerdown', {
+      pointerId: 31, pointerType: 'mouse', isPrimary: true,
+      clientX: 520, clientY: 42, button: 0, buttons: 1, bubbles: true, cancelable: true
+    }));
+    window.dispatchEvent(new PointerEvent('pointermove', {
+      pointerId: 31, pointerType: 'mouse', isPrimary: true,
+      clientX: 580, clientY: 100, bubbles: true, cancelable: true
+    }));
+    eq(events.look.length, 0, 'UI 按钮拖动不应产生环视');
+
+    wheel(120);
+    eq(events.zoom.length, 1, '滚轮应产生一次缩放意图');
+    eq(last(events.zoom).deltaY, 120, '滚轮 deltaY');
+    eq(last(events.zoom).source, 'wheel', '滚轮 source');
+    wheel(120, { ctrlKey: true });
+    eq(events.zoom.length, 1, 'Ctrl+滚轮应留给浏览器');
+
+    pointer('pointerdown', canvas, 21, 400, 300, 'mouse');
+    pointer('pointermove', canvas, 21, 430, 312, 'mouse');
+    eq(events.look.length, 1, '画布拖动应产生一次环视');
+    eq(last(events.look).dx, 30, '环视 dx 右为正');
+    eq(last(events.look).dy, 12, '环视 dy 下为正');
+    eq(last(events.look).source, 'drag', '拖动来源');
+    pointer('pointerup', canvas, 21, 430, 312, 'mouse');
+
+    const before = events.look.length;
+    pointer('pointermove', canvas, 21, 500, 400, 'mouse');
+    eq(events.look.length, before, '松开后不应继续环视');
+  });
+});
+
+await run('Pointer Lock 成功：锁定后鼠标环视、Esc 退出且提示恢复', async () => {
+  lockMode = 'success';
+  try {
+    await withControls({ pointerLock: true, touch: false }, async (controls, events) => {
+      controls.setMode('walk');
+      await tick();
+      eq(fakeLocked, canvas, '应取得 Pointer Lock');
+      ok(last(events.hint).includes('鼠标环视'), '锁定提示应说明鼠标环视');
+
+      document.dispatchEvent(new MouseEvent('mousemove', {
+        movementX: 12, movementY: -7, bubbles: true, cancelable: true
+      }));
+      eq(events.look.length, 1, '锁定后 mousemove 应产生环视');
+      eq(last(events.look).dx, 12, '锁定 dx');
+      eq(last(events.look).dy, -7, '锁定 dy');
+      eq(last(events.look).source, 'lock', '锁定来源');
+
+      keyDown('Escape');
+      await tick();
+      eq(events.exit.length, 1, 'Esc 应只触发一次 onExit');
+      eq(events.exit[0].reason, 'escape', 'Esc 原因');
+      eq(fakeLocked, null, 'Esc 后应释放锁');
+      ok(last(events.hint).includes('拖动环视'), '退出后提示应恢复为视角提示');
+      eq(controls.getMoveIntent().forward, 0, '退出后移动为零');
+    });
+  } finally {
+    lockMode = 'reject';
+  }
+});
+
+await run('Pointer Lock 被浏览器夺走：onExit(pointerlock-lost) 且不残留移动', async () => {
+  lockMode = 'success';
+  try {
+    await withControls({ pointerLock: true, touch: false }, async (controls, events) => {
+      controls.setMode('walk');
+      await tick();
+      eq(fakeLocked, canvas, '应取得 Pointer Lock');
+
+      fakeLocked = null;
+      document.dispatchEvent(new Event('pointerlockchange'));
+      await tick();
+      eq(events.exit.length, 1, '锁丢失应触发一次 onExit');
+      eq(events.exit[0].reason, 'pointerlock-lost', '锁丢失原因');
+      ok(last(events.hint).includes('拖动环视'), '锁丢失后提示恢复视角');
+      eq(controls.getMoveIntent().forward, 0, '锁丢失后移动为零');
+    });
+  } finally {
+    lockMode = 'reject';
+  }
+});
+
+await run('Pointer Lock 拒绝：平滑降级、无未处理拒绝，WASD 仍可用', async () => {
+  lockMode = 'reject';
+  try {
+    await withControls({ pointerLock: true, touch: false }, async (controls, events) => {
+      controls.setMode('walk');
+      await tick();
+      await tick();
+      eq(fakeLocked, null, '拒绝锁后不应处于锁定状态');
+      ok(last(events.hint).includes('拖动') || last(events.hint).includes('WASD'), '拒绝后应给拖动环视提示');
+
+      keyDown('KeyW');
+      eq(controls.getMoveIntent().forward, 1, '降级后 WASD 仍有效');
+      keyUp('KeyW');
+      eq(unhandled.length, 0, '不应出现 unhandledrejection');
+
+      keyDown('Escape');
+      eq(events.exit.length, 1, '降级模式 Esc 也应退出');
+      eq(events.exit[0].reason, 'escape', '降级模式 Esc 原因');
+    });
+  } finally {
+    lockMode = 'reject';
+  }
+});
+
+await run('pointerlockerror 事件：同样进入降级模式', async () => {
+  lockMode = 'error';
+  try {
+    await withControls({ pointerLock: true, touch: false }, async (controls, events) => {
+      controls.setMode('walk');
+      await tick();
+      await tick();
+      eq(fakeLocked, null, 'pointerlockerror 后不应锁定');
+      ok(last(events.hint).includes('拖动') || last(events.hint).includes('WASD'), '应给降级提示');
+      eq(unhandled.length, 0, 'pointerlockerror 不应产生未处理拒绝');
+    });
+  } finally {
+    lockMode = 'reject';
+  }
+});
+
+await run('Pointer Lock API 不可用：直接降级，不抛异常', async () => {
+  const original = canvas.requestPointerLock;
+  canvas.requestPointerLock = undefined;
+  try {
+    await withControls({ pointerLock: true, touch: false }, async (controls, events) => {
+      controls.setMode('walk');
+      await tick();
+      ok(last(events.hint).includes('拖动') || last(events.hint).includes('WASD'), '无 API 时应给降级提示');
+      keyDown('ArrowUp');
+      eq(controls.getMoveIntent().forward, 1, '无 API 时方向键仍可用');
+      keyUp('ArrowUp');
+      eq(unhandled.length, 0, '无 API 不应产生未处理拒绝');
+    });
+  } finally {
+    canvas.requestPointerLock = original;
+  }
+});
+
+await run('触屏双指：左摇杆移动 + 右侧环视可同时操作，松手/取消即停', async () => {
+  await withControls({ touch: true, pointerLock: false }, async (controls, events) => {
+    const stick = document.querySelector('[data-xc-stick]');
+    const base = document.querySelector('[data-xc-stick-base]');
+    const knob = document.querySelector('[data-xc-stick-knob]');
+    ok(stick && base && knob, '触屏模式应创建摇杆 DOM');
+    // 样式表是异步加载的；给测试固定尺寸，几何计算不依赖 CSS 是否已到。
+    base.style.width = '128px';
+    base.style.height = '128px';
+    knob.style.width = '54px';
+    knob.style.height = '54px';
+
+    controls.setMode('walk');
+    eq(document.querySelector('.xc-root').dataset.xcMode, 'walk', '根节点进入 walk');
+
+    const rect = base.getBoundingClientRect();
+    const cx = rect.left + rect.width / 2;
+    const cy = rect.top + rect.height / 2;
+
+    pointer('pointerdown', base, 11, cx, cy, 'touch');
+    pointer('pointermove', base, 11, cx, cy - 60, 'touch');
+    let intent = controls.getMoveIntent();
+    ok(intent.forward > 0.9, `摇杆上推应前进，实际 ${intent.forward}`);
+    ok(Math.abs(intent.right) < 0.05, `摇杆上推 right 应接近 0，实际 ${intent.right}`);
+    eq(stick.dataset.active, 'true', '摇杆应标记 active');
+
+    const looksBefore = events.look.length;
+    pointer('pointerdown', canvas, 12, 300, 300, 'touch');
+    pointer('pointermove', canvas, 12, 335, 318, 'touch');
+    eq(events.look.length, looksBefore + 1, '第二根手指应产生环视');
+    eq(last(events.look).dx, 35, '触屏环视 dx');
+    eq(last(events.look).dy, 18, '触屏环视 dy');
+    eq(last(events.look).source, 'drag', '触屏环视来源');
+
+    pointer('pointermove', base, 11, cx + 60, cy, 'touch');
+    intent = controls.getMoveIntent();
+    ok(intent.right > 0.9, `摇杆右推应右移，实际 ${intent.right}`);
+    ok(Math.abs(intent.forward) < 0.05, `摇杆右推 forward 应接近 0，实际 ${intent.forward}`);
+
+    pointer('pointerup', canvas, 12, 335, 318, 'touch');
+    const looksAfterUp = events.look.length;
+    pointer('pointermove', canvas, 12, 400, 400, 'touch');
+    eq(events.look.length, looksAfterUp, '环视手指松开后不应继续环视');
+    ok(controls.getMoveIntent().right > 0.9, '松开环视手指不应影响摇杆');
+
+    pointer('pointercancel', base, 11, cx + 60, cy, 'touch');
+    intent = controls.getMoveIntent();
+    eq(intent.forward, 0, 'pointercancel 后 forward');
+    eq(intent.right, 0, 'pointercancel 后 right');
+    eq(stick.dataset.active, 'false', 'pointercancel 后摇杆复位');
+    ok(knob.style.transform.includes('0px'), 'pointercancel 后摇杆旋钮回到中心');
+  });
+});
+
+await run('触屏退出按钮：onExit(control-exit) 并回到视角模式', async () => {
+  await withControls({ touch: true, pointerLock: false }, async (controls, events) => {
+    controls.setMode('walk');
+    const exit = document.querySelector('.xc-exit');
+    ok(exit, '触屏行走应提供退出按钮');
+    exit.click();
+    eq(events.exit.length, 1, '退出按钮触发一次 onExit');
+    eq(events.exit[0].reason, 'control-exit', '退出按钮原因');
+    eq(document.querySelector('.xc-root').dataset.xcMode, 'view', '退出按钮回到 view');
+    eq(controls.getMoveIntent().forward, 0, '退出后移动为零');
+  });
+});
+
+await run('blocked：清空移动/摇杆、释放锁定、禁用环视与滚轮', async () => {
+  lockMode = 'success';
+  try {
+    await withControls({ touch: true, pointerLock: true }, async (controls, events) => {
+      controls.setMode('walk');
+      await tick();
+      eq(fakeLocked, canvas, 'blocked 前应已锁定');
+      keyDown('KeyW');
+      eq(controls.getMoveIntent().forward, 1, 'blocked 前可移动');
+
+      controls.setMode('blocked');
+      keyDown('KeyW'); // 旧按键状态必须已被清掉，新的 keydown 也不能进入
+      eq(controls.getMoveIntent().forward, 0, 'blocked 后移动为零');
+      eq(fakeLocked, null, 'blocked 应释放 Pointer Lock');
+      eq(last(events.hint), '', 'blocked 提示为空，让宿主隐藏');
+      eq(document.querySelector('.xc-root').dataset.xcMode, 'blocked', '根节点 blocked');
+
+      const looks = events.look.length;
+      pointer('pointerdown', canvas, 41, 100, 100, 'touch');
+      pointer('pointermove', canvas, 41, 140, 130, 'touch');
+      eq(events.look.length, looks, 'blocked 时画布环视应禁用');
+      const zooms = events.zoom.length;
+      wheel(100);
+      eq(events.zoom.length, zooms, 'blocked 时滚轮应禁用');
+
+      controls.setMode('view');
+      ok(last(events.hint).includes('拖动'), '关闭 UI 后提示恢复视角');
+      eq(document.querySelector('.xc-root').dataset.xcMode, 'view', '关闭 UI 后回到 view');
+    });
+  } finally {
+    lockMode = 'reject';
+  }
+});
+
+await run('dispose：监听器成对移除、DOM/样式清理、重复创建销毁', async () => {
+  const originalAdd = EventTarget.prototype.addEventListener;
+  const originalRemove = EventTarget.prototype.removeEventListener;
+  let added = 0;
+  let removed = 0;
+  EventTarget.prototype.addEventListener = function (...args) {
+    added += 1;
+    return originalAdd.apply(this, args);
+  };
+  EventTarget.prototype.removeEventListener = function (...args) {
+    removed += 1;
+    return originalRemove.apply(this, args);
+  };
+  try {
+    for (let i = 0; i < 5; i += 1) {
+      const { controls } = make({ touch: true, pointerLock: false });
+      const beforeModeSwitch = added;
+      controls.setMode('view');
+      controls.setMode('walk');
+      controls.setMode('blocked');
+      controls.setMode('view');
+      eq(added, beforeModeSwitch, '模式切换不应重复注册监听器');
+      controls.setMode('walk');
+      keyDown('KeyW');
+      keyUp('KeyW');
+      ok(document.querySelector('.xc-root'), '创建后根节点存在');
+      controls.dispose();
+      eq(document.querySelectorAll('.xc-root').length, 0, 'dispose 后根节点应移除');
+      eq(controls.getMoveIntent().forward, 0, 'dispose 后意图为零');
+      controls.dispose(); // 幂等
+      controls.setMode('view'); // dispose 后应安全忽略
+      controls.reset();
+    }
+  } finally {
+    EventTarget.prototype.addEventListener = originalAdd;
+    EventTarget.prototype.removeEventListener = originalRemove;
+  }
+  ok(added > 0, '应记录到监听器注册');
+  eq(removed, added, `监听器添加/移除数量必须一致（${added}/${removed}）`);
+  eq(document.querySelectorAll('.xc-root').length, 0, '重复循环后不应残留控件根节点');
+  eq(document.querySelectorAll('link[data-xc-style]').length, 0, '最后一个实例销毁后应移除样式表');
+});
+
+await run('dispose 时摇杆/环视仍在拖动也能清理', async () => {
+  const { controls } = make({ touch: true, pointerLock: false });
+  controls.setMode('walk');
+  const base = document.querySelector('[data-xc-stick-base]');
+  const knob = document.querySelector('[data-xc-stick-knob]');
+  base.style.width = '128px';
+  base.style.height = '128px';
+  knob.style.width = '54px';
+  knob.style.height = '54px';
+  const rect = base.getBoundingClientRect();
+  const cx = rect.left + rect.width / 2;
+  const cy = rect.top + rect.height / 2;
+  pointer('pointerdown', base, 61, cx, cy, 'touch');
+  pointer('pointermove', base, 61, cx, cy - 60, 'touch');
+  pointer('pointerdown', canvas, 62, 300, 300, 'touch');
+  pointer('pointermove', canvas, 62, 330, 316, 'touch');
+  ok(controls.getMoveIntent().forward > 0.9, '销毁前摇杆应仍有输入');
+
+  controls.dispose();
+  eq(document.querySelectorAll('.xc-root').length, 0, '销毁后控件根节点移除');
+  eq(controls.getMoveIntent().forward, 0, '销毁后移动为零');
+  controls.reset();
+  controls.setMode('view');
+  controls.dispose();
+  eq(document.querySelectorAll('.xc-root').length, 0, '销毁后重复调用不复活控件');
+});
+
+await run('dispose 后迟到的 Pointer Lock 也会被释放', async () => {
+  lockMode = 'late';
+  try {
+    const { controls } = make({ pointerLock: true, touch: false });
+    controls.setMode('walk');
+    controls.dispose();
+    await new Promise((resolve) => setTimeout(resolve, 80));
+    eq(fakeLocked, null, 'dispose 后晚到的锁应被释放');
+    eq(document.querySelectorAll('.xc-root').length, 0, '根节点仍应移除');
+    eq(unhandled.length, 0, '迟到锁不应产生未处理拒绝');
+  } finally {
+    lockMode = 'reject';
+  }
+});
+
+await run('宿主回调抛错不打断输入，且只记录一次', async () => {
+  const logs = [];
+  const globalErrors = [];
+  const originalError = console.error;
+  const onError = (event) => {
+    globalErrors.push(String(event.message || event.error));
+    if (event.preventDefault) event.preventDefault();
+  };
+  console.error = (...args) => { logs.push(args.map(String).join(' ')); };
+  window.addEventListener('error', onError);
+  try {
+    const exits = [];
+    const controls = createExperienceControls({
+      canvas,
+      container: document.body,
+      onLook: () => { throw new Error('look boom'); },
+      onZoom: () => { throw new Error('zoom boom'); },
+      onHint: () => {},
+      onExit: (event) => exits.push(event),
+      pointerLock: false,
+      touch: false
+    });
+    try {
+      controls.setMode('walk');
+      pointer('pointerdown', canvas, 71, 300, 300, 'mouse');
+      pointer('pointermove', canvas, 71, 330, 316, 'mouse');
+      pointer('pointerup', canvas, 71, 330, 316, 'mouse');
+      wheel(100);
+      keyDown('KeyW');
+      eq(controls.getMoveIntent().forward, 1, '回调抛错后键盘仍有效');
+      keyUp('KeyW');
+      keyDown('Escape');
+      eq(exits.length, 1, 'onExit 仍然正常');
+      await tick();
+      eq(globalErrors.length, 0, '回调异常不应冒到 window error');
+      eq(logs.length, 1, `回调异常只应记录一次，实际 ${logs.length}`);
+      ok(logs[0].includes('onLook'), '应记录抛错的回调名');
+    } finally {
+      controls.dispose();
+    }
+  } finally {
+    window.removeEventListener('error', onError);
+    console.error = originalError;
+  }
+});
+
+await run('没有未处理的 Promise 拒绝', async () => {
+  await tick();
+  await tick();
+  eq(unhandled.length, 0, `unhandledrejection: ${unhandled.join(' | ')}`);
+});
+
+const passed = results.filter((item) => item.ok).length;
+const failed = results.length - passed;
+const report = {
+  pending: false,
+  total: results.length,
+  passed,
+  failed,
+  unhandled: unhandled.length,
+  results,
+  browser: navigator.userAgent,
+  lockStubError: window.__XC_LOCK_STUB__ || null
+};
+document.getElementById('xc-results').textContent = JSON.stringify(report);
+window.__XC_TEST_RESULTS__ = report;
+summaryEl.innerHTML = `共 <b>${report.total}</b> 项，通过 <b>${passed}</b>，失败 <b>${failed}</b>；未处理拒绝 <b>${unhandled.length}</b>。`;
+document.title = `此间 · 操作层测试 ${failed ? '✗' : '✓'}`;
+
+// ---------------------------------------------------------------- 手动预览
+let preview = null;
+function ensurePreview() {
+  if (preview) return preview;
+  const made = make({ touch: true, pointerLock: false });
+  preview = made.controls;
+  preview.setMode('walk');
+  statusEl.textContent = '触屏预览已启动：拖摇杆/右侧画面，点退出按钮。';
+  return preview;
+}
+document.getElementById('preview').addEventListener('click', () => {
+  ensurePreview();
+});
+document.getElementById('preview-dispose').addEventListener('click', () => {
+  if (preview) {
+    preview.dispose();
+    preview = null;
+    statusEl.textContent = '触屏预览已销毁。';
+  }
+});
+document.getElementById('mode-view').addEventListener('click', () => { ensurePreview().setMode('view'); });
+document.getElementById('mode-walk').addEventListener('click', () => { ensurePreview().setMode('walk'); });
+document.getElementById('mode-blocked').addEventListener('click', () => { ensurePreview().setMode('blocked'); });
+</script>
+</html>
