@@ -7,7 +7,7 @@
 
 `web/models/characters/{rin,linchuan,camille,noah}.glb` 已由 Claude 从 5060 分支的四个 OBJ 转出（`D:\project\cijian\tools\char_to_glb.py`）：
 静态网格、4 万三角面、贴图 2048/1024、脚底在原点、身高统一 1.70 m、正面朝 three 的 +Z（Blender −Y）、**没有骨骼**。
-网页当前用程序化摆动（呼吸、走路颠簸）临时顶替，能看但腿不会动。原始 OBJ：`D:\project\cijian\_inbox\character\obj\c1..c4`
+网页已在载入时自动绑骨并用程序化步态驱动（`web/game/skin.mjs`，预览 `web/game/rig-preview.html`），走路已有完整腿臂动作；手工绑骨动画仍可提升细节（手指、头发、裙摆），**现为可选优化**。原始 OBJ：`D:\project\cijian\_inbox\character\obj\c1..c4`
 （c1=Camille，c2=林川，c3=Noah，c4=凛），预览图 `web/models/characters/_preview.png`。
 
 ## 任务 1（最重要）：给四人做骨骼和动画
@@ -34,6 +34,10 @@
 - ≤ 60k 三角面，贴图 ≤ 2048，原点在树根中心、+Y 向上。
 - 不需要碰撞体（网页用圆柱碰撞）；树下留出 ≥ 3 m 半径的可站立空地。
 - CC0 贴图可用（Poly Haven / ambientCG），在 `licenses/` 里登记来源。
+
+## 任务 3（优先于任务 1、2）：地图建模问题
+
+见 `ISSUES_WALK_AUDIT_2026-11-03.md`，先做标“高”的两项（停车场周边背景与雷门雕像、路口南侧小巷）。
 
 ## 不要做
 

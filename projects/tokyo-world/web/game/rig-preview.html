@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>人物动作预览</title>
+<style>
+ :root{--bg:#1b1a17;--ink:#efe4cc}
+ html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font:13px "Microsoft YaHei",sans-serif;overflow:hidden}
+ canvas{display:block;width:100%;height:100%}
+ #ui{position:fixed;left:16px;top:16px;display:flex;gap:8px;flex-wrap:wrap}
+ #ui button{background:#2a2925;color:var(--ink);border:1px solid #6b624f;border-radius:3px;padding:7px 12px;cursor:pointer}
+ #ui button[aria-pressed="true"]{background:#d8bd86;color:#1b1a17}
+ #info{position:fixed;left:16px;bottom:14px;opacity:.7}
+</style>
+<div id="ui">
+ <button data-mode="idle" aria-pressed="true">站立</button><button data-mode="walk">行走 1.8 m/s</button><button data-mode="run">快走 3.4 m/s</button><button data-mode="talk">说话</button>
+ <button data-view="front">正面</button><button data-view="side">侧面</button><button data-view="back">背面</button>
+</div>
+<div id="info">程序化绑骨 + 步态（无骨骼模型时自动启用）。拖动画面可旋转。</div>
+<script type="importmap">{"imports":{"three":"../vendor/three.module.js","three/addons/":"../vendor/"}}</script>
+<script type="module">
+import * as THREE from 'three';
+import {createActor} from './actors.mjs';
+const renderer=new THREE.WebGLRenderer({antialias:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.outputColorSpace=THREE.SRGBColorSpace;
+document.body.prepend(renderer.domElement);
+const scene=new THREE.Scene();scene.background=new THREE.Color(0x24221e);
+scene.add(new THREE.HemisphereLight(0xfff3e0,0x3a332a,1.6));const sun=new THREE.DirectionalLight(0xffe2c0,2.4);sun.position.set(3,5,4);scene.add(sun);
+const floor=new THREE.Mesh(new THREE.CircleGeometry(8,64),new THREE.MeshStandardMaterial({color:0x4a463e,roughness:.95}));floor.rotation.x=-Math.PI/2;scene.add(floor);
+const camera=new THREE.PerspectiveCamera(32,1,.05,100);
+const ids=['rin','linchuan','camille','noah'],actors=await Promise.all(ids.map(createActor));
+actors.forEach((a,i)=>{a.place((i-1.5)*1.1,0,0);scene.add(a.root);});
+let mode='idle',view='front',yaw=0,drag=null;
+const views={front:0,side:Math.PI/2,back:Math.PI};
+document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{mode=b.dataset.mode;document.querySelectorAll('[data-mode]').forEach(x=>x.setAttribute('aria-pressed',x===b));});
+document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>{yaw=views[b.dataset.view];});
+renderer.domElement.onpointerdown=e=>drag=e.clientX;addEventListener('pointerup',()=>drag=null);
+addEventListener('pointermove',e=>{if(drag!==null){yaw-=(e.clientX-drag)*.008;drag=e.clientX;}});
+function size(){renderer.setSize(innerWidth,innerHeight,false);camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();}
+size();addEventListener('resize',size);
+let last=performance.now();
+window.__preview={actors,setMode:m=>mode=m,setYaw:y=>yaw=y};
+function loop(n){const dt=Math.min(.05,(n-last)/1000);last=n;
+ const sp=mode==='walk'?1.8:mode==='run'?3.4:0;
+ for(const a of actors){a.talking=mode==='talk';a.face(0,true);a.update(dt,sp);}
+ camera.position.set(Math.sin(yaw)*6.4,1.25,Math.cos(yaw)*6.4);camera.lookAt(0,.88,0);
+ renderer.render(scene,camera);requestAnimationFrame(loop);}
+requestAnimationFrame(loop);
+</script>
+</html>

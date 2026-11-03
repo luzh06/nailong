@@ -4,6 +4,7 @@ import * as THREE from 'three';
 import {GLTFLoader} from 'three/addons/GLTFLoader.js';
 import {clone as cloneSkinned} from 'three/addons/SkeletonUtils.js';
 import {ROLES} from './story-data.mjs';
+import {rigStaticCharacter,Gait} from './skin.mjs';
 
 const loader=new GLTFLoader();
 const cache=new Map();
@@ -32,6 +33,8 @@ export class Actor{
   this.clips=new Map(gltf.animations.map(a=>[a.name,a]));
   this.rigged=this.clips.has('idle')&&this.clips.has('walk');
   if(this.rigged){this.mixer=new THREE.AnimationMixer(model);this.actions={};for(const [k,c] of this.clips)this.actions[k]=this.mixer.clipAction(c);this.current=null;this.play('idle');}
+  else{ // 静态网格：载入时自动建骨架并蒙皮，用程序化步态驱动
+   const rig=rigStaticCharacter(model);if(rig)this.gait=new Gait(rig);}
   this.facing=0;this.targetFacing=0;this.speed=0;this.phase=Math.random()*10;this.mode='idle';this.time=0;this.talking=false;this.opacity=1;
  }
  play(name,fade=.25){if(!this.rigged)return;const a=this.actions[name]||this.actions.idle;if(this.current===a)return;a.reset().fadeIn(fade).play();this.current?.fadeOut(fade);this.current=a;}
@@ -43,24 +46,16 @@ export class Actor{
  // speed：米/秒
  update(dt,speed=0){
   this.time+=dt;this.speed=damp(this.speed,speed,8,dt);
-  this.facing=angleDamp(this.facing,this.targetFacing,speed>.1?10:6,dt);this.root.rotation.y=this.facing;
+  const prev=this.facing;this.facing=angleDamp(this.facing,this.targetFacing,speed>.1?10:6,dt);this.root.rotation.y=this.facing;
+  this._turn=damp(this._turn??0,-(this.facing-prev)/Math.max(dt,1e-3)*.05*Math.min(1,this.speed/1.5),6,dt);
   if(this.rigged){
    this.play(this.speed>.25?'walk':this.talking&&this.actions.talk?'talk':'idle');
    if(this.current===this.actions.walk)this.current.timeScale=THREE.MathUtils.clamp(this.speed/1.8,.6,1.9);
    this.mixer.update(dt);return;
   }
-  // 程序化：步频随速度；步行时上下起伏、左右侧摆、略前倾；站立时呼吸；说话时轻微点头
-  const walkK=THREE.MathUtils.clamp(this.speed/1.8,0,1.6);
-  this.phase+=dt*(walkK>.05?6.2*Math.min(1.3,.75+walkK*.35):0);
-  const b=this.body;
-  const bob=Math.abs(Math.sin(this.phase))*.035*Math.min(1,walkK);
-  const breathe=Math.sin(this.time*1.6)*.004*(1-Math.min(1,walkK));
-  b.position.y=bob;
-  b.rotation.z=Math.sin(this.phase)*.035*Math.min(1,walkK);
-  b.rotation.x=.06*Math.min(1,walkK)+(this.talking?Math.sin(this.time*2.4)*.018:0);
-  b.rotation.y=Math.sin(this.phase)*.05*Math.min(1,walkK);
-  b.scale.set(1-breathe*.5,1+breathe,1-breathe*.5);
-  this.blob.scale.setScalar(1-bob*2);
+  if(this.gait){this.gait.update(dt,this.speed,this.talking);
+   // 转身时身体略向弯内倾
+   this.body.rotation.z=THREE.MathUtils.clamp(this._turn??0,-.08,.08);return;}
  }
 }
 

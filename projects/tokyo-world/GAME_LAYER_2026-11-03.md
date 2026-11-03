@@ -18,7 +18,7 @@
 | 模块 | 内容 | 文件 |
 |---|---|---|
 | 开场 | 3D 古书（5060 的 `cijian_antique_book.glb` 动画）+ 标题 + 借阅卡（四人立绘，Blender 渲染）+ 随身相机选择 + 翻书旁白 + 书页发光入城；开场期间城市后台加载并暂停渲染，未就绪时停在“书页正在显影”并显示真实进度 | `game/opening.mjs` |
-| 人物 | 四人 OBJ（每个约 150 万面）→ 4 万面、2048 贴图 GLB，身高按角色缩放，软阴影；有 `idle/walk/talk` 骨骼动画时自动用 AnimationMixer，没有时程序化步行起伏/呼吸/点头 | `game/actors.mjs`、`models/characters/*.glb`、`D:\project\cijian\tools\char_to_glb.py` |
+| 人物 | 四人 OBJ（每个约 150 万面）→ 4 万面、2048 贴图 GLB，身高按角色缩放，软阴影。载入时自动绑骨：从网格横截面量取肩/腕/腿位置，建 17 根骨、按到骨段距离算蒙皮权重（小腿按就近分左右、去掉两鞋间的桥接三角），程序化步态驱动走/快走（步幅随速度）、站立呼吸、说话手势、转身内倾；有 `idle/walk/talk` 骨骼动画的 GLB 自动改用 AnimationMixer | `game/actors.mjs`、`game/skin.mjs`、`game/rig-preview.html`、`models/characters/*.glb`、`D:\project\cijian\tools\char_to_glb.py` |
 | 相机 | 第三人称越肩跟随、滚轮 1.4–6 m、对真实碰撞三角面做相机避障（薄物体可穿过）、过场双人镜头；举起相机时切第一人称并隐藏自己 | `game/rig.mjs` |
 | 拍照 | 接入 `app-photo` 分支的 PhotoSystem（取景框、焦段、快门、离屏 3000px、IndexedDB 相册、回忆卡）；照片管线与屏幕同一 AgX/泛光参数（含夜晚色调）；遮挡判定用 45 万面碰撞网格 | `game/photo/`、`game/render/pipeline.js` |
 | NPC 互动 | 靠近出现「F 交谈」（触屏可点）；对白面板：逐字、立绘、三组选项（仅一组推进）、可告辞再来；同意后对方入镜才算互拍；对方用你的相机回拍一张（存入相册）；告别后对方沿小路离开渐隐 | `game/dialogue.mjs`、`game/main.mjs` |
@@ -42,13 +42,15 @@
 
 ## 已知边界（如实）
 
-1. 人物无骨骼：走路是程序化起伏，腿不摆动。已发 Codex 任务（`TASK_CODEX_CHARACTERS.md`），交付 `idle/walk/talk` 后代码自动切换，无需改代码。
+1. 人物骨骼为程序自动生成：走路、快走、站立、说话已流畅，但手指、裙摆、头发没有独立物理。Codex 交付手工绑骨动画后会自动替换（`TASK_CODEX_CHARACTERS.md`，现为可选优化）。
 2. 樱花树是程序生成的风格化树；Codex 交付 `models/sakura.glb` 后需要我把 `createSakura({withTree:false})` + GLB 接上（约 10 行）。
 3. 悉尼没有可行走场景：终章是图鉴插画 + 对白的“书页章节”，不冒充实景地图。
 4. 夜晚是在日落光照上压暗 + 色调，不是重新烘焙的夜景；街区没有点灯。
 5. 声音只有图鉴素材的翻书/快门/显影声、合成的风声和烟花声；没有城市背景音乐。
 6. 触屏：摇杆/环视/交互提示/底部按钮可用；拍照快门依赖单击取景框，未在实体手机测试。
 7. 打卡判定的阈值在真实场景各拍了一次，不同站位可能需要微调（`story-data.mjs` 的 `SPOTS`）。
+
+地图问题清单见 `ISSUES_WALK_AUDIT_2026-11-03.md`（剧情路线全部可通行；8 项建模/材质问题已列坐标与截图）。
 
 ## 协作分工（按能力）
 

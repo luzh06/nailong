@@ -15,11 +15,8 @@ export function createRig({world,avatar}){
  function clearDistance(from,dirN,max){
   const step=.2;
   const blocked=d=>{const p=from.clone().addScaledVector(dirN,d);probe.start.copy(p);probe.end.copy(p);return !!walkWorld.tree.capsuleIntersect(probe);};
-  for(let d=.35;d<=max;d+=step){
-   if(!blocked(d))continue;
-   // 电杆、招牌这类薄物体：后面 0.6 米内又是空的，就让镜头穿过去，免得一路被拉到脸上
-   if(d+.6<=max&&!blocked(d+.4)&&!blocked(d+.6)){d+=.4;continue;}
-   return Math.max(.6,d-.3);}
+  // 街区立面的碰撞是单层薄面，不能“穿过薄物体”，否则镜头会进到楼里；一碰到就拉近
+  for(let d=.35;d<=max;d+=step)if(blocked(d))return Math.max(.6,d-.3);
   return max;
  }
  function headPos(out){return out.set(me.x,me.height+HEAD,-me.y);}
