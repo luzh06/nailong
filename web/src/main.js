@@ -11,7 +11,7 @@ import { TextureLibrary } from './textures.js';
 import { createTrees } from './vegetation.js';
 import { PhotoSystem } from './cijian/photo/index.js';
 import { SYDNEY, setupSydney, createSydneyPipeline } from './cijian/photo/presets/index.js';
-import { NoahDay1, loadNoahAnchors } from './noah.js';
+import { NoahDay1, loadNoahAnchors, setPropGlow, hideTreesIn, SPOT_PROPS } from './noah.js';
 
 const params = new URLSearchParams(window.location.search);
 
@@ -69,6 +69,8 @@ const config = await loadConfig();
 const layerMode = params.get('layers') ?? (config.googleMapsApiKey ? 'hybrid' : 'own');
 let googleTiles = null;
 let blockoutRoot = null;
+let treeGroup = null;
+let propGlow = [];
 
 try {
   setStatus('载入场景模型…');
@@ -101,6 +103,7 @@ try {
     setStatus('种树…');
     const trees = await createTrees(environment.csm);
     scene.add(trees.group);
+    treeGroup = trees.group;
   }
 } catch (err) {
   setStatus(`场景载入失败：${err.message}`);
@@ -119,6 +122,7 @@ async function setTime(name) {
   materials.setTimeOfDay({ night: preset.night, interior: preset.interior });
   lamps.setNight(preset.night);
   post.setBloom(preset.bloom);
+  setPropGlow(propGlow, preset.night);
 }
 
 function bindButtons(attr, handler) {
@@ -191,8 +195,13 @@ const photo = new PhotoSystem({
 let quest = null;
 if (questOn) {
   setStatus('布置前景…');
-  const { data: anchorData, usingProps } = await loadNoahAnchors(meta, player, scene);
+  const { data: anchorData, usingProps, props, glowMaterials } = await loadNoahAnchors(meta, player, scene);
   if (!usingProps) console.info('[Noah] 还没有 5060 的前景道具，先用出生点附近的临时点位');
+  propGlow = glowMaterials;
+  setPropGlow(propGlow, TIME_PRESETS[currentTime]?.night ?? 0);
+  // 前景台地坡上的 4 棵卡片树（5060 之后用近景蓝花楹替换）
+  if (usingProps && treeGroup) hideTreesIn(treeGroup, 17, 28, -755, -746);
+  window.__noahProps = props;
   quest = new NoahDay1({ photo, player, scene, anchors: anchorData, setTime, getTime: () => currentTime });
   setupSydney(photo, {
     anchors: anchorData,
@@ -200,7 +209,8 @@ if (questOn) {
     actionDone: quest.actionDone,
     getChoice: quest.getChoice,
     // Maya 还没有 3D 模型：合影先不要求她入镜，问过“可以拍吗”就算
-    overrides: { sy_cafe: { needSubjects: [] } },
+    // 望远镜只有 1.4 米高，又要和远处的歌剧院同框，占比要求放宽到 1.5%
+    overrides: { sy_cafe: { needSubjects: [] }, sy_landmark: { minCoverage: 0.015 } },
   });
 } else {
   setupSydney(photo, { anchors: { anchors: { ANCHOR_photo_opera: [0, 30, 0], ANCHOR_photo_bridge: [-401, 70, -513], ANCHOR_photo_bluehour: [-401, 70, -513] } }, getPhase: () => currentTime });
@@ -211,7 +221,11 @@ const landmarkObjects = { sy_opera: 'OperaHouse', sy_bridge: 'HarbourBridge', sy
 for (const spot of photo.spots) {
   const obj = landmarkObjects[spot.id] && blockoutRoot?.getObjectByName(landmarkObjects[spot.id]);
   if (obj) spot.target = obj;
+  // 咖啡亭、望远镜、长椅：按 5060 的道具模型判定
+  const prop = window.__noahProps?.[SPOT_PROPS[spot.id]];
+  if (prop) spot.target = prop;
 }
+delete window.__noahProps;
 if (blockoutRoot) photo.occluders = [blockoutRoot];
 if (params.get('debug') === '1') window.__cijian = { photo, quest, player, setTime }; // 测试用
 status?.remove();

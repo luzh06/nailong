@@ -87,6 +87,9 @@ const FAR_ANCHORS = {
   ANCHOR_photo_bluehour: [-401, 70, -513],
 };
 
+// 打卡目标：5060 的 anchors.json 里 ANCHOR_photo_* 是“拍照的人站在哪”，被拍的东西用道具模型本身
+export const SPOT_PROPS = { sy_cafe: 'kiosk', sy_landmark: 'scope', sy_bench: 'bench_sam' };
+
 export async function loadNoahAnchors(meta, player, scene) {
   let data = null;
   try {
@@ -95,25 +98,73 @@ export async function loadNoahAnchors(meta, player, scene) {
   } catch { /* 没有交付文件就用临时点位 */ }
   const usingProps = !!data;
   if (!data) data = defaultAnchors(meta, player);
-  data.anchors = { ...FAR_ANCHORS, ...data.anchors };
+  // 统一成 { 名字: [x,y,z] }（5060 交付的是 { pos, eye, look }）
+  const anchors = { ...FAR_ANCHORS };
+  for (const [k, v] of Object.entries(data.anchors)) anchors[k] = Array.isArray(v) ? v : v.pos;
+  if (usingProps) {
+    // 黄昏的海：顺着岸边机位的视线方向，取海港中央、离水面 8 米的点
+    const shore = data.anchors.ANCHOR_photo_shore;
+    const from = new THREE.Vector3(...shore.eye);
+    const dir = new THREE.Vector3(...shore.look).sub(from).setY(0).normalize();
+    anchors.ANCHOR_photo_shore = [from.x + dir.x * 300, 8, from.z + dir.z * 300];
+  }
 
-  // 5060 的前景道具：{ props: [{ file, pos: [x,y,z], rotY }] }，坐标已是网页坐标
+  // 5060 的前景道具：{ props: [{ name, glb, pos: [x,y,z], yaw }] }，网页坐标
+  const props = {};
+  const glowMaterials = new Set();
   if (data.props?.length) {
     const loader = new GLTFLoader();
+    const cache = new Map();
     await Promise.all(data.props.map(async (p) => {
+      const file = p.glb ?? p.file;
       try {
-        const g = await loader.loadAsync(`./data/props/${p.file}`);
-        g.scene.position.set(...p.pos);
-        g.scene.rotation.y = p.rotY ?? 0;
-        if (p.scale) g.scene.scale.setScalar(p.scale);
-        g.scene.traverse((o) => { if (o.isMesh) { o.castShadow = true; o.receiveShadow = true; } });
-        scene.add(g.scene);
+        if (!cache.has(file)) cache.set(file, loader.loadAsync(`./data/props/${file}`));
+        const g = await cache.get(file);
+        const obj = g.scene.clone(true);
+        obj.name = p.name ?? file;
+        obj.position.set(...p.pos);
+        obj.rotation.y = p.yaw ?? p.rotY ?? 0;
+        if (p.scale) obj.scale.setScalar(p.scale);
+        // GLB 带 LOD1/LOD2 和碰撞体 _COL：只显示 LOD0
+        obj.traverse((o) => {
+          if (/_LOD[12]|_COL/i.test(o.name)) o.visible = false;
+          if (!o.isMesh) return;
+          o.castShadow = true;
+          o.receiveShadow = true;
+          if (o.material.emissiveMap) glowMaterials.add(o.material);
+        });
+        scene.add(obj);
+        props[obj.name] = obj;
       } catch (err) {
-        console.warn('前景道具载入失败', p.file, err);
+        console.warn('前景道具载入失败', file, err);
       }
     }));
   }
-  return { data, usingProps };
+  return { data: { ...data, anchors }, usingProps, props, glowMaterials: [...glowMaterials] };
+}
+
+/** 道具的自发光（路灯灯罩、咖啡亭窗内）跟着时段：白天几乎不亮，蓝调最亮 */
+export function setPropGlow(materials, night) {
+  for (const m of materials) m.emissiveIntensity = 0.15 + night * 2.2;
+}
+
+/** 隐藏一块区域里的卡片树（前景换成了道具，以后换成近景树） */
+export function hideTreesIn(group, x0, x1, z0, z1) {
+  const m = new THREE.Matrix4();
+  const p = new THREE.Vector3();
+  const zero = new THREE.Matrix4().makeScale(0, 0, 0);
+  let n = 0;
+  group.traverse((o) => {
+    if (!o.isInstancedMesh) return;
+    for (let i = 0; i < o.count; i++) {
+      o.getMatrixAt(i, m);
+      p.setFromMatrixPosition(m);
+      if (p.x >= x0 && p.x <= x1 && p.z >= z0 && p.z <= z1) { o.setMatrixAt(i, zero); n++; }
+    }
+    o.instanceMatrix.needsUpdate = true;
+    o.computeBoundingSphere?.();
+  });
+  return n;
 }
 
 export class NoahDay1 {
