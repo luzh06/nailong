@@ -15,13 +15,19 @@ const dest=join(outRoot,NAME);
 const KEEP_DIRS=['web','assets','bake','licenses'];
 const SKIP=f=>f.endsWith('.gz');
 
-if(existsSync(dest))rmSync(dest,{recursive:true});
+// 原地更新（不整体删除）：发布目录可能正被资源管理器或上传程序打开，整删会失败
 mkdirSync(dest,{recursive:true});
-let files=0,bytes=0;
+let files=0,bytes=0;const expected=new Set();
 function copyTree(src,dst){for(const name of readdirSync(src)){const s=join(src,name),d=join(dst,name);
  if(statSync(s).isDirectory()){mkdirSync(d,{recursive:true});copyTree(s,d);continue;}
- if(SKIP(name))continue;cpSync(s,d);files++;bytes+=statSync(s).size;}}
+ if(SKIP(name))continue;expected.add(d);
+ if(!existsSync(d)||statSync(d).size!==statSync(s).size||statSync(d).mtimeMs<statSync(s).mtimeMs)cpSync(s,d);
+ files++;bytes+=statSync(s).size;}}
 for(const dir of KEEP_DIRS){mkdirSync(join(dest,dir),{recursive:true});copyTree(join(runtime,dir),join(dest,dir));}
+// 删掉运行包里已不存在的旧文件（被占用的跳过并提示）
+function prune(dir){for(const name of readdirSync(dir)){const p=join(dir,name);if(statSync(p).isDirectory()){prune(p);continue;}
+ if(!expected.has(p)){try{rmSync(p);}catch{console.warn('无法删除（被占用）：'+p);}}}}
+for(const dir of KEEP_DIRS)prune(join(dest,dir));
 cpSync(join(runtime,'index.html'),join(dest,'index.html'));
 
 // 启动器：PowerShell 5.1 需要带 BOM 的 UTF-8；批处理用 CRLF
