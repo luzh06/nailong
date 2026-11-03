@@ -35,7 +35,7 @@ export function createRig({world,avatar}){
   if(state.mode==='first'){ // 取景：眼睛位置
    camera.position.set(me.x,me.eye,-me.y);camera.up.set(0,1,0);camera.lookAt(look.copy(camera.position).add(forward(dir)));return;}
   headPos(target);
-  const pitch=THREE.MathUtils.clamp(me.pitch,-1.05,.55);
+  const pitch=THREE.MathUtils.clamp(me.pitch,-1.05,1.0);
   forward(dir,pitch);right.set(Math.sin(me.yaw),0,Math.cos(me.yaw));// 角色右侧
   // 越肩点：头部右侧，低头时相机抬高
   const pivot=target.clone().addScaledVector(right,SHOULDER*Math.min(1,state.cur/2.4));

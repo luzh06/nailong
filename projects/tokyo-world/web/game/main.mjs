@@ -146,7 +146,13 @@ function setup(W,[avatar,partner]){
   await shutter(async()=>{phase='night';toneU.uGrade.value.set(.62,.7,1.08);nightExp.target=nightExp.base*.16;nightExp.cur=nightExp.target;toneU.uExp.value=nightExp.cur;toneU.uBloom.value=Math.max(.5,nightExp.bloom*2.4);
    skyU.uFogC.value.multiplyScalar(.4);W.sun.intensity*=.1;scene.environmentIntensity=.35;hud.setPhase('夜 · 烟花');setAmbience(.05);
    if(!isCnJp){partner.root.visible=true;partner.setOpacity(1);}fireworks.start();},{hold:700});
-  toast('夜色降临。宝蔵门的上空，第一束烟花升起。',3600);busy=false;W.setUiBlocked(false);resume();refresh();}
+  // 过场：镜头从角色身后抬起，看向第一束烟花，再把视角交还玩家（朝向烟花）
+  document.body.classList.add('cj-cinematic');
+  const head=rig.headPosition(),fw=fireworks.target.clone(),dirXZ=new THREE.Vector3(fw.x-head.x,0,fw.z-head.z).normalize();
+  rig.shot(head.clone().addScaledVector(dirXZ,-3.2).add(new THREE.Vector3(0,-.6,0)),fw,3.2);
+  toast('夜色降临。宝蔵门的上空，第一束烟花升起。',3600);await wait(4200);
+  me.yaw=Math.atan2(-dirXZ.z,dirXZ.x);me.pitch=.75;rig.release();document.body.classList.remove('cj-cinematic');
+  busy=false;W.setUiBlocked(false);resume();refresh();}
 
  // ---------- 目标与提示 ----------
  const head=o=>o.position.clone().add(new THREE.Vector3(0,2.05,0));

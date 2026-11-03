@@ -5,14 +5,17 @@ export {wait};
 const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 // ---------- 声音 ----------
-let actx=null,master=null;
-function audio(){if(!actx){try{actx=new AudioContext();master=actx.createGain();master.gain.value=.8;master.connect(actx.destination);}catch{return null;}}if(actx.state==='suspended')actx.resume().catch(()=>{});return actx;}
-const buffers=new Map();
-async function load(name){if(buffers.has(name))return buffers.get(name);const ctx=audio();if(!ctx)return null;
- const p=fetch(base+'audio/'+name+'.wav').then(r=>r.arrayBuffer()).then(b=>ctx.decodeAudioData(b)).catch(()=>null);buffers.set(name,p);return p;}
-export async function sfx(name,{volume=.5,rate=1}={}){const ctx=audio();if(!ctx)return;const b=await load(name);if(!b)return;
+// 浏览器只允许在用户点击/按键之后创建声音；之前的调用直接跳过，不报警告
+let actx=null,master=null,activated=false;
+for(const ev of ['pointerdown','keydown'])addEventListener(ev,e=>{if(e.isTrusted)activated=true;},{capture:true,passive:true});
+function audio(){if(!actx){if(!activated)return null;try{actx=new AudioContext();master=actx.createGain();master.gain.value=.8;master.connect(actx.destination);}catch{return null;}}if(actx.state==='suspended')actx.resume().catch(()=>{});return actx;}
+const raw=new Map(),buffers=new Map();
+const fetchRaw=name=>{if(!raw.has(name))raw.set(name,fetch(base+'audio/'+name+'.wav').then(r=>r.arrayBuffer()).catch(()=>null));return raw.get(name);};
+async function load(name,ctx){if(!buffers.has(name))buffers.set(name,fetchRaw(name).then(b=>b?ctx.decodeAudioData(b.slice(0)):null).catch(()=>null));return buffers.get(name);}
+export async function sfx(name,{volume=.5,rate=1}={}){const ctx=audio();if(!ctx)return;const b=await load(name,ctx);if(!b)return;
  const s=ctx.createBufferSource();s.buffer=b;s.playbackRate.value=rate;const g=ctx.createGain();g.gain.value=volume;s.connect(g).connect(master);s.start();}
-export function preloadSfx(){['book-open','book-close','page-left','page-right','entry-reveal','camera-shutter'].forEach(load);}
+// 预先下载音效文件（不创建 AudioContext）
+export function preloadSfx(){['book-open','book-close','page-left','page-right','entry-reveal','camera-shutter'].forEach(fetchRaw);}
 // 远处烟花：低频闷响 + 细碎噼啪
 export function boom(distance=1){const ctx=audio();if(!ctx)return;const t=ctx.currentTime+Math.min(.9,distance*.25);
  const len=1.6,buf=ctx.createBuffer(1,ctx.sampleRate*len,ctx.sampleRate),d=buf.getChannelData(0);

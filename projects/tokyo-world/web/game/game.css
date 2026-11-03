@@ -134,7 +134,7 @@ body.cj-game .cijian-map{bottom:72px!important}
 .cj-dialogue{position:fixed;left:50%;bottom:clamp(18px,4vh,40px);transform:translate(-50%,24px);width:min(860px,calc(100vw - 32px));z-index:12;opacity:0;pointer-events:none;transition:opacity .45s var(--ease),transform .6s var(--ease)}
 .cj-dialogue.on{opacity:1;transform:translate(-50%,0);pointer-events:auto}
 .cj-dialogue .sheet{position:relative;display:grid;grid-template-columns:150px 1fr;min-height:170px;background:var(--paper);color:var(--ink);border-radius:2px;box-shadow:0 30px 80px rgba(0,0,0,.55);overflow:visible}
-.cj-dialogue .sheet::before{content:"";position:absolute;inset:0;background:url(./art/paper-aged.webp) center/cover;opacity:.5;mix-blend-mode:multiply;pointer-events:none;border-radius:2px}
+.cj-dialogue .sheet::before{content:"";position:absolute;inset:0;background:url(./art/paper-aged.webp) center/cover;opacity:.22;mix-blend-mode:multiply;pointer-events:none;border-radius:2px}
 .cj-dialogue .bust{position:relative;align-self:end;height:210px;margin-top:-60px}
 .cj-dialogue .bust img{position:absolute;bottom:0;left:50%;height:100%;transform:translateX(-50%);filter:drop-shadow(0 6px 10px rgba(30,20,10,.35));transition:opacity .35s}
 .cj-dialogue .body{position:relative;padding:22px 30px 20px 6px}

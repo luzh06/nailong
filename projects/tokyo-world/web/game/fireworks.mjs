@@ -3,7 +3,8 @@ import * as THREE from 'three';
 import {boom} from './fx.mjs';
 
 const MAX=9000;
-const PALETTES=[[[1,.55,.25],[1,.8,.45]],[[1,.35,.55],[1,.7,.8]],[[.55,.75,1],[.9,.95,1]],[[1,.85,.5],[1,.6,.25]],[[.7,1,.6],[1,1,.85]]];
+// 饱和的花色：经过 AgX 和夜色调后仍能看出颜色
+const PALETTES=[[[1,.32,.08],[1,.62,.18]],[[1,.16,.42],[1,.5,.72]],[[.25,.5,1],[.62,.82,1]],[[1,.72,.2],[1,.4,.1]],[[.4,1,.35],[.9,1,.5]],[[.75,.3,1],[1,.55,.9]]];
 
 export function createFireworks({center,onFlash}){
  const pos=new Float32Array(MAX*3),col=new Float32Array(MAX*3),size=new Float32Array(MAX),alpha=new Float32Array(MAX);
@@ -22,13 +23,13 @@ export function createFireworks({center,onFlash}){
   base[i*3]=c[0];base[i*3+1]=c[1];base[i*3+2]=c[2];life[i]=l;maxLife[i]=l;size[i]=s;drag[i]=d;grav[i]=g;trail[i]=t;}
  function launch(){const x=center.x+(Math.random()-.5)*26,z=center.z+(Math.random()-.5)*12;const h=center.y+(Math.random()-.3)*10;
   shells.push({x,y:center.y-34,z,vy:24+Math.random()*4,top:h,type:Math.random(),pal:PALETTES[Math.floor(Math.random()*PALETTES.length)]});}
- function burst(s){const n=s.type<.4?220:s.type<.7?170:260,sp=s.type<.4?11:s.type<.7?8:13;const [a,b]=s.pal;
+ function burst(s){const n=s.type<.4?220:s.type<.7?170:260,sp=s.type<.4?17:s.type<.7?12:19;const [a,b]=s.pal;
   for(let i=0;i<n;i++){const u=Math.random()*2-1,th=Math.random()*Math.PI*2,r=Math.sqrt(1-u*u),k=sp*(.85+Math.random()*.25);
-   const c=Math.random()<.5?a:b,hdr=[c[0]*c[0]*3.2,c[1]*c[1]*3.2,c[2]*c[2]*3.2];
-   if(s.type<.4)spawn(s.x,s.y,s.z,r*Math.cos(th)*k,u*k,r*Math.sin(th)*k,hdr,1.6+Math.random()*.6,.5,1.6,4,0);
-   else if(s.type<.7)spawn(s.x,s.y,s.z,r*Math.cos(th)*k,u*k,r*Math.sin(th)*k,[4.2,2.4,.7],3.2+Math.random(),.36,2.6,2.2,1);
-   else spawn(s.x,s.y,s.z,r*Math.cos(th)*k,u*k,r*Math.sin(th)*k,hdr,1.4+Math.random()*.4,.36,1.2,5,1);}
-  spawn(s.x,s.y,s.z,0,0,0,[30,26,20],.18,3.2,0,0,0);
+   const c=Math.random()<.5?a:b,hdr=[c[0]*c[0]*4,c[1]*c[1]*4,c[2]*c[2]*4];
+   if(s.type<.4)spawn(s.x,s.y,s.z,r*Math.cos(th)*k,u*k,r*Math.sin(th)*k,hdr,1.8+Math.random()*.6,1.15,1.5,4,0);
+   else if(s.type<.7)spawn(s.x,s.y,s.z,r*Math.cos(th)*k,u*k,r*Math.sin(th)*k,[4.2,2.2,.5],3.4+Math.random(),.8,2.4,2.2,1);
+   else spawn(s.x,s.y,s.z,r*Math.cos(th)*k,u*k,r*Math.sin(th)*k,hdr,1.5+Math.random()*.4,.85,1.2,5,1);}
+  spawn(s.x,s.y,s.z,0,0,0,[30,26,20],.22,7,0,0,0);
   flash=Math.min(1,flash+.7);boom(1.6);}
  function update(dt){
   if(running){timer-=dt;if(timer<=0){launch();if(Math.random()<.35)launch();timer=1.1+Math.random()*1.6;}}
