@@ -1,0 +1,910 @@
+{
+  "date": "2026-11-03",
+  "sourceCommit": "73470531d30c96f0107074cc8157e5c93d2c307f",
+  "sourceOriginalCommits": 5,
+  "repository": "https://github.com/luzh06/nailong",
+  "branch": "sydney-harbour",
+  "status": "Quality sample uploaded as WIP; runtime and visual acceptance pending. Review screenshots are from 68cedfa.",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 243,
+      "sha256": "f7e4620cef4a1144c75702e13776a243a3a3776b7ab8e43408b610353185777f"
+    },
+    {
+      "path": "assets_src/sky/belfast_sunset_puresky_1k.hdr",
+      "bytes": 1190247,
+      "sha256": "cec532d8dd382bcdca98d7010fa951a782f3295f98e8bd72ee453be8d0a64e98"
+    },
+    {
+      "path": "assets_src/sky/belfast_sunset_puresky_backdrop.jpg",
+      "bytes": 692658,
+      "sha256": "883d8fd27d76a6b5d744f78da20a7113b3bbf8a6bb2c30df159b0c9940fb99cb"
+    },
+    {
+      "path": "assets_src/sky/kloofendal_48d_partly_cloudy_puresky_1k.hdr",
+      "bytes": 1435119,
+      "sha256": "fd94c84997b8a3c353b62c2125a9b44e19509956986a126e472684432a02d798"
+    },
+    {
+      "path": "assets_src/sky/kloofendal_48d_partly_cloudy_puresky_backdrop.jpg",
+      "bytes": 1023875,
+      "sha256": "8414baac4780efb2390d7cf86e3e2cfd50c5a03b24a9c640d7e00bd0b073243c"
+    },
+    {
+      "path": "assets_src/sky/qwantani_dusk_2_puresky_1k.hdr",
+      "bytes": 1166018,
+      "sha256": "56dc9cb681f2641c08377e20e83fa5e4865fd900bcce26a15a1883580139b5e2"
+    },
+    {
+      "path": "assets_src/sky/qwantani_dusk_2_puresky_backdrop.jpg",
+      "bytes": 686813,
+      "sha256": "3a45c79acd2698ce6d72abd92bd8c5918c662d7441e26cbc408b632c56414d5c"
+    },
+    {
+      "path": "assets_src/textures/asphalt_02/asphalt_02_arm_1k.jpg",
+      "bytes": 296770,
+      "sha256": "56bd8e591a3db579846fcb5185f60b0651e0bd4ea85c3529c339e6746243c9cf"
+    },
+    {
+      "path": "assets_src/textures/asphalt_02/asphalt_02_diff_1k.jpg",
+      "bytes": 731707,
+      "sha256": "1aa5ce99f58a625c71d48cfc3e68b65ca85ccb00f39e045c0a928608a0ea25ed"
+    },
+    {
+      "path": "assets_src/textures/asphalt_02/asphalt_02_nor_gl_1k.jpg",
+      "bytes": 1240122,
+      "sha256": "42a1c381b53204e83a982db2864479a30bc127bbdeebb1006f8ee51bff099df3"
+    },
+    {
+      "path": "assets_src/textures/ceramic_roof_01/ceramic_roof_01_arm_1k.jpg",
+      "bytes": 170410,
+      "sha256": "76a9fecf7e4f80799b1c6d3d2d4809598364263cd766523c8135658353783120"
+    },
+    {
+      "path": "assets_src/textures/ceramic_roof_01/ceramic_roof_01_diff_1k.jpg",
+      "bytes": 547031,
+      "sha256": "d16264943b3a052a6b91f4ad7c9c1f37c09f2a9e9c503bdb3477f4705c03ff8c"
+    },
+    {
+      "path": "assets_src/textures/ceramic_roof_01/ceramic_roof_01_nor_gl_1k.jpg",
+      "bytes": 675803,
+      "sha256": "e845af7ee8587e1452e5c2ed2780d9aaf827e21a88a59d074db66bf270ef58dd"
+    },
+    {
+      "path": "assets_src/textures/coast_sand_01/coast_sand_01_arm_2k.jpg",
+      "bytes": 2698547,
+      "sha256": "0e1cc154bc6163f1f7f48aa4839876f6cae84b5b53f9ac3c2bf4c54057373e00"
+    },
+    {
+      "path": "assets_src/textures/coast_sand_01/coast_sand_01_diff_2k.jpg",
+      "bytes": 3552676,
+      "sha256": "e1c37ea8b4282fda612b0584d864ca4eef2da28c2fa9f3930cad9209414eb979"
+    },
+    {
+      "path": "assets_src/textures/coast_sand_01/coast_sand_01_nor_gl_2k.jpg",
+      "bytes": 4630126,
+      "sha256": "e5b1430c751727c8ab0332adfd8960c48342936146de258aa9b7736630cdbb62"
+    },
+    {
+      "path": "assets_src/textures/concrete_floor_worn_001/concrete_floor_worn_001_arm_1k.jpg",
+      "bytes": 152919,
+      "sha256": "b21e63637d04b969894bd40a45df185d77671ed74b8955cd6e403c34ed465043"
+    },
+    {
+      "path": "assets_src/textures/concrete_floor_worn_001/concrete_floor_worn_001_diff_1k.jpg",
+      "bytes": 118806,
+      "sha256": "6e40c0fc908f4d66431836f5abe203f3a4eb064e88824378a91a46a26e2f464c"
+    },
+    {
+      "path": "assets_src/textures/concrete_floor_worn_001/concrete_floor_worn_001_nor_gl_1k.jpg",
+      "bytes": 110906,
+      "sha256": "523bd94a1be5dd2f11c2ae2b7d7c77445cf5bd9e41604db515a7c8364dcba067"
+    },
+    {
+      "path": "assets_src/textures/concrete_wall_008/concrete_wall_008_arm_1k.jpg",
+      "bytes": 667023,
+      "sha256": "12b8b88bd0a9b303150f45cf0080371d78b7f04744d4ab14030b8958ec7dc2e3"
+    },
+    {
+      "path": "assets_src/textures/concrete_wall_008/concrete_wall_008_diff_1k.jpg",
+      "bytes": 623051,
+      "sha256": "a203166d280d3cfc6a91bbc9ffdae406eb9555b4a4f658cd92619063eb17c147"
+    },
+    {
+      "path": "assets_src/textures/concrete_wall_008/concrete_wall_008_nor_gl_1k.jpg",
+      "bytes": 511519,
+      "sha256": "83cd3fa2c7cbf4c81402386065daf8fa6f72e1f1f77e02ccb1eedb28496909ae"
+    },
+    {
+      "path": "assets_src/textures/Grass001/Grass001_1K-JPG.zip",
+      "bytes": 10710313,
+      "sha256": "902f447a64171c8099589642d5bf2d1d6e52c40e94d957eb78eae722084b0cfb"
+    },
+    {
+      "path": "assets_src/textures/gravel_embedded_concrete/gravel_embedded_concrete_arm_1k.jpg",
+      "bytes": 951431,
+      "sha256": "d1acd99fd72de866769538bfb140d0e653a210dc54fd2fd5d03bb7403a6627bd"
+    },
+    {
+      "path": "assets_src/textures/gravel_embedded_concrete/gravel_embedded_concrete_diff_1k.jpg",
+      "bytes": 1137553,
+      "sha256": "3ea5b493379c4d30c02c04b93361d3e34f91ed04058ffb4ea915702f1cd17049"
+    },
+    {
+      "path": "assets_src/textures/gravel_embedded_concrete/gravel_embedded_concrete_nor_gl_1k.jpg",
+      "bytes": 1471218,
+      "sha256": "433250def341793e0b544dfb28ad46e5d546de5e94b4cfe2f282c1a9328b5f1a"
+    },
+    {
+      "path": "assets_src/textures/leafy_grass/leafy_grass_arm_2k.jpg",
+      "bytes": 4116600,
+      "sha256": "70d61c669fe9d186a84f5bb50e8a337083014d7e46534306a89d47d48fd5eb0e"
+    },
+    {
+      "path": "assets_src/textures/leafy_grass/leafy_grass_diff_2k.jpg",
+      "bytes": 4766204,
+      "sha256": "8e1c6d21365d4b89bc5a35ab664da98a78dbc3ab9ba6100474881c8619a5b113"
+    },
+    {
+      "path": "assets_src/textures/leafy_grass/leafy_grass_nor_gl_2k.jpg",
+      "bytes": 6047262,
+      "sha256": "df0cf0ce96e653f033e5b934d5b12995464bda027aa53bd12e329be889aa9f45"
+    },
+    {
+      "path": "assets_src/textures/metal_plate/metal_plate_arm_1k.jpg",
+      "bytes": 1004043,
+      "sha256": "fc4708b6700a2cc387654b693091dd0ac0cd1797ae803d75c894e62554fbef07"
+    },
+    {
+      "path": "assets_src/textures/metal_plate/metal_plate_diff_1k.jpg",
+      "bytes": 692234,
+      "sha256": "c6b6739eac2c75ccc898e753d7833df24eafbdb9aa92fb6eabfb92abd1a680a5"
+    },
+    {
+      "path": "assets_src/textures/metal_plate/metal_plate_nor_gl_1k.jpg",
+      "bytes": 770307,
+      "sha256": "994f851a84d52b51e97906021a1b7070ee6eac9a789fef041132268de47d8e6b"
+    },
+    {
+      "path": "assets_src/textures/pavement_02/pavement_02_arm_2k.jpg",
+      "bytes": 3972114,
+      "sha256": "8997ba4099338d0502334adfd62b8239646e4059a2c9e48f015d7e628ae26556"
+    },
+    {
+      "path": "assets_src/textures/pavement_02/pavement_02_diff_2k.jpg",
+      "bytes": 5016531,
+      "sha256": "a524dd1d0a298f441719f1d28c3db45cc7a4e6eb6fcccb8407d0fe22ed927b6f"
+    },
+    {
+      "path": "assets_src/textures/pavement_02/pavement_02_nor_gl_2k.jpg",
+      "bytes": 3241087,
+      "sha256": "f3986ff819f6224caaf1e606978093868e4ac4a418cf261686f70f14234bc2b0"
+    },
+    {
+      "path": "assets_src/textures/rock_pitted_mossy/rock_pitted_mossy_arm_1k.jpg",
+      "bytes": 774539,
+      "sha256": "4e5d4b3955c3215e606b18ee85e498ab49682d05d2ab5ca654c086202812089d"
+    },
+    {
+      "path": "assets_src/textures/rock_pitted_mossy/rock_pitted_mossy_diff_1k.jpg",
+      "bytes": 1087680,
+      "sha256": "afc60b7dee7c161c12a9fb3fffee2c118f1fe47aa1f1e21e4670180bbf29de3c"
+    },
+    {
+      "path": "assets_src/textures/rock_pitted_mossy/rock_pitted_mossy_nor_gl_1k.jpg",
+      "bytes": 1137508,
+      "sha256": "070501836252ec7a7c2193531095fe4d442b649b9374361500183c3ed832f2fb"
+    },
+    {
+      "path": "assets_src/textures/sandstone_blocks_05/sandstone_blocks_05_arm_2k.jpg",
+      "bytes": 562341,
+      "sha256": "ce5206714ea29d9719fe478659b4373568ed28193e74795c99411a931ef4c320"
+    },
+    {
+      "path": "assets_src/textures/sandstone_blocks_05/sandstone_blocks_05_diff_2k.jpg",
+      "bytes": 2302231,
+      "sha256": "46c0be03ddf94e2eee4cc4ce3aa5526dedfcb85f41e78ea95017640164596602"
+    },
+    {
+      "path": "assets_src/textures/sandstone_blocks_05/sandstone_blocks_05_nor_gl_2k.jpg",
+      "bytes": 4187323,
+      "sha256": "df63ca75c87476f8ba0c6a3fab3fb841d590da2e5877a753815f20e1f091da1e"
+    },
+    {
+      "path": "assets_src/textures/sandstone_blocks_08/sandstone_blocks_08_arm_1k.jpg",
+      "bytes": 58846,
+      "sha256": "4a211353047f52b9f0cf545e669fa8c29ac0d4ca87dd1f74e3a17f13d9a5b50d"
+    },
+    {
+      "path": "assets_src/textures/sandstone_blocks_08/sandstone_blocks_08_diff_1k.jpg",
+      "bytes": 242776,
+      "sha256": "0cac65461ba33003b8a27b03c2b87f3393a824a9a98036c4c8de6182a1449369"
+    },
+    {
+      "path": "assets_src/textures/sandstone_blocks_08/sandstone_blocks_08_nor_gl_1k.jpg",
+      "bytes": 167040,
+      "sha256": "1203d5300dfc717db67220531fcdad75214d48b98d21114a155b3f01d54ab012"
+    },
+    {
+      "path": "assets_src/textures/wood_planks_grey/wood_planks_grey_arm_1k.jpg",
+      "bytes": 155198,
+      "sha256": "0464853147811dd6dcf9f286ca3753fb63fa654d081ae708070fbf0fd4614d97"
+    },
+    {
+      "path": "assets_src/textures/wood_planks_grey/wood_planks_grey_diff_1k.jpg",
+      "bytes": 228279,
+      "sha256": "d758be23e8fe7bfbd73bc4ab257cfd59406e1835f6557c12a67cd4fdb15de0d8"
+    },
+    {
+      "path": "assets_src/textures/wood_planks_grey/wood_planks_grey_nor_gl_1k.jpg",
+      "bytes": 157419,
+      "sha256": "5e570e57d688b016b217b9e8e0592f9a8b3364406e22bf6cd775da990452bdb6"
+    },
+    {
+      "path": "blend/sydney_blockout.blend",
+      "bytes": 9153127,
+      "sha256": "44282e231df5a556ae41277c6d970ea1208511fe0e801eef4f1118e183ea9b17"
+    },
+    {
+      "path": "data/nsw_dem_4m.tif",
+      "bytes": 4130088,
+      "sha256": "59998e3f3cee0229b430d8c1311c807c1ace88ed8648c056e094bd32d70de48c"
+    },
+    {
+      "path": "data/osm_coast.json",
+      "bytes": 2373220,
+      "sha256": "487b1abc6a525f9d98d75d5a302f1288b48371eede582439486426bf705fb7dc"
+    },
+    {
+      "path": "data/osm_landmarks.json",
+      "bytes": 108568,
+      "sha256": "54efb9d622452ca447e3954a516b3e3b094987e4c7d7423e65bdf622012a6f68"
+    },
+    {
+      "path": "data/osm_nature.json",
+      "bytes": 3542439,
+      "sha256": "12a4c307065465fa4b9773df504051caa930e8d8e5b75e6c5d263d5283178abd"
+    },
+    {
+      "path": "data/osm_opera.json",
+      "bytes": 8016,
+      "sha256": "f7357a98cb2585499a60d37b5f4f1dc6ecfb27ce37568f701fc83d8fa605d6a7"
+    },
+    {
+      "path": "data/osm_parks.json",
+      "bytes": 1576817,
+      "sha256": "bbd8d7b9105c79a7158d0316c50802650708cb24ef6c9ab57acc6f1261c5ec1b"
+    },
+    {
+      "path": "data/osm_raw.json",
+      "bytes": 10087646,
+      "sha256": "ec870a248e0ee9705170ddbdfe97e7e1ee32bc8242dafc35d663d174723a13f7"
+    },
+    {
+      "path": "data/osm_roads.json",
+      "bytes": 8533060,
+      "sha256": "99f3d1639613798d8fb671d38d26be2434f4a0beda72cc178d9b69542469a572"
+    },
+    {
+      "path": "data/scene.json",
+      "bytes": 1769122,
+      "sha256": "257688f1b165f903c3fbadedab7299b2cbef6a8d1b3b624d53bb8310a3e718d4"
+    },
+    {
+      "path": "docs/review/research/悉尼场景实查与升级方案_2026-11-02.md",
+      "bytes": 6064,
+      "sha256": "d19594a09af2bab30dca20f46799b71cbfd42d87ffd41de53471f01da0b0f3f1"
+    },
+    {
+      "path": "docs/review/sydney-blue.png",
+      "bytes": 1350023,
+      "sha256": "0b63a565f96db9804119e37768e04f0b12f2174d5e4217e521fef032003c38e9"
+    },
+    {
+      "path": "docs/review/sydney-cbd.png",
+      "bytes": 1479368,
+      "sha256": "d481abb755a0c475bba54b6c7b80e15f3edc921f0354e49cc4830c38efe23585"
+    },
+    {
+      "path": "docs/review/sydney-day.png",
+      "bytes": 1646831,
+      "sha256": "38be9281fbdcf316accf8f2bb764749a5104c6bde56a2cd906a9ba3b13535888"
+    },
+    {
+      "path": "docs/review/sydney-golden.png",
+      "bytes": 1478257,
+      "sha256": "a6f1faeb20422dbf195afb6b85da8c182c8bfdcaf8071229d37bcd9ce09ee8c1"
+    },
+    {
+      "path": "HANDOFF.md",
+      "bytes": 3546,
+      "sha256": "61b8d5ec59f1b0fcc37c05d58cfd80c77489662cc877c198eebe43b85c147193"
+    },
+    {
+      "path": "README.md",
+      "bytes": 11909,
+      "sha256": "76f5d0734d5997ff0757366bfaf3c494b73a9e25082179e25f5764fa3846a460"
+    },
+    {
+      "path": "scripts/bridge.py",
+      "bytes": 11073,
+      "sha256": "62de57db7da00263d2c322d647ed2f352a928c091e13d80e413870a25a112a42"
+    },
+    {
+      "path": "scripts/build_blockout.py",
+      "bytes": 10436,
+      "sha256": "d88aab6666cb9644eec316cdef6864f0f1279cb37b514deedb0383514aa5239d"
+    },
+    {
+      "path": "scripts/build_landcover.py",
+      "bytes": 11573,
+      "sha256": "be41519909ed557f13acfcf5b0ccadec8e24c7920913e5185bb47a812690f657"
+    },
+    {
+      "path": "scripts/fetch_assets.py",
+      "bytes": 7903,
+      "sha256": "d4a12db69cbbd16a4200c905aaaaba6edf509d7bd7dbe2381838a1272cdb7488"
+    },
+    {
+      "path": "scripts/foreshore.py",
+      "bytes": 5032,
+      "sha256": "a769b1781c4d90c35729cbb6b9ebcbfc3cb5d73d37ad6be2447a399d6ab9f130"
+    },
+    {
+      "path": "scripts/ground.py",
+      "bytes": 11409,
+      "sha256": "3472b26c2005c3114e7440972d79a99b305a70ff998701736262d83f8a75e122"
+    },
+    {
+      "path": "scripts/landmarks.py",
+      "bytes": 7878,
+      "sha256": "9367cc4578a75bd45a9e1d5af6505af4c068068b6720380ae44752a3e9344ba7"
+    },
+    {
+      "path": "scripts/meshkit.py",
+      "bytes": 6488,
+      "sha256": "066f9c4a09d226f746931d88b836c0c3c738a20210013ae3c931a5f62e899945"
+    },
+    {
+      "path": "scripts/opera.py",
+      "bytes": 7971,
+      "sha256": "7e654850b783787e7f905951f4969f35f5585610b6a03f5d1a271b871f864ec6"
+    },
+    {
+      "path": "scripts/prep_osm.py",
+      "bytes": 8803,
+      "sha256": "942e65f4a5bff3bcf23805c4e90b5f92a6bb266c12d789fb33b5101fb5a12a2c"
+    },
+    {
+      "path": "scripts/terrain.py",
+      "bytes": 2558,
+      "sha256": "7540cd495544d1ac4273ffb155b32d24388cc653d7660eadde03b80f3517b6a6"
+    },
+    {
+      "path": "tools/review_shots.js",
+      "bytes": 1862,
+      "sha256": "7ab64c99116fb34a2c7ad08efca233315d4c268e72cd40a34381ca06835f5c75"
+    },
+    {
+      "path": "web/assets/ASSETS.csv",
+      "bytes": 7453,
+      "sha256": "986344f363cf1fdaffcd82e6d4b9daba714aeda0dd0564cd55c94e5ff288d764"
+    },
+    {
+      "path": "web/assets/ground/landcover.json",
+      "bytes": 197,
+      "sha256": "acadb31e9b2dc19af2b75963a2f26b7ff77d20910dcd1a0f2c58ad605871f19b"
+    },
+    {
+      "path": "web/assets/ground/landcover.webp",
+      "bytes": 945236,
+      "sha256": "d2e660c0f15edbc81aed72d28d6ce394c0f37613c644110335fb0c01e4d85045"
+    },
+    {
+      "path": "web/assets/sky/belfast_sunset_puresky_1k.hdr",
+      "bytes": 1190247,
+      "sha256": "cec532d8dd382bcdca98d7010fa951a782f3295f98e8bd72ee453be8d0a64e98"
+    },
+    {
+      "path": "web/assets/sky/belfast_sunset_puresky_backdrop.jpg",
+      "bytes": 692658,
+      "sha256": "883d8fd27d76a6b5d744f78da20a7113b3bbf8a6bb2c30df159b0c9940fb99cb"
+    },
+    {
+      "path": "web/assets/sky/kloofendal_48d_partly_cloudy_puresky_1k.hdr",
+      "bytes": 1435119,
+      "sha256": "fd94c84997b8a3c353b62c2125a9b44e19509956986a126e472684432a02d798"
+    },
+    {
+      "path": "web/assets/sky/kloofendal_48d_partly_cloudy_puresky_backdrop.jpg",
+      "bytes": 1023875,
+      "sha256": "8414baac4780efb2390d7cf86e3e2cfd50c5a03b24a9c640d7e00bd0b073243c"
+    },
+    {
+      "path": "web/assets/sky/qwantani_dusk_2_puresky_1k.hdr",
+      "bytes": 1166018,
+      "sha256": "56dc9cb681f2641c08377e20e83fa5e4865fd900bcce26a15a1883580139b5e2"
+    },
+    {
+      "path": "web/assets/sky/qwantani_dusk_2_puresky_backdrop.jpg",
+      "bytes": 686813,
+      "sha256": "3a45c79acd2698ce6d72abd92bd8c5918c662d7441e26cbc408b632c56414d5c"
+    },
+    {
+      "path": "web/assets/textures/asphalt_02/arm.jpg",
+      "bytes": 276857,
+      "sha256": "4cd2b6a6ceb019ff92e166a2ad4d8d85209ba7c20c77eeaec091c2fa4299538f"
+    },
+    {
+      "path": "web/assets/textures/asphalt_02/diff.jpg",
+      "bytes": 379841,
+      "sha256": "4b2278045a935487c8dc7dbf93d829f81e7852d6d497b37c094fcb4f16da1b5d"
+    },
+    {
+      "path": "web/assets/textures/asphalt_02/nor.jpg",
+      "bytes": 511537,
+      "sha256": "2ac52efa3c87ac1bbaa6609888921c047559bdcea98e620715a1efaad1a761d9"
+    },
+    {
+      "path": "web/assets/textures/ceramic_roof_01/arm.jpg",
+      "bytes": 163041,
+      "sha256": "dc34952095650007dce665bf04bcacf180878e002259149de9fa825af04f2027"
+    },
+    {
+      "path": "web/assets/textures/ceramic_roof_01/diff.jpg",
+      "bytes": 216843,
+      "sha256": "0b3ed4c3b1732f6781975301f728f2efc461b00e9d112f12e9824f46c4adbd18"
+    },
+    {
+      "path": "web/assets/textures/ceramic_roof_01/nor.jpg",
+      "bytes": 328649,
+      "sha256": "cf4a1395463d337937b5864b70dee226de852a2b84d9712e24eeb59b3d089170"
+    },
+    {
+      "path": "web/assets/textures/coast_sand_01/arm.jpg",
+      "bytes": 125296,
+      "sha256": "4c4cc30b5592d0604b80d6715ab7d28dc68f089d536df2230da99fd479384dc1"
+    },
+    {
+      "path": "web/assets/textures/coast_sand_01/diff.jpg",
+      "bytes": 282455,
+      "sha256": "b71f2708e1a341d555cc5caa773280acc98fc3b4210b45ece087e0c2acc2b673"
+    },
+    {
+      "path": "web/assets/textures/coast_sand_01/nor.jpg",
+      "bytes": 463461,
+      "sha256": "c744f7938f4655951c1264c53259b4d67acb45e8d693f22c494e6cb617a5687f"
+    },
+    {
+      "path": "web/assets/textures/concrete_floor_worn_001/arm.jpg",
+      "bytes": 144683,
+      "sha256": "2f3797c9e6823f20c3bc690cc6790b9ff64509cea13603370eaa7372bb810233"
+    },
+    {
+      "path": "web/assets/textures/concrete_floor_worn_001/diff.jpg",
+      "bytes": 106172,
+      "sha256": "1ecf8298f15470c9e42203bed93f19eb988a6184fdcca7b5b45265f39ae944c5"
+    },
+    {
+      "path": "web/assets/textures/concrete_floor_worn_001/nor.jpg",
+      "bytes": 115347,
+      "sha256": "826523fe7d2024faf3d0b5e364d714a30fbb532fc0ebf701f23e97ed6411b6f6"
+    },
+    {
+      "path": "web/assets/textures/concrete_wall_008/arm.jpg",
+      "bytes": 113518,
+      "sha256": "d6bc81f2d521c5d3d628e99af98e8e6f99cdd416118049555ffbb0030cb4bc10"
+    },
+    {
+      "path": "web/assets/textures/concrete_wall_008/diff.jpg",
+      "bytes": 136325,
+      "sha256": "ba8a30fca396cfaa9fa76daa70e3f1e9b2560c6a3546a63e27ab1831d2c4ed2b"
+    },
+    {
+      "path": "web/assets/textures/concrete_wall_008/nor.jpg",
+      "bytes": 107290,
+      "sha256": "006acf4136612b41aab2a58df98eb01898effdb10b97da99133f6d24d7de5d9d"
+    },
+    {
+      "path": "web/assets/textures/gravel_embedded_concrete/arm.jpg",
+      "bytes": 219768,
+      "sha256": "bdd71ca9047e58dd50ff299542c694b773494b0f02eea17c3ba614b3813d8d6d"
+    },
+    {
+      "path": "web/assets/textures/gravel_embedded_concrete/diff.jpg",
+      "bytes": 358222,
+      "sha256": "200e101b6eb68d4a880aff7d7aaa256acf4e1eaf8b668b3b8bfabc2d5da506d7"
+    },
+    {
+      "path": "web/assets/textures/gravel_embedded_concrete/nor.jpg",
+      "bytes": 627663,
+      "sha256": "43fe8bc6b956eeaa3c12c0a7fbec31f9d7d6ee0b5584e404dcf3511d8284fe90"
+    },
+    {
+      "path": "web/assets/textures/lawn/arm.jpg",
+      "bytes": 434712,
+      "sha256": "770ee8f6da1580717ce8170884e1cb5621ba0edadb229fdfffa36b7e929b1cb8"
+    },
+    {
+      "path": "web/assets/textures/lawn/diff.jpg",
+      "bytes": 261065,
+      "sha256": "74a7f00e8d1015e6a6db9ce0b8250efd9474bf9374cf34ade224c5ea04dd34e7"
+    },
+    {
+      "path": "web/assets/textures/lawn/nor.jpg",
+      "bytes": 611983,
+      "sha256": "02b096b9ef1bf6bcf0310242d257f1116ea212b554ee291bc852e50df0dccf30"
+    },
+    {
+      "path": "web/assets/textures/leafy_grass/arm.jpg",
+      "bytes": 266565,
+      "sha256": "f2bae0271e0bbfd8c3a04257c8b9f8e68fce227cf3cf1dc7b50fae8e5f02be86"
+    },
+    {
+      "path": "web/assets/textures/leafy_grass/diff.jpg",
+      "bytes": 346643,
+      "sha256": "02cf51c716e985577e4aa743f6416a86a106913c6564573d046ed019a7e18eec"
+    },
+    {
+      "path": "web/assets/textures/leafy_grass/nor.jpg",
+      "bytes": 661772,
+      "sha256": "00228c5b16e27cdb84b57b9dcbc448eb626607bc387aba992f16aafdee238dd2"
+    },
+    {
+      "path": "web/assets/textures/metal_plate/arm.jpg",
+      "bytes": 268885,
+      "sha256": "599d90526228d5d21537f13d51200f3b2b02de4cb00bc80b2359656e0d5b4f53"
+    },
+    {
+      "path": "web/assets/textures/metal_plate/diff.jpg",
+      "bytes": 155319,
+      "sha256": "4978c57ad136b7f1049921ccfd83596cc6131493ad8787cc345e8d7dcbaa2f1d"
+    },
+    {
+      "path": "web/assets/textures/metal_plate/nor.jpg",
+      "bytes": 252981,
+      "sha256": "f013621b35535e81ec1013a74ef1ca928c3b722b1beaa409c0b02bcc25150258"
+    },
+    {
+      "path": "web/assets/textures/pavement_02/arm.jpg",
+      "bytes": 949413,
+      "sha256": "6f7a2a55e39b144b12652e6edf4a62e737ce83fa51746ef490c190e9b8c81f9a"
+    },
+    {
+      "path": "web/assets/textures/pavement_02/diff.jpg",
+      "bytes": 1684862,
+      "sha256": "83b1e85d2d9f70b53490308e724cb0f584ed2962bc5f657d150ad2427f70e1f0"
+    },
+    {
+      "path": "web/assets/textures/pavement_02/nor.jpg",
+      "bytes": 1029060,
+      "sha256": "20cf5c3f976c9e16bd7bd4727dfe82f1a2a3f2d49eea8b1cbca0cb2445fbe3d4"
+    },
+    {
+      "path": "web/assets/textures/rock_pitted_mossy/arm.jpg",
+      "bytes": 168258,
+      "sha256": "ce2b0f839c67db22550c3aef8df8b1dc5d2024bff9c11959f668494c70511e71"
+    },
+    {
+      "path": "web/assets/textures/rock_pitted_mossy/diff.jpg",
+      "bytes": 295262,
+      "sha256": "b642e4d6a24e81e7b119e1934b3dd3d5c8cc04fe20eb3f9190c85809b90b039b"
+    },
+    {
+      "path": "web/assets/textures/rock_pitted_mossy/nor.jpg",
+      "bytes": 444440,
+      "sha256": "2a1954c657f04ba21babd2e95a222c4efb084a5e6066b00e195b6442001ef620"
+    },
+    {
+      "path": "web/assets/textures/sandstone_blocks_05/arm.jpg",
+      "bytes": 541492,
+      "sha256": "cddc53642a33e7342ecfca760141b3273fad5fa678b7aa638d10497ecc9ffb48"
+    },
+    {
+      "path": "web/assets/textures/sandstone_blocks_05/diff.jpg",
+      "bytes": 1017262,
+      "sha256": "23ec23333f84133e4d814d9e0b264898705890754ec17751ad7b683fecda4f1e"
+    },
+    {
+      "path": "web/assets/textures/sandstone_blocks_05/nor.jpg",
+      "bytes": 1941985,
+      "sha256": "a2256bbafbd4d3955d0c550e0fd7e8604861c6e81ee20741763004905ecf5acc"
+    },
+    {
+      "path": "web/assets/textures/sandstone_blocks_08/arm.jpg",
+      "bytes": 54487,
+      "sha256": "0402f3433ef0485c95f3b0fcb7ee75c64ef4c78d26a8ac7c1924a61a1b3b74c3"
+    },
+    {
+      "path": "web/assets/textures/sandstone_blocks_08/diff.jpg",
+      "bytes": 82571,
+      "sha256": "480cdb79db560397e294bfcd1b3da3ac54330c8e94528ef79b9bcc1d7b47c322"
+    },
+    {
+      "path": "web/assets/textures/sandstone_blocks_08/nor.jpg",
+      "bytes": 91132,
+      "sha256": "e3175cdec36e11a02a006274ffc84e02b8b6ef0a8a01cbcf90284cdc5ebbf8a2"
+    },
+    {
+      "path": "web/assets/textures/wood_planks_grey/arm.jpg",
+      "bytes": 144361,
+      "sha256": "be549ac7f1d8af201ca33225ad53929de82069f30a721e4b2d1e397b32bd2278"
+    },
+    {
+      "path": "web/assets/textures/wood_planks_grey/diff.jpg",
+      "bytes": 210120,
+      "sha256": "002723b4c6606880520d9a8a73bef2255c243cd629507c812869f409fd438364"
+    },
+    {
+      "path": "web/assets/textures/wood_planks_grey/nor.jpg",
+      "bytes": 175616,
+      "sha256": "cd165078f425445813d830bf503ce578b315f18165464f17f2f242c84fb3a9ad"
+    },
+    {
+      "path": "web/assets/water/shore_distance.png",
+      "bytes": 158487,
+      "sha256": "4ffd822af0c27e3dd7fbd6b04694db34a8ce531e55e1ca151be879a57bfc66f1"
+    },
+    {
+      "path": "web/assets/water/waternormals.jpg",
+      "bytes": 248813,
+      "sha256": "add9912b158a4fe9c12421745babe68c44c8af75631ac4837236cb2a03bc373f"
+    },
+    {
+      "path": "web/config.example.js",
+      "bytes": 309,
+      "sha256": "51be24c0b95cd07f99be967d38333b239f14ca2c6ceac518d82a6d66bf5dabb2"
+    },
+    {
+      "path": "web/data/blockout.glb",
+      "bytes": 3212468,
+      "sha256": "74c25388cef66662293564183551b22b099d7322c4d066574e1f7c68bfe90d9d"
+    },
+    {
+      "path": "web/data/scene_meta.json",
+      "bytes": 259884,
+      "sha256": "100e928e08e94754669fec4b0acef362d86f25f535acbca431c0498240e1a932"
+    },
+    {
+      "path": "web/data/trees.json",
+      "bytes": 290883,
+      "sha256": "1ba28ebef4e5b355096b1fa52f7edb1d8801f5d499055303cc6ea57d97174a9c"
+    },
+    {
+      "path": "web/index.html",
+      "bytes": 2660,
+      "sha256": "992aedf93e3a6d270929f257db83c103beadfdf199dab46030f7c53c81e367ce"
+    },
+    {
+      "path": "web/src/environment.js",
+      "bytes": 6217,
+      "sha256": "ccefc3dfe6a8bd31da9b428dc9a81467e1cb8a882dacea73269660b0bb4937a6"
+    },
+    {
+      "path": "web/src/lights.js",
+      "bytes": 876,
+      "sha256": "a727a2faf935d6e5c8ea38a3cb364c04562039b0eb64283309b6ae05a943be1d"
+    },
+    {
+      "path": "web/src/main.js",
+      "bytes": 8780,
+      "sha256": "401129388e7acb50ae08b919a056674eb4fe029497c4772d3777fbe0c3f5413a"
+    },
+    {
+      "path": "web/src/materials.js",
+      "bytes": 8302,
+      "sha256": "f43d95afe3e410ec4105f2140d8fbc4f46b0120e8614c551627b16d88c30a725"
+    },
+    {
+      "path": "web/src/player.js",
+      "bytes": 4642,
+      "sha256": "b785200eaa8e2e906725c3743a3a7806d8c68b40b19c8ca6ad06e05a9721e84a"
+    },
+    {
+      "path": "web/src/post.js",
+      "bytes": 1309,
+      "sha256": "f7c20f3bc2b45a6ac76fb5cbb66f0f299e7a9bf962c013114afffff768cd734e"
+    },
+    {
+      "path": "web/src/shaders/facade.js",
+      "bytes": 13101,
+      "sha256": "a2325679f32354ebeea7291097fafe4e55cc6999720905761d49b68eb7f753b1"
+    },
+    {
+      "path": "web/src/shaders/ground.js",
+      "bytes": 3181,
+      "sha256": "996c81a93735d191a5d321a117131dc84e1b0f2d46aff8c284be836ea23440e3"
+    },
+    {
+      "path": "web/src/shaders/opera.js",
+      "bytes": 1384,
+      "sha256": "1d5d4aec00e4478ae7e88e4bfe7f7a254bb216c747b1a5c1cb5a9b3c4755de7f"
+    },
+    {
+      "path": "web/src/textures.js",
+      "bytes": 1960,
+      "sha256": "3247afcea20e5de1d50002c493d275f691e430d0b94c0c0e3cf48c3e55ca3497"
+    },
+    {
+      "path": "web/src/tiles.js",
+      "bytes": 3861,
+      "sha256": "9858dddca4a03d8bdfc2aeeadb846cd8edc3221883227e86bb734c5eb73054b1"
+    },
+    {
+      "path": "web/src/vegetation.js",
+      "bytes": 7020,
+      "sha256": "c0983e88da5a9bc187736d8c5c5e0d9dc228bd43e7472b11e78f642fc275774a"
+    },
+    {
+      "path": "web/src/water.js",
+      "bytes": 3210,
+      "sha256": "21f9c8088047569485ef0b27b85c8eafad24e80645ce2c444fb451c40ae9fc79"
+    },
+    {
+      "path": "web/vendor/3d-tiles-renderer/index.plugins.js",
+      "bytes": 1941,
+      "sha256": "e854081d73bd1ef24d18f06699453e32faa016de552c5766686def6e9f344b22"
+    },
+    {
+      "path": "web/vendor/3d-tiles-renderer/index.three.js",
+      "bytes": 511,
+      "sha256": "41763bc7d20784b57b4b103a642a69aec447b96722001313d6be5764f19d42af"
+    },
+    {
+      "path": "web/vendor/3d-tiles-renderer/LICENSE",
+      "bytes": 11565,
+      "sha256": "593ebc2c1ec5646fda6a280bc35e85b1e91faa53742b01b17df4944156acbf2a"
+    },
+    {
+      "path": "web/vendor/3d-tiles-renderer/plugins-DXnt62ch.js",
+      "bytes": 323097,
+      "sha256": "e53f60e041d92c55fc5ada318080bc9c1210e9b5cb57d3ed0ce5a1de1e94195b"
+    },
+    {
+      "path": "web/vendor/3d-tiles-renderer/plugins-RoDI5SD7.js",
+      "bytes": 22376,
+      "sha256": "e59db28b88e57281315153f0bea9d20e50188e771cd4e4935b7b12b6520844da"
+    },
+    {
+      "path": "web/vendor/3d-tiles-renderer/renderer-_7gAivIK.js",
+      "bytes": 44696,
+      "sha256": "9ba32dbadce9483437f0c6fede5eb0470f4eff1f67e805005c747dca94e92b31"
+    },
+    {
+      "path": "web/vendor/3d-tiles-renderer/renderer-CUfHAmYW.js",
+      "bytes": 89173,
+      "sha256": "ff0280bb23e446a93b3f222fae34294e68b3f5dfc911914e0e3128e536fb59c7"
+    },
+    {
+      "path": "web/vendor/3d-tiles-renderer/VERSION.txt",
+      "bytes": 91,
+      "sha256": "ed073d669caa2c886ec5d0607b33867fbc0595980c74549628bb59ff775a2ac6"
+    },
+    {
+      "path": "web/vendor/three/build/three.module.js",
+      "bytes": 1369252,
+      "sha256": "da7f8aecb0b1e4a55e820cce5dc5a5a8eb13dc379758f215e8fb07937be7a6a3"
+    },
+    {
+      "path": "web/vendor/three/examples/jsm/csm/CSM.js",
+      "bytes": 9687,
+      "sha256": "9c1b9ba3dbbaab9879b421ba3ea27c9d255a6f5435701f5f744c3ed5a179d86f"
+    },
+    {
+      "path": "web/vendor/three/examples/jsm/csm/CSMFrustum.js",
+      "bytes": 2979,
+      "sha256": "9d5a08ece7316f5ce20f603fa2ef519d64a9f64cdad15fca7b1a912c7b864a78"
+    },
+    {
+      "path": "web/vendor/three/examples/jsm/csm/CSMShader.js",
+      "bytes": 11021,
+      "sha256": "91fb5de8e57b18a39f9d982ae55316d13298cb54d0ce4c80936c8ff76d3193f9"
+    },
+    {
+      "path": "web/vendor/three/examples/jsm/libs/draco/draco_decoder.js",
+      "bytes": 719444,
+      "sha256": "cebb944c8cb7606782fe6b06584454df8f93835a9a7346f7b1efcc0fb72b2ac1"
+    },
+    {
+      "path": "web/vendor/three/examples/jsm/libs/draco/draco_decoder.wasm",
+      "bytes": 285747,
+      "sha256": "c55a594e8ffd18426d36b27fea9618af3df5e173640a3e56d46f09d76f0574f2"
+    },
+    {
+      "path": "web/vendor/three/examples/jsm/libs/draco/draco_wasm_wrapper.js",
+      "bytes": 58880,
+      "sha256": "fc9a2f87811e037f240f5e095386d0751a026ac535bc938acc6425236f9a0bad"
+    },
+    {
+      "path": "web/vendor/three/examples/jsm/libs/draco/README.md",
+      "bytes": 1521,
+      "sha256": "0694148db91cbc86a569fb925dd1eebdaa6735a5af2aed3fcb50a638e4f31959"
+    },
+    {
+      "path": "web/vendor/three/examples/jsm/loaders/DRACOLoader.js",
+      "bytes": 14314,
+      "sha256": "eb4efeada4831874bf83b1894d99cd46a1540f64945a4d394a1a1dfe398bac8c"
+    },
+    {
+      "path": "web/vendor/three/examples/jsm/loaders/GLTFLoader.js",
+      "bytes": 115000,
+      "sha256": "5bb7bde28842727558c1f9a692004229c76ed8e8f846469d7c6258e719c7ee8c"
+    },
+    {
+      "path": "web/vendor/three/examples/jsm/loaders/RGBELoader.js",
+      "bytes": 11827,
+      "sha256": "6dbd6b14f7d86b57474c9261381e53bcba1ffeb76d9f248d5a097135fb4005c9"
+    },
+    {
+      "path": "web/vendor/three/examples/jsm/objects/Sky.js",
+      "bytes": 7038,
+      "sha256": "3b99cc9bf7e33856cda35074e720165513b37b82fcec0101aa412bf46cb1b2ae"
+    },
+    {
+      "path": "web/vendor/three/examples/jsm/objects/Water.js",
+      "bytes": 11549,
+      "sha256": "bb493c0b890b9c41007d33b94f91436b5e3803dcc6e722ce9fc8622198e99baf"
+    },
+    {
+      "path": "web/vendor/three/examples/jsm/postprocessing/EffectComposer.js",
+      "bytes": 4882,
+      "sha256": "0dbb9c044721be861e8b7f17a273475c47388cee6fd16474c56d715df2fe65b2"
+    },
+    {
+      "path": "web/vendor/three/examples/jsm/postprocessing/MaskPass.js",
+      "bytes": 2335,
+      "sha256": "b0360737a0fa5a3416f062915a16b0448a93f26e01d0e559d9c9cfac8b9cf46d"
+    },
+    {
+      "path": "web/vendor/three/examples/jsm/postprocessing/OutputPass.js",
+      "bytes": 2621,
+      "sha256": "e040260fd6c8c26f155432e181b407b35c43e44314b9aad1c56222a2655aa51c"
+    },
+    {
+      "path": "web/vendor/three/examples/jsm/postprocessing/Pass.js",
+      "bytes": 1801,
+      "sha256": "e142845fdd6a19d979c6f064dd71e5f5b7a4d35bd6eb4f5af46edf2eabff9da9"
+    },
+    {
+      "path": "web/vendor/three/examples/jsm/postprocessing/RenderPass.js",
+      "bytes": 2040,
+      "sha256": "d57f1aa0e21be0f0969547006560ecf1678fdf2de18251b5a70b76a62390de7d"
+    },
+    {
+      "path": "web/vendor/three/examples/jsm/postprocessing/ShaderPass.js",
+      "bytes": 1653,
+      "sha256": "84d3854fd7e42a4a0aeddd6c58c902ad0b3aea82bf7d5e7cb76c24248acfb0b7"
+    },
+    {
+      "path": "web/vendor/three/examples/jsm/postprocessing/UnrealBloomPass.js",
+      "bytes": 12825,
+      "sha256": "9cfd2ff389368709af19c0f55171bf80aa8126c9215611ee608a902a0846813b"
+    },
+    {
+      "path": "web/vendor/three/examples/jsm/shaders/CopyShader.js",
+      "bytes": 616,
+      "sha256": "5827504ed05e7ae252e75f53b3fb10caa96ec21e70a78143e9ef90d430f1107e"
+    },
+    {
+      "path": "web/vendor/three/examples/jsm/shaders/LuminosityHighPassShader.js",
+      "bytes": 1211,
+      "sha256": "58830498f7c6eafbfa2874319cfc79aa8d1ccf68b46fd5ab1c0d409ebef2eb62"
+    },
+    {
+      "path": "web/vendor/three/examples/jsm/shaders/OutputShader.js",
+      "bytes": 1575,
+      "sha256": "b20bb58821aa527f80a052f36e18c188f9202c6edaabf895c665594cd54c8320"
+    },
+    {
+      "path": "web/vendor/three/examples/jsm/utils/BufferGeometryUtils.js",
+      "bytes": 33141,
+      "sha256": "5beb9dc7e9248a32f7b5e8cc0dd5fd4054d227d8e19a3a98b4715f6d2784c4ef"
+    },
+    {
+      "path": "web/vendor/three/LICENSE",
+      "bytes": 1102,
+      "sha256": "f57eb9202058667d12aebd854fe8a86d6feaeab51078180df5615bfdbd5cff05"
+    }
+  ]
+}

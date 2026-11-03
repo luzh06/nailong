@@ -1,5 +1,15 @@
 # 悉尼港 · 网页漫游场景
 
+## 2026-11-03 完整上传状态
+
+实际远端为 [luzh06/nailong 的 sydney-harbour 分支](https://github.com/luzh06/nailong/tree/sydney-harbour)，悉尼工程位于该分支根目录。
+
+已收录源工程截至 `73470531d30c96f0107074cc8157e5c93d2c307f` 的五个原始提交，以及模型、原始数据、材质、网页依赖、生成脚本和交接文件。新增质量样板包括地标楼、室内映射、岸线设施和水面；**这批样板代码尚未完成运行与视觉验收，最后一次截图等待加载超时**，详见 [HANDOFF.md](HANDOFF.md)。下文“真实化渲染”和性能描述主要记录此前版本，不能当作本轮样板已验证的结论。
+
+此前 `68cedfa` 版本的 [实查报告与升级建议](docs/review/research/悉尼场景实查与升级方案_2026-11-02.md) 和原始截图一并归档：[白天](docs/review/sydney-day.png)、[黄金时段](docs/review/sydney-golden.png)、[蓝调](docs/review/sydney-blue.png)、[CBD](docs/review/sydney-cbd.png)。它们记录修改前基线，不是新增样板效果。
+
+完整上传清单见 [docs/upload-manifest.json](docs/upload-manifest.json)。本地 Python 依赖、缓存、Blender 自动备份与私密配置沿用 `.gitignore` 排除；依赖安装和运行方式见下文。
+
 站在北岸 Kirribilli / Milsons Point 远眺歌剧院、CBD 与海港大桥的网页漫游。几何来自真实数据（OSM、NSW 高程）并经过校准，材质、天空、光影、水面和夜景已做真实化处理；拍照模块尚未加入。
 
 ## 运行

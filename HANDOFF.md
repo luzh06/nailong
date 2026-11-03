@@ -1,6 +1,6 @@
 # 交接文档（2026-11-02）
 
-项目：悉尼港网页漫游场景。目录 `D:\project\cijian\sydney`，git 仓库，分支 `main`，尚未推送到 GitHub（`luzh06/sydney-harbour` 用本机凭据访问时返回"不存在"，需先确认仓库地址和权限）。
+项目：悉尼港网页漫游场景。目录 `D:\project\cijian\sydney`，git 仓库，分支 `main`，已于 2026-11-03 同步至 `https://github.com/luzh06/nailong/tree/sydney-harbour`；远端分支为 `sydney-harbour`，源工程本地分支仍为 `main`。
 
 ## 运行 / 重建
 见 README.md。本地服务：
