@@ -189,7 +189,14 @@ export const facadeFragmentPars = /* glsl */ `
     vec2 ih = max(winHalf - frameW, vec2(0.0));
     float glassMask = smoothstep(ih.x + fw.x, ih.x - fw.x, offs.x) * smoothstep(ih.y + fw.y, ih.y - fw.y, offs.y);
     float frameMask = max(outer - glassMask, 0.0);
-    float far = smoothstep(0.22, 0.6, max(fw.x, fw.y));
+    // Columns blur together long before floors do (bays are narrower than storeys), so fade the
+    // two directions separately: from across the harbour a tower keeps its floor lines instead of
+    // turning into a flat-coloured prism.
+    // Keep resolving windows down to ~2–3 px per cell; only then average them
+    float farX = smoothstep(0.32, 0.85, fw.x);
+    float farY = smoothstep(0.35, 0.95, fw.y);
+    float far = max(farX, farY);
+    float rowMask = smoothstep(winHalf.y + fw.y, winHalf.y - fw.y, offs.y);
 
     // per-window and per-floor variation
     float h = hash12(id + seed * 113.0);
@@ -226,16 +233,21 @@ export const facadeFragmentPars = /* glsl */ `
     // Averaged over many windows the light is much dimmer than one lit room: most of a cell is
     // frame, blinds and unlit floors. Too high and distant towers glow as uniform white blocks.
     vec3 farLight = lamp * f.litShare * 0.3 * mix(0.15, 1.0, uNight) * coverage + vec3(0.03) * uInteriorAmbient;
-    throughGlass = mix(throughGlass * glassMask, farLight, far);
+    float windowArea = mix(mix(glassMask, rowMask * f.win.x, farX), coverage, farY);
+    throughGlass = mix(throughGlass * glassMask, farLight * windowArea / max(coverage, 1e-3), far);
 
     vec3 wallCol = f.wall * (0.62 + 0.46 * detail) * (1.0 - 0.07 * hash12(vec2(floor(uv.x * 1.5), seed * 7.0)));
-    float windowArea = mix(glassMask, coverage, far);
+    // Neighbouring buildings of the same style should not read as one block
+    wallCol *= 0.86 + 0.28 * fract(seed * 13.7);
+    // Coated glass catches the sky unevenly from floor to floor
+    float rowVar = hash12(vec2(id.y, seed * 7.0));
+    vec3 glassCol = f.glass * (0.8 + 0.4 * rowVar);
     fWindowMask = windowArea;
-    fRough = mix(mix(f.wallRough, 0.4, frameMask), 0.04, windowArea);
+    fRough = mix(mix(f.wallRough, 0.4, frameMask), 0.03 + 0.14 * rowVar, windowArea);
     fMetal = mix(mix(f.wallMetal, 0.6, frameMask), f.glassMetal, windowArea);
     fEmissive = throughGlass;
     vec3 surface = mix(wallCol, f.frame, frameMask * (1.0 - far));
-    return mix(surface, f.glass, windowArea);
+    return mix(surface, glassCol, windowArea);
   }
 `;
 

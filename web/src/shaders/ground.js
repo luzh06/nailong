@@ -50,9 +50,15 @@ export const groundFragmentMain = /* glsl */ `
   float steep = smoothstep(0.62, 0.82, 1.0 - vGroundUp);
 
   vec3 pave = layer(uPave, gxy, 4.0, mixer * 0.5) * vec3(0.8, 0.78, 0.74);
-  vec3 road = layer(uRoad, gxy, 5.0, mixer * 0.4) * 0.62;
+  // Asphalt clearly darker than footpaths, so streets read from across the harbour
+  vec3 road = layer(uRoad, gxy, 5.0, mixer * 0.4) * 0.48;
   // Sydney lawns: green, with drier yellow-green patches across large parks
   vec3 grass = layer(uGrass, gxy, 2.5, mixer * 0.6) * mix(vec3(1.0, 1.02, 0.95), vec3(1.25, 1.12, 0.8), macro * macro);
+  // Lawns are never one even green: thicker darker tufts and worn patches at a few metres' scale
+  float tuft = gNoise(gxy / 5.0 + 3.1);
+  float fine = gNoise(gxy / 1.1 + 11.0);
+  grass *= (0.78 + 0.42 * tuft) * (0.9 + 0.2 * fine);
+  grass = mix(grass, grass * vec3(1.12, 1.05, 0.82), smoothstep(0.62, 0.9, tuft) * 0.6);
   vec3 sand = layer(uSand, gxy, 4.0, mixer * 0.5) * vec3(1.05, 0.98, 0.88);
   vec3 rock = layer(uRock, gxy, 6.0, mixer * 0.5) * vec3(1.08, 0.92, 0.74);
 
