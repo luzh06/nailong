@@ -1,0 +1,35 @@
+{
+ "name": "pr_plants",
+ "tris": {
+  "LOD0": 85543,
+  "LOD1": 34217,
+  "LOD2": 10264,
+  "COL": 12
+ },
+ "size_m": [
+  1.1,
+  0.382,
+  1.125
+ ],
+ "texture": [
+  2048,
+  2048
+ ],
+ "sources": [
+  "polyhaven:planter_pot_clay",
+  "polyhaven:potted_plant_04",
+  "polyhaven:potted_plant_02",
+  "polyhaven:weathered_planks",
+  "polyhaven:metal_plate",
+  "polyhaven:painted_metal_shutter",
+  "font:ZenKakuGothicNew(OFL)",
+  "decals:original"
+ ],
+ "notes": "盆栽架",
+ "maps": {
+  "BaseColor": "pr_plants_BaseColor.png",
+  "Normal": "pr_plants_Normal.png",
+  "ORM": "pr_plants_ORM.png"
+ },
+ "glb_mb": 8.92
+}

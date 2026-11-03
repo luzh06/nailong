@@ -1,0 +1,31 @@
+{
+ "name": "pr_laundry",
+ "tris": {
+  "LOD0": 2580,
+  "LOD1": 1032,
+  "LOD2": 308,
+  "COL": 12
+ },
+ "size_m": [
+  1.9,
+  0.5,
+  1.563
+ ],
+ "texture": [
+  2048,
+  2048
+ ],
+ "sources": [
+  "polyhaven:metal_plate",
+  "polyhaven:painted_metal_shutter",
+  "font:ZenKakuGothicNew(OFL)",
+  "decals:original"
+ ],
+ "notes": "落地晾衣架和衣物",
+ "maps": {
+  "BaseColor": "pr_laundry_BaseColor.png",
+  "Normal": "pr_laundry_Normal.png",
+  "ORM": "pr_laundry_ORM.png"
+ },
+ "glb_mb": 0.68
+}

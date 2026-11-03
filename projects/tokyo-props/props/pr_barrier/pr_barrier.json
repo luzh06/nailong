@@ -1,0 +1,31 @@
+{
+ "name": "pr_barrier",
+ "tris": {
+  "LOD0": 704,
+  "LOD1": 280,
+  "LOD2": 84,
+  "COL": 12
+ },
+ "size_m": [
+  1.2,
+  0.7,
+  1.021
+ ],
+ "texture": [
+  2048,
+  2048
+ ],
+ "sources": [
+  "polyhaven:metal_plate",
+  "polyhaven:painted_metal_shutter",
+  "font:ZenKakuGothicNew(OFL)",
+  "decals:original"
+ ],
+ "notes": "A 字路障",
+ "maps": {
+  "BaseColor": "pr_barrier_BaseColor.png",
+  "Normal": "pr_barrier_Normal.png",
+  "ORM": "pr_barrier_ORM.png"
+ },
+ "glb_mb": 0.35
+}

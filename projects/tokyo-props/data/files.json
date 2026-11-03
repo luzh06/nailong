@@ -1,0 +1,84 @@
+{
+"cities": [
+{
+"cityCode": "13105",
+"cityName": "\u6587\u4eac\u533a",
+"year": 2025,
+"registrationYear": 2025,
+"spec": "5.0",
+"url": "https://assets.cms.plateau.reearth.io/assets/4b/ac4a9f-1bdf-4978-bbfa-8ba8a80d12a0/13105_bunkyo-ku_pref_2025_citygml_1_op.zip",
+"files": {
+"bldg": [
+{
+"code": "53394671",
+"maxLod": 2,
+"url": "https://assets.cms.plateau.reearth.io/assets/4b/ac4a9f-1bdf-4978-bbfa-8ba8a80d12a0/13105_bunkyo-ku_pref_2025_citygml_1_op/udx/bldg/53394671_bldg_6697_op.gml"
+}
+],
+"tran": [
+{
+"code": "53394671",
+"maxLod": 2,
+"url": "https://assets.cms.plateau.reearth.io/assets/4b/ac4a9f-1bdf-4978-bbfa-8ba8a80d12a0/13105_bunkyo-ku_pref_2025_citygml_1_op/udx/tran/53394671_tran_6697_op.gml"
+}
+]
+}
+},
+{
+"cityCode": "13106",
+"cityName": "\u53f0\u6771\u533a",
+"year": 2025,
+"registrationYear": 2025,
+"spec": "5.0",
+"url": "https://assets.cms.plateau.reearth.io/assets/80/45b2b1-5a88-40ab-9877-70b540b8707e/13106_taito-ku_city_2025_citygml_1_op.zip",
+"files": {
+"bldg": [
+{
+"code": "53394671",
+"maxLod": 2,
+"url": "https://assets.cms.plateau.reearth.io/assets/80/45b2b1-5a88-40ab-9877-70b540b8707e/13106_taito-ku_city_2025_citygml_1_op/udx/bldg/53394671_bldg_6697_op.gml"
+}
+],
+"tran": [
+{
+"code": "53394671",
+"maxLod": 2,
+"url": "https://assets.cms.plateau.reearth.io/assets/80/45b2b1-5a88-40ab-9877-70b540b8707e/13106_taito-ku_city_2025_citygml_1_op/udx/tran/53394671_tran_6697_op.gml"
+}
+]
+}
+},
+{
+"cityCode": "13118",
+"cityName": "\u8352\u5ddd\u533a",
+"year": 2025,
+"registrationYear": 2025,
+"spec": "5.0",
+"url": "https://assets.cms.plateau.reearth.io/assets/a1/351cc4-8dfa-4825-b22f-a55a7fe09125/13118_arakawa-ku_pref_2025_citygml_1_op.zip",
+"files": {
+"bldg": [
+{
+"code": "53394671",
+"maxLod": 2,
+"url": "https://assets.cms.plateau.reearth.io/assets/a1/351cc4-8dfa-4825-b22f-a55a7fe09125/13118_arakawa-ku_pref_2025_citygml_1_op/udx/bldg/53394671_bldg_6697_op.gml"
+}
+],
+"tran": [
+{
+"code": "53394671",
+"maxLod": 2,
+"url": "https://assets.cms.plateau.reearth.io/assets/a1/351cc4-8dfa-4825-b22f-a55a7fe09125/13118_arakawa-ku_pref_2025_citygml_1_op/udx/tran/53394671_tran_6697_op.gml"
+}
+]
+}
+}
+],
+"featureTypes": {
+"bldg": {
+"name": "\u5efa\u7bc9\u7269\u30e2\u30c7\u30eb"
+},
+"tran": {
+"name": "\u4ea4\u901a\uff08\u9053\u8def\uff09\u30e2\u30c7\u30eb"
+}
+}
+}

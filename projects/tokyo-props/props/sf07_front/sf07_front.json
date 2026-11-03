@@ -1,0 +1,38 @@
+{
+ "name": "sf07_front",
+ "tris": {
+  "LOD0": 8020,
+  "LOD1": 3208,
+  "LOD2": 962,
+  "COL": 12
+ },
+ "size_m": [
+  4.0,
+  2.5,
+  2.9
+ ],
+ "texture": [
+  4096,
+  4096
+ ],
+ "sources": [
+  "polyhaven:dark_wooden_planks",
+  "polyhaven:concrete_floor_worn_001",
+  "polyhaven:white_plaster_rough_01",
+  "polyhaven:hinoki_planks",
+  "ref:Commons Tokyo Yanaka 2/4, Yanaka Ginza 2, Japan - Tokyo (Yanaka) 9982647795 (CC BY / BY-SA)",
+  "map:PLATEAU 13106 taito-ku 2025 bldg 53394671",
+  "font:ShipporiMincho(OFL)",
+  "font:YujiSyuku(OFL)",
+  "font:ZenKakuGothicNew(OFL)",
+  "decals:original"
+ ],
+ "notes": "やきとり とり源：一层店面（izakaya）",
+ "maps": {
+  "BaseColor": "sf07_front_BaseColor.png",
+  "Normal": "sf07_front_Normal.png",
+  "ORM": "sf07_front_ORM.png",
+  "Emissive": "sf07_front_Emissive.png"
+ },
+ "glb_mb": 5.32
+}

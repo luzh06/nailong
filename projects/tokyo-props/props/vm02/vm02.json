@@ -1,0 +1,36 @@
+{
+ "name": "vm02",
+ "tris": {
+  "LOD0": 22868,
+  "LOD1": 9146,
+  "LOD2": 2744,
+  "COL": 12
+ },
+ "size_m": [
+  1.179,
+  1.019,
+  1.83
+ ],
+ "texture": [
+  4096,
+  4096
+ ],
+ "sources": [
+  "ref:Commons Random vending machine Hakone (CC BY-SA 2.0)",
+  "ref:Commons Vending Machines in Japan 43679427685 (CC BY 2.0)",
+  "polyhaven:metal_plate",
+  "polyhaven:rusty_metal_02",
+  "font:ZenKakuGothicNew(OFL)",
+  "font:ReggaeOne(OFL)",
+  "font:ShipporiMincho(OFL)",
+  "decals:original"
+ ],
+ "notes": "按实拍比例重做；虚构品牌 そよかぜ；原点在机身中心地面",
+ "maps": {
+  "BaseColor": "vm02_BaseColor.png",
+  "Normal": "vm02_Normal.png",
+  "ORM": "vm02_ORM.png",
+  "Emissive": "vm02_Emissive.png"
+ },
+ "glb_mb": 5.59
+}

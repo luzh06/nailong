@@ -1,0 +1,31 @@
+{
+ "name": "pr_bins",
+ "tris": {
+  "LOD0": 1144,
+  "LOD1": 456,
+  "LOD2": 137,
+  "COL": 12
+ },
+ "size_m": [
+  1.0,
+  0.42,
+  0.842
+ ],
+ "texture": [
+  2048,
+  2048
+ ],
+ "sources": [
+  "polyhaven:metal_plate",
+  "polyhaven:painted_metal_shutter",
+  "font:ZenKakuGothicNew(OFL)",
+  "decals:original"
+ ],
+ "notes": "回收箱一对（罐、瓶）",
+ "maps": {
+  "BaseColor": "pr_bins_BaseColor.png",
+  "Normal": "pr_bins_Normal.png",
+  "ORM": "pr_bins_ORM.png"
+ },
+ "glb_mb": 0.64
+}

@@ -1,0 +1,38 @@
+{
+ "name": "sf02_tent",
+ "tris": {
+  "LOD0": 89162,
+  "LOD1": 26748,
+  "LOD2": 7131,
+  "COL": 12
+ },
+ "size_m": [
+  5.205,
+  1.371,
+  0.916
+ ],
+ "texture": [
+  4096,
+  4096
+ ],
+ "sources": [
+  "polyhaven:rough_linen",
+  "polyhaven:metal_plate",
+  "ref:Commons Tokyo Yanaka 2 (CC BY-SA 4.0)",
+  "ref:Commons Tokyo Yanaka 4 (CC BY-SA 4.0)",
+  "ref:Commons Japan - Tokyo (Yanaka) 9982647795 (CC BY 2.0)",
+  "map:PLATEAU 13106 taito-ku 2025 bldg 53394671 (CC BY 4.0 compatible, see LICENSES)",
+  "font:ShipporiMincho(OFL)",
+  "font:YujiSyuku(OFL)",
+  "font:ZenKakuGothicNew(OFL)",
+  "decals:original"
+ ],
+ "notes": "绷紧的 PVC 雨棚，带灯泡线",
+ "maps": {
+  "BaseColor": "sf02_tent_BaseColor.png",
+  "Normal": "sf02_tent_Normal.png",
+  "ORM": "sf02_tent_ORM.png",
+  "Emissive": "sf02_tent_Emissive.png"
+ },
+ "glb_mb": 4.4
+}

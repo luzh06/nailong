@@ -1,0 +1,35 @@
+{
+ "name": "vm01",
+ "tris": {
+  "LOD0": 27588,
+  "LOD1": 11034,
+  "LOD2": 3310,
+  "COL": 12
+ },
+ "size_m": [
+  1.137,
+  1.025,
+  1.83
+ ],
+ "texture": [
+  4096,
+  4096
+ ],
+ "sources": [
+  "polyhaven:painted_metal_shutter",
+  "polyhaven:metal_plate",
+  "polyhaven:rusty_metal_02",
+  "font:ZenKakuGothicNew(OFL)",
+  "font:ReggaeOne(OFL)",
+  "font:ShipporiMincho(OFL)",
+  "decals:original"
+ ],
+ "notes": "虚构品牌 そよかぜ；发光图单独给出（Emissive），玻璃为 alpha 材质",
+ "maps": {
+  "BaseColor": "vm01_BaseColor.png",
+  "Normal": "vm01_Normal.png",
+  "ORM": "vm01_ORM.png",
+  "Emissive": "vm01_Emissive.png"
+ },
+ "glb_mb": 6.11
+}

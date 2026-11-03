@@ -1,0 +1,33 @@
+{
+ "name": "sf01_awning",
+ "tris": {
+  "LOD0": 55460,
+  "LOD1": 16638,
+  "LOD2": 4436,
+  "COL": 12
+ },
+ "size_m": [
+  3.63,
+  1.099,
+  0.666
+ ],
+ "texture": [
+  4096,
+  4096
+ ],
+ "sources": [
+  "polyhaven:rough_linen",
+  "polyhaven:metal_plate",
+  "polyhaven:rusty_metal_02",
+  "font:ShipporiMincho(OFL)",
+  "font:YujiSyuku(OFL)",
+  "decals:original"
+ ],
+ "notes": "帆布雨棚，顶到檐口一张布，雨痕和下垂都烘进贴图",
+ "maps": {
+  "BaseColor": "sf01_awning_BaseColor.png",
+  "Normal": "sf01_awning_Normal.png",
+  "ORM": "sf01_awning_ORM.png"
+ },
+ "glb_mb": 2.89
+}

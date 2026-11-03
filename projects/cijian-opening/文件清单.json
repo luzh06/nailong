@@ -1,0 +1,151 @@
+{
+  "date": "2026-11-03",
+  "entry": "开头.html",
+  "files": [
+    {
+      "path": "开头.html",
+      "bytes": 4705,
+      "sha256": "f0395ab8749d2d9520a01316588b4127e635a6b27d29fc4625d8a98279cab489"
+    },
+    {
+      "path": "opening.js",
+      "bytes": 2133,
+      "sha256": "e8346dcd0fe479d25832438db6e3abe572bb81ef89a24549f303451a8865b5d6"
+    },
+    {
+      "path": "selection.js",
+      "bytes": 9968,
+      "sha256": "a7cd860667051c6bc2d4ebd11e420c9b54cd943264e1c4a57e7d56f5791ea179"
+    },
+    {
+      "path": "library.js",
+      "bytes": 10233,
+      "sha256": "202248a52b1a2e4bf9c30cefb4c20956b720308ed9fdfb7441e1d6c35780d094"
+    },
+    {
+      "path": "lifecycle.js",
+      "bytes": 558,
+      "sha256": "3bb3ecb6c039361c543b0efb17eacc6290328ecc6959608c2762abd77a6166df"
+    },
+    {
+      "path": "game-state.js",
+      "bytes": 1379,
+      "sha256": "66b66d35caec12b91de2614f0428e959f553b72d7241da3064f7030c1977c898"
+    },
+    {
+      "path": "roles.js",
+      "bytes": 734,
+      "sha256": "006c52d6c91b25a54be2ac6514a2425835e98a80e252b1028fa88566ff7d6563"
+    },
+    {
+      "path": "portal.js",
+      "bytes": 1779,
+      "sha256": "b2402421640f33d0a4479e7fc67c7d39f32334e6a62a377b86b2c5107e900846"
+    },
+    {
+      "path": "style.css",
+      "bytes": 7652,
+      "sha256": "d4dee45d98a77bc023d3e6583d66cddf117560a790734cd3ef1a64eee90561bc"
+    },
+    {
+      "path": "library.css",
+      "bytes": 6346,
+      "sha256": "3f78c811c907d712a68711c0a912f4de559adf41aa6e3556738ca5f003c9b1df"
+    },
+    {
+      "path": "navigation.json",
+      "bytes": 28861,
+      "sha256": "c1f93958c3caf5f6e2fc5c22bf8da65c3157d4d992b7a96640cc559bd5955bf5"
+    },
+    {
+      "path": "launch.py",
+      "bytes": 2676,
+      "sha256": "08200bd91da723a04e9e458908178a8a3df8d290b7edde64918e1d98a34cca4b"
+    },
+    {
+      "path": "启动开头.bat",
+      "bytes": 64,
+      "sha256": "8728f963cbbbd43072834999c818fc5c61c93a2237be4a053025fcee991ca47f"
+    },
+    {
+      "path": "使用说明.md",
+      "bytes": 1397,
+      "sha256": "7442128dc3c44d02f406ab78b06892913060e4c29abef9ad926aa47ae951c579"
+    },
+    {
+      "path": "开发接入说明.md",
+      "bytes": 2206,
+      "sha256": "47471c8daf31b849b0e11215614c30be4838d834126c7eeed695b8cdddd5c53d"
+    },
+    {
+      "path": "验证结果.md",
+      "bytes": 1075,
+      "sha256": "04ba1d69864d5134f7730c79f28975d18c0562dd8b47ddff46c4ae06bd4f60b6"
+    },
+    {
+      "path": "assets/antique-book.glb",
+      "bytes": 2308684,
+      "sha256": "ba65c270ff80fcbf879ceeada1a072889386512b8d5731d51660aae4eb5d4ce3"
+    },
+    {
+      "path": "assets/antique-sequence.mp4",
+      "bytes": 2634665,
+      "sha256": "4376d3b3560540e20b5669c88518b8f99dd46ceb99217d15f01a2a172b0b8c89"
+    },
+    {
+      "path": "assets/library-warm.png",
+      "bytes": 1428135,
+      "sha256": "83142e282008c36f02b677c8fb226ddf2d7ee203fa9e0ffcf7e6c38ee04a4728"
+    },
+    {
+      "path": "assets/library.glb",
+      "bytes": 178689732,
+      "sha256": "621353eb16df1fbc95774be3323c2ffd5deadbbf059b87160831c3403c6f2adc"
+    },
+    {
+      "path": "assets/models/Camille.glb",
+      "bytes": 65766960,
+      "sha256": "7c6cbcc6f82aba10f0e2a336afcb6d6cfaf05f5e76327d97b9e20b489d023d88"
+    },
+    {
+      "path": "assets/models/LinChuan.glb",
+      "bytes": 65187912,
+      "sha256": "3440de3c65dfb4e43dc8b0c6c5a85dfe82f2d13c9ae69f0ff21ab36d59d934ed"
+    },
+    {
+      "path": "assets/models/Noah.glb",
+      "bytes": 79942840,
+      "sha256": "af8b8e9b5f712aa95d141c8c6b50cd7692c5bedd75935796baea911f31fcd8e2"
+    },
+    {
+      "path": "assets/models/Rin.glb",
+      "bytes": 66816380,
+      "sha256": "cc07b90701aca59797ff0ea20c5c00874fa06b9f2e8c126a03e095be2f895ea1"
+    },
+    {
+      "path": "assets/world-map.png",
+      "bytes": 758338,
+      "sha256": "b6836333c73b230e970a1f47bc50acf6744a3846fdd5a52cb6ee81dc3986cec4"
+    },
+    {
+      "path": "assets/xingkai.ttf",
+      "bytes": 4016288,
+      "sha256": "7f901dfb0526d542740264fb5ba8dfe483293ad060270d273593e2f04a69d080"
+    },
+    {
+      "path": "vendor/BufferGeometryUtils.js",
+      "bytes": 31768,
+      "sha256": "c25b7930e570e9ec56173cd3b866ec8d2e10016630db3937efb439daf1cedbf6"
+    },
+    {
+      "path": "vendor/GLTFLoader.js",
+      "bytes": 114993,
+      "sha256": "956746f80fe2af1650a6c0b156ac619f2c66ab9fc697e1d81d3bce1e4654a5d0"
+    },
+    {
+      "path": "vendor/three.module.js",
+      "bytes": 1314681,
+      "sha256": "ce1fa418de16a19495a9f72495580e3015d7745c296d3ce0485897f902ddedfb"
+    }
+  ]
+}

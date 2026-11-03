@@ -1,0 +1,35 @@
+<!doctype html><html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>此间 · 开头</title><link rel="icon" href="data:,">
+<script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
+<link id="selection-css" rel="stylesheet" href="style.css"><link id="library-css" rel="stylesheet" href="library.css" disabled>
+<style>[hidden]{display:none!important}#boot-error{position:fixed;inset:0;z-index:100;display:grid;place-items:center;background:#241c14;color:#eddbb4;text-align:center;font-family:KaiTi,serif;padding:28px}#boot-error p{font-size:23px;line-height:1.7}#boot-error button{padding:12px 25px;font:20px KaiTi,serif;cursor:pointer}</style>
+</head><body data-scene="selection">
+<main id="selection-scene">
+<canvas id="stage" aria-label="四位旅人的三维选择空间"></canvas><canvas id="portrait" aria-hidden="true"></canvas>
+<header><a class="brand" href="#selection">此间<span lang="en">Cijian</span></a></header>
+<button id="back" hidden>← 返回选择</button><div class="intro"><h1>故事，从你开始。</h1><p>选择一位旅人</p></div><div id="labels"></div>
+<aside id="detail" hidden><p id="origin" lang="en"></p><h2 id="name"></h2><p id="bio"></p><button id="enter" disabled><span lang="en">Enter</span><small>确认角色 ↗</small></button></aside>
+<section id="confirmed" hidden><h2></h2><p>角色已确认，准备前往图书馆。</p><small>正在进入图书馆…</small><button id="reset">取消进入</button></section>
+<nav id="roster" aria-label="选择角色"></nav><p id="status" role="status" aria-live="polite"></p></main>
+<main id="library-scene" hidden>
+<canvas id="library" aria-label="可行走的古典图书馆，使用 WASD 移动，靠近发光书本按 F 交互" tabindex="0"></canvas>
+
+<div id="loading" role="status" aria-live="polite"><div><p class="loading-title">此间</p><p id="load-status">正在打开图书馆…</p><small>正在读取你指定的图书馆与古书。</small><button id="retry" hidden>重新加载</button></div></div>
+<div id="book-marker" hidden aria-hidden="true"><span>✦</span><small>发光的书</small><b id="distance"></b></div>
+<button id="interact" hidden aria-label="按 F 翻开古书"><kbd>F</kbd><span>翻开古书</span></button>
+<p id="hint" role="status" aria-live="polite"></p>
+<div id="crosshair" aria-hidden="true"></div>
+<div id="touch-controls" aria-label="方向控制"><button data-move="KeyW" aria-label="向前">↑</button><div><button data-move="KeyA" aria-label="向左">←</button><button data-move="KeyS" aria-label="向后">↓</button><button data-move="KeyD" aria-label="向右">→</button></div></div>
+<section id="cinematic" hidden aria-label="古书翻页动画"><video id="book-video" playsinline muted preload="none" src="assets/antique-sequence.mp4"></video><div id="video-fallback" hidden><p>古书已打开</p><button id="continue">继续</button></div><button id="skip">跳过动画</button></section>
+<section id="complete" hidden><img src="assets/world-map.png" alt="原有古书动画中的装饰性地图"><div class="ending"><small>书页的另一端</small><h2>旅途，即将开始。</h2><p>图书馆开场已完成</p><p class="note">东京地图将在后续场景接入。</p><div><button id="replay">返回图书馆</button><button id="choose-role">重新选择旅人</button></div></div></section>
+</main>
+<section id="boot-error" hidden role="alert"><div><p id="boot-message">请双击同目录的“启动开头.bat”进入。</p><button onclick="location.reload()">重试</button></div></section>
+<noscript>请启用 JavaScript，然后双击同目录“启动开头.bat”。</noscript>
+<script>
+if(location.protocol==='file:'){
+ document.querySelector('#boot-error').hidden=false;
+ const normalize=p=>p.replace(/\\/g,'/').replace(/^\//,'').replace(/\/$/,'').toLowerCase();
+ const folder=normalize(decodeURIComponent(new URL('.',location).pathname));
+ Promise.any(Array.from({length:8},(_,i)=>8894+i).map(async port=>{const r=await fetch('http://127.0.0.1:'+port+'/__cijian_opening_health',{signal:AbortSignal.timeout(1000)});const j=await r.json();if(j.app!=='cijian-opening'||normalize(j.root)!==folder)throw Error('other preview');return port;})).then(port=>location.replace('http://127.0.0.1:'+port+'/'+encodeURIComponent('开头.html'))).catch(()=>{});
+}else{import('./opening.js').catch(e=>{console.error(e);document.querySelector('#boot-error').hidden=false;document.querySelector('#boot-message').textContent='页面加载失败，请双击“启动开头.bat”重新打开。';});}
+</script></body></html>

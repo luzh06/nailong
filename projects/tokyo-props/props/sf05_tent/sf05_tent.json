@@ -1,0 +1,35 @@
+{
+ "name": "sf05_tent",
+ "tris": {
+  "LOD0": 91536,
+  "LOD1": 27460,
+  "LOD2": 7322,
+  "COL": 12
+ },
+ "size_m": [
+  5.605,
+  1.321,
+  0.895
+ ],
+ "texture": [
+  4096,
+  4096
+ ],
+ "sources": [
+  "polyhaven:rough_linen",
+  "polyhaven:metal_plate",
+  "ref:Commons Tokyo Yanaka 2/4, Yanaka Ginza 2, Japan - Tokyo (Yanaka) 9982647795 (CC BY / BY-SA)",
+  "map:PLATEAU 13106 taito-ku 2025 bldg 53394671",
+  "font:ShipporiMincho(OFL)",
+  "font:YujiSyuku(OFL)",
+  "font:ZenKakuGothicNew(OFL)",
+  "decals:original"
+ ],
+ "notes": "喫茶 ひより：PVC 雨棚",
+ "maps": {
+  "BaseColor": "sf05_tent_BaseColor.png",
+  "Normal": "sf05_tent_Normal.png",
+  "ORM": "sf05_tent_ORM.png"
+ },
+ "glb_mb": 3.93
+}
