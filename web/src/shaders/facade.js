@@ -223,7 +223,9 @@ export const facadeFragmentPars = /* glsl */ `
 
     // Far away: average the window cell instead of resolving rooms
     float coverage = f.win.x * f.win.y;
-    vec3 farLight = lamp * f.litShare * 0.7 * mix(0.15, 1.0, uNight) * coverage * 1.4 + vec3(0.03) * uInteriorAmbient;
+    // Averaged over many windows the light is much dimmer than one lit room: most of a cell is
+    // frame, blinds and unlit floors. Too high and distant towers glow as uniform white blocks.
+    vec3 farLight = lamp * f.litShare * 0.3 * mix(0.15, 1.0, uNight) * coverage + vec3(0.03) * uInteriorAmbient;
     throughGlass = mix(throughGlass * glassMask, farLight, far);
 
     vec3 wallCol = f.wall * (0.62 + 0.46 * detail) * (1.0 - 0.07 * hash12(vec2(floor(uv.x * 1.5), seed * 7.0)));
@@ -247,6 +249,7 @@ export const facadeFragmentMain = /* glsl */ `
     diffuseColor.rgb = vec3(0.3);   // undersides (canopies, turret base)
     fRough = 0.9; fMetal = 0.0; fEmissive = vec3(0.0); fWindowMask = 0.0;
   } else {
-    diffuseColor.rgb = shadeWall(facadeType, facadeSeed, vFacadeUv, facadeLum);
+    // The style colours are authored as display (sRGB) values; lighting works in linear space.
+    diffuseColor.rgb = pow(shadeWall(facadeType, facadeSeed, vFacadeUv, facadeLum), vec3(2.2));
   }
 `;
